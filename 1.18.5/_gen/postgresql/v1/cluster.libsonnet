@@ -658,7 +658,7 @@
         recoveryTarget: {
           '#withBackupID':: d.fn(help='"The ID of the backup from which to start the recovery process. If empty (default) the operator will automatically detect the backup based on targetTime or targetLSN if specified. Otherwise use the latest available backup in chronological order."', args=[d.arg(name='backupID', type=d.T.string)]),
           withBackupID(backupID): { spec+: { bootstrap+: { recovery+: { recoveryTarget+: { backupID: backupID } } } } },
-          '#withExclusive':: d.fn(help='"Set the target to be exclusive (defaults to true)"', args=[d.arg(name='exclusive', type=d.T.boolean)]),
+          '#withExclusive':: d.fn(help='"Set the target to be exclusive. If omitted, defaults to false, so that in Postgres, `recovery_target_inclusive` will be true"', args=[d.arg(name='exclusive', type=d.T.boolean)]),
           withExclusive(exclusive): { spec+: { bootstrap+: { recovery+: { recoveryTarget+: { exclusive: exclusive } } } } },
           '#withTargetImmediate':: d.fn(help='"End recovery as soon as a consistent state is reached"', args=[d.arg(name='targetImmediate', type=d.T.boolean)]),
           withTargetImmediate(targetImmediate): { spec+: { bootstrap+: { recovery+: { recoveryTarget+: { targetImmediate: targetImmediate } } } } },
@@ -1520,6 +1520,8 @@
     withPrimaryUpdateMethod(primaryUpdateMethod): { spec+: { primaryUpdateMethod: primaryUpdateMethod } },
     '#withPrimaryUpdateStrategy':: d.fn(help='"Deployment strategy to follow to upgrade the primary server during a rolling update procedure, after all replicas have been successfully updated: it can be automated (`unsupervised` - default) or manual (`supervised`)"', args=[d.arg(name='primaryUpdateStrategy', type=d.T.string)]),
     withPrimaryUpdateStrategy(primaryUpdateStrategy): { spec+: { primaryUpdateStrategy: primaryUpdateStrategy } },
+    '#withPriorityClassName':: d.fn(help='"Name of the priority class which will be used in every generated Pod, if the PriorityClass specified does not exist, the pod will not be able to schedule.  Please refer to https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/#priorityclass for more information"', args=[d.arg(name='priorityClassName', type=d.T.string)]),
+    withPriorityClassName(priorityClassName): { spec+: { priorityClassName: priorityClassName } },
     '#withSchedulerName':: d.fn(help='"If specified, the pod will be dispatched by specified Kubernetes scheduler. If not specified, the pod will be dispatched by the default scheduler. More info: https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/"', args=[d.arg(name='schedulerName', type=d.T.string)]),
     withSchedulerName(schedulerName): { spec+: { schedulerName: schedulerName } },
     '#withStartDelay':: d.fn(help='"The time in seconds that is allowed for a PostgreSQL instance to successfully start up (default 30)"', args=[d.arg(name='startDelay', type=d.T.integer)]),

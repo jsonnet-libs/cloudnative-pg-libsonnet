@@ -51,6 +51,7 @@ permalink: /1.18.5/postgresql/v1/cluster/
   * [`fn withPostgresUID(postgresUID)`](#fn-specwithpostgresuid)
   * [`fn withPrimaryUpdateMethod(primaryUpdateMethod)`](#fn-specwithprimaryupdatemethod)
   * [`fn withPrimaryUpdateStrategy(primaryUpdateStrategy)`](#fn-specwithprimaryupdatestrategy)
+  * [`fn withPriorityClassName(priorityClassName)`](#fn-specwithpriorityclassname)
   * [`fn withSchedulerName(schedulerName)`](#fn-specwithschedulername)
   * [`fn withStartDelay(startDelay)`](#fn-specwithstartdelay)
   * [`fn withStopDelay(stopDelay)`](#fn-specwithstopdelay)
@@ -1048,6 +1049,14 @@ withPrimaryUpdateStrategy(primaryUpdateStrategy)
 ```
 
 "Deployment strategy to follow to upgrade the primary server during a rolling update procedure, after all replicas have been successfully updated: it can be automated (`unsupervised` - default) or manual (`supervised`)"
+
+### fn spec.withPriorityClassName
+
+```ts
+withPriorityClassName(priorityClassName)
+```
+
+"Name of the priority class which will be used in every generated Pod, if the PriorityClass specified does not exist, the pod will not be able to schedule.  Please refer to https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/#priorityclass for more information"
 
 ### fn spec.withSchedulerName
 
@@ -3159,7 +3168,7 @@ withBackupID(backupID)
 withExclusive(exclusive)
 ```
 
-"Set the target to be exclusive (defaults to true)"
+"Set the target to be exclusive. If omitted, defaults to false, so that in Postgres, `recovery_target_inclusive` will be true"
 
 ### fn spec.bootstrap.recovery.recoveryTarget.withTargetImmediate
 
