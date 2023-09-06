@@ -32,6 +32,7 @@ permalink: /1.19.4/postgresql/v1/scheduledBackup/
 * [`obj spec`](#obj-spec)
   * [`fn withBackupOwnerReference(backupOwnerReference)`](#fn-specwithbackupownerreference)
   * [`fn withImmediate(immediate)`](#fn-specwithimmediate)
+  * [`fn withMethod(method)`](#fn-specwithmethod)
   * [`fn withSchedule(schedule)`](#fn-specwithschedule)
   * [`fn withSuspend(suspend)`](#fn-specwithsuspend)
   * [`fn withTarget(target)`](#fn-specwithtarget)
@@ -231,6 +232,14 @@ withImmediate(immediate)
 ```
 
 "If the first backup has to be immediately start after creation or not"
+
+### fn spec.withMethod
+
+```ts
+withMethod(method)
+```
+
+"The backup method to be used, possible options are `barmanObjectStore` and `volumeSnapshot`. Defaults to: `barmanObjectStore`."
 
 ### fn spec.withSchedule
 

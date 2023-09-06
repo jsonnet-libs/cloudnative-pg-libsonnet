@@ -58,6 +58,8 @@
     withBackupOwnerReference(backupOwnerReference): { spec+: { backupOwnerReference: backupOwnerReference } },
     '#withImmediate':: d.fn(help='"If the first backup has to be immediately start after creation or not"', args=[d.arg(name='immediate', type=d.T.boolean)]),
     withImmediate(immediate): { spec+: { immediate: immediate } },
+    '#withMethod':: d.fn(help='"The backup method to be used, possible options are `barmanObjectStore` and `volumeSnapshot`. Defaults to: `barmanObjectStore`."', args=[d.arg(name='method', type=d.T.string)]),
+    withMethod(method): { spec+: { method: method } },
     '#withSchedule':: d.fn(help='"The schedule does not follow the same format used in Kubernetes CronJobs as it includes an additional seconds specifier, see https://pkg.go.dev/github.com/robfig/cron#hdr-CRON_Expression_Format"', args=[d.arg(name='schedule', type=d.T.string)]),
     withSchedule(schedule): { spec+: { schedule: schedule } },
     '#withSuspend':: d.fn(help='"If this backup is suspended or not"', args=[d.arg(name='suspend', type=d.T.boolean)]),

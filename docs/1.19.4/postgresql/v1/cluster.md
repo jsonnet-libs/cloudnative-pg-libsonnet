@@ -276,6 +276,14 @@ permalink: /1.19.4/postgresql/v1/cluster/
         * [`fn withCompression(compression)`](#fn-specbackupbarmanobjectstorewalwithcompression)
         * [`fn withEncryption(encryption)`](#fn-specbackupbarmanobjectstorewalwithencryption)
         * [`fn withMaxParallel(maxParallel)`](#fn-specbackupbarmanobjectstorewalwithmaxparallel)
+    * [`obj spec.backup.volumeSnapshot`](#obj-specbackupvolumesnapshot)
+      * [`fn withAnnotations(annotations)`](#fn-specbackupvolumesnapshotwithannotations)
+      * [`fn withAnnotationsMixin(annotations)`](#fn-specbackupvolumesnapshotwithannotationsmixin)
+      * [`fn withClassName(className)`](#fn-specbackupvolumesnapshotwithclassname)
+      * [`fn withLabels(labels)`](#fn-specbackupvolumesnapshotwithlabels)
+      * [`fn withLabelsMixin(labels)`](#fn-specbackupvolumesnapshotwithlabelsmixin)
+      * [`fn withSnapshotOwnerReference(snapshotOwnerReference)`](#fn-specbackupvolumesnapshotwithsnapshotownerreference)
+      * [`fn withWalClassName(walClassName)`](#fn-specbackupvolumesnapshotwithwalclassname)
   * [`obj spec.bootstrap`](#obj-specbootstrap)
     * [`obj spec.bootstrap.initdb`](#obj-specbootstrapinitdb)
       * [`fn withDataChecksums(dataChecksums)`](#fn-specbootstrapinitdbwithdatachecksums)
@@ -2362,7 +2370,7 @@ withValue(value)
 withRetentionPolicy(retentionPolicy)
 ```
 
-"RetentionPolicy is the retention policy to be used for backups and WALs (i.e. '60d'). The retention policy is expressed in the form of `XXu` where `XX` is a positive integer and `u` is in `[dwm]` - days, weeks, months."
+"RetentionPolicy is the retention policy to be used for backups and WALs (i.e. '60d'). The retention policy is expressed in the form of `XXu` where `XX` is a positive integer and `u` is in `[dwm]` - days, weeks, months. It's currently only applicable when using the BarmanObjectStore method."
 
 ### fn spec.backup.withTarget
 
@@ -2735,6 +2743,70 @@ withMaxParallel(maxParallel)
 ```
 
 "Number of WAL files to be either archived in parallel (when the PostgreSQL instance is archiving to a backup object store) or restored in parallel (when a PostgreSQL standby is fetching WAL files from a recovery object store). If not specified, WAL files will be processed one at a time. It accepts a positive integer as a value - with 1 being the minimum accepted value."
+
+## obj spec.backup.volumeSnapshot
+
+"VolumeSnapshot provides the configuration for the execution of volume snapshot backups."
+
+### fn spec.backup.volumeSnapshot.withAnnotations
+
+```ts
+withAnnotations(annotations)
+```
+
+"Annotations key-value pairs that will be added to .metadata.annotations snapshot resources."
+
+### fn spec.backup.volumeSnapshot.withAnnotationsMixin
+
+```ts
+withAnnotationsMixin(annotations)
+```
+
+"Annotations key-value pairs that will be added to .metadata.annotations snapshot resources."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.backup.volumeSnapshot.withClassName
+
+```ts
+withClassName(className)
+```
+
+"ClassName specifies the Snapshot Class to be used for PG_DATA PersistentVolumeClaim. It is the default class for the other types if no specific class is present"
+
+### fn spec.backup.volumeSnapshot.withLabels
+
+```ts
+withLabels(labels)
+```
+
+"Labels are key-value pairs that will be added to .metadata.labels snapshot resources."
+
+### fn spec.backup.volumeSnapshot.withLabelsMixin
+
+```ts
+withLabelsMixin(labels)
+```
+
+"Labels are key-value pairs that will be added to .metadata.labels snapshot resources."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.backup.volumeSnapshot.withSnapshotOwnerReference
+
+```ts
+withSnapshotOwnerReference(snapshotOwnerReference)
+```
+
+"SnapshotOwnerReference indicates the type of owner reference the snapshot should have. ."
+
+### fn spec.backup.volumeSnapshot.withWalClassName
+
+```ts
+withWalClassName(walClassName)
+```
+
+"WalClassName specifies the Snapshot Class to be used for the PG_WAL PersistentVolumeClaim."
 
 ## obj spec.bootstrap
 
@@ -3116,7 +3188,7 @@ withOwner(owner)
 withSource(source)
 ```
 
-"The external cluster whose backup we will restore. This is also used as the name of the folder under which the backup is stored, so it must be set to the name of the source cluster Mutually exclusive with `backup` and `volumeSnapshots`."
+"The external cluster whose backup we will restore. This is also used as the name of the folder under which the backup is stored, so it must be set to the name of the source cluster Mutually exclusive with `backup`."
 
 ## obj spec.bootstrap.recovery.backup
 
@@ -3232,7 +3304,7 @@ withName(name)
 
 ## obj spec.bootstrap.recovery.volumeSnapshots
 
-"The static PVC data source(s) from which to initiate the recovery procedure. Currently supporting `VolumeSnapshot` and `PersistentVolumeClaim` resources that map an existing PVC group, compatible with CloudNativePG, and taken with a cold backup copy on a fenced Postgres instance (limitation which will be removed in the future when online backup will be implemented). Mutually exclusive with `backup` and `source`."
+"The static PVC data source(s) from which to initiate the recovery procedure. Currently supporting `VolumeSnapshot` and `PersistentVolumeClaim` resources that map an existing PVC group, compatible with CloudNativePG, and taken with a cold backup copy on a fenced Postgres instance (limitation which will be removed in the future when online backup will be implemented). Mutually exclusive with `backup`."
 
 ## obj spec.bootstrap.recovery.volumeSnapshots.storage
 
@@ -4868,7 +4940,7 @@ withPath(path)
 withEnabled(enabled)
 ```
 
-"If replica mode is enabled, this cluster will be a replica of an existing cluster. Replica cluster can be created from a recovery object store or via streaming through pg_basebackup. Refer to the Replication page of the documentation for more information."
+"If replica mode is enabled, this cluster will be a replica of an existing cluster. Replica cluster can be created from a recovery object store or via streaming through pg_basebackup. Refer to the Replica clusters page of the documentation for more information."
 
 ### fn spec.replica.withSource
 

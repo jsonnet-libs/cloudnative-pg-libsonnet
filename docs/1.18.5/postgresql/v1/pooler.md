@@ -1432,7 +1432,7 @@ withUid(uid)
 
 ## obj spec
 
-"PoolerSpec defines the desired state of Pooler"
+"Specification of the desired behavior of the Pooler. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
 
 ### fn spec.withInstances
 
@@ -1440,7 +1440,7 @@ withUid(uid)
 withInstances(instances)
 ```
 
-"The number of replicas we want"
+"The number of replicas we want. Default: 1."
 
 ### fn spec.withType
 
@@ -1448,7 +1448,7 @@ withInstances(instances)
 withType(type)
 ```
 
-"Which instances we must forward traffic to?"
+"Type of service to forward traffic to. Default: `rw`."
 
 ## obj spec.cluster
 
@@ -1568,7 +1568,7 @@ withPg_hbaMixin(pg_hba)
 withPoolMode(poolMode)
 ```
 
-"The pool mode"
+"The pool mode. Default: `session`."
 
 ## obj spec.pgbouncer.authQuerySecret
 

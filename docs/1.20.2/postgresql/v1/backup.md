@@ -30,6 +30,7 @@ permalink: /1.20.2/postgresql/v1/backup/
   * [`fn withSelfLink(selfLink)`](#fn-metadatawithselflink)
   * [`fn withUid(uid)`](#fn-metadatawithuid)
 * [`obj spec`](#obj-spec)
+  * [`fn withMethod(method)`](#fn-specwithmethod)
   * [`fn withTarget(target)`](#fn-specwithtarget)
   * [`obj spec.cluster`](#obj-speccluster)
     * [`fn withName(name)`](#fn-specclusterwithname)
@@ -211,6 +212,14 @@ withUid(uid)
 ## obj spec
 
 "Specification of the desired behavior of the backup. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
+
+### fn spec.withMethod
+
+```ts
+withMethod(method)
+```
+
+"The backup method to be used, possible options are `barmanObjectStore` and `volumeSnapshot`. Defaults to: `barmanObjectStore`."
 
 ### fn spec.withTarget
 

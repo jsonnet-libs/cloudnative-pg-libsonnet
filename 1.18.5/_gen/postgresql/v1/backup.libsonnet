@@ -54,6 +54,8 @@
       '#withName':: d.fn(help='"Name of the referent."', args=[d.arg(name='name', type=d.T.string)]),
       withName(name): { spec+: { cluster+: { name: name } } },
     },
+    '#withMethod':: d.fn(help='"The backup method to be used, possible options are `barmanObjectStore` and `volumeSnapshot`. Defaults to: `barmanObjectStore`."', args=[d.arg(name='method', type=d.T.string)]),
+    withMethod(method): { spec+: { method: method } },
     '#withTarget':: d.fn(help='"The policy to decide which instance should perform this backup. If empty, it defaults to `cluster.spec.backup.target`. Available options are empty string, `primary` and `prefer-standby`. `primary` to have backups run always on primary instances, `prefer-standby` to have backups run preferably on the most updated standby, if available."', args=[d.arg(name='target', type=d.T.string)]),
     withTarget(target): { spec+: { target: target } },
   },
