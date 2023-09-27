@@ -271,6 +271,7 @@ permalink: /1.20.2/postgresql/v1/pooler/
         * [`fn withPortsMixin(ports)`](#fn-spectemplatespeccontainerswithportsmixin)
         * [`fn withResizePolicy(resizePolicy)`](#fn-spectemplatespeccontainerswithresizepolicy)
         * [`fn withResizePolicyMixin(resizePolicy)`](#fn-spectemplatespeccontainerswithresizepolicymixin)
+        * [`fn withRestartPolicy(restartPolicy)`](#fn-spectemplatespeccontainerswithrestartpolicy)
         * [`fn withStdin(stdin)`](#fn-spectemplatespeccontainerswithstdin)
         * [`fn withStdinOnce(stdinOnce)`](#fn-spectemplatespeccontainerswithstdinonce)
         * [`fn withTerminationMessagePath(terminationMessagePath)`](#fn-spectemplatespeccontainerswithterminationmessagepath)
@@ -501,6 +502,7 @@ permalink: /1.20.2/postgresql/v1/pooler/
         * [`fn withPortsMixin(ports)`](#fn-spectemplatespecephemeralcontainerswithportsmixin)
         * [`fn withResizePolicy(resizePolicy)`](#fn-spectemplatespecephemeralcontainerswithresizepolicy)
         * [`fn withResizePolicyMixin(resizePolicy)`](#fn-spectemplatespecephemeralcontainerswithresizepolicymixin)
+        * [`fn withRestartPolicy(restartPolicy)`](#fn-spectemplatespecephemeralcontainerswithrestartpolicy)
         * [`fn withStdin(stdin)`](#fn-spectemplatespecephemeralcontainerswithstdin)
         * [`fn withStdinOnce(stdinOnce)`](#fn-spectemplatespecephemeralcontainerswithstdinonce)
         * [`fn withTargetContainerName(targetContainerName)`](#fn-spectemplatespecephemeralcontainerswithtargetcontainername)
@@ -728,6 +730,7 @@ permalink: /1.20.2/postgresql/v1/pooler/
         * [`fn withPortsMixin(ports)`](#fn-spectemplatespecinitcontainerswithportsmixin)
         * [`fn withResizePolicy(resizePolicy)`](#fn-spectemplatespecinitcontainerswithresizepolicy)
         * [`fn withResizePolicyMixin(resizePolicy)`](#fn-spectemplatespecinitcontainerswithresizepolicymixin)
+        * [`fn withRestartPolicy(restartPolicy)`](#fn-spectemplatespecinitcontainerswithrestartpolicy)
         * [`fn withStdin(stdin)`](#fn-spectemplatespecinitcontainerswithstdin)
         * [`fn withStdinOnce(stdinOnce)`](#fn-spectemplatespecinitcontainerswithstdinonce)
         * [`fn withTerminationMessagePath(terminationMessagePath)`](#fn-spectemplatespecinitcontainerswithterminationmessagepath)
@@ -3316,6 +3319,14 @@ withResizePolicyMixin(resizePolicy)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.template.spec.containers.withRestartPolicy
+
+```ts
+withRestartPolicy(restartPolicy)
+```
+
+"RestartPolicy defines the restart behavior of individual containers in a pod. This field may only be set for init containers, and the only allowed value is \"Always\". For non-init containers or when this field is not specified, the restart behavior is defined by the Pod's restart policy and the container type. Setting the RestartPolicy as \"Always\" for the init container will have the following effect: this init container will be continually restarted on exit until all regular containers have terminated. Once all regular containers have completed, all init containers with restartPolicy \"Always\" will be shut down. This lifecycle differs from normal init containers and is often referred to as a \"sidecar\" container. Although this init container still starts in the init container sequence, it does not wait for the container to complete before proceeding to the next init container. Instead, the next init container starts immediately after this init container is started, or after any startupProbe has successfully completed."
+
 ### fn spec.template.spec.containers.withStdin
 
 ```ts
@@ -4480,7 +4491,7 @@ withUser(user)
 withLocalhostProfile(localhostProfile)
 ```
 
-"localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must only be set if type is \"Localhost\"."
+"localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must be set if type is \"Localhost\". Must NOT be set for any other type."
 
 ### fn spec.template.spec.containers.securityContext.seccompProfile.withType
 
@@ -4516,7 +4527,7 @@ withGmsaCredentialSpecName(gmsaCredentialSpecName)
 withHostProcess(hostProcess)
 ```
 
-"HostProcess determines if a container should be run as a 'Host Process' container. This field is alpha-level and will only be honored by components that enable the WindowsHostProcessContainers feature flag. Setting this field without the feature flag will result in errors when validating the Pod. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).  In addition, if HostProcess is true then HostNetwork must also be set to true."
+"HostProcess determines if a container should be run as a 'Host Process' container. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers). In addition, if HostProcess is true then HostNetwork must also be set to true."
 
 ### fn spec.template.spec.containers.securityContext.windowsOptions.withRunAsUserName
 
@@ -4999,6 +5010,14 @@ withResizePolicyMixin(resizePolicy)
 "Resources resize policy for the container."
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.template.spec.ephemeralContainers.withRestartPolicy
+
+```ts
+withRestartPolicy(restartPolicy)
+```
+
+"Restart policy for the container to manage the restart behavior of each container within a pod. This may only be set for init containers. You cannot set this field on ephemeral containers."
 
 ### fn spec.template.spec.ephemeralContainers.withStdin
 
@@ -6172,7 +6191,7 @@ withUser(user)
 withLocalhostProfile(localhostProfile)
 ```
 
-"localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must only be set if type is \"Localhost\"."
+"localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must be set if type is \"Localhost\". Must NOT be set for any other type."
 
 ### fn spec.template.spec.ephemeralContainers.securityContext.seccompProfile.withType
 
@@ -6208,7 +6227,7 @@ withGmsaCredentialSpecName(gmsaCredentialSpecName)
 withHostProcess(hostProcess)
 ```
 
-"HostProcess determines if a container should be run as a 'Host Process' container. This field is alpha-level and will only be honored by components that enable the WindowsHostProcessContainers feature flag. Setting this field without the feature flag will result in errors when validating the Pod. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).  In addition, if HostProcess is true then HostNetwork must also be set to true."
+"HostProcess determines if a container should be run as a 'Host Process' container. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers). In addition, if HostProcess is true then HostNetwork must also be set to true."
 
 ### fn spec.template.spec.ephemeralContainers.securityContext.windowsOptions.withRunAsUserName
 
@@ -6655,6 +6674,14 @@ withResizePolicyMixin(resizePolicy)
 "Resources resize policy for the container."
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.template.spec.initContainers.withRestartPolicy
+
+```ts
+withRestartPolicy(restartPolicy)
+```
+
+"RestartPolicy defines the restart behavior of individual containers in a pod. This field may only be set for init containers, and the only allowed value is \"Always\". For non-init containers or when this field is not specified, the restart behavior is defined by the Pod's restart policy and the container type. Setting the RestartPolicy as \"Always\" for the init container will have the following effect: this init container will be continually restarted on exit until all regular containers have terminated. Once all regular containers have completed, all init containers with restartPolicy \"Always\" will be shut down. This lifecycle differs from normal init containers and is often referred to as a \"sidecar\" container. Although this init container still starts in the init container sequence, it does not wait for the container to complete before proceeding to the next init container. Instead, the next init container starts immediately after this init container is started, or after any startupProbe has successfully completed."
 
 ### fn spec.template.spec.initContainers.withStdin
 
@@ -7820,7 +7847,7 @@ withUser(user)
 withLocalhostProfile(localhostProfile)
 ```
 
-"localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must only be set if type is \"Localhost\"."
+"localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must be set if type is \"Localhost\". Must NOT be set for any other type."
 
 ### fn spec.template.spec.initContainers.securityContext.seccompProfile.withType
 
@@ -7856,7 +7883,7 @@ withGmsaCredentialSpecName(gmsaCredentialSpecName)
 withHostProcess(hostProcess)
 ```
 
-"HostProcess determines if a container should be run as a 'Host Process' container. This field is alpha-level and will only be honored by components that enable the WindowsHostProcessContainers feature flag. Setting this field without the feature flag will result in errors when validating the Pod. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).  In addition, if HostProcess is true then HostNetwork must also be set to true."
+"HostProcess determines if a container should be run as a 'Host Process' container. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers). In addition, if HostProcess is true then HostNetwork must also be set to true."
 
 ### fn spec.template.spec.initContainers.securityContext.windowsOptions.withRunAsUserName
 
@@ -8180,7 +8207,7 @@ withResourceClaimName(resourceClaimName)
 withResourceClaimTemplateName(resourceClaimTemplateName)
 ```
 
-"ResourceClaimTemplateName is the name of a ResourceClaimTemplate object in the same namespace as this pod. \n The template will be used to create a new ResourceClaim, which will be bound to this pod. When this pod is deleted, the ResourceClaim will also be deleted. The name of the ResourceClaim will be <pod name>-<resource name>, where <resource name> is the PodResourceClaim.Name. Pod validation will reject the pod if the concatenated name is not valid for a ResourceClaim (e.g. too long). \n An existing ResourceClaim with that name that is not owned by the pod will not be used for the pod to avoid using an unrelated resource by mistake. Scheduling and pod startup are then blocked until the unrelated ResourceClaim is removed. \n This field is immutable and no changes will be made to the corresponding ResourceClaim by the control plane after creating the ResourceClaim."
+"ResourceClaimTemplateName is the name of a ResourceClaimTemplate object in the same namespace as this pod. \n The template will be used to create a new ResourceClaim, which will be bound to this pod. When this pod is deleted, the ResourceClaim will also be deleted. The pod name and resource name, along with a generated component, will be used to form a unique name for the ResourceClaim, which will be recorded in pod.status.resourceClaimStatuses. \n This field is immutable and no changes will be made to the corresponding ResourceClaim by the control plane after creating the ResourceClaim."
 
 ## obj spec.template.spec.schedulingGates
 
@@ -8320,7 +8347,7 @@ withUser(user)
 withLocalhostProfile(localhostProfile)
 ```
 
-"localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must only be set if type is \"Localhost\"."
+"localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must be set if type is \"Localhost\". Must NOT be set for any other type."
 
 ### fn spec.template.spec.securityContext.seccompProfile.withType
 
@@ -8376,7 +8403,7 @@ withGmsaCredentialSpecName(gmsaCredentialSpecName)
 withHostProcess(hostProcess)
 ```
 
-"HostProcess determines if a container should be run as a 'Host Process' container. This field is alpha-level and will only be honored by components that enable the WindowsHostProcessContainers feature flag. Setting this field without the feature flag will result in errors when validating the Pod. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).  In addition, if HostProcess is true then HostNetwork must also be set to true."
+"HostProcess determines if a container should be run as a 'Host Process' container. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers). In addition, if HostProcess is true then HostNetwork must also be set to true."
 
 ### fn spec.template.spec.securityContext.windowsOptions.withRunAsUserName
 

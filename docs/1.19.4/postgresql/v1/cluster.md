@@ -53,6 +53,7 @@ permalink: /1.19.4/postgresql/v1/cluster/
   * [`fn withPrimaryUpdateStrategy(primaryUpdateStrategy)`](#fn-specwithprimaryupdatestrategy)
   * [`fn withPriorityClassName(priorityClassName)`](#fn-specwithpriorityclassname)
   * [`fn withSchedulerName(schedulerName)`](#fn-specwithschedulername)
+  * [`fn withSmartStopDelay(smartStopDelay)`](#fn-specwithsmartstopdelay)
   * [`fn withStartDelay(startDelay)`](#fn-specwithstartdelay)
   * [`fn withStopDelay(stopDelay)`](#fn-specwithstopdelay)
   * [`fn withSwitchoverDelay(switchoverDelay)`](#fn-specwithswitchoverdelay)
@@ -1074,13 +1075,21 @@ withSchedulerName(schedulerName)
 
 "If specified, the pod will be dispatched by specified Kubernetes scheduler. If not specified, the pod will be dispatched by the default scheduler. More info: https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/"
 
+### fn spec.withSmartStopDelay
+
+```ts
+withSmartStopDelay(smartStopDelay)
+```
+
+"The time in seconds that controls the window of time reserved for the smart shutdown of Postgres to complete. this formula to compute the timeout of smart shutdown is `max(stopDelay -  smartStopDelay, 30)`"
+
 ### fn spec.withStartDelay
 
 ```ts
 withStartDelay(startDelay)
 ```
 
-"The time in seconds that is allowed for a PostgreSQL instance to successfully start up (default 30)"
+"The time in seconds that is allowed for a PostgreSQL instance to successfully start up (default 3600). The startup probe failure threshold is derived from this value using the formula: ceiling(startDelay / 10)."
 
 ### fn spec.withStopDelay
 
@@ -1088,7 +1097,7 @@ withStartDelay(startDelay)
 withStopDelay(stopDelay)
 ```
 
-"The time in seconds that is allowed for a PostgreSQL instance to gracefully shutdown (default 30)"
+"The time in seconds that is allowed for a PostgreSQL instance to gracefully shutdown (default 1800)"
 
 ### fn spec.withSwitchoverDelay
 
@@ -1096,7 +1105,7 @@ withStopDelay(stopDelay)
 withSwitchoverDelay(switchoverDelay)
 ```
 
-"The time in seconds that is allowed for a primary PostgreSQL instance to gracefully shutdown during a switchover. Default value is 40000000, greater than one year in seconds, big enough to simulate an infinite delay"
+"The time in seconds that is allowed for a primary PostgreSQL instance to gracefully shutdown during a switchover. Default value is 3600 seconds (1 hour)."
 
 ### fn spec.withTopologySpreadConstraints
 
@@ -2798,7 +2807,7 @@ withLabelsMixin(labels)
 withSnapshotOwnerReference(snapshotOwnerReference)
 ```
 
-"SnapshotOwnerReference indicates the type of owner reference the snapshot should have. ."
+"SnapshotOwnerReference indicates the type of owner reference the snapshot should have"
 
 ### fn spec.backup.volumeSnapshot.withWalClassName
 
@@ -5062,7 +5071,7 @@ withName(name)
 withLocalhostProfile(localhostProfile)
 ```
 
-"localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must only be set if type is \"Localhost\"."
+"localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must be set if type is \"Localhost\". Must NOT be set for any other type."
 
 ### fn spec.seccompProfile.withType
 
