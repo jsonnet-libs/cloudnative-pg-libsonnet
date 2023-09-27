@@ -2,147 +2,147 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.17.5/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.17.5/postgresql/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.17.5/postgresql/v1/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.17.5/postgresql/v1/backup/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.17.5/postgresql/v1/cluster/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.17.5/postgresql/v1/pooler/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.17.5/postgresql/v1/scheduledBackup/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.18.5/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.18.5/postgresql/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.18.5/postgresql/v1/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.18.5/postgresql/v1/backup/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.18.5/postgresql/v1/cluster/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.18.5/postgresql/v1/pooler/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.18.5/postgresql/v1/scheduledBackup/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.19.4/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.19.4/postgresql/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.19.4/postgresql/v1/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.19.4/postgresql/v1/backup/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.19.4/postgresql/v1/cluster/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.19.4/postgresql/v1/pooler/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.19.4/postgresql/v1/scheduledBackup/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.20.2/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.20.2/postgresql/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.20.2/postgresql/v1/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.20.2/postgresql/v1/backup/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.20.2/postgresql/v1/cluster/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.20.2/postgresql/v1/pooler/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.20.2/postgresql/v1/scheduledBackup/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
