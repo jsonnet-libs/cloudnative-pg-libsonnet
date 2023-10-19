@@ -53,7 +53,7 @@ permalink: /1.18.5/postgresql/v1/cluster/
   * [`fn withPrimaryUpdateStrategy(primaryUpdateStrategy)`](#fn-specwithprimaryupdatestrategy)
   * [`fn withPriorityClassName(priorityClassName)`](#fn-specwithpriorityclassname)
   * [`fn withSchedulerName(schedulerName)`](#fn-specwithschedulername)
-  * [`fn withSmartStopDelay(smartStopDelay)`](#fn-specwithsmartstopdelay)
+  * [`fn withSmartShutdownTimeout(smartShutdownTimeout)`](#fn-specwithsmartshutdowntimeout)
   * [`fn withStartDelay(startDelay)`](#fn-specwithstartdelay)
   * [`fn withStopDelay(stopDelay)`](#fn-specwithstopdelay)
   * [`fn withSwitchoverDelay(switchoverDelay)`](#fn-specwithswitchoverdelay)
@@ -395,6 +395,9 @@ permalink: /1.18.5/postgresql/v1/cluster/
     * [`obj spec.envFrom.secretRef`](#obj-specenvfromsecretref)
       * [`fn withName(name)`](#fn-specenvfromsecretrefwithname)
       * [`fn withOptional(optional)`](#fn-specenvfromsecretrefwithoptional)
+  * [`obj spec.ephemeralVolumesSizeLimit`](#obj-specephemeralvolumessizelimit)
+    * [`fn withShm(shm)`](#fn-specephemeralvolumessizelimitwithshm)
+    * [`fn withTemporaryData(temporaryData)`](#fn-specephemeralvolumessizelimitwithtemporarydata)
   * [`obj spec.externalClusters`](#obj-specexternalclusters)
     * [`fn withConnectionParameters(connectionParameters)`](#fn-specexternalclusterswithconnectionparameters)
     * [`fn withConnectionParametersMixin(connectionParameters)`](#fn-specexternalclusterswithconnectionparametersmixin)
@@ -897,7 +900,7 @@ withDescription(description)
 withEnableSuperuserAccess(enableSuperuserAccess)
 ```
 
-"When this option is enabled, the operator will use the `SuperuserSecret` to update the `postgres` user password (if the secret is not present, the operator will automatically create one). When this option is disabled, the operator will ignore the `SuperuserSecret` content, delete it when automatically created, and then blank the password of the `postgres` user by setting it to `NULL`. Enabled by default."
+"When this option is enabled, the operator will use the `SuperuserSecret` to update the `postgres` user password (if the secret is not present, the operator will automatically create one). When this option is disabled, the operator will ignore the `SuperuserSecret` content, delete it when automatically created, and then blank the password of the `postgres` user by setting it to `NULL`. Disabled by default."
 
 ### fn spec.withEnv
 
@@ -1075,13 +1078,13 @@ withSchedulerName(schedulerName)
 
 "If specified, the pod will be dispatched by specified Kubernetes scheduler. If not specified, the pod will be dispatched by the default scheduler. More info: https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/"
 
-### fn spec.withSmartStopDelay
+### fn spec.withSmartShutdownTimeout
 
 ```ts
-withSmartStopDelay(smartStopDelay)
+withSmartShutdownTimeout(smartShutdownTimeout)
 ```
 
-"The time in seconds that controls the window of time reserved for the smart shutdown of Postgres to complete. this formula to compute the timeout of smart shutdown is `max(stopDelay -  smartStopDelay, 30)`"
+"The time in seconds that controls the window of time reserved for the smart shutdown of Postgres to complete. Make sure you reserve enough time for the operator to request a fast shutdown of Postgres (that is: `stopDelay` - `smartShutdownTimeout`)."
 
 ### fn spec.withStartDelay
 
@@ -3605,6 +3608,26 @@ withOptional(optional)
 
 "Specify whether the Secret must be defined"
 
+## obj spec.ephemeralVolumesSizeLimit
+
+"EphemeralVolumesSizeLimit allows the user to set the limits for the ephemeral volumes"
+
+### fn spec.ephemeralVolumesSizeLimit.withShm
+
+```ts
+withShm(shm)
+```
+
+"Shm is the size limit of the shared memory volume"
+
+### fn spec.ephemeralVolumesSizeLimit.withTemporaryData
+
+```ts
+withTemporaryData(temporaryData)
+```
+
+"TemporaryData is the size limit of the temporary data volume"
+
 ## obj spec.externalClusters
 
 "The list of external clusters which are used in the configuration"
@@ -4981,7 +5004,7 @@ withUpdateInterval(updateInterval)
 withEnabled(enabled)
 ```
 
-"If enabled, the operator will automatically manage replication slots on the primary instance and use them in streaming replication connections with all the standby instances that are part of the HA cluster. If disabled (default), the operator will not take advantage of replication slots in streaming connections with the replicas. This feature also controls replication slots in replica cluster, from the designated primary to its cascading replicas. This can only be set at creation time."
+"If enabled (default), the operator will automatically manage replication slots on the primary instance and use them in streaming replication connections with all the standby instances that are part of the HA cluster. If disabled, the operator will not take advantage of replication slots in streaming connections with the replicas. This feature also controls replication slots in replica cluster, from the designated primary to its cascading replicas."
 
 ### fn spec.replicationSlots.highAvailability.withSlotPrefix
 

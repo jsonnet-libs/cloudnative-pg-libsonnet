@@ -802,6 +802,13 @@
       '#withPrefix':: d.fn(help='"An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER."', args=[d.arg(name='prefix', type=d.T.string)]),
       withPrefix(prefix): { prefix: prefix },
     },
+    '#ephemeralVolumesSizeLimit':: d.obj(help='"EphemeralVolumesSizeLimit allows the user to set the limits for the ephemeral volumes"'),
+    ephemeralVolumesSizeLimit: {
+      '#withShm':: d.fn(help='"Shm is the size limit of the shared memory volume"', args=[d.arg(name='shm', type=d.T.any)]),
+      withShm(shm): { spec+: { ephemeralVolumesSizeLimit+: { shm: shm } } },
+      '#withTemporaryData':: d.fn(help='"TemporaryData is the size limit of the temporary data volume"', args=[d.arg(name='temporaryData', type=d.T.any)]),
+      withTemporaryData(temporaryData): { spec+: { ephemeralVolumesSizeLimit+: { temporaryData: temporaryData } } },
+    },
     '#externalClusters':: d.obj(help='"The list of external clusters which are used in the configuration"'),
     externalClusters: {
       '#barmanObjectStore':: d.obj(help='"The configuration for the barman-cloud tool suite"'),
@@ -1232,7 +1239,7 @@
     replicationSlots: {
       '#highAvailability':: d.obj(help='"Replication slots for high availability configuration"'),
       highAvailability: {
-        '#withEnabled':: d.fn(help='"If enabled, the operator will automatically manage replication slots on the primary instance and use them in streaming replication connections with all the standby instances that are part of the HA cluster. If disabled (default), the operator will not take advantage of replication slots in streaming connections with the replicas. This feature also controls replication slots in replica cluster, from the designated primary to its cascading replicas. This can only be set at creation time."', args=[d.arg(name='enabled', type=d.T.boolean)]),
+        '#withEnabled':: d.fn(help='"If enabled (default), the operator will automatically manage replication slots on the primary instance and use them in streaming replication connections with all the standby instances that are part of the HA cluster. If disabled, the operator will not take advantage of replication slots in streaming connections with the replicas. This feature also controls replication slots in replica cluster, from the designated primary to its cascading replicas."', args=[d.arg(name='enabled', type=d.T.boolean)]),
         withEnabled(enabled): { spec+: { replicationSlots+: { highAvailability+: { enabled: enabled } } } },
         '#withSlotPrefix':: d.fn(help='"Prefix for replication slots managed by the operator for HA. It may only contain lower case letters, numbers, and the underscore character. This can only be set at creation time. By default set to `_cnpg_`."', args=[d.arg(name='slotPrefix', type=d.T.string)]),
         withSlotPrefix(slotPrefix): { spec+: { replicationSlots+: { highAvailability+: { slotPrefix: slotPrefix } } } },
@@ -1497,7 +1504,7 @@
     },
     '#withDescription':: d.fn(help='"Description of this PostgreSQL cluster"', args=[d.arg(name='description', type=d.T.string)]),
     withDescription(description): { spec+: { description: description } },
-    '#withEnableSuperuserAccess':: d.fn(help='"When this option is enabled, the operator will use the `SuperuserSecret` to update the `postgres` user password (if the secret is not present, the operator will automatically create one). When this option is disabled, the operator will ignore the `SuperuserSecret` content, delete it when automatically created, and then blank the password of the `postgres` user by setting it to `NULL`. Enabled by default."', args=[d.arg(name='enableSuperuserAccess', type=d.T.boolean)]),
+    '#withEnableSuperuserAccess':: d.fn(help='"When this option is enabled, the operator will use the `SuperuserSecret` to update the `postgres` user password (if the secret is not present, the operator will automatically create one). When this option is disabled, the operator will ignore the `SuperuserSecret` content, delete it when automatically created, and then blank the password of the `postgres` user by setting it to `NULL`. Disabled by default."', args=[d.arg(name='enableSuperuserAccess', type=d.T.boolean)]),
     withEnableSuperuserAccess(enableSuperuserAccess): { spec+: { enableSuperuserAccess: enableSuperuserAccess } },
     '#withEnv':: d.fn(help='"Env follows the Env format to pass environment variables to the pods created in the cluster"', args=[d.arg(name='env', type=d.T.array)]),
     withEnv(env): { spec+: { env: if std.isArray(v=env) then env else [env] } },
@@ -1541,8 +1548,8 @@
     withPriorityClassName(priorityClassName): { spec+: { priorityClassName: priorityClassName } },
     '#withSchedulerName':: d.fn(help='"If specified, the pod will be dispatched by specified Kubernetes scheduler. If not specified, the pod will be dispatched by the default scheduler. More info: https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/"', args=[d.arg(name='schedulerName', type=d.T.string)]),
     withSchedulerName(schedulerName): { spec+: { schedulerName: schedulerName } },
-    '#withSmartStopDelay':: d.fn(help='"The time in seconds that controls the window of time reserved for the smart shutdown of Postgres to complete. this formula to compute the timeout of smart shutdown is `max(stopDelay -  smartStopDelay, 30)`"', args=[d.arg(name='smartStopDelay', type=d.T.integer)]),
-    withSmartStopDelay(smartStopDelay): { spec+: { smartStopDelay: smartStopDelay } },
+    '#withSmartShutdownTimeout':: d.fn(help='"The time in seconds that controls the window of time reserved for the smart shutdown of Postgres to complete. Make sure you reserve enough time for the operator to request a fast shutdown of Postgres (that is: `stopDelay` - `smartShutdownTimeout`)."', args=[d.arg(name='smartShutdownTimeout', type=d.T.integer)]),
+    withSmartShutdownTimeout(smartShutdownTimeout): { spec+: { smartShutdownTimeout: smartShutdownTimeout } },
     '#withStartDelay':: d.fn(help='"The time in seconds that is allowed for a PostgreSQL instance to successfully start up (default 3600). The startup probe failure threshold is derived from this value using the formula: ceiling(startDelay / 10)."', args=[d.arg(name='startDelay', type=d.T.integer)]),
     withStartDelay(startDelay): { spec+: { startDelay: startDelay } },
     '#withStopDelay':: d.fn(help='"The time in seconds that is allowed for a PostgreSQL instance to gracefully shutdown (default 1800)"', args=[d.arg(name='stopDelay', type=d.T.integer)]),
