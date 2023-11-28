@@ -1,5 +1,5 @@
 ---
-permalink: /1.18.5/postgresql/v1/scheduledBackup/
+permalink: /1.19.6/postgresql/v1/scheduledBackup/
 ---
 
 # postgresql.v1.scheduledBackup

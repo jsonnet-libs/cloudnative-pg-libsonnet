@@ -1,10 +1,10 @@
 ---
-permalink: /1.18.5/postgresql/v1/scheduledBackup/
+permalink: /1.20.4/postgresql/v1/backup/
 ---
 
-# postgresql.v1.scheduledBackup
+# postgresql.v1.backup
 
-"ScheduledBackup is the Schema for the scheduledbackups API"
+"Backup is the Schema for the backups API"
 
 ## Index
 
@@ -30,12 +30,8 @@ permalink: /1.18.5/postgresql/v1/scheduledBackup/
   * [`fn withSelfLink(selfLink)`](#fn-metadatawithselflink)
   * [`fn withUid(uid)`](#fn-metadatawithuid)
 * [`obj spec`](#obj-spec)
-  * [`fn withBackupOwnerReference(backupOwnerReference)`](#fn-specwithbackupownerreference)
-  * [`fn withImmediate(immediate)`](#fn-specwithimmediate)
   * [`fn withMethod(method)`](#fn-specwithmethod)
   * [`fn withOnline(online)`](#fn-specwithonline)
-  * [`fn withSchedule(schedule)`](#fn-specwithschedule)
-  * [`fn withSuspend(suspend)`](#fn-specwithsuspend)
   * [`fn withTarget(target)`](#fn-specwithtarget)
   * [`obj spec.cluster`](#obj-speccluster)
     * [`fn withName(name)`](#fn-specclusterwithname)
@@ -51,7 +47,7 @@ permalink: /1.18.5/postgresql/v1/scheduledBackup/
 new(name)
 ```
 
-new returns an instance of ScheduledBackup
+new returns an instance of Backup
 
 ## obj metadata
 
@@ -219,23 +215,7 @@ withUid(uid)
 
 ## obj spec
 
-"Specification of the desired behavior of the ScheduledBackup. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
-
-### fn spec.withBackupOwnerReference
-
-```ts
-withBackupOwnerReference(backupOwnerReference)
-```
-
-"Indicates which ownerReference should be put inside the created backup resources.<br /> - none: no owner reference for created backup objects (same behavior as before the field was introduced)<br /> - self: sets the Scheduled backup object as owner of the backup<br /> - cluster: set the cluster as owner of the backup<br />"
-
-### fn spec.withImmediate
-
-```ts
-withImmediate(immediate)
-```
-
-"If the first backup has to be immediately start after creation or not"
+"Specification of the desired behavior of the backup. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
 
 ### fn spec.withMethod
 
@@ -252,22 +232,6 @@ withOnline(online)
 ```
 
 "Whether the default type of backup with volume snapshots is online/hot (`true`, default) or offline/cold (`false`) Overrides the default setting specified in the cluster field '.spec.backup.volumeSnapshot.online'"
-
-### fn spec.withSchedule
-
-```ts
-withSchedule(schedule)
-```
-
-"The schedule does not follow the same format used in Kubernetes CronJobs as it includes an additional seconds specifier, see https://pkg.go.dev/github.com/robfig/cron#hdr-CRON_Expression_Format"
-
-### fn spec.withSuspend
-
-```ts
-withSuspend(suspend)
-```
-
-"If this backup is suspended or not"
 
 ### fn spec.withTarget
 

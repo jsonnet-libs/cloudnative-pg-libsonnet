@@ -31,9 +31,13 @@ permalink: /1.18.5/postgresql/v1/backup/
   * [`fn withUid(uid)`](#fn-metadatawithuid)
 * [`obj spec`](#obj-spec)
   * [`fn withMethod(method)`](#fn-specwithmethod)
+  * [`fn withOnline(online)`](#fn-specwithonline)
   * [`fn withTarget(target)`](#fn-specwithtarget)
   * [`obj spec.cluster`](#obj-speccluster)
     * [`fn withName(name)`](#fn-specclusterwithname)
+  * [`obj spec.onlineConfiguration`](#obj-speconlineconfiguration)
+    * [`fn withImmediateCheckpoint(immediateCheckpoint)`](#fn-speconlineconfigurationwithimmediatecheckpoint)
+    * [`fn withWaitForArchive(waitForArchive)`](#fn-speconlineconfigurationwithwaitforarchive)
 
 ## Fields
 
@@ -221,6 +225,14 @@ withMethod(method)
 
 "The backup method to be used, possible options are `barmanObjectStore` and `volumeSnapshot`. Defaults to: `barmanObjectStore`."
 
+### fn spec.withOnline
+
+```ts
+withOnline(online)
+```
+
+"Whether the default type of backup with volume snapshots is online/hot (`true`, default) or offline/cold (`false`) Overrides the default setting specified in the cluster field '.spec.backup.volumeSnapshot.online'"
+
 ### fn spec.withTarget
 
 ```ts
@@ -240,3 +252,23 @@ withName(name)
 ```
 
 "Name of the referent."
+
+## obj spec.onlineConfiguration
+
+"Configuration parameters to control the online/hot backup with volume snapshots Overrides the default settings specified in the cluster '.backup.volumeSnapshot.onlineConfiguration' stanza"
+
+### fn spec.onlineConfiguration.withImmediateCheckpoint
+
+```ts
+withImmediateCheckpoint(immediateCheckpoint)
+```
+
+"Control whether the I/O workload for the backup initial checkpoint will be limited, according to the `checkpoint_completion_target` setting on the PostgreSQL server. If set to true, an immediate checkpoint will be used, meaning PostgreSQL will complete the checkpoint as soon as possible. `false` by default."
+
+### fn spec.onlineConfiguration.withWaitForArchive
+
+```ts
+withWaitForArchive(waitForArchive)
+```
+
+"If false, the function will return immediately after the backup is completed, without waiting for WAL to be archived. This behavior is only useful with backup software that independently monitors WAL archiving. Otherwise, WAL required to make the backup consistent might be missing and make the backup useless. By default, or when this parameter is true, pg_backup_stop will wait for WAL to be archived when archiving is enabled. On a standby, this means that it will wait only when archive_mode = always. If write activity on the primary is low, it may be useful to run pg_switch_wal on the primary in order to trigger an immediate segment switch."
