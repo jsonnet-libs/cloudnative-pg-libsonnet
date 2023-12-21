@@ -57,6 +57,8 @@ permalink: /1.18.5/postgresql/v1/cluster/
   * [`fn withStartDelay(startDelay)`](#fn-specwithstartdelay)
   * [`fn withStopDelay(stopDelay)`](#fn-specwithstopdelay)
   * [`fn withSwitchoverDelay(switchoverDelay)`](#fn-specwithswitchoverdelay)
+  * [`fn withTablespaces(tablespaces)`](#fn-specwithtablespaces)
+  * [`fn withTablespacesMixin(tablespaces)`](#fn-specwithtablespacesmixin)
   * [`fn withTopologySpreadConstraints(topologySpreadConstraints)`](#fn-specwithtopologyspreadconstraints)
   * [`fn withTopologySpreadConstraintsMixin(topologySpreadConstraints)`](#fn-specwithtopologyspreadconstraintsmixin)
   * [`obj spec.affinity`](#obj-specaffinity)
@@ -285,6 +287,8 @@ permalink: /1.18.5/postgresql/v1/cluster/
       * [`fn withLabelsMixin(labels)`](#fn-specbackupvolumesnapshotwithlabelsmixin)
       * [`fn withOnline(online)`](#fn-specbackupvolumesnapshotwithonline)
       * [`fn withSnapshotOwnerReference(snapshotOwnerReference)`](#fn-specbackupvolumesnapshotwithsnapshotownerreference)
+      * [`fn withTablespaceClassName(tablespaceClassName)`](#fn-specbackupvolumesnapshotwithtablespaceclassname)
+      * [`fn withTablespaceClassNameMixin(tablespaceClassName)`](#fn-specbackupvolumesnapshotwithtablespaceclassnamemixin)
       * [`fn withWalClassName(walClassName)`](#fn-specbackupvolumesnapshotwithwalclassname)
       * [`obj spec.backup.volumeSnapshot.onlineConfiguration`](#obj-specbackupvolumesnapshotonlineconfiguration)
         * [`fn withImmediateCheckpoint(immediateCheckpoint)`](#fn-specbackupvolumesnapshotonlineconfigurationwithimmediatecheckpoint)
@@ -357,6 +361,8 @@ permalink: /1.18.5/postgresql/v1/cluster/
       * [`obj spec.bootstrap.recovery.secret`](#obj-specbootstraprecoverysecret)
         * [`fn withName(name)`](#fn-specbootstraprecoverysecretwithname)
       * [`obj spec.bootstrap.recovery.volumeSnapshots`](#obj-specbootstraprecoveryvolumesnapshots)
+        * [`fn withTablespaceStorage(tablespaceStorage)`](#fn-specbootstraprecoveryvolumesnapshotswithtablespacestorage)
+        * [`fn withTablespaceStorageMixin(tablespaceStorage)`](#fn-specbootstraprecoveryvolumesnapshotswithtablespacestoragemixin)
         * [`obj spec.bootstrap.recovery.volumeSnapshots.storage`](#obj-specbootstraprecoveryvolumesnapshotsstorage)
           * [`fn withApiGroup(apiGroup)`](#fn-specbootstraprecoveryvolumesnapshotsstoragewithapigroup)
           * [`fn withKind(kind)`](#fn-specbootstraprecoveryvolumesnapshotsstoragewithkind)
@@ -510,16 +516,39 @@ permalink: /1.18.5/postgresql/v1/cluster/
     * [`fn withCustomQueriesSecretMixin(customQueriesSecret)`](#fn-specmonitoringwithcustomqueriessecretmixin)
     * [`fn withDisableDefaultQueries(disableDefaultQueries)`](#fn-specmonitoringwithdisabledefaultqueries)
     * [`fn withEnablePodMonitor(enablePodMonitor)`](#fn-specmonitoringwithenablepodmonitor)
+    * [`fn withPodMonitorMetricRelabelings(podMonitorMetricRelabelings)`](#fn-specmonitoringwithpodmonitormetricrelabelings)
+    * [`fn withPodMonitorMetricRelabelingsMixin(podMonitorMetricRelabelings)`](#fn-specmonitoringwithpodmonitormetricrelabelingsmixin)
+    * [`fn withPodMonitorRelabelings(podMonitorRelabelings)`](#fn-specmonitoringwithpodmonitorrelabelings)
+    * [`fn withPodMonitorRelabelingsMixin(podMonitorRelabelings)`](#fn-specmonitoringwithpodmonitorrelabelingsmixin)
     * [`obj spec.monitoring.customQueriesConfigMap`](#obj-specmonitoringcustomqueriesconfigmap)
       * [`fn withKey(key)`](#fn-specmonitoringcustomqueriesconfigmapwithkey)
       * [`fn withName(name)`](#fn-specmonitoringcustomqueriesconfigmapwithname)
     * [`obj spec.monitoring.customQueriesSecret`](#obj-specmonitoringcustomqueriessecret)
       * [`fn withKey(key)`](#fn-specmonitoringcustomqueriessecretwithkey)
       * [`fn withName(name)`](#fn-specmonitoringcustomqueriessecretwithname)
+    * [`obj spec.monitoring.podMonitorMetricRelabelings`](#obj-specmonitoringpodmonitormetricrelabelings)
+      * [`fn withAction(action)`](#fn-specmonitoringpodmonitormetricrelabelingswithaction)
+      * [`fn withModulus(modulus)`](#fn-specmonitoringpodmonitormetricrelabelingswithmodulus)
+      * [`fn withRegex(regex)`](#fn-specmonitoringpodmonitormetricrelabelingswithregex)
+      * [`fn withReplacement(replacement)`](#fn-specmonitoringpodmonitormetricrelabelingswithreplacement)
+      * [`fn withSeparator(separator)`](#fn-specmonitoringpodmonitormetricrelabelingswithseparator)
+      * [`fn withSourceLabels(sourceLabels)`](#fn-specmonitoringpodmonitormetricrelabelingswithsourcelabels)
+      * [`fn withSourceLabelsMixin(sourceLabels)`](#fn-specmonitoringpodmonitormetricrelabelingswithsourcelabelsmixin)
+      * [`fn withTargetLabel(targetLabel)`](#fn-specmonitoringpodmonitormetricrelabelingswithtargetlabel)
+    * [`obj spec.monitoring.podMonitorRelabelings`](#obj-specmonitoringpodmonitorrelabelings)
+      * [`fn withAction(action)`](#fn-specmonitoringpodmonitorrelabelingswithaction)
+      * [`fn withModulus(modulus)`](#fn-specmonitoringpodmonitorrelabelingswithmodulus)
+      * [`fn withRegex(regex)`](#fn-specmonitoringpodmonitorrelabelingswithregex)
+      * [`fn withReplacement(replacement)`](#fn-specmonitoringpodmonitorrelabelingswithreplacement)
+      * [`fn withSeparator(separator)`](#fn-specmonitoringpodmonitorrelabelingswithseparator)
+      * [`fn withSourceLabels(sourceLabels)`](#fn-specmonitoringpodmonitorrelabelingswithsourcelabels)
+      * [`fn withSourceLabelsMixin(sourceLabels)`](#fn-specmonitoringpodmonitorrelabelingswithsourcelabelsmixin)
+      * [`fn withTargetLabel(targetLabel)`](#fn-specmonitoringpodmonitorrelabelingswithtargetlabel)
   * [`obj spec.nodeMaintenanceWindow`](#obj-specnodemaintenancewindow)
     * [`fn withInProgress(inProgress)`](#fn-specnodemaintenancewindowwithinprogress)
     * [`fn withReusePVC(reusePVC)`](#fn-specnodemaintenancewindowwithreusepvc)
   * [`obj spec.postgresql`](#obj-specpostgresql)
+    * [`fn withEnableAlterSystem(enableAlterSystem)`](#fn-specpostgresqlwithenablealtersystem)
     * [`fn withParameters(parameters)`](#fn-specpostgresqlwithparameters)
     * [`fn withParametersMixin(parameters)`](#fn-specpostgresqlwithparametersmixin)
     * [`fn withPg_hba(pg_hba)`](#fn-specpostgresqlwithpg_hba)
@@ -654,6 +683,49 @@ permalink: /1.18.5/postgresql/v1/cluster/
           * [`fn withValuesMixin(values)`](#fn-specstoragepvctemplateselectormatchexpressionswithvaluesmixin)
   * [`obj spec.superuserSecret`](#obj-specsuperusersecret)
     * [`fn withName(name)`](#fn-specsuperusersecretwithname)
+  * [`obj spec.tablespaces`](#obj-spectablespaces)
+    * [`fn withName(name)`](#fn-spectablespaceswithname)
+    * [`fn withTemporary(temporary)`](#fn-spectablespaceswithtemporary)
+    * [`obj spec.tablespaces.owner`](#obj-spectablespacesowner)
+      * [`fn withName(name)`](#fn-spectablespacesownerwithname)
+    * [`obj spec.tablespaces.storage`](#obj-spectablespacesstorage)
+      * [`fn withResizeInUseVolumes(resizeInUseVolumes)`](#fn-spectablespacesstoragewithresizeinusevolumes)
+      * [`fn withSize(size)`](#fn-spectablespacesstoragewithsize)
+      * [`fn withStorageClass(storageClass)`](#fn-spectablespacesstoragewithstorageclass)
+      * [`obj spec.tablespaces.storage.pvcTemplate`](#obj-spectablespacesstoragepvctemplate)
+        * [`fn withAccessModes(accessModes)`](#fn-spectablespacesstoragepvctemplatewithaccessmodes)
+        * [`fn withAccessModesMixin(accessModes)`](#fn-spectablespacesstoragepvctemplatewithaccessmodesmixin)
+        * [`fn withStorageClassName(storageClassName)`](#fn-spectablespacesstoragepvctemplatewithstorageclassname)
+        * [`fn withVolumeMode(volumeMode)`](#fn-spectablespacesstoragepvctemplatewithvolumemode)
+        * [`fn withVolumeName(volumeName)`](#fn-spectablespacesstoragepvctemplatewithvolumename)
+        * [`obj spec.tablespaces.storage.pvcTemplate.dataSource`](#obj-spectablespacesstoragepvctemplatedatasource)
+          * [`fn withApiGroup(apiGroup)`](#fn-spectablespacesstoragepvctemplatedatasourcewithapigroup)
+          * [`fn withKind(kind)`](#fn-spectablespacesstoragepvctemplatedatasourcewithkind)
+          * [`fn withName(name)`](#fn-spectablespacesstoragepvctemplatedatasourcewithname)
+        * [`obj spec.tablespaces.storage.pvcTemplate.dataSourceRef`](#obj-spectablespacesstoragepvctemplatedatasourceref)
+          * [`fn withApiGroup(apiGroup)`](#fn-spectablespacesstoragepvctemplatedatasourcerefwithapigroup)
+          * [`fn withKind(kind)`](#fn-spectablespacesstoragepvctemplatedatasourcerefwithkind)
+          * [`fn withName(name)`](#fn-spectablespacesstoragepvctemplatedatasourcerefwithname)
+          * [`fn withNamespace(namespace)`](#fn-spectablespacesstoragepvctemplatedatasourcerefwithnamespace)
+        * [`obj spec.tablespaces.storage.pvcTemplate.resources`](#obj-spectablespacesstoragepvctemplateresources)
+          * [`fn withClaims(claims)`](#fn-spectablespacesstoragepvctemplateresourceswithclaims)
+          * [`fn withClaimsMixin(claims)`](#fn-spectablespacesstoragepvctemplateresourceswithclaimsmixin)
+          * [`fn withLimits(limits)`](#fn-spectablespacesstoragepvctemplateresourceswithlimits)
+          * [`fn withLimitsMixin(limits)`](#fn-spectablespacesstoragepvctemplateresourceswithlimitsmixin)
+          * [`fn withRequests(requests)`](#fn-spectablespacesstoragepvctemplateresourceswithrequests)
+          * [`fn withRequestsMixin(requests)`](#fn-spectablespacesstoragepvctemplateresourceswithrequestsmixin)
+          * [`obj spec.tablespaces.storage.pvcTemplate.resources.claims`](#obj-spectablespacesstoragepvctemplateresourcesclaims)
+            * [`fn withName(name)`](#fn-spectablespacesstoragepvctemplateresourcesclaimswithname)
+        * [`obj spec.tablespaces.storage.pvcTemplate.selector`](#obj-spectablespacesstoragepvctemplateselector)
+          * [`fn withMatchExpressions(matchExpressions)`](#fn-spectablespacesstoragepvctemplateselectorwithmatchexpressions)
+          * [`fn withMatchExpressionsMixin(matchExpressions)`](#fn-spectablespacesstoragepvctemplateselectorwithmatchexpressionsmixin)
+          * [`fn withMatchLabels(matchLabels)`](#fn-spectablespacesstoragepvctemplateselectorwithmatchlabels)
+          * [`fn withMatchLabelsMixin(matchLabels)`](#fn-spectablespacesstoragepvctemplateselectorwithmatchlabelsmixin)
+          * [`obj spec.tablespaces.storage.pvcTemplate.selector.matchExpressions`](#obj-spectablespacesstoragepvctemplateselectormatchexpressions)
+            * [`fn withKey(key)`](#fn-spectablespacesstoragepvctemplateselectormatchexpressionswithkey)
+            * [`fn withOperator(operator)`](#fn-spectablespacesstoragepvctemplateselectormatchexpressionswithoperator)
+            * [`fn withValues(values)`](#fn-spectablespacesstoragepvctemplateselectormatchexpressionswithvalues)
+            * [`fn withValuesMixin(values)`](#fn-spectablespacesstoragepvctemplateselectormatchexpressionswithvaluesmixin)
   * [`obj spec.topologySpreadConstraints`](#obj-spectopologyspreadconstraints)
     * [`fn withMatchLabelKeys(matchLabelKeys)`](#fn-spectopologyspreadconstraintswithmatchlabelkeys)
     * [`fn withMatchLabelKeysMixin(matchLabelKeys)`](#fn-spectopologyspreadconstraintswithmatchlabelkeysmixin)
@@ -1113,6 +1185,24 @@ withSwitchoverDelay(switchoverDelay)
 ```
 
 "The time in seconds that is allowed for a primary PostgreSQL instance to gracefully shutdown during a switchover. Default value is 3600 seconds (1 hour)."
+
+### fn spec.withTablespaces
+
+```ts
+withTablespaces(tablespaces)
+```
+
+"The tablespaces configuration"
+
+### fn spec.withTablespacesMixin
+
+```ts
+withTablespacesMixin(tablespaces)
+```
+
+"The tablespaces configuration"
+
+**Note:** This function appends passed data to existing values
 
 ### fn spec.withTopologySpreadConstraints
 
@@ -2824,6 +2914,24 @@ withSnapshotOwnerReference(snapshotOwnerReference)
 
 "SnapshotOwnerReference indicates the type of owner reference the snapshot should have"
 
+### fn spec.backup.volumeSnapshot.withTablespaceClassName
+
+```ts
+withTablespaceClassName(tablespaceClassName)
+```
+
+"TablespaceClassName specifies the Snapshot Class to be used for the tablespaces. defaults to the PGDATA Snapshot Class, if set"
+
+### fn spec.backup.volumeSnapshot.withTablespaceClassNameMixin
+
+```ts
+withTablespaceClassNameMixin(tablespaceClassName)
+```
+
+"TablespaceClassName specifies the Snapshot Class to be used for the tablespaces. defaults to the PGDATA Snapshot Class, if set"
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.backup.volumeSnapshot.withWalClassName
 
 ```ts
@@ -3349,6 +3457,24 @@ withName(name)
 ## obj spec.bootstrap.recovery.volumeSnapshots
 
 "The static PVC data source(s) from which to initiate the recovery procedure. Currently supporting `VolumeSnapshot` and `PersistentVolumeClaim` resources that map an existing PVC group, compatible with CloudNativePG, and taken with a cold backup copy on a fenced Postgres instance (limitation which will be removed in the future when online backup will be implemented). Mutually exclusive with `backup`."
+
+### fn spec.bootstrap.recovery.volumeSnapshots.withTablespaceStorage
+
+```ts
+withTablespaceStorage(tablespaceStorage)
+```
+
+"Configuration of the storage for PostgreSQL tablespaces"
+
+### fn spec.bootstrap.recovery.volumeSnapshots.withTablespaceStorageMixin
+
+```ts
+withTablespaceStorageMixin(tablespaceStorage)
+```
+
+"Configuration of the storage for PostgreSQL tablespaces"
+
+**Note:** This function appends passed data to existing values
 
 ## obj spec.bootstrap.recovery.volumeSnapshots.storage
 
@@ -4056,7 +4182,7 @@ withMaxParallel(maxParallel)
 
 ## obj spec.externalClusters.password
 
-"The reference to the password to be used to connect to the server"
+"The reference to the password to be used to connect to the server. If a password is provided, CloudNativePG creates a PostgreSQL passfile at `/controller/external/NAME/pass` (where \"NAME\" is the cluster's name). This passfile is automatically referenced in the connection string when establishing a connection to the remote PostgreSQL server from the current PostgreSQL `Cluster`. This ensures secure and efficient password management for external clusters."
 
 ### fn spec.externalClusters.password.withKey
 
@@ -4434,6 +4560,42 @@ withEnablePodMonitor(enablePodMonitor)
 
 "Enable or disable the `PodMonitor`"
 
+### fn spec.monitoring.withPodMonitorMetricRelabelings
+
+```ts
+withPodMonitorMetricRelabelings(podMonitorMetricRelabelings)
+```
+
+"The list of metric relabelings for the `PodMonitor`. Applied to samples before ingestion."
+
+### fn spec.monitoring.withPodMonitorMetricRelabelingsMixin
+
+```ts
+withPodMonitorMetricRelabelingsMixin(podMonitorMetricRelabelings)
+```
+
+"The list of metric relabelings for the `PodMonitor`. Applied to samples before ingestion."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.monitoring.withPodMonitorRelabelings
+
+```ts
+withPodMonitorRelabelings(podMonitorRelabelings)
+```
+
+"The list of relabelings for the `PodMonitor`. Applied to samples before scraping."
+
+### fn spec.monitoring.withPodMonitorRelabelingsMixin
+
+```ts
+withPodMonitorRelabelingsMixin(podMonitorRelabelings)
+```
+
+"The list of relabelings for the `PodMonitor`. Applied to samples before scraping."
+
+**Note:** This function appends passed data to existing values
+
 ## obj spec.monitoring.customQueriesConfigMap
 
 "The list of config maps containing the custom queries"
@@ -4474,6 +4636,146 @@ withName(name)
 
 "Name of the referent."
 
+## obj spec.monitoring.podMonitorMetricRelabelings
+
+"The list of metric relabelings for the `PodMonitor`. Applied to samples before ingestion."
+
+### fn spec.monitoring.podMonitorMetricRelabelings.withAction
+
+```ts
+withAction(action)
+```
+
+"Action to perform based on the regex matching. \n `Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0. \n Default: \"Replace\
+
+### fn spec.monitoring.podMonitorMetricRelabelings.withModulus
+
+```ts
+withModulus(modulus)
+```
+
+"Modulus to take of the hash of the source label values. \n Only applicable when the action is `HashMod`."
+
+### fn spec.monitoring.podMonitorMetricRelabelings.withRegex
+
+```ts
+withRegex(regex)
+```
+
+"Regular expression against which the extracted value is matched."
+
+### fn spec.monitoring.podMonitorMetricRelabelings.withReplacement
+
+```ts
+withReplacement(replacement)
+```
+
+"Replacement value against which a Replace action is performed if the regular expression matches. \n Regex capture groups are available."
+
+### fn spec.monitoring.podMonitorMetricRelabelings.withSeparator
+
+```ts
+withSeparator(separator)
+```
+
+"Separator is the string between concatenated SourceLabels."
+
+### fn spec.monitoring.podMonitorMetricRelabelings.withSourceLabels
+
+```ts
+withSourceLabels(sourceLabels)
+```
+
+"The source labels select values from existing labels. Their content is concatenated using the configured Separator and matched against the configured regular expression."
+
+### fn spec.monitoring.podMonitorMetricRelabelings.withSourceLabelsMixin
+
+```ts
+withSourceLabelsMixin(sourceLabels)
+```
+
+"The source labels select values from existing labels. Their content is concatenated using the configured Separator and matched against the configured regular expression."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.monitoring.podMonitorMetricRelabelings.withTargetLabel
+
+```ts
+withTargetLabel(targetLabel)
+```
+
+"Label to which the resulting string is written in a replacement. \n It is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`, `KeepEqual` and `DropEqual` actions. \n Regex capture groups are available."
+
+## obj spec.monitoring.podMonitorRelabelings
+
+"The list of relabelings for the `PodMonitor`. Applied to samples before scraping."
+
+### fn spec.monitoring.podMonitorRelabelings.withAction
+
+```ts
+withAction(action)
+```
+
+"Action to perform based on the regex matching. \n `Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0. \n Default: \"Replace\
+
+### fn spec.monitoring.podMonitorRelabelings.withModulus
+
+```ts
+withModulus(modulus)
+```
+
+"Modulus to take of the hash of the source label values. \n Only applicable when the action is `HashMod`."
+
+### fn spec.monitoring.podMonitorRelabelings.withRegex
+
+```ts
+withRegex(regex)
+```
+
+"Regular expression against which the extracted value is matched."
+
+### fn spec.monitoring.podMonitorRelabelings.withReplacement
+
+```ts
+withReplacement(replacement)
+```
+
+"Replacement value against which a Replace action is performed if the regular expression matches. \n Regex capture groups are available."
+
+### fn spec.monitoring.podMonitorRelabelings.withSeparator
+
+```ts
+withSeparator(separator)
+```
+
+"Separator is the string between concatenated SourceLabels."
+
+### fn spec.monitoring.podMonitorRelabelings.withSourceLabels
+
+```ts
+withSourceLabels(sourceLabels)
+```
+
+"The source labels select values from existing labels. Their content is concatenated using the configured Separator and matched against the configured regular expression."
+
+### fn spec.monitoring.podMonitorRelabelings.withSourceLabelsMixin
+
+```ts
+withSourceLabelsMixin(sourceLabels)
+```
+
+"The source labels select values from existing labels. Their content is concatenated using the configured Separator and matched against the configured regular expression."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.monitoring.podMonitorRelabelings.withTargetLabel
+
+```ts
+withTargetLabel(targetLabel)
+```
+
+"Label to which the resulting string is written in a replacement. \n It is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`, `KeepEqual` and `DropEqual` actions. \n Regex capture groups are available."
+
 ## obj spec.nodeMaintenanceWindow
 
 "Define a maintenance window for the Kubernetes nodes"
@@ -4497,6 +4799,14 @@ withReusePVC(reusePVC)
 ## obj spec.postgresql
 
 "Configuration of the PostgreSQL server"
+
+### fn spec.postgresql.withEnableAlterSystem
+
+```ts
+withEnableAlterSystem(enableAlterSystem)
+```
+
+"If this parameter is true, the user will be able to invoke `ALTER SYSTEM` on this CloudNativePG Cluster. This should only be used for debugging and troubleshooting. Defaults to false."
 
 ### fn spec.postgresql.withParameters
 
@@ -5206,7 +5516,7 @@ withSize(size)
 withStorageClass(storageClass)
 ```
 
-"StorageClass to use for database data (`PGDATA`). Applied after evaluating the PVC template, if available. If not specified, generated PVCs will be satisfied by the default storage class"
+"StorageClass to use for PVCs. Applied after evaluating the PVC template, if available. If not specified, the generated PVCs will use the default storage class"
 
 ## obj spec.storage.pvcTemplate
 
@@ -5478,6 +5788,324 @@ withName(name)
 
 "Name of the referent."
 
+## obj spec.tablespaces
+
+"The tablespaces configuration"
+
+### fn spec.tablespaces.withName
+
+```ts
+withName(name)
+```
+
+"The name of the tablespace"
+
+### fn spec.tablespaces.withTemporary
+
+```ts
+withTemporary(temporary)
+```
+
+"When set to true, the tablespace will be added as a `temp_tablespaces` entry in PostgreSQL, and will be available to automatically house temp database objects, or other temporary files. Please refer to PostgreSQL documentation for more information on the `temp_tablespaces` GUC."
+
+## obj spec.tablespaces.owner
+
+"Owner is the PostgreSQL user owning the tablespace"
+
+### fn spec.tablespaces.owner.withName
+
+```ts
+withName(name)
+```
+
+
+
+## obj spec.tablespaces.storage
+
+"The storage configuration for the tablespace"
+
+### fn spec.tablespaces.storage.withResizeInUseVolumes
+
+```ts
+withResizeInUseVolumes(resizeInUseVolumes)
+```
+
+"Resize existent PVCs, defaults to true"
+
+### fn spec.tablespaces.storage.withSize
+
+```ts
+withSize(size)
+```
+
+"Size of the storage. Required if not already specified in the PVC template. Changes to this field are automatically reapplied to the created PVCs. Size cannot be decreased."
+
+### fn spec.tablespaces.storage.withStorageClass
+
+```ts
+withStorageClass(storageClass)
+```
+
+"StorageClass to use for PVCs. Applied after evaluating the PVC template, if available. If not specified, the generated PVCs will use the default storage class"
+
+## obj spec.tablespaces.storage.pvcTemplate
+
+"Template to be used to generate the Persistent Volume Claim"
+
+### fn spec.tablespaces.storage.pvcTemplate.withAccessModes
+
+```ts
+withAccessModes(accessModes)
+```
+
+"accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
+
+### fn spec.tablespaces.storage.pvcTemplate.withAccessModesMixin
+
+```ts
+withAccessModesMixin(accessModes)
+```
+
+"accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.tablespaces.storage.pvcTemplate.withStorageClassName
+
+```ts
+withStorageClassName(storageClassName)
+```
+
+"storageClassName is the name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1"
+
+### fn spec.tablespaces.storage.pvcTemplate.withVolumeMode
+
+```ts
+withVolumeMode(volumeMode)
+```
+
+"volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec."
+
+### fn spec.tablespaces.storage.pvcTemplate.withVolumeName
+
+```ts
+withVolumeName(volumeName)
+```
+
+"volumeName is the binding reference to the PersistentVolume backing this claim."
+
+## obj spec.tablespaces.storage.pvcTemplate.dataSource
+
+"dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. When the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef, and dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified. If the namespace is specified, then dataSourceRef will not be copied to dataSource."
+
+### fn spec.tablespaces.storage.pvcTemplate.dataSource.withApiGroup
+
+```ts
+withApiGroup(apiGroup)
+```
+
+"APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required."
+
+### fn spec.tablespaces.storage.pvcTemplate.dataSource.withKind
+
+```ts
+withKind(kind)
+```
+
+"Kind is the type of resource being referenced"
+
+### fn spec.tablespaces.storage.pvcTemplate.dataSource.withName
+
+```ts
+withName(name)
+```
+
+"Name is the name of resource being referenced"
+
+## obj spec.tablespaces.storage.pvcTemplate.dataSourceRef
+
+"dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the dataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, when namespace isn't specified in dataSourceRef, both fields (dataSource and dataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. When namespace is specified in dataSourceRef, dataSource isn't set to the same value and must be empty. There are three important differences between dataSource and dataSourceRef: * While dataSource only allows two specific types of objects, dataSourceRef allows any non-core object, as well as PersistentVolumeClaim objects. * While dataSource ignores disallowed values (dropping them), dataSourceRef preserves all values, and generates an error if a disallowed value is specified. * While dataSource only allows local objects, dataSourceRef allows objects in any namespaces. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled. (Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
+
+### fn spec.tablespaces.storage.pvcTemplate.dataSourceRef.withApiGroup
+
+```ts
+withApiGroup(apiGroup)
+```
+
+"APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required."
+
+### fn spec.tablespaces.storage.pvcTemplate.dataSourceRef.withKind
+
+```ts
+withKind(kind)
+```
+
+"Kind is the type of resource being referenced"
+
+### fn spec.tablespaces.storage.pvcTemplate.dataSourceRef.withName
+
+```ts
+withName(name)
+```
+
+"Name is the name of resource being referenced"
+
+### fn spec.tablespaces.storage.pvcTemplate.dataSourceRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace is the namespace of resource being referenced Note that when a namespace is specified, a gateway.networking.k8s.io/ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details. (Alpha) This field requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
+
+## obj spec.tablespaces.storage.pvcTemplate.resources
+
+"resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
+
+### fn spec.tablespaces.storage.pvcTemplate.resources.withClaims
+
+```ts
+withClaims(claims)
+```
+
+"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
+
+### fn spec.tablespaces.storage.pvcTemplate.resources.withClaimsMixin
+
+```ts
+withClaimsMixin(claims)
+```
+
+"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.tablespaces.storage.pvcTemplate.resources.withLimits
+
+```ts
+withLimits(limits)
+```
+
+"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+
+### fn spec.tablespaces.storage.pvcTemplate.resources.withLimitsMixin
+
+```ts
+withLimitsMixin(limits)
+```
+
+"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.tablespaces.storage.pvcTemplate.resources.withRequests
+
+```ts
+withRequests(requests)
+```
+
+"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+
+### fn spec.tablespaces.storage.pvcTemplate.resources.withRequestsMixin
+
+```ts
+withRequestsMixin(requests)
+```
+
+"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.tablespaces.storage.pvcTemplate.resources.claims
+
+"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
+
+### fn spec.tablespaces.storage.pvcTemplate.resources.claims.withName
+
+```ts
+withName(name)
+```
+
+"Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container."
+
+## obj spec.tablespaces.storage.pvcTemplate.selector
+
+"selector is a label query over volumes to consider for binding."
+
+### fn spec.tablespaces.storage.pvcTemplate.selector.withMatchExpressions
+
+```ts
+withMatchExpressions(matchExpressions)
+```
+
+"matchExpressions is a list of label selector requirements. The requirements are ANDed."
+
+### fn spec.tablespaces.storage.pvcTemplate.selector.withMatchExpressionsMixin
+
+```ts
+withMatchExpressionsMixin(matchExpressions)
+```
+
+"matchExpressions is a list of label selector requirements. The requirements are ANDed."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.tablespaces.storage.pvcTemplate.selector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+
+### fn spec.tablespaces.storage.pvcTemplate.selector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.tablespaces.storage.pvcTemplate.selector.matchExpressions
+
+"matchExpressions is a list of label selector requirements. The requirements are ANDed."
+
+### fn spec.tablespaces.storage.pvcTemplate.selector.matchExpressions.withKey
+
+```ts
+withKey(key)
+```
+
+"key is the label key that the selector applies to."
+
+### fn spec.tablespaces.storage.pvcTemplate.selector.matchExpressions.withOperator
+
+```ts
+withOperator(operator)
+```
+
+"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+
+### fn spec.tablespaces.storage.pvcTemplate.selector.matchExpressions.withValues
+
+```ts
+withValues(values)
+```
+
+"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+
+### fn spec.tablespaces.storage.pvcTemplate.selector.matchExpressions.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+
+**Note:** This function appends passed data to existing values
+
 ## obj spec.topologySpreadConstraints
 
 "TopologySpreadConstraints specifies how to spread matching pods among the given topology. More info: https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/"
@@ -5652,7 +6280,7 @@ withSize(size)
 withStorageClass(storageClass)
 ```
 
-"StorageClass to use for database data (`PGDATA`). Applied after evaluating the PVC template, if available. If not specified, generated PVCs will be satisfied by the default storage class"
+"StorageClass to use for PVCs. Applied after evaluating the PVC template, if available. If not specified, the generated PVCs will use the default storage class"
 
 ## obj spec.walStorage.pvcTemplate
 

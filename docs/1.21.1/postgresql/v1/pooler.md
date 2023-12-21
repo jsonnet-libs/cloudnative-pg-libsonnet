@@ -41,6 +41,28 @@ permalink: /1.21.1/postgresql/v1/pooler/
       * [`fn withMaxUnavailable(maxUnavailable)`](#fn-specdeploymentstrategyrollingupdatewithmaxunavailable)
   * [`obj spec.monitoring`](#obj-specmonitoring)
     * [`fn withEnablePodMonitor(enablePodMonitor)`](#fn-specmonitoringwithenablepodmonitor)
+    * [`fn withPodMonitorMetricRelabelings(podMonitorMetricRelabelings)`](#fn-specmonitoringwithpodmonitormetricrelabelings)
+    * [`fn withPodMonitorMetricRelabelingsMixin(podMonitorMetricRelabelings)`](#fn-specmonitoringwithpodmonitormetricrelabelingsmixin)
+    * [`fn withPodMonitorRelabelings(podMonitorRelabelings)`](#fn-specmonitoringwithpodmonitorrelabelings)
+    * [`fn withPodMonitorRelabelingsMixin(podMonitorRelabelings)`](#fn-specmonitoringwithpodmonitorrelabelingsmixin)
+    * [`obj spec.monitoring.podMonitorMetricRelabelings`](#obj-specmonitoringpodmonitormetricrelabelings)
+      * [`fn withAction(action)`](#fn-specmonitoringpodmonitormetricrelabelingswithaction)
+      * [`fn withModulus(modulus)`](#fn-specmonitoringpodmonitormetricrelabelingswithmodulus)
+      * [`fn withRegex(regex)`](#fn-specmonitoringpodmonitormetricrelabelingswithregex)
+      * [`fn withReplacement(replacement)`](#fn-specmonitoringpodmonitormetricrelabelingswithreplacement)
+      * [`fn withSeparator(separator)`](#fn-specmonitoringpodmonitormetricrelabelingswithseparator)
+      * [`fn withSourceLabels(sourceLabels)`](#fn-specmonitoringpodmonitormetricrelabelingswithsourcelabels)
+      * [`fn withSourceLabelsMixin(sourceLabels)`](#fn-specmonitoringpodmonitormetricrelabelingswithsourcelabelsmixin)
+      * [`fn withTargetLabel(targetLabel)`](#fn-specmonitoringpodmonitormetricrelabelingswithtargetlabel)
+    * [`obj spec.monitoring.podMonitorRelabelings`](#obj-specmonitoringpodmonitorrelabelings)
+      * [`fn withAction(action)`](#fn-specmonitoringpodmonitorrelabelingswithaction)
+      * [`fn withModulus(modulus)`](#fn-specmonitoringpodmonitorrelabelingswithmodulus)
+      * [`fn withRegex(regex)`](#fn-specmonitoringpodmonitorrelabelingswithregex)
+      * [`fn withReplacement(replacement)`](#fn-specmonitoringpodmonitorrelabelingswithreplacement)
+      * [`fn withSeparator(separator)`](#fn-specmonitoringpodmonitorrelabelingswithseparator)
+      * [`fn withSourceLabels(sourceLabels)`](#fn-specmonitoringpodmonitorrelabelingswithsourcelabels)
+      * [`fn withSourceLabelsMixin(sourceLabels)`](#fn-specmonitoringpodmonitorrelabelingswithsourcelabelsmixin)
+      * [`fn withTargetLabel(targetLabel)`](#fn-specmonitoringpodmonitorrelabelingswithtargetlabel)
   * [`obj spec.pgbouncer`](#obj-specpgbouncer)
     * [`fn withAuthQuery(authQuery)`](#fn-specpgbouncerwithauthquery)
     * [`fn withParameters(parameters)`](#fn-specpgbouncerwithparameters)
@@ -1508,6 +1530,182 @@ withEnablePodMonitor(enablePodMonitor)
 ```
 
 "Enable or disable the `PodMonitor`"
+
+### fn spec.monitoring.withPodMonitorMetricRelabelings
+
+```ts
+withPodMonitorMetricRelabelings(podMonitorMetricRelabelings)
+```
+
+"The list of metric relabelings for the `PodMonitor`. Applied to samples before ingestion."
+
+### fn spec.monitoring.withPodMonitorMetricRelabelingsMixin
+
+```ts
+withPodMonitorMetricRelabelingsMixin(podMonitorMetricRelabelings)
+```
+
+"The list of metric relabelings for the `PodMonitor`. Applied to samples before ingestion."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.monitoring.withPodMonitorRelabelings
+
+```ts
+withPodMonitorRelabelings(podMonitorRelabelings)
+```
+
+"The list of relabelings for the `PodMonitor`. Applied to samples before scraping."
+
+### fn spec.monitoring.withPodMonitorRelabelingsMixin
+
+```ts
+withPodMonitorRelabelingsMixin(podMonitorRelabelings)
+```
+
+"The list of relabelings for the `PodMonitor`. Applied to samples before scraping."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.monitoring.podMonitorMetricRelabelings
+
+"The list of metric relabelings for the `PodMonitor`. Applied to samples before ingestion."
+
+### fn spec.monitoring.podMonitorMetricRelabelings.withAction
+
+```ts
+withAction(action)
+```
+
+"Action to perform based on the regex matching. \n `Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0. \n Default: \"Replace\
+
+### fn spec.monitoring.podMonitorMetricRelabelings.withModulus
+
+```ts
+withModulus(modulus)
+```
+
+"Modulus to take of the hash of the source label values. \n Only applicable when the action is `HashMod`."
+
+### fn spec.monitoring.podMonitorMetricRelabelings.withRegex
+
+```ts
+withRegex(regex)
+```
+
+"Regular expression against which the extracted value is matched."
+
+### fn spec.monitoring.podMonitorMetricRelabelings.withReplacement
+
+```ts
+withReplacement(replacement)
+```
+
+"Replacement value against which a Replace action is performed if the regular expression matches. \n Regex capture groups are available."
+
+### fn spec.monitoring.podMonitorMetricRelabelings.withSeparator
+
+```ts
+withSeparator(separator)
+```
+
+"Separator is the string between concatenated SourceLabels."
+
+### fn spec.monitoring.podMonitorMetricRelabelings.withSourceLabels
+
+```ts
+withSourceLabels(sourceLabels)
+```
+
+"The source labels select values from existing labels. Their content is concatenated using the configured Separator and matched against the configured regular expression."
+
+### fn spec.monitoring.podMonitorMetricRelabelings.withSourceLabelsMixin
+
+```ts
+withSourceLabelsMixin(sourceLabels)
+```
+
+"The source labels select values from existing labels. Their content is concatenated using the configured Separator and matched against the configured regular expression."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.monitoring.podMonitorMetricRelabelings.withTargetLabel
+
+```ts
+withTargetLabel(targetLabel)
+```
+
+"Label to which the resulting string is written in a replacement. \n It is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`, `KeepEqual` and `DropEqual` actions. \n Regex capture groups are available."
+
+## obj spec.monitoring.podMonitorRelabelings
+
+"The list of relabelings for the `PodMonitor`. Applied to samples before scraping."
+
+### fn spec.monitoring.podMonitorRelabelings.withAction
+
+```ts
+withAction(action)
+```
+
+"Action to perform based on the regex matching. \n `Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0. \n Default: \"Replace\
+
+### fn spec.monitoring.podMonitorRelabelings.withModulus
+
+```ts
+withModulus(modulus)
+```
+
+"Modulus to take of the hash of the source label values. \n Only applicable when the action is `HashMod`."
+
+### fn spec.monitoring.podMonitorRelabelings.withRegex
+
+```ts
+withRegex(regex)
+```
+
+"Regular expression against which the extracted value is matched."
+
+### fn spec.monitoring.podMonitorRelabelings.withReplacement
+
+```ts
+withReplacement(replacement)
+```
+
+"Replacement value against which a Replace action is performed if the regular expression matches. \n Regex capture groups are available."
+
+### fn spec.monitoring.podMonitorRelabelings.withSeparator
+
+```ts
+withSeparator(separator)
+```
+
+"Separator is the string between concatenated SourceLabels."
+
+### fn spec.monitoring.podMonitorRelabelings.withSourceLabels
+
+```ts
+withSourceLabels(sourceLabels)
+```
+
+"The source labels select values from existing labels. Their content is concatenated using the configured Separator and matched against the configured regular expression."
+
+### fn spec.monitoring.podMonitorRelabelings.withSourceLabelsMixin
+
+```ts
+withSourceLabelsMixin(sourceLabels)
+```
+
+"The source labels select values from existing labels. Their content is concatenated using the configured Separator and matched against the configured regular expression."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.monitoring.podMonitorRelabelings.withTargetLabel
+
+```ts
+withTargetLabel(targetLabel)
+```
+
+"Label to which the resulting string is written in a replacement. \n It is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`, `KeepEqual` and `DropEqual` actions. \n Regex capture groups are available."
 
 ## obj spec.pgbouncer
 
