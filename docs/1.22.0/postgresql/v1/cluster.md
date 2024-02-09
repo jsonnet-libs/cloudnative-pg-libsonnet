@@ -405,6 +405,44 @@ permalink: /1.22.0/postgresql/v1/cluster/
     * [`obj spec.envFrom.secretRef`](#obj-specenvfromsecretref)
       * [`fn withName(name)`](#fn-specenvfromsecretrefwithname)
       * [`fn withOptional(optional)`](#fn-specenvfromsecretrefwithoptional)
+  * [`obj spec.ephemeralVolumeSource`](#obj-specephemeralvolumesource)
+    * [`obj spec.ephemeralVolumeSource.volumeClaimTemplate`](#obj-specephemeralvolumesourcevolumeclaimtemplate)
+      * [`fn withMetadata(metadata)`](#fn-specephemeralvolumesourcevolumeclaimtemplatewithmetadata)
+      * [`fn withMetadataMixin(metadata)`](#fn-specephemeralvolumesourcevolumeclaimtemplatewithmetadatamixin)
+      * [`obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec`](#obj-specephemeralvolumesourcevolumeclaimtemplatespec)
+        * [`fn withAccessModes(accessModes)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecwithaccessmodes)
+        * [`fn withAccessModesMixin(accessModes)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecwithaccessmodesmixin)
+        * [`fn withStorageClassName(storageClassName)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecwithstorageclassname)
+        * [`fn withVolumeMode(volumeMode)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecwithvolumemode)
+        * [`fn withVolumeName(volumeName)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecwithvolumename)
+        * [`obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.dataSource`](#obj-specephemeralvolumesourcevolumeclaimtemplatespecdatasource)
+          * [`fn withApiGroup(apiGroup)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecdatasourcewithapigroup)
+          * [`fn withKind(kind)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecdatasourcewithkind)
+          * [`fn withName(name)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecdatasourcewithname)
+        * [`obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.dataSourceRef`](#obj-specephemeralvolumesourcevolumeclaimtemplatespecdatasourceref)
+          * [`fn withApiGroup(apiGroup)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecdatasourcerefwithapigroup)
+          * [`fn withKind(kind)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecdatasourcerefwithkind)
+          * [`fn withName(name)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecdatasourcerefwithname)
+          * [`fn withNamespace(namespace)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecdatasourcerefwithnamespace)
+        * [`obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources`](#obj-specephemeralvolumesourcevolumeclaimtemplatespecresources)
+          * [`fn withClaims(claims)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecresourceswithclaims)
+          * [`fn withClaimsMixin(claims)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecresourceswithclaimsmixin)
+          * [`fn withLimits(limits)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecresourceswithlimits)
+          * [`fn withLimitsMixin(limits)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecresourceswithlimitsmixin)
+          * [`fn withRequests(requests)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecresourceswithrequests)
+          * [`fn withRequestsMixin(requests)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecresourceswithrequestsmixin)
+          * [`obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources.claims`](#obj-specephemeralvolumesourcevolumeclaimtemplatespecresourcesclaims)
+            * [`fn withName(name)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecresourcesclaimswithname)
+        * [`obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.selector`](#obj-specephemeralvolumesourcevolumeclaimtemplatespecselector)
+          * [`fn withMatchExpressions(matchExpressions)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecselectorwithmatchexpressions)
+          * [`fn withMatchExpressionsMixin(matchExpressions)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecselectorwithmatchexpressionsmixin)
+          * [`fn withMatchLabels(matchLabels)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecselectorwithmatchlabels)
+          * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecselectorwithmatchlabelsmixin)
+          * [`obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.selector.matchExpressions`](#obj-specephemeralvolumesourcevolumeclaimtemplatespecselectormatchexpressions)
+            * [`fn withKey(key)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecselectormatchexpressionswithkey)
+            * [`fn withOperator(operator)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecselectormatchexpressionswithoperator)
+            * [`fn withValues(values)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecselectormatchexpressionswithvalues)
+            * [`fn withValuesMixin(values)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecselectormatchexpressionswithvaluesmixin)
   * [`obj spec.ephemeralVolumesSizeLimit`](#obj-specephemeralvolumessizelimit)
     * [`fn withShm(shm)`](#fn-specephemeralvolumessizelimitwithshm)
     * [`fn withTemporaryData(temporaryData)`](#fn-specephemeralvolumessizelimitwithtemporarydata)
@@ -627,6 +665,10 @@ permalink: /1.22.0/postgresql/v1/cluster/
     * [`obj spec.replicationSlots.highAvailability`](#obj-specreplicationslotshighavailability)
       * [`fn withEnabled(enabled)`](#fn-specreplicationslotshighavailabilitywithenabled)
       * [`fn withSlotPrefix(slotPrefix)`](#fn-specreplicationslotshighavailabilitywithslotprefix)
+    * [`obj spec.replicationSlots.synchronizeReplicas`](#obj-specreplicationslotssynchronizereplicas)
+      * [`fn withEnabled(enabled)`](#fn-specreplicationslotssynchronizereplicaswithenabled)
+      * [`fn withExcludePatterns(excludePatterns)`](#fn-specreplicationslotssynchronizereplicaswithexcludepatterns)
+      * [`fn withExcludePatternsMixin(excludePatterns)`](#fn-specreplicationslotssynchronizereplicaswithexcludepatternsmixin)
   * [`obj spec.resources`](#obj-specresources)
     * [`fn withClaims(claims)`](#fn-specresourceswithclaims)
     * [`fn withClaimsMixin(claims)`](#fn-specresourceswithclaimsmixin)
@@ -3768,6 +3810,290 @@ withOptional(optional)
 
 "Specify whether the Secret must be defined"
 
+## obj spec.ephemeralVolumeSource
+
+"EphemeralVolumeSource allows the user to configure the source of ephemeral volumes."
+
+## obj spec.ephemeralVolumeSource.volumeClaimTemplate
+
+"Will be used to create a stand-alone PVC to provision the volume. The pod in which this EphemeralVolumeSource is embedded will be the owner of the PVC, i.e. the PVC will be deleted together with the pod.  The name of the PVC will be `<pod name>-<volume name>` where `<volume name>` is the name from the `PodSpec.Volumes` array entry. Pod validation will reject the pod if the concatenated name is not valid for a PVC (for example, too long). \n An existing PVC with that name that is not owned by the pod will *not* be used for the pod to avoid using an unrelated volume by mistake. Starting the pod is then blocked until the unrelated PVC is removed. If such a pre-created PVC is meant to be used by the pod, the PVC has to updated with an owner reference to the pod once the pod exists. Normally this should not be necessary, but it may be useful when manually reconstructing a broken cluster. \n This field is read-only and no changes will be made by Kubernetes to the PVC after it has been created. \n Required, must not be nil."
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.withMetadata
+
+```ts
+withMetadata(metadata)
+```
+
+"May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation."
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.withMetadataMixin
+
+```ts
+withMetadataMixin(metadata)
+```
+
+"May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec
+
+"The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here."
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.withAccessModes
+
+```ts
+withAccessModes(accessModes)
+```
+
+"accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.withAccessModesMixin
+
+```ts
+withAccessModesMixin(accessModes)
+```
+
+"accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.withStorageClassName
+
+```ts
+withStorageClassName(storageClassName)
+```
+
+"storageClassName is the name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1"
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.withVolumeMode
+
+```ts
+withVolumeMode(volumeMode)
+```
+
+"volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec."
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.withVolumeName
+
+```ts
+withVolumeName(volumeName)
+```
+
+"volumeName is the binding reference to the PersistentVolume backing this claim."
+
+## obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.dataSource
+
+"dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. When the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef, and dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified. If the namespace is specified, then dataSourceRef will not be copied to dataSource."
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.dataSource.withApiGroup
+
+```ts
+withApiGroup(apiGroup)
+```
+
+"APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required."
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.dataSource.withKind
+
+```ts
+withKind(kind)
+```
+
+"Kind is the type of resource being referenced"
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.dataSource.withName
+
+```ts
+withName(name)
+```
+
+"Name is the name of resource being referenced"
+
+## obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.dataSourceRef
+
+"dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the dataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, when namespace isn't specified in dataSourceRef, both fields (dataSource and dataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. When namespace is specified in dataSourceRef, dataSource isn't set to the same value and must be empty. There are three important differences between dataSource and dataSourceRef: * While dataSource only allows two specific types of objects, dataSourceRef allows any non-core object, as well as PersistentVolumeClaim objects. * While dataSource ignores disallowed values (dropping them), dataSourceRef preserves all values, and generates an error if a disallowed value is specified. * While dataSource only allows local objects, dataSourceRef allows objects in any namespaces. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled. (Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.dataSourceRef.withApiGroup
+
+```ts
+withApiGroup(apiGroup)
+```
+
+"APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required."
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.dataSourceRef.withKind
+
+```ts
+withKind(kind)
+```
+
+"Kind is the type of resource being referenced"
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.dataSourceRef.withName
+
+```ts
+withName(name)
+```
+
+"Name is the name of resource being referenced"
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.dataSourceRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace is the namespace of resource being referenced Note that when a namespace is specified, a gateway.networking.k8s.io/ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details. (Alpha) This field requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
+
+## obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources
+
+"resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources.withClaims
+
+```ts
+withClaims(claims)
+```
+
+"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources.withClaimsMixin
+
+```ts
+withClaimsMixin(claims)
+```
+
+"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources.withLimits
+
+```ts
+withLimits(limits)
+```
+
+"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources.withLimitsMixin
+
+```ts
+withLimitsMixin(limits)
+```
+
+"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources.withRequests
+
+```ts
+withRequests(requests)
+```
+
+"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources.withRequestsMixin
+
+```ts
+withRequestsMixin(requests)
+```
+
+"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources.claims
+
+"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources.claims.withName
+
+```ts
+withName(name)
+```
+
+"Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container."
+
+## obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.selector
+
+"selector is a label query over volumes to consider for binding."
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.selector.withMatchExpressions
+
+```ts
+withMatchExpressions(matchExpressions)
+```
+
+"matchExpressions is a list of label selector requirements. The requirements are ANDed."
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.selector.withMatchExpressionsMixin
+
+```ts
+withMatchExpressionsMixin(matchExpressions)
+```
+
+"matchExpressions is a list of label selector requirements. The requirements are ANDed."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.selector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.selector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.selector.matchExpressions
+
+"matchExpressions is a list of label selector requirements. The requirements are ANDed."
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.selector.matchExpressions.withKey
+
+```ts
+withKey(key)
+```
+
+"key is the label key that the selector applies to."
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.selector.matchExpressions.withOperator
+
+```ts
+withOperator(operator)
+```
+
+"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.selector.matchExpressions.withValues
+
+```ts
+withValues(values)
+```
+
+"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.selector.matchExpressions.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+
+**Note:** This function appends passed data to existing values
+
 ## obj spec.ephemeralVolumesSizeLimit
 
 "EphemeralVolumesSizeLimit allows the user to set the limits for the ephemeral volumes"
@@ -5375,6 +5701,36 @@ withSlotPrefix(slotPrefix)
 ```
 
 "Prefix for replication slots managed by the operator for HA. It may only contain lower case letters, numbers, and the underscore character. This can only be set at creation time. By default set to `_cnpg_`."
+
+## obj spec.replicationSlots.synchronizeReplicas
+
+"Configures the synchronization of the user defined physical replication slots"
+
+### fn spec.replicationSlots.synchronizeReplicas.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+"When set to true, every replication slot that is on the primary is synchronized on each standby"
+
+### fn spec.replicationSlots.synchronizeReplicas.withExcludePatterns
+
+```ts
+withExcludePatterns(excludePatterns)
+```
+
+"List of regular expression patterns to match the names of replication slots to be excluded (by default empty)"
+
+### fn spec.replicationSlots.synchronizeReplicas.withExcludePatternsMixin
+
+```ts
+withExcludePatternsMixin(excludePatterns)
+```
+
+"List of regular expression patterns to match the names of replication slots to be excluded (by default empty)"
+
+**Note:** This function appends passed data to existing values
 
 ## obj spec.resources
 
