@@ -219,7 +219,7 @@ withUid(uid)
 
 ## obj spec
 
-"Specification of the desired behavior of the ScheduledBackup. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
+"Specification of the desired behavior of the ScheduledBackup.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
 
 ### fn spec.withBackupOwnerReference
 
@@ -227,7 +227,7 @@ withUid(uid)
 withBackupOwnerReference(backupOwnerReference)
 ```
 
-"Indicates which ownerReference should be put inside the created backup resources.<br /> - none: no owner reference for created backup objects (same behavior as before the field was introduced)<br /> - self: sets the Scheduled backup object as owner of the backup<br /> - cluster: set the cluster as owner of the backup<br />"
+"Indicates which ownerReference should be put inside the created backup resources.<br />\n- none: no owner reference for created backup objects (same behavior as before the field was introduced)<br />\n- self: sets the Scheduled backup object as owner of the backup<br />\n- cluster: set the cluster as owner of the backup<br />"
 
 ### fn spec.withImmediate
 
@@ -243,7 +243,7 @@ withImmediate(immediate)
 withMethod(method)
 ```
 
-"The backup method to be used, possible options are `barmanObjectStore` and `volumeSnapshot`. Defaults to: `barmanObjectStore`."
+"The backup method to be used, possible options are `barmanObjectStore`\nand `volumeSnapshot`. Defaults to: `barmanObjectStore`."
 
 ### fn spec.withOnline
 
@@ -251,7 +251,7 @@ withMethod(method)
 withOnline(online)
 ```
 
-"Whether the default type of backup with volume snapshots is online/hot (`true`, default) or offline/cold (`false`) Overrides the default setting specified in the cluster field '.spec.backup.volumeSnapshot.online'"
+"Whether the default type of backup with volume snapshots is\nonline/hot (`true`, default) or offline/cold (`false`)\nOverrides the default setting specified in the cluster field '.spec.backup.volumeSnapshot.online'"
 
 ### fn spec.withSchedule
 
@@ -259,7 +259,7 @@ withOnline(online)
 withSchedule(schedule)
 ```
 
-"The schedule does not follow the same format used in Kubernetes CronJobs as it includes an additional seconds specifier, see https://pkg.go.dev/github.com/robfig/cron#hdr-CRON_Expression_Format"
+"The schedule does not follow the same format used in Kubernetes CronJobs\nas it includes an additional seconds specifier,\nsee https://pkg.go.dev/github.com/robfig/cron#hdr-CRON_Expression_Format"
 
 ### fn spec.withSuspend
 
@@ -275,7 +275,7 @@ withSuspend(suspend)
 withTarget(target)
 ```
 
-"The policy to decide which instance should perform this backup. If empty, it defaults to `cluster.spec.backup.target`. Available options are empty string, `primary` and `prefer-standby`. `primary` to have backups run always on primary instances, `prefer-standby` to have backups run preferably on the most updated standby, if available."
+"The policy to decide which instance should perform this backup. If empty,\nit defaults to `cluster.spec.backup.target`.\nAvailable options are empty string, `primary` and `prefer-standby`.\n`primary` to have backups run always on primary instances,\n`prefer-standby` to have backups run preferably on the most updated\nstandby, if available."
 
 ## obj spec.cluster
 
@@ -291,7 +291,7 @@ withName(name)
 
 ## obj spec.onlineConfiguration
 
-"Configuration parameters to control the online/hot backup with volume snapshots Overrides the default settings specified in the cluster '.backup.volumeSnapshot.onlineConfiguration' stanza"
+"Configuration parameters to control the online/hot backup with volume snapshots\nOverrides the default settings specified in the cluster '.backup.volumeSnapshot.onlineConfiguration' stanza"
 
 ### fn spec.onlineConfiguration.withImmediateCheckpoint
 
@@ -299,7 +299,7 @@ withName(name)
 withImmediateCheckpoint(immediateCheckpoint)
 ```
 
-"Control whether the I/O workload for the backup initial checkpoint will be limited, according to the `checkpoint_completion_target` setting on the PostgreSQL server. If set to true, an immediate checkpoint will be used, meaning PostgreSQL will complete the checkpoint as soon as possible. `false` by default."
+"Control whether the I/O workload for the backup initial checkpoint will\nbe limited, according to the `checkpoint_completion_target` setting on\nthe PostgreSQL server. If set to true, an immediate checkpoint will be\nused, meaning PostgreSQL will complete the checkpoint as soon as\npossible. `false` by default."
 
 ### fn spec.onlineConfiguration.withWaitForArchive
 
@@ -307,4 +307,4 @@ withImmediateCheckpoint(immediateCheckpoint)
 withWaitForArchive(waitForArchive)
 ```
 
-"If false, the function will return immediately after the backup is completed, without waiting for WAL to be archived. This behavior is only useful with backup software that independently monitors WAL archiving. Otherwise, WAL required to make the backup consistent might be missing and make the backup useless. By default, or when this parameter is true, pg_backup_stop will wait for WAL to be archived when archiving is enabled. On a standby, this means that it will wait only when archive_mode = always. If write activity on the primary is low, it may be useful to run pg_switch_wal on the primary in order to trigger an immediate segment switch."
+"If false, the function will return immediately after the backup is completed,\nwithout waiting for WAL to be archived.\nThis behavior is only useful with backup software that independently monitors WAL archiving.\nOtherwise, WAL required to make the backup consistent might be missing and make the backup useless.\nBy default, or when this parameter is true, pg_backup_stop will wait for WAL to be archived when archiving is\nenabled.\nOn a standby, this means that it will wait only when archive_mode = always.\nIf write activity on the primary is low, it may be useful to run pg_switch_wal on the primary in order to trigger\nan immediate segment switch."

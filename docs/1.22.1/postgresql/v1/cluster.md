@@ -77,6 +77,10 @@ permalink: /1.22.1/postgresql/v1/cluster/
       * [`obj spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution`](#obj-specaffinityadditionalpodaffinitypreferredduringschedulingignoredduringexecution)
         * [`fn withWeight(weight)`](#fn-specaffinityadditionalpodaffinitypreferredduringschedulingignoredduringexecutionwithweight)
         * [`obj spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm`](#obj-specaffinityadditionalpodaffinitypreferredduringschedulingignoredduringexecutionpodaffinityterm)
+          * [`fn withMatchLabelKeys(matchLabelKeys)`](#fn-specaffinityadditionalpodaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithmatchlabelkeys)
+          * [`fn withMatchLabelKeysMixin(matchLabelKeys)`](#fn-specaffinityadditionalpodaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithmatchlabelkeysmixin)
+          * [`fn withMismatchLabelKeys(mismatchLabelKeys)`](#fn-specaffinityadditionalpodaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithmismatchlabelkeys)
+          * [`fn withMismatchLabelKeysMixin(mismatchLabelKeys)`](#fn-specaffinityadditionalpodaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithmismatchlabelkeysmixin)
           * [`fn withNamespaces(namespaces)`](#fn-specaffinityadditionalpodaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithnamespaces)
           * [`fn withNamespacesMixin(namespaces)`](#fn-specaffinityadditionalpodaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithnamespacesmixin)
           * [`fn withTopologyKey(topologyKey)`](#fn-specaffinityadditionalpodaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithtopologykey)
@@ -101,6 +105,10 @@ permalink: /1.22.1/postgresql/v1/cluster/
               * [`fn withValues(values)`](#fn-specaffinityadditionalpodaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermnamespaceselectormatchexpressionswithvalues)
               * [`fn withValuesMixin(values)`](#fn-specaffinityadditionalpodaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermnamespaceselectormatchexpressionswithvaluesmixin)
       * [`obj spec.affinity.additionalPodAffinity.requiredDuringSchedulingIgnoredDuringExecution`](#obj-specaffinityadditionalpodaffinityrequiredduringschedulingignoredduringexecution)
+        * [`fn withMatchLabelKeys(matchLabelKeys)`](#fn-specaffinityadditionalpodaffinityrequiredduringschedulingignoredduringexecutionwithmatchlabelkeys)
+        * [`fn withMatchLabelKeysMixin(matchLabelKeys)`](#fn-specaffinityadditionalpodaffinityrequiredduringschedulingignoredduringexecutionwithmatchlabelkeysmixin)
+        * [`fn withMismatchLabelKeys(mismatchLabelKeys)`](#fn-specaffinityadditionalpodaffinityrequiredduringschedulingignoredduringexecutionwithmismatchlabelkeys)
+        * [`fn withMismatchLabelKeysMixin(mismatchLabelKeys)`](#fn-specaffinityadditionalpodaffinityrequiredduringschedulingignoredduringexecutionwithmismatchlabelkeysmixin)
         * [`fn withNamespaces(namespaces)`](#fn-specaffinityadditionalpodaffinityrequiredduringschedulingignoredduringexecutionwithnamespaces)
         * [`fn withNamespacesMixin(namespaces)`](#fn-specaffinityadditionalpodaffinityrequiredduringschedulingignoredduringexecutionwithnamespacesmixin)
         * [`fn withTopologyKey(topologyKey)`](#fn-specaffinityadditionalpodaffinityrequiredduringschedulingignoredduringexecutionwithtopologykey)
@@ -132,6 +140,10 @@ permalink: /1.22.1/postgresql/v1/cluster/
       * [`obj spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution`](#obj-specaffinityadditionalpodantiaffinitypreferredduringschedulingignoredduringexecution)
         * [`fn withWeight(weight)`](#fn-specaffinityadditionalpodantiaffinitypreferredduringschedulingignoredduringexecutionwithweight)
         * [`obj spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm`](#obj-specaffinityadditionalpodantiaffinitypreferredduringschedulingignoredduringexecutionpodaffinityterm)
+          * [`fn withMatchLabelKeys(matchLabelKeys)`](#fn-specaffinityadditionalpodantiaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithmatchlabelkeys)
+          * [`fn withMatchLabelKeysMixin(matchLabelKeys)`](#fn-specaffinityadditionalpodantiaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithmatchlabelkeysmixin)
+          * [`fn withMismatchLabelKeys(mismatchLabelKeys)`](#fn-specaffinityadditionalpodantiaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithmismatchlabelkeys)
+          * [`fn withMismatchLabelKeysMixin(mismatchLabelKeys)`](#fn-specaffinityadditionalpodantiaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithmismatchlabelkeysmixin)
           * [`fn withNamespaces(namespaces)`](#fn-specaffinityadditionalpodantiaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithnamespaces)
           * [`fn withNamespacesMixin(namespaces)`](#fn-specaffinityadditionalpodantiaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithnamespacesmixin)
           * [`fn withTopologyKey(topologyKey)`](#fn-specaffinityadditionalpodantiaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithtopologykey)
@@ -156,6 +168,10 @@ permalink: /1.22.1/postgresql/v1/cluster/
               * [`fn withValues(values)`](#fn-specaffinityadditionalpodantiaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermnamespaceselectormatchexpressionswithvalues)
               * [`fn withValuesMixin(values)`](#fn-specaffinityadditionalpodantiaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermnamespaceselectormatchexpressionswithvaluesmixin)
       * [`obj spec.affinity.additionalPodAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution`](#obj-specaffinityadditionalpodantiaffinityrequiredduringschedulingignoredduringexecution)
+        * [`fn withMatchLabelKeys(matchLabelKeys)`](#fn-specaffinityadditionalpodantiaffinityrequiredduringschedulingignoredduringexecutionwithmatchlabelkeys)
+        * [`fn withMatchLabelKeysMixin(matchLabelKeys)`](#fn-specaffinityadditionalpodantiaffinityrequiredduringschedulingignoredduringexecutionwithmatchlabelkeysmixin)
+        * [`fn withMismatchLabelKeys(mismatchLabelKeys)`](#fn-specaffinityadditionalpodantiaffinityrequiredduringschedulingignoredduringexecutionwithmismatchlabelkeys)
+        * [`fn withMismatchLabelKeysMixin(mismatchLabelKeys)`](#fn-specaffinityadditionalpodantiaffinityrequiredduringschedulingignoredduringexecutionwithmismatchlabelkeysmixin)
         * [`fn withNamespaces(namespaces)`](#fn-specaffinityadditionalpodantiaffinityrequiredduringschedulingignoredduringexecutionwithnamespaces)
         * [`fn withNamespacesMixin(namespaces)`](#fn-specaffinityadditionalpodantiaffinityrequiredduringschedulingignoredduringexecutionwithnamespacesmixin)
         * [`fn withTopologyKey(topologyKey)`](#fn-specaffinityadditionalpodantiaffinityrequiredduringschedulingignoredduringexecutionwithtopologykey)
@@ -413,6 +429,7 @@ permalink: /1.22.1/postgresql/v1/cluster/
         * [`fn withAccessModes(accessModes)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecwithaccessmodes)
         * [`fn withAccessModesMixin(accessModes)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecwithaccessmodesmixin)
         * [`fn withStorageClassName(storageClassName)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecwithstorageclassname)
+        * [`fn withVolumeAttributesClassName(volumeAttributesClassName)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecwithvolumeattributesclassname)
         * [`fn withVolumeMode(volumeMode)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecwithvolumemode)
         * [`fn withVolumeName(volumeName)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecwithvolumename)
         * [`obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.dataSource`](#obj-specephemeralvolumesourcevolumeclaimtemplatespecdatasource)
@@ -425,14 +442,10 @@ permalink: /1.22.1/postgresql/v1/cluster/
           * [`fn withName(name)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecdatasourcerefwithname)
           * [`fn withNamespace(namespace)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecdatasourcerefwithnamespace)
         * [`obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources`](#obj-specephemeralvolumesourcevolumeclaimtemplatespecresources)
-          * [`fn withClaims(claims)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecresourceswithclaims)
-          * [`fn withClaimsMixin(claims)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecresourceswithclaimsmixin)
           * [`fn withLimits(limits)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecresourceswithlimits)
           * [`fn withLimitsMixin(limits)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecresourceswithlimitsmixin)
           * [`fn withRequests(requests)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecresourceswithrequests)
           * [`fn withRequestsMixin(requests)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecresourceswithrequestsmixin)
-          * [`obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources.claims`](#obj-specephemeralvolumesourcevolumeclaimtemplatespecresourcesclaims)
-            * [`fn withName(name)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecresourcesclaimswithname)
         * [`obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.selector`](#obj-specephemeralvolumesourcevolumeclaimtemplatespecselector)
           * [`fn withMatchExpressions(matchExpressions)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecselectorwithmatchexpressions)
           * [`fn withMatchExpressionsMixin(matchExpressions)`](#fn-specephemeralvolumesourcevolumeclaimtemplatespecselectorwithmatchexpressionsmixin)
@@ -622,6 +635,21 @@ permalink: /1.22.1/postgresql/v1/cluster/
     * [`fn withSources(sources)`](#fn-specprojectedvolumetemplatewithsources)
     * [`fn withSourcesMixin(sources)`](#fn-specprojectedvolumetemplatewithsourcesmixin)
     * [`obj spec.projectedVolumeTemplate.sources`](#obj-specprojectedvolumetemplatesources)
+      * [`obj spec.projectedVolumeTemplate.sources.clusterTrustBundle`](#obj-specprojectedvolumetemplatesourcesclustertrustbundle)
+        * [`fn withName(name)`](#fn-specprojectedvolumetemplatesourcesclustertrustbundlewithname)
+        * [`fn withOptional(optional)`](#fn-specprojectedvolumetemplatesourcesclustertrustbundlewithoptional)
+        * [`fn withPath(path)`](#fn-specprojectedvolumetemplatesourcesclustertrustbundlewithpath)
+        * [`fn withSignerName(signerName)`](#fn-specprojectedvolumetemplatesourcesclustertrustbundlewithsignername)
+        * [`obj spec.projectedVolumeTemplate.sources.clusterTrustBundle.labelSelector`](#obj-specprojectedvolumetemplatesourcesclustertrustbundlelabelselector)
+          * [`fn withMatchExpressions(matchExpressions)`](#fn-specprojectedvolumetemplatesourcesclustertrustbundlelabelselectorwithmatchexpressions)
+          * [`fn withMatchExpressionsMixin(matchExpressions)`](#fn-specprojectedvolumetemplatesourcesclustertrustbundlelabelselectorwithmatchexpressionsmixin)
+          * [`fn withMatchLabels(matchLabels)`](#fn-specprojectedvolumetemplatesourcesclustertrustbundlelabelselectorwithmatchlabels)
+          * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specprojectedvolumetemplatesourcesclustertrustbundlelabelselectorwithmatchlabelsmixin)
+          * [`obj spec.projectedVolumeTemplate.sources.clusterTrustBundle.labelSelector.matchExpressions`](#obj-specprojectedvolumetemplatesourcesclustertrustbundlelabelselectormatchexpressions)
+            * [`fn withKey(key)`](#fn-specprojectedvolumetemplatesourcesclustertrustbundlelabelselectormatchexpressionswithkey)
+            * [`fn withOperator(operator)`](#fn-specprojectedvolumetemplatesourcesclustertrustbundlelabelselectormatchexpressionswithoperator)
+            * [`fn withValues(values)`](#fn-specprojectedvolumetemplatesourcesclustertrustbundlelabelselectormatchexpressionswithvalues)
+            * [`fn withValuesMixin(values)`](#fn-specprojectedvolumetemplatesourcesclustertrustbundlelabelselectormatchexpressionswithvaluesmixin)
       * [`obj spec.projectedVolumeTemplate.sources.configMap`](#obj-specprojectedvolumetemplatesourcesconfigmap)
         * [`fn withItems(items)`](#fn-specprojectedvolumetemplatesourcesconfigmapwithitems)
         * [`fn withItemsMixin(items)`](#fn-specprojectedvolumetemplatesourcesconfigmapwithitemsmixin)
@@ -695,6 +723,7 @@ permalink: /1.22.1/postgresql/v1/cluster/
       * [`fn withAccessModes(accessModes)`](#fn-specstoragepvctemplatewithaccessmodes)
       * [`fn withAccessModesMixin(accessModes)`](#fn-specstoragepvctemplatewithaccessmodesmixin)
       * [`fn withStorageClassName(storageClassName)`](#fn-specstoragepvctemplatewithstorageclassname)
+      * [`fn withVolumeAttributesClassName(volumeAttributesClassName)`](#fn-specstoragepvctemplatewithvolumeattributesclassname)
       * [`fn withVolumeMode(volumeMode)`](#fn-specstoragepvctemplatewithvolumemode)
       * [`fn withVolumeName(volumeName)`](#fn-specstoragepvctemplatewithvolumename)
       * [`obj spec.storage.pvcTemplate.dataSource`](#obj-specstoragepvctemplatedatasource)
@@ -707,14 +736,10 @@ permalink: /1.22.1/postgresql/v1/cluster/
         * [`fn withName(name)`](#fn-specstoragepvctemplatedatasourcerefwithname)
         * [`fn withNamespace(namespace)`](#fn-specstoragepvctemplatedatasourcerefwithnamespace)
       * [`obj spec.storage.pvcTemplate.resources`](#obj-specstoragepvctemplateresources)
-        * [`fn withClaims(claims)`](#fn-specstoragepvctemplateresourceswithclaims)
-        * [`fn withClaimsMixin(claims)`](#fn-specstoragepvctemplateresourceswithclaimsmixin)
         * [`fn withLimits(limits)`](#fn-specstoragepvctemplateresourceswithlimits)
         * [`fn withLimitsMixin(limits)`](#fn-specstoragepvctemplateresourceswithlimitsmixin)
         * [`fn withRequests(requests)`](#fn-specstoragepvctemplateresourceswithrequests)
         * [`fn withRequestsMixin(requests)`](#fn-specstoragepvctemplateresourceswithrequestsmixin)
-        * [`obj spec.storage.pvcTemplate.resources.claims`](#obj-specstoragepvctemplateresourcesclaims)
-          * [`fn withName(name)`](#fn-specstoragepvctemplateresourcesclaimswithname)
       * [`obj spec.storage.pvcTemplate.selector`](#obj-specstoragepvctemplateselector)
         * [`fn withMatchExpressions(matchExpressions)`](#fn-specstoragepvctemplateselectorwithmatchexpressions)
         * [`fn withMatchExpressionsMixin(matchExpressions)`](#fn-specstoragepvctemplateselectorwithmatchexpressionsmixin)
@@ -740,6 +765,7 @@ permalink: /1.22.1/postgresql/v1/cluster/
         * [`fn withAccessModes(accessModes)`](#fn-spectablespacesstoragepvctemplatewithaccessmodes)
         * [`fn withAccessModesMixin(accessModes)`](#fn-spectablespacesstoragepvctemplatewithaccessmodesmixin)
         * [`fn withStorageClassName(storageClassName)`](#fn-spectablespacesstoragepvctemplatewithstorageclassname)
+        * [`fn withVolumeAttributesClassName(volumeAttributesClassName)`](#fn-spectablespacesstoragepvctemplatewithvolumeattributesclassname)
         * [`fn withVolumeMode(volumeMode)`](#fn-spectablespacesstoragepvctemplatewithvolumemode)
         * [`fn withVolumeName(volumeName)`](#fn-spectablespacesstoragepvctemplatewithvolumename)
         * [`obj spec.tablespaces.storage.pvcTemplate.dataSource`](#obj-spectablespacesstoragepvctemplatedatasource)
@@ -752,14 +778,10 @@ permalink: /1.22.1/postgresql/v1/cluster/
           * [`fn withName(name)`](#fn-spectablespacesstoragepvctemplatedatasourcerefwithname)
           * [`fn withNamespace(namespace)`](#fn-spectablespacesstoragepvctemplatedatasourcerefwithnamespace)
         * [`obj spec.tablespaces.storage.pvcTemplate.resources`](#obj-spectablespacesstoragepvctemplateresources)
-          * [`fn withClaims(claims)`](#fn-spectablespacesstoragepvctemplateresourceswithclaims)
-          * [`fn withClaimsMixin(claims)`](#fn-spectablespacesstoragepvctemplateresourceswithclaimsmixin)
           * [`fn withLimits(limits)`](#fn-spectablespacesstoragepvctemplateresourceswithlimits)
           * [`fn withLimitsMixin(limits)`](#fn-spectablespacesstoragepvctemplateresourceswithlimitsmixin)
           * [`fn withRequests(requests)`](#fn-spectablespacesstoragepvctemplateresourceswithrequests)
           * [`fn withRequestsMixin(requests)`](#fn-spectablespacesstoragepvctemplateresourceswithrequestsmixin)
-          * [`obj spec.tablespaces.storage.pvcTemplate.resources.claims`](#obj-spectablespacesstoragepvctemplateresourcesclaims)
-            * [`fn withName(name)`](#fn-spectablespacesstoragepvctemplateresourcesclaimswithname)
         * [`obj spec.tablespaces.storage.pvcTemplate.selector`](#obj-spectablespacesstoragepvctemplateselector)
           * [`fn withMatchExpressions(matchExpressions)`](#fn-spectablespacesstoragepvctemplateselectorwithmatchexpressions)
           * [`fn withMatchExpressionsMixin(matchExpressions)`](#fn-spectablespacesstoragepvctemplateselectorwithmatchexpressionsmixin)
@@ -797,6 +819,7 @@ permalink: /1.22.1/postgresql/v1/cluster/
       * [`fn withAccessModes(accessModes)`](#fn-specwalstoragepvctemplatewithaccessmodes)
       * [`fn withAccessModesMixin(accessModes)`](#fn-specwalstoragepvctemplatewithaccessmodesmixin)
       * [`fn withStorageClassName(storageClassName)`](#fn-specwalstoragepvctemplatewithstorageclassname)
+      * [`fn withVolumeAttributesClassName(volumeAttributesClassName)`](#fn-specwalstoragepvctemplatewithvolumeattributesclassname)
       * [`fn withVolumeMode(volumeMode)`](#fn-specwalstoragepvctemplatewithvolumemode)
       * [`fn withVolumeName(volumeName)`](#fn-specwalstoragepvctemplatewithvolumename)
       * [`obj spec.walStorage.pvcTemplate.dataSource`](#obj-specwalstoragepvctemplatedatasource)
@@ -809,14 +832,10 @@ permalink: /1.22.1/postgresql/v1/cluster/
         * [`fn withName(name)`](#fn-specwalstoragepvctemplatedatasourcerefwithname)
         * [`fn withNamespace(namespace)`](#fn-specwalstoragepvctemplatedatasourcerefwithnamespace)
       * [`obj spec.walStorage.pvcTemplate.resources`](#obj-specwalstoragepvctemplateresources)
-        * [`fn withClaims(claims)`](#fn-specwalstoragepvctemplateresourceswithclaims)
-        * [`fn withClaimsMixin(claims)`](#fn-specwalstoragepvctemplateresourceswithclaimsmixin)
         * [`fn withLimits(limits)`](#fn-specwalstoragepvctemplateresourceswithlimits)
         * [`fn withLimitsMixin(limits)`](#fn-specwalstoragepvctemplateresourceswithlimitsmixin)
         * [`fn withRequests(requests)`](#fn-specwalstoragepvctemplateresourceswithrequests)
         * [`fn withRequestsMixin(requests)`](#fn-specwalstoragepvctemplateresourceswithrequestsmixin)
-        * [`obj spec.walStorage.pvcTemplate.resources.claims`](#obj-specwalstoragepvctemplateresourcesclaims)
-          * [`fn withName(name)`](#fn-specwalstoragepvctemplateresourcesclaimswithname)
       * [`obj spec.walStorage.pvcTemplate.selector`](#obj-specwalstoragepvctemplateselector)
         * [`fn withMatchExpressions(matchExpressions)`](#fn-specwalstoragepvctemplateselectorwithmatchexpressions)
         * [`fn withMatchExpressionsMixin(matchExpressions)`](#fn-specwalstoragepvctemplateselectorwithmatchexpressionsmixin)
@@ -1004,7 +1023,7 @@ withUid(uid)
 
 ## obj spec
 
-"Specification of the desired behavior of the cluster. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
+"Specification of the desired behavior of the cluster.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
 
 ### fn spec.withDescription
 
@@ -1020,7 +1039,7 @@ withDescription(description)
 withEnableSuperuserAccess(enableSuperuserAccess)
 ```
 
-"When this option is enabled, the operator will use the `SuperuserSecret` to update the `postgres` user password (if the secret is not present, the operator will automatically create one). When this option is disabled, the operator will ignore the `SuperuserSecret` content, delete it when automatically created, and then blank the password of the `postgres` user by setting it to `NULL`. Disabled by default."
+"When this option is enabled, the operator will use the `SuperuserSecret`\nto update the `postgres` user password (if the secret is\nnot present, the operator will automatically create one). When this\noption is disabled, the operator will ignore the `SuperuserSecret` content, delete\nit when automatically created, and then blank the password of the `postgres`\nuser by setting it to `NULL`. Disabled by default."
 
 ### fn spec.withEnv
 
@@ -1028,7 +1047,7 @@ withEnableSuperuserAccess(enableSuperuserAccess)
 withEnv(env)
 ```
 
-"Env follows the Env format to pass environment variables to the pods created in the cluster"
+"Env follows the Env format to pass environment variables\nto the pods created in the cluster"
 
 ### fn spec.withEnvFrom
 
@@ -1036,7 +1055,7 @@ withEnv(env)
 withEnvFrom(envFrom)
 ```
 
-"EnvFrom follows the EnvFrom format to pass environment variables sources to the pods to be used by Env"
+"EnvFrom follows the EnvFrom format to pass environment variables\nsources to the pods to be used by Env"
 
 ### fn spec.withEnvFromMixin
 
@@ -1044,7 +1063,7 @@ withEnvFrom(envFrom)
 withEnvFromMixin(envFrom)
 ```
 
-"EnvFrom follows the EnvFrom format to pass environment variables sources to the pods to be used by Env"
+"EnvFrom follows the EnvFrom format to pass environment variables\nsources to the pods to be used by Env"
 
 **Note:** This function appends passed data to existing values
 
@@ -1054,7 +1073,7 @@ withEnvFromMixin(envFrom)
 withEnvMixin(env)
 ```
 
-"Env follows the Env format to pass environment variables to the pods created in the cluster"
+"Env follows the Env format to pass environment variables\nto the pods created in the cluster"
 
 **Note:** This function appends passed data to existing values
 
@@ -1082,7 +1101,7 @@ withExternalClustersMixin(externalClusters)
 withFailoverDelay(failoverDelay)
 ```
 
-"The amount of time (in seconds) to wait before triggering a failover after the primary PostgreSQL instance in the cluster was detected to be unhealthy"
+"The amount of time (in seconds) to wait before triggering a failover\nafter the primary PostgreSQL instance in the cluster was detected\nto be unhealthy"
 
 ### fn spec.withImageName
 
@@ -1090,7 +1109,7 @@ withFailoverDelay(failoverDelay)
 withImageName(imageName)
 ```
 
-"Name of the container image, supporting both tags (`<image>:<tag>`) and digests for deterministic and repeatable deployments (`<image>:<tag>@sha256:<digestValue>`)"
+"Name of the container image, supporting both tags (`<image>:<tag>`)\nand digests for deterministic and repeatable deployments\n(`<image>:<tag>@sha256:<digestValue>`)"
 
 ### fn spec.withImagePullPolicy
 
@@ -1098,7 +1117,7 @@ withImageName(imageName)
 withImagePullPolicy(imagePullPolicy)
 ```
 
-"Image pull policy. One of `Always`, `Never` or `IfNotPresent`. If not defined, it defaults to `IfNotPresent`. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images"
+"Image pull policy.\nOne of `Always`, `Never` or `IfNotPresent`.\nIf not defined, it defaults to `IfNotPresent`.\nCannot be updated.\nMore info: https://kubernetes.io/docs/concepts/containers/images#updating-images"
 
 ### fn spec.withImagePullSecrets
 
@@ -1140,7 +1159,7 @@ withLogLevel(logLevel)
 withMaxSyncReplicas(maxSyncReplicas)
 ```
 
-"The target value for the synchronous replication quorum, that can be decreased if the number of ready standbys is lower than this. Undefined or 0 disable synchronous replication."
+"The target value for the synchronous replication quorum, that can be\ndecreased if the number of ready standbys is lower than this.\nUndefined or 0 disable synchronous replication."
 
 ### fn spec.withMinSyncReplicas
 
@@ -1148,7 +1167,7 @@ withMaxSyncReplicas(maxSyncReplicas)
 withMinSyncReplicas(minSyncReplicas)
 ```
 
-"Minimum number of instances required in synchronous replication with the primary. Undefined or 0 allow writes to complete when no standby is available."
+"Minimum number of instances required in synchronous replication with the\nprimary. Undefined or 0 allow writes to complete when no standby is\navailable."
 
 ### fn spec.withPostgresGID
 
@@ -1172,7 +1191,7 @@ withPostgresUID(postgresUID)
 withPrimaryUpdateMethod(primaryUpdateMethod)
 ```
 
-"Method to follow to upgrade the primary server during a rolling update procedure, after all replicas have been successfully updated: it can be with a switchover (`switchover`) or in-place (`restart` - default)"
+"Method to follow to upgrade the primary server during a rolling\nupdate procedure, after all replicas have been successfully updated:\nit can be with a switchover (`switchover`) or in-place (`restart` - default)"
 
 ### fn spec.withPrimaryUpdateStrategy
 
@@ -1180,7 +1199,7 @@ withPrimaryUpdateMethod(primaryUpdateMethod)
 withPrimaryUpdateStrategy(primaryUpdateStrategy)
 ```
 
-"Deployment strategy to follow to upgrade the primary server during a rolling update procedure, after all replicas have been successfully updated: it can be automated (`unsupervised` - default) or manual (`supervised`)"
+"Deployment strategy to follow to upgrade the primary server during a rolling\nupdate procedure, after all replicas have been successfully updated:\nit can be automated (`unsupervised` - default) or manual (`supervised`)"
 
 ### fn spec.withPriorityClassName
 
@@ -1188,7 +1207,7 @@ withPrimaryUpdateStrategy(primaryUpdateStrategy)
 withPriorityClassName(priorityClassName)
 ```
 
-"Name of the priority class which will be used in every generated Pod, if the PriorityClass specified does not exist, the pod will not be able to schedule.  Please refer to https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/#priorityclass for more information"
+"Name of the priority class which will be used in every generated Pod, if the PriorityClass\nspecified does not exist, the pod will not be able to schedule.  Please refer to\nhttps://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/#priorityclass\nfor more information"
 
 ### fn spec.withSchedulerName
 
@@ -1196,7 +1215,7 @@ withPriorityClassName(priorityClassName)
 withSchedulerName(schedulerName)
 ```
 
-"If specified, the pod will be dispatched by specified Kubernetes scheduler. If not specified, the pod will be dispatched by the default scheduler. More info: https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/"
+"If specified, the pod will be dispatched by specified Kubernetes\nscheduler. If not specified, the pod will be dispatched by the default\nscheduler. More info:\nhttps://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/"
 
 ### fn spec.withSmartShutdownTimeout
 
@@ -1204,7 +1223,7 @@ withSchedulerName(schedulerName)
 withSmartShutdownTimeout(smartShutdownTimeout)
 ```
 
-"The time in seconds that controls the window of time reserved for the smart shutdown of Postgres to complete. Make sure you reserve enough time for the operator to request a fast shutdown of Postgres (that is: `stopDelay` - `smartShutdownTimeout`)."
+"The time in seconds that controls the window of time reserved for the smart shutdown of Postgres to complete.\nMake sure you reserve enough time for the operator to request a fast shutdown of Postgres\n(that is: `stopDelay` - `smartShutdownTimeout`)."
 
 ### fn spec.withStartDelay
 
@@ -1212,7 +1231,7 @@ withSmartShutdownTimeout(smartShutdownTimeout)
 withStartDelay(startDelay)
 ```
 
-"The time in seconds that is allowed for a PostgreSQL instance to successfully start up (default 3600). The startup probe failure threshold is derived from this value using the formula: ceiling(startDelay / 10)."
+"The time in seconds that is allowed for a PostgreSQL instance to\nsuccessfully start up (default 3600).\nThe startup probe failure threshold is derived from this value using the formula:\nceiling(startDelay / 10)."
 
 ### fn spec.withStopDelay
 
@@ -1220,7 +1239,7 @@ withStartDelay(startDelay)
 withStopDelay(stopDelay)
 ```
 
-"The time in seconds that is allowed for a PostgreSQL instance to gracefully shutdown (default 1800)"
+"The time in seconds that is allowed for a PostgreSQL instance to\ngracefully shutdown (default 1800)"
 
 ### fn spec.withSwitchoverDelay
 
@@ -1228,7 +1247,7 @@ withStopDelay(stopDelay)
 withSwitchoverDelay(switchoverDelay)
 ```
 
-"The time in seconds that is allowed for a primary PostgreSQL instance to gracefully shutdown during a switchover. Default value is 3600 seconds (1 hour)."
+"The time in seconds that is allowed for a primary PostgreSQL instance\nto gracefully shutdown during a switchover.\nDefault value is 3600 seconds (1 hour)."
 
 ### fn spec.withTablespaces
 
@@ -1254,7 +1273,7 @@ withTablespacesMixin(tablespaces)
 withTopologySpreadConstraints(topologySpreadConstraints)
 ```
 
-"TopologySpreadConstraints specifies how to spread matching pods among the given topology. More info: https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/"
+"TopologySpreadConstraints specifies how to spread matching pods among the given topology.\nMore info:\nhttps://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/"
 
 ### fn spec.withTopologySpreadConstraintsMixin
 
@@ -1262,7 +1281,7 @@ withTopologySpreadConstraints(topologySpreadConstraints)
 withTopologySpreadConstraintsMixin(topologySpreadConstraints)
 ```
 
-"TopologySpreadConstraints specifies how to spread matching pods among the given topology. More info: https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/"
+"TopologySpreadConstraints specifies how to spread matching pods among the given topology.\nMore info:\nhttps://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/"
 
 **Note:** This function appends passed data to existing values
 
@@ -1276,7 +1295,7 @@ withTopologySpreadConstraintsMixin(topologySpreadConstraints)
 withEnablePodAntiAffinity(enablePodAntiAffinity)
 ```
 
-"Activates anti-affinity for the pods. The operator will define pods anti-affinity unless this field is explicitly set to false"
+"Activates anti-affinity for the pods. The operator will define pods\nanti-affinity unless this field is explicitly set to false"
 
 ### fn spec.affinity.withNodeSelector
 
@@ -1284,7 +1303,7 @@ withEnablePodAntiAffinity(enablePodAntiAffinity)
 withNodeSelector(nodeSelector)
 ```
 
-"NodeSelector is map of key-value pairs used to define the nodes on which the pods can run. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/"
+"NodeSelector is map of key-value pairs used to define the nodes on which\nthe pods can run.\nMore info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/"
 
 ### fn spec.affinity.withNodeSelectorMixin
 
@@ -1292,7 +1311,7 @@ withNodeSelector(nodeSelector)
 withNodeSelectorMixin(nodeSelector)
 ```
 
-"NodeSelector is map of key-value pairs used to define the nodes on which the pods can run. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/"
+"NodeSelector is map of key-value pairs used to define the nodes on which\nthe pods can run.\nMore info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/"
 
 **Note:** This function appends passed data to existing values
 
@@ -1302,7 +1321,7 @@ withNodeSelectorMixin(nodeSelector)
 withPodAntiAffinityType(podAntiAffinityType)
 ```
 
-"PodAntiAffinityType allows the user to decide whether pod anti-affinity between cluster instance has to be considered a strong requirement during scheduling or not. Allowed values are: \"preferred\" (default if empty) or \"required\". Setting it to \"required\", could lead to instances remaining pending until new kubernetes nodes are added if all the existing nodes don't match the required pod anti-affinity rule. More info: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity"
+"PodAntiAffinityType allows the user to decide whether pod anti-affinity between cluster instance has to be\nconsidered a strong requirement during scheduling or not. Allowed values are: \"preferred\" (default if empty) or\n\"required\". Setting it to \"required\", could lead to instances remaining pending until new kubernetes nodes are\nadded if all the existing nodes don't match the required pod anti-affinity rule.\nMore info:\nhttps://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity"
 
 ### fn spec.affinity.withTolerations
 
@@ -1310,7 +1329,7 @@ withPodAntiAffinityType(podAntiAffinityType)
 withTolerations(tolerations)
 ```
 
-"Tolerations is a list of Tolerations that should be set for all the pods, in order to allow them to run on tainted nodes. More info: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/"
+"Tolerations is a list of Tolerations that should be set for all the pods, in order to allow them to run\non tainted nodes.\nMore info: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/"
 
 ### fn spec.affinity.withTolerationsMixin
 
@@ -1318,7 +1337,7 @@ withTolerations(tolerations)
 withTolerationsMixin(tolerations)
 ```
 
-"Tolerations is a list of Tolerations that should be set for all the pods, in order to allow them to run on tainted nodes. More info: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/"
+"Tolerations is a list of Tolerations that should be set for all the pods, in order to allow them to run\non tainted nodes.\nMore info: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/"
 
 **Note:** This function appends passed data to existing values
 
@@ -1328,7 +1347,7 @@ withTolerationsMixin(tolerations)
 withTopologyKey(topologyKey)
 ```
 
-"TopologyKey to use for anti-affinity configuration. See k8s documentation for more info on that"
+"TopologyKey to use for anti-affinity configuration. See k8s documentation\nfor more info on that"
 
 ## obj spec.affinity.additionalPodAffinity
 
@@ -1340,7 +1359,7 @@ withTopologyKey(topologyKey)
 withPreferredDuringSchedulingIgnoredDuringExecution(preferredDuringSchedulingIgnoredDuringExecution)
 ```
 
-"The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding \"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred."
+"The scheduler will prefer to schedule pods to nodes that satisfy\nthe affinity expressions specified by this field, but it may choose\na node that violates one or more of the expressions. The node that is\nmost preferred is the one with the greatest sum of weights, i.e.\nfor each node that meets all of the scheduling requirements (resource\nrequest, requiredDuringScheduling affinity expressions, etc.),\ncompute a sum by iterating through the elements of this field and adding\n\"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the\nnode(s) with the highest sum are the most preferred."
 
 ### fn spec.affinity.additionalPodAffinity.withPreferredDuringSchedulingIgnoredDuringExecutionMixin
 
@@ -1348,7 +1367,7 @@ withPreferredDuringSchedulingIgnoredDuringExecution(preferredDuringSchedulingIgn
 withPreferredDuringSchedulingIgnoredDuringExecutionMixin(preferredDuringSchedulingIgnoredDuringExecution)
 ```
 
-"The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding \"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred."
+"The scheduler will prefer to schedule pods to nodes that satisfy\nthe affinity expressions specified by this field, but it may choose\na node that violates one or more of the expressions. The node that is\nmost preferred is the one with the greatest sum of weights, i.e.\nfor each node that meets all of the scheduling requirements (resource\nrequest, requiredDuringScheduling affinity expressions, etc.),\ncompute a sum by iterating through the elements of this field and adding\n\"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the\nnode(s) with the highest sum are the most preferred."
 
 **Note:** This function appends passed data to existing values
 
@@ -1358,7 +1377,7 @@ withPreferredDuringSchedulingIgnoredDuringExecutionMixin(preferredDuringScheduli
 withRequiredDuringSchedulingIgnoredDuringExecution(requiredDuringSchedulingIgnoredDuringExecution)
 ```
 
-"If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied."
+"If the affinity requirements specified by this field are not met at\nscheduling time, the pod will not be scheduled onto the node.\nIf the affinity requirements specified by this field cease to be met\nat some point during pod execution (e.g. due to a pod label update), the\nsystem may or may not try to eventually evict the pod from its node.\nWhen there are multiple elements, the lists of nodes corresponding to each\npodAffinityTerm are intersected, i.e. all terms must be satisfied."
 
 ### fn spec.affinity.additionalPodAffinity.withRequiredDuringSchedulingIgnoredDuringExecutionMixin
 
@@ -1366,13 +1385,13 @@ withRequiredDuringSchedulingIgnoredDuringExecution(requiredDuringSchedulingIgnor
 withRequiredDuringSchedulingIgnoredDuringExecutionMixin(requiredDuringSchedulingIgnoredDuringExecution)
 ```
 
-"If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied."
+"If the affinity requirements specified by this field are not met at\nscheduling time, the pod will not be scheduled onto the node.\nIf the affinity requirements specified by this field cease to be met\nat some point during pod execution (e.g. due to a pod label update), the\nsystem may or may not try to eventually evict the pod from its node.\nWhen there are multiple elements, the lists of nodes corresponding to each\npodAffinityTerm are intersected, i.e. all terms must be satisfied."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution
 
-"The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding \"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred."
+"The scheduler will prefer to schedule pods to nodes that satisfy\nthe affinity expressions specified by this field, but it may choose\na node that violates one or more of the expressions. The node that is\nmost preferred is the one with the greatest sum of weights, i.e.\nfor each node that meets all of the scheduling requirements (resource\nrequest, requiredDuringScheduling affinity expressions, etc.),\ncompute a sum by iterating through the elements of this field and adding\n\"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the\nnode(s) with the highest sum are the most preferred."
 
 ### fn spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution.withWeight
 
@@ -1380,11 +1399,47 @@ withRequiredDuringSchedulingIgnoredDuringExecutionMixin(requiredDuringScheduling
 withWeight(weight)
 ```
 
-"weight associated with matching the corresponding podAffinityTerm, in the range 1-100."
+"weight associated with matching the corresponding podAffinityTerm,\nin the range 1-100."
 
 ## obj spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm
 
 "Required. A pod affinity term, associated with the corresponding weight."
+
+### fn spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withMatchLabelKeys
+
+```ts
+withMatchLabelKeys(matchLabelKeys)
+```
+
+"MatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key in (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MatchLabelKeys and LabelSelector.\nAlso, MatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+### fn spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withMatchLabelKeysMixin
+
+```ts
+withMatchLabelKeysMixin(matchLabelKeys)
+```
+
+"MatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key in (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MatchLabelKeys and LabelSelector.\nAlso, MatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withMismatchLabelKeys
+
+```ts
+withMismatchLabelKeys(mismatchLabelKeys)
+```
+
+"MismatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key notin (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MismatchLabelKeys and LabelSelector.\nAlso, MismatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+### fn spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withMismatchLabelKeysMixin
+
+```ts
+withMismatchLabelKeysMixin(mismatchLabelKeys)
+```
+
+"MismatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key notin (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MismatchLabelKeys and LabelSelector.\nAlso, MismatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+**Note:** This function appends passed data to existing values
 
 ### fn spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withNamespaces
 
@@ -1392,7 +1447,7 @@ withWeight(weight)
 withNamespaces(namespaces)
 ```
 
-"namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
+"namespaces specifies a static list of namespace names that the term applies to.\nThe term is applied to the union of the namespaces listed in this field\nand the ones selected by namespaceSelector.\nnull or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
 
 ### fn spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withNamespacesMixin
 
@@ -1400,7 +1455,7 @@ withNamespaces(namespaces)
 withNamespacesMixin(namespaces)
 ```
 
-"namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
+"namespaces specifies a static list of namespace names that the term applies to.\nThe term is applied to the union of the namespaces listed in this field\nand the ones selected by namespaceSelector.\nnull or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
 
 **Note:** This function appends passed data to existing values
 
@@ -1410,11 +1465,11 @@ withNamespacesMixin(namespaces)
 withTopologyKey(topologyKey)
 ```
 
-"This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching the labelSelector in the specified namespaces, where co-located is defined as running on a node whose value of the label with key topologyKey matches that of any node on which any of the selected pods is running. Empty topologyKey is not allowed."
+"This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching\nthe labelSelector in the specified namespaces, where co-located is defined as running on a node\nwhose value of the label with key topologyKey matches that of any node on which any of the\nselected pods is running.\nEmpty topologyKey is not allowed."
 
 ## obj spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.labelSelector
 
-"A label query over a set of resources, in this case pods."
+"A label query over a set of resources, in this case pods.\nIf it's null, this PodAffinityTerm matches with no Pods."
 
 ### fn spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.labelSelector.withMatchExpressions
 
@@ -1440,7 +1495,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.labelSelector.withMatchLabelsMixin
 
@@ -1448,7 +1503,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -1470,7 +1525,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.labelSelector.matchExpressions.withValues
 
@@ -1478,7 +1533,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.labelSelector.matchExpressions.withValuesMixin
 
@@ -1486,13 +1541,13 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.namespaceSelector
 
-"A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means \"this pod's namespace\". An empty selector ({}) matches all namespaces."
+"A label query over the set of namespaces that the term applies to.\nThe term is applied to the union of the namespaces selected by this field\nand the ones listed in the namespaces field.\nnull selector and null or empty namespaces list means \"this pod's namespace\".\nAn empty selector ({}) matches all namespaces."
 
 ### fn spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.namespaceSelector.withMatchExpressions
 
@@ -1518,7 +1573,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.namespaceSelector.withMatchLabelsMixin
 
@@ -1526,7 +1581,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -1548,7 +1603,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.namespaceSelector.matchExpressions.withValues
 
@@ -1556,7 +1611,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.affinity.additionalPodAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.namespaceSelector.matchExpressions.withValuesMixin
 
@@ -1564,13 +1619,49 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.affinity.additionalPodAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-"If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied."
+"If the affinity requirements specified by this field are not met at\nscheduling time, the pod will not be scheduled onto the node.\nIf the affinity requirements specified by this field cease to be met\nat some point during pod execution (e.g. due to a pod label update), the\nsystem may or may not try to eventually evict the pod from its node.\nWhen there are multiple elements, the lists of nodes corresponding to each\npodAffinityTerm are intersected, i.e. all terms must be satisfied."
+
+### fn spec.affinity.additionalPodAffinity.requiredDuringSchedulingIgnoredDuringExecution.withMatchLabelKeys
+
+```ts
+withMatchLabelKeys(matchLabelKeys)
+```
+
+"MatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key in (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MatchLabelKeys and LabelSelector.\nAlso, MatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+### fn spec.affinity.additionalPodAffinity.requiredDuringSchedulingIgnoredDuringExecution.withMatchLabelKeysMixin
+
+```ts
+withMatchLabelKeysMixin(matchLabelKeys)
+```
+
+"MatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key in (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MatchLabelKeys and LabelSelector.\nAlso, MatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.affinity.additionalPodAffinity.requiredDuringSchedulingIgnoredDuringExecution.withMismatchLabelKeys
+
+```ts
+withMismatchLabelKeys(mismatchLabelKeys)
+```
+
+"MismatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key notin (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MismatchLabelKeys and LabelSelector.\nAlso, MismatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+### fn spec.affinity.additionalPodAffinity.requiredDuringSchedulingIgnoredDuringExecution.withMismatchLabelKeysMixin
+
+```ts
+withMismatchLabelKeysMixin(mismatchLabelKeys)
+```
+
+"MismatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key notin (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MismatchLabelKeys and LabelSelector.\nAlso, MismatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+**Note:** This function appends passed data to existing values
 
 ### fn spec.affinity.additionalPodAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNamespaces
 
@@ -1578,7 +1669,7 @@ withValuesMixin(values)
 withNamespaces(namespaces)
 ```
 
-"namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
+"namespaces specifies a static list of namespace names that the term applies to.\nThe term is applied to the union of the namespaces listed in this field\nand the ones selected by namespaceSelector.\nnull or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
 
 ### fn spec.affinity.additionalPodAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNamespacesMixin
 
@@ -1586,7 +1677,7 @@ withNamespaces(namespaces)
 withNamespacesMixin(namespaces)
 ```
 
-"namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
+"namespaces specifies a static list of namespace names that the term applies to.\nThe term is applied to the union of the namespaces listed in this field\nand the ones selected by namespaceSelector.\nnull or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
 
 **Note:** This function appends passed data to existing values
 
@@ -1596,11 +1687,11 @@ withNamespacesMixin(namespaces)
 withTopologyKey(topologyKey)
 ```
 
-"This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching the labelSelector in the specified namespaces, where co-located is defined as running on a node whose value of the label with key topologyKey matches that of any node on which any of the selected pods is running. Empty topologyKey is not allowed."
+"This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching\nthe labelSelector in the specified namespaces, where co-located is defined as running on a node\nwhose value of the label with key topologyKey matches that of any node on which any of the\nselected pods is running.\nEmpty topologyKey is not allowed."
 
 ## obj spec.affinity.additionalPodAffinity.requiredDuringSchedulingIgnoredDuringExecution.labelSelector
 
-"A label query over a set of resources, in this case pods."
+"A label query over a set of resources, in this case pods.\nIf it's null, this PodAffinityTerm matches with no Pods."
 
 ### fn spec.affinity.additionalPodAffinity.requiredDuringSchedulingIgnoredDuringExecution.labelSelector.withMatchExpressions
 
@@ -1626,7 +1717,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.affinity.additionalPodAffinity.requiredDuringSchedulingIgnoredDuringExecution.labelSelector.withMatchLabelsMixin
 
@@ -1634,7 +1725,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -1656,7 +1747,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.affinity.additionalPodAffinity.requiredDuringSchedulingIgnoredDuringExecution.labelSelector.matchExpressions.withValues
 
@@ -1664,7 +1755,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.affinity.additionalPodAffinity.requiredDuringSchedulingIgnoredDuringExecution.labelSelector.matchExpressions.withValuesMixin
 
@@ -1672,13 +1763,13 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.affinity.additionalPodAffinity.requiredDuringSchedulingIgnoredDuringExecution.namespaceSelector
 
-"A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means \"this pod's namespace\". An empty selector ({}) matches all namespaces."
+"A label query over the set of namespaces that the term applies to.\nThe term is applied to the union of the namespaces selected by this field\nand the ones listed in the namespaces field.\nnull selector and null or empty namespaces list means \"this pod's namespace\".\nAn empty selector ({}) matches all namespaces."
 
 ### fn spec.affinity.additionalPodAffinity.requiredDuringSchedulingIgnoredDuringExecution.namespaceSelector.withMatchExpressions
 
@@ -1704,7 +1795,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.affinity.additionalPodAffinity.requiredDuringSchedulingIgnoredDuringExecution.namespaceSelector.withMatchLabelsMixin
 
@@ -1712,7 +1803,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -1734,7 +1825,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.affinity.additionalPodAffinity.requiredDuringSchedulingIgnoredDuringExecution.namespaceSelector.matchExpressions.withValues
 
@@ -1742,7 +1833,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.affinity.additionalPodAffinity.requiredDuringSchedulingIgnoredDuringExecution.namespaceSelector.matchExpressions.withValuesMixin
 
@@ -1750,13 +1841,13 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.affinity.additionalPodAntiAffinity
 
-"AdditionalPodAntiAffinity allows to specify pod anti-affinity terms to be added to the ones generated by the operator if EnablePodAntiAffinity is set to true (default) or to be used exclusively if set to false."
+"AdditionalPodAntiAffinity allows to specify pod anti-affinity terms to be added to the ones generated\nby the operator if EnablePodAntiAffinity is set to true (default) or to be used exclusively if set to false."
 
 ### fn spec.affinity.additionalPodAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1764,7 +1855,7 @@ withValuesMixin(values)
 withPreferredDuringSchedulingIgnoredDuringExecution(preferredDuringSchedulingIgnoredDuringExecution)
 ```
 
-"The scheduler will prefer to schedule pods to nodes that satisfy the anti-affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling anti-affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding \"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred."
+"The scheduler will prefer to schedule pods to nodes that satisfy\nthe anti-affinity expressions specified by this field, but it may choose\na node that violates one or more of the expressions. The node that is\nmost preferred is the one with the greatest sum of weights, i.e.\nfor each node that meets all of the scheduling requirements (resource\nrequest, requiredDuringScheduling anti-affinity expressions, etc.),\ncompute a sum by iterating through the elements of this field and adding\n\"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the\nnode(s) with the highest sum are the most preferred."
 
 ### fn spec.affinity.additionalPodAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecutionMixin
 
@@ -1772,7 +1863,7 @@ withPreferredDuringSchedulingIgnoredDuringExecution(preferredDuringSchedulingIgn
 withPreferredDuringSchedulingIgnoredDuringExecutionMixin(preferredDuringSchedulingIgnoredDuringExecution)
 ```
 
-"The scheduler will prefer to schedule pods to nodes that satisfy the anti-affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling anti-affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding \"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred."
+"The scheduler will prefer to schedule pods to nodes that satisfy\nthe anti-affinity expressions specified by this field, but it may choose\na node that violates one or more of the expressions. The node that is\nmost preferred is the one with the greatest sum of weights, i.e.\nfor each node that meets all of the scheduling requirements (resource\nrequest, requiredDuringScheduling anti-affinity expressions, etc.),\ncompute a sum by iterating through the elements of this field and adding\n\"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the\nnode(s) with the highest sum are the most preferred."
 
 **Note:** This function appends passed data to existing values
 
@@ -1782,7 +1873,7 @@ withPreferredDuringSchedulingIgnoredDuringExecutionMixin(preferredDuringScheduli
 withRequiredDuringSchedulingIgnoredDuringExecution(requiredDuringSchedulingIgnoredDuringExecution)
 ```
 
-"If the anti-affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the anti-affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied."
+"If the anti-affinity requirements specified by this field are not met at\nscheduling time, the pod will not be scheduled onto the node.\nIf the anti-affinity requirements specified by this field cease to be met\nat some point during pod execution (e.g. due to a pod label update), the\nsystem may or may not try to eventually evict the pod from its node.\nWhen there are multiple elements, the lists of nodes corresponding to each\npodAffinityTerm are intersected, i.e. all terms must be satisfied."
 
 ### fn spec.affinity.additionalPodAntiAffinity.withRequiredDuringSchedulingIgnoredDuringExecutionMixin
 
@@ -1790,13 +1881,13 @@ withRequiredDuringSchedulingIgnoredDuringExecution(requiredDuringSchedulingIgnor
 withRequiredDuringSchedulingIgnoredDuringExecutionMixin(requiredDuringSchedulingIgnoredDuringExecution)
 ```
 
-"If the anti-affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the anti-affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied."
+"If the anti-affinity requirements specified by this field are not met at\nscheduling time, the pod will not be scheduled onto the node.\nIf the anti-affinity requirements specified by this field cease to be met\nat some point during pod execution (e.g. due to a pod label update), the\nsystem may or may not try to eventually evict the pod from its node.\nWhen there are multiple elements, the lists of nodes corresponding to each\npodAffinityTerm are intersected, i.e. all terms must be satisfied."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution
 
-"The scheduler will prefer to schedule pods to nodes that satisfy the anti-affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling anti-affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding \"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred."
+"The scheduler will prefer to schedule pods to nodes that satisfy\nthe anti-affinity expressions specified by this field, but it may choose\na node that violates one or more of the expressions. The node that is\nmost preferred is the one with the greatest sum of weights, i.e.\nfor each node that meets all of the scheduling requirements (resource\nrequest, requiredDuringScheduling anti-affinity expressions, etc.),\ncompute a sum by iterating through the elements of this field and adding\n\"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the\nnode(s) with the highest sum are the most preferred."
 
 ### fn spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.withWeight
 
@@ -1804,11 +1895,47 @@ withRequiredDuringSchedulingIgnoredDuringExecutionMixin(requiredDuringScheduling
 withWeight(weight)
 ```
 
-"weight associated with matching the corresponding podAffinityTerm, in the range 1-100."
+"weight associated with matching the corresponding podAffinityTerm,\nin the range 1-100."
 
 ## obj spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm
 
 "Required. A pod affinity term, associated with the corresponding weight."
+
+### fn spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withMatchLabelKeys
+
+```ts
+withMatchLabelKeys(matchLabelKeys)
+```
+
+"MatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key in (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MatchLabelKeys and LabelSelector.\nAlso, MatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+### fn spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withMatchLabelKeysMixin
+
+```ts
+withMatchLabelKeysMixin(matchLabelKeys)
+```
+
+"MatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key in (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MatchLabelKeys and LabelSelector.\nAlso, MatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withMismatchLabelKeys
+
+```ts
+withMismatchLabelKeys(mismatchLabelKeys)
+```
+
+"MismatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key notin (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MismatchLabelKeys and LabelSelector.\nAlso, MismatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+### fn spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withMismatchLabelKeysMixin
+
+```ts
+withMismatchLabelKeysMixin(mismatchLabelKeys)
+```
+
+"MismatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key notin (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MismatchLabelKeys and LabelSelector.\nAlso, MismatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+**Note:** This function appends passed data to existing values
 
 ### fn spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withNamespaces
 
@@ -1816,7 +1943,7 @@ withWeight(weight)
 withNamespaces(namespaces)
 ```
 
-"namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
+"namespaces specifies a static list of namespace names that the term applies to.\nThe term is applied to the union of the namespaces listed in this field\nand the ones selected by namespaceSelector.\nnull or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
 
 ### fn spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withNamespacesMixin
 
@@ -1824,7 +1951,7 @@ withNamespaces(namespaces)
 withNamespacesMixin(namespaces)
 ```
 
-"namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
+"namespaces specifies a static list of namespace names that the term applies to.\nThe term is applied to the union of the namespaces listed in this field\nand the ones selected by namespaceSelector.\nnull or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
 
 **Note:** This function appends passed data to existing values
 
@@ -1834,11 +1961,11 @@ withNamespacesMixin(namespaces)
 withTopologyKey(topologyKey)
 ```
 
-"This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching the labelSelector in the specified namespaces, where co-located is defined as running on a node whose value of the label with key topologyKey matches that of any node on which any of the selected pods is running. Empty topologyKey is not allowed."
+"This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching\nthe labelSelector in the specified namespaces, where co-located is defined as running on a node\nwhose value of the label with key topologyKey matches that of any node on which any of the\nselected pods is running.\nEmpty topologyKey is not allowed."
 
 ## obj spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.labelSelector
 
-"A label query over a set of resources, in this case pods."
+"A label query over a set of resources, in this case pods.\nIf it's null, this PodAffinityTerm matches with no Pods."
 
 ### fn spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.labelSelector.withMatchExpressions
 
@@ -1864,7 +1991,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.labelSelector.withMatchLabelsMixin
 
@@ -1872,7 +1999,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -1894,7 +2021,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.labelSelector.matchExpressions.withValues
 
@@ -1902,7 +2029,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.labelSelector.matchExpressions.withValuesMixin
 
@@ -1910,13 +2037,13 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.namespaceSelector
 
-"A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means \"this pod's namespace\". An empty selector ({}) matches all namespaces."
+"A label query over the set of namespaces that the term applies to.\nThe term is applied to the union of the namespaces selected by this field\nand the ones listed in the namespaces field.\nnull selector and null or empty namespaces list means \"this pod's namespace\".\nAn empty selector ({}) matches all namespaces."
 
 ### fn spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.namespaceSelector.withMatchExpressions
 
@@ -1942,7 +2069,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.namespaceSelector.withMatchLabelsMixin
 
@@ -1950,7 +2077,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -1972,7 +2099,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.namespaceSelector.matchExpressions.withValues
 
@@ -1980,7 +2107,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.affinity.additionalPodAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.namespaceSelector.matchExpressions.withValuesMixin
 
@@ -1988,13 +2115,49 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.affinity.additionalPodAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-"If the anti-affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the anti-affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied."
+"If the anti-affinity requirements specified by this field are not met at\nscheduling time, the pod will not be scheduled onto the node.\nIf the anti-affinity requirements specified by this field cease to be met\nat some point during pod execution (e.g. due to a pod label update), the\nsystem may or may not try to eventually evict the pod from its node.\nWhen there are multiple elements, the lists of nodes corresponding to each\npodAffinityTerm are intersected, i.e. all terms must be satisfied."
+
+### fn spec.affinity.additionalPodAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.withMatchLabelKeys
+
+```ts
+withMatchLabelKeys(matchLabelKeys)
+```
+
+"MatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key in (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MatchLabelKeys and LabelSelector.\nAlso, MatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+### fn spec.affinity.additionalPodAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.withMatchLabelKeysMixin
+
+```ts
+withMatchLabelKeysMixin(matchLabelKeys)
+```
+
+"MatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key in (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MatchLabelKeys and LabelSelector.\nAlso, MatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.affinity.additionalPodAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.withMismatchLabelKeys
+
+```ts
+withMismatchLabelKeys(mismatchLabelKeys)
+```
+
+"MismatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key notin (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MismatchLabelKeys and LabelSelector.\nAlso, MismatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+### fn spec.affinity.additionalPodAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.withMismatchLabelKeysMixin
+
+```ts
+withMismatchLabelKeysMixin(mismatchLabelKeys)
+```
+
+"MismatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key notin (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MismatchLabelKeys and LabelSelector.\nAlso, MismatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+**Note:** This function appends passed data to existing values
 
 ### fn spec.affinity.additionalPodAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNamespaces
 
@@ -2002,7 +2165,7 @@ withValuesMixin(values)
 withNamespaces(namespaces)
 ```
 
-"namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
+"namespaces specifies a static list of namespace names that the term applies to.\nThe term is applied to the union of the namespaces listed in this field\nand the ones selected by namespaceSelector.\nnull or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
 
 ### fn spec.affinity.additionalPodAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNamespacesMixin
 
@@ -2010,7 +2173,7 @@ withNamespaces(namespaces)
 withNamespacesMixin(namespaces)
 ```
 
-"namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
+"namespaces specifies a static list of namespace names that the term applies to.\nThe term is applied to the union of the namespaces listed in this field\nand the ones selected by namespaceSelector.\nnull or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
 
 **Note:** This function appends passed data to existing values
 
@@ -2020,11 +2183,11 @@ withNamespacesMixin(namespaces)
 withTopologyKey(topologyKey)
 ```
 
-"This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching the labelSelector in the specified namespaces, where co-located is defined as running on a node whose value of the label with key topologyKey matches that of any node on which any of the selected pods is running. Empty topologyKey is not allowed."
+"This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching\nthe labelSelector in the specified namespaces, where co-located is defined as running on a node\nwhose value of the label with key topologyKey matches that of any node on which any of the\nselected pods is running.\nEmpty topologyKey is not allowed."
 
 ## obj spec.affinity.additionalPodAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.labelSelector
 
-"A label query over a set of resources, in this case pods."
+"A label query over a set of resources, in this case pods.\nIf it's null, this PodAffinityTerm matches with no Pods."
 
 ### fn spec.affinity.additionalPodAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.labelSelector.withMatchExpressions
 
@@ -2050,7 +2213,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.affinity.additionalPodAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.labelSelector.withMatchLabelsMixin
 
@@ -2058,7 +2221,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -2080,7 +2243,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.affinity.additionalPodAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.labelSelector.matchExpressions.withValues
 
@@ -2088,7 +2251,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.affinity.additionalPodAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.labelSelector.matchExpressions.withValuesMixin
 
@@ -2096,13 +2259,13 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.affinity.additionalPodAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.namespaceSelector
 
-"A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means \"this pod's namespace\". An empty selector ({}) matches all namespaces."
+"A label query over the set of namespaces that the term applies to.\nThe term is applied to the union of the namespaces selected by this field\nand the ones listed in the namespaces field.\nnull selector and null or empty namespaces list means \"this pod's namespace\".\nAn empty selector ({}) matches all namespaces."
 
 ### fn spec.affinity.additionalPodAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.namespaceSelector.withMatchExpressions
 
@@ -2128,7 +2291,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.affinity.additionalPodAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.namespaceSelector.withMatchLabelsMixin
 
@@ -2136,7 +2299,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -2158,7 +2321,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.affinity.additionalPodAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.namespaceSelector.matchExpressions.withValues
 
@@ -2166,7 +2329,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.affinity.additionalPodAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.namespaceSelector.matchExpressions.withValuesMixin
 
@@ -2174,13 +2337,13 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.affinity.nodeAffinity
 
-"NodeAffinity describes node affinity scheduling rules for the pod. More info: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity"
+"NodeAffinity describes node affinity scheduling rules for the pod.\nMore info: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity"
 
 ### fn spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -2188,7 +2351,7 @@ withValuesMixin(values)
 withPreferredDuringSchedulingIgnoredDuringExecution(preferredDuringSchedulingIgnoredDuringExecution)
 ```
 
-"The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding \"weight\" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred."
+"The scheduler will prefer to schedule pods to nodes that satisfy\nthe affinity expressions specified by this field, but it may choose\na node that violates one or more of the expressions. The node that is\nmost preferred is the one with the greatest sum of weights, i.e.\nfor each node that meets all of the scheduling requirements (resource\nrequest, requiredDuringScheduling affinity expressions, etc.),\ncompute a sum by iterating through the elements of this field and adding\n\"weight\" to the sum if the node matches the corresponding matchExpressions; the\nnode(s) with the highest sum are the most preferred."
 
 ### fn spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecutionMixin
 
@@ -2196,13 +2359,13 @@ withPreferredDuringSchedulingIgnoredDuringExecution(preferredDuringSchedulingIgn
 withPreferredDuringSchedulingIgnoredDuringExecutionMixin(preferredDuringSchedulingIgnoredDuringExecution)
 ```
 
-"The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding \"weight\" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred."
+"The scheduler will prefer to schedule pods to nodes that satisfy\nthe affinity expressions specified by this field, but it may choose\na node that violates one or more of the expressions. The node that is\nmost preferred is the one with the greatest sum of weights, i.e.\nfor each node that meets all of the scheduling requirements (resource\nrequest, requiredDuringScheduling affinity expressions, etc.),\ncompute a sum by iterating through the elements of this field and adding\n\"weight\" to the sum if the node matches the corresponding matchExpressions; the\nnode(s) with the highest sum are the most preferred."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.affinity.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution
 
-"The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding \"weight\" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred."
+"The scheduler will prefer to schedule pods to nodes that satisfy\nthe affinity expressions specified by this field, but it may choose\na node that violates one or more of the expressions. The node that is\nmost preferred is the one with the greatest sum of weights, i.e.\nfor each node that meets all of the scheduling requirements (resource\nrequest, requiredDuringScheduling affinity expressions, etc.),\ncompute a sum by iterating through the elements of this field and adding\n\"weight\" to the sum if the node matches the corresponding matchExpressions; the\nnode(s) with the highest sum are the most preferred."
 
 ### fn spec.affinity.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.withWeight
 
@@ -2270,7 +2433,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"Represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt."
+"Represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt."
 
 ### fn spec.affinity.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.matchExpressions.withValues
 
@@ -2278,7 +2441,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch."
+"An array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. If the operator is Gt or Lt, the values\narray must have a single element, which will be interpreted as an integer.\nThis array is replaced during a strategic merge patch."
 
 ### fn spec.affinity.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.matchExpressions.withValuesMixin
 
@@ -2286,7 +2449,7 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch."
+"An array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. If the operator is Gt or Lt, the values\narray must have a single element, which will be interpreted as an integer.\nThis array is replaced during a strategic merge patch."
 
 **Note:** This function appends passed data to existing values
 
@@ -2308,7 +2471,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"Represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt."
+"Represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt."
 
 ### fn spec.affinity.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.matchFields.withValues
 
@@ -2316,7 +2479,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch."
+"An array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. If the operator is Gt or Lt, the values\narray must have a single element, which will be interpreted as an integer.\nThis array is replaced during a strategic merge patch."
 
 ### fn spec.affinity.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.matchFields.withValuesMixin
 
@@ -2324,13 +2487,13 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch."
+"An array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. If the operator is Gt or Lt, the values\narray must have a single element, which will be interpreted as an integer.\nThis array is replaced during a strategic merge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-"If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to an update), the system may or may not try to eventually evict the pod from its node."
+"If the affinity requirements specified by this field are not met at\nscheduling time, the pod will not be scheduled onto the node.\nIf the affinity requirements specified by this field cease to be met\nat some point during pod execution (e.g. due to an update), the system\nmay or may not try to eventually evict the pod from its node."
 
 ### fn spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNodeSelectorTerms
 
@@ -2408,7 +2571,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"Represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt."
+"Represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt."
 
 ### fn spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchExpressions.withValues
 
@@ -2416,7 +2579,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch."
+"An array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. If the operator is Gt or Lt, the values\narray must have a single element, which will be interpreted as an integer.\nThis array is replaced during a strategic merge patch."
 
 ### fn spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchExpressions.withValuesMixin
 
@@ -2424,7 +2587,7 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch."
+"An array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. If the operator is Gt or Lt, the values\narray must have a single element, which will be interpreted as an integer.\nThis array is replaced during a strategic merge patch."
 
 **Note:** This function appends passed data to existing values
 
@@ -2446,7 +2609,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"Represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt."
+"Represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt."
 
 ### fn spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchFields.withValues
 
@@ -2454,7 +2617,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch."
+"An array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. If the operator is Gt or Lt, the values\narray must have a single element, which will be interpreted as an integer.\nThis array is replaced during a strategic merge patch."
 
 ### fn spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchFields.withValuesMixin
 
@@ -2462,13 +2625,13 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch."
+"An array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. If the operator is Gt or Lt, the values\narray must have a single element, which will be interpreted as an integer.\nThis array is replaced during a strategic merge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.affinity.tolerations
 
-"Tolerations is a list of Tolerations that should be set for all the pods, in order to allow them to run on tainted nodes. More info: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/"
+"Tolerations is a list of Tolerations that should be set for all the pods, in order to allow them to run\non tainted nodes.\nMore info: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/"
 
 ### fn spec.affinity.tolerations.withEffect
 
@@ -2476,7 +2639,7 @@ withValuesMixin(values)
 withEffect(effect)
 ```
 
-"Effect indicates the taint effect to match. Empty means match all taint effects. When specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute."
+"Effect indicates the taint effect to match. Empty means match all taint effects.\nWhen specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute."
 
 ### fn spec.affinity.tolerations.withKey
 
@@ -2484,7 +2647,7 @@ withEffect(effect)
 withKey(key)
 ```
 
-"Key is the taint key that the toleration applies to. Empty means match all taint keys. If the key is empty, operator must be Exists; this combination means to match all values and all keys."
+"Key is the taint key that the toleration applies to. Empty means match all taint keys.\nIf the key is empty, operator must be Exists; this combination means to match all values and all keys."
 
 ### fn spec.affinity.tolerations.withOperator
 
@@ -2492,7 +2655,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"Operator represents a key's relationship to the value. Valid operators are Exists and Equal. Defaults to Equal. Exists is equivalent to wildcard for value, so that a pod can tolerate all taints of a particular category."
+"Operator represents a key's relationship to the value.\nValid operators are Exists and Equal. Defaults to Equal.\nExists is equivalent to wildcard for value, so that a pod can\ntolerate all taints of a particular category."
 
 ### fn spec.affinity.tolerations.withTolerationSeconds
 
@@ -2500,7 +2663,7 @@ withOperator(operator)
 withTolerationSeconds(tolerationSeconds)
 ```
 
-"TolerationSeconds represents the period of time the toleration (which must be of effect NoExecute, otherwise this field is ignored) tolerates the taint. By default, it is not set, which means tolerate the taint forever (do not evict). Zero and negative values will be treated as 0 (evict immediately) by the system."
+"TolerationSeconds represents the period of time the toleration (which must be\nof effect NoExecute, otherwise this field is ignored) tolerates the taint. By default,\nit is not set, which means tolerate the taint forever (do not evict). Zero and\nnegative values will be treated as 0 (evict immediately) by the system."
 
 ### fn spec.affinity.tolerations.withValue
 
@@ -2508,7 +2671,7 @@ withTolerationSeconds(tolerationSeconds)
 withValue(value)
 ```
 
-"Value is the taint value the toleration matches to. If the operator is Exists, the value should be empty, otherwise just a regular string."
+"Value is the taint value the toleration matches to.\nIf the operator is Exists, the value should be empty, otherwise just a regular string."
 
 ## obj spec.backup
 
@@ -2520,7 +2683,7 @@ withValue(value)
 withRetentionPolicy(retentionPolicy)
 ```
 
-"RetentionPolicy is the retention policy to be used for backups and WALs (i.e. '60d'). The retention policy is expressed in the form of `XXu` where `XX` is a positive integer and `u` is in `[dwm]` - days, weeks, months. It's currently only applicable when using the BarmanObjectStore method."
+"RetentionPolicy is the retention policy to be used for backups\nand WALs (i.e. '60d'). The retention policy is expressed in the form\nof `XXu` where `XX` is a positive integer and `u` is in `[dwm]` -\ndays, weeks, months.\nIt's currently only applicable when using the BarmanObjectStore method."
 
 ### fn spec.backup.withTarget
 
@@ -2528,7 +2691,7 @@ withRetentionPolicy(retentionPolicy)
 withTarget(target)
 ```
 
-"The policy to decide which instance should perform backups. Available options are empty string, which will default to `prefer-standby` policy, `primary` to have backups run always on primary instances, `prefer-standby` to have backups run preferably on the most updated standby, if available."
+"The policy to decide which instance should perform backups. Available\noptions are empty string, which will default to `prefer-standby` policy,\n`primary` to have backups run always on primary instances, `prefer-standby`\nto have backups run preferably on the most updated standby, if available."
 
 ## obj spec.backup.barmanObjectStore
 
@@ -2540,7 +2703,7 @@ withTarget(target)
 withDestinationPath(destinationPath)
 ```
 
-"The path where to store the backup (i.e. s3://bucket/path/to/folder) this path, with different destination folders, will be used for WALs and for data"
+"The path where to store the backup (i.e. s3://bucket/path/to/folder)\nthis path, with different destination folders, will be used for WALs\nand for data"
 
 ### fn spec.backup.barmanObjectStore.withEndpointURL
 
@@ -2548,7 +2711,7 @@ withDestinationPath(destinationPath)
 withEndpointURL(endpointURL)
 ```
 
-"Endpoint to be used to upload data to the cloud, overriding the automatic endpoint discovery"
+"Endpoint to be used to upload data to the cloud,\noverriding the automatic endpoint discovery"
 
 ### fn spec.backup.barmanObjectStore.withHistoryTags
 
@@ -2556,7 +2719,7 @@ withEndpointURL(endpointURL)
 withHistoryTags(historyTags)
 ```
 
-"HistoryTags is a list of key value pairs that will be passed to the Barman --history-tags option."
+"HistoryTags is a list of key value pairs that will be passed to the\nBarman --history-tags option."
 
 ### fn spec.backup.barmanObjectStore.withHistoryTagsMixin
 
@@ -2564,7 +2727,7 @@ withHistoryTags(historyTags)
 withHistoryTagsMixin(historyTags)
 ```
 
-"HistoryTags is a list of key value pairs that will be passed to the Barman --history-tags option."
+"HistoryTags is a list of key value pairs that will be passed to the\nBarman --history-tags option."
 
 **Note:** This function appends passed data to existing values
 
@@ -2574,7 +2737,7 @@ withHistoryTagsMixin(historyTags)
 withServerName(serverName)
 ```
 
-"The server name on S3, the cluster name is used if this parameter is omitted"
+"The server name on S3, the cluster name is used if this\nparameter is omitted"
 
 ### fn spec.backup.barmanObjectStore.withTags
 
@@ -2582,7 +2745,7 @@ withServerName(serverName)
 withTags(tags)
 ```
 
-"Tags is a list of key value pairs that will be passed to the Barman --tags option."
+"Tags is a list of key value pairs that will be passed to the\nBarman --tags option."
 
 ### fn spec.backup.barmanObjectStore.withTagsMixin
 
@@ -2590,7 +2753,7 @@ withTags(tags)
 withTagsMixin(tags)
 ```
 
-"Tags is a list of key value pairs that will be passed to the Barman --tags option."
+"Tags is a list of key value pairs that will be passed to the\nBarman --tags option."
 
 **Note:** This function appends passed data to existing values
 
@@ -2648,7 +2811,7 @@ withName(name)
 
 ## obj spec.backup.barmanObjectStore.azureCredentials.storageKey
 
-"The storage account key to be used in conjunction with the storage account name"
+"The storage account key to be used in conjunction\nwith the storage account name"
 
 ### fn spec.backup.barmanObjectStore.azureCredentials.storageKey.withKey
 
@@ -2668,7 +2831,7 @@ withName(name)
 
 ## obj spec.backup.barmanObjectStore.azureCredentials.storageSasToken
 
-"A shared-access-signature to be used in conjunction with the storage account name"
+"A shared-access-signature to be used in conjunction with\nthe storage account name"
 
 ### fn spec.backup.barmanObjectStore.azureCredentials.storageSasToken.withKey
 
@@ -2688,7 +2851,7 @@ withName(name)
 
 ## obj spec.backup.barmanObjectStore.data
 
-"The configuration to be used to backup the data files When not defined, base backups files will be stored uncompressed and may be unencrypted in the object store, according to the bucket default policy."
+"The configuration to be used to backup the data files\nWhen not defined, base backups files will be stored uncompressed and may\nbe unencrypted in the object store, according to the bucket default\npolicy."
 
 ### fn spec.backup.barmanObjectStore.data.withCompression
 
@@ -2696,7 +2859,7 @@ withName(name)
 withCompression(compression)
 ```
 
-"Compress a backup file (a tar file per tablespace) while streaming it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2` or `snappy`."
+"Compress a backup file (a tar file per tablespace) while streaming it\nto the object store. Available options are empty string (no\ncompression, default), `gzip`, `bzip2` or `snappy`."
 
 ### fn spec.backup.barmanObjectStore.data.withEncryption
 
@@ -2704,7 +2867,7 @@ withCompression(compression)
 withEncryption(encryption)
 ```
 
-"Whenever to force the encryption of files (if the bucket is not already configured for that). Allowed options are empty string (use the bucket policy, default), `AES256` and `aws:kms`"
+"Whenever to force the encryption of files (if the bucket is\nnot already configured for that).\nAllowed options are empty string (use the bucket policy, default),\n`AES256` and `aws:kms`"
 
 ### fn spec.backup.barmanObjectStore.data.withImmediateCheckpoint
 
@@ -2712,7 +2875,7 @@ withEncryption(encryption)
 withImmediateCheckpoint(immediateCheckpoint)
 ```
 
-"Control whether the I/O workload for the backup initial checkpoint will be limited, according to the `checkpoint_completion_target` setting on the PostgreSQL server. If set to true, an immediate checkpoint will be used, meaning PostgreSQL will complete the checkpoint as soon as possible. `false` by default."
+"Control whether the I/O workload for the backup initial checkpoint will\nbe limited, according to the `checkpoint_completion_target` setting on\nthe PostgreSQL server. If set to true, an immediate checkpoint will be\nused, meaning PostgreSQL will complete the checkpoint as soon as\npossible. `false` by default."
 
 ### fn spec.backup.barmanObjectStore.data.withJobs
 
@@ -2720,11 +2883,11 @@ withImmediateCheckpoint(immediateCheckpoint)
 withJobs(jobs)
 ```
 
-"The number of parallel jobs to be used to upload the backup, defaults to 2"
+"The number of parallel jobs to be used to upload the backup, defaults\nto 2"
 
 ## obj spec.backup.barmanObjectStore.endpointCA
 
-"EndpointCA store the CA bundle of the barman endpoint. Useful when using self-signed certificates to avoid errors with certificate issuer and barman-cloud-wal-archive"
+"EndpointCA store the CA bundle of the barman endpoint.\nUseful when using self-signed certificates to avoid\nerrors with certificate issuer and barman-cloud-wal-archive"
 
 ### fn spec.backup.barmanObjectStore.endpointCA.withKey
 
@@ -2752,7 +2915,7 @@ withName(name)
 withGkeEnvironment(gkeEnvironment)
 ```
 
-"If set to true, will presume that it's running inside a GKE environment, default to false."
+"If set to true, will presume that it's running inside a GKE environment,\ndefault to false."
 
 ## obj spec.backup.barmanObjectStore.googleCredentials.applicationCredentials
 
@@ -2868,7 +3031,7 @@ withName(name)
 
 ## obj spec.backup.barmanObjectStore.wal
 
-"The configuration for the backup of the WAL stream. When not defined, WAL files will be stored uncompressed and may be unencrypted in the object store, according to the bucket default policy."
+"The configuration for the backup of the WAL stream.\nWhen not defined, WAL files will be stored uncompressed and may be\nunencrypted in the object store, according to the bucket default policy."
 
 ### fn spec.backup.barmanObjectStore.wal.withCompression
 
@@ -2876,7 +3039,7 @@ withName(name)
 withCompression(compression)
 ```
 
-"Compress a WAL file before sending it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2` or `snappy`."
+"Compress a WAL file before sending it to the object store. Available\noptions are empty string (no compression, default), `gzip`, `bzip2` or `snappy`."
 
 ### fn spec.backup.barmanObjectStore.wal.withEncryption
 
@@ -2884,7 +3047,7 @@ withCompression(compression)
 withEncryption(encryption)
 ```
 
-"Whenever to force the encryption of files (if the bucket is not already configured for that). Allowed options are empty string (use the bucket policy, default), `AES256` and `aws:kms`"
+"Whenever to force the encryption of files (if the bucket is\nnot already configured for that).\nAllowed options are empty string (use the bucket policy, default),\n`AES256` and `aws:kms`"
 
 ### fn spec.backup.barmanObjectStore.wal.withMaxParallel
 
@@ -2892,7 +3055,7 @@ withEncryption(encryption)
 withMaxParallel(maxParallel)
 ```
 
-"Number of WAL files to be either archived in parallel (when the PostgreSQL instance is archiving to a backup object store) or restored in parallel (when a PostgreSQL standby is fetching WAL files from a recovery object store). If not specified, WAL files will be processed one at a time. It accepts a positive integer as a value - with 1 being the minimum accepted value."
+"Number of WAL files to be either archived in parallel (when the\nPostgreSQL instance is archiving to a backup object store) or\nrestored in parallel (when a PostgreSQL standby is fetching WAL\nfiles from a recovery object store). If not specified, WAL files\nwill be processed one at a time. It accepts a positive integer as a\nvalue - with 1 being the minimum accepted value."
 
 ## obj spec.backup.volumeSnapshot
 
@@ -2922,7 +3085,7 @@ withAnnotationsMixin(annotations)
 withClassName(className)
 ```
 
-"ClassName specifies the Snapshot Class to be used for PG_DATA PersistentVolumeClaim. It is the default class for the other types if no specific class is present"
+"ClassName specifies the Snapshot Class to be used for PG_DATA PersistentVolumeClaim.\nIt is the default class for the other types if no specific class is present"
 
 ### fn spec.backup.volumeSnapshot.withLabels
 
@@ -2948,7 +3111,7 @@ withLabelsMixin(labels)
 withOnline(online)
 ```
 
-"Whether the default type of backup with volume snapshots is online/hot (`true`, default) or offline/cold (`false`)"
+"Whether the default type of backup with volume snapshots is\nonline/hot (`true`, default) or offline/cold (`false`)"
 
 ### fn spec.backup.volumeSnapshot.withSnapshotOwnerReference
 
@@ -2964,7 +3127,7 @@ withSnapshotOwnerReference(snapshotOwnerReference)
 withTablespaceClassName(tablespaceClassName)
 ```
 
-"TablespaceClassName specifies the Snapshot Class to be used for the tablespaces. defaults to the PGDATA Snapshot Class, if set"
+"TablespaceClassName specifies the Snapshot Class to be used for the tablespaces.\ndefaults to the PGDATA Snapshot Class, if set"
 
 ### fn spec.backup.volumeSnapshot.withTablespaceClassNameMixin
 
@@ -2972,7 +3135,7 @@ withTablespaceClassName(tablespaceClassName)
 withTablespaceClassNameMixin(tablespaceClassName)
 ```
 
-"TablespaceClassName specifies the Snapshot Class to be used for the tablespaces. defaults to the PGDATA Snapshot Class, if set"
+"TablespaceClassName specifies the Snapshot Class to be used for the tablespaces.\ndefaults to the PGDATA Snapshot Class, if set"
 
 **Note:** This function appends passed data to existing values
 
@@ -2994,7 +3157,7 @@ withWalClassName(walClassName)
 withImmediateCheckpoint(immediateCheckpoint)
 ```
 
-"Control whether the I/O workload for the backup initial checkpoint will be limited, according to the `checkpoint_completion_target` setting on the PostgreSQL server. If set to true, an immediate checkpoint will be used, meaning PostgreSQL will complete the checkpoint as soon as possible. `false` by default."
+"Control whether the I/O workload for the backup initial checkpoint will\nbe limited, according to the `checkpoint_completion_target` setting on\nthe PostgreSQL server. If set to true, an immediate checkpoint will be\nused, meaning PostgreSQL will complete the checkpoint as soon as\npossible. `false` by default."
 
 ### fn spec.backup.volumeSnapshot.onlineConfiguration.withWaitForArchive
 
@@ -3002,7 +3165,7 @@ withImmediateCheckpoint(immediateCheckpoint)
 withWaitForArchive(waitForArchive)
 ```
 
-"If false, the function will return immediately after the backup is completed, without waiting for WAL to be archived. This behavior is only useful with backup software that independently monitors WAL archiving. Otherwise, WAL required to make the backup consistent might be missing and make the backup useless. By default, or when this parameter is true, pg_backup_stop will wait for WAL to be archived when archiving is enabled. On a standby, this means that it will wait only when archive_mode = always. If write activity on the primary is low, it may be useful to run pg_switch_wal on the primary in order to trigger an immediate segment switch."
+"If false, the function will return immediately after the backup is completed,\nwithout waiting for WAL to be archived.\nThis behavior is only useful with backup software that independently monitors WAL archiving.\nOtherwise, WAL required to make the backup consistent might be missing and make the backup useless.\nBy default, or when this parameter is true, pg_backup_stop will wait for WAL to be archived when archiving is\nenabled.\nOn a standby, this means that it will wait only when archive_mode = always.\nIf write activity on the primary is low, it may be useful to run pg_switch_wal on the primary in order to trigger\nan immediate segment switch."
 
 ## obj spec.bootstrap
 
@@ -3018,7 +3181,7 @@ withWaitForArchive(waitForArchive)
 withDataChecksums(dataChecksums)
 ```
 
-"Whether the `-k` option should be passed to initdb, enabling checksums on data pages (default: `false`)"
+"Whether the `-k` option should be passed to initdb,\nenabling checksums on data pages (default: `false`)"
 
 ### fn spec.bootstrap.initdb.withDatabase
 
@@ -3058,7 +3221,7 @@ withLocaleCollate(localeCollate)
 withOptions(options)
 ```
 
-"The list of options that must be passed to initdb when creating the cluster. Deprecated: This could lead to inconsistent configurations, please use the explicit provided parameters instead. If defined, explicit values will be ignored."
+"The list of options that must be passed to initdb when creating the cluster.\nDeprecated: This could lead to inconsistent configurations,\nplease use the explicit provided parameters instead.\nIf defined, explicit values will be ignored."
 
 ### fn spec.bootstrap.initdb.withOptionsMixin
 
@@ -3066,7 +3229,7 @@ withOptions(options)
 withOptionsMixin(options)
 ```
 
-"The list of options that must be passed to initdb when creating the cluster. Deprecated: This could lead to inconsistent configurations, please use the explicit provided parameters instead. If defined, explicit values will be ignored."
+"The list of options that must be passed to initdb when creating the cluster.\nDeprecated: This could lead to inconsistent configurations,\nplease use the explicit provided parameters instead.\nIf defined, explicit values will be ignored."
 
 **Note:** This function appends passed data to existing values
 
@@ -3076,7 +3239,7 @@ withOptionsMixin(options)
 withOwner(owner)
 ```
 
-"Name of the owner of the database in the instance to be used by applications. Defaults to the value of the `database` key."
+"Name of the owner of the database in the instance to be used\nby applications. Defaults to the value of the `database` key."
 
 ### fn spec.bootstrap.initdb.withPostInitApplicationSQL
 
@@ -3084,7 +3247,7 @@ withOwner(owner)
 withPostInitApplicationSQL(postInitApplicationSQL)
 ```
 
-"List of SQL queries to be executed as a superuser in the application database right after is created - to be used with extreme care (by default empty)"
+"List of SQL queries to be executed as a superuser in the application\ndatabase right after is created - to be used with extreme care\n(by default empty)"
 
 ### fn spec.bootstrap.initdb.withPostInitApplicationSQLMixin
 
@@ -3092,7 +3255,7 @@ withPostInitApplicationSQL(postInitApplicationSQL)
 withPostInitApplicationSQLMixin(postInitApplicationSQL)
 ```
 
-"List of SQL queries to be executed as a superuser in the application database right after is created - to be used with extreme care (by default empty)"
+"List of SQL queries to be executed as a superuser in the application\ndatabase right after is created - to be used with extreme care\n(by default empty)"
 
 **Note:** This function appends passed data to existing values
 
@@ -3102,7 +3265,7 @@ withPostInitApplicationSQLMixin(postInitApplicationSQL)
 withPostInitSQL(postInitSQL)
 ```
 
-"List of SQL queries to be executed as a superuser immediately after the cluster has been created - to be used with extreme care (by default empty)"
+"List of SQL queries to be executed as a superuser immediately\nafter the cluster has been created - to be used with extreme care\n(by default empty)"
 
 ### fn spec.bootstrap.initdb.withPostInitSQLMixin
 
@@ -3110,7 +3273,7 @@ withPostInitSQL(postInitSQL)
 withPostInitSQLMixin(postInitSQL)
 ```
 
-"List of SQL queries to be executed as a superuser immediately after the cluster has been created - to be used with extreme care (by default empty)"
+"List of SQL queries to be executed as a superuser immediately\nafter the cluster has been created - to be used with extreme care\n(by default empty)"
 
 **Note:** This function appends passed data to existing values
 
@@ -3120,7 +3283,7 @@ withPostInitSQLMixin(postInitSQL)
 withPostInitTemplateSQL(postInitTemplateSQL)
 ```
 
-"List of SQL queries to be executed as a superuser in the `template1` after the cluster has been created - to be used with extreme care (by default empty)"
+"List of SQL queries to be executed as a superuser in the `template1`\nafter the cluster has been created - to be used with extreme care\n(by default empty)"
 
 ### fn spec.bootstrap.initdb.withPostInitTemplateSQLMixin
 
@@ -3128,7 +3291,7 @@ withPostInitTemplateSQL(postInitTemplateSQL)
 withPostInitTemplateSQLMixin(postInitTemplateSQL)
 ```
 
-"List of SQL queries to be executed as a superuser in the `template1` after the cluster has been created - to be used with extreme care (by default empty)"
+"List of SQL queries to be executed as a superuser in the `template1`\nafter the cluster has been created - to be used with extreme care\n(by default empty)"
 
 **Note:** This function appends passed data to existing values
 
@@ -3138,11 +3301,11 @@ withPostInitTemplateSQLMixin(postInitTemplateSQL)
 withWalSegmentSize(walSegmentSize)
 ```
 
-"The value in megabytes (1 to 1024) to be passed to the `--wal-segsize` option for initdb (default: empty, resulting in PostgreSQL default: 16MB)"
+"The value in megabytes (1 to 1024) to be passed to the `--wal-segsize`\noption for initdb (default: empty, resulting in PostgreSQL default: 16MB)"
 
 ## obj spec.bootstrap.initdb.import
 
-"Bootstraps the new cluster by importing data from an existing PostgreSQL instance using logical backup (`pg_dump` and `pg_restore`)"
+"Bootstraps the new cluster by importing data from an existing PostgreSQL\ninstance using logical backup (`pg_dump` and `pg_restore`)"
 
 ### fn spec.bootstrap.initdb.import.withDatabases
 
@@ -3168,7 +3331,7 @@ withDatabasesMixin(databases)
 withPostImportApplicationSQL(postImportApplicationSQL)
 ```
 
-"List of SQL queries to be executed as a superuser in the application database right after is imported - to be used with extreme care (by default empty). Only available in microservice type."
+"List of SQL queries to be executed as a superuser in the application\ndatabase right after is imported - to be used with extreme care\n(by default empty). Only available in microservice type."
 
 ### fn spec.bootstrap.initdb.import.withPostImportApplicationSQLMixin
 
@@ -3176,7 +3339,7 @@ withPostImportApplicationSQL(postImportApplicationSQL)
 withPostImportApplicationSQLMixin(postImportApplicationSQL)
 ```
 
-"List of SQL queries to be executed as a superuser in the application database right after is imported - to be used with extreme care (by default empty). Only available in microservice type."
+"List of SQL queries to be executed as a superuser in the application\ndatabase right after is imported - to be used with extreme care\n(by default empty). Only available in microservice type."
 
 **Note:** This function appends passed data to existing values
 
@@ -3204,7 +3367,7 @@ withRolesMixin(roles)
 withSchemaOnly(schemaOnly)
 ```
 
-"When set to true, only the `pre-data` and `post-data` sections of `pg_restore` are invoked, avoiding data import. Default: `false`."
+"When set to true, only the `pre-data` and `post-data` sections of\n`pg_restore` are invoked, avoiding data import. Default: `false`."
 
 ### fn spec.bootstrap.initdb.import.withType
 
@@ -3228,7 +3391,7 @@ withExternalCluster(externalCluster)
 
 ## obj spec.bootstrap.initdb.postInitApplicationSQLRefs
 
-"PostInitApplicationSQLRefs points references to ConfigMaps or Secrets which contain SQL files, the general implementation order to these references is from all Secrets to all ConfigMaps, and inside Secrets or ConfigMaps, the implementation order is same as the order of each array (by default empty)"
+"PostInitApplicationSQLRefs points references to ConfigMaps or Secrets which\ncontain SQL files, the general implementation order to these references is\nfrom all Secrets to all ConfigMaps, and inside Secrets or ConfigMaps,\nthe implementation order is same as the order of each array\n(by default empty)"
 
 ### fn spec.bootstrap.initdb.postInitApplicationSQLRefs.withConfigMapRefs
 
@@ -3308,7 +3471,7 @@ withName(name)
 
 ## obj spec.bootstrap.initdb.secret
 
-"Name of the secret containing the initial credentials for the owner of the user database. If empty a new secret will be created from scratch"
+"Name of the secret containing the initial credentials for the\nowner of the user database. If empty a new secret will be\ncreated from scratch"
 
 ### fn spec.bootstrap.initdb.secret.withName
 
@@ -3320,7 +3483,7 @@ withName(name)
 
 ## obj spec.bootstrap.pg_basebackup
 
-"Bootstrap the cluster taking a physical backup of another compatible PostgreSQL instance"
+"Bootstrap the cluster taking a physical backup of another compatible\nPostgreSQL instance"
 
 ### fn spec.bootstrap.pg_basebackup.withDatabase
 
@@ -3336,7 +3499,7 @@ withDatabase(database)
 withOwner(owner)
 ```
 
-"Name of the owner of the database in the instance to be used by applications. Defaults to the value of the `database` key."
+"Name of the owner of the database in the instance to be used\nby applications. Defaults to the value of the `database` key."
 
 ### fn spec.bootstrap.pg_basebackup.withSource
 
@@ -3348,7 +3511,7 @@ withSource(source)
 
 ## obj spec.bootstrap.pg_basebackup.secret
 
-"Name of the secret containing the initial credentials for the owner of the user database. If empty a new secret will be created from scratch"
+"Name of the secret containing the initial credentials for the\nowner of the user database. If empty a new secret will be\ncreated from scratch"
 
 ### fn spec.bootstrap.pg_basebackup.secret.withName
 
@@ -3376,7 +3539,7 @@ withDatabase(database)
 withOwner(owner)
 ```
 
-"Name of the owner of the database in the instance to be used by applications. Defaults to the value of the `database` key."
+"Name of the owner of the database in the instance to be used\nby applications. Defaults to the value of the `database` key."
 
 ### fn spec.bootstrap.recovery.withSource
 
@@ -3384,11 +3547,11 @@ withOwner(owner)
 withSource(source)
 ```
 
-"The external cluster whose backup we will restore. This is also used as the name of the folder under which the backup is stored, so it must be set to the name of the source cluster Mutually exclusive with `backup`."
+"The external cluster whose backup we will restore. This is also\nused as the name of the folder under which the backup is stored,\nso it must be set to the name of the source cluster\nMutually exclusive with `backup`."
 
 ## obj spec.bootstrap.recovery.backup
 
-"The backup object containing the physical base backup from which to initiate the recovery procedure. Mutually exclusive with `source` and `volumeSnapshots`."
+"The backup object containing the physical base backup from which to\ninitiate the recovery procedure.\nMutually exclusive with `source` and `volumeSnapshots`."
 
 ### fn spec.bootstrap.recovery.backup.withName
 
@@ -3400,7 +3563,7 @@ withName(name)
 
 ## obj spec.bootstrap.recovery.backup.endpointCA
 
-"EndpointCA store the CA bundle of the barman endpoint. Useful when using self-signed certificates to avoid errors with certificate issuer and barman-cloud-wal-archive."
+"EndpointCA store the CA bundle of the barman endpoint.\nUseful when using self-signed certificates to avoid\nerrors with certificate issuer and barman-cloud-wal-archive."
 
 ### fn spec.bootstrap.recovery.backup.endpointCA.withKey
 
@@ -3420,7 +3583,7 @@ withName(name)
 
 ## obj spec.bootstrap.recovery.recoveryTarget
 
-"By default, the recovery process applies all the available WAL files in the archive (full recovery). However, you can also end the recovery as soon as a consistent state is reached or recover to a point-in-time (PITR) by specifying a `RecoveryTarget` object, as expected by PostgreSQL (i.e., timestamp, transaction Id, LSN, ...). More info: https://www.postgresql.org/docs/current/runtime-config-wal.html#RUNTIME-CONFIG-WAL-RECOVERY-TARGET"
+"By default, the recovery process applies all the available\nWAL files in the archive (full recovery). However, you can also\nend the recovery as soon as a consistent state is reached or\nrecover to a point-in-time (PITR) by specifying a `RecoveryTarget` object,\nas expected by PostgreSQL (i.e., timestamp, transaction Id, LSN, ...).\nMore info: https://www.postgresql.org/docs/current/runtime-config-wal.html#RUNTIME-CONFIG-WAL-RECOVERY-TARGET"
 
 ### fn spec.bootstrap.recovery.recoveryTarget.withBackupID
 
@@ -3428,7 +3591,7 @@ withName(name)
 withBackupID(backupID)
 ```
 
-"The ID of the backup from which to start the recovery process. If empty (default) the operator will automatically detect the backup based on targetTime or targetLSN if specified. Otherwise use the latest available backup in chronological order."
+"The ID of the backup from which to start the recovery process.\nIf empty (default) the operator will automatically detect the backup\nbased on targetTime or targetLSN if specified. Otherwise use the\nlatest available backup in chronological order."
 
 ### fn spec.bootstrap.recovery.recoveryTarget.withExclusive
 
@@ -3436,7 +3599,7 @@ withBackupID(backupID)
 withExclusive(exclusive)
 ```
 
-"Set the target to be exclusive. If omitted, defaults to false, so that in Postgres, `recovery_target_inclusive` will be true"
+"Set the target to be exclusive. If omitted, defaults to false, so that\nin Postgres, `recovery_target_inclusive` will be true"
 
 ### fn spec.bootstrap.recovery.recoveryTarget.withTargetImmediate
 
@@ -3460,7 +3623,7 @@ withTargetLSN(targetLSN)
 withTargetName(targetName)
 ```
 
-"The target name (to be previously created with `pg_create_restore_point`)"
+"The target name (to be previously created\nwith `pg_create_restore_point`)"
 
 ### fn spec.bootstrap.recovery.recoveryTarget.withTargetTLI
 
@@ -3488,7 +3651,7 @@ withTargetXID(targetXID)
 
 ## obj spec.bootstrap.recovery.secret
 
-"Name of the secret containing the initial credentials for the owner of the user database. If empty a new secret will be created from scratch"
+"Name of the secret containing the initial credentials for the\nowner of the user database. If empty a new secret will be\ncreated from scratch"
 
 ### fn spec.bootstrap.recovery.secret.withName
 
@@ -3500,7 +3663,7 @@ withName(name)
 
 ## obj spec.bootstrap.recovery.volumeSnapshots
 
-"The static PVC data source(s) from which to initiate the recovery procedure. Currently supporting `VolumeSnapshot` and `PersistentVolumeClaim` resources that map an existing PVC group, compatible with CloudNativePG, and taken with a cold backup copy on a fenced Postgres instance (limitation which will be removed in the future when online backup will be implemented). Mutually exclusive with `backup`."
+"The static PVC data source(s) from which to initiate the\nrecovery procedure. Currently supporting `VolumeSnapshot`\nand `PersistentVolumeClaim` resources that map an existing\nPVC group, compatible with CloudNativePG, and taken with\na cold backup copy on a fenced Postgres instance (limitation\nwhich will be removed in the future when online backup\nwill be implemented).\nMutually exclusive with `backup`."
 
 ### fn spec.bootstrap.recovery.volumeSnapshots.withTablespaceStorage
 
@@ -3530,7 +3693,7 @@ withTablespaceStorageMixin(tablespaceStorage)
 withApiGroup(apiGroup)
 ```
 
-"APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required."
+"APIGroup is the group for the resource being referenced.\nIf APIGroup is not specified, the specified Kind must be in the core API group.\nFor any other third-party types, APIGroup is required."
 
 ### fn spec.bootstrap.recovery.volumeSnapshots.storage.withKind
 
@@ -3558,7 +3721,7 @@ withName(name)
 withApiGroup(apiGroup)
 ```
 
-"APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required."
+"APIGroup is the group for the resource being referenced.\nIf APIGroup is not specified, the specified Kind must be in the core API group.\nFor any other third-party types, APIGroup is required."
 
 ### fn spec.bootstrap.recovery.volumeSnapshots.walStorage.withKind
 
@@ -3586,7 +3749,7 @@ withName(name)
 withClientCASecret(clientCASecret)
 ```
 
-"The secret containing the Client CA certificate. If not defined, a new secret will be created with a self-signed CA and will be used to generate all the client certificates.<br /> <br /> Contains:<br /> <br /> - `ca.crt`: CA that should be used to validate the client certificates, used as `ssl_ca_file` of all the instances.<br /> - `ca.key`: key used to generate client certificates, if ReplicationTLSSecret is provided, this can be omitted.<br />"
+"The secret containing the Client CA certificate. If not defined, a new secret will be created\nwith a self-signed CA and will be used to generate all the client certificates.<br />\n<br />\nContains:<br />\n<br />\n- `ca.crt`: CA that should be used to validate the client certificates,\nused as `ssl_ca_file` of all the instances.<br />\n- `ca.key`: key used to generate client certificates, if ReplicationTLSSecret is provided,\nthis can be omitted.<br />"
 
 ### fn spec.certificates.withReplicationTLSSecret
 
@@ -3594,7 +3757,7 @@ withClientCASecret(clientCASecret)
 withReplicationTLSSecret(replicationTLSSecret)
 ```
 
-"The secret of type kubernetes.io/tls containing the client certificate to authenticate as the `streaming_replica` user. If not defined, ClientCASecret must provide also `ca.key`, and a new secret will be created using the provided CA."
+"The secret of type kubernetes.io/tls containing the client certificate to authenticate as\nthe `streaming_replica` user.\nIf not defined, ClientCASecret must provide also `ca.key`, and a new secret will be\ncreated using the provided CA."
 
 ### fn spec.certificates.withServerAltDNSNames
 
@@ -3620,7 +3783,7 @@ withServerAltDNSNamesMixin(serverAltDNSNames)
 withServerCASecret(serverCASecret)
 ```
 
-"The secret containing the Server CA certificate. If not defined, a new secret will be created with a self-signed CA and will be used to generate the TLS certificate ServerTLSSecret.<br /> <br /> Contains:<br /> <br /> - `ca.crt`: CA that should be used to validate the server certificate, used as `sslrootcert` in client connection strings.<br /> - `ca.key`: key used to generate Server SSL certs, if ServerTLSSecret is provided, this can be omitted.<br />"
+"The secret containing the Server CA certificate. If not defined, a new secret will be created\nwith a self-signed CA and will be used to generate the TLS certificate ServerTLSSecret.<br />\n<br />\nContains:<br />\n<br />\n- `ca.crt`: CA that should be used to validate the server certificate,\nused as `sslrootcert` in client connection strings.<br />\n- `ca.key`: key used to generate Server SSL certs, if ServerTLSSecret is provided,\nthis can be omitted.<br />"
 
 ### fn spec.certificates.withServerTLSSecret
 
@@ -3628,11 +3791,11 @@ withServerCASecret(serverCASecret)
 withServerTLSSecret(serverTLSSecret)
 ```
 
-"The secret of type kubernetes.io/tls containing the server TLS certificate and key that will be set as `ssl_cert_file` and `ssl_key_file` so that clients can connect to postgres securely. If not defined, ServerCASecret must provide also `ca.key` and a new secret will be created using the provided CA."
+"The secret of type kubernetes.io/tls containing the server TLS certificate and key that will be set as\n`ssl_cert_file` and `ssl_key_file` so that clients can connect to postgres securely.\nIf not defined, ServerCASecret must provide also `ca.key` and a new secret will be\ncreated using the provided CA."
 
 ## obj spec.env
 
-"Env follows the Env format to pass environment variables to the pods created in the cluster"
+"Env follows the Env format to pass environment variables\nto the pods created in the cluster"
 
 ### fn spec.env.withName
 
@@ -3648,7 +3811,7 @@ withName(name)
 withValue(value)
 ```
 
-"Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to \"\"."
+"Variable references $(VAR_NAME) are expanded\nusing the previously defined environment variables in the container and\nany service environment variables. If a variable cannot be resolved,\nthe reference in the input string will be unchanged. Double $$ are reduced\nto a single $, which allows for escaping the $(VAR_NAME) syntax: i.e.\n\"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\".\nEscaped references will never be expanded, regardless of whether the variable\nexists or not.\nDefaults to \"\"."
 
 ## obj spec.env.valueFrom
 
@@ -3672,7 +3835,7 @@ withKey(key)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.env.valueFrom.configMapKeyRef.withOptional
 
@@ -3684,7 +3847,7 @@ withOptional(optional)
 
 ## obj spec.env.valueFrom.fieldRef
 
-"Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs."
+"Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`,\nspec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs."
 
 ### fn spec.env.valueFrom.fieldRef.withApiVersion
 
@@ -3704,7 +3867,7 @@ withFieldPath(fieldPath)
 
 ## obj spec.env.valueFrom.resourceFieldRef
 
-"Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported."
+"Selects a resource of the container: only resources limits and requests\n(limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported."
 
 ### fn spec.env.valueFrom.resourceFieldRef.withContainerName
 
@@ -3748,7 +3911,7 @@ withKey(key)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.env.valueFrom.secretKeyRef.withOptional
 
@@ -3760,7 +3923,7 @@ withOptional(optional)
 
 ## obj spec.envFrom
 
-"EnvFrom follows the EnvFrom format to pass environment variables sources to the pods to be used by Env"
+"EnvFrom follows the EnvFrom format to pass environment variables\nsources to the pods to be used by Env"
 
 ### fn spec.envFrom.withPrefix
 
@@ -3780,7 +3943,7 @@ withPrefix(prefix)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.envFrom.configMapRef.withOptional
 
@@ -3800,7 +3963,7 @@ withOptional(optional)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.envFrom.secretRef.withOptional
 
@@ -3816,7 +3979,7 @@ withOptional(optional)
 
 ## obj spec.ephemeralVolumeSource.volumeClaimTemplate
 
-"Will be used to create a stand-alone PVC to provision the volume. The pod in which this EphemeralVolumeSource is embedded will be the owner of the PVC, i.e. the PVC will be deleted together with the pod.  The name of the PVC will be `<pod name>-<volume name>` where `<volume name>` is the name from the `PodSpec.Volumes` array entry. Pod validation will reject the pod if the concatenated name is not valid for a PVC (for example, too long). \n An existing PVC with that name that is not owned by the pod will *not* be used for the pod to avoid using an unrelated volume by mistake. Starting the pod is then blocked until the unrelated PVC is removed. If such a pre-created PVC is meant to be used by the pod, the PVC has to updated with an owner reference to the pod once the pod exists. Normally this should not be necessary, but it may be useful when manually reconstructing a broken cluster. \n This field is read-only and no changes will be made by Kubernetes to the PVC after it has been created. \n Required, must not be nil."
+"Will be used to create a stand-alone PVC to provision the volume.\nThe pod in which this EphemeralVolumeSource is embedded will be the\nowner of the PVC, i.e. the PVC will be deleted together with the\npod.  The name of the PVC will be `<pod name>-<volume name>` where\n`<volume name>` is the name from the `PodSpec.Volumes` array\nentry. Pod validation will reject the pod if the concatenated name\nis not valid for a PVC (for example, too long).\n\n\nAn existing PVC with that name that is not owned by the pod\nwill *not* be used for the pod to avoid using an unrelated\nvolume by mistake. Starting the pod is then blocked until\nthe unrelated PVC is removed. If such a pre-created PVC is\nmeant to be used by the pod, the PVC has to updated with an\nowner reference to the pod once the pod exists. Normally\nthis should not be necessary, but it may be useful when\nmanually reconstructing a broken cluster.\n\n\nThis field is read-only and no changes will be made by Kubernetes\nto the PVC after it has been created.\n\n\nRequired, must not be nil."
 
 ### fn spec.ephemeralVolumeSource.volumeClaimTemplate.withMetadata
 
@@ -3824,7 +3987,7 @@ withOptional(optional)
 withMetadata(metadata)
 ```
 
-"May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation."
+"May contain labels and annotations that will be copied into the PVC\nwhen creating it. No other fields are allowed and will be rejected during\nvalidation."
 
 ### fn spec.ephemeralVolumeSource.volumeClaimTemplate.withMetadataMixin
 
@@ -3832,13 +3995,13 @@ withMetadata(metadata)
 withMetadataMixin(metadata)
 ```
 
-"May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation."
+"May contain labels and annotations that will be copied into the PVC\nwhen creating it. No other fields are allowed and will be rejected during\nvalidation."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec
 
-"The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here."
+"The specification for the PersistentVolumeClaim. The entire content is\ncopied unchanged into the PVC that gets created from this\ntemplate. The same fields as in a PersistentVolumeClaim\nare also valid here."
 
 ### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.withAccessModes
 
@@ -3846,7 +4009,7 @@ withMetadataMixin(metadata)
 withAccessModes(accessModes)
 ```
 
-"accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
+"accessModes contains the desired access modes the volume should have.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
 
 ### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.withAccessModesMixin
 
@@ -3854,7 +4017,7 @@ withAccessModes(accessModes)
 withAccessModesMixin(accessModes)
 ```
 
-"accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
+"accessModes contains the desired access modes the volume should have.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
 
 **Note:** This function appends passed data to existing values
 
@@ -3864,7 +4027,15 @@ withAccessModesMixin(accessModes)
 withStorageClassName(storageClassName)
 ```
 
-"storageClassName is the name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1"
+"storageClassName is the name of the StorageClass required by the claim.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1"
+
+### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.withVolumeAttributesClassName
+
+```ts
+withVolumeAttributesClassName(volumeAttributesClassName)
+```
+
+"volumeAttributesClassName may be used to set the VolumeAttributesClass used by this claim.\nIf specified, the CSI driver will create or update the volume with the attributes defined\nin the corresponding VolumeAttributesClass. This has a different purpose than storageClassName,\nit can be changed after the claim is created. An empty string value means that no VolumeAttributesClass\nwill be applied to the claim but it's not allowed to reset this field to empty string once it is set.\nIf unspecified and the PersistentVolumeClaim is unbound, the default VolumeAttributesClass\nwill be set by the persistentvolume controller if it exists.\nIf the resource referred to by volumeAttributesClass does not exist, this PersistentVolumeClaim will be\nset to a Pending state, as reflected by the modifyVolumeStatus field, until such as a resource\nexists.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#volumeattributesclass\n(Alpha) Using this field requires the VolumeAttributesClass feature gate to be enabled."
 
 ### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.withVolumeMode
 
@@ -3872,7 +4043,7 @@ withStorageClassName(storageClassName)
 withVolumeMode(volumeMode)
 ```
 
-"volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec."
+"volumeMode defines what type of volume is required by the claim.\nValue of Filesystem is implied when not included in claim spec."
 
 ### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.withVolumeName
 
@@ -3884,7 +4055,7 @@ withVolumeName(volumeName)
 
 ## obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.dataSource
 
-"dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. When the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef, and dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified. If the namespace is specified, then dataSourceRef will not be copied to dataSource."
+"dataSource field can be used to specify either:\n* An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot)\n* An existing PVC (PersistentVolumeClaim)\nIf the provisioner or an external controller can support the specified data source,\nit will create a new volume based on the contents of the specified data source.\nWhen the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef,\nand dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified.\nIf the namespace is specified, then dataSourceRef will not be copied to dataSource."
 
 ### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.dataSource.withApiGroup
 
@@ -3892,7 +4063,7 @@ withVolumeName(volumeName)
 withApiGroup(apiGroup)
 ```
 
-"APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required."
+"APIGroup is the group for the resource being referenced.\nIf APIGroup is not specified, the specified Kind must be in the core API group.\nFor any other third-party types, APIGroup is required."
 
 ### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.dataSource.withKind
 
@@ -3912,7 +4083,7 @@ withName(name)
 
 ## obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.dataSourceRef
 
-"dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the dataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, when namespace isn't specified in dataSourceRef, both fields (dataSource and dataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. When namespace is specified in dataSourceRef, dataSource isn't set to the same value and must be empty. There are three important differences between dataSource and dataSourceRef: * While dataSource only allows two specific types of objects, dataSourceRef allows any non-core object, as well as PersistentVolumeClaim objects. * While dataSource ignores disallowed values (dropping them), dataSourceRef preserves all values, and generates an error if a disallowed value is specified. * While dataSource only allows local objects, dataSourceRef allows objects in any namespaces. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled. (Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
+"dataSourceRef specifies the object from which to populate the volume with data, if a non-empty\nvolume is desired. This may be any object from a non-empty API group (non\ncore object) or a PersistentVolumeClaim object.\nWhen this field is specified, volume binding will only succeed if the type of\nthe specified object matches some installed volume populator or dynamic\nprovisioner.\nThis field will replace the functionality of the dataSource field and as such\nif both fields are non-empty, they must have the same value. For backwards\ncompatibility, when namespace isn't specified in dataSourceRef,\nboth fields (dataSource and dataSourceRef) will be set to the same\nvalue automatically if one of them is empty and the other is non-empty.\nWhen namespace is specified in dataSourceRef,\ndataSource isn't set to the same value and must be empty.\nThere are three important differences between dataSource and dataSourceRef:\n* While dataSource only allows two specific types of objects, dataSourceRef\n  allows any non-core object, as well as PersistentVolumeClaim objects.\n* While dataSource ignores disallowed values (dropping them), dataSourceRef\n  preserves all values, and generates an error if a disallowed value is\n  specified.\n* While dataSource only allows local objects, dataSourceRef allows objects\n  in any namespaces.\n(Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled.\n(Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
 
 ### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.dataSourceRef.withApiGroup
 
@@ -3920,7 +4091,7 @@ withName(name)
 withApiGroup(apiGroup)
 ```
 
-"APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required."
+"APIGroup is the group for the resource being referenced.\nIf APIGroup is not specified, the specified Kind must be in the core API group.\nFor any other third-party types, APIGroup is required."
 
 ### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.dataSourceRef.withKind
 
@@ -3944,29 +4115,11 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace is the namespace of resource being referenced Note that when a namespace is specified, a gateway.networking.k8s.io/ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details. (Alpha) This field requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
+"Namespace is the namespace of resource being referenced\nNote that when a namespace is specified, a gateway.networking.k8s.io/ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details.\n(Alpha) This field requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
 
 ## obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources
 
-"resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
-
-### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources.withClaims
-
-```ts
-withClaims(claims)
-```
-
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
-
-### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources.withClaimsMixin
-
-```ts
-withClaimsMixin(claims)
-```
-
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
-
-**Note:** This function appends passed data to existing values
+"resources represents the minimum resources the volume should have.\nIf RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements\nthat are lower than previous value but must still be higher than capacity recorded in the\nstatus field of the claim.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
 
 ### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources.withLimits
 
@@ -3974,7 +4127,7 @@ withClaimsMixin(claims)
 withLimits(limits)
 ```
 
-"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 ### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources.withLimitsMixin
 
@@ -3982,7 +4135,7 @@ withLimits(limits)
 withLimitsMixin(limits)
 ```
 
-"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 **Note:** This function appends passed data to existing values
 
@@ -3992,7 +4145,7 @@ withLimitsMixin(limits)
 withRequests(requests)
 ```
 
-"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value. Requests cannot exceed Limits.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 ### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources.withRequestsMixin
 
@@ -4000,21 +4153,9 @@ withRequests(requests)
 withRequestsMixin(requests)
 ```
 
-"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value. Requests cannot exceed Limits.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 **Note:** This function appends passed data to existing values
-
-## obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources.claims
-
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
-
-### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources.claims.withName
-
-```ts
-withName(name)
-```
-
-"Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container."
 
 ## obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.selector
 
@@ -4044,7 +4185,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.selector.withMatchLabelsMixin
 
@@ -4052,7 +4193,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -4074,7 +4215,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.selector.matchExpressions.withValues
 
@@ -4082,7 +4223,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.selector.matchExpressions.withValuesMixin
 
@@ -4090,13 +4231,13 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.ephemeralVolumesSizeLimit
 
-"EphemeralVolumesSizeLimit allows the user to set the limits for the ephemeral volumes"
+"EphemeralVolumesSizeLimit allows the user to set the limits for the ephemeral\nvolumes"
 
 ### fn spec.ephemeralVolumesSizeLimit.withShm
 
@@ -4154,7 +4295,7 @@ withName(name)
 withDestinationPath(destinationPath)
 ```
 
-"The path where to store the backup (i.e. s3://bucket/path/to/folder) this path, with different destination folders, will be used for WALs and for data"
+"The path where to store the backup (i.e. s3://bucket/path/to/folder)\nthis path, with different destination folders, will be used for WALs\nand for data"
 
 ### fn spec.externalClusters.barmanObjectStore.withEndpointURL
 
@@ -4162,7 +4303,7 @@ withDestinationPath(destinationPath)
 withEndpointURL(endpointURL)
 ```
 
-"Endpoint to be used to upload data to the cloud, overriding the automatic endpoint discovery"
+"Endpoint to be used to upload data to the cloud,\noverriding the automatic endpoint discovery"
 
 ### fn spec.externalClusters.barmanObjectStore.withHistoryTags
 
@@ -4170,7 +4311,7 @@ withEndpointURL(endpointURL)
 withHistoryTags(historyTags)
 ```
 
-"HistoryTags is a list of key value pairs that will be passed to the Barman --history-tags option."
+"HistoryTags is a list of key value pairs that will be passed to the\nBarman --history-tags option."
 
 ### fn spec.externalClusters.barmanObjectStore.withHistoryTagsMixin
 
@@ -4178,7 +4319,7 @@ withHistoryTags(historyTags)
 withHistoryTagsMixin(historyTags)
 ```
 
-"HistoryTags is a list of key value pairs that will be passed to the Barman --history-tags option."
+"HistoryTags is a list of key value pairs that will be passed to the\nBarman --history-tags option."
 
 **Note:** This function appends passed data to existing values
 
@@ -4188,7 +4329,7 @@ withHistoryTagsMixin(historyTags)
 withServerName(serverName)
 ```
 
-"The server name on S3, the cluster name is used if this parameter is omitted"
+"The server name on S3, the cluster name is used if this\nparameter is omitted"
 
 ### fn spec.externalClusters.barmanObjectStore.withTags
 
@@ -4196,7 +4337,7 @@ withServerName(serverName)
 withTags(tags)
 ```
 
-"Tags is a list of key value pairs that will be passed to the Barman --tags option."
+"Tags is a list of key value pairs that will be passed to the\nBarman --tags option."
 
 ### fn spec.externalClusters.barmanObjectStore.withTagsMixin
 
@@ -4204,7 +4345,7 @@ withTags(tags)
 withTagsMixin(tags)
 ```
 
-"Tags is a list of key value pairs that will be passed to the Barman --tags option."
+"Tags is a list of key value pairs that will be passed to the\nBarman --tags option."
 
 **Note:** This function appends passed data to existing values
 
@@ -4262,7 +4403,7 @@ withName(name)
 
 ## obj spec.externalClusters.barmanObjectStore.azureCredentials.storageKey
 
-"The storage account key to be used in conjunction with the storage account name"
+"The storage account key to be used in conjunction\nwith the storage account name"
 
 ### fn spec.externalClusters.barmanObjectStore.azureCredentials.storageKey.withKey
 
@@ -4282,7 +4423,7 @@ withName(name)
 
 ## obj spec.externalClusters.barmanObjectStore.azureCredentials.storageSasToken
 
-"A shared-access-signature to be used in conjunction with the storage account name"
+"A shared-access-signature to be used in conjunction with\nthe storage account name"
 
 ### fn spec.externalClusters.barmanObjectStore.azureCredentials.storageSasToken.withKey
 
@@ -4302,7 +4443,7 @@ withName(name)
 
 ## obj spec.externalClusters.barmanObjectStore.data
 
-"The configuration to be used to backup the data files When not defined, base backups files will be stored uncompressed and may be unencrypted in the object store, according to the bucket default policy."
+"The configuration to be used to backup the data files\nWhen not defined, base backups files will be stored uncompressed and may\nbe unencrypted in the object store, according to the bucket default\npolicy."
 
 ### fn spec.externalClusters.barmanObjectStore.data.withCompression
 
@@ -4310,7 +4451,7 @@ withName(name)
 withCompression(compression)
 ```
 
-"Compress a backup file (a tar file per tablespace) while streaming it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2` or `snappy`."
+"Compress a backup file (a tar file per tablespace) while streaming it\nto the object store. Available options are empty string (no\ncompression, default), `gzip`, `bzip2` or `snappy`."
 
 ### fn spec.externalClusters.barmanObjectStore.data.withEncryption
 
@@ -4318,7 +4459,7 @@ withCompression(compression)
 withEncryption(encryption)
 ```
 
-"Whenever to force the encryption of files (if the bucket is not already configured for that). Allowed options are empty string (use the bucket policy, default), `AES256` and `aws:kms`"
+"Whenever to force the encryption of files (if the bucket is\nnot already configured for that).\nAllowed options are empty string (use the bucket policy, default),\n`AES256` and `aws:kms`"
 
 ### fn spec.externalClusters.barmanObjectStore.data.withImmediateCheckpoint
 
@@ -4326,7 +4467,7 @@ withEncryption(encryption)
 withImmediateCheckpoint(immediateCheckpoint)
 ```
 
-"Control whether the I/O workload for the backup initial checkpoint will be limited, according to the `checkpoint_completion_target` setting on the PostgreSQL server. If set to true, an immediate checkpoint will be used, meaning PostgreSQL will complete the checkpoint as soon as possible. `false` by default."
+"Control whether the I/O workload for the backup initial checkpoint will\nbe limited, according to the `checkpoint_completion_target` setting on\nthe PostgreSQL server. If set to true, an immediate checkpoint will be\nused, meaning PostgreSQL will complete the checkpoint as soon as\npossible. `false` by default."
 
 ### fn spec.externalClusters.barmanObjectStore.data.withJobs
 
@@ -4334,11 +4475,11 @@ withImmediateCheckpoint(immediateCheckpoint)
 withJobs(jobs)
 ```
 
-"The number of parallel jobs to be used to upload the backup, defaults to 2"
+"The number of parallel jobs to be used to upload the backup, defaults\nto 2"
 
 ## obj spec.externalClusters.barmanObjectStore.endpointCA
 
-"EndpointCA store the CA bundle of the barman endpoint. Useful when using self-signed certificates to avoid errors with certificate issuer and barman-cloud-wal-archive"
+"EndpointCA store the CA bundle of the barman endpoint.\nUseful when using self-signed certificates to avoid\nerrors with certificate issuer and barman-cloud-wal-archive"
 
 ### fn spec.externalClusters.barmanObjectStore.endpointCA.withKey
 
@@ -4366,7 +4507,7 @@ withName(name)
 withGkeEnvironment(gkeEnvironment)
 ```
 
-"If set to true, will presume that it's running inside a GKE environment, default to false."
+"If set to true, will presume that it's running inside a GKE environment,\ndefault to false."
 
 ## obj spec.externalClusters.barmanObjectStore.googleCredentials.applicationCredentials
 
@@ -4482,7 +4623,7 @@ withName(name)
 
 ## obj spec.externalClusters.barmanObjectStore.wal
 
-"The configuration for the backup of the WAL stream. When not defined, WAL files will be stored uncompressed and may be unencrypted in the object store, according to the bucket default policy."
+"The configuration for the backup of the WAL stream.\nWhen not defined, WAL files will be stored uncompressed and may be\nunencrypted in the object store, according to the bucket default policy."
 
 ### fn spec.externalClusters.barmanObjectStore.wal.withCompression
 
@@ -4490,7 +4631,7 @@ withName(name)
 withCompression(compression)
 ```
 
-"Compress a WAL file before sending it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2` or `snappy`."
+"Compress a WAL file before sending it to the object store. Available\noptions are empty string (no compression, default), `gzip`, `bzip2` or `snappy`."
 
 ### fn spec.externalClusters.barmanObjectStore.wal.withEncryption
 
@@ -4498,7 +4639,7 @@ withCompression(compression)
 withEncryption(encryption)
 ```
 
-"Whenever to force the encryption of files (if the bucket is not already configured for that). Allowed options are empty string (use the bucket policy, default), `AES256` and `aws:kms`"
+"Whenever to force the encryption of files (if the bucket is\nnot already configured for that).\nAllowed options are empty string (use the bucket policy, default),\n`AES256` and `aws:kms`"
 
 ### fn spec.externalClusters.barmanObjectStore.wal.withMaxParallel
 
@@ -4506,11 +4647,11 @@ withEncryption(encryption)
 withMaxParallel(maxParallel)
 ```
 
-"Number of WAL files to be either archived in parallel (when the PostgreSQL instance is archiving to a backup object store) or restored in parallel (when a PostgreSQL standby is fetching WAL files from a recovery object store). If not specified, WAL files will be processed one at a time. It accepts a positive integer as a value - with 1 being the minimum accepted value."
+"Number of WAL files to be either archived in parallel (when the\nPostgreSQL instance is archiving to a backup object store) or\nrestored in parallel (when a PostgreSQL standby is fetching WAL\nfiles from a recovery object store). If not specified, WAL files\nwill be processed one at a time. It accepts a positive integer as a\nvalue - with 1 being the minimum accepted value."
 
 ## obj spec.externalClusters.password
 
-"The reference to the password to be used to connect to the server. If a password is provided, CloudNativePG creates a PostgreSQL passfile at `/controller/external/NAME/pass` (where \"NAME\" is the cluster's name). This passfile is automatically referenced in the connection string when establishing a connection to the remote PostgreSQL server from the current PostgreSQL `Cluster`. This ensures secure and efficient password management for external clusters."
+"The reference to the password to be used to connect to the server.\nIf a password is provided, CloudNativePG creates a PostgreSQL\npassfile at `/controller/external/NAME/pass` (where \"NAME\" is the\ncluster's name). This passfile is automatically referenced in the\nconnection string when establishing a connection to the remote\nPostgreSQL server from the current PostgreSQL `Cluster`. This ensures\nsecure and efficient password management for external clusters."
 
 ### fn spec.externalClusters.password.withKey
 
@@ -4526,7 +4667,7 @@ withKey(key)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.externalClusters.password.withOptional
 
@@ -4538,7 +4679,7 @@ withOptional(optional)
 
 ## obj spec.externalClusters.sslCert
 
-"The reference to an SSL certificate to be used to connect to this instance"
+"The reference to an SSL certificate to be used to connect to this\ninstance"
 
 ### fn spec.externalClusters.sslCert.withKey
 
@@ -4554,7 +4695,7 @@ withKey(key)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.externalClusters.sslCert.withOptional
 
@@ -4566,7 +4707,7 @@ withOptional(optional)
 
 ## obj spec.externalClusters.sslKey
 
-"The reference to an SSL private key to be used to connect to this instance"
+"The reference to an SSL private key to be used to connect to this\ninstance"
 
 ### fn spec.externalClusters.sslKey.withKey
 
@@ -4582,7 +4723,7 @@ withKey(key)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.externalClusters.sslKey.withOptional
 
@@ -4594,7 +4735,7 @@ withOptional(optional)
 
 ## obj spec.externalClusters.sslRootCert
 
-"The reference to an SSL CA public key to be used to connect to this instance"
+"The reference to an SSL CA public key to be used to connect to this\ninstance"
 
 ### fn spec.externalClusters.sslRootCert.withKey
 
@@ -4610,7 +4751,7 @@ withKey(key)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.externalClusters.sslRootCert.withOptional
 
@@ -4704,7 +4845,7 @@ withRolesMixin(roles)
 withBypassrls(bypassrls)
 ```
 
-"Whether a role bypasses every row-level security (RLS) policy. Default is `false`."
+"Whether a role bypasses every row-level security (RLS) policy.\nDefault is `false`."
 
 ### fn spec.managed.roles.withComment
 
@@ -4720,7 +4861,7 @@ withComment(comment)
 withConnectionLimit(connectionLimit)
 ```
 
-"If the role can log in, this specifies how many concurrent connections the role can make. `-1` (the default) means no limit."
+"If the role can log in, this specifies how many concurrent\nconnections the role can make. `-1` (the default) means no limit."
 
 ### fn spec.managed.roles.withCreatedb
 
@@ -4728,7 +4869,7 @@ withConnectionLimit(connectionLimit)
 withCreatedb(createdb)
 ```
 
-"When set to `true`, the role being defined will be allowed to create new databases. Specifying `false` (default) will deny a role the ability to create databases."
+"When set to `true`, the role being defined will be allowed to create\nnew databases. Specifying `false` (default) will deny a role the\nability to create databases."
 
 ### fn spec.managed.roles.withCreaterole
 
@@ -4736,7 +4877,7 @@ withCreatedb(createdb)
 withCreaterole(createrole)
 ```
 
-"Whether the role will be permitted to create, alter, drop, comment on, change the security label for, and grant or revoke membership in other roles. Default is `false`."
+"Whether the role will be permitted to create, alter, drop, comment\non, change the security label for, and grant or revoke membership in\nother roles. Default is `false`."
 
 ### fn spec.managed.roles.withDisablePassword
 
@@ -4760,7 +4901,7 @@ withEnsure(ensure)
 withInRoles(inRoles)
 ```
 
-"List of one or more existing roles to which this role will be immediately added as a new member. Default empty."
+"List of one or more existing roles to which this role will be\nimmediately added as a new member. Default empty."
 
 ### fn spec.managed.roles.withInRolesMixin
 
@@ -4768,7 +4909,7 @@ withInRoles(inRoles)
 withInRolesMixin(inRoles)
 ```
 
-"List of one or more existing roles to which this role will be immediately added as a new member. Default empty."
+"List of one or more existing roles to which this role will be\nimmediately added as a new member. Default empty."
 
 **Note:** This function appends passed data to existing values
 
@@ -4778,7 +4919,7 @@ withInRolesMixin(inRoles)
 withInherit(inherit)
 ```
 
-"Whether a role \"inherits\" the privileges of roles it is a member of. Defaults is `true`."
+"Whether a role \"inherits\" the privileges of roles it is a member of.\nDefaults is `true`."
 
 ### fn spec.managed.roles.withLogin
 
@@ -4786,7 +4927,7 @@ withInherit(inherit)
 withLogin(login)
 ```
 
-"Whether the role is allowed to log in. A role having the `login` attribute can be thought of as a user. Roles without this attribute are useful for managing database privileges, but are not users in the usual sense of the word. Default is `false`."
+"Whether the role is allowed to log in. A role having the `login`\nattribute can be thought of as a user. Roles without this attribute\nare useful for managing database privileges, but are not users in\nthe usual sense of the word. Default is `false`."
 
 ### fn spec.managed.roles.withName
 
@@ -4802,7 +4943,7 @@ withName(name)
 withReplication(replication)
 ```
 
-"Whether a role is a replication role. A role must have this attribute (or be a superuser) in order to be able to connect to the server in replication mode (physical or logical replication) and in order to be able to create or drop replication slots. A role having the `replication` attribute is a very highly privileged role, and should only be used on roles actually used for replication. Default is `false`."
+"Whether a role is a replication role. A role must have this\nattribute (or be a superuser) in order to be able to connect to the\nserver in replication mode (physical or logical replication) and in\norder to be able to create or drop replication slots. A role having\nthe `replication` attribute is a very highly privileged role, and\nshould only be used on roles actually used for replication. Default\nis `false`."
 
 ### fn spec.managed.roles.withSuperuser
 
@@ -4810,7 +4951,7 @@ withReplication(replication)
 withSuperuser(superuser)
 ```
 
-"Whether the role is a `superuser` who can override all access restrictions within the database - superuser status is dangerous and should be used only when really needed. You must yourself be a superuser to create a new superuser. Defaults is `false`."
+"Whether the role is a `superuser` who can override all access\nrestrictions within the database - superuser status is dangerous and\nshould be used only when really needed. You must yourself be a\nsuperuser to create a new superuser. Defaults is `false`."
 
 ### fn spec.managed.roles.withValidUntil
 
@@ -4818,11 +4959,11 @@ withSuperuser(superuser)
 withValidUntil(validUntil)
 ```
 
-"Date and time after which the role's password is no longer valid. When omitted, the password will never expire (default)."
+"Date and time after which the role's password is no longer valid.\nWhen omitted, the password will never expire (default)."
 
 ## obj spec.managed.roles.passwordSecret
 
-"Secret containing the password of the role (if present) If null, the password will be ignored unless DisablePassword is set"
+"Secret containing the password of the role (if present)\nIf null, the password will be ignored unless DisablePassword is set"
 
 ### fn spec.managed.roles.passwordSecret.withName
 
@@ -4878,7 +5019,7 @@ withCustomQueriesSecretMixin(customQueriesSecret)
 withDisableDefaultQueries(disableDefaultQueries)
 ```
 
-"Whether the default queries should be injected. Set it to `true` if you don't want to inject default queries into the cluster. Default: false."
+"Whether the default queries should be injected.\nSet it to `true` if you don't want to inject default queries into the cluster.\nDefault: false."
 
 ### fn spec.monitoring.withEnablePodMonitor
 
@@ -4974,7 +5115,7 @@ withName(name)
 withAction(action)
 ```
 
-"Action to perform based on the regex matching. \n `Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0. \n Default: \"Replace\
+"Action to perform based on the regex matching.\n\n\n`Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0.\n`DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0.\n\n\nDefault: \"Replace\
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withModulus
 
@@ -4982,7 +5123,7 @@ withAction(action)
 withModulus(modulus)
 ```
 
-"Modulus to take of the hash of the source label values. \n Only applicable when the action is `HashMod`."
+"Modulus to take of the hash of the source label values.\n\n\nOnly applicable when the action is `HashMod`."
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withRegex
 
@@ -4998,7 +5139,7 @@ withRegex(regex)
 withReplacement(replacement)
 ```
 
-"Replacement value against which a Replace action is performed if the regular expression matches. \n Regex capture groups are available."
+"Replacement value against which a Replace action is performed if the\nregular expression matches.\n\n\nRegex capture groups are available."
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withSeparator
 
@@ -5014,7 +5155,7 @@ withSeparator(separator)
 withSourceLabels(sourceLabels)
 ```
 
-"The source labels select values from existing labels. Their content is concatenated using the configured Separator and matched against the configured regular expression."
+"The source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withSourceLabelsMixin
 
@@ -5022,7 +5163,7 @@ withSourceLabels(sourceLabels)
 withSourceLabelsMixin(sourceLabels)
 ```
 
-"The source labels select values from existing labels. Their content is concatenated using the configured Separator and matched against the configured regular expression."
+"The source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
 
 **Note:** This function appends passed data to existing values
 
@@ -5032,7 +5173,7 @@ withSourceLabelsMixin(sourceLabels)
 withTargetLabel(targetLabel)
 ```
 
-"Label to which the resulting string is written in a replacement. \n It is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`, `KeepEqual` and `DropEqual` actions. \n Regex capture groups are available."
+"Label to which the resulting string is written in a replacement.\n\n\nIt is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`,\n`KeepEqual` and `DropEqual` actions.\n\n\nRegex capture groups are available."
 
 ## obj spec.monitoring.podMonitorRelabelings
 
@@ -5044,7 +5185,7 @@ withTargetLabel(targetLabel)
 withAction(action)
 ```
 
-"Action to perform based on the regex matching. \n `Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0. \n Default: \"Replace\
+"Action to perform based on the regex matching.\n\n\n`Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0.\n`DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0.\n\n\nDefault: \"Replace\
 
 ### fn spec.monitoring.podMonitorRelabelings.withModulus
 
@@ -5052,7 +5193,7 @@ withAction(action)
 withModulus(modulus)
 ```
 
-"Modulus to take of the hash of the source label values. \n Only applicable when the action is `HashMod`."
+"Modulus to take of the hash of the source label values.\n\n\nOnly applicable when the action is `HashMod`."
 
 ### fn spec.monitoring.podMonitorRelabelings.withRegex
 
@@ -5068,7 +5209,7 @@ withRegex(regex)
 withReplacement(replacement)
 ```
 
-"Replacement value against which a Replace action is performed if the regular expression matches. \n Regex capture groups are available."
+"Replacement value against which a Replace action is performed if the\nregular expression matches.\n\n\nRegex capture groups are available."
 
 ### fn spec.monitoring.podMonitorRelabelings.withSeparator
 
@@ -5084,7 +5225,7 @@ withSeparator(separator)
 withSourceLabels(sourceLabels)
 ```
 
-"The source labels select values from existing labels. Their content is concatenated using the configured Separator and matched against the configured regular expression."
+"The source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
 
 ### fn spec.monitoring.podMonitorRelabelings.withSourceLabelsMixin
 
@@ -5092,7 +5233,7 @@ withSourceLabels(sourceLabels)
 withSourceLabelsMixin(sourceLabels)
 ```
 
-"The source labels select values from existing labels. Their content is concatenated using the configured Separator and matched against the configured regular expression."
+"The source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
 
 **Note:** This function appends passed data to existing values
 
@@ -5102,7 +5243,7 @@ withSourceLabelsMixin(sourceLabels)
 withTargetLabel(targetLabel)
 ```
 
-"Label to which the resulting string is written in a replacement. \n It is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`, `KeepEqual` and `DropEqual` actions. \n Regex capture groups are available."
+"Label to which the resulting string is written in a replacement.\n\n\nIt is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`,\n`KeepEqual` and `DropEqual` actions.\n\n\nRegex capture groups are available."
 
 ## obj spec.nodeMaintenanceWindow
 
@@ -5122,7 +5263,7 @@ withInProgress(inProgress)
 withReusePVC(reusePVC)
 ```
 
-"Reuse the existing PVC (wait for the node to come up again) or not (recreate it elsewhere - when `instances` >1)"
+"Reuse the existing PVC (wait for the node to come\nup again) or not (recreate it elsewhere - when `instances` >1)"
 
 ## obj spec.postgresql
 
@@ -5134,7 +5275,7 @@ withReusePVC(reusePVC)
 withEnableAlterSystem(enableAlterSystem)
 ```
 
-"If this parameter is true, the user will be able to invoke `ALTER SYSTEM` on this CloudNativePG Cluster. This should only be used for debugging and troubleshooting. Defaults to false."
+"If this parameter is true, the user will be able to invoke `ALTER SYSTEM`\non this CloudNativePG Cluster.\nThis should only be used for debugging and troubleshooting.\nDefaults to false."
 
 ### fn spec.postgresql.withParameters
 
@@ -5160,7 +5301,7 @@ withParametersMixin(parameters)
 withPg_hba(pg_hba)
 ```
 
-"PostgreSQL Host Based Authentication rules (lines to be appended to the pg_hba.conf file)"
+"PostgreSQL Host Based Authentication rules (lines to be appended\nto the pg_hba.conf file)"
 
 ### fn spec.postgresql.withPg_hbaMixin
 
@@ -5168,7 +5309,7 @@ withPg_hba(pg_hba)
 withPg_hbaMixin(pg_hba)
 ```
 
-"PostgreSQL Host Based Authentication rules (lines to be appended to the pg_hba.conf file)"
+"PostgreSQL Host Based Authentication rules (lines to be appended\nto the pg_hba.conf file)"
 
 **Note:** This function appends passed data to existing values
 
@@ -5178,7 +5319,7 @@ withPg_hbaMixin(pg_hba)
 withPg_ident(pg_ident)
 ```
 
-"PostgreSQL User Name Maps rules (lines to be appended to the pg_ident.conf file)"
+"PostgreSQL User Name Maps rules (lines to be appended\nto the pg_ident.conf file)"
 
 ### fn spec.postgresql.withPg_identMixin
 
@@ -5186,7 +5327,7 @@ withPg_ident(pg_ident)
 withPg_identMixin(pg_ident)
 ```
 
-"PostgreSQL User Name Maps rules (lines to be appended to the pg_ident.conf file)"
+"PostgreSQL User Name Maps rules (lines to be appended\nto the pg_ident.conf file)"
 
 **Note:** This function appends passed data to existing values
 
@@ -5196,7 +5337,7 @@ withPg_identMixin(pg_ident)
 withPromotionTimeout(promotionTimeout)
 ```
 
-"Specifies the maximum number of seconds to wait when promoting an instance to primary. Default value is 40000000, greater than one year in seconds, big enough to simulate an infinite timeout"
+"Specifies the maximum number of seconds to wait when promoting an instance to primary.\nDefault value is 40000000, greater than one year in seconds,\nbig enough to simulate an infinite timeout"
 
 ### fn spec.postgresql.withShared_preload_libraries
 
@@ -5326,7 +5467,7 @@ withKey(key)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.postgresql.ldap.bindSearchAuth.bindPassword.withOptional
 
@@ -5338,7 +5479,7 @@ withOptional(optional)
 
 ## obj spec.postgresql.syncReplicaElectionConstraint
 
-"Requirements to be met by sync replicas. This will affect how the \"synchronous_standby_names\" parameter will be set up."
+"Requirements to be met by sync replicas. This will affect how the \"synchronous_standby_names\" parameter will be\nset up."
 
 ### fn spec.postgresql.syncReplicaElectionConstraint.withEnabled
 
@@ -5368,7 +5509,7 @@ withNodeLabelsAntiAffinityMixin(nodeLabelsAntiAffinity)
 
 ## obj spec.projectedVolumeTemplate
 
-"Template to be used to define projected volumes, projected volumes will be mounted under `/projected` base folder"
+"Template to be used to define projected volumes, projected volumes will be mounted\nunder `/projected` base folder"
 
 ### fn spec.projectedVolumeTemplate.withDefaultMode
 
@@ -5376,7 +5517,7 @@ withNodeLabelsAntiAffinityMixin(nodeLabelsAntiAffinity)
 withDefaultMode(defaultMode)
 ```
 
-"defaultMode are the mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set."
+"defaultMode are the mode bits used to set permissions on created files by default.\nMust be an octal value between 0000 and 0777 or a decimal value between 0 and 511.\nYAML accepts both octal and decimal values, JSON requires decimal values for mode bits.\nDirectories within the path are not affected by this setting.\nThis might be in conflict with other options that affect the file\nmode, like fsGroup, and the result can be other mode bits set."
 
 ### fn spec.projectedVolumeTemplate.withSources
 
@@ -5400,6 +5541,120 @@ withSourcesMixin(sources)
 
 "sources is the list of volume projections"
 
+## obj spec.projectedVolumeTemplate.sources.clusterTrustBundle
+
+"ClusterTrustBundle allows a pod to access the `.spec.trustBundle` field\nof ClusterTrustBundle objects in an auto-updating file.\n\n\nAlpha, gated by the ClusterTrustBundleProjection feature gate.\n\n\nClusterTrustBundle objects can either be selected by name, or by the\ncombination of signer name and a label selector.\n\n\nKubelet performs aggressive normalization of the PEM contents written\ninto the pod filesystem.  Esoteric PEM features such as inter-block\ncomments and block headers are stripped.  Certificates are deduplicated.\nThe ordering of certificates within the file is arbitrary, and Kubelet\nmay change the order over time."
+
+### fn spec.projectedVolumeTemplate.sources.clusterTrustBundle.withName
+
+```ts
+withName(name)
+```
+
+"Select a single ClusterTrustBundle by object name.  Mutually-exclusive\nwith signerName and labelSelector."
+
+### fn spec.projectedVolumeTemplate.sources.clusterTrustBundle.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"If true, don't block pod startup if the referenced ClusterTrustBundle(s)\naren't available.  If using name, then the named ClusterTrustBundle is\nallowed not to exist.  If using signerName, then the combination of\nsignerName and labelSelector is allowed to match zero\nClusterTrustBundles."
+
+### fn spec.projectedVolumeTemplate.sources.clusterTrustBundle.withPath
+
+```ts
+withPath(path)
+```
+
+"Relative path from the volume root to write the bundle."
+
+### fn spec.projectedVolumeTemplate.sources.clusterTrustBundle.withSignerName
+
+```ts
+withSignerName(signerName)
+```
+
+"Select all ClusterTrustBundles that match this signer name.\nMutually-exclusive with name.  The contents of all selected\nClusterTrustBundles will be unified and deduplicated."
+
+## obj spec.projectedVolumeTemplate.sources.clusterTrustBundle.labelSelector
+
+"Select all ClusterTrustBundles that match this label selector.  Only has\neffect if signerName is set.  Mutually-exclusive with name.  If unset,\ninterpreted as \"match nothing\".  If set but empty, interpreted as \"match\neverything\"."
+
+### fn spec.projectedVolumeTemplate.sources.clusterTrustBundle.labelSelector.withMatchExpressions
+
+```ts
+withMatchExpressions(matchExpressions)
+```
+
+"matchExpressions is a list of label selector requirements. The requirements are ANDed."
+
+### fn spec.projectedVolumeTemplate.sources.clusterTrustBundle.labelSelector.withMatchExpressionsMixin
+
+```ts
+withMatchExpressionsMixin(matchExpressions)
+```
+
+"matchExpressions is a list of label selector requirements. The requirements are ANDed."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.projectedVolumeTemplate.sources.clusterTrustBundle.labelSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+
+### fn spec.projectedVolumeTemplate.sources.clusterTrustBundle.labelSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.projectedVolumeTemplate.sources.clusterTrustBundle.labelSelector.matchExpressions
+
+"matchExpressions is a list of label selector requirements. The requirements are ANDed."
+
+### fn spec.projectedVolumeTemplate.sources.clusterTrustBundle.labelSelector.matchExpressions.withKey
+
+```ts
+withKey(key)
+```
+
+"key is the label key that the selector applies to."
+
+### fn spec.projectedVolumeTemplate.sources.clusterTrustBundle.labelSelector.matchExpressions.withOperator
+
+```ts
+withOperator(operator)
+```
+
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
+
+### fn spec.projectedVolumeTemplate.sources.clusterTrustBundle.labelSelector.matchExpressions.withValues
+
+```ts
+withValues(values)
+```
+
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
+
+### fn spec.projectedVolumeTemplate.sources.clusterTrustBundle.labelSelector.matchExpressions.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
+
+**Note:** This function appends passed data to existing values
+
 ## obj spec.projectedVolumeTemplate.sources.configMap
 
 "configMap information about the configMap data to project"
@@ -5410,7 +5665,7 @@ withSourcesMixin(sources)
 withItems(items)
 ```
 
-"items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'."
+"items if unspecified, each key-value pair in the Data field of the referenced\nConfigMap will be projected into the volume as a file whose name is the\nkey and content is the value. If specified, the listed keys will be\nprojected into the specified paths, and unlisted keys will not be\npresent. If a key is specified which is not present in the ConfigMap,\nthe volume setup will error unless it is marked optional. Paths must be\nrelative and may not contain the '..' path or start with '..'."
 
 ### fn spec.projectedVolumeTemplate.sources.configMap.withItemsMixin
 
@@ -5418,7 +5673,7 @@ withItems(items)
 withItemsMixin(items)
 ```
 
-"items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'."
+"items if unspecified, each key-value pair in the Data field of the referenced\nConfigMap will be projected into the volume as a file whose name is the\nkey and content is the value. If specified, the listed keys will be\nprojected into the specified paths, and unlisted keys will not be\npresent. If a key is specified which is not present in the ConfigMap,\nthe volume setup will error unless it is marked optional. Paths must be\nrelative and may not contain the '..' path or start with '..'."
 
 **Note:** This function appends passed data to existing values
 
@@ -5428,7 +5683,7 @@ withItemsMixin(items)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.projectedVolumeTemplate.sources.configMap.withOptional
 
@@ -5440,7 +5695,7 @@ withOptional(optional)
 
 ## obj spec.projectedVolumeTemplate.sources.configMap.items
 
-"items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'."
+"items if unspecified, each key-value pair in the Data field of the referenced\nConfigMap will be projected into the volume as a file whose name is the\nkey and content is the value. If specified, the listed keys will be\nprojected into the specified paths, and unlisted keys will not be\npresent. If a key is specified which is not present in the ConfigMap,\nthe volume setup will error unless it is marked optional. Paths must be\nrelative and may not contain the '..' path or start with '..'."
 
 ### fn spec.projectedVolumeTemplate.sources.configMap.items.withKey
 
@@ -5456,7 +5711,7 @@ withKey(key)
 withMode(mode)
 ```
 
-"mode is Optional: mode bits used to set permissions on this file. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set."
+"mode is Optional: mode bits used to set permissions on this file.\nMust be an octal value between 0000 and 0777 or a decimal value between 0 and 511.\nYAML accepts both octal and decimal values, JSON requires decimal values for mode bits.\nIf not specified, the volume defaultMode will be used.\nThis might be in conflict with other options that affect the file\nmode, like fsGroup, and the result can be other mode bits set."
 
 ### fn spec.projectedVolumeTemplate.sources.configMap.items.withPath
 
@@ -5464,7 +5719,7 @@ withMode(mode)
 withPath(path)
 ```
 
-"path is the relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'."
+"path is the relative path of the file to map the key to.\nMay not be an absolute path.\nMay not contain the path element '..'.\nMay not start with the string '..'."
 
 ## obj spec.projectedVolumeTemplate.sources.downwardAPI
 
@@ -5498,7 +5753,7 @@ withItemsMixin(items)
 withMode(mode)
 ```
 
-"Optional: mode bits used to set permissions on this file, must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set."
+"Optional: mode bits used to set permissions on this file, must be an octal value\nbetween 0000 and 0777 or a decimal value between 0 and 511.\nYAML accepts both octal and decimal values, JSON requires decimal values for mode bits.\nIf not specified, the volume defaultMode will be used.\nThis might be in conflict with other options that affect the file\nmode, like fsGroup, and the result can be other mode bits set."
 
 ### fn spec.projectedVolumeTemplate.sources.downwardAPI.items.withPath
 
@@ -5530,7 +5785,7 @@ withFieldPath(fieldPath)
 
 ## obj spec.projectedVolumeTemplate.sources.downwardAPI.items.resourceFieldRef
 
-"Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported."
+"Selects a resource of the container: only resources limits and requests\n(limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported."
 
 ### fn spec.projectedVolumeTemplate.sources.downwardAPI.items.resourceFieldRef.withContainerName
 
@@ -5566,7 +5821,7 @@ withResource(resource)
 withItems(items)
 ```
 
-"items if unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'."
+"items if unspecified, each key-value pair in the Data field of the referenced\nSecret will be projected into the volume as a file whose name is the\nkey and content is the value. If specified, the listed keys will be\nprojected into the specified paths, and unlisted keys will not be\npresent. If a key is specified which is not present in the Secret,\nthe volume setup will error unless it is marked optional. Paths must be\nrelative and may not contain the '..' path or start with '..'."
 
 ### fn spec.projectedVolumeTemplate.sources.secret.withItemsMixin
 
@@ -5574,7 +5829,7 @@ withItems(items)
 withItemsMixin(items)
 ```
 
-"items if unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'."
+"items if unspecified, each key-value pair in the Data field of the referenced\nSecret will be projected into the volume as a file whose name is the\nkey and content is the value. If specified, the listed keys will be\nprojected into the specified paths, and unlisted keys will not be\npresent. If a key is specified which is not present in the Secret,\nthe volume setup will error unless it is marked optional. Paths must be\nrelative and may not contain the '..' path or start with '..'."
 
 **Note:** This function appends passed data to existing values
 
@@ -5584,7 +5839,7 @@ withItemsMixin(items)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.projectedVolumeTemplate.sources.secret.withOptional
 
@@ -5596,7 +5851,7 @@ withOptional(optional)
 
 ## obj spec.projectedVolumeTemplate.sources.secret.items
 
-"items if unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'."
+"items if unspecified, each key-value pair in the Data field of the referenced\nSecret will be projected into the volume as a file whose name is the\nkey and content is the value. If specified, the listed keys will be\nprojected into the specified paths, and unlisted keys will not be\npresent. If a key is specified which is not present in the Secret,\nthe volume setup will error unless it is marked optional. Paths must be\nrelative and may not contain the '..' path or start with '..'."
 
 ### fn spec.projectedVolumeTemplate.sources.secret.items.withKey
 
@@ -5612,7 +5867,7 @@ withKey(key)
 withMode(mode)
 ```
 
-"mode is Optional: mode bits used to set permissions on this file. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set."
+"mode is Optional: mode bits used to set permissions on this file.\nMust be an octal value between 0000 and 0777 or a decimal value between 0 and 511.\nYAML accepts both octal and decimal values, JSON requires decimal values for mode bits.\nIf not specified, the volume defaultMode will be used.\nThis might be in conflict with other options that affect the file\nmode, like fsGroup, and the result can be other mode bits set."
 
 ### fn spec.projectedVolumeTemplate.sources.secret.items.withPath
 
@@ -5620,7 +5875,7 @@ withMode(mode)
 withPath(path)
 ```
 
-"path is the relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'."
+"path is the relative path of the file to map the key to.\nMay not be an absolute path.\nMay not contain the path element '..'.\nMay not start with the string '..'."
 
 ## obj spec.projectedVolumeTemplate.sources.serviceAccountToken
 
@@ -5632,7 +5887,7 @@ withPath(path)
 withAudience(audience)
 ```
 
-"audience is the intended audience of the token. A recipient of a token must identify itself with an identifier specified in the audience of the token, and otherwise should reject the token. The audience defaults to the identifier of the apiserver."
+"audience is the intended audience of the token. A recipient of a token\nmust identify itself with an identifier specified in the audience of the\ntoken, and otherwise should reject the token. The audience defaults to the\nidentifier of the apiserver."
 
 ### fn spec.projectedVolumeTemplate.sources.serviceAccountToken.withExpirationSeconds
 
@@ -5640,7 +5895,7 @@ withAudience(audience)
 withExpirationSeconds(expirationSeconds)
 ```
 
-"expirationSeconds is the requested duration of validity of the service account token. As the token approaches expiration, the kubelet volume plugin will proactively rotate the service account token. The kubelet will start trying to rotate the token if the token is older than 80 percent of its time to live or if the token is older than 24 hours.Defaults to 1 hour and must be at least 10 minutes."
+"expirationSeconds is the requested duration of validity of the service\naccount token. As the token approaches expiration, the kubelet volume\nplugin will proactively rotate the service account token. The kubelet will\nstart trying to rotate the token if the token is older than 80 percent of\nits time to live or if the token is older than 24 hours.Defaults to 1 hour\nand must be at least 10 minutes."
 
 ### fn spec.projectedVolumeTemplate.sources.serviceAccountToken.withPath
 
@@ -5648,7 +5903,7 @@ withExpirationSeconds(expirationSeconds)
 withPath(path)
 ```
 
-"path is the path relative to the mount point of the file to project the token into."
+"path is the path relative to the mount point of the file to project the\ntoken into."
 
 ## obj spec.replica
 
@@ -5660,7 +5915,7 @@ withPath(path)
 withEnabled(enabled)
 ```
 
-"If replica mode is enabled, this cluster will be a replica of an existing cluster. Replica cluster can be created from a recovery object store or via streaming through pg_basebackup. Refer to the Replica clusters page of the documentation for more information."
+"If replica mode is enabled, this cluster will be a replica of an\nexisting cluster. Replica cluster can be created from a recovery\nobject store or via streaming through pg_basebackup.\nRefer to the Replica clusters page of the documentation for more information."
 
 ### fn spec.replica.withSource
 
@@ -5680,7 +5935,7 @@ withSource(source)
 withUpdateInterval(updateInterval)
 ```
 
-"Standby will update the status of the local replication slots every `updateInterval` seconds (default 30)."
+"Standby will update the status of the local replication slots\nevery `updateInterval` seconds (default 30)."
 
 ## obj spec.replicationSlots.highAvailability
 
@@ -5692,7 +5947,7 @@ withUpdateInterval(updateInterval)
 withEnabled(enabled)
 ```
 
-"If enabled (default), the operator will automatically manage replication slots on the primary instance and use them in streaming replication connections with all the standby instances that are part of the HA cluster. If disabled, the operator will not take advantage of replication slots in streaming connections with the replicas. This feature also controls replication slots in replica cluster, from the designated primary to its cascading replicas."
+"If enabled (default), the operator will automatically manage replication slots\non the primary instance and use them in streaming replication\nconnections with all the standby instances that are part of the HA\ncluster. If disabled, the operator will not take advantage\nof replication slots in streaming connections with the replicas.\nThis feature also controls replication slots in replica cluster,\nfrom the designated primary to its cascading replicas."
 
 ### fn spec.replicationSlots.highAvailability.withSlotPrefix
 
@@ -5700,7 +5955,7 @@ withEnabled(enabled)
 withSlotPrefix(slotPrefix)
 ```
 
-"Prefix for replication slots managed by the operator for HA. It may only contain lower case letters, numbers, and the underscore character. This can only be set at creation time. By default set to `_cnpg_`."
+"Prefix for replication slots managed by the operator for HA.\nIt may only contain lower case letters, numbers, and the underscore character.\nThis can only be set at creation time. By default set to `_cnpg_`."
 
 ## obj spec.replicationSlots.synchronizeReplicas
 
@@ -5734,7 +5989,7 @@ withExcludePatternsMixin(excludePatterns)
 
 ## obj spec.resources
 
-"Resources requirements of every generated Pod. Please refer to https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/ for more information."
+"Resources requirements of every generated Pod. Please refer to\nhttps://kubernetes.io/docs/concepts/configuration/manage-resources-containers/\nfor more information."
 
 ### fn spec.resources.withClaims
 
@@ -5742,7 +5997,7 @@ withExcludePatternsMixin(excludePatterns)
 withClaims(claims)
 ```
 
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
+"Claims lists the names of resources, defined in spec.resourceClaims,\nthat are used by this container.\n\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\n\nThis field is immutable. It can only be set for containers."
 
 ### fn spec.resources.withClaimsMixin
 
@@ -5750,7 +6005,7 @@ withClaims(claims)
 withClaimsMixin(claims)
 ```
 
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
+"Claims lists the names of resources, defined in spec.resourceClaims,\nthat are used by this container.\n\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\n\nThis field is immutable. It can only be set for containers."
 
 **Note:** This function appends passed data to existing values
 
@@ -5760,7 +6015,7 @@ withClaimsMixin(claims)
 withLimits(limits)
 ```
 
-"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 ### fn spec.resources.withLimitsMixin
 
@@ -5768,7 +6023,7 @@ withLimits(limits)
 withLimitsMixin(limits)
 ```
 
-"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 **Note:** This function appends passed data to existing values
 
@@ -5778,7 +6033,7 @@ withLimitsMixin(limits)
 withRequests(requests)
 ```
 
-"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value. Requests cannot exceed Limits.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 ### fn spec.resources.withRequestsMixin
 
@@ -5786,13 +6041,13 @@ withRequests(requests)
 withRequestsMixin(requests)
 ```
 
-"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value. Requests cannot exceed Limits.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.resources.claims
 
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
+"Claims lists the names of resources, defined in spec.resourceClaims,\nthat are used by this container.\n\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\n\nThis field is immutable. It can only be set for containers."
 
 ### fn spec.resources.claims.withName
 
@@ -5800,11 +6055,11 @@ withRequestsMixin(requests)
 withName(name)
 ```
 
-"Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container."
+"Name must match the name of one entry in pod.spec.resourceClaims of\nthe Pod where this field is used. It makes that resource available\ninside a container."
 
 ## obj spec.seccompProfile
 
-"The SeccompProfile applied to every Pod and Container. Defaults to: `RuntimeDefault`"
+"The SeccompProfile applied to every Pod and Container.\nDefaults to: `RuntimeDefault`"
 
 ### fn spec.seccompProfile.withLocalhostProfile
 
@@ -5812,7 +6067,7 @@ withName(name)
 withLocalhostProfile(localhostProfile)
 ```
 
-"localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must be set if type is \"Localhost\". Must NOT be set for any other type."
+"localhostProfile indicates a profile defined in a file on the node should be used.\nThe profile must be preconfigured on the node to work.\nMust be a descending path, relative to the kubelet's configured seccomp profile location.\nMust be set if type is \"Localhost\". Must NOT be set for any other type."
 
 ### fn spec.seccompProfile.withType
 
@@ -5820,7 +6075,7 @@ withLocalhostProfile(localhostProfile)
 withType(type)
 ```
 
-"type indicates which kind of seccomp profile will be applied. Valid options are: \n Localhost - a profile defined in a file on the node should be used. RuntimeDefault - the container runtime default profile should be used. Unconfined - no profile should be applied."
+"type indicates which kind of seccomp profile will be applied.\nValid options are:\n\n\nLocalhost - a profile defined in a file on the node should be used.\nRuntimeDefault - the container runtime default profile should be used.\nUnconfined - no profile should be applied."
 
 ## obj spec.serviceAccountTemplate
 
@@ -5828,7 +6083,7 @@ withType(type)
 
 ## obj spec.serviceAccountTemplate.metadata
 
-"Metadata are the metadata to be used for the generated service account"
+"Metadata are the metadata to be used for the generated\nservice account"
 
 ### fn spec.serviceAccountTemplate.metadata.withAnnotations
 
@@ -5836,7 +6091,7 @@ withType(type)
 withAnnotations(annotations)
 ```
 
-"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
+"Annotations is an unstructured key value map stored with a resource that may be\nset by external tools to store and retrieve arbitrary metadata. They are not\nqueryable and should be preserved when modifying objects.\nMore info: http://kubernetes.io/docs/user-guide/annotations"
 
 ### fn spec.serviceAccountTemplate.metadata.withAnnotationsMixin
 
@@ -5844,7 +6099,7 @@ withAnnotations(annotations)
 withAnnotationsMixin(annotations)
 ```
 
-"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
+"Annotations is an unstructured key value map stored with a resource that may be\nset by external tools to store and retrieve arbitrary metadata. They are not\nqueryable and should be preserved when modifying objects.\nMore info: http://kubernetes.io/docs/user-guide/annotations"
 
 **Note:** This function appends passed data to existing values
 
@@ -5854,7 +6109,7 @@ withAnnotationsMixin(annotations)
 withLabels(labels)
 ```
 
-"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
+"Map of string keys and values that can be used to organize and categorize\n(scope and select) objects. May match selectors of replication controllers\nand services.\nMore info: http://kubernetes.io/docs/user-guide/labels"
 
 ### fn spec.serviceAccountTemplate.metadata.withLabelsMixin
 
@@ -5862,7 +6117,7 @@ withLabels(labels)
 withLabelsMixin(labels)
 ```
 
-"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
+"Map of string keys and values that can be used to organize and categorize\n(scope and select) objects. May match selectors of replication controllers\nand services.\nMore info: http://kubernetes.io/docs/user-guide/labels"
 
 **Note:** This function appends passed data to existing values
 
@@ -5884,7 +6139,7 @@ withResizeInUseVolumes(resizeInUseVolumes)
 withSize(size)
 ```
 
-"Size of the storage. Required if not already specified in the PVC template. Changes to this field are automatically reapplied to the created PVCs. Size cannot be decreased."
+"Size of the storage. Required if not already specified in the PVC template.\nChanges to this field are automatically reapplied to the created PVCs.\nSize cannot be decreased."
 
 ### fn spec.storage.withStorageClass
 
@@ -5892,7 +6147,7 @@ withSize(size)
 withStorageClass(storageClass)
 ```
 
-"StorageClass to use for PVCs. Applied after evaluating the PVC template, if available. If not specified, the generated PVCs will use the default storage class"
+"StorageClass to use for PVCs. Applied after\nevaluating the PVC template, if available.\nIf not specified, the generated PVCs will use the\ndefault storage class"
 
 ## obj spec.storage.pvcTemplate
 
@@ -5904,7 +6159,7 @@ withStorageClass(storageClass)
 withAccessModes(accessModes)
 ```
 
-"accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
+"accessModes contains the desired access modes the volume should have.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
 
 ### fn spec.storage.pvcTemplate.withAccessModesMixin
 
@@ -5912,7 +6167,7 @@ withAccessModes(accessModes)
 withAccessModesMixin(accessModes)
 ```
 
-"accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
+"accessModes contains the desired access modes the volume should have.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
 
 **Note:** This function appends passed data to existing values
 
@@ -5922,7 +6177,15 @@ withAccessModesMixin(accessModes)
 withStorageClassName(storageClassName)
 ```
 
-"storageClassName is the name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1"
+"storageClassName is the name of the StorageClass required by the claim.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1"
+
+### fn spec.storage.pvcTemplate.withVolumeAttributesClassName
+
+```ts
+withVolumeAttributesClassName(volumeAttributesClassName)
+```
+
+"volumeAttributesClassName may be used to set the VolumeAttributesClass used by this claim.\nIf specified, the CSI driver will create or update the volume with the attributes defined\nin the corresponding VolumeAttributesClass. This has a different purpose than storageClassName,\nit can be changed after the claim is created. An empty string value means that no VolumeAttributesClass\nwill be applied to the claim but it's not allowed to reset this field to empty string once it is set.\nIf unspecified and the PersistentVolumeClaim is unbound, the default VolumeAttributesClass\nwill be set by the persistentvolume controller if it exists.\nIf the resource referred to by volumeAttributesClass does not exist, this PersistentVolumeClaim will be\nset to a Pending state, as reflected by the modifyVolumeStatus field, until such as a resource\nexists.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#volumeattributesclass\n(Alpha) Using this field requires the VolumeAttributesClass feature gate to be enabled."
 
 ### fn spec.storage.pvcTemplate.withVolumeMode
 
@@ -5930,7 +6193,7 @@ withStorageClassName(storageClassName)
 withVolumeMode(volumeMode)
 ```
 
-"volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec."
+"volumeMode defines what type of volume is required by the claim.\nValue of Filesystem is implied when not included in claim spec."
 
 ### fn spec.storage.pvcTemplate.withVolumeName
 
@@ -5942,7 +6205,7 @@ withVolumeName(volumeName)
 
 ## obj spec.storage.pvcTemplate.dataSource
 
-"dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. When the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef, and dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified. If the namespace is specified, then dataSourceRef will not be copied to dataSource."
+"dataSource field can be used to specify either:\n* An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot)\n* An existing PVC (PersistentVolumeClaim)\nIf the provisioner or an external controller can support the specified data source,\nit will create a new volume based on the contents of the specified data source.\nWhen the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef,\nand dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified.\nIf the namespace is specified, then dataSourceRef will not be copied to dataSource."
 
 ### fn spec.storage.pvcTemplate.dataSource.withApiGroup
 
@@ -5950,7 +6213,7 @@ withVolumeName(volumeName)
 withApiGroup(apiGroup)
 ```
 
-"APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required."
+"APIGroup is the group for the resource being referenced.\nIf APIGroup is not specified, the specified Kind must be in the core API group.\nFor any other third-party types, APIGroup is required."
 
 ### fn spec.storage.pvcTemplate.dataSource.withKind
 
@@ -5970,7 +6233,7 @@ withName(name)
 
 ## obj spec.storage.pvcTemplate.dataSourceRef
 
-"dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the dataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, when namespace isn't specified in dataSourceRef, both fields (dataSource and dataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. When namespace is specified in dataSourceRef, dataSource isn't set to the same value and must be empty. There are three important differences between dataSource and dataSourceRef: * While dataSource only allows two specific types of objects, dataSourceRef allows any non-core object, as well as PersistentVolumeClaim objects. * While dataSource ignores disallowed values (dropping them), dataSourceRef preserves all values, and generates an error if a disallowed value is specified. * While dataSource only allows local objects, dataSourceRef allows objects in any namespaces. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled. (Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
+"dataSourceRef specifies the object from which to populate the volume with data, if a non-empty\nvolume is desired. This may be any object from a non-empty API group (non\ncore object) or a PersistentVolumeClaim object.\nWhen this field is specified, volume binding will only succeed if the type of\nthe specified object matches some installed volume populator or dynamic\nprovisioner.\nThis field will replace the functionality of the dataSource field and as such\nif both fields are non-empty, they must have the same value. For backwards\ncompatibility, when namespace isn't specified in dataSourceRef,\nboth fields (dataSource and dataSourceRef) will be set to the same\nvalue automatically if one of them is empty and the other is non-empty.\nWhen namespace is specified in dataSourceRef,\ndataSource isn't set to the same value and must be empty.\nThere are three important differences between dataSource and dataSourceRef:\n* While dataSource only allows two specific types of objects, dataSourceRef\n  allows any non-core object, as well as PersistentVolumeClaim objects.\n* While dataSource ignores disallowed values (dropping them), dataSourceRef\n  preserves all values, and generates an error if a disallowed value is\n  specified.\n* While dataSource only allows local objects, dataSourceRef allows objects\n  in any namespaces.\n(Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled.\n(Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
 
 ### fn spec.storage.pvcTemplate.dataSourceRef.withApiGroup
 
@@ -5978,7 +6241,7 @@ withName(name)
 withApiGroup(apiGroup)
 ```
 
-"APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required."
+"APIGroup is the group for the resource being referenced.\nIf APIGroup is not specified, the specified Kind must be in the core API group.\nFor any other third-party types, APIGroup is required."
 
 ### fn spec.storage.pvcTemplate.dataSourceRef.withKind
 
@@ -6002,29 +6265,11 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace is the namespace of resource being referenced Note that when a namespace is specified, a gateway.networking.k8s.io/ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details. (Alpha) This field requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
+"Namespace is the namespace of resource being referenced\nNote that when a namespace is specified, a gateway.networking.k8s.io/ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details.\n(Alpha) This field requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
 
 ## obj spec.storage.pvcTemplate.resources
 
-"resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
-
-### fn spec.storage.pvcTemplate.resources.withClaims
-
-```ts
-withClaims(claims)
-```
-
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
-
-### fn spec.storage.pvcTemplate.resources.withClaimsMixin
-
-```ts
-withClaimsMixin(claims)
-```
-
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
-
-**Note:** This function appends passed data to existing values
+"resources represents the minimum resources the volume should have.\nIf RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements\nthat are lower than previous value but must still be higher than capacity recorded in the\nstatus field of the claim.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
 
 ### fn spec.storage.pvcTemplate.resources.withLimits
 
@@ -6032,7 +6277,7 @@ withClaimsMixin(claims)
 withLimits(limits)
 ```
 
-"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 ### fn spec.storage.pvcTemplate.resources.withLimitsMixin
 
@@ -6040,7 +6285,7 @@ withLimits(limits)
 withLimitsMixin(limits)
 ```
 
-"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 **Note:** This function appends passed data to existing values
 
@@ -6050,7 +6295,7 @@ withLimitsMixin(limits)
 withRequests(requests)
 ```
 
-"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value. Requests cannot exceed Limits.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 ### fn spec.storage.pvcTemplate.resources.withRequestsMixin
 
@@ -6058,21 +6303,9 @@ withRequests(requests)
 withRequestsMixin(requests)
 ```
 
-"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value. Requests cannot exceed Limits.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 **Note:** This function appends passed data to existing values
-
-## obj spec.storage.pvcTemplate.resources.claims
-
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
-
-### fn spec.storage.pvcTemplate.resources.claims.withName
-
-```ts
-withName(name)
-```
-
-"Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container."
 
 ## obj spec.storage.pvcTemplate.selector
 
@@ -6102,7 +6335,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.storage.pvcTemplate.selector.withMatchLabelsMixin
 
@@ -6110,7 +6343,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -6132,7 +6365,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.storage.pvcTemplate.selector.matchExpressions.withValues
 
@@ -6140,7 +6373,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.storage.pvcTemplate.selector.matchExpressions.withValuesMixin
 
@@ -6148,13 +6381,13 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.superuserSecret
 
-"The secret containing the superuser password. If not defined a new secret will be created with a randomly generated password"
+"The secret containing the superuser password. If not defined a new\nsecret will be created with a randomly generated password"
 
 ### fn spec.superuserSecret.withName
 
@@ -6182,7 +6415,7 @@ withName(name)
 withTemporary(temporary)
 ```
 
-"When set to true, the tablespace will be added as a `temp_tablespaces` entry in PostgreSQL, and will be available to automatically house temp database objects, or other temporary files. Please refer to PostgreSQL documentation for more information on the `temp_tablespaces` GUC."
+"When set to true, the tablespace will be added as a `temp_tablespaces`\nentry in PostgreSQL, and will be available to automatically house temp\ndatabase objects, or other temporary files. Please refer to PostgreSQL\ndocumentation for more information on the `temp_tablespaces` GUC."
 
 ## obj spec.tablespaces.owner
 
@@ -6214,7 +6447,7 @@ withResizeInUseVolumes(resizeInUseVolumes)
 withSize(size)
 ```
 
-"Size of the storage. Required if not already specified in the PVC template. Changes to this field are automatically reapplied to the created PVCs. Size cannot be decreased."
+"Size of the storage. Required if not already specified in the PVC template.\nChanges to this field are automatically reapplied to the created PVCs.\nSize cannot be decreased."
 
 ### fn spec.tablespaces.storage.withStorageClass
 
@@ -6222,7 +6455,7 @@ withSize(size)
 withStorageClass(storageClass)
 ```
 
-"StorageClass to use for PVCs. Applied after evaluating the PVC template, if available. If not specified, the generated PVCs will use the default storage class"
+"StorageClass to use for PVCs. Applied after\nevaluating the PVC template, if available.\nIf not specified, the generated PVCs will use the\ndefault storage class"
 
 ## obj spec.tablespaces.storage.pvcTemplate
 
@@ -6234,7 +6467,7 @@ withStorageClass(storageClass)
 withAccessModes(accessModes)
 ```
 
-"accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
+"accessModes contains the desired access modes the volume should have.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
 
 ### fn spec.tablespaces.storage.pvcTemplate.withAccessModesMixin
 
@@ -6242,7 +6475,7 @@ withAccessModes(accessModes)
 withAccessModesMixin(accessModes)
 ```
 
-"accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
+"accessModes contains the desired access modes the volume should have.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
 
 **Note:** This function appends passed data to existing values
 
@@ -6252,7 +6485,15 @@ withAccessModesMixin(accessModes)
 withStorageClassName(storageClassName)
 ```
 
-"storageClassName is the name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1"
+"storageClassName is the name of the StorageClass required by the claim.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1"
+
+### fn spec.tablespaces.storage.pvcTemplate.withVolumeAttributesClassName
+
+```ts
+withVolumeAttributesClassName(volumeAttributesClassName)
+```
+
+"volumeAttributesClassName may be used to set the VolumeAttributesClass used by this claim.\nIf specified, the CSI driver will create or update the volume with the attributes defined\nin the corresponding VolumeAttributesClass. This has a different purpose than storageClassName,\nit can be changed after the claim is created. An empty string value means that no VolumeAttributesClass\nwill be applied to the claim but it's not allowed to reset this field to empty string once it is set.\nIf unspecified and the PersistentVolumeClaim is unbound, the default VolumeAttributesClass\nwill be set by the persistentvolume controller if it exists.\nIf the resource referred to by volumeAttributesClass does not exist, this PersistentVolumeClaim will be\nset to a Pending state, as reflected by the modifyVolumeStatus field, until such as a resource\nexists.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#volumeattributesclass\n(Alpha) Using this field requires the VolumeAttributesClass feature gate to be enabled."
 
 ### fn spec.tablespaces.storage.pvcTemplate.withVolumeMode
 
@@ -6260,7 +6501,7 @@ withStorageClassName(storageClassName)
 withVolumeMode(volumeMode)
 ```
 
-"volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec."
+"volumeMode defines what type of volume is required by the claim.\nValue of Filesystem is implied when not included in claim spec."
 
 ### fn spec.tablespaces.storage.pvcTemplate.withVolumeName
 
@@ -6272,7 +6513,7 @@ withVolumeName(volumeName)
 
 ## obj spec.tablespaces.storage.pvcTemplate.dataSource
 
-"dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. When the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef, and dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified. If the namespace is specified, then dataSourceRef will not be copied to dataSource."
+"dataSource field can be used to specify either:\n* An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot)\n* An existing PVC (PersistentVolumeClaim)\nIf the provisioner or an external controller can support the specified data source,\nit will create a new volume based on the contents of the specified data source.\nWhen the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef,\nand dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified.\nIf the namespace is specified, then dataSourceRef will not be copied to dataSource."
 
 ### fn spec.tablespaces.storage.pvcTemplate.dataSource.withApiGroup
 
@@ -6280,7 +6521,7 @@ withVolumeName(volumeName)
 withApiGroup(apiGroup)
 ```
 
-"APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required."
+"APIGroup is the group for the resource being referenced.\nIf APIGroup is not specified, the specified Kind must be in the core API group.\nFor any other third-party types, APIGroup is required."
 
 ### fn spec.tablespaces.storage.pvcTemplate.dataSource.withKind
 
@@ -6300,7 +6541,7 @@ withName(name)
 
 ## obj spec.tablespaces.storage.pvcTemplate.dataSourceRef
 
-"dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the dataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, when namespace isn't specified in dataSourceRef, both fields (dataSource and dataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. When namespace is specified in dataSourceRef, dataSource isn't set to the same value and must be empty. There are three important differences between dataSource and dataSourceRef: * While dataSource only allows two specific types of objects, dataSourceRef allows any non-core object, as well as PersistentVolumeClaim objects. * While dataSource ignores disallowed values (dropping them), dataSourceRef preserves all values, and generates an error if a disallowed value is specified. * While dataSource only allows local objects, dataSourceRef allows objects in any namespaces. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled. (Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
+"dataSourceRef specifies the object from which to populate the volume with data, if a non-empty\nvolume is desired. This may be any object from a non-empty API group (non\ncore object) or a PersistentVolumeClaim object.\nWhen this field is specified, volume binding will only succeed if the type of\nthe specified object matches some installed volume populator or dynamic\nprovisioner.\nThis field will replace the functionality of the dataSource field and as such\nif both fields are non-empty, they must have the same value. For backwards\ncompatibility, when namespace isn't specified in dataSourceRef,\nboth fields (dataSource and dataSourceRef) will be set to the same\nvalue automatically if one of them is empty and the other is non-empty.\nWhen namespace is specified in dataSourceRef,\ndataSource isn't set to the same value and must be empty.\nThere are three important differences between dataSource and dataSourceRef:\n* While dataSource only allows two specific types of objects, dataSourceRef\n  allows any non-core object, as well as PersistentVolumeClaim objects.\n* While dataSource ignores disallowed values (dropping them), dataSourceRef\n  preserves all values, and generates an error if a disallowed value is\n  specified.\n* While dataSource only allows local objects, dataSourceRef allows objects\n  in any namespaces.\n(Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled.\n(Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
 
 ### fn spec.tablespaces.storage.pvcTemplate.dataSourceRef.withApiGroup
 
@@ -6308,7 +6549,7 @@ withName(name)
 withApiGroup(apiGroup)
 ```
 
-"APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required."
+"APIGroup is the group for the resource being referenced.\nIf APIGroup is not specified, the specified Kind must be in the core API group.\nFor any other third-party types, APIGroup is required."
 
 ### fn spec.tablespaces.storage.pvcTemplate.dataSourceRef.withKind
 
@@ -6332,29 +6573,11 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace is the namespace of resource being referenced Note that when a namespace is specified, a gateway.networking.k8s.io/ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details. (Alpha) This field requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
+"Namespace is the namespace of resource being referenced\nNote that when a namespace is specified, a gateway.networking.k8s.io/ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details.\n(Alpha) This field requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
 
 ## obj spec.tablespaces.storage.pvcTemplate.resources
 
-"resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
-
-### fn spec.tablespaces.storage.pvcTemplate.resources.withClaims
-
-```ts
-withClaims(claims)
-```
-
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
-
-### fn spec.tablespaces.storage.pvcTemplate.resources.withClaimsMixin
-
-```ts
-withClaimsMixin(claims)
-```
-
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
-
-**Note:** This function appends passed data to existing values
+"resources represents the minimum resources the volume should have.\nIf RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements\nthat are lower than previous value but must still be higher than capacity recorded in the\nstatus field of the claim.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
 
 ### fn spec.tablespaces.storage.pvcTemplate.resources.withLimits
 
@@ -6362,7 +6585,7 @@ withClaimsMixin(claims)
 withLimits(limits)
 ```
 
-"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 ### fn spec.tablespaces.storage.pvcTemplate.resources.withLimitsMixin
 
@@ -6370,7 +6593,7 @@ withLimits(limits)
 withLimitsMixin(limits)
 ```
 
-"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 **Note:** This function appends passed data to existing values
 
@@ -6380,7 +6603,7 @@ withLimitsMixin(limits)
 withRequests(requests)
 ```
 
-"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value. Requests cannot exceed Limits.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 ### fn spec.tablespaces.storage.pvcTemplate.resources.withRequestsMixin
 
@@ -6388,21 +6611,9 @@ withRequests(requests)
 withRequestsMixin(requests)
 ```
 
-"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value. Requests cannot exceed Limits.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 **Note:** This function appends passed data to existing values
-
-## obj spec.tablespaces.storage.pvcTemplate.resources.claims
-
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
-
-### fn spec.tablespaces.storage.pvcTemplate.resources.claims.withName
-
-```ts
-withName(name)
-```
-
-"Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container."
 
 ## obj spec.tablespaces.storage.pvcTemplate.selector
 
@@ -6432,7 +6643,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.tablespaces.storage.pvcTemplate.selector.withMatchLabelsMixin
 
@@ -6440,7 +6651,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -6462,7 +6673,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.tablespaces.storage.pvcTemplate.selector.matchExpressions.withValues
 
@@ -6470,7 +6681,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.tablespaces.storage.pvcTemplate.selector.matchExpressions.withValuesMixin
 
@@ -6478,13 +6689,13 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.topologySpreadConstraints
 
-"TopologySpreadConstraints specifies how to spread matching pods among the given topology. More info: https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/"
+"TopologySpreadConstraints specifies how to spread matching pods among the given topology.\nMore info:\nhttps://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/"
 
 ### fn spec.topologySpreadConstraints.withMatchLabelKeys
 
@@ -6492,7 +6703,7 @@ withValuesMixin(values)
 withMatchLabelKeys(matchLabelKeys)
 ```
 
-"MatchLabelKeys is a set of pod label keys to select the pods over which spreading will be calculated. The keys are used to lookup values from the incoming pod labels, those key-value labels are ANDed with labelSelector to select the group of existing pods over which spreading will be calculated for the incoming pod. The same key is forbidden to exist in both MatchLabelKeys and LabelSelector. MatchLabelKeys cannot be set when LabelSelector isn't set. Keys that don't exist in the incoming pod labels will be ignored. A null or empty list means only match against labelSelector. \n This is a beta field and requires the MatchLabelKeysInPodTopologySpread feature gate to be enabled (enabled by default)."
+"MatchLabelKeys is a set of pod label keys to select the pods over which\nspreading will be calculated. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are ANDed with labelSelector\nto select the group of existing pods over which spreading will be calculated\nfor the incoming pod. The same key is forbidden to exist in both MatchLabelKeys and LabelSelector.\nMatchLabelKeys cannot be set when LabelSelector isn't set.\nKeys that don't exist in the incoming pod labels will\nbe ignored. A null or empty list means only match against labelSelector.\n\n\nThis is a beta field and requires the MatchLabelKeysInPodTopologySpread feature gate to be enabled (enabled by default)."
 
 ### fn spec.topologySpreadConstraints.withMatchLabelKeysMixin
 
@@ -6500,7 +6711,7 @@ withMatchLabelKeys(matchLabelKeys)
 withMatchLabelKeysMixin(matchLabelKeys)
 ```
 
-"MatchLabelKeys is a set of pod label keys to select the pods over which spreading will be calculated. The keys are used to lookup values from the incoming pod labels, those key-value labels are ANDed with labelSelector to select the group of existing pods over which spreading will be calculated for the incoming pod. The same key is forbidden to exist in both MatchLabelKeys and LabelSelector. MatchLabelKeys cannot be set when LabelSelector isn't set. Keys that don't exist in the incoming pod labels will be ignored. A null or empty list means only match against labelSelector. \n This is a beta field and requires the MatchLabelKeysInPodTopologySpread feature gate to be enabled (enabled by default)."
+"MatchLabelKeys is a set of pod label keys to select the pods over which\nspreading will be calculated. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are ANDed with labelSelector\nto select the group of existing pods over which spreading will be calculated\nfor the incoming pod. The same key is forbidden to exist in both MatchLabelKeys and LabelSelector.\nMatchLabelKeys cannot be set when LabelSelector isn't set.\nKeys that don't exist in the incoming pod labels will\nbe ignored. A null or empty list means only match against labelSelector.\n\n\nThis is a beta field and requires the MatchLabelKeysInPodTopologySpread feature gate to be enabled (enabled by default)."
 
 **Note:** This function appends passed data to existing values
 
@@ -6510,7 +6721,7 @@ withMatchLabelKeysMixin(matchLabelKeys)
 withMaxSkew(maxSkew)
 ```
 
-"MaxSkew describes the degree to which pods may be unevenly distributed. When `whenUnsatisfiable=DoNotSchedule`, it is the maximum permitted difference between the number of matching pods in the target topology and the global minimum. The global minimum is the minimum number of matching pods in an eligible domain or zero if the number of eligible domains is less than MinDomains. For example, in a 3-zone cluster, MaxSkew is set to 1, and pods with the same labelSelector spread as 2/2/1: In this case, the global minimum is 1. | zone1 | zone2 | zone3 | |  P P  |  P P  |   P   | - if MaxSkew is 1, incoming pod can only be scheduled to zone3 to become 2/2/2; scheduling it onto zone1(zone2) would make the ActualSkew(3-1) on zone1(zone2) violate MaxSkew(1). - if MaxSkew is 2, incoming pod can be scheduled onto any zone. When `whenUnsatisfiable=ScheduleAnyway`, it is used to give higher precedence to topologies that satisfy it. It's a required field. Default value is 1 and 0 is not allowed."
+"MaxSkew describes the degree to which pods may be unevenly distributed.\nWhen `whenUnsatisfiable=DoNotSchedule`, it is the maximum permitted difference\nbetween the number of matching pods in the target topology and the global minimum.\nThe global minimum is the minimum number of matching pods in an eligible domain\nor zero if the number of eligible domains is less than MinDomains.\nFor example, in a 3-zone cluster, MaxSkew is set to 1, and pods with the same\nlabelSelector spread as 2/2/1:\nIn this case, the global minimum is 1.\n| zone1 | zone2 | zone3 |\n|  P P  |  P P  |   P   |\n- if MaxSkew is 1, incoming pod can only be scheduled to zone3 to become 2/2/2;\nscheduling it onto zone1(zone2) would make the ActualSkew(3-1) on zone1(zone2)\nviolate MaxSkew(1).\n- if MaxSkew is 2, incoming pod can be scheduled onto any zone.\nWhen `whenUnsatisfiable=ScheduleAnyway`, it is used to give higher precedence\nto topologies that satisfy it.\nIt's a required field. Default value is 1 and 0 is not allowed."
 
 ### fn spec.topologySpreadConstraints.withMinDomains
 
@@ -6518,7 +6729,7 @@ withMaxSkew(maxSkew)
 withMinDomains(minDomains)
 ```
 
-"MinDomains indicates a minimum number of eligible domains. When the number of eligible domains with matching topology keys is less than minDomains, Pod Topology Spread treats \"global minimum\" as 0, and then the calculation of Skew is performed. And when the number of eligible domains with matching topology keys equals or greater than minDomains, this value has no effect on scheduling. As a result, when the number of eligible domains is less than minDomains, scheduler won't schedule more than maxSkew Pods to those domains. If value is nil, the constraint behaves as if MinDomains is equal to 1. Valid values are integers greater than 0. When value is not nil, WhenUnsatisfiable must be DoNotSchedule. \n For example, in a 3-zone cluster, MaxSkew is set to 2, MinDomains is set to 5 and pods with the same labelSelector spread as 2/2/2: | zone1 | zone2 | zone3 | |  P P  |  P P  |  P P  | The number of domains is less than 5(MinDomains), so \"global minimum\" is treated as 0. In this situation, new pod with the same labelSelector cannot be scheduled, because computed skew will be 3(3 - 0) if new Pod is scheduled to any of the three zones, it will violate MaxSkew. \n This is a beta field and requires the MinDomainsInPodTopologySpread feature gate to be enabled (enabled by default)."
+"MinDomains indicates a minimum number of eligible domains.\nWhen the number of eligible domains with matching topology keys is less than minDomains,\nPod Topology Spread treats \"global minimum\" as 0, and then the calculation of Skew is performed.\nAnd when the number of eligible domains with matching topology keys equals or greater than minDomains,\nthis value has no effect on scheduling.\nAs a result, when the number of eligible domains is less than minDomains,\nscheduler won't schedule more than maxSkew Pods to those domains.\nIf value is nil, the constraint behaves as if MinDomains is equal to 1.\nValid values are integers greater than 0.\nWhen value is not nil, WhenUnsatisfiable must be DoNotSchedule.\n\n\nFor example, in a 3-zone cluster, MaxSkew is set to 2, MinDomains is set to 5 and pods with the same\nlabelSelector spread as 2/2/2:\n| zone1 | zone2 | zone3 |\n|  P P  |  P P  |  P P  |\nThe number of domains is less than 5(MinDomains), so \"global minimum\" is treated as 0.\nIn this situation, new pod with the same labelSelector cannot be scheduled,\nbecause computed skew will be 3(3 - 0) if new Pod is scheduled to any of the three zones,\nit will violate MaxSkew.\n\n\nThis is a beta field and requires the MinDomainsInPodTopologySpread feature gate to be enabled (enabled by default)."
 
 ### fn spec.topologySpreadConstraints.withNodeAffinityPolicy
 
@@ -6526,7 +6737,7 @@ withMinDomains(minDomains)
 withNodeAffinityPolicy(nodeAffinityPolicy)
 ```
 
-"NodeAffinityPolicy indicates how we will treat Pod's nodeAffinity/nodeSelector when calculating pod topology spread skew. Options are: - Honor: only nodes matching nodeAffinity/nodeSelector are included in the calculations. - Ignore: nodeAffinity/nodeSelector are ignored. All nodes are included in the calculations. \n If this value is nil, the behavior is equivalent to the Honor policy. This is a beta-level feature default enabled by the NodeInclusionPolicyInPodTopologySpread feature flag."
+"NodeAffinityPolicy indicates how we will treat Pod's nodeAffinity/nodeSelector\nwhen calculating pod topology spread skew. Options are:\n- Honor: only nodes matching nodeAffinity/nodeSelector are included in the calculations.\n- Ignore: nodeAffinity/nodeSelector are ignored. All nodes are included in the calculations.\n\n\nIf this value is nil, the behavior is equivalent to the Honor policy.\nThis is a beta-level feature default enabled by the NodeInclusionPolicyInPodTopologySpread feature flag."
 
 ### fn spec.topologySpreadConstraints.withNodeTaintsPolicy
 
@@ -6534,7 +6745,7 @@ withNodeAffinityPolicy(nodeAffinityPolicy)
 withNodeTaintsPolicy(nodeTaintsPolicy)
 ```
 
-"NodeTaintsPolicy indicates how we will treat node taints when calculating pod topology spread skew. Options are: - Honor: nodes without taints, along with tainted nodes for which the incoming pod has a toleration, are included. - Ignore: node taints are ignored. All nodes are included. \n If this value is nil, the behavior is equivalent to the Ignore policy. This is a beta-level feature default enabled by the NodeInclusionPolicyInPodTopologySpread feature flag."
+"NodeTaintsPolicy indicates how we will treat node taints when calculating\npod topology spread skew. Options are:\n- Honor: nodes without taints, along with tainted nodes for which the incoming pod\nhas a toleration, are included.\n- Ignore: node taints are ignored. All nodes are included.\n\n\nIf this value is nil, the behavior is equivalent to the Ignore policy.\nThis is a beta-level feature default enabled by the NodeInclusionPolicyInPodTopologySpread feature flag."
 
 ### fn spec.topologySpreadConstraints.withTopologyKey
 
@@ -6542,7 +6753,7 @@ withNodeTaintsPolicy(nodeTaintsPolicy)
 withTopologyKey(topologyKey)
 ```
 
-"TopologyKey is the key of node labels. Nodes that have a label with this key and identical values are considered to be in the same topology. We consider each <key, value> as a \"bucket\", and try to put balanced number of pods into each bucket. We define a domain as a particular instance of a topology. Also, we define an eligible domain as a domain whose nodes meet the requirements of nodeAffinityPolicy and nodeTaintsPolicy. e.g. If TopologyKey is \"kubernetes.io/hostname\", each Node is a domain of that topology. And, if TopologyKey is \"topology.kubernetes.io/zone\", each zone is a domain of that topology. It's a required field."
+"TopologyKey is the key of node labels. Nodes that have a label with this key\nand identical values are considered to be in the same topology.\nWe consider each <key, value> as a \"bucket\", and try to put balanced number\nof pods into each bucket.\nWe define a domain as a particular instance of a topology.\nAlso, we define an eligible domain as a domain whose nodes meet the requirements of\nnodeAffinityPolicy and nodeTaintsPolicy.\ne.g. If TopologyKey is \"kubernetes.io/hostname\", each Node is a domain of that topology.\nAnd, if TopologyKey is \"topology.kubernetes.io/zone\", each zone is a domain of that topology.\nIt's a required field."
 
 ### fn spec.topologySpreadConstraints.withWhenUnsatisfiable
 
@@ -6550,11 +6761,11 @@ withTopologyKey(topologyKey)
 withWhenUnsatisfiable(whenUnsatisfiable)
 ```
 
-"WhenUnsatisfiable indicates how to deal with a pod if it doesn't satisfy the spread constraint. - DoNotSchedule (default) tells the scheduler not to schedule it. - ScheduleAnyway tells the scheduler to schedule the pod in any location, but giving higher precedence to topologies that would help reduce the skew. A constraint is considered \"Unsatisfiable\" for an incoming pod if and only if every possible node assignment for that pod would violate \"MaxSkew\" on some topology. For example, in a 3-zone cluster, MaxSkew is set to 1, and pods with the same labelSelector spread as 3/1/1: | zone1 | zone2 | zone3 | | P P P |   P   |   P   | If WhenUnsatisfiable is set to DoNotSchedule, incoming pod can only be scheduled to zone2(zone3) to become 3/2/1(3/1/2) as ActualSkew(2-1) on zone2(zone3) satisfies MaxSkew(1). In other words, the cluster can still be imbalanced, but scheduler won't make it *more* imbalanced. It's a required field."
+"WhenUnsatisfiable indicates how to deal with a pod if it doesn't satisfy\nthe spread constraint.\n- DoNotSchedule (default) tells the scheduler not to schedule it.\n- ScheduleAnyway tells the scheduler to schedule the pod in any location,\n  but giving higher precedence to topologies that would help reduce the\n  skew.\nA constraint is considered \"Unsatisfiable\" for an incoming pod\nif and only if every possible node assignment for that pod would violate\n\"MaxSkew\" on some topology.\nFor example, in a 3-zone cluster, MaxSkew is set to 1, and pods with the same\nlabelSelector spread as 3/1/1:\n| zone1 | zone2 | zone3 |\n| P P P |   P   |   P   |\nIf WhenUnsatisfiable is set to DoNotSchedule, incoming pod can only be scheduled\nto zone2(zone3) to become 3/2/1(3/1/2) as ActualSkew(2-1) on zone2(zone3) satisfies\nMaxSkew(1). In other words, the cluster can still be imbalanced, but scheduler\nwon't make it *more* imbalanced.\nIt's a required field."
 
 ## obj spec.topologySpreadConstraints.labelSelector
 
-"LabelSelector is used to find matching pods. Pods that match this label selector are counted to determine the number of pods in their corresponding topology domain."
+"LabelSelector is used to find matching pods.\nPods that match this label selector are counted to determine the number of pods\nin their corresponding topology domain."
 
 ### fn spec.topologySpreadConstraints.labelSelector.withMatchExpressions
 
@@ -6580,7 +6791,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.topologySpreadConstraints.labelSelector.withMatchLabelsMixin
 
@@ -6588,7 +6799,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -6610,7 +6821,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.topologySpreadConstraints.labelSelector.matchExpressions.withValues
 
@@ -6618,7 +6829,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.topologySpreadConstraints.labelSelector.matchExpressions.withValuesMixin
 
@@ -6626,7 +6837,7 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
@@ -6648,7 +6859,7 @@ withResizeInUseVolumes(resizeInUseVolumes)
 withSize(size)
 ```
 
-"Size of the storage. Required if not already specified in the PVC template. Changes to this field are automatically reapplied to the created PVCs. Size cannot be decreased."
+"Size of the storage. Required if not already specified in the PVC template.\nChanges to this field are automatically reapplied to the created PVCs.\nSize cannot be decreased."
 
 ### fn spec.walStorage.withStorageClass
 
@@ -6656,7 +6867,7 @@ withSize(size)
 withStorageClass(storageClass)
 ```
 
-"StorageClass to use for PVCs. Applied after evaluating the PVC template, if available. If not specified, the generated PVCs will use the default storage class"
+"StorageClass to use for PVCs. Applied after\nevaluating the PVC template, if available.\nIf not specified, the generated PVCs will use the\ndefault storage class"
 
 ## obj spec.walStorage.pvcTemplate
 
@@ -6668,7 +6879,7 @@ withStorageClass(storageClass)
 withAccessModes(accessModes)
 ```
 
-"accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
+"accessModes contains the desired access modes the volume should have.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
 
 ### fn spec.walStorage.pvcTemplate.withAccessModesMixin
 
@@ -6676,7 +6887,7 @@ withAccessModes(accessModes)
 withAccessModesMixin(accessModes)
 ```
 
-"accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
+"accessModes contains the desired access modes the volume should have.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
 
 **Note:** This function appends passed data to existing values
 
@@ -6686,7 +6897,15 @@ withAccessModesMixin(accessModes)
 withStorageClassName(storageClassName)
 ```
 
-"storageClassName is the name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1"
+"storageClassName is the name of the StorageClass required by the claim.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1"
+
+### fn spec.walStorage.pvcTemplate.withVolumeAttributesClassName
+
+```ts
+withVolumeAttributesClassName(volumeAttributesClassName)
+```
+
+"volumeAttributesClassName may be used to set the VolumeAttributesClass used by this claim.\nIf specified, the CSI driver will create or update the volume with the attributes defined\nin the corresponding VolumeAttributesClass. This has a different purpose than storageClassName,\nit can be changed after the claim is created. An empty string value means that no VolumeAttributesClass\nwill be applied to the claim but it's not allowed to reset this field to empty string once it is set.\nIf unspecified and the PersistentVolumeClaim is unbound, the default VolumeAttributesClass\nwill be set by the persistentvolume controller if it exists.\nIf the resource referred to by volumeAttributesClass does not exist, this PersistentVolumeClaim will be\nset to a Pending state, as reflected by the modifyVolumeStatus field, until such as a resource\nexists.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#volumeattributesclass\n(Alpha) Using this field requires the VolumeAttributesClass feature gate to be enabled."
 
 ### fn spec.walStorage.pvcTemplate.withVolumeMode
 
@@ -6694,7 +6913,7 @@ withStorageClassName(storageClassName)
 withVolumeMode(volumeMode)
 ```
 
-"volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec."
+"volumeMode defines what type of volume is required by the claim.\nValue of Filesystem is implied when not included in claim spec."
 
 ### fn spec.walStorage.pvcTemplate.withVolumeName
 
@@ -6706,7 +6925,7 @@ withVolumeName(volumeName)
 
 ## obj spec.walStorage.pvcTemplate.dataSource
 
-"dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. When the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef, and dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified. If the namespace is specified, then dataSourceRef will not be copied to dataSource."
+"dataSource field can be used to specify either:\n* An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot)\n* An existing PVC (PersistentVolumeClaim)\nIf the provisioner or an external controller can support the specified data source,\nit will create a new volume based on the contents of the specified data source.\nWhen the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef,\nand dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified.\nIf the namespace is specified, then dataSourceRef will not be copied to dataSource."
 
 ### fn spec.walStorage.pvcTemplate.dataSource.withApiGroup
 
@@ -6714,7 +6933,7 @@ withVolumeName(volumeName)
 withApiGroup(apiGroup)
 ```
 
-"APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required."
+"APIGroup is the group for the resource being referenced.\nIf APIGroup is not specified, the specified Kind must be in the core API group.\nFor any other third-party types, APIGroup is required."
 
 ### fn spec.walStorage.pvcTemplate.dataSource.withKind
 
@@ -6734,7 +6953,7 @@ withName(name)
 
 ## obj spec.walStorage.pvcTemplate.dataSourceRef
 
-"dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the dataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, when namespace isn't specified in dataSourceRef, both fields (dataSource and dataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. When namespace is specified in dataSourceRef, dataSource isn't set to the same value and must be empty. There are three important differences between dataSource and dataSourceRef: * While dataSource only allows two specific types of objects, dataSourceRef allows any non-core object, as well as PersistentVolumeClaim objects. * While dataSource ignores disallowed values (dropping them), dataSourceRef preserves all values, and generates an error if a disallowed value is specified. * While dataSource only allows local objects, dataSourceRef allows objects in any namespaces. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled. (Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
+"dataSourceRef specifies the object from which to populate the volume with data, if a non-empty\nvolume is desired. This may be any object from a non-empty API group (non\ncore object) or a PersistentVolumeClaim object.\nWhen this field is specified, volume binding will only succeed if the type of\nthe specified object matches some installed volume populator or dynamic\nprovisioner.\nThis field will replace the functionality of the dataSource field and as such\nif both fields are non-empty, they must have the same value. For backwards\ncompatibility, when namespace isn't specified in dataSourceRef,\nboth fields (dataSource and dataSourceRef) will be set to the same\nvalue automatically if one of them is empty and the other is non-empty.\nWhen namespace is specified in dataSourceRef,\ndataSource isn't set to the same value and must be empty.\nThere are three important differences between dataSource and dataSourceRef:\n* While dataSource only allows two specific types of objects, dataSourceRef\n  allows any non-core object, as well as PersistentVolumeClaim objects.\n* While dataSource ignores disallowed values (dropping them), dataSourceRef\n  preserves all values, and generates an error if a disallowed value is\n  specified.\n* While dataSource only allows local objects, dataSourceRef allows objects\n  in any namespaces.\n(Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled.\n(Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
 
 ### fn spec.walStorage.pvcTemplate.dataSourceRef.withApiGroup
 
@@ -6742,7 +6961,7 @@ withName(name)
 withApiGroup(apiGroup)
 ```
 
-"APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required."
+"APIGroup is the group for the resource being referenced.\nIf APIGroup is not specified, the specified Kind must be in the core API group.\nFor any other third-party types, APIGroup is required."
 
 ### fn spec.walStorage.pvcTemplate.dataSourceRef.withKind
 
@@ -6766,29 +6985,11 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace is the namespace of resource being referenced Note that when a namespace is specified, a gateway.networking.k8s.io/ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details. (Alpha) This field requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
+"Namespace is the namespace of resource being referenced\nNote that when a namespace is specified, a gateway.networking.k8s.io/ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details.\n(Alpha) This field requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
 
 ## obj spec.walStorage.pvcTemplate.resources
 
-"resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
-
-### fn spec.walStorage.pvcTemplate.resources.withClaims
-
-```ts
-withClaims(claims)
-```
-
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
-
-### fn spec.walStorage.pvcTemplate.resources.withClaimsMixin
-
-```ts
-withClaimsMixin(claims)
-```
-
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
-
-**Note:** This function appends passed data to existing values
+"resources represents the minimum resources the volume should have.\nIf RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements\nthat are lower than previous value but must still be higher than capacity recorded in the\nstatus field of the claim.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
 
 ### fn spec.walStorage.pvcTemplate.resources.withLimits
 
@@ -6796,7 +6997,7 @@ withClaimsMixin(claims)
 withLimits(limits)
 ```
 
-"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 ### fn spec.walStorage.pvcTemplate.resources.withLimitsMixin
 
@@ -6804,7 +7005,7 @@ withLimits(limits)
 withLimitsMixin(limits)
 ```
 
-"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 **Note:** This function appends passed data to existing values
 
@@ -6814,7 +7015,7 @@ withLimitsMixin(limits)
 withRequests(requests)
 ```
 
-"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value. Requests cannot exceed Limits.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 ### fn spec.walStorage.pvcTemplate.resources.withRequestsMixin
 
@@ -6822,21 +7023,9 @@ withRequests(requests)
 withRequestsMixin(requests)
 ```
 
-"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value. Requests cannot exceed Limits.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 **Note:** This function appends passed data to existing values
-
-## obj spec.walStorage.pvcTemplate.resources.claims
-
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
-
-### fn spec.walStorage.pvcTemplate.resources.claims.withName
-
-```ts
-withName(name)
-```
-
-"Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container."
 
 ## obj spec.walStorage.pvcTemplate.selector
 
@@ -6866,7 +7055,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.walStorage.pvcTemplate.selector.withMatchLabelsMixin
 
@@ -6874,7 +7063,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -6896,7 +7085,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.walStorage.pvcTemplate.selector.matchExpressions.withValues
 
@@ -6904,7 +7093,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.walStorage.pvcTemplate.selector.matchExpressions.withValuesMixin
 
@@ -6912,6 +7101,6 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values

@@ -175,6 +175,10 @@ permalink: /1.21.3/postgresql/v1/pooler/
           * [`obj spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution`](#obj-spectemplatespecaffinitypodaffinitypreferredduringschedulingignoredduringexecution)
             * [`fn withWeight(weight)`](#fn-spectemplatespecaffinitypodaffinitypreferredduringschedulingignoredduringexecutionwithweight)
             * [`obj spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm`](#obj-spectemplatespecaffinitypodaffinitypreferredduringschedulingignoredduringexecutionpodaffinityterm)
+              * [`fn withMatchLabelKeys(matchLabelKeys)`](#fn-spectemplatespecaffinitypodaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithmatchlabelkeys)
+              * [`fn withMatchLabelKeysMixin(matchLabelKeys)`](#fn-spectemplatespecaffinitypodaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithmatchlabelkeysmixin)
+              * [`fn withMismatchLabelKeys(mismatchLabelKeys)`](#fn-spectemplatespecaffinitypodaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithmismatchlabelkeys)
+              * [`fn withMismatchLabelKeysMixin(mismatchLabelKeys)`](#fn-spectemplatespecaffinitypodaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithmismatchlabelkeysmixin)
               * [`fn withNamespaces(namespaces)`](#fn-spectemplatespecaffinitypodaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithnamespaces)
               * [`fn withNamespacesMixin(namespaces)`](#fn-spectemplatespecaffinitypodaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithnamespacesmixin)
               * [`fn withTopologyKey(topologyKey)`](#fn-spectemplatespecaffinitypodaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithtopologykey)
@@ -199,6 +203,10 @@ permalink: /1.21.3/postgresql/v1/pooler/
                   * [`fn withValues(values)`](#fn-spectemplatespecaffinitypodaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermnamespaceselectormatchexpressionswithvalues)
                   * [`fn withValuesMixin(values)`](#fn-spectemplatespecaffinitypodaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermnamespaceselectormatchexpressionswithvaluesmixin)
           * [`obj spec.template.spec.affinity.podAffinity.requiredDuringSchedulingIgnoredDuringExecution`](#obj-spectemplatespecaffinitypodaffinityrequiredduringschedulingignoredduringexecution)
+            * [`fn withMatchLabelKeys(matchLabelKeys)`](#fn-spectemplatespecaffinitypodaffinityrequiredduringschedulingignoredduringexecutionwithmatchlabelkeys)
+            * [`fn withMatchLabelKeysMixin(matchLabelKeys)`](#fn-spectemplatespecaffinitypodaffinityrequiredduringschedulingignoredduringexecutionwithmatchlabelkeysmixin)
+            * [`fn withMismatchLabelKeys(mismatchLabelKeys)`](#fn-spectemplatespecaffinitypodaffinityrequiredduringschedulingignoredduringexecutionwithmismatchlabelkeys)
+            * [`fn withMismatchLabelKeysMixin(mismatchLabelKeys)`](#fn-spectemplatespecaffinitypodaffinityrequiredduringschedulingignoredduringexecutionwithmismatchlabelkeysmixin)
             * [`fn withNamespaces(namespaces)`](#fn-spectemplatespecaffinitypodaffinityrequiredduringschedulingignoredduringexecutionwithnamespaces)
             * [`fn withNamespacesMixin(namespaces)`](#fn-spectemplatespecaffinitypodaffinityrequiredduringschedulingignoredduringexecutionwithnamespacesmixin)
             * [`fn withTopologyKey(topologyKey)`](#fn-spectemplatespecaffinitypodaffinityrequiredduringschedulingignoredduringexecutionwithtopologykey)
@@ -230,6 +238,10 @@ permalink: /1.21.3/postgresql/v1/pooler/
           * [`obj spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution`](#obj-spectemplatespecaffinitypodantiaffinitypreferredduringschedulingignoredduringexecution)
             * [`fn withWeight(weight)`](#fn-spectemplatespecaffinitypodantiaffinitypreferredduringschedulingignoredduringexecutionwithweight)
             * [`obj spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm`](#obj-spectemplatespecaffinitypodantiaffinitypreferredduringschedulingignoredduringexecutionpodaffinityterm)
+              * [`fn withMatchLabelKeys(matchLabelKeys)`](#fn-spectemplatespecaffinitypodantiaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithmatchlabelkeys)
+              * [`fn withMatchLabelKeysMixin(matchLabelKeys)`](#fn-spectemplatespecaffinitypodantiaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithmatchlabelkeysmixin)
+              * [`fn withMismatchLabelKeys(mismatchLabelKeys)`](#fn-spectemplatespecaffinitypodantiaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithmismatchlabelkeys)
+              * [`fn withMismatchLabelKeysMixin(mismatchLabelKeys)`](#fn-spectemplatespecaffinitypodantiaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithmismatchlabelkeysmixin)
               * [`fn withNamespaces(namespaces)`](#fn-spectemplatespecaffinitypodantiaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithnamespaces)
               * [`fn withNamespacesMixin(namespaces)`](#fn-spectemplatespecaffinitypodantiaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithnamespacesmixin)
               * [`fn withTopologyKey(topologyKey)`](#fn-spectemplatespecaffinitypodantiaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermwithtopologykey)
@@ -254,6 +266,10 @@ permalink: /1.21.3/postgresql/v1/pooler/
                   * [`fn withValues(values)`](#fn-spectemplatespecaffinitypodantiaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermnamespaceselectormatchexpressionswithvalues)
                   * [`fn withValuesMixin(values)`](#fn-spectemplatespecaffinitypodantiaffinitypreferredduringschedulingignoredduringexecutionpodaffinitytermnamespaceselectormatchexpressionswithvaluesmixin)
           * [`obj spec.template.spec.affinity.podAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution`](#obj-spectemplatespecaffinitypodantiaffinityrequiredduringschedulingignoredduringexecution)
+            * [`fn withMatchLabelKeys(matchLabelKeys)`](#fn-spectemplatespecaffinitypodantiaffinityrequiredduringschedulingignoredduringexecutionwithmatchlabelkeys)
+            * [`fn withMatchLabelKeysMixin(matchLabelKeys)`](#fn-spectemplatespecaffinitypodantiaffinityrequiredduringschedulingignoredduringexecutionwithmatchlabelkeysmixin)
+            * [`fn withMismatchLabelKeys(mismatchLabelKeys)`](#fn-spectemplatespecaffinitypodantiaffinityrequiredduringschedulingignoredduringexecutionwithmismatchlabelkeys)
+            * [`fn withMismatchLabelKeysMixin(mismatchLabelKeys)`](#fn-spectemplatespecaffinitypodantiaffinityrequiredduringschedulingignoredduringexecutionwithmismatchlabelkeysmixin)
             * [`fn withNamespaces(namespaces)`](#fn-spectemplatespecaffinitypodantiaffinityrequiredduringschedulingignoredduringexecutionwithnamespaces)
             * [`fn withNamespacesMixin(namespaces)`](#fn-spectemplatespecaffinitypodantiaffinityrequiredduringschedulingignoredduringexecutionwithnamespacesmixin)
             * [`fn withTopologyKey(topologyKey)`](#fn-spectemplatespecaffinitypodantiaffinityrequiredduringschedulingignoredduringexecutionwithtopologykey)
@@ -346,6 +362,8 @@ permalink: /1.21.3/postgresql/v1/pooler/
               * [`obj spec.template.spec.containers.lifecycle.postStart.httpGet.httpHeaders`](#obj-spectemplatespeccontainerslifecyclepoststarthttpgethttpheaders)
                 * [`fn withName(name)`](#fn-spectemplatespeccontainerslifecyclepoststarthttpgethttpheaderswithname)
                 * [`fn withValue(value)`](#fn-spectemplatespeccontainerslifecyclepoststarthttpgethttpheaderswithvalue)
+            * [`obj spec.template.spec.containers.lifecycle.postStart.sleep`](#obj-spectemplatespeccontainerslifecyclepoststartsleep)
+              * [`fn withSeconds(seconds)`](#fn-spectemplatespeccontainerslifecyclepoststartsleepwithseconds)
             * [`obj spec.template.spec.containers.lifecycle.postStart.tcpSocket`](#obj-spectemplatespeccontainerslifecyclepoststarttcpsocket)
               * [`fn withHost(host)`](#fn-spectemplatespeccontainerslifecyclepoststarttcpsocketwithhost)
               * [`fn withPort(port)`](#fn-spectemplatespeccontainerslifecyclepoststarttcpsocketwithport)
@@ -363,6 +381,8 @@ permalink: /1.21.3/postgresql/v1/pooler/
               * [`obj spec.template.spec.containers.lifecycle.preStop.httpGet.httpHeaders`](#obj-spectemplatespeccontainerslifecycleprestophttpgethttpheaders)
                 * [`fn withName(name)`](#fn-spectemplatespeccontainerslifecycleprestophttpgethttpheaderswithname)
                 * [`fn withValue(value)`](#fn-spectemplatespeccontainerslifecycleprestophttpgethttpheaderswithvalue)
+            * [`obj spec.template.spec.containers.lifecycle.preStop.sleep`](#obj-spectemplatespeccontainerslifecycleprestopsleep)
+              * [`fn withSeconds(seconds)`](#fn-spectemplatespeccontainerslifecycleprestopsleepwithseconds)
             * [`obj spec.template.spec.containers.lifecycle.preStop.tcpSocket`](#obj-spectemplatespeccontainerslifecycleprestoptcpsocket)
               * [`fn withHost(host)`](#fn-spectemplatespeccontainerslifecycleprestoptcpsocketwithhost)
               * [`fn withPort(port)`](#fn-spectemplatespeccontainerslifecycleprestoptcpsocketwithport)
@@ -578,6 +598,8 @@ permalink: /1.21.3/postgresql/v1/pooler/
               * [`obj spec.template.spec.ephemeralContainers.lifecycle.postStart.httpGet.httpHeaders`](#obj-spectemplatespecephemeralcontainerslifecyclepoststarthttpgethttpheaders)
                 * [`fn withName(name)`](#fn-spectemplatespecephemeralcontainerslifecyclepoststarthttpgethttpheaderswithname)
                 * [`fn withValue(value)`](#fn-spectemplatespecephemeralcontainerslifecyclepoststarthttpgethttpheaderswithvalue)
+            * [`obj spec.template.spec.ephemeralContainers.lifecycle.postStart.sleep`](#obj-spectemplatespecephemeralcontainerslifecyclepoststartsleep)
+              * [`fn withSeconds(seconds)`](#fn-spectemplatespecephemeralcontainerslifecyclepoststartsleepwithseconds)
             * [`obj spec.template.spec.ephemeralContainers.lifecycle.postStart.tcpSocket`](#obj-spectemplatespecephemeralcontainerslifecyclepoststarttcpsocket)
               * [`fn withHost(host)`](#fn-spectemplatespecephemeralcontainerslifecyclepoststarttcpsocketwithhost)
               * [`fn withPort(port)`](#fn-spectemplatespecephemeralcontainerslifecyclepoststarttcpsocketwithport)
@@ -595,6 +617,8 @@ permalink: /1.21.3/postgresql/v1/pooler/
               * [`obj spec.template.spec.ephemeralContainers.lifecycle.preStop.httpGet.httpHeaders`](#obj-spectemplatespecephemeralcontainerslifecycleprestophttpgethttpheaders)
                 * [`fn withName(name)`](#fn-spectemplatespecephemeralcontainerslifecycleprestophttpgethttpheaderswithname)
                 * [`fn withValue(value)`](#fn-spectemplatespecephemeralcontainerslifecycleprestophttpgethttpheaderswithvalue)
+            * [`obj spec.template.spec.ephemeralContainers.lifecycle.preStop.sleep`](#obj-spectemplatespecephemeralcontainerslifecycleprestopsleep)
+              * [`fn withSeconds(seconds)`](#fn-spectemplatespecephemeralcontainerslifecycleprestopsleepwithseconds)
             * [`obj spec.template.spec.ephemeralContainers.lifecycle.preStop.tcpSocket`](#obj-spectemplatespecephemeralcontainerslifecycleprestoptcpsocket)
               * [`fn withHost(host)`](#fn-spectemplatespecephemeralcontainerslifecycleprestoptcpsocketwithhost)
               * [`fn withPort(port)`](#fn-spectemplatespecephemeralcontainerslifecycleprestoptcpsocketwithport)
@@ -805,6 +829,8 @@ permalink: /1.21.3/postgresql/v1/pooler/
               * [`obj spec.template.spec.initContainers.lifecycle.postStart.httpGet.httpHeaders`](#obj-spectemplatespecinitcontainerslifecyclepoststarthttpgethttpheaders)
                 * [`fn withName(name)`](#fn-spectemplatespecinitcontainerslifecyclepoststarthttpgethttpheaderswithname)
                 * [`fn withValue(value)`](#fn-spectemplatespecinitcontainerslifecyclepoststarthttpgethttpheaderswithvalue)
+            * [`obj spec.template.spec.initContainers.lifecycle.postStart.sleep`](#obj-spectemplatespecinitcontainerslifecyclepoststartsleep)
+              * [`fn withSeconds(seconds)`](#fn-spectemplatespecinitcontainerslifecyclepoststartsleepwithseconds)
             * [`obj spec.template.spec.initContainers.lifecycle.postStart.tcpSocket`](#obj-spectemplatespecinitcontainerslifecyclepoststarttcpsocket)
               * [`fn withHost(host)`](#fn-spectemplatespecinitcontainerslifecyclepoststarttcpsocketwithhost)
               * [`fn withPort(port)`](#fn-spectemplatespecinitcontainerslifecyclepoststarttcpsocketwithport)
@@ -822,6 +848,8 @@ permalink: /1.21.3/postgresql/v1/pooler/
               * [`obj spec.template.spec.initContainers.lifecycle.preStop.httpGet.httpHeaders`](#obj-spectemplatespecinitcontainerslifecycleprestophttpgethttpheaders)
                 * [`fn withName(name)`](#fn-spectemplatespecinitcontainerslifecycleprestophttpgethttpheaderswithname)
                 * [`fn withValue(value)`](#fn-spectemplatespecinitcontainerslifecycleprestophttpgethttpheaderswithvalue)
+            * [`obj spec.template.spec.initContainers.lifecycle.preStop.sleep`](#obj-spectemplatespecinitcontainerslifecycleprestopsleep)
+              * [`fn withSeconds(seconds)`](#fn-spectemplatespecinitcontainerslifecycleprestopsleepwithseconds)
             * [`obj spec.template.spec.initContainers.lifecycle.preStop.tcpSocket`](#obj-spectemplatespecinitcontainerslifecycleprestoptcpsocket)
               * [`fn withHost(host)`](#fn-spectemplatespecinitcontainerslifecycleprestoptcpsocketwithhost)
               * [`fn withPort(port)`](#fn-spectemplatespecinitcontainerslifecycleprestoptcpsocketwithport)
@@ -1095,6 +1123,7 @@ permalink: /1.21.3/postgresql/v1/pooler/
               * [`fn withAccessModes(accessModes)`](#fn-spectemplatespecvolumesephemeralvolumeclaimtemplatespecwithaccessmodes)
               * [`fn withAccessModesMixin(accessModes)`](#fn-spectemplatespecvolumesephemeralvolumeclaimtemplatespecwithaccessmodesmixin)
               * [`fn withStorageClassName(storageClassName)`](#fn-spectemplatespecvolumesephemeralvolumeclaimtemplatespecwithstorageclassname)
+              * [`fn withVolumeAttributesClassName(volumeAttributesClassName)`](#fn-spectemplatespecvolumesephemeralvolumeclaimtemplatespecwithvolumeattributesclassname)
               * [`fn withVolumeMode(volumeMode)`](#fn-spectemplatespecvolumesephemeralvolumeclaimtemplatespecwithvolumemode)
               * [`fn withVolumeName(volumeName)`](#fn-spectemplatespecvolumesephemeralvolumeclaimtemplatespecwithvolumename)
               * [`obj spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.dataSource`](#obj-spectemplatespecvolumesephemeralvolumeclaimtemplatespecdatasource)
@@ -1107,14 +1136,10 @@ permalink: /1.21.3/postgresql/v1/pooler/
                 * [`fn withName(name)`](#fn-spectemplatespecvolumesephemeralvolumeclaimtemplatespecdatasourcerefwithname)
                 * [`fn withNamespace(namespace)`](#fn-spectemplatespecvolumesephemeralvolumeclaimtemplatespecdatasourcerefwithnamespace)
               * [`obj spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.resources`](#obj-spectemplatespecvolumesephemeralvolumeclaimtemplatespecresources)
-                * [`fn withClaims(claims)`](#fn-spectemplatespecvolumesephemeralvolumeclaimtemplatespecresourceswithclaims)
-                * [`fn withClaimsMixin(claims)`](#fn-spectemplatespecvolumesephemeralvolumeclaimtemplatespecresourceswithclaimsmixin)
                 * [`fn withLimits(limits)`](#fn-spectemplatespecvolumesephemeralvolumeclaimtemplatespecresourceswithlimits)
                 * [`fn withLimitsMixin(limits)`](#fn-spectemplatespecvolumesephemeralvolumeclaimtemplatespecresourceswithlimitsmixin)
                 * [`fn withRequests(requests)`](#fn-spectemplatespecvolumesephemeralvolumeclaimtemplatespecresourceswithrequests)
                 * [`fn withRequestsMixin(requests)`](#fn-spectemplatespecvolumesephemeralvolumeclaimtemplatespecresourceswithrequestsmixin)
-                * [`obj spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.resources.claims`](#obj-spectemplatespecvolumesephemeralvolumeclaimtemplatespecresourcesclaims)
-                  * [`fn withName(name)`](#fn-spectemplatespecvolumesephemeralvolumeclaimtemplatespecresourcesclaimswithname)
               * [`obj spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.selector`](#obj-spectemplatespecvolumesephemeralvolumeclaimtemplatespecselector)
                 * [`fn withMatchExpressions(matchExpressions)`](#fn-spectemplatespecvolumesephemeralvolumeclaimtemplatespecselectorwithmatchexpressions)
                 * [`fn withMatchExpressionsMixin(matchExpressions)`](#fn-spectemplatespecvolumesephemeralvolumeclaimtemplatespecselectorwithmatchexpressionsmixin)
@@ -1193,6 +1218,21 @@ permalink: /1.21.3/postgresql/v1/pooler/
           * [`fn withSources(sources)`](#fn-spectemplatespecvolumesprojectedwithsources)
           * [`fn withSourcesMixin(sources)`](#fn-spectemplatespecvolumesprojectedwithsourcesmixin)
           * [`obj spec.template.spec.volumes.projected.sources`](#obj-spectemplatespecvolumesprojectedsources)
+            * [`obj spec.template.spec.volumes.projected.sources.clusterTrustBundle`](#obj-spectemplatespecvolumesprojectedsourcesclustertrustbundle)
+              * [`fn withName(name)`](#fn-spectemplatespecvolumesprojectedsourcesclustertrustbundlewithname)
+              * [`fn withOptional(optional)`](#fn-spectemplatespecvolumesprojectedsourcesclustertrustbundlewithoptional)
+              * [`fn withPath(path)`](#fn-spectemplatespecvolumesprojectedsourcesclustertrustbundlewithpath)
+              * [`fn withSignerName(signerName)`](#fn-spectemplatespecvolumesprojectedsourcesclustertrustbundlewithsignername)
+              * [`obj spec.template.spec.volumes.projected.sources.clusterTrustBundle.labelSelector`](#obj-spectemplatespecvolumesprojectedsourcesclustertrustbundlelabelselector)
+                * [`fn withMatchExpressions(matchExpressions)`](#fn-spectemplatespecvolumesprojectedsourcesclustertrustbundlelabelselectorwithmatchexpressions)
+                * [`fn withMatchExpressionsMixin(matchExpressions)`](#fn-spectemplatespecvolumesprojectedsourcesclustertrustbundlelabelselectorwithmatchexpressionsmixin)
+                * [`fn withMatchLabels(matchLabels)`](#fn-spectemplatespecvolumesprojectedsourcesclustertrustbundlelabelselectorwithmatchlabels)
+                * [`fn withMatchLabelsMixin(matchLabels)`](#fn-spectemplatespecvolumesprojectedsourcesclustertrustbundlelabelselectorwithmatchlabelsmixin)
+                * [`obj spec.template.spec.volumes.projected.sources.clusterTrustBundle.labelSelector.matchExpressions`](#obj-spectemplatespecvolumesprojectedsourcesclustertrustbundlelabelselectormatchexpressions)
+                  * [`fn withKey(key)`](#fn-spectemplatespecvolumesprojectedsourcesclustertrustbundlelabelselectormatchexpressionswithkey)
+                  * [`fn withOperator(operator)`](#fn-spectemplatespecvolumesprojectedsourcesclustertrustbundlelabelselectormatchexpressionswithoperator)
+                  * [`fn withValues(values)`](#fn-spectemplatespecvolumesprojectedsourcesclustertrustbundlelabelselectormatchexpressionswithvalues)
+                  * [`fn withValuesMixin(values)`](#fn-spectemplatespecvolumesprojectedsourcesclustertrustbundlelabelselectormatchexpressionswithvaluesmixin)
             * [`obj spec.template.spec.volumes.projected.sources.configMap`](#obj-spectemplatespecvolumesprojectedsourcesconfigmap)
               * [`fn withItems(items)`](#fn-spectemplatespecvolumesprojectedsourcesconfigmapwithitems)
               * [`fn withItemsMixin(items)`](#fn-spectemplatespecvolumesprojectedsourcesconfigmapwithitemsmixin)
@@ -1457,7 +1497,7 @@ withUid(uid)
 
 ## obj spec
 
-"Specification of the desired behavior of the Pooler. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
+"Specification of the desired behavior of the Pooler.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
 
 ### fn spec.withInstances
 
@@ -1477,7 +1517,7 @@ withType(type)
 
 ## obj spec.cluster
 
-"This is the cluster reference on which the Pooler will work. Pooler name should never match with any cluster name within the same namespace."
+"This is the cluster reference on which the Pooler will work.\nPooler name should never match with any cluster name within the same namespace."
 
 ### fn spec.cluster.withName
 
@@ -1501,7 +1541,7 @@ withType(type)
 
 ## obj spec.deploymentStrategy.rollingUpdate
 
-"Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate. --- TODO: Update this to follow our convention for oneOf, whatever we decide it to be."
+"Rolling update config params. Present only if DeploymentStrategyType =\nRollingUpdate.\n---\nTODO: Update this to follow our convention for oneOf, whatever we decide it\nto be."
 
 ### fn spec.deploymentStrategy.rollingUpdate.withMaxSurge
 
@@ -1509,7 +1549,7 @@ withType(type)
 withMaxSurge(maxSurge)
 ```
 
-"The maximum number of pods that can be scheduled above the desired number of pods. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). This can not be 0 if MaxUnavailable is 0. Absolute number is calculated from percentage by rounding up. Defaults to 25%. Example: when this is set to 30%, the new ReplicaSet can be scaled up immediately when the rolling update starts, such that the total number of old and new pods do not exceed 130% of desired pods. Once old pods have been killed, new ReplicaSet can be scaled up further, ensuring that total number of pods running at any time during the update is at most 130% of desired pods."
+"The maximum number of pods that can be scheduled above the desired number of\npods.\nValue can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%).\nThis can not be 0 if MaxUnavailable is 0.\nAbsolute number is calculated from percentage by rounding up.\nDefaults to 25%.\nExample: when this is set to 30%, the new ReplicaSet can be scaled up immediately when\nthe rolling update starts, such that the total number of old and new pods do not exceed\n130% of desired pods. Once old pods have been killed,\nnew ReplicaSet can be scaled up further, ensuring that total number of pods running\nat any time during the update is at most 130% of desired pods."
 
 ### fn spec.deploymentStrategy.rollingUpdate.withMaxUnavailable
 
@@ -1517,7 +1557,7 @@ withMaxSurge(maxSurge)
 withMaxUnavailable(maxUnavailable)
 ```
 
-"The maximum number of pods that can be unavailable during the update. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). Absolute number is calculated from percentage by rounding down. This can not be 0 if MaxSurge is 0. Defaults to 25%. Example: when this is set to 30%, the old ReplicaSet can be scaled down to 70% of desired pods immediately when the rolling update starts. Once new pods are ready, old ReplicaSet can be scaled down further, followed by scaling up the new ReplicaSet, ensuring that the total number of pods available at all times during the update is at least 70% of desired pods."
+"The maximum number of pods that can be unavailable during the update.\nValue can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%).\nAbsolute number is calculated from percentage by rounding down.\nThis can not be 0 if MaxSurge is 0.\nDefaults to 25%.\nExample: when this is set to 30%, the old ReplicaSet can be scaled down to 70% of desired pods\nimmediately when the rolling update starts. Once new pods are ready, old ReplicaSet\ncan be scaled down further, followed by scaling up the new ReplicaSet, ensuring\nthat the total number of pods available at all times during the update is at\nleast 70% of desired pods."
 
 ## obj spec.monitoring
 
@@ -1577,7 +1617,7 @@ withPodMonitorRelabelingsMixin(podMonitorRelabelings)
 withAction(action)
 ```
 
-"Action to perform based on the regex matching. \n `Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0. \n Default: \"Replace\
+"Action to perform based on the regex matching.\n\n\n`Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0.\n`DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0.\n\n\nDefault: \"Replace\
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withModulus
 
@@ -1585,7 +1625,7 @@ withAction(action)
 withModulus(modulus)
 ```
 
-"Modulus to take of the hash of the source label values. \n Only applicable when the action is `HashMod`."
+"Modulus to take of the hash of the source label values.\n\n\nOnly applicable when the action is `HashMod`."
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withRegex
 
@@ -1601,7 +1641,7 @@ withRegex(regex)
 withReplacement(replacement)
 ```
 
-"Replacement value against which a Replace action is performed if the regular expression matches. \n Regex capture groups are available."
+"Replacement value against which a Replace action is performed if the\nregular expression matches.\n\n\nRegex capture groups are available."
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withSeparator
 
@@ -1617,7 +1657,7 @@ withSeparator(separator)
 withSourceLabels(sourceLabels)
 ```
 
-"The source labels select values from existing labels. Their content is concatenated using the configured Separator and matched against the configured regular expression."
+"The source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withSourceLabelsMixin
 
@@ -1625,7 +1665,7 @@ withSourceLabels(sourceLabels)
 withSourceLabelsMixin(sourceLabels)
 ```
 
-"The source labels select values from existing labels. Their content is concatenated using the configured Separator and matched against the configured regular expression."
+"The source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
 
 **Note:** This function appends passed data to existing values
 
@@ -1635,7 +1675,7 @@ withSourceLabelsMixin(sourceLabels)
 withTargetLabel(targetLabel)
 ```
 
-"Label to which the resulting string is written in a replacement. \n It is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`, `KeepEqual` and `DropEqual` actions. \n Regex capture groups are available."
+"Label to which the resulting string is written in a replacement.\n\n\nIt is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`,\n`KeepEqual` and `DropEqual` actions.\n\n\nRegex capture groups are available."
 
 ## obj spec.monitoring.podMonitorRelabelings
 
@@ -1647,7 +1687,7 @@ withTargetLabel(targetLabel)
 withAction(action)
 ```
 
-"Action to perform based on the regex matching. \n `Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0. `DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0. \n Default: \"Replace\
+"Action to perform based on the regex matching.\n\n\n`Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0.\n`DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0.\n\n\nDefault: \"Replace\
 
 ### fn spec.monitoring.podMonitorRelabelings.withModulus
 
@@ -1655,7 +1695,7 @@ withAction(action)
 withModulus(modulus)
 ```
 
-"Modulus to take of the hash of the source label values. \n Only applicable when the action is `HashMod`."
+"Modulus to take of the hash of the source label values.\n\n\nOnly applicable when the action is `HashMod`."
 
 ### fn spec.monitoring.podMonitorRelabelings.withRegex
 
@@ -1671,7 +1711,7 @@ withRegex(regex)
 withReplacement(replacement)
 ```
 
-"Replacement value against which a Replace action is performed if the regular expression matches. \n Regex capture groups are available."
+"Replacement value against which a Replace action is performed if the\nregular expression matches.\n\n\nRegex capture groups are available."
 
 ### fn spec.monitoring.podMonitorRelabelings.withSeparator
 
@@ -1687,7 +1727,7 @@ withSeparator(separator)
 withSourceLabels(sourceLabels)
 ```
 
-"The source labels select values from existing labels. Their content is concatenated using the configured Separator and matched against the configured regular expression."
+"The source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
 
 ### fn spec.monitoring.podMonitorRelabelings.withSourceLabelsMixin
 
@@ -1695,7 +1735,7 @@ withSourceLabels(sourceLabels)
 withSourceLabelsMixin(sourceLabels)
 ```
 
-"The source labels select values from existing labels. Their content is concatenated using the configured Separator and matched against the configured regular expression."
+"The source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
 
 **Note:** This function appends passed data to existing values
 
@@ -1705,7 +1745,7 @@ withSourceLabelsMixin(sourceLabels)
 withTargetLabel(targetLabel)
 ```
 
-"Label to which the resulting string is written in a replacement. \n It is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`, `KeepEqual` and `DropEqual` actions. \n Regex capture groups are available."
+"Label to which the resulting string is written in a replacement.\n\n\nIt is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`,\n`KeepEqual` and `DropEqual` actions.\n\n\nRegex capture groups are available."
 
 ## obj spec.pgbouncer
 
@@ -1717,7 +1757,7 @@ withTargetLabel(targetLabel)
 withAuthQuery(authQuery)
 ```
 
-"The query that will be used to download the hash of the password of a certain user. Default: \"SELECT usename, passwd FROM user_search($1)\". In case it is specified, also an AuthQuerySecret has to be specified and no automatic CNPG Cluster integration will be triggered."
+"The query that will be used to download the hash of the password\nof a certain user. Default: \"SELECT usename, passwd FROM user_search($1)\".\nIn case it is specified, also an AuthQuerySecret has to be specified and\nno automatic CNPG Cluster integration will be triggered."
 
 ### fn spec.pgbouncer.withParameters
 
@@ -1725,7 +1765,7 @@ withAuthQuery(authQuery)
 withParameters(parameters)
 ```
 
-"Additional parameters to be passed to PgBouncer - please check the CNPG documentation for a list of options you can configure"
+"Additional parameters to be passed to PgBouncer - please check\nthe CNPG documentation for a list of options you can configure"
 
 ### fn spec.pgbouncer.withParametersMixin
 
@@ -1733,7 +1773,7 @@ withParameters(parameters)
 withParametersMixin(parameters)
 ```
 
-"Additional parameters to be passed to PgBouncer - please check the CNPG documentation for a list of options you can configure"
+"Additional parameters to be passed to PgBouncer - please check\nthe CNPG documentation for a list of options you can configure"
 
 **Note:** This function appends passed data to existing values
 
@@ -1743,7 +1783,7 @@ withParametersMixin(parameters)
 withPaused(paused)
 ```
 
-"When set to `true`, PgBouncer will disconnect from the PostgreSQL server, first waiting for all queries to complete, and pause all new client connections until this value is set to `false` (default). Internally, the operator calls PgBouncer's `PAUSE` and `RESUME` commands."
+"When set to `true`, PgBouncer will disconnect from the PostgreSQL\nserver, first waiting for all queries to complete, and pause all new\nclient connections until this value is set to `false` (default). Internally,\nthe operator calls PgBouncer's `PAUSE` and `RESUME` commands."
 
 ### fn spec.pgbouncer.withPg_hba
 
@@ -1751,7 +1791,7 @@ withPaused(paused)
 withPg_hba(pg_hba)
 ```
 
-"PostgreSQL Host Based Authentication rules (lines to be appended to the pg_hba.conf file)"
+"PostgreSQL Host Based Authentication rules (lines to be appended\nto the pg_hba.conf file)"
 
 ### fn spec.pgbouncer.withPg_hbaMixin
 
@@ -1759,7 +1799,7 @@ withPg_hba(pg_hba)
 withPg_hbaMixin(pg_hba)
 ```
 
-"PostgreSQL Host Based Authentication rules (lines to be appended to the pg_hba.conf file)"
+"PostgreSQL Host Based Authentication rules (lines to be appended\nto the pg_hba.conf file)"
 
 **Note:** This function appends passed data to existing values
 
@@ -1773,7 +1813,7 @@ withPoolMode(poolMode)
 
 ## obj spec.pgbouncer.authQuerySecret
 
-"The credentials of the user that need to be used for the authentication query. In case it is specified, also an AuthQuery (e.g. \"SELECT usename, passwd FROM pg_shadow WHERE usename=$1\") has to be specified and no automatic CNPG Cluster integration will be triggered."
+"The credentials of the user that need to be used for the authentication\nquery. In case it is specified, also an AuthQuery\n(e.g. \"SELECT usename, passwd FROM pg_shadow WHERE usename=$1\")\nhas to be specified and no automatic CNPG Cluster integration will be triggered."
 
 ### fn spec.pgbouncer.authQuerySecret.withName
 
@@ -1789,7 +1829,7 @@ withName(name)
 
 ## obj spec.template.metadata
 
-"Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata"
+"Standard object's metadata.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata"
 
 ### fn spec.template.metadata.withAnnotations
 
@@ -1797,7 +1837,7 @@ withName(name)
 withAnnotations(annotations)
 ```
 
-"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
+"Annotations is an unstructured key value map stored with a resource that may be\nset by external tools to store and retrieve arbitrary metadata. They are not\nqueryable and should be preserved when modifying objects.\nMore info: http://kubernetes.io/docs/user-guide/annotations"
 
 ### fn spec.template.metadata.withAnnotationsMixin
 
@@ -1805,7 +1845,7 @@ withAnnotations(annotations)
 withAnnotationsMixin(annotations)
 ```
 
-"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"
+"Annotations is an unstructured key value map stored with a resource that may be\nset by external tools to store and retrieve arbitrary metadata. They are not\nqueryable and should be preserved when modifying objects.\nMore info: http://kubernetes.io/docs/user-guide/annotations"
 
 **Note:** This function appends passed data to existing values
 
@@ -1815,7 +1855,7 @@ withAnnotationsMixin(annotations)
 withLabels(labels)
 ```
 
-"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
+"Map of string keys and values that can be used to organize and categorize\n(scope and select) objects. May match selectors of replication controllers\nand services.\nMore info: http://kubernetes.io/docs/user-guide/labels"
 
 ### fn spec.template.metadata.withLabelsMixin
 
@@ -1823,13 +1863,13 @@ withLabels(labels)
 withLabelsMixin(labels)
 ```
 
-"Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
+"Map of string keys and values that can be used to organize and categorize\n(scope and select) objects. May match selectors of replication controllers\nand services.\nMore info: http://kubernetes.io/docs/user-guide/labels"
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec
 
-"Specification of the desired behavior of the pod. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
+"Specification of the desired behavior of the pod.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
 
 ### fn spec.template.spec.withActiveDeadlineSeconds
 
@@ -1837,7 +1877,7 @@ withLabelsMixin(labels)
 withActiveDeadlineSeconds(activeDeadlineSeconds)
 ```
 
-"Optional duration in seconds the pod may be active on the node relative to StartTime before the system will actively try to mark it failed and kill associated containers. Value must be a positive integer."
+"Optional duration in seconds the pod may be active on the node relative to\nStartTime before the system will actively try to mark it failed and kill associated containers.\nValue must be a positive integer."
 
 ### fn spec.template.spec.withAutomountServiceAccountToken
 
@@ -1853,7 +1893,7 @@ withAutomountServiceAccountToken(automountServiceAccountToken)
 withContainers(containers)
 ```
 
-"List of containers belonging to the pod. Containers cannot currently be added or removed. There must be at least one container in a Pod. Cannot be updated."
+"List of containers belonging to the pod.\nContainers cannot currently be added or removed.\nThere must be at least one container in a Pod.\nCannot be updated."
 
 ### fn spec.template.spec.withContainersMixin
 
@@ -1861,7 +1901,7 @@ withContainers(containers)
 withContainersMixin(containers)
 ```
 
-"List of containers belonging to the pod. Containers cannot currently be added or removed. There must be at least one container in a Pod. Cannot be updated."
+"List of containers belonging to the pod.\nContainers cannot currently be added or removed.\nThere must be at least one container in a Pod.\nCannot be updated."
 
 **Note:** This function appends passed data to existing values
 
@@ -1871,7 +1911,7 @@ withContainersMixin(containers)
 withDnsPolicy(dnsPolicy)
 ```
 
-"Set DNS policy for the pod. Defaults to \"ClusterFirst\". Valid values are 'ClusterFirstWithHostNet', 'ClusterFirst', 'Default' or 'None'. DNS parameters given in DNSConfig will be merged with the policy selected with DNSPolicy. To have DNS options set along with hostNetwork, you have to specify DNS policy explicitly to 'ClusterFirstWithHostNet'."
+"Set DNS policy for the pod.\nDefaults to \"ClusterFirst\".\nValid values are 'ClusterFirstWithHostNet', 'ClusterFirst', 'Default' or 'None'.\nDNS parameters given in DNSConfig will be merged with the policy selected with DNSPolicy.\nTo have DNS options set along with hostNetwork, you have to specify DNS policy\nexplicitly to 'ClusterFirstWithHostNet'."
 
 ### fn spec.template.spec.withEnableServiceLinks
 
@@ -1879,7 +1919,7 @@ withDnsPolicy(dnsPolicy)
 withEnableServiceLinks(enableServiceLinks)
 ```
 
-"EnableServiceLinks indicates whether information about services should be injected into pod's environment variables, matching the syntax of Docker links. Optional: Defaults to true."
+"EnableServiceLinks indicates whether information about services should be injected into pod's\nenvironment variables, matching the syntax of Docker links.\nOptional: Defaults to true."
 
 ### fn spec.template.spec.withEphemeralContainers
 
@@ -1887,7 +1927,7 @@ withEnableServiceLinks(enableServiceLinks)
 withEphemeralContainers(ephemeralContainers)
 ```
 
-"List of ephemeral containers run in this pod. Ephemeral containers may be run in an existing pod to perform user-initiated actions such as debugging. This list cannot be specified when creating a pod, and it cannot be modified by updating the pod spec. In order to add an ephemeral container to an existing pod, use the pod's ephemeralcontainers subresource."
+"List of ephemeral containers run in this pod. Ephemeral containers may be run in an existing\npod to perform user-initiated actions such as debugging. This list cannot be specified when\ncreating a pod, and it cannot be modified by updating the pod spec. In order to add an\nephemeral container to an existing pod, use the pod's ephemeralcontainers subresource."
 
 ### fn spec.template.spec.withEphemeralContainersMixin
 
@@ -1895,7 +1935,7 @@ withEphemeralContainers(ephemeralContainers)
 withEphemeralContainersMixin(ephemeralContainers)
 ```
 
-"List of ephemeral containers run in this pod. Ephemeral containers may be run in an existing pod to perform user-initiated actions such as debugging. This list cannot be specified when creating a pod, and it cannot be modified by updating the pod spec. In order to add an ephemeral container to an existing pod, use the pod's ephemeralcontainers subresource."
+"List of ephemeral containers run in this pod. Ephemeral containers may be run in an existing\npod to perform user-initiated actions such as debugging. This list cannot be specified when\ncreating a pod, and it cannot be modified by updating the pod spec. In order to add an\nephemeral container to an existing pod, use the pod's ephemeralcontainers subresource."
 
 **Note:** This function appends passed data to existing values
 
@@ -1905,7 +1945,7 @@ withEphemeralContainersMixin(ephemeralContainers)
 withHostAliases(hostAliases)
 ```
 
-"HostAliases is an optional list of hosts and IPs that will be injected into the pod's hosts file if specified. This is only valid for non-hostNetwork pods."
+"HostAliases is an optional list of hosts and IPs that will be injected into the pod's hosts\nfile if specified. This is only valid for non-hostNetwork pods."
 
 ### fn spec.template.spec.withHostAliasesMixin
 
@@ -1913,7 +1953,7 @@ withHostAliases(hostAliases)
 withHostAliasesMixin(hostAliases)
 ```
 
-"HostAliases is an optional list of hosts and IPs that will be injected into the pod's hosts file if specified. This is only valid for non-hostNetwork pods."
+"HostAliases is an optional list of hosts and IPs that will be injected into the pod's hosts\nfile if specified. This is only valid for non-hostNetwork pods."
 
 **Note:** This function appends passed data to existing values
 
@@ -1923,7 +1963,7 @@ withHostAliasesMixin(hostAliases)
 withHostIPC(hostIPC)
 ```
 
-"Use the host's ipc namespace. Optional: Default to false."
+"Use the host's ipc namespace.\nOptional: Default to false."
 
 ### fn spec.template.spec.withHostNetwork
 
@@ -1931,7 +1971,7 @@ withHostIPC(hostIPC)
 withHostNetwork(hostNetwork)
 ```
 
-"Host networking requested for this pod. Use the host's network namespace. If this option is set, the ports that will be used must be specified. Default to false."
+"Host networking requested for this pod. Use the host's network namespace.\nIf this option is set, the ports that will be used must be specified.\nDefault to false."
 
 ### fn spec.template.spec.withHostPID
 
@@ -1939,7 +1979,7 @@ withHostNetwork(hostNetwork)
 withHostPID(hostPID)
 ```
 
-"Use the host's pid namespace. Optional: Default to false."
+"Use the host's pid namespace.\nOptional: Default to false."
 
 ### fn spec.template.spec.withHostUsers
 
@@ -1947,7 +1987,7 @@ withHostPID(hostPID)
 withHostUsers(hostUsers)
 ```
 
-"Use the host's user namespace. Optional: Default to true. If set to true or not present, the pod will be run in the host user namespace, useful for when the pod needs a feature only available to the host user namespace, such as loading a kernel module with CAP_SYS_MODULE. When set to false, a new userns is created for the pod. Setting false is useful for mitigating container breakout vulnerabilities even allowing users to run their containers as root without actually having root privileges on the host. This field is alpha-level and is only honored by servers that enable the UserNamespacesSupport feature."
+"Use the host's user namespace.\nOptional: Default to true.\nIf set to true or not present, the pod will be run in the host user namespace, useful\nfor when the pod needs a feature only available to the host user namespace, such as\nloading a kernel module with CAP_SYS_MODULE.\nWhen set to false, a new userns is created for the pod. Setting false is useful for\nmitigating container breakout vulnerabilities even allowing users to run their\ncontainers as root without actually having root privileges on the host.\nThis field is alpha-level and is only honored by servers that enable the UserNamespacesSupport feature."
 
 ### fn spec.template.spec.withHostname
 
@@ -1955,7 +1995,7 @@ withHostUsers(hostUsers)
 withHostname(hostname)
 ```
 
-"Specifies the hostname of the Pod If not specified, the pod's hostname will be set to a system-defined value."
+"Specifies the hostname of the Pod\nIf not specified, the pod's hostname will be set to a system-defined value."
 
 ### fn spec.template.spec.withImagePullSecrets
 
@@ -1963,7 +2003,7 @@ withHostname(hostname)
 withImagePullSecrets(imagePullSecrets)
 ```
 
-"ImagePullSecrets is an optional list of references to secrets in the same namespace to use for pulling any of the images used by this PodSpec. If specified, these secrets will be passed to individual puller implementations for them to use. More info: https://kubernetes.io/docs/concepts/containers/images#specifying-imagepullsecrets-on-a-pod"
+"ImagePullSecrets is an optional list of references to secrets in the same namespace to use for pulling any of the images used by this PodSpec.\nIf specified, these secrets will be passed to individual puller implementations for them to use.\nMore info: https://kubernetes.io/docs/concepts/containers/images#specifying-imagepullsecrets-on-a-pod"
 
 ### fn spec.template.spec.withImagePullSecretsMixin
 
@@ -1971,7 +2011,7 @@ withImagePullSecrets(imagePullSecrets)
 withImagePullSecretsMixin(imagePullSecrets)
 ```
 
-"ImagePullSecrets is an optional list of references to secrets in the same namespace to use for pulling any of the images used by this PodSpec. If specified, these secrets will be passed to individual puller implementations for them to use. More info: https://kubernetes.io/docs/concepts/containers/images#specifying-imagepullsecrets-on-a-pod"
+"ImagePullSecrets is an optional list of references to secrets in the same namespace to use for pulling any of the images used by this PodSpec.\nIf specified, these secrets will be passed to individual puller implementations for them to use.\nMore info: https://kubernetes.io/docs/concepts/containers/images#specifying-imagepullsecrets-on-a-pod"
 
 **Note:** This function appends passed data to existing values
 
@@ -1981,7 +2021,7 @@ withImagePullSecretsMixin(imagePullSecrets)
 withInitContainers(initContainers)
 ```
 
-"List of initialization containers belonging to the pod. Init containers are executed in order prior to containers being started. If any init container fails, the pod is considered to have failed and is handled according to its restartPolicy. The name for an init container or normal container must be unique among all containers. Init containers may not have Lifecycle actions, Readiness probes, Liveness probes, or Startup probes. The resourceRequirements of an init container are taken into account during scheduling by finding the highest request/limit for each resource type, and then using the max of of that value or the sum of the normal containers. Limits are applied to init containers in a similar fashion. Init containers cannot currently be added or removed. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/"
+"List of initialization containers belonging to the pod.\nInit containers are executed in order prior to containers being started. If any\ninit container fails, the pod is considered to have failed and is handled according\nto its restartPolicy. The name for an init container or normal container must be\nunique among all containers.\nInit containers may not have Lifecycle actions, Readiness probes, Liveness probes, or Startup probes.\nThe resourceRequirements of an init container are taken into account during scheduling\nby finding the highest request/limit for each resource type, and then using the max of\nof that value or the sum of the normal containers. Limits are applied to init containers\nin a similar fashion.\nInit containers cannot currently be added or removed.\nCannot be updated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/"
 
 ### fn spec.template.spec.withInitContainersMixin
 
@@ -1989,7 +2029,7 @@ withInitContainers(initContainers)
 withInitContainersMixin(initContainers)
 ```
 
-"List of initialization containers belonging to the pod. Init containers are executed in order prior to containers being started. If any init container fails, the pod is considered to have failed and is handled according to its restartPolicy. The name for an init container or normal container must be unique among all containers. Init containers may not have Lifecycle actions, Readiness probes, Liveness probes, or Startup probes. The resourceRequirements of an init container are taken into account during scheduling by finding the highest request/limit for each resource type, and then using the max of of that value or the sum of the normal containers. Limits are applied to init containers in a similar fashion. Init containers cannot currently be added or removed. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/"
+"List of initialization containers belonging to the pod.\nInit containers are executed in order prior to containers being started. If any\ninit container fails, the pod is considered to have failed and is handled according\nto its restartPolicy. The name for an init container or normal container must be\nunique among all containers.\nInit containers may not have Lifecycle actions, Readiness probes, Liveness probes, or Startup probes.\nThe resourceRequirements of an init container are taken into account during scheduling\nby finding the highest request/limit for each resource type, and then using the max of\nof that value or the sum of the normal containers. Limits are applied to init containers\nin a similar fashion.\nInit containers cannot currently be added or removed.\nCannot be updated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/"
 
 **Note:** This function appends passed data to existing values
 
@@ -1999,7 +2039,7 @@ withInitContainersMixin(initContainers)
 withNodeName(nodeName)
 ```
 
-"NodeName is a request to schedule this pod onto a specific node. If it is non-empty, the scheduler simply schedules this pod onto that node, assuming that it fits resource requirements."
+"NodeName is a request to schedule this pod onto a specific node. If it is non-empty,\nthe scheduler simply schedules this pod onto that node, assuming that it fits resource\nrequirements."
 
 ### fn spec.template.spec.withNodeSelector
 
@@ -2007,7 +2047,7 @@ withNodeName(nodeName)
 withNodeSelector(nodeSelector)
 ```
 
-"NodeSelector is a selector which must be true for the pod to fit on a node. Selector which must match a node's labels for the pod to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/"
+"NodeSelector is a selector which must be true for the pod to fit on a node.\nSelector which must match a node's labels for the pod to be scheduled on that node.\nMore info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/"
 
 ### fn spec.template.spec.withNodeSelectorMixin
 
@@ -2015,7 +2055,7 @@ withNodeSelector(nodeSelector)
 withNodeSelectorMixin(nodeSelector)
 ```
 
-"NodeSelector is a selector which must be true for the pod to fit on a node. Selector which must match a node's labels for the pod to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/"
+"NodeSelector is a selector which must be true for the pod to fit on a node.\nSelector which must match a node's labels for the pod to be scheduled on that node.\nMore info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/"
 
 **Note:** This function appends passed data to existing values
 
@@ -2025,7 +2065,7 @@ withNodeSelectorMixin(nodeSelector)
 withOverhead(overhead)
 ```
 
-"Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. This field will be autopopulated at admission time by the RuntimeClass admission controller. If the RuntimeClass admission controller is enabled, overhead must not be set in Pod create requests. The RuntimeClass admission controller will reject Pod create requests which have the overhead already set. If RuntimeClass is configured and selected in the PodSpec, Overhead will be set to the value defined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero. More info: https://git.k8s.io/enhancements/keps/sig-node/688-pod-overhead/README.md"
+"Overhead represents the resource overhead associated with running a pod for a given RuntimeClass.\nThis field will be autopopulated at admission time by the RuntimeClass admission controller. If\nthe RuntimeClass admission controller is enabled, overhead must not be set in Pod create requests.\nThe RuntimeClass admission controller will reject Pod create requests which have the overhead already\nset. If RuntimeClass is configured and selected in the PodSpec, Overhead will be set to the value\ndefined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero.\nMore info: https://git.k8s.io/enhancements/keps/sig-node/688-pod-overhead/README.md"
 
 ### fn spec.template.spec.withOverheadMixin
 
@@ -2033,7 +2073,7 @@ withOverhead(overhead)
 withOverheadMixin(overhead)
 ```
 
-"Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. This field will be autopopulated at admission time by the RuntimeClass admission controller. If the RuntimeClass admission controller is enabled, overhead must not be set in Pod create requests. The RuntimeClass admission controller will reject Pod create requests which have the overhead already set. If RuntimeClass is configured and selected in the PodSpec, Overhead will be set to the value defined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero. More info: https://git.k8s.io/enhancements/keps/sig-node/688-pod-overhead/README.md"
+"Overhead represents the resource overhead associated with running a pod for a given RuntimeClass.\nThis field will be autopopulated at admission time by the RuntimeClass admission controller. If\nthe RuntimeClass admission controller is enabled, overhead must not be set in Pod create requests.\nThe RuntimeClass admission controller will reject Pod create requests which have the overhead already\nset. If RuntimeClass is configured and selected in the PodSpec, Overhead will be set to the value\ndefined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero.\nMore info: https://git.k8s.io/enhancements/keps/sig-node/688-pod-overhead/README.md"
 
 **Note:** This function appends passed data to existing values
 
@@ -2043,7 +2083,7 @@ withOverheadMixin(overhead)
 withPreemptionPolicy(preemptionPolicy)
 ```
 
-"PreemptionPolicy is the Policy for preempting pods with lower priority. One of Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset."
+"PreemptionPolicy is the Policy for preempting pods with lower priority.\nOne of Never, PreemptLowerPriority.\nDefaults to PreemptLowerPriority if unset."
 
 ### fn spec.template.spec.withPriority
 
@@ -2051,7 +2091,7 @@ withPreemptionPolicy(preemptionPolicy)
 withPriority(priority)
 ```
 
-"The priority value. Various system components use this field to find the priority of the pod. When Priority Admission Controller is enabled, it prevents users from setting this field. The admission controller populates this field from PriorityClassName. The higher the value, the higher the priority."
+"The priority value. Various system components use this field to find the\npriority of the pod. When Priority Admission Controller is enabled, it\nprevents users from setting this field. The admission controller populates\nthis field from PriorityClassName.\nThe higher the value, the higher the priority."
 
 ### fn spec.template.spec.withPriorityClassName
 
@@ -2059,7 +2099,7 @@ withPriority(priority)
 withPriorityClassName(priorityClassName)
 ```
 
-"If specified, indicates the pod's priority. \"system-node-critical\" and \"system-cluster-critical\" are two special keywords which indicate the highest priorities with the former being the highest priority. Any other name must be defined by creating a PriorityClass object with that name. If not specified, the pod priority will be default or zero if there is no default."
+"If specified, indicates the pod's priority. \"system-node-critical\" and\n\"system-cluster-critical\" are two special keywords which indicate the\nhighest priorities with the former being the highest priority. Any other\nname must be defined by creating a PriorityClass object with that name.\nIf not specified, the pod priority will be default or zero if there is no\ndefault."
 
 ### fn spec.template.spec.withReadinessGates
 
@@ -2067,7 +2107,7 @@ withPriorityClassName(priorityClassName)
 withReadinessGates(readinessGates)
 ```
 
-"If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to \"True\" More info: https://git.k8s.io/enhancements/keps/sig-network/580-pod-readiness-gates"
+"If specified, all readiness gates will be evaluated for pod readiness.\nA pod is ready when all its containers are ready AND\nall conditions specified in the readiness gates have status equal to \"True\"\nMore info: https://git.k8s.io/enhancements/keps/sig-network/580-pod-readiness-gates"
 
 ### fn spec.template.spec.withReadinessGatesMixin
 
@@ -2075,7 +2115,7 @@ withReadinessGates(readinessGates)
 withReadinessGatesMixin(readinessGates)
 ```
 
-"If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to \"True\" More info: https://git.k8s.io/enhancements/keps/sig-network/580-pod-readiness-gates"
+"If specified, all readiness gates will be evaluated for pod readiness.\nA pod is ready when all its containers are ready AND\nall conditions specified in the readiness gates have status equal to \"True\"\nMore info: https://git.k8s.io/enhancements/keps/sig-network/580-pod-readiness-gates"
 
 **Note:** This function appends passed data to existing values
 
@@ -2085,7 +2125,7 @@ withReadinessGatesMixin(readinessGates)
 withResourceClaims(resourceClaims)
 ```
 
-"ResourceClaims defines which ResourceClaims must be allocated and reserved before the Pod is allowed to start. The resources will be made available to those containers which consume them by name. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable."
+"ResourceClaims defines which ResourceClaims must be allocated\nand reserved before the Pod is allowed to start. The resources\nwill be made available to those containers which consume them\nby name.\n\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\n\nThis field is immutable."
 
 ### fn spec.template.spec.withResourceClaimsMixin
 
@@ -2093,7 +2133,7 @@ withResourceClaims(resourceClaims)
 withResourceClaimsMixin(resourceClaims)
 ```
 
-"ResourceClaims defines which ResourceClaims must be allocated and reserved before the Pod is allowed to start. The resources will be made available to those containers which consume them by name. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable."
+"ResourceClaims defines which ResourceClaims must be allocated\nand reserved before the Pod is allowed to start. The resources\nwill be made available to those containers which consume them\nby name.\n\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\n\nThis field is immutable."
 
 **Note:** This function appends passed data to existing values
 
@@ -2103,7 +2143,7 @@ withResourceClaimsMixin(resourceClaims)
 withRestartPolicy(restartPolicy)
 ```
 
-"Restart policy for all containers within the pod. One of Always, OnFailure, Never. In some contexts, only a subset of those values may be permitted. Default to Always. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy"
+"Restart policy for all containers within the pod.\nOne of Always, OnFailure, Never. In some contexts, only a subset of those values may be permitted.\nDefault to Always.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy"
 
 ### fn spec.template.spec.withRuntimeClassName
 
@@ -2111,7 +2151,7 @@ withRestartPolicy(restartPolicy)
 withRuntimeClassName(runtimeClassName)
 ```
 
-"RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should be used to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run. If unset or empty, the \"legacy\" RuntimeClass will be used, which is an implicit class with an empty definition that uses the default runtime handler. More info: https://git.k8s.io/enhancements/keps/sig-node/585-runtime-class"
+"RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should be used\nto run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run.\nIf unset or empty, the \"legacy\" RuntimeClass will be used, which is an implicit class with an\nempty definition that uses the default runtime handler.\nMore info: https://git.k8s.io/enhancements/keps/sig-node/585-runtime-class"
 
 ### fn spec.template.spec.withSchedulerName
 
@@ -2119,7 +2159,7 @@ withRuntimeClassName(runtimeClassName)
 withSchedulerName(schedulerName)
 ```
 
-"If specified, the pod will be dispatched by specified scheduler. If not specified, the pod will be dispatched by default scheduler."
+"If specified, the pod will be dispatched by specified scheduler.\nIf not specified, the pod will be dispatched by default scheduler."
 
 ### fn spec.template.spec.withSchedulingGates
 
@@ -2127,7 +2167,7 @@ withSchedulerName(schedulerName)
 withSchedulingGates(schedulingGates)
 ```
 
-"SchedulingGates is an opaque list of values that if specified will block scheduling the pod. If schedulingGates is not empty, the pod will stay in the SchedulingGated state and the scheduler will not attempt to schedule the pod. \n SchedulingGates can only be set at pod creation time, and be removed only afterwards. \n This is a beta feature enabled by the PodSchedulingReadiness feature gate."
+"SchedulingGates is an opaque list of values that if specified will block scheduling the pod.\nIf schedulingGates is not empty, the pod will stay in the SchedulingGated state and the\nscheduler will not attempt to schedule the pod.\n\n\nSchedulingGates can only be set at pod creation time, and be removed only afterwards.\n\n\nThis is a beta feature enabled by the PodSchedulingReadiness feature gate."
 
 ### fn spec.template.spec.withSchedulingGatesMixin
 
@@ -2135,7 +2175,7 @@ withSchedulingGates(schedulingGates)
 withSchedulingGatesMixin(schedulingGates)
 ```
 
-"SchedulingGates is an opaque list of values that if specified will block scheduling the pod. If schedulingGates is not empty, the pod will stay in the SchedulingGated state and the scheduler will not attempt to schedule the pod. \n SchedulingGates can only be set at pod creation time, and be removed only afterwards. \n This is a beta feature enabled by the PodSchedulingReadiness feature gate."
+"SchedulingGates is an opaque list of values that if specified will block scheduling the pod.\nIf schedulingGates is not empty, the pod will stay in the SchedulingGated state and the\nscheduler will not attempt to schedule the pod.\n\n\nSchedulingGates can only be set at pod creation time, and be removed only afterwards.\n\n\nThis is a beta feature enabled by the PodSchedulingReadiness feature gate."
 
 **Note:** This function appends passed data to existing values
 
@@ -2145,7 +2185,7 @@ withSchedulingGatesMixin(schedulingGates)
 withServiceAccount(serviceAccount)
 ```
 
-"DeprecatedServiceAccount is a depreciated alias for ServiceAccountName. Deprecated: Use serviceAccountName instead."
+"DeprecatedServiceAccount is a depreciated alias for ServiceAccountName.\nDeprecated: Use serviceAccountName instead."
 
 ### fn spec.template.spec.withServiceAccountName
 
@@ -2153,7 +2193,7 @@ withServiceAccount(serviceAccount)
 withServiceAccountName(serviceAccountName)
 ```
 
-"ServiceAccountName is the name of the ServiceAccount to use to run this pod. More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/"
+"ServiceAccountName is the name of the ServiceAccount to use to run this pod.\nMore info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/"
 
 ### fn spec.template.spec.withSetHostnameAsFQDN
 
@@ -2161,7 +2201,7 @@ withServiceAccountName(serviceAccountName)
 withSetHostnameAsFQDN(setHostnameAsFQDN)
 ```
 
-"If true the pod's hostname will be configured as the pod's FQDN, rather than the leaf name (the default). In Linux containers, this means setting the FQDN in the hostname field of the kernel (the nodename field of struct utsname). In Windows containers, this means setting the registry value of hostname for the registry key HKEY_LOCAL_MACHINE\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Tcpip\\\\Parameters to FQDN. If a pod does not have FQDN, this has no effect. Default to false."
+"If true the pod's hostname will be configured as the pod's FQDN, rather than the leaf name (the default).\nIn Linux containers, this means setting the FQDN in the hostname field of the kernel (the nodename field of struct utsname).\nIn Windows containers, this means setting the registry value of hostname for the registry key HKEY_LOCAL_MACHINE\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Tcpip\\\\Parameters to FQDN.\nIf a pod does not have FQDN, this has no effect.\nDefault to false."
 
 ### fn spec.template.spec.withShareProcessNamespace
 
@@ -2169,7 +2209,7 @@ withSetHostnameAsFQDN(setHostnameAsFQDN)
 withShareProcessNamespace(shareProcessNamespace)
 ```
 
-"Share a single process namespace between all of the containers in a pod. When this is set containers will be able to view and signal processes from other containers in the same pod, and the first process in each container will not be assigned PID 1. HostPID and ShareProcessNamespace cannot both be set. Optional: Default to false."
+"Share a single process namespace between all of the containers in a pod.\nWhen this is set containers will be able to view and signal processes from other containers\nin the same pod, and the first process in each container will not be assigned PID 1.\nHostPID and ShareProcessNamespace cannot both be set.\nOptional: Default to false."
 
 ### fn spec.template.spec.withSubdomain
 
@@ -2177,7 +2217,7 @@ withShareProcessNamespace(shareProcessNamespace)
 withSubdomain(subdomain)
 ```
 
-"If specified, the fully qualified Pod hostname will be \"<hostname>.<subdomain>.<pod namespace>.svc.<cluster domain>\". If not specified, the pod will not have a domainname at all."
+"If specified, the fully qualified Pod hostname will be \"<hostname>.<subdomain>.<pod namespace>.svc.<cluster domain>\".\nIf not specified, the pod will not have a domainname at all."
 
 ### fn spec.template.spec.withTerminationGracePeriodSeconds
 
@@ -2185,7 +2225,7 @@ withSubdomain(subdomain)
 withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
 ```
 
-"Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds."
+"Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request.\nValue must be non-negative integer. The value zero indicates stop immediately via\nthe kill signal (no opportunity to shut down).\nIf this value is nil, the default grace period will be used instead.\nThe grace period is the duration in seconds after the processes running in the pod are sent\na termination signal and the time when the processes are forcibly halted with a kill signal.\nSet this value longer than the expected cleanup time for your process.\nDefaults to 30 seconds."
 
 ### fn spec.template.spec.withTolerations
 
@@ -2211,7 +2251,7 @@ withTolerationsMixin(tolerations)
 withTopologySpreadConstraints(topologySpreadConstraints)
 ```
 
-"TopologySpreadConstraints describes how a group of pods ought to spread across topology domains. Scheduler will schedule pods in a way which abides by the constraints. All topologySpreadConstraints are ANDed."
+"TopologySpreadConstraints describes how a group of pods ought to spread across topology\ndomains. Scheduler will schedule pods in a way which abides by the constraints.\nAll topologySpreadConstraints are ANDed."
 
 ### fn spec.template.spec.withTopologySpreadConstraintsMixin
 
@@ -2219,7 +2259,7 @@ withTopologySpreadConstraints(topologySpreadConstraints)
 withTopologySpreadConstraintsMixin(topologySpreadConstraints)
 ```
 
-"TopologySpreadConstraints describes how a group of pods ought to spread across topology domains. Scheduler will schedule pods in a way which abides by the constraints. All topologySpreadConstraints are ANDed."
+"TopologySpreadConstraints describes how a group of pods ought to spread across topology\ndomains. Scheduler will schedule pods in a way which abides by the constraints.\nAll topologySpreadConstraints are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -2229,7 +2269,7 @@ withTopologySpreadConstraintsMixin(topologySpreadConstraints)
 withVolumes(volumes)
 ```
 
-"List of volumes that can be mounted by containers belonging to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes"
+"List of volumes that can be mounted by containers belonging to the pod.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes"
 
 ### fn spec.template.spec.withVolumesMixin
 
@@ -2237,7 +2277,7 @@ withVolumes(volumes)
 withVolumesMixin(volumes)
 ```
 
-"List of volumes that can be mounted by containers belonging to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes"
+"List of volumes that can be mounted by containers belonging to the pod.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes"
 
 **Note:** This function appends passed data to existing values
 
@@ -2255,7 +2295,7 @@ withVolumesMixin(volumes)
 withPreferredDuringSchedulingIgnoredDuringExecution(preferredDuringSchedulingIgnoredDuringExecution)
 ```
 
-"The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding \"weight\" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred."
+"The scheduler will prefer to schedule pods to nodes that satisfy\nthe affinity expressions specified by this field, but it may choose\na node that violates one or more of the expressions. The node that is\nmost preferred is the one with the greatest sum of weights, i.e.\nfor each node that meets all of the scheduling requirements (resource\nrequest, requiredDuringScheduling affinity expressions, etc.),\ncompute a sum by iterating through the elements of this field and adding\n\"weight\" to the sum if the node matches the corresponding matchExpressions; the\nnode(s) with the highest sum are the most preferred."
 
 ### fn spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecutionMixin
 
@@ -2263,13 +2303,13 @@ withPreferredDuringSchedulingIgnoredDuringExecution(preferredDuringSchedulingIgn
 withPreferredDuringSchedulingIgnoredDuringExecutionMixin(preferredDuringSchedulingIgnoredDuringExecution)
 ```
 
-"The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding \"weight\" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred."
+"The scheduler will prefer to schedule pods to nodes that satisfy\nthe affinity expressions specified by this field, but it may choose\na node that violates one or more of the expressions. The node that is\nmost preferred is the one with the greatest sum of weights, i.e.\nfor each node that meets all of the scheduling requirements (resource\nrequest, requiredDuringScheduling affinity expressions, etc.),\ncompute a sum by iterating through the elements of this field and adding\n\"weight\" to the sum if the node matches the corresponding matchExpressions; the\nnode(s) with the highest sum are the most preferred."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec.affinity.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution
 
-"The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding \"weight\" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred."
+"The scheduler will prefer to schedule pods to nodes that satisfy\nthe affinity expressions specified by this field, but it may choose\na node that violates one or more of the expressions. The node that is\nmost preferred is the one with the greatest sum of weights, i.e.\nfor each node that meets all of the scheduling requirements (resource\nrequest, requiredDuringScheduling affinity expressions, etc.),\ncompute a sum by iterating through the elements of this field and adding\n\"weight\" to the sum if the node matches the corresponding matchExpressions; the\nnode(s) with the highest sum are the most preferred."
 
 ### fn spec.template.spec.affinity.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.withWeight
 
@@ -2337,7 +2377,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"Represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt."
+"Represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt."
 
 ### fn spec.template.spec.affinity.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.matchExpressions.withValues
 
@@ -2345,7 +2385,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch."
+"An array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. If the operator is Gt or Lt, the values\narray must have a single element, which will be interpreted as an integer.\nThis array is replaced during a strategic merge patch."
 
 ### fn spec.template.spec.affinity.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.matchExpressions.withValuesMixin
 
@@ -2353,7 +2393,7 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch."
+"An array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. If the operator is Gt or Lt, the values\narray must have a single element, which will be interpreted as an integer.\nThis array is replaced during a strategic merge patch."
 
 **Note:** This function appends passed data to existing values
 
@@ -2375,7 +2415,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"Represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt."
+"Represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt."
 
 ### fn spec.template.spec.affinity.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.matchFields.withValues
 
@@ -2383,7 +2423,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch."
+"An array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. If the operator is Gt or Lt, the values\narray must have a single element, which will be interpreted as an integer.\nThis array is replaced during a strategic merge patch."
 
 ### fn spec.template.spec.affinity.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.matchFields.withValuesMixin
 
@@ -2391,13 +2431,13 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch."
+"An array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. If the operator is Gt or Lt, the values\narray must have a single element, which will be interpreted as an integer.\nThis array is replaced during a strategic merge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-"If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to an update), the system may or may not try to eventually evict the pod from its node."
+"If the affinity requirements specified by this field are not met at\nscheduling time, the pod will not be scheduled onto the node.\nIf the affinity requirements specified by this field cease to be met\nat some point during pod execution (e.g. due to an update), the system\nmay or may not try to eventually evict the pod from its node."
 
 ### fn spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNodeSelectorTerms
 
@@ -2475,7 +2515,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"Represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt."
+"Represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt."
 
 ### fn spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchExpressions.withValues
 
@@ -2483,7 +2523,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch."
+"An array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. If the operator is Gt or Lt, the values\narray must have a single element, which will be interpreted as an integer.\nThis array is replaced during a strategic merge patch."
 
 ### fn spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchExpressions.withValuesMixin
 
@@ -2491,7 +2531,7 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch."
+"An array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. If the operator is Gt or Lt, the values\narray must have a single element, which will be interpreted as an integer.\nThis array is replaced during a strategic merge patch."
 
 **Note:** This function appends passed data to existing values
 
@@ -2513,7 +2553,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"Represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt."
+"Represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt."
 
 ### fn spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchFields.withValues
 
@@ -2521,7 +2561,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch."
+"An array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. If the operator is Gt or Lt, the values\narray must have a single element, which will be interpreted as an integer.\nThis array is replaced during a strategic merge patch."
 
 ### fn spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchFields.withValuesMixin
 
@@ -2529,7 +2569,7 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch."
+"An array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. If the operator is Gt or Lt, the values\narray must have a single element, which will be interpreted as an integer.\nThis array is replaced during a strategic merge patch."
 
 **Note:** This function appends passed data to existing values
 
@@ -2543,7 +2583,7 @@ withValuesMixin(values)
 withPreferredDuringSchedulingIgnoredDuringExecution(preferredDuringSchedulingIgnoredDuringExecution)
 ```
 
-"The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding \"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred."
+"The scheduler will prefer to schedule pods to nodes that satisfy\nthe affinity expressions specified by this field, but it may choose\na node that violates one or more of the expressions. The node that is\nmost preferred is the one with the greatest sum of weights, i.e.\nfor each node that meets all of the scheduling requirements (resource\nrequest, requiredDuringScheduling affinity expressions, etc.),\ncompute a sum by iterating through the elements of this field and adding\n\"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the\nnode(s) with the highest sum are the most preferred."
 
 ### fn spec.template.spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecutionMixin
 
@@ -2551,7 +2591,7 @@ withPreferredDuringSchedulingIgnoredDuringExecution(preferredDuringSchedulingIgn
 withPreferredDuringSchedulingIgnoredDuringExecutionMixin(preferredDuringSchedulingIgnoredDuringExecution)
 ```
 
-"The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding \"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred."
+"The scheduler will prefer to schedule pods to nodes that satisfy\nthe affinity expressions specified by this field, but it may choose\na node that violates one or more of the expressions. The node that is\nmost preferred is the one with the greatest sum of weights, i.e.\nfor each node that meets all of the scheduling requirements (resource\nrequest, requiredDuringScheduling affinity expressions, etc.),\ncompute a sum by iterating through the elements of this field and adding\n\"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the\nnode(s) with the highest sum are the most preferred."
 
 **Note:** This function appends passed data to existing values
 
@@ -2561,7 +2601,7 @@ withPreferredDuringSchedulingIgnoredDuringExecutionMixin(preferredDuringScheduli
 withRequiredDuringSchedulingIgnoredDuringExecution(requiredDuringSchedulingIgnoredDuringExecution)
 ```
 
-"If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied."
+"If the affinity requirements specified by this field are not met at\nscheduling time, the pod will not be scheduled onto the node.\nIf the affinity requirements specified by this field cease to be met\nat some point during pod execution (e.g. due to a pod label update), the\nsystem may or may not try to eventually evict the pod from its node.\nWhen there are multiple elements, the lists of nodes corresponding to each\npodAffinityTerm are intersected, i.e. all terms must be satisfied."
 
 ### fn spec.template.spec.affinity.podAffinity.withRequiredDuringSchedulingIgnoredDuringExecutionMixin
 
@@ -2569,13 +2609,13 @@ withRequiredDuringSchedulingIgnoredDuringExecution(requiredDuringSchedulingIgnor
 withRequiredDuringSchedulingIgnoredDuringExecutionMixin(requiredDuringSchedulingIgnoredDuringExecution)
 ```
 
-"If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied."
+"If the affinity requirements specified by this field are not met at\nscheduling time, the pod will not be scheduled onto the node.\nIf the affinity requirements specified by this field cease to be met\nat some point during pod execution (e.g. due to a pod label update), the\nsystem may or may not try to eventually evict the pod from its node.\nWhen there are multiple elements, the lists of nodes corresponding to each\npodAffinityTerm are intersected, i.e. all terms must be satisfied."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution
 
-"The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding \"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred."
+"The scheduler will prefer to schedule pods to nodes that satisfy\nthe affinity expressions specified by this field, but it may choose\na node that violates one or more of the expressions. The node that is\nmost preferred is the one with the greatest sum of weights, i.e.\nfor each node that meets all of the scheduling requirements (resource\nrequest, requiredDuringScheduling affinity expressions, etc.),\ncompute a sum by iterating through the elements of this field and adding\n\"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the\nnode(s) with the highest sum are the most preferred."
 
 ### fn spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution.withWeight
 
@@ -2583,11 +2623,47 @@ withRequiredDuringSchedulingIgnoredDuringExecutionMixin(requiredDuringScheduling
 withWeight(weight)
 ```
 
-"weight associated with matching the corresponding podAffinityTerm, in the range 1-100."
+"weight associated with matching the corresponding podAffinityTerm,\nin the range 1-100."
 
 ## obj spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm
 
 "Required. A pod affinity term, associated with the corresponding weight."
+
+### fn spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withMatchLabelKeys
+
+```ts
+withMatchLabelKeys(matchLabelKeys)
+```
+
+"MatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key in (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MatchLabelKeys and LabelSelector.\nAlso, MatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+### fn spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withMatchLabelKeysMixin
+
+```ts
+withMatchLabelKeysMixin(matchLabelKeys)
+```
+
+"MatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key in (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MatchLabelKeys and LabelSelector.\nAlso, MatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withMismatchLabelKeys
+
+```ts
+withMismatchLabelKeys(mismatchLabelKeys)
+```
+
+"MismatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key notin (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MismatchLabelKeys and LabelSelector.\nAlso, MismatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+### fn spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withMismatchLabelKeysMixin
+
+```ts
+withMismatchLabelKeysMixin(mismatchLabelKeys)
+```
+
+"MismatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key notin (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MismatchLabelKeys and LabelSelector.\nAlso, MismatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+**Note:** This function appends passed data to existing values
 
 ### fn spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withNamespaces
 
@@ -2595,7 +2671,7 @@ withWeight(weight)
 withNamespaces(namespaces)
 ```
 
-"namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
+"namespaces specifies a static list of namespace names that the term applies to.\nThe term is applied to the union of the namespaces listed in this field\nand the ones selected by namespaceSelector.\nnull or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
 
 ### fn spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withNamespacesMixin
 
@@ -2603,7 +2679,7 @@ withNamespaces(namespaces)
 withNamespacesMixin(namespaces)
 ```
 
-"namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
+"namespaces specifies a static list of namespace names that the term applies to.\nThe term is applied to the union of the namespaces listed in this field\nand the ones selected by namespaceSelector.\nnull or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
 
 **Note:** This function appends passed data to existing values
 
@@ -2613,11 +2689,11 @@ withNamespacesMixin(namespaces)
 withTopologyKey(topologyKey)
 ```
 
-"This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching the labelSelector in the specified namespaces, where co-located is defined as running on a node whose value of the label with key topologyKey matches that of any node on which any of the selected pods is running. Empty topologyKey is not allowed."
+"This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching\nthe labelSelector in the specified namespaces, where co-located is defined as running on a node\nwhose value of the label with key topologyKey matches that of any node on which any of the\nselected pods is running.\nEmpty topologyKey is not allowed."
 
 ## obj spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.labelSelector
 
-"A label query over a set of resources, in this case pods."
+"A label query over a set of resources, in this case pods.\nIf it's null, this PodAffinityTerm matches with no Pods."
 
 ### fn spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.labelSelector.withMatchExpressions
 
@@ -2643,7 +2719,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.labelSelector.withMatchLabelsMixin
 
@@ -2651,7 +2727,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -2673,7 +2749,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.labelSelector.matchExpressions.withValues
 
@@ -2681,7 +2757,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.labelSelector.matchExpressions.withValuesMixin
 
@@ -2689,13 +2765,13 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.namespaceSelector
 
-"A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means \"this pod's namespace\". An empty selector ({}) matches all namespaces."
+"A label query over the set of namespaces that the term applies to.\nThe term is applied to the union of the namespaces selected by this field\nand the ones listed in the namespaces field.\nnull selector and null or empty namespaces list means \"this pod's namespace\".\nAn empty selector ({}) matches all namespaces."
 
 ### fn spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.namespaceSelector.withMatchExpressions
 
@@ -2721,7 +2797,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.namespaceSelector.withMatchLabelsMixin
 
@@ -2729,7 +2805,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -2751,7 +2827,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.namespaceSelector.matchExpressions.withValues
 
@@ -2759,7 +2835,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.template.spec.affinity.podAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.namespaceSelector.matchExpressions.withValuesMixin
 
@@ -2767,13 +2843,49 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec.affinity.podAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-"If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied."
+"If the affinity requirements specified by this field are not met at\nscheduling time, the pod will not be scheduled onto the node.\nIf the affinity requirements specified by this field cease to be met\nat some point during pod execution (e.g. due to a pod label update), the\nsystem may or may not try to eventually evict the pod from its node.\nWhen there are multiple elements, the lists of nodes corresponding to each\npodAffinityTerm are intersected, i.e. all terms must be satisfied."
+
+### fn spec.template.spec.affinity.podAffinity.requiredDuringSchedulingIgnoredDuringExecution.withMatchLabelKeys
+
+```ts
+withMatchLabelKeys(matchLabelKeys)
+```
+
+"MatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key in (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MatchLabelKeys and LabelSelector.\nAlso, MatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+### fn spec.template.spec.affinity.podAffinity.requiredDuringSchedulingIgnoredDuringExecution.withMatchLabelKeysMixin
+
+```ts
+withMatchLabelKeysMixin(matchLabelKeys)
+```
+
+"MatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key in (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MatchLabelKeys and LabelSelector.\nAlso, MatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.template.spec.affinity.podAffinity.requiredDuringSchedulingIgnoredDuringExecution.withMismatchLabelKeys
+
+```ts
+withMismatchLabelKeys(mismatchLabelKeys)
+```
+
+"MismatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key notin (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MismatchLabelKeys and LabelSelector.\nAlso, MismatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+### fn spec.template.spec.affinity.podAffinity.requiredDuringSchedulingIgnoredDuringExecution.withMismatchLabelKeysMixin
+
+```ts
+withMismatchLabelKeysMixin(mismatchLabelKeys)
+```
+
+"MismatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key notin (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MismatchLabelKeys and LabelSelector.\nAlso, MismatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+**Note:** This function appends passed data to existing values
 
 ### fn spec.template.spec.affinity.podAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNamespaces
 
@@ -2781,7 +2893,7 @@ withValuesMixin(values)
 withNamespaces(namespaces)
 ```
 
-"namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
+"namespaces specifies a static list of namespace names that the term applies to.\nThe term is applied to the union of the namespaces listed in this field\nand the ones selected by namespaceSelector.\nnull or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
 
 ### fn spec.template.spec.affinity.podAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNamespacesMixin
 
@@ -2789,7 +2901,7 @@ withNamespaces(namespaces)
 withNamespacesMixin(namespaces)
 ```
 
-"namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
+"namespaces specifies a static list of namespace names that the term applies to.\nThe term is applied to the union of the namespaces listed in this field\nand the ones selected by namespaceSelector.\nnull or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
 
 **Note:** This function appends passed data to existing values
 
@@ -2799,11 +2911,11 @@ withNamespacesMixin(namespaces)
 withTopologyKey(topologyKey)
 ```
 
-"This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching the labelSelector in the specified namespaces, where co-located is defined as running on a node whose value of the label with key topologyKey matches that of any node on which any of the selected pods is running. Empty topologyKey is not allowed."
+"This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching\nthe labelSelector in the specified namespaces, where co-located is defined as running on a node\nwhose value of the label with key topologyKey matches that of any node on which any of the\nselected pods is running.\nEmpty topologyKey is not allowed."
 
 ## obj spec.template.spec.affinity.podAffinity.requiredDuringSchedulingIgnoredDuringExecution.labelSelector
 
-"A label query over a set of resources, in this case pods."
+"A label query over a set of resources, in this case pods.\nIf it's null, this PodAffinityTerm matches with no Pods."
 
 ### fn spec.template.spec.affinity.podAffinity.requiredDuringSchedulingIgnoredDuringExecution.labelSelector.withMatchExpressions
 
@@ -2829,7 +2941,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.template.spec.affinity.podAffinity.requiredDuringSchedulingIgnoredDuringExecution.labelSelector.withMatchLabelsMixin
 
@@ -2837,7 +2949,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -2859,7 +2971,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.template.spec.affinity.podAffinity.requiredDuringSchedulingIgnoredDuringExecution.labelSelector.matchExpressions.withValues
 
@@ -2867,7 +2979,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.template.spec.affinity.podAffinity.requiredDuringSchedulingIgnoredDuringExecution.labelSelector.matchExpressions.withValuesMixin
 
@@ -2875,13 +2987,13 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec.affinity.podAffinity.requiredDuringSchedulingIgnoredDuringExecution.namespaceSelector
 
-"A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means \"this pod's namespace\". An empty selector ({}) matches all namespaces."
+"A label query over the set of namespaces that the term applies to.\nThe term is applied to the union of the namespaces selected by this field\nand the ones listed in the namespaces field.\nnull selector and null or empty namespaces list means \"this pod's namespace\".\nAn empty selector ({}) matches all namespaces."
 
 ### fn spec.template.spec.affinity.podAffinity.requiredDuringSchedulingIgnoredDuringExecution.namespaceSelector.withMatchExpressions
 
@@ -2907,7 +3019,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.template.spec.affinity.podAffinity.requiredDuringSchedulingIgnoredDuringExecution.namespaceSelector.withMatchLabelsMixin
 
@@ -2915,7 +3027,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -2937,7 +3049,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.template.spec.affinity.podAffinity.requiredDuringSchedulingIgnoredDuringExecution.namespaceSelector.matchExpressions.withValues
 
@@ -2945,7 +3057,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.template.spec.affinity.podAffinity.requiredDuringSchedulingIgnoredDuringExecution.namespaceSelector.matchExpressions.withValuesMixin
 
@@ -2953,7 +3065,7 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
@@ -2967,7 +3079,7 @@ withValuesMixin(values)
 withPreferredDuringSchedulingIgnoredDuringExecution(preferredDuringSchedulingIgnoredDuringExecution)
 ```
 
-"The scheduler will prefer to schedule pods to nodes that satisfy the anti-affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling anti-affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding \"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred."
+"The scheduler will prefer to schedule pods to nodes that satisfy\nthe anti-affinity expressions specified by this field, but it may choose\na node that violates one or more of the expressions. The node that is\nmost preferred is the one with the greatest sum of weights, i.e.\nfor each node that meets all of the scheduling requirements (resource\nrequest, requiredDuringScheduling anti-affinity expressions, etc.),\ncompute a sum by iterating through the elements of this field and adding\n\"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the\nnode(s) with the highest sum are the most preferred."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecutionMixin
 
@@ -2975,7 +3087,7 @@ withPreferredDuringSchedulingIgnoredDuringExecution(preferredDuringSchedulingIgn
 withPreferredDuringSchedulingIgnoredDuringExecutionMixin(preferredDuringSchedulingIgnoredDuringExecution)
 ```
 
-"The scheduler will prefer to schedule pods to nodes that satisfy the anti-affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling anti-affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding \"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred."
+"The scheduler will prefer to schedule pods to nodes that satisfy\nthe anti-affinity expressions specified by this field, but it may choose\na node that violates one or more of the expressions. The node that is\nmost preferred is the one with the greatest sum of weights, i.e.\nfor each node that meets all of the scheduling requirements (resource\nrequest, requiredDuringScheduling anti-affinity expressions, etc.),\ncompute a sum by iterating through the elements of this field and adding\n\"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the\nnode(s) with the highest sum are the most preferred."
 
 **Note:** This function appends passed data to existing values
 
@@ -2985,7 +3097,7 @@ withPreferredDuringSchedulingIgnoredDuringExecutionMixin(preferredDuringScheduli
 withRequiredDuringSchedulingIgnoredDuringExecution(requiredDuringSchedulingIgnoredDuringExecution)
 ```
 
-"If the anti-affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the anti-affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied."
+"If the anti-affinity requirements specified by this field are not met at\nscheduling time, the pod will not be scheduled onto the node.\nIf the anti-affinity requirements specified by this field cease to be met\nat some point during pod execution (e.g. due to a pod label update), the\nsystem may or may not try to eventually evict the pod from its node.\nWhen there are multiple elements, the lists of nodes corresponding to each\npodAffinityTerm are intersected, i.e. all terms must be satisfied."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.withRequiredDuringSchedulingIgnoredDuringExecutionMixin
 
@@ -2993,13 +3105,13 @@ withRequiredDuringSchedulingIgnoredDuringExecution(requiredDuringSchedulingIgnor
 withRequiredDuringSchedulingIgnoredDuringExecutionMixin(requiredDuringSchedulingIgnoredDuringExecution)
 ```
 
-"If the anti-affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the anti-affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied."
+"If the anti-affinity requirements specified by this field are not met at\nscheduling time, the pod will not be scheduled onto the node.\nIf the anti-affinity requirements specified by this field cease to be met\nat some point during pod execution (e.g. due to a pod label update), the\nsystem may or may not try to eventually evict the pod from its node.\nWhen there are multiple elements, the lists of nodes corresponding to each\npodAffinityTerm are intersected, i.e. all terms must be satisfied."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution
 
-"The scheduler will prefer to schedule pods to nodes that satisfy the anti-affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling anti-affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding \"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the node(s) with the highest sum are the most preferred."
+"The scheduler will prefer to schedule pods to nodes that satisfy\nthe anti-affinity expressions specified by this field, but it may choose\na node that violates one or more of the expressions. The node that is\nmost preferred is the one with the greatest sum of weights, i.e.\nfor each node that meets all of the scheduling requirements (resource\nrequest, requiredDuringScheduling anti-affinity expressions, etc.),\ncompute a sum by iterating through the elements of this field and adding\n\"weight\" to the sum if the node has pods which matches the corresponding podAffinityTerm; the\nnode(s) with the highest sum are the most preferred."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.withWeight
 
@@ -3007,11 +3119,47 @@ withRequiredDuringSchedulingIgnoredDuringExecutionMixin(requiredDuringScheduling
 withWeight(weight)
 ```
 
-"weight associated with matching the corresponding podAffinityTerm, in the range 1-100."
+"weight associated with matching the corresponding podAffinityTerm,\nin the range 1-100."
 
 ## obj spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm
 
 "Required. A pod affinity term, associated with the corresponding weight."
+
+### fn spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withMatchLabelKeys
+
+```ts
+withMatchLabelKeys(matchLabelKeys)
+```
+
+"MatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key in (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MatchLabelKeys and LabelSelector.\nAlso, MatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+### fn spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withMatchLabelKeysMixin
+
+```ts
+withMatchLabelKeysMixin(matchLabelKeys)
+```
+
+"MatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key in (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MatchLabelKeys and LabelSelector.\nAlso, MatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withMismatchLabelKeys
+
+```ts
+withMismatchLabelKeys(mismatchLabelKeys)
+```
+
+"MismatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key notin (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MismatchLabelKeys and LabelSelector.\nAlso, MismatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+### fn spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withMismatchLabelKeysMixin
+
+```ts
+withMismatchLabelKeysMixin(mismatchLabelKeys)
+```
+
+"MismatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key notin (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MismatchLabelKeys and LabelSelector.\nAlso, MismatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+**Note:** This function appends passed data to existing values
 
 ### fn spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withNamespaces
 
@@ -3019,7 +3167,7 @@ withWeight(weight)
 withNamespaces(namespaces)
 ```
 
-"namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
+"namespaces specifies a static list of namespace names that the term applies to.\nThe term is applied to the union of the namespaces listed in this field\nand the ones selected by namespaceSelector.\nnull or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.withNamespacesMixin
 
@@ -3027,7 +3175,7 @@ withNamespaces(namespaces)
 withNamespacesMixin(namespaces)
 ```
 
-"namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
+"namespaces specifies a static list of namespace names that the term applies to.\nThe term is applied to the union of the namespaces listed in this field\nand the ones selected by namespaceSelector.\nnull or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
 
 **Note:** This function appends passed data to existing values
 
@@ -3037,11 +3185,11 @@ withNamespacesMixin(namespaces)
 withTopologyKey(topologyKey)
 ```
 
-"This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching the labelSelector in the specified namespaces, where co-located is defined as running on a node whose value of the label with key topologyKey matches that of any node on which any of the selected pods is running. Empty topologyKey is not allowed."
+"This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching\nthe labelSelector in the specified namespaces, where co-located is defined as running on a node\nwhose value of the label with key topologyKey matches that of any node on which any of the\nselected pods is running.\nEmpty topologyKey is not allowed."
 
 ## obj spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.labelSelector
 
-"A label query over a set of resources, in this case pods."
+"A label query over a set of resources, in this case pods.\nIf it's null, this PodAffinityTerm matches with no Pods."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.labelSelector.withMatchExpressions
 
@@ -3067,7 +3215,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.labelSelector.withMatchLabelsMixin
 
@@ -3075,7 +3223,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -3097,7 +3245,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.labelSelector.matchExpressions.withValues
 
@@ -3105,7 +3253,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.labelSelector.matchExpressions.withValuesMixin
 
@@ -3113,13 +3261,13 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.namespaceSelector
 
-"A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means \"this pod's namespace\". An empty selector ({}) matches all namespaces."
+"A label query over the set of namespaces that the term applies to.\nThe term is applied to the union of the namespaces selected by this field\nand the ones listed in the namespaces field.\nnull selector and null or empty namespaces list means \"this pod's namespace\".\nAn empty selector ({}) matches all namespaces."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.namespaceSelector.withMatchExpressions
 
@@ -3145,7 +3293,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.namespaceSelector.withMatchLabelsMixin
 
@@ -3153,7 +3301,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -3175,7 +3323,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.namespaceSelector.matchExpressions.withValues
 
@@ -3183,7 +3331,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution.podAffinityTerm.namespaceSelector.matchExpressions.withValuesMixin
 
@@ -3191,13 +3339,49 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec.affinity.podAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-"If the anti-affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the anti-affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied."
+"If the anti-affinity requirements specified by this field are not met at\nscheduling time, the pod will not be scheduled onto the node.\nIf the anti-affinity requirements specified by this field cease to be met\nat some point during pod execution (e.g. due to a pod label update), the\nsystem may or may not try to eventually evict the pod from its node.\nWhen there are multiple elements, the lists of nodes corresponding to each\npodAffinityTerm are intersected, i.e. all terms must be satisfied."
+
+### fn spec.template.spec.affinity.podAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.withMatchLabelKeys
+
+```ts
+withMatchLabelKeys(matchLabelKeys)
+```
+
+"MatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key in (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MatchLabelKeys and LabelSelector.\nAlso, MatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+### fn spec.template.spec.affinity.podAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.withMatchLabelKeysMixin
+
+```ts
+withMatchLabelKeysMixin(matchLabelKeys)
+```
+
+"MatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key in (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MatchLabelKeys and LabelSelector.\nAlso, MatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.template.spec.affinity.podAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.withMismatchLabelKeys
+
+```ts
+withMismatchLabelKeys(mismatchLabelKeys)
+```
+
+"MismatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key notin (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MismatchLabelKeys and LabelSelector.\nAlso, MismatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+### fn spec.template.spec.affinity.podAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.withMismatchLabelKeysMixin
+
+```ts
+withMismatchLabelKeysMixin(mismatchLabelKeys)
+```
+
+"MismatchLabelKeys is a set of pod label keys to select which pods will\nbe taken into consideration. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are merged with `LabelSelector` as `key notin (value)`\nto select the group of existing pods which pods will be taken into consideration\nfor the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming\npod labels will be ignored. The default value is empty.\nThe same key is forbidden to exist in both MismatchLabelKeys and LabelSelector.\nAlso, MismatchLabelKeys cannot be set when LabelSelector isn't set.\nThis is an alpha field and requires enabling MatchLabelKeysInPodAffinity feature gate."
+
+**Note:** This function appends passed data to existing values
 
 ### fn spec.template.spec.affinity.podAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNamespaces
 
@@ -3205,7 +3389,7 @@ withValuesMixin(values)
 withNamespaces(namespaces)
 ```
 
-"namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
+"namespaces specifies a static list of namespace names that the term applies to.\nThe term is applied to the union of the namespaces listed in this field\nand the ones selected by namespaceSelector.\nnull or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNamespacesMixin
 
@@ -3213,7 +3397,7 @@ withNamespaces(namespaces)
 withNamespacesMixin(namespaces)
 ```
 
-"namespaces specifies a static list of namespace names that the term applies to. The term is applied to the union of the namespaces listed in this field and the ones selected by namespaceSelector. null or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
+"namespaces specifies a static list of namespace names that the term applies to.\nThe term is applied to the union of the namespaces listed in this field\nand the ones selected by namespaceSelector.\nnull or empty namespaces list and null namespaceSelector means \"this pod's namespace\"."
 
 **Note:** This function appends passed data to existing values
 
@@ -3223,11 +3407,11 @@ withNamespacesMixin(namespaces)
 withTopologyKey(topologyKey)
 ```
 
-"This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching the labelSelector in the specified namespaces, where co-located is defined as running on a node whose value of the label with key topologyKey matches that of any node on which any of the selected pods is running. Empty topologyKey is not allowed."
+"This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching\nthe labelSelector in the specified namespaces, where co-located is defined as running on a node\nwhose value of the label with key topologyKey matches that of any node on which any of the\nselected pods is running.\nEmpty topologyKey is not allowed."
 
 ## obj spec.template.spec.affinity.podAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.labelSelector
 
-"A label query over a set of resources, in this case pods."
+"A label query over a set of resources, in this case pods.\nIf it's null, this PodAffinityTerm matches with no Pods."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.labelSelector.withMatchExpressions
 
@@ -3253,7 +3437,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.labelSelector.withMatchLabelsMixin
 
@@ -3261,7 +3445,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -3283,7 +3467,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.labelSelector.matchExpressions.withValues
 
@@ -3291,7 +3475,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.labelSelector.matchExpressions.withValuesMixin
 
@@ -3299,13 +3483,13 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec.affinity.podAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.namespaceSelector
 
-"A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means \"this pod's namespace\". An empty selector ({}) matches all namespaces."
+"A label query over the set of namespaces that the term applies to.\nThe term is applied to the union of the namespaces selected by this field\nand the ones listed in the namespaces field.\nnull selector and null or empty namespaces list means \"this pod's namespace\".\nAn empty selector ({}) matches all namespaces."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.namespaceSelector.withMatchExpressions
 
@@ -3331,7 +3515,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.namespaceSelector.withMatchLabelsMixin
 
@@ -3339,7 +3523,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -3361,7 +3545,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.namespaceSelector.matchExpressions.withValues
 
@@ -3369,7 +3553,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.template.spec.affinity.podAntiAffinity.requiredDuringSchedulingIgnoredDuringExecution.namespaceSelector.matchExpressions.withValuesMixin
 
@@ -3377,13 +3561,13 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec.containers
 
-"List of containers belonging to the pod. Containers cannot currently be added or removed. There must be at least one container in a Pod. Cannot be updated."
+"List of containers belonging to the pod.\nContainers cannot currently be added or removed.\nThere must be at least one container in a Pod.\nCannot be updated."
 
 ### fn spec.template.spec.containers.withArgs
 
@@ -3391,7 +3575,7 @@ withValuesMixin(values)
 withArgs(args)
 ```
 
-"Arguments to the entrypoint. The container image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
+"Arguments to the entrypoint.\nThe container image's CMD is used if this is not provided.\nVariable references $(VAR_NAME) are expanded using the container's environment. If a variable\ncannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced\nto a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will\nproduce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless\nof whether the variable exists or not. Cannot be updated.\nMore info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
 
 ### fn spec.template.spec.containers.withArgsMixin
 
@@ -3399,7 +3583,7 @@ withArgs(args)
 withArgsMixin(args)
 ```
 
-"Arguments to the entrypoint. The container image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
+"Arguments to the entrypoint.\nThe container image's CMD is used if this is not provided.\nVariable references $(VAR_NAME) are expanded using the container's environment. If a variable\ncannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced\nto a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will\nproduce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless\nof whether the variable exists or not. Cannot be updated.\nMore info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
 
 **Note:** This function appends passed data to existing values
 
@@ -3409,7 +3593,7 @@ withArgsMixin(args)
 withCommand(command)
 ```
 
-"Entrypoint array. Not executed within a shell. The container image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
+"Entrypoint array. Not executed within a shell.\nThe container image's ENTRYPOINT is used if this is not provided.\nVariable references $(VAR_NAME) are expanded using the container's environment. If a variable\ncannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced\nto a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will\nproduce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless\nof whether the variable exists or not. Cannot be updated.\nMore info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
 
 ### fn spec.template.spec.containers.withCommandMixin
 
@@ -3417,7 +3601,7 @@ withCommand(command)
 withCommandMixin(command)
 ```
 
-"Entrypoint array. Not executed within a shell. The container image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
+"Entrypoint array. Not executed within a shell.\nThe container image's ENTRYPOINT is used if this is not provided.\nVariable references $(VAR_NAME) are expanded using the container's environment. If a variable\ncannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced\nto a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will\nproduce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless\nof whether the variable exists or not. Cannot be updated.\nMore info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
 
 **Note:** This function appends passed data to existing values
 
@@ -3427,7 +3611,7 @@ withCommandMixin(command)
 withEnv(env)
 ```
 
-"List of environment variables to set in the container. Cannot be updated."
+"List of environment variables to set in the container.\nCannot be updated."
 
 ### fn spec.template.spec.containers.withEnvFrom
 
@@ -3435,7 +3619,7 @@ withEnv(env)
 withEnvFrom(envFrom)
 ```
 
-"List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated."
+"List of sources to populate environment variables in the container.\nThe keys defined within a source must be a C_IDENTIFIER. All invalid keys\nwill be reported as an event when the container is starting. When a key exists in multiple\nsources, the value associated with the last source will take precedence.\nValues defined by an Env with a duplicate key will take precedence.\nCannot be updated."
 
 ### fn spec.template.spec.containers.withEnvFromMixin
 
@@ -3443,7 +3627,7 @@ withEnvFrom(envFrom)
 withEnvFromMixin(envFrom)
 ```
 
-"List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated."
+"List of sources to populate environment variables in the container.\nThe keys defined within a source must be a C_IDENTIFIER. All invalid keys\nwill be reported as an event when the container is starting. When a key exists in multiple\nsources, the value associated with the last source will take precedence.\nValues defined by an Env with a duplicate key will take precedence.\nCannot be updated."
 
 **Note:** This function appends passed data to existing values
 
@@ -3453,7 +3637,7 @@ withEnvFromMixin(envFrom)
 withEnvMixin(env)
 ```
 
-"List of environment variables to set in the container. Cannot be updated."
+"List of environment variables to set in the container.\nCannot be updated."
 
 **Note:** This function appends passed data to existing values
 
@@ -3463,7 +3647,7 @@ withEnvMixin(env)
 withImage(image)
 ```
 
-"Container image name. More info: https://kubernetes.io/docs/concepts/containers/images This field is optional to allow higher level config management to default or override container images in workload controllers like Deployments and StatefulSets."
+"Container image name.\nMore info: https://kubernetes.io/docs/concepts/containers/images\nThis field is optional to allow higher level config management to default or override\ncontainer images in workload controllers like Deployments and StatefulSets."
 
 ### fn spec.template.spec.containers.withImagePullPolicy
 
@@ -3471,7 +3655,7 @@ withImage(image)
 withImagePullPolicy(imagePullPolicy)
 ```
 
-"Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images"
+"Image pull policy.\nOne of Always, Never, IfNotPresent.\nDefaults to Always if :latest tag is specified, or IfNotPresent otherwise.\nCannot be updated.\nMore info: https://kubernetes.io/docs/concepts/containers/images#updating-images"
 
 ### fn spec.template.spec.containers.withName
 
@@ -3479,7 +3663,7 @@ withImagePullPolicy(imagePullPolicy)
 withName(name)
 ```
 
-"Name of the container specified as a DNS_LABEL. Each container in a pod must have a unique name (DNS_LABEL). Cannot be updated."
+"Name of the container specified as a DNS_LABEL.\nEach container in a pod must have a unique name (DNS_LABEL).\nCannot be updated."
 
 ### fn spec.template.spec.containers.withPorts
 
@@ -3487,7 +3671,7 @@ withName(name)
 withPorts(ports)
 ```
 
-"List of ports to expose from the container. Not specifying a port here DOES NOT prevent that port from being exposed. Any port which is listening on the default \"0.0.0.0\" address inside a container will be accessible from the network. Modifying this array with strategic merge patch may corrupt the data. For more information See https://github.com/kubernetes/kubernetes/issues/108255. Cannot be updated."
+"List of ports to expose from the container. Not specifying a port here\nDOES NOT prevent that port from being exposed. Any port which is\nlistening on the default \"0.0.0.0\" address inside a container will be\naccessible from the network.\nModifying this array with strategic merge patch may corrupt the data.\nFor more information See https://github.com/kubernetes/kubernetes/issues/108255.\nCannot be updated."
 
 ### fn spec.template.spec.containers.withPortsMixin
 
@@ -3495,7 +3679,7 @@ withPorts(ports)
 withPortsMixin(ports)
 ```
 
-"List of ports to expose from the container. Not specifying a port here DOES NOT prevent that port from being exposed. Any port which is listening on the default \"0.0.0.0\" address inside a container will be accessible from the network. Modifying this array with strategic merge patch may corrupt the data. For more information See https://github.com/kubernetes/kubernetes/issues/108255. Cannot be updated."
+"List of ports to expose from the container. Not specifying a port here\nDOES NOT prevent that port from being exposed. Any port which is\nlistening on the default \"0.0.0.0\" address inside a container will be\naccessible from the network.\nModifying this array with strategic merge patch may corrupt the data.\nFor more information See https://github.com/kubernetes/kubernetes/issues/108255.\nCannot be updated."
 
 **Note:** This function appends passed data to existing values
 
@@ -3523,7 +3707,7 @@ withResizePolicyMixin(resizePolicy)
 withRestartPolicy(restartPolicy)
 ```
 
-"RestartPolicy defines the restart behavior of individual containers in a pod. This field may only be set for init containers, and the only allowed value is \"Always\". For non-init containers or when this field is not specified, the restart behavior is defined by the Pod's restart policy and the container type. Setting the RestartPolicy as \"Always\" for the init container will have the following effect: this init container will be continually restarted on exit until all regular containers have terminated. Once all regular containers have completed, all init containers with restartPolicy \"Always\" will be shut down. This lifecycle differs from normal init containers and is often referred to as a \"sidecar\" container. Although this init container still starts in the init container sequence, it does not wait for the container to complete before proceeding to the next init container. Instead, the next init container starts immediately after this init container is started, or after any startupProbe has successfully completed."
+"RestartPolicy defines the restart behavior of individual containers in a pod.\nThis field may only be set for init containers, and the only allowed value is \"Always\".\nFor non-init containers or when this field is not specified,\nthe restart behavior is defined by the Pod's restart policy and the container type.\nSetting the RestartPolicy as \"Always\" for the init container will have the following effect:\nthis init container will be continually restarted on\nexit until all regular containers have terminated. Once all regular\ncontainers have completed, all init containers with restartPolicy \"Always\"\nwill be shut down. This lifecycle differs from normal init containers and\nis often referred to as a \"sidecar\" container. Although this init\ncontainer still starts in the init container sequence, it does not wait\nfor the container to complete before proceeding to the next init\ncontainer. Instead, the next init container starts immediately after this\ninit container is started, or after any startupProbe has successfully\ncompleted."
 
 ### fn spec.template.spec.containers.withStdin
 
@@ -3531,7 +3715,7 @@ withRestartPolicy(restartPolicy)
 withStdin(stdin)
 ```
 
-"Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false."
+"Whether this container should allocate a buffer for stdin in the container runtime. If this\nis not set, reads from stdin in the container will always result in EOF.\nDefault is false."
 
 ### fn spec.template.spec.containers.withStdinOnce
 
@@ -3539,7 +3723,7 @@ withStdin(stdin)
 withStdinOnce(stdinOnce)
 ```
 
-"Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false"
+"Whether the container runtime should close the stdin channel after it has been opened by\na single attach. When stdin is true the stdin stream will remain open across multiple attach\nsessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the\nfirst client attaches to stdin, and then remains open and accepts data until the client disconnects,\nat which time stdin is closed and remains closed until the container is restarted. If this\nflag is false, a container processes that reads from stdin will never receive an EOF.\nDefault is false"
 
 ### fn spec.template.spec.containers.withTerminationMessagePath
 
@@ -3547,7 +3731,7 @@ withStdinOnce(stdinOnce)
 withTerminationMessagePath(terminationMessagePath)
 ```
 
-"Optional: Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated."
+"Optional: Path at which the file to which the container's termination message\nwill be written is mounted into the container's filesystem.\nMessage written is intended to be brief final status, such as an assertion failure message.\nWill be truncated by the node if greater than 4096 bytes. The total message length across\nall containers will be limited to 12kb.\nDefaults to /dev/termination-log.\nCannot be updated."
 
 ### fn spec.template.spec.containers.withTerminationMessagePolicy
 
@@ -3555,7 +3739,7 @@ withTerminationMessagePath(terminationMessagePath)
 withTerminationMessagePolicy(terminationMessagePolicy)
 ```
 
-"Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated."
+"Indicate how the termination message should be populated. File will use the contents of\nterminationMessagePath to populate the container status message on both success and failure.\nFallbackToLogsOnError will use the last chunk of container log output if the termination\nmessage file is empty and the container exited with an error.\nThe log output is limited to 2048 bytes or 80 lines, whichever is smaller.\nDefaults to File.\nCannot be updated."
 
 ### fn spec.template.spec.containers.withTty
 
@@ -3563,7 +3747,7 @@ withTerminationMessagePolicy(terminationMessagePolicy)
 withTty(tty)
 ```
 
-"Whether this container should allocate a TTY for itself, also requires 'stdin' to be true. Default is false."
+"Whether this container should allocate a TTY for itself, also requires 'stdin' to be true.\nDefault is false."
 
 ### fn spec.template.spec.containers.withVolumeDevices
 
@@ -3589,7 +3773,7 @@ withVolumeDevicesMixin(volumeDevices)
 withVolumeMounts(volumeMounts)
 ```
 
-"Pod volumes to mount into the container's filesystem. Cannot be updated."
+"Pod volumes to mount into the container's filesystem.\nCannot be updated."
 
 ### fn spec.template.spec.containers.withVolumeMountsMixin
 
@@ -3597,7 +3781,7 @@ withVolumeMounts(volumeMounts)
 withVolumeMountsMixin(volumeMounts)
 ```
 
-"Pod volumes to mount into the container's filesystem. Cannot be updated."
+"Pod volumes to mount into the container's filesystem.\nCannot be updated."
 
 **Note:** This function appends passed data to existing values
 
@@ -3607,11 +3791,11 @@ withVolumeMountsMixin(volumeMounts)
 withWorkingDir(workingDir)
 ```
 
-"Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated."
+"Container's working directory.\nIf not specified, the container runtime's default will be used, which\nmight be configured in the container image.\nCannot be updated."
 
 ## obj spec.template.spec.containers.env
 
-"List of environment variables to set in the container. Cannot be updated."
+"List of environment variables to set in the container.\nCannot be updated."
 
 ### fn spec.template.spec.containers.env.withName
 
@@ -3627,7 +3811,7 @@ withName(name)
 withValue(value)
 ```
 
-"Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to \"\"."
+"Variable references $(VAR_NAME) are expanded\nusing the previously defined environment variables in the container and\nany service environment variables. If a variable cannot be resolved,\nthe reference in the input string will be unchanged. Double $$ are reduced\nto a single $, which allows for escaping the $(VAR_NAME) syntax: i.e.\n\"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\".\nEscaped references will never be expanded, regardless of whether the variable\nexists or not.\nDefaults to \"\"."
 
 ## obj spec.template.spec.containers.env.valueFrom
 
@@ -3651,7 +3835,7 @@ withKey(key)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.template.spec.containers.env.valueFrom.configMapKeyRef.withOptional
 
@@ -3663,7 +3847,7 @@ withOptional(optional)
 
 ## obj spec.template.spec.containers.env.valueFrom.fieldRef
 
-"Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs."
+"Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`,\nspec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs."
 
 ### fn spec.template.spec.containers.env.valueFrom.fieldRef.withApiVersion
 
@@ -3683,7 +3867,7 @@ withFieldPath(fieldPath)
 
 ## obj spec.template.spec.containers.env.valueFrom.resourceFieldRef
 
-"Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported."
+"Selects a resource of the container: only resources limits and requests\n(limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported."
 
 ### fn spec.template.spec.containers.env.valueFrom.resourceFieldRef.withContainerName
 
@@ -3727,7 +3911,7 @@ withKey(key)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.template.spec.containers.env.valueFrom.secretKeyRef.withOptional
 
@@ -3739,7 +3923,7 @@ withOptional(optional)
 
 ## obj spec.template.spec.containers.envFrom
 
-"List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated."
+"List of sources to populate environment variables in the container.\nThe keys defined within a source must be a C_IDENTIFIER. All invalid keys\nwill be reported as an event when the container is starting. When a key exists in multiple\nsources, the value associated with the last source will take precedence.\nValues defined by an Env with a duplicate key will take precedence.\nCannot be updated."
 
 ### fn spec.template.spec.containers.envFrom.withPrefix
 
@@ -3759,7 +3943,7 @@ withPrefix(prefix)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.template.spec.containers.envFrom.configMapRef.withOptional
 
@@ -3779,7 +3963,7 @@ withOptional(optional)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.template.spec.containers.envFrom.secretRef.withOptional
 
@@ -3791,11 +3975,11 @@ withOptional(optional)
 
 ## obj spec.template.spec.containers.lifecycle
 
-"Actions that the management system should take in response to container lifecycle events. Cannot be updated."
+"Actions that the management system should take in response to container lifecycle events.\nCannot be updated."
 
 ## obj spec.template.spec.containers.lifecycle.postStart
 
-"PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks"
+"PostStart is called immediately after a container is created. If the handler fails,\nthe container is terminated and restarted according to its restart policy.\nOther management of the container blocks until the hook completes.\nMore info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks"
 
 ## obj spec.template.spec.containers.lifecycle.postStart.exec
 
@@ -3807,7 +3991,7 @@ withOptional(optional)
 withCommand(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 ### fn spec.template.spec.containers.lifecycle.postStart.exec.withCommandMixin
 
@@ -3815,7 +3999,7 @@ withCommand(command)
 withCommandMixin(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 **Note:** This function appends passed data to existing values
 
@@ -3829,7 +4013,7 @@ withCommandMixin(command)
 withHost(host)
 ```
 
-"Host name to connect to, defaults to the pod IP. You probably want to set \"Host\" in httpHeaders instead."
+"Host name to connect to, defaults to the pod IP. You probably want to set\n\"Host\" in httpHeaders instead."
 
 ### fn spec.template.spec.containers.lifecycle.postStart.httpGet.withHttpHeaders
 
@@ -3863,7 +4047,7 @@ withPath(path)
 withPort(port)
 ```
 
-"Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Name or number of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ### fn spec.template.spec.containers.lifecycle.postStart.httpGet.withScheme
 
@@ -3871,7 +4055,7 @@ withPort(port)
 withScheme(scheme)
 ```
 
-"Scheme to use for connecting to the host. Defaults to HTTP."
+"Scheme to use for connecting to the host.\nDefaults to HTTP."
 
 ## obj spec.template.spec.containers.lifecycle.postStart.httpGet.httpHeaders
 
@@ -3883,7 +4067,7 @@ withScheme(scheme)
 withName(name)
 ```
 
-"The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header."
+"The header field name.\nThis will be canonicalized upon output, so case-variant names will be understood as the same header."
 
 ### fn spec.template.spec.containers.lifecycle.postStart.httpGet.httpHeaders.withValue
 
@@ -3893,9 +4077,21 @@ withValue(value)
 
 "The header field value"
 
+## obj spec.template.spec.containers.lifecycle.postStart.sleep
+
+"Sleep represents the duration that the container should sleep before being terminated."
+
+### fn spec.template.spec.containers.lifecycle.postStart.sleep.withSeconds
+
+```ts
+withSeconds(seconds)
+```
+
+"Seconds is the number of seconds to sleep."
+
 ## obj spec.template.spec.containers.lifecycle.postStart.tcpSocket
 
-"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified."
+"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\nfor the backward compatibility. There are no validation of this field and\nlifecycle hooks will fail in runtime when tcp handler is specified."
 
 ### fn spec.template.spec.containers.lifecycle.postStart.tcpSocket.withHost
 
@@ -3911,11 +4107,11 @@ withHost(host)
 withPort(port)
 ```
 
-"Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Number or name of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ## obj spec.template.spec.containers.lifecycle.preStop
 
-"PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The Pod's termination grace period countdown begins before the PreStop hook is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period (unless delayed by finalizers). Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks"
+"PreStop is called immediately before a container is terminated due to an\nAPI request or management event such as liveness/startup probe failure,\npreemption, resource contention, etc. The handler is not called if the\ncontainer crashes or exits. The Pod's termination grace period countdown begins before the\nPreStop hook is executed. Regardless of the outcome of the handler, the\ncontainer will eventually terminate within the Pod's termination grace\nperiod (unless delayed by finalizers). Other management of the container blocks until the hook completes\nor until the termination grace period is reached.\nMore info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks"
 
 ## obj spec.template.spec.containers.lifecycle.preStop.exec
 
@@ -3927,7 +4123,7 @@ withPort(port)
 withCommand(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 ### fn spec.template.spec.containers.lifecycle.preStop.exec.withCommandMixin
 
@@ -3935,7 +4131,7 @@ withCommand(command)
 withCommandMixin(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 **Note:** This function appends passed data to existing values
 
@@ -3949,7 +4145,7 @@ withCommandMixin(command)
 withHost(host)
 ```
 
-"Host name to connect to, defaults to the pod IP. You probably want to set \"Host\" in httpHeaders instead."
+"Host name to connect to, defaults to the pod IP. You probably want to set\n\"Host\" in httpHeaders instead."
 
 ### fn spec.template.spec.containers.lifecycle.preStop.httpGet.withHttpHeaders
 
@@ -3983,7 +4179,7 @@ withPath(path)
 withPort(port)
 ```
 
-"Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Name or number of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ### fn spec.template.spec.containers.lifecycle.preStop.httpGet.withScheme
 
@@ -3991,7 +4187,7 @@ withPort(port)
 withScheme(scheme)
 ```
 
-"Scheme to use for connecting to the host. Defaults to HTTP."
+"Scheme to use for connecting to the host.\nDefaults to HTTP."
 
 ## obj spec.template.spec.containers.lifecycle.preStop.httpGet.httpHeaders
 
@@ -4003,7 +4199,7 @@ withScheme(scheme)
 withName(name)
 ```
 
-"The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header."
+"The header field name.\nThis will be canonicalized upon output, so case-variant names will be understood as the same header."
 
 ### fn spec.template.spec.containers.lifecycle.preStop.httpGet.httpHeaders.withValue
 
@@ -4013,9 +4209,21 @@ withValue(value)
 
 "The header field value"
 
+## obj spec.template.spec.containers.lifecycle.preStop.sleep
+
+"Sleep represents the duration that the container should sleep before being terminated."
+
+### fn spec.template.spec.containers.lifecycle.preStop.sleep.withSeconds
+
+```ts
+withSeconds(seconds)
+```
+
+"Seconds is the number of seconds to sleep."
+
 ## obj spec.template.spec.containers.lifecycle.preStop.tcpSocket
 
-"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified."
+"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\nfor the backward compatibility. There are no validation of this field and\nlifecycle hooks will fail in runtime when tcp handler is specified."
 
 ### fn spec.template.spec.containers.lifecycle.preStop.tcpSocket.withHost
 
@@ -4031,11 +4239,11 @@ withHost(host)
 withPort(port)
 ```
 
-"Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Number or name of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ## obj spec.template.spec.containers.livenessProbe
 
-"Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Periodic probe of container liveness.\nContainer will be restarted if the probe fails.\nCannot be updated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ### fn spec.template.spec.containers.livenessProbe.withFailureThreshold
 
@@ -4043,7 +4251,7 @@ withPort(port)
 withFailureThreshold(failureThreshold)
 ```
 
-"Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1."
+"Minimum consecutive failures for the probe to be considered failed after having succeeded.\nDefaults to 3. Minimum value is 1."
 
 ### fn spec.template.spec.containers.livenessProbe.withInitialDelaySeconds
 
@@ -4051,7 +4259,7 @@ withFailureThreshold(failureThreshold)
 withInitialDelaySeconds(initialDelaySeconds)
 ```
 
-"Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Number of seconds after the container has started before liveness probes are initiated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ### fn spec.template.spec.containers.livenessProbe.withPeriodSeconds
 
@@ -4059,7 +4267,7 @@ withInitialDelaySeconds(initialDelaySeconds)
 withPeriodSeconds(periodSeconds)
 ```
 
-"How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1."
+"How often (in seconds) to perform the probe.\nDefault to 10 seconds. Minimum value is 1."
 
 ### fn spec.template.spec.containers.livenessProbe.withSuccessThreshold
 
@@ -4067,7 +4275,7 @@ withPeriodSeconds(periodSeconds)
 withSuccessThreshold(successThreshold)
 ```
 
-"Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
+"Minimum consecutive successes for the probe to be considered successful after having failed.\nDefaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
 
 ### fn spec.template.spec.containers.livenessProbe.withTerminationGracePeriodSeconds
 
@@ -4075,7 +4283,7 @@ withSuccessThreshold(successThreshold)
 withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
 ```
 
-"Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
+"Optional duration in seconds the pod needs to terminate gracefully upon probe failure.\nThe grace period is the duration in seconds after the processes running in the pod are sent\na termination signal and the time when the processes are forcibly halted with a kill signal.\nSet this value longer than the expected cleanup time for your process.\nIf this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this\nvalue overrides the value provided by the pod spec.\nValue must be non-negative integer. The value zero indicates stop immediately via\nthe kill signal (no opportunity to shut down).\nThis is a beta field and requires enabling ProbeTerminationGracePeriod feature gate.\nMinimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
 
 ### fn spec.template.spec.containers.livenessProbe.withTimeoutSeconds
 
@@ -4083,7 +4291,7 @@ withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
 withTimeoutSeconds(timeoutSeconds)
 ```
 
-"Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Number of seconds after which the probe times out.\nDefaults to 1 second. Minimum value is 1.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ## obj spec.template.spec.containers.livenessProbe.exec
 
@@ -4095,7 +4303,7 @@ withTimeoutSeconds(timeoutSeconds)
 withCommand(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 ### fn spec.template.spec.containers.livenessProbe.exec.withCommandMixin
 
@@ -4103,7 +4311,7 @@ withCommand(command)
 withCommandMixin(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 **Note:** This function appends passed data to existing values
 
@@ -4125,7 +4333,7 @@ withPort(port)
 withService(service)
 ```
 
-"Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md). \n If this is not specified, the default behavior is defined by gRPC."
+"Service is the name of the service to place in the gRPC HealthCheckRequest\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\n\n\nIf this is not specified, the default behavior is defined by gRPC."
 
 ## obj spec.template.spec.containers.livenessProbe.httpGet
 
@@ -4137,7 +4345,7 @@ withService(service)
 withHost(host)
 ```
 
-"Host name to connect to, defaults to the pod IP. You probably want to set \"Host\" in httpHeaders instead."
+"Host name to connect to, defaults to the pod IP. You probably want to set\n\"Host\" in httpHeaders instead."
 
 ### fn spec.template.spec.containers.livenessProbe.httpGet.withHttpHeaders
 
@@ -4171,7 +4379,7 @@ withPath(path)
 withPort(port)
 ```
 
-"Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Name or number of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ### fn spec.template.spec.containers.livenessProbe.httpGet.withScheme
 
@@ -4179,7 +4387,7 @@ withPort(port)
 withScheme(scheme)
 ```
 
-"Scheme to use for connecting to the host. Defaults to HTTP."
+"Scheme to use for connecting to the host.\nDefaults to HTTP."
 
 ## obj spec.template.spec.containers.livenessProbe.httpGet.httpHeaders
 
@@ -4191,7 +4399,7 @@ withScheme(scheme)
 withName(name)
 ```
 
-"The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header."
+"The header field name.\nThis will be canonicalized upon output, so case-variant names will be understood as the same header."
 
 ### fn spec.template.spec.containers.livenessProbe.httpGet.httpHeaders.withValue
 
@@ -4219,11 +4427,11 @@ withHost(host)
 withPort(port)
 ```
 
-"Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Number or name of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ## obj spec.template.spec.containers.ports
 
-"List of ports to expose from the container. Not specifying a port here DOES NOT prevent that port from being exposed. Any port which is listening on the default \"0.0.0.0\" address inside a container will be accessible from the network. Modifying this array with strategic merge patch may corrupt the data. For more information See https://github.com/kubernetes/kubernetes/issues/108255. Cannot be updated."
+"List of ports to expose from the container. Not specifying a port here\nDOES NOT prevent that port from being exposed. Any port which is\nlistening on the default \"0.0.0.0\" address inside a container will be\naccessible from the network.\nModifying this array with strategic merge patch may corrupt the data.\nFor more information See https://github.com/kubernetes/kubernetes/issues/108255.\nCannot be updated."
 
 ### fn spec.template.spec.containers.ports.withContainerPort
 
@@ -4231,7 +4439,7 @@ withPort(port)
 withContainerPort(containerPort)
 ```
 
-"Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536."
+"Number of port to expose on the pod's IP address.\nThis must be a valid port number, 0 < x < 65536."
 
 ### fn spec.template.spec.containers.ports.withHostIP
 
@@ -4247,7 +4455,7 @@ withHostIP(hostIP)
 withHostPort(hostPort)
 ```
 
-"Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this."
+"Number of port to expose on the host.\nIf specified, this must be a valid port number, 0 < x < 65536.\nIf HostNetwork is specified, this must match ContainerPort.\nMost containers do not need this."
 
 ### fn spec.template.spec.containers.ports.withName
 
@@ -4255,7 +4463,7 @@ withHostPort(hostPort)
 withName(name)
 ```
 
-"If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services."
+"If specified, this must be an IANA_SVC_NAME and unique within the pod. Each\nnamed port in a pod must have a unique name. Name for the port that can be\nreferred to by services."
 
 ### fn spec.template.spec.containers.ports.withProtocol
 
@@ -4263,11 +4471,11 @@ withName(name)
 withProtocol(protocol)
 ```
 
-"Protocol for port. Must be UDP, TCP, or SCTP. Defaults to \"TCP\"."
+"Protocol for port. Must be UDP, TCP, or SCTP.\nDefaults to \"TCP\"."
 
 ## obj spec.template.spec.containers.readinessProbe
 
-"Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Periodic probe of container service readiness.\nContainer will be removed from service endpoints if the probe fails.\nCannot be updated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ### fn spec.template.spec.containers.readinessProbe.withFailureThreshold
 
@@ -4275,7 +4483,7 @@ withProtocol(protocol)
 withFailureThreshold(failureThreshold)
 ```
 
-"Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1."
+"Minimum consecutive failures for the probe to be considered failed after having succeeded.\nDefaults to 3. Minimum value is 1."
 
 ### fn spec.template.spec.containers.readinessProbe.withInitialDelaySeconds
 
@@ -4283,7 +4491,7 @@ withFailureThreshold(failureThreshold)
 withInitialDelaySeconds(initialDelaySeconds)
 ```
 
-"Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Number of seconds after the container has started before liveness probes are initiated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ### fn spec.template.spec.containers.readinessProbe.withPeriodSeconds
 
@@ -4291,7 +4499,7 @@ withInitialDelaySeconds(initialDelaySeconds)
 withPeriodSeconds(periodSeconds)
 ```
 
-"How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1."
+"How often (in seconds) to perform the probe.\nDefault to 10 seconds. Minimum value is 1."
 
 ### fn spec.template.spec.containers.readinessProbe.withSuccessThreshold
 
@@ -4299,7 +4507,7 @@ withPeriodSeconds(periodSeconds)
 withSuccessThreshold(successThreshold)
 ```
 
-"Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
+"Minimum consecutive successes for the probe to be considered successful after having failed.\nDefaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
 
 ### fn spec.template.spec.containers.readinessProbe.withTerminationGracePeriodSeconds
 
@@ -4307,7 +4515,7 @@ withSuccessThreshold(successThreshold)
 withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
 ```
 
-"Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
+"Optional duration in seconds the pod needs to terminate gracefully upon probe failure.\nThe grace period is the duration in seconds after the processes running in the pod are sent\na termination signal and the time when the processes are forcibly halted with a kill signal.\nSet this value longer than the expected cleanup time for your process.\nIf this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this\nvalue overrides the value provided by the pod spec.\nValue must be non-negative integer. The value zero indicates stop immediately via\nthe kill signal (no opportunity to shut down).\nThis is a beta field and requires enabling ProbeTerminationGracePeriod feature gate.\nMinimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
 
 ### fn spec.template.spec.containers.readinessProbe.withTimeoutSeconds
 
@@ -4315,7 +4523,7 @@ withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
 withTimeoutSeconds(timeoutSeconds)
 ```
 
-"Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Number of seconds after which the probe times out.\nDefaults to 1 second. Minimum value is 1.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ## obj spec.template.spec.containers.readinessProbe.exec
 
@@ -4327,7 +4535,7 @@ withTimeoutSeconds(timeoutSeconds)
 withCommand(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 ### fn spec.template.spec.containers.readinessProbe.exec.withCommandMixin
 
@@ -4335,7 +4543,7 @@ withCommand(command)
 withCommandMixin(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 **Note:** This function appends passed data to existing values
 
@@ -4357,7 +4565,7 @@ withPort(port)
 withService(service)
 ```
 
-"Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md). \n If this is not specified, the default behavior is defined by gRPC."
+"Service is the name of the service to place in the gRPC HealthCheckRequest\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\n\n\nIf this is not specified, the default behavior is defined by gRPC."
 
 ## obj spec.template.spec.containers.readinessProbe.httpGet
 
@@ -4369,7 +4577,7 @@ withService(service)
 withHost(host)
 ```
 
-"Host name to connect to, defaults to the pod IP. You probably want to set \"Host\" in httpHeaders instead."
+"Host name to connect to, defaults to the pod IP. You probably want to set\n\"Host\" in httpHeaders instead."
 
 ### fn spec.template.spec.containers.readinessProbe.httpGet.withHttpHeaders
 
@@ -4403,7 +4611,7 @@ withPath(path)
 withPort(port)
 ```
 
-"Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Name or number of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ### fn spec.template.spec.containers.readinessProbe.httpGet.withScheme
 
@@ -4411,7 +4619,7 @@ withPort(port)
 withScheme(scheme)
 ```
 
-"Scheme to use for connecting to the host. Defaults to HTTP."
+"Scheme to use for connecting to the host.\nDefaults to HTTP."
 
 ## obj spec.template.spec.containers.readinessProbe.httpGet.httpHeaders
 
@@ -4423,7 +4631,7 @@ withScheme(scheme)
 withName(name)
 ```
 
-"The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header."
+"The header field name.\nThis will be canonicalized upon output, so case-variant names will be understood as the same header."
 
 ### fn spec.template.spec.containers.readinessProbe.httpGet.httpHeaders.withValue
 
@@ -4451,7 +4659,7 @@ withHost(host)
 withPort(port)
 ```
 
-"Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Number or name of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ## obj spec.template.spec.containers.resizePolicy
 
@@ -4463,7 +4671,7 @@ withPort(port)
 withResourceName(resourceName)
 ```
 
-"Name of the resource to which this resource resize policy applies. Supported values: cpu, memory."
+"Name of the resource to which this resource resize policy applies.\nSupported values: cpu, memory."
 
 ### fn spec.template.spec.containers.resizePolicy.withRestartPolicy
 
@@ -4471,11 +4679,11 @@ withResourceName(resourceName)
 withRestartPolicy(restartPolicy)
 ```
 
-"Restart policy to apply when specified resource is resized. If not specified, it defaults to NotRequired."
+"Restart policy to apply when specified resource is resized.\nIf not specified, it defaults to NotRequired."
 
 ## obj spec.template.spec.containers.resources
 
-"Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Compute Resources required by this container.\nCannot be updated.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 ### fn spec.template.spec.containers.resources.withClaims
 
@@ -4483,7 +4691,7 @@ withRestartPolicy(restartPolicy)
 withClaims(claims)
 ```
 
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
+"Claims lists the names of resources, defined in spec.resourceClaims,\nthat are used by this container.\n\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\n\nThis field is immutable. It can only be set for containers."
 
 ### fn spec.template.spec.containers.resources.withClaimsMixin
 
@@ -4491,7 +4699,7 @@ withClaims(claims)
 withClaimsMixin(claims)
 ```
 
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
+"Claims lists the names of resources, defined in spec.resourceClaims,\nthat are used by this container.\n\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\n\nThis field is immutable. It can only be set for containers."
 
 **Note:** This function appends passed data to existing values
 
@@ -4501,7 +4709,7 @@ withClaimsMixin(claims)
 withLimits(limits)
 ```
 
-"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 ### fn spec.template.spec.containers.resources.withLimitsMixin
 
@@ -4509,7 +4717,7 @@ withLimits(limits)
 withLimitsMixin(limits)
 ```
 
-"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 **Note:** This function appends passed data to existing values
 
@@ -4519,7 +4727,7 @@ withLimitsMixin(limits)
 withRequests(requests)
 ```
 
-"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value. Requests cannot exceed Limits.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 ### fn spec.template.spec.containers.resources.withRequestsMixin
 
@@ -4527,13 +4735,13 @@ withRequests(requests)
 withRequestsMixin(requests)
 ```
 
-"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value. Requests cannot exceed Limits.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec.containers.resources.claims
 
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
+"Claims lists the names of resources, defined in spec.resourceClaims,\nthat are used by this container.\n\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\n\nThis field is immutable. It can only be set for containers."
 
 ### fn spec.template.spec.containers.resources.claims.withName
 
@@ -4541,11 +4749,11 @@ withRequestsMixin(requests)
 withName(name)
 ```
 
-"Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container."
+"Name must match the name of one entry in pod.spec.resourceClaims of\nthe Pod where this field is used. It makes that resource available\ninside a container."
 
 ## obj spec.template.spec.containers.securityContext
 
-"SecurityContext defines the security options the container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext. More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/"
+"SecurityContext defines the security options the container should be run with.\nIf set, the fields of SecurityContext override the equivalent fields of PodSecurityContext.\nMore info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/"
 
 ### fn spec.template.spec.containers.securityContext.withAllowPrivilegeEscalation
 
@@ -4553,7 +4761,7 @@ withName(name)
 withAllowPrivilegeEscalation(allowPrivilegeEscalation)
 ```
 
-"AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN Note that this field cannot be set when spec.os.name is windows."
+"AllowPrivilegeEscalation controls whether a process can gain more\nprivileges than its parent process. This bool directly controls if\nthe no_new_privs flag will be set on the container process.\nAllowPrivilegeEscalation is true always when the container is:\n1) run as Privileged\n2) has CAP_SYS_ADMIN\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.containers.securityContext.withPrivileged
 
@@ -4561,7 +4769,7 @@ withAllowPrivilegeEscalation(allowPrivilegeEscalation)
 withPrivileged(privileged)
 ```
 
-"Run container in privileged mode. Processes in privileged containers are essentially equivalent to root on the host. Defaults to false. Note that this field cannot be set when spec.os.name is windows."
+"Run container in privileged mode.\nProcesses in privileged containers are essentially equivalent to root on the host.\nDefaults to false.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.containers.securityContext.withProcMount
 
@@ -4569,7 +4777,7 @@ withPrivileged(privileged)
 withProcMount(procMount)
 ```
 
-"procMount denotes the type of proc mount to use for the containers. The default is DefaultProcMount which uses the container runtime defaults for readonly paths and masked paths. This requires the ProcMountType feature flag to be enabled. Note that this field cannot be set when spec.os.name is windows."
+"procMount denotes the type of proc mount to use for the containers.\nThe default is DefaultProcMount which uses the container runtime defaults for\nreadonly paths and masked paths.\nThis requires the ProcMountType feature flag to be enabled.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.containers.securityContext.withReadOnlyRootFilesystem
 
@@ -4577,7 +4785,7 @@ withProcMount(procMount)
 withReadOnlyRootFilesystem(readOnlyRootFilesystem)
 ```
 
-"Whether this container has a read-only root filesystem. Default is false. Note that this field cannot be set when spec.os.name is windows."
+"Whether this container has a read-only root filesystem.\nDefault is false.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.containers.securityContext.withRunAsGroup
 
@@ -4585,7 +4793,7 @@ withReadOnlyRootFilesystem(readOnlyRootFilesystem)
 withRunAsGroup(runAsGroup)
 ```
 
-"The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows."
+"The GID to run the entrypoint of the container process.\nUses runtime default if unset.\nMay also be set in PodSecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.containers.securityContext.withRunAsNonRoot
 
@@ -4593,7 +4801,7 @@ withRunAsGroup(runAsGroup)
 withRunAsNonRoot(runAsNonRoot)
 ```
 
-"Indicates that the container must run as a non-root user. If true, the Kubelet will validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the container if it does. If unset or false, no such validation will be performed. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence."
+"Indicates that the container must run as a non-root user.\nIf true, the Kubelet will validate the image at runtime to ensure that it\ndoes not run as UID 0 (root) and fail to start the container if it does.\nIf unset or false, no such validation will be performed.\nMay also be set in PodSecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence."
 
 ### fn spec.template.spec.containers.securityContext.withRunAsUser
 
@@ -4601,11 +4809,11 @@ withRunAsNonRoot(runAsNonRoot)
 withRunAsUser(runAsUser)
 ```
 
-"The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows."
+"The UID to run the entrypoint of the container process.\nDefaults to user specified in image metadata if unspecified.\nMay also be set in PodSecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence.\nNote that this field cannot be set when spec.os.name is windows."
 
 ## obj spec.template.spec.containers.securityContext.capabilities
 
-"The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. Note that this field cannot be set when spec.os.name is windows."
+"The capabilities to add/drop when running containers.\nDefaults to the default set of capabilities granted by the container runtime.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.containers.securityContext.capabilities.withAdd
 
@@ -4645,7 +4853,7 @@ withDropMixin(drop)
 
 ## obj spec.template.spec.containers.securityContext.seLinuxOptions
 
-"The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows."
+"The SELinux context to be applied to the container.\nIf unspecified, the container runtime will allocate a random SELinux context for each\ncontainer.  May also be set in PodSecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.containers.securityContext.seLinuxOptions.withLevel
 
@@ -4681,7 +4889,7 @@ withUser(user)
 
 ## obj spec.template.spec.containers.securityContext.seccompProfile
 
-"The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows."
+"The seccomp options to use by this container. If seccomp options are\nprovided at both the pod & container level, the container options\noverride the pod options.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.containers.securityContext.seccompProfile.withLocalhostProfile
 
@@ -4689,7 +4897,7 @@ withUser(user)
 withLocalhostProfile(localhostProfile)
 ```
 
-"localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must be set if type is \"Localhost\". Must NOT be set for any other type."
+"localhostProfile indicates a profile defined in a file on the node should be used.\nThe profile must be preconfigured on the node to work.\nMust be a descending path, relative to the kubelet's configured seccomp profile location.\nMust be set if type is \"Localhost\". Must NOT be set for any other type."
 
 ### fn spec.template.spec.containers.securityContext.seccompProfile.withType
 
@@ -4697,11 +4905,11 @@ withLocalhostProfile(localhostProfile)
 withType(type)
 ```
 
-"type indicates which kind of seccomp profile will be applied. Valid options are: \n Localhost - a profile defined in a file on the node should be used. RuntimeDefault - the container runtime default profile should be used. Unconfined - no profile should be applied."
+"type indicates which kind of seccomp profile will be applied.\nValid options are:\n\n\nLocalhost - a profile defined in a file on the node should be used.\nRuntimeDefault - the container runtime default profile should be used.\nUnconfined - no profile should be applied."
 
 ## obj spec.template.spec.containers.securityContext.windowsOptions
 
-"The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux."
+"The Windows specific settings applied to all containers.\nIf unspecified, the options from the PodSecurityContext will be used.\nIf set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.\nNote that this field cannot be set when spec.os.name is linux."
 
 ### fn spec.template.spec.containers.securityContext.windowsOptions.withGmsaCredentialSpec
 
@@ -4709,7 +4917,7 @@ withType(type)
 withGmsaCredentialSpec(gmsaCredentialSpec)
 ```
 
-"GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field."
+"GMSACredentialSpec is where the GMSA admission webhook\n(https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the\nGMSA credential spec named by the GMSACredentialSpecName field."
 
 ### fn spec.template.spec.containers.securityContext.windowsOptions.withGmsaCredentialSpecName
 
@@ -4725,7 +4933,7 @@ withGmsaCredentialSpecName(gmsaCredentialSpecName)
 withHostProcess(hostProcess)
 ```
 
-"HostProcess determines if a container should be run as a 'Host Process' container. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers). In addition, if HostProcess is true then HostNetwork must also be set to true."
+"HostProcess determines if a container should be run as a 'Host Process' container.\nAll of a Pod's containers must have the same effective HostProcess value\n(it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).\nIn addition, if HostProcess is true then HostNetwork must also be set to true."
 
 ### fn spec.template.spec.containers.securityContext.windowsOptions.withRunAsUserName
 
@@ -4733,11 +4941,11 @@ withHostProcess(hostProcess)
 withRunAsUserName(runAsUserName)
 ```
 
-"The UserName in Windows to run the entrypoint of the container process. Defaults to the user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence."
+"The UserName in Windows to run the entrypoint of the container process.\nDefaults to the user specified in image metadata if unspecified.\nMay also be set in PodSecurityContext. If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence."
 
 ## obj spec.template.spec.containers.startupProbe
 
-"StartupProbe indicates that the Pod has successfully initialized. If specified, no other probes are executed until this completes successfully. If this probe fails, the Pod will be restarted, just as if the livenessProbe failed. This can be used to provide different probe parameters at the beginning of a Pod's lifecycle, when it might take a long time to load data or warm a cache, than during steady-state operation. This cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"StartupProbe indicates that the Pod has successfully initialized.\nIf specified, no other probes are executed until this completes successfully.\nIf this probe fails, the Pod will be restarted, just as if the livenessProbe failed.\nThis can be used to provide different probe parameters at the beginning of a Pod's lifecycle,\nwhen it might take a long time to load data or warm a cache, than during steady-state operation.\nThis cannot be updated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ### fn spec.template.spec.containers.startupProbe.withFailureThreshold
 
@@ -4745,7 +4953,7 @@ withRunAsUserName(runAsUserName)
 withFailureThreshold(failureThreshold)
 ```
 
-"Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1."
+"Minimum consecutive failures for the probe to be considered failed after having succeeded.\nDefaults to 3. Minimum value is 1."
 
 ### fn spec.template.spec.containers.startupProbe.withInitialDelaySeconds
 
@@ -4753,7 +4961,7 @@ withFailureThreshold(failureThreshold)
 withInitialDelaySeconds(initialDelaySeconds)
 ```
 
-"Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Number of seconds after the container has started before liveness probes are initiated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ### fn spec.template.spec.containers.startupProbe.withPeriodSeconds
 
@@ -4761,7 +4969,7 @@ withInitialDelaySeconds(initialDelaySeconds)
 withPeriodSeconds(periodSeconds)
 ```
 
-"How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1."
+"How often (in seconds) to perform the probe.\nDefault to 10 seconds. Minimum value is 1."
 
 ### fn spec.template.spec.containers.startupProbe.withSuccessThreshold
 
@@ -4769,7 +4977,7 @@ withPeriodSeconds(periodSeconds)
 withSuccessThreshold(successThreshold)
 ```
 
-"Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
+"Minimum consecutive successes for the probe to be considered successful after having failed.\nDefaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
 
 ### fn spec.template.spec.containers.startupProbe.withTerminationGracePeriodSeconds
 
@@ -4777,7 +4985,7 @@ withSuccessThreshold(successThreshold)
 withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
 ```
 
-"Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
+"Optional duration in seconds the pod needs to terminate gracefully upon probe failure.\nThe grace period is the duration in seconds after the processes running in the pod are sent\na termination signal and the time when the processes are forcibly halted with a kill signal.\nSet this value longer than the expected cleanup time for your process.\nIf this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this\nvalue overrides the value provided by the pod spec.\nValue must be non-negative integer. The value zero indicates stop immediately via\nthe kill signal (no opportunity to shut down).\nThis is a beta field and requires enabling ProbeTerminationGracePeriod feature gate.\nMinimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
 
 ### fn spec.template.spec.containers.startupProbe.withTimeoutSeconds
 
@@ -4785,7 +4993,7 @@ withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
 withTimeoutSeconds(timeoutSeconds)
 ```
 
-"Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Number of seconds after which the probe times out.\nDefaults to 1 second. Minimum value is 1.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ## obj spec.template.spec.containers.startupProbe.exec
 
@@ -4797,7 +5005,7 @@ withTimeoutSeconds(timeoutSeconds)
 withCommand(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 ### fn spec.template.spec.containers.startupProbe.exec.withCommandMixin
 
@@ -4805,7 +5013,7 @@ withCommand(command)
 withCommandMixin(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 **Note:** This function appends passed data to existing values
 
@@ -4827,7 +5035,7 @@ withPort(port)
 withService(service)
 ```
 
-"Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md). \n If this is not specified, the default behavior is defined by gRPC."
+"Service is the name of the service to place in the gRPC HealthCheckRequest\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\n\n\nIf this is not specified, the default behavior is defined by gRPC."
 
 ## obj spec.template.spec.containers.startupProbe.httpGet
 
@@ -4839,7 +5047,7 @@ withService(service)
 withHost(host)
 ```
 
-"Host name to connect to, defaults to the pod IP. You probably want to set \"Host\" in httpHeaders instead."
+"Host name to connect to, defaults to the pod IP. You probably want to set\n\"Host\" in httpHeaders instead."
 
 ### fn spec.template.spec.containers.startupProbe.httpGet.withHttpHeaders
 
@@ -4873,7 +5081,7 @@ withPath(path)
 withPort(port)
 ```
 
-"Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Name or number of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ### fn spec.template.spec.containers.startupProbe.httpGet.withScheme
 
@@ -4881,7 +5089,7 @@ withPort(port)
 withScheme(scheme)
 ```
 
-"Scheme to use for connecting to the host. Defaults to HTTP."
+"Scheme to use for connecting to the host.\nDefaults to HTTP."
 
 ## obj spec.template.spec.containers.startupProbe.httpGet.httpHeaders
 
@@ -4893,7 +5101,7 @@ withScheme(scheme)
 withName(name)
 ```
 
-"The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header."
+"The header field name.\nThis will be canonicalized upon output, so case-variant names will be understood as the same header."
 
 ### fn spec.template.spec.containers.startupProbe.httpGet.httpHeaders.withValue
 
@@ -4921,7 +5129,7 @@ withHost(host)
 withPort(port)
 ```
 
-"Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Number or name of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ## obj spec.template.spec.containers.volumeDevices
 
@@ -4945,7 +5153,7 @@ withName(name)
 
 ## obj spec.template.spec.containers.volumeMounts
 
-"Pod volumes to mount into the container's filesystem. Cannot be updated."
+"Pod volumes to mount into the container's filesystem.\nCannot be updated."
 
 ### fn spec.template.spec.containers.volumeMounts.withMountPath
 
@@ -4953,7 +5161,7 @@ withName(name)
 withMountPath(mountPath)
 ```
 
-"Path within the container at which the volume should be mounted.  Must not contain ':'."
+"Path within the container at which the volume should be mounted.  Must\nnot contain ':'."
 
 ### fn spec.template.spec.containers.volumeMounts.withMountPropagation
 
@@ -4961,7 +5169,7 @@ withMountPath(mountPath)
 withMountPropagation(mountPropagation)
 ```
 
-"mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationNone is used. This field is beta in 1.10."
+"mountPropagation determines how mounts are propagated from the host\nto container and the other way around.\nWhen not set, MountPropagationNone is used.\nThis field is beta in 1.10."
 
 ### fn spec.template.spec.containers.volumeMounts.withName
 
@@ -4977,7 +5185,7 @@ withName(name)
 withReadOnly(readOnly)
 ```
 
-"Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false."
+"Mounted read-only if true, read-write otherwise (false or unspecified).\nDefaults to false."
 
 ### fn spec.template.spec.containers.volumeMounts.withSubPath
 
@@ -4985,7 +5193,7 @@ withReadOnly(readOnly)
 withSubPath(subPath)
 ```
 
-"Path within the volume from which the container's volume should be mounted. Defaults to \"\" (volume's root)."
+"Path within the volume from which the container's volume should be mounted.\nDefaults to \"\" (volume's root)."
 
 ### fn spec.template.spec.containers.volumeMounts.withSubPathExpr
 
@@ -4993,11 +5201,11 @@ withSubPath(subPath)
 withSubPathExpr(subPathExpr)
 ```
 
-"Expanded path within the volume from which the container's volume should be mounted. Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container's environment. Defaults to \"\" (volume's root). SubPathExpr and SubPath are mutually exclusive."
+"Expanded path within the volume from which the container's volume should be mounted.\nBehaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container's environment.\nDefaults to \"\" (volume's root).\nSubPathExpr and SubPath are mutually exclusive."
 
 ## obj spec.template.spec.dnsConfig
 
-"Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy."
+"Specifies the DNS parameters of a pod.\nParameters specified here will be merged to the generated DNS\nconfiguration based on DNSPolicy."
 
 ### fn spec.template.spec.dnsConfig.withNameservers
 
@@ -5005,7 +5213,7 @@ withSubPathExpr(subPathExpr)
 withNameservers(nameservers)
 ```
 
-"A list of DNS name server IP addresses. This will be appended to the base nameservers generated from DNSPolicy. Duplicated nameservers will be removed."
+"A list of DNS name server IP addresses.\nThis will be appended to the base nameservers generated from DNSPolicy.\nDuplicated nameservers will be removed."
 
 ### fn spec.template.spec.dnsConfig.withNameserversMixin
 
@@ -5013,7 +5221,7 @@ withNameservers(nameservers)
 withNameserversMixin(nameservers)
 ```
 
-"A list of DNS name server IP addresses. This will be appended to the base nameservers generated from DNSPolicy. Duplicated nameservers will be removed."
+"A list of DNS name server IP addresses.\nThis will be appended to the base nameservers generated from DNSPolicy.\nDuplicated nameservers will be removed."
 
 **Note:** This function appends passed data to existing values
 
@@ -5023,7 +5231,7 @@ withNameserversMixin(nameservers)
 withOptions(options)
 ```
 
-"A list of DNS resolver options. This will be merged with the base options generated from DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy."
+"A list of DNS resolver options.\nThis will be merged with the base options generated from DNSPolicy.\nDuplicated entries will be removed. Resolution options given in Options\nwill override those that appear in the base DNSPolicy."
 
 ### fn spec.template.spec.dnsConfig.withOptionsMixin
 
@@ -5031,7 +5239,7 @@ withOptions(options)
 withOptionsMixin(options)
 ```
 
-"A list of DNS resolver options. This will be merged with the base options generated from DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy."
+"A list of DNS resolver options.\nThis will be merged with the base options generated from DNSPolicy.\nDuplicated entries will be removed. Resolution options given in Options\nwill override those that appear in the base DNSPolicy."
 
 **Note:** This function appends passed data to existing values
 
@@ -5041,7 +5249,7 @@ withOptionsMixin(options)
 withSearches(searches)
 ```
 
-"A list of DNS search domains for host-name lookup. This will be appended to the base search paths generated from DNSPolicy. Duplicated search paths will be removed."
+"A list of DNS search domains for host-name lookup.\nThis will be appended to the base search paths generated from DNSPolicy.\nDuplicated search paths will be removed."
 
 ### fn spec.template.spec.dnsConfig.withSearchesMixin
 
@@ -5049,13 +5257,13 @@ withSearches(searches)
 withSearchesMixin(searches)
 ```
 
-"A list of DNS search domains for host-name lookup. This will be appended to the base search paths generated from DNSPolicy. Duplicated search paths will be removed."
+"A list of DNS search domains for host-name lookup.\nThis will be appended to the base search paths generated from DNSPolicy.\nDuplicated search paths will be removed."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec.dnsConfig.options
 
-"A list of DNS resolver options. This will be merged with the base options generated from DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy."
+"A list of DNS resolver options.\nThis will be merged with the base options generated from DNSPolicy.\nDuplicated entries will be removed. Resolution options given in Options\nwill override those that appear in the base DNSPolicy."
 
 ### fn spec.template.spec.dnsConfig.options.withName
 
@@ -5075,7 +5283,7 @@ withValue(value)
 
 ## obj spec.template.spec.ephemeralContainers
 
-"List of ephemeral containers run in this pod. Ephemeral containers may be run in an existing pod to perform user-initiated actions such as debugging. This list cannot be specified when creating a pod, and it cannot be modified by updating the pod spec. In order to add an ephemeral container to an existing pod, use the pod's ephemeralcontainers subresource."
+"List of ephemeral containers run in this pod. Ephemeral containers may be run in an existing\npod to perform user-initiated actions such as debugging. This list cannot be specified when\ncreating a pod, and it cannot be modified by updating the pod spec. In order to add an\nephemeral container to an existing pod, use the pod's ephemeralcontainers subresource."
 
 ### fn spec.template.spec.ephemeralContainers.withArgs
 
@@ -5083,7 +5291,7 @@ withValue(value)
 withArgs(args)
 ```
 
-"Arguments to the entrypoint. The image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
+"Arguments to the entrypoint.\nThe image's CMD is used if this is not provided.\nVariable references $(VAR_NAME) are expanded using the container's environment. If a variable\ncannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced\nto a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will\nproduce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless\nof whether the variable exists or not. Cannot be updated.\nMore info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
 
 ### fn spec.template.spec.ephemeralContainers.withArgsMixin
 
@@ -5091,7 +5299,7 @@ withArgs(args)
 withArgsMixin(args)
 ```
 
-"Arguments to the entrypoint. The image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
+"Arguments to the entrypoint.\nThe image's CMD is used if this is not provided.\nVariable references $(VAR_NAME) are expanded using the container's environment. If a variable\ncannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced\nto a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will\nproduce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless\nof whether the variable exists or not. Cannot be updated.\nMore info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
 
 **Note:** This function appends passed data to existing values
 
@@ -5101,7 +5309,7 @@ withArgsMixin(args)
 withCommand(command)
 ```
 
-"Entrypoint array. Not executed within a shell. The image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
+"Entrypoint array. Not executed within a shell.\nThe image's ENTRYPOINT is used if this is not provided.\nVariable references $(VAR_NAME) are expanded using the container's environment. If a variable\ncannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced\nto a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will\nproduce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless\nof whether the variable exists or not. Cannot be updated.\nMore info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
 
 ### fn spec.template.spec.ephemeralContainers.withCommandMixin
 
@@ -5109,7 +5317,7 @@ withCommand(command)
 withCommandMixin(command)
 ```
 
-"Entrypoint array. Not executed within a shell. The image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
+"Entrypoint array. Not executed within a shell.\nThe image's ENTRYPOINT is used if this is not provided.\nVariable references $(VAR_NAME) are expanded using the container's environment. If a variable\ncannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced\nto a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will\nproduce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless\nof whether the variable exists or not. Cannot be updated.\nMore info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
 
 **Note:** This function appends passed data to existing values
 
@@ -5119,7 +5327,7 @@ withCommandMixin(command)
 withEnv(env)
 ```
 
-"List of environment variables to set in the container. Cannot be updated."
+"List of environment variables to set in the container.\nCannot be updated."
 
 ### fn spec.template.spec.ephemeralContainers.withEnvFrom
 
@@ -5127,7 +5335,7 @@ withEnv(env)
 withEnvFrom(envFrom)
 ```
 
-"List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated."
+"List of sources to populate environment variables in the container.\nThe keys defined within a source must be a C_IDENTIFIER. All invalid keys\nwill be reported as an event when the container is starting. When a key exists in multiple\nsources, the value associated with the last source will take precedence.\nValues defined by an Env with a duplicate key will take precedence.\nCannot be updated."
 
 ### fn spec.template.spec.ephemeralContainers.withEnvFromMixin
 
@@ -5135,7 +5343,7 @@ withEnvFrom(envFrom)
 withEnvFromMixin(envFrom)
 ```
 
-"List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated."
+"List of sources to populate environment variables in the container.\nThe keys defined within a source must be a C_IDENTIFIER. All invalid keys\nwill be reported as an event when the container is starting. When a key exists in multiple\nsources, the value associated with the last source will take precedence.\nValues defined by an Env with a duplicate key will take precedence.\nCannot be updated."
 
 **Note:** This function appends passed data to existing values
 
@@ -5145,7 +5353,7 @@ withEnvFromMixin(envFrom)
 withEnvMixin(env)
 ```
 
-"List of environment variables to set in the container. Cannot be updated."
+"List of environment variables to set in the container.\nCannot be updated."
 
 **Note:** This function appends passed data to existing values
 
@@ -5155,7 +5363,7 @@ withEnvMixin(env)
 withImage(image)
 ```
 
-"Container image name. More info: https://kubernetes.io/docs/concepts/containers/images"
+"Container image name.\nMore info: https://kubernetes.io/docs/concepts/containers/images"
 
 ### fn spec.template.spec.ephemeralContainers.withImagePullPolicy
 
@@ -5163,7 +5371,7 @@ withImage(image)
 withImagePullPolicy(imagePullPolicy)
 ```
 
-"Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images"
+"Image pull policy.\nOne of Always, Never, IfNotPresent.\nDefaults to Always if :latest tag is specified, or IfNotPresent otherwise.\nCannot be updated.\nMore info: https://kubernetes.io/docs/concepts/containers/images#updating-images"
 
 ### fn spec.template.spec.ephemeralContainers.withName
 
@@ -5171,7 +5379,7 @@ withImagePullPolicy(imagePullPolicy)
 withName(name)
 ```
 
-"Name of the ephemeral container specified as a DNS_LABEL. This name must be unique among all containers, init containers and ephemeral containers."
+"Name of the ephemeral container specified as a DNS_LABEL.\nThis name must be unique among all containers, init containers and ephemeral containers."
 
 ### fn spec.template.spec.ephemeralContainers.withPorts
 
@@ -5215,7 +5423,7 @@ withResizePolicyMixin(resizePolicy)
 withRestartPolicy(restartPolicy)
 ```
 
-"Restart policy for the container to manage the restart behavior of each container within a pod. This may only be set for init containers. You cannot set this field on ephemeral containers."
+"Restart policy for the container to manage the restart behavior of each\ncontainer within a pod.\nThis may only be set for init containers. You cannot set this field on\nephemeral containers."
 
 ### fn spec.template.spec.ephemeralContainers.withStdin
 
@@ -5223,7 +5431,7 @@ withRestartPolicy(restartPolicy)
 withStdin(stdin)
 ```
 
-"Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false."
+"Whether this container should allocate a buffer for stdin in the container runtime. If this\nis not set, reads from stdin in the container will always result in EOF.\nDefault is false."
 
 ### fn spec.template.spec.ephemeralContainers.withStdinOnce
 
@@ -5231,7 +5439,7 @@ withStdin(stdin)
 withStdinOnce(stdinOnce)
 ```
 
-"Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false"
+"Whether the container runtime should close the stdin channel after it has been opened by\na single attach. When stdin is true the stdin stream will remain open across multiple attach\nsessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the\nfirst client attaches to stdin, and then remains open and accepts data until the client disconnects,\nat which time stdin is closed and remains closed until the container is restarted. If this\nflag is false, a container processes that reads from stdin will never receive an EOF.\nDefault is false"
 
 ### fn spec.template.spec.ephemeralContainers.withTargetContainerName
 
@@ -5239,7 +5447,7 @@ withStdinOnce(stdinOnce)
 withTargetContainerName(targetContainerName)
 ```
 
-"If set, the name of the container from PodSpec that this ephemeral container targets. The ephemeral container will be run in the namespaces (IPC, PID, etc) of this container. If not set then the ephemeral container uses the namespaces configured in the Pod spec. \n The container runtime must implement support for this feature. If the runtime does not support namespace targeting then the result of setting this field is undefined."
+"If set, the name of the container from PodSpec that this ephemeral container targets.\nThe ephemeral container will be run in the namespaces (IPC, PID, etc) of this container.\nIf not set then the ephemeral container uses the namespaces configured in the Pod spec.\n\n\nThe container runtime must implement support for this feature. If the runtime does not\nsupport namespace targeting then the result of setting this field is undefined."
 
 ### fn spec.template.spec.ephemeralContainers.withTerminationMessagePath
 
@@ -5247,7 +5455,7 @@ withTargetContainerName(targetContainerName)
 withTerminationMessagePath(terminationMessagePath)
 ```
 
-"Optional: Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated."
+"Optional: Path at which the file to which the container's termination message\nwill be written is mounted into the container's filesystem.\nMessage written is intended to be brief final status, such as an assertion failure message.\nWill be truncated by the node if greater than 4096 bytes. The total message length across\nall containers will be limited to 12kb.\nDefaults to /dev/termination-log.\nCannot be updated."
 
 ### fn spec.template.spec.ephemeralContainers.withTerminationMessagePolicy
 
@@ -5255,7 +5463,7 @@ withTerminationMessagePath(terminationMessagePath)
 withTerminationMessagePolicy(terminationMessagePolicy)
 ```
 
-"Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated."
+"Indicate how the termination message should be populated. File will use the contents of\nterminationMessagePath to populate the container status message on both success and failure.\nFallbackToLogsOnError will use the last chunk of container log output if the termination\nmessage file is empty and the container exited with an error.\nThe log output is limited to 2048 bytes or 80 lines, whichever is smaller.\nDefaults to File.\nCannot be updated."
 
 ### fn spec.template.spec.ephemeralContainers.withTty
 
@@ -5263,7 +5471,7 @@ withTerminationMessagePolicy(terminationMessagePolicy)
 withTty(tty)
 ```
 
-"Whether this container should allocate a TTY for itself, also requires 'stdin' to be true. Default is false."
+"Whether this container should allocate a TTY for itself, also requires 'stdin' to be true.\nDefault is false."
 
 ### fn spec.template.spec.ephemeralContainers.withVolumeDevices
 
@@ -5289,7 +5497,7 @@ withVolumeDevicesMixin(volumeDevices)
 withVolumeMounts(volumeMounts)
 ```
 
-"Pod volumes to mount into the container's filesystem. Subpath mounts are not allowed for ephemeral containers. Cannot be updated."
+"Pod volumes to mount into the container's filesystem. Subpath mounts are not allowed for ephemeral containers.\nCannot be updated."
 
 ### fn spec.template.spec.ephemeralContainers.withVolumeMountsMixin
 
@@ -5297,7 +5505,7 @@ withVolumeMounts(volumeMounts)
 withVolumeMountsMixin(volumeMounts)
 ```
 
-"Pod volumes to mount into the container's filesystem. Subpath mounts are not allowed for ephemeral containers. Cannot be updated."
+"Pod volumes to mount into the container's filesystem. Subpath mounts are not allowed for ephemeral containers.\nCannot be updated."
 
 **Note:** This function appends passed data to existing values
 
@@ -5307,11 +5515,11 @@ withVolumeMountsMixin(volumeMounts)
 withWorkingDir(workingDir)
 ```
 
-"Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated."
+"Container's working directory.\nIf not specified, the container runtime's default will be used, which\nmight be configured in the container image.\nCannot be updated."
 
 ## obj spec.template.spec.ephemeralContainers.env
 
-"List of environment variables to set in the container. Cannot be updated."
+"List of environment variables to set in the container.\nCannot be updated."
 
 ### fn spec.template.spec.ephemeralContainers.env.withName
 
@@ -5327,7 +5535,7 @@ withName(name)
 withValue(value)
 ```
 
-"Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to \"\"."
+"Variable references $(VAR_NAME) are expanded\nusing the previously defined environment variables in the container and\nany service environment variables. If a variable cannot be resolved,\nthe reference in the input string will be unchanged. Double $$ are reduced\nto a single $, which allows for escaping the $(VAR_NAME) syntax: i.e.\n\"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\".\nEscaped references will never be expanded, regardless of whether the variable\nexists or not.\nDefaults to \"\"."
 
 ## obj spec.template.spec.ephemeralContainers.env.valueFrom
 
@@ -5351,7 +5559,7 @@ withKey(key)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.template.spec.ephemeralContainers.env.valueFrom.configMapKeyRef.withOptional
 
@@ -5363,7 +5571,7 @@ withOptional(optional)
 
 ## obj spec.template.spec.ephemeralContainers.env.valueFrom.fieldRef
 
-"Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs."
+"Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`,\nspec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs."
 
 ### fn spec.template.spec.ephemeralContainers.env.valueFrom.fieldRef.withApiVersion
 
@@ -5383,7 +5591,7 @@ withFieldPath(fieldPath)
 
 ## obj spec.template.spec.ephemeralContainers.env.valueFrom.resourceFieldRef
 
-"Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported."
+"Selects a resource of the container: only resources limits and requests\n(limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported."
 
 ### fn spec.template.spec.ephemeralContainers.env.valueFrom.resourceFieldRef.withContainerName
 
@@ -5427,7 +5635,7 @@ withKey(key)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.template.spec.ephemeralContainers.env.valueFrom.secretKeyRef.withOptional
 
@@ -5439,7 +5647,7 @@ withOptional(optional)
 
 ## obj spec.template.spec.ephemeralContainers.envFrom
 
-"List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated."
+"List of sources to populate environment variables in the container.\nThe keys defined within a source must be a C_IDENTIFIER. All invalid keys\nwill be reported as an event when the container is starting. When a key exists in multiple\nsources, the value associated with the last source will take precedence.\nValues defined by an Env with a duplicate key will take precedence.\nCannot be updated."
 
 ### fn spec.template.spec.ephemeralContainers.envFrom.withPrefix
 
@@ -5459,7 +5667,7 @@ withPrefix(prefix)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.template.spec.ephemeralContainers.envFrom.configMapRef.withOptional
 
@@ -5479,7 +5687,7 @@ withOptional(optional)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.template.spec.ephemeralContainers.envFrom.secretRef.withOptional
 
@@ -5495,7 +5703,7 @@ withOptional(optional)
 
 ## obj spec.template.spec.ephemeralContainers.lifecycle.postStart
 
-"PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks"
+"PostStart is called immediately after a container is created. If the handler fails,\nthe container is terminated and restarted according to its restart policy.\nOther management of the container blocks until the hook completes.\nMore info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks"
 
 ## obj spec.template.spec.ephemeralContainers.lifecycle.postStart.exec
 
@@ -5507,7 +5715,7 @@ withOptional(optional)
 withCommand(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 ### fn spec.template.spec.ephemeralContainers.lifecycle.postStart.exec.withCommandMixin
 
@@ -5515,7 +5723,7 @@ withCommand(command)
 withCommandMixin(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 **Note:** This function appends passed data to existing values
 
@@ -5529,7 +5737,7 @@ withCommandMixin(command)
 withHost(host)
 ```
 
-"Host name to connect to, defaults to the pod IP. You probably want to set \"Host\" in httpHeaders instead."
+"Host name to connect to, defaults to the pod IP. You probably want to set\n\"Host\" in httpHeaders instead."
 
 ### fn spec.template.spec.ephemeralContainers.lifecycle.postStart.httpGet.withHttpHeaders
 
@@ -5563,7 +5771,7 @@ withPath(path)
 withPort(port)
 ```
 
-"Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Name or number of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ### fn spec.template.spec.ephemeralContainers.lifecycle.postStart.httpGet.withScheme
 
@@ -5571,7 +5779,7 @@ withPort(port)
 withScheme(scheme)
 ```
 
-"Scheme to use for connecting to the host. Defaults to HTTP."
+"Scheme to use for connecting to the host.\nDefaults to HTTP."
 
 ## obj spec.template.spec.ephemeralContainers.lifecycle.postStart.httpGet.httpHeaders
 
@@ -5583,7 +5791,7 @@ withScheme(scheme)
 withName(name)
 ```
 
-"The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header."
+"The header field name.\nThis will be canonicalized upon output, so case-variant names will be understood as the same header."
 
 ### fn spec.template.spec.ephemeralContainers.lifecycle.postStart.httpGet.httpHeaders.withValue
 
@@ -5593,9 +5801,21 @@ withValue(value)
 
 "The header field value"
 
+## obj spec.template.spec.ephemeralContainers.lifecycle.postStart.sleep
+
+"Sleep represents the duration that the container should sleep before being terminated."
+
+### fn spec.template.spec.ephemeralContainers.lifecycle.postStart.sleep.withSeconds
+
+```ts
+withSeconds(seconds)
+```
+
+"Seconds is the number of seconds to sleep."
+
 ## obj spec.template.spec.ephemeralContainers.lifecycle.postStart.tcpSocket
 
-"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified."
+"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\nfor the backward compatibility. There are no validation of this field and\nlifecycle hooks will fail in runtime when tcp handler is specified."
 
 ### fn spec.template.spec.ephemeralContainers.lifecycle.postStart.tcpSocket.withHost
 
@@ -5611,11 +5831,11 @@ withHost(host)
 withPort(port)
 ```
 
-"Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Number or name of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ## obj spec.template.spec.ephemeralContainers.lifecycle.preStop
 
-"PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The Pod's termination grace period countdown begins before the PreStop hook is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period (unless delayed by finalizers). Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks"
+"PreStop is called immediately before a container is terminated due to an\nAPI request or management event such as liveness/startup probe failure,\npreemption, resource contention, etc. The handler is not called if the\ncontainer crashes or exits. The Pod's termination grace period countdown begins before the\nPreStop hook is executed. Regardless of the outcome of the handler, the\ncontainer will eventually terminate within the Pod's termination grace\nperiod (unless delayed by finalizers). Other management of the container blocks until the hook completes\nor until the termination grace period is reached.\nMore info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks"
 
 ## obj spec.template.spec.ephemeralContainers.lifecycle.preStop.exec
 
@@ -5627,7 +5847,7 @@ withPort(port)
 withCommand(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 ### fn spec.template.spec.ephemeralContainers.lifecycle.preStop.exec.withCommandMixin
 
@@ -5635,7 +5855,7 @@ withCommand(command)
 withCommandMixin(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 **Note:** This function appends passed data to existing values
 
@@ -5649,7 +5869,7 @@ withCommandMixin(command)
 withHost(host)
 ```
 
-"Host name to connect to, defaults to the pod IP. You probably want to set \"Host\" in httpHeaders instead."
+"Host name to connect to, defaults to the pod IP. You probably want to set\n\"Host\" in httpHeaders instead."
 
 ### fn spec.template.spec.ephemeralContainers.lifecycle.preStop.httpGet.withHttpHeaders
 
@@ -5683,7 +5903,7 @@ withPath(path)
 withPort(port)
 ```
 
-"Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Name or number of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ### fn spec.template.spec.ephemeralContainers.lifecycle.preStop.httpGet.withScheme
 
@@ -5691,7 +5911,7 @@ withPort(port)
 withScheme(scheme)
 ```
 
-"Scheme to use for connecting to the host. Defaults to HTTP."
+"Scheme to use for connecting to the host.\nDefaults to HTTP."
 
 ## obj spec.template.spec.ephemeralContainers.lifecycle.preStop.httpGet.httpHeaders
 
@@ -5703,7 +5923,7 @@ withScheme(scheme)
 withName(name)
 ```
 
-"The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header."
+"The header field name.\nThis will be canonicalized upon output, so case-variant names will be understood as the same header."
 
 ### fn spec.template.spec.ephemeralContainers.lifecycle.preStop.httpGet.httpHeaders.withValue
 
@@ -5713,9 +5933,21 @@ withValue(value)
 
 "The header field value"
 
+## obj spec.template.spec.ephemeralContainers.lifecycle.preStop.sleep
+
+"Sleep represents the duration that the container should sleep before being terminated."
+
+### fn spec.template.spec.ephemeralContainers.lifecycle.preStop.sleep.withSeconds
+
+```ts
+withSeconds(seconds)
+```
+
+"Seconds is the number of seconds to sleep."
+
 ## obj spec.template.spec.ephemeralContainers.lifecycle.preStop.tcpSocket
 
-"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified."
+"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\nfor the backward compatibility. There are no validation of this field and\nlifecycle hooks will fail in runtime when tcp handler is specified."
 
 ### fn spec.template.spec.ephemeralContainers.lifecycle.preStop.tcpSocket.withHost
 
@@ -5731,7 +5963,7 @@ withHost(host)
 withPort(port)
 ```
 
-"Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Number or name of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ## obj spec.template.spec.ephemeralContainers.livenessProbe
 
@@ -5743,7 +5975,7 @@ withPort(port)
 withFailureThreshold(failureThreshold)
 ```
 
-"Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1."
+"Minimum consecutive failures for the probe to be considered failed after having succeeded.\nDefaults to 3. Minimum value is 1."
 
 ### fn spec.template.spec.ephemeralContainers.livenessProbe.withInitialDelaySeconds
 
@@ -5751,7 +5983,7 @@ withFailureThreshold(failureThreshold)
 withInitialDelaySeconds(initialDelaySeconds)
 ```
 
-"Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Number of seconds after the container has started before liveness probes are initiated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ### fn spec.template.spec.ephemeralContainers.livenessProbe.withPeriodSeconds
 
@@ -5759,7 +5991,7 @@ withInitialDelaySeconds(initialDelaySeconds)
 withPeriodSeconds(periodSeconds)
 ```
 
-"How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1."
+"How often (in seconds) to perform the probe.\nDefault to 10 seconds. Minimum value is 1."
 
 ### fn spec.template.spec.ephemeralContainers.livenessProbe.withSuccessThreshold
 
@@ -5767,7 +5999,7 @@ withPeriodSeconds(periodSeconds)
 withSuccessThreshold(successThreshold)
 ```
 
-"Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
+"Minimum consecutive successes for the probe to be considered successful after having failed.\nDefaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
 
 ### fn spec.template.spec.ephemeralContainers.livenessProbe.withTerminationGracePeriodSeconds
 
@@ -5775,7 +6007,7 @@ withSuccessThreshold(successThreshold)
 withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
 ```
 
-"Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
+"Optional duration in seconds the pod needs to terminate gracefully upon probe failure.\nThe grace period is the duration in seconds after the processes running in the pod are sent\na termination signal and the time when the processes are forcibly halted with a kill signal.\nSet this value longer than the expected cleanup time for your process.\nIf this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this\nvalue overrides the value provided by the pod spec.\nValue must be non-negative integer. The value zero indicates stop immediately via\nthe kill signal (no opportunity to shut down).\nThis is a beta field and requires enabling ProbeTerminationGracePeriod feature gate.\nMinimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
 
 ### fn spec.template.spec.ephemeralContainers.livenessProbe.withTimeoutSeconds
 
@@ -5783,7 +6015,7 @@ withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
 withTimeoutSeconds(timeoutSeconds)
 ```
 
-"Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Number of seconds after which the probe times out.\nDefaults to 1 second. Minimum value is 1.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ## obj spec.template.spec.ephemeralContainers.livenessProbe.exec
 
@@ -5795,7 +6027,7 @@ withTimeoutSeconds(timeoutSeconds)
 withCommand(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 ### fn spec.template.spec.ephemeralContainers.livenessProbe.exec.withCommandMixin
 
@@ -5803,7 +6035,7 @@ withCommand(command)
 withCommandMixin(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 **Note:** This function appends passed data to existing values
 
@@ -5825,7 +6057,7 @@ withPort(port)
 withService(service)
 ```
 
-"Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md). \n If this is not specified, the default behavior is defined by gRPC."
+"Service is the name of the service to place in the gRPC HealthCheckRequest\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\n\n\nIf this is not specified, the default behavior is defined by gRPC."
 
 ## obj spec.template.spec.ephemeralContainers.livenessProbe.httpGet
 
@@ -5837,7 +6069,7 @@ withService(service)
 withHost(host)
 ```
 
-"Host name to connect to, defaults to the pod IP. You probably want to set \"Host\" in httpHeaders instead."
+"Host name to connect to, defaults to the pod IP. You probably want to set\n\"Host\" in httpHeaders instead."
 
 ### fn spec.template.spec.ephemeralContainers.livenessProbe.httpGet.withHttpHeaders
 
@@ -5871,7 +6103,7 @@ withPath(path)
 withPort(port)
 ```
 
-"Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Name or number of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ### fn spec.template.spec.ephemeralContainers.livenessProbe.httpGet.withScheme
 
@@ -5879,7 +6111,7 @@ withPort(port)
 withScheme(scheme)
 ```
 
-"Scheme to use for connecting to the host. Defaults to HTTP."
+"Scheme to use for connecting to the host.\nDefaults to HTTP."
 
 ## obj spec.template.spec.ephemeralContainers.livenessProbe.httpGet.httpHeaders
 
@@ -5891,7 +6123,7 @@ withScheme(scheme)
 withName(name)
 ```
 
-"The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header."
+"The header field name.\nThis will be canonicalized upon output, so case-variant names will be understood as the same header."
 
 ### fn spec.template.spec.ephemeralContainers.livenessProbe.httpGet.httpHeaders.withValue
 
@@ -5919,7 +6151,7 @@ withHost(host)
 withPort(port)
 ```
 
-"Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Number or name of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ## obj spec.template.spec.ephemeralContainers.ports
 
@@ -5931,7 +6163,7 @@ withPort(port)
 withContainerPort(containerPort)
 ```
 
-"Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536."
+"Number of port to expose on the pod's IP address.\nThis must be a valid port number, 0 < x < 65536."
 
 ### fn spec.template.spec.ephemeralContainers.ports.withHostIP
 
@@ -5947,7 +6179,7 @@ withHostIP(hostIP)
 withHostPort(hostPort)
 ```
 
-"Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this."
+"Number of port to expose on the host.\nIf specified, this must be a valid port number, 0 < x < 65536.\nIf HostNetwork is specified, this must match ContainerPort.\nMost containers do not need this."
 
 ### fn spec.template.spec.ephemeralContainers.ports.withName
 
@@ -5955,7 +6187,7 @@ withHostPort(hostPort)
 withName(name)
 ```
 
-"If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services."
+"If specified, this must be an IANA_SVC_NAME and unique within the pod. Each\nnamed port in a pod must have a unique name. Name for the port that can be\nreferred to by services."
 
 ### fn spec.template.spec.ephemeralContainers.ports.withProtocol
 
@@ -5963,7 +6195,7 @@ withName(name)
 withProtocol(protocol)
 ```
 
-"Protocol for port. Must be UDP, TCP, or SCTP. Defaults to \"TCP\"."
+"Protocol for port. Must be UDP, TCP, or SCTP.\nDefaults to \"TCP\"."
 
 ## obj spec.template.spec.ephemeralContainers.readinessProbe
 
@@ -5975,7 +6207,7 @@ withProtocol(protocol)
 withFailureThreshold(failureThreshold)
 ```
 
-"Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1."
+"Minimum consecutive failures for the probe to be considered failed after having succeeded.\nDefaults to 3. Minimum value is 1."
 
 ### fn spec.template.spec.ephemeralContainers.readinessProbe.withInitialDelaySeconds
 
@@ -5983,7 +6215,7 @@ withFailureThreshold(failureThreshold)
 withInitialDelaySeconds(initialDelaySeconds)
 ```
 
-"Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Number of seconds after the container has started before liveness probes are initiated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ### fn spec.template.spec.ephemeralContainers.readinessProbe.withPeriodSeconds
 
@@ -5991,7 +6223,7 @@ withInitialDelaySeconds(initialDelaySeconds)
 withPeriodSeconds(periodSeconds)
 ```
 
-"How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1."
+"How often (in seconds) to perform the probe.\nDefault to 10 seconds. Minimum value is 1."
 
 ### fn spec.template.spec.ephemeralContainers.readinessProbe.withSuccessThreshold
 
@@ -5999,7 +6231,7 @@ withPeriodSeconds(periodSeconds)
 withSuccessThreshold(successThreshold)
 ```
 
-"Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
+"Minimum consecutive successes for the probe to be considered successful after having failed.\nDefaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
 
 ### fn spec.template.spec.ephemeralContainers.readinessProbe.withTerminationGracePeriodSeconds
 
@@ -6007,7 +6239,7 @@ withSuccessThreshold(successThreshold)
 withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
 ```
 
-"Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
+"Optional duration in seconds the pod needs to terminate gracefully upon probe failure.\nThe grace period is the duration in seconds after the processes running in the pod are sent\na termination signal and the time when the processes are forcibly halted with a kill signal.\nSet this value longer than the expected cleanup time for your process.\nIf this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this\nvalue overrides the value provided by the pod spec.\nValue must be non-negative integer. The value zero indicates stop immediately via\nthe kill signal (no opportunity to shut down).\nThis is a beta field and requires enabling ProbeTerminationGracePeriod feature gate.\nMinimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
 
 ### fn spec.template.spec.ephemeralContainers.readinessProbe.withTimeoutSeconds
 
@@ -6015,7 +6247,7 @@ withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
 withTimeoutSeconds(timeoutSeconds)
 ```
 
-"Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Number of seconds after which the probe times out.\nDefaults to 1 second. Minimum value is 1.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ## obj spec.template.spec.ephemeralContainers.readinessProbe.exec
 
@@ -6027,7 +6259,7 @@ withTimeoutSeconds(timeoutSeconds)
 withCommand(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 ### fn spec.template.spec.ephemeralContainers.readinessProbe.exec.withCommandMixin
 
@@ -6035,7 +6267,7 @@ withCommand(command)
 withCommandMixin(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 **Note:** This function appends passed data to existing values
 
@@ -6057,7 +6289,7 @@ withPort(port)
 withService(service)
 ```
 
-"Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md). \n If this is not specified, the default behavior is defined by gRPC."
+"Service is the name of the service to place in the gRPC HealthCheckRequest\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\n\n\nIf this is not specified, the default behavior is defined by gRPC."
 
 ## obj spec.template.spec.ephemeralContainers.readinessProbe.httpGet
 
@@ -6069,7 +6301,7 @@ withService(service)
 withHost(host)
 ```
 
-"Host name to connect to, defaults to the pod IP. You probably want to set \"Host\" in httpHeaders instead."
+"Host name to connect to, defaults to the pod IP. You probably want to set\n\"Host\" in httpHeaders instead."
 
 ### fn spec.template.spec.ephemeralContainers.readinessProbe.httpGet.withHttpHeaders
 
@@ -6103,7 +6335,7 @@ withPath(path)
 withPort(port)
 ```
 
-"Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Name or number of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ### fn spec.template.spec.ephemeralContainers.readinessProbe.httpGet.withScheme
 
@@ -6111,7 +6343,7 @@ withPort(port)
 withScheme(scheme)
 ```
 
-"Scheme to use for connecting to the host. Defaults to HTTP."
+"Scheme to use for connecting to the host.\nDefaults to HTTP."
 
 ## obj spec.template.spec.ephemeralContainers.readinessProbe.httpGet.httpHeaders
 
@@ -6123,7 +6355,7 @@ withScheme(scheme)
 withName(name)
 ```
 
-"The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header."
+"The header field name.\nThis will be canonicalized upon output, so case-variant names will be understood as the same header."
 
 ### fn spec.template.spec.ephemeralContainers.readinessProbe.httpGet.httpHeaders.withValue
 
@@ -6151,7 +6383,7 @@ withHost(host)
 withPort(port)
 ```
 
-"Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Number or name of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ## obj spec.template.spec.ephemeralContainers.resizePolicy
 
@@ -6163,7 +6395,7 @@ withPort(port)
 withResourceName(resourceName)
 ```
 
-"Name of the resource to which this resource resize policy applies. Supported values: cpu, memory."
+"Name of the resource to which this resource resize policy applies.\nSupported values: cpu, memory."
 
 ### fn spec.template.spec.ephemeralContainers.resizePolicy.withRestartPolicy
 
@@ -6171,11 +6403,11 @@ withResourceName(resourceName)
 withRestartPolicy(restartPolicy)
 ```
 
-"Restart policy to apply when specified resource is resized. If not specified, it defaults to NotRequired."
+"Restart policy to apply when specified resource is resized.\nIf not specified, it defaults to NotRequired."
 
 ## obj spec.template.spec.ephemeralContainers.resources
 
-"Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod."
+"Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources\nalready allocated to the pod."
 
 ### fn spec.template.spec.ephemeralContainers.resources.withClaims
 
@@ -6183,7 +6415,7 @@ withRestartPolicy(restartPolicy)
 withClaims(claims)
 ```
 
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
+"Claims lists the names of resources, defined in spec.resourceClaims,\nthat are used by this container.\n\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\n\nThis field is immutable. It can only be set for containers."
 
 ### fn spec.template.spec.ephemeralContainers.resources.withClaimsMixin
 
@@ -6191,7 +6423,7 @@ withClaims(claims)
 withClaimsMixin(claims)
 ```
 
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
+"Claims lists the names of resources, defined in spec.resourceClaims,\nthat are used by this container.\n\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\n\nThis field is immutable. It can only be set for containers."
 
 **Note:** This function appends passed data to existing values
 
@@ -6201,7 +6433,7 @@ withClaimsMixin(claims)
 withLimits(limits)
 ```
 
-"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 ### fn spec.template.spec.ephemeralContainers.resources.withLimitsMixin
 
@@ -6209,7 +6441,7 @@ withLimits(limits)
 withLimitsMixin(limits)
 ```
 
-"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 **Note:** This function appends passed data to existing values
 
@@ -6219,7 +6451,7 @@ withLimitsMixin(limits)
 withRequests(requests)
 ```
 
-"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value. Requests cannot exceed Limits.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 ### fn spec.template.spec.ephemeralContainers.resources.withRequestsMixin
 
@@ -6227,13 +6459,13 @@ withRequests(requests)
 withRequestsMixin(requests)
 ```
 
-"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value. Requests cannot exceed Limits.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec.ephemeralContainers.resources.claims
 
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
+"Claims lists the names of resources, defined in spec.resourceClaims,\nthat are used by this container.\n\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\n\nThis field is immutable. It can only be set for containers."
 
 ### fn spec.template.spec.ephemeralContainers.resources.claims.withName
 
@@ -6241,11 +6473,11 @@ withRequestsMixin(requests)
 withName(name)
 ```
 
-"Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container."
+"Name must match the name of one entry in pod.spec.resourceClaims of\nthe Pod where this field is used. It makes that resource available\ninside a container."
 
 ## obj spec.template.spec.ephemeralContainers.securityContext
 
-"Optional: SecurityContext defines the security options the ephemeral container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext."
+"Optional: SecurityContext defines the security options the ephemeral container should be run with.\nIf set, the fields of SecurityContext override the equivalent fields of PodSecurityContext."
 
 ### fn spec.template.spec.ephemeralContainers.securityContext.withAllowPrivilegeEscalation
 
@@ -6253,7 +6485,7 @@ withName(name)
 withAllowPrivilegeEscalation(allowPrivilegeEscalation)
 ```
 
-"AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN Note that this field cannot be set when spec.os.name is windows."
+"AllowPrivilegeEscalation controls whether a process can gain more\nprivileges than its parent process. This bool directly controls if\nthe no_new_privs flag will be set on the container process.\nAllowPrivilegeEscalation is true always when the container is:\n1) run as Privileged\n2) has CAP_SYS_ADMIN\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.ephemeralContainers.securityContext.withPrivileged
 
@@ -6261,7 +6493,7 @@ withAllowPrivilegeEscalation(allowPrivilegeEscalation)
 withPrivileged(privileged)
 ```
 
-"Run container in privileged mode. Processes in privileged containers are essentially equivalent to root on the host. Defaults to false. Note that this field cannot be set when spec.os.name is windows."
+"Run container in privileged mode.\nProcesses in privileged containers are essentially equivalent to root on the host.\nDefaults to false.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.ephemeralContainers.securityContext.withProcMount
 
@@ -6269,7 +6501,7 @@ withPrivileged(privileged)
 withProcMount(procMount)
 ```
 
-"procMount denotes the type of proc mount to use for the containers. The default is DefaultProcMount which uses the container runtime defaults for readonly paths and masked paths. This requires the ProcMountType feature flag to be enabled. Note that this field cannot be set when spec.os.name is windows."
+"procMount denotes the type of proc mount to use for the containers.\nThe default is DefaultProcMount which uses the container runtime defaults for\nreadonly paths and masked paths.\nThis requires the ProcMountType feature flag to be enabled.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.ephemeralContainers.securityContext.withReadOnlyRootFilesystem
 
@@ -6277,7 +6509,7 @@ withProcMount(procMount)
 withReadOnlyRootFilesystem(readOnlyRootFilesystem)
 ```
 
-"Whether this container has a read-only root filesystem. Default is false. Note that this field cannot be set when spec.os.name is windows."
+"Whether this container has a read-only root filesystem.\nDefault is false.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.ephemeralContainers.securityContext.withRunAsGroup
 
@@ -6285,7 +6517,7 @@ withReadOnlyRootFilesystem(readOnlyRootFilesystem)
 withRunAsGroup(runAsGroup)
 ```
 
-"The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows."
+"The GID to run the entrypoint of the container process.\nUses runtime default if unset.\nMay also be set in PodSecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.ephemeralContainers.securityContext.withRunAsNonRoot
 
@@ -6293,7 +6525,7 @@ withRunAsGroup(runAsGroup)
 withRunAsNonRoot(runAsNonRoot)
 ```
 
-"Indicates that the container must run as a non-root user. If true, the Kubelet will validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the container if it does. If unset or false, no such validation will be performed. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence."
+"Indicates that the container must run as a non-root user.\nIf true, the Kubelet will validate the image at runtime to ensure that it\ndoes not run as UID 0 (root) and fail to start the container if it does.\nIf unset or false, no such validation will be performed.\nMay also be set in PodSecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence."
 
 ### fn spec.template.spec.ephemeralContainers.securityContext.withRunAsUser
 
@@ -6301,11 +6533,11 @@ withRunAsNonRoot(runAsNonRoot)
 withRunAsUser(runAsUser)
 ```
 
-"The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows."
+"The UID to run the entrypoint of the container process.\nDefaults to user specified in image metadata if unspecified.\nMay also be set in PodSecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence.\nNote that this field cannot be set when spec.os.name is windows."
 
 ## obj spec.template.spec.ephemeralContainers.securityContext.capabilities
 
-"The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. Note that this field cannot be set when spec.os.name is windows."
+"The capabilities to add/drop when running containers.\nDefaults to the default set of capabilities granted by the container runtime.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.ephemeralContainers.securityContext.capabilities.withAdd
 
@@ -6345,7 +6577,7 @@ withDropMixin(drop)
 
 ## obj spec.template.spec.ephemeralContainers.securityContext.seLinuxOptions
 
-"The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows."
+"The SELinux context to be applied to the container.\nIf unspecified, the container runtime will allocate a random SELinux context for each\ncontainer.  May also be set in PodSecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.ephemeralContainers.securityContext.seLinuxOptions.withLevel
 
@@ -6381,7 +6613,7 @@ withUser(user)
 
 ## obj spec.template.spec.ephemeralContainers.securityContext.seccompProfile
 
-"The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows."
+"The seccomp options to use by this container. If seccomp options are\nprovided at both the pod & container level, the container options\noverride the pod options.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.ephemeralContainers.securityContext.seccompProfile.withLocalhostProfile
 
@@ -6389,7 +6621,7 @@ withUser(user)
 withLocalhostProfile(localhostProfile)
 ```
 
-"localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must be set if type is \"Localhost\". Must NOT be set for any other type."
+"localhostProfile indicates a profile defined in a file on the node should be used.\nThe profile must be preconfigured on the node to work.\nMust be a descending path, relative to the kubelet's configured seccomp profile location.\nMust be set if type is \"Localhost\". Must NOT be set for any other type."
 
 ### fn spec.template.spec.ephemeralContainers.securityContext.seccompProfile.withType
 
@@ -6397,11 +6629,11 @@ withLocalhostProfile(localhostProfile)
 withType(type)
 ```
 
-"type indicates which kind of seccomp profile will be applied. Valid options are: \n Localhost - a profile defined in a file on the node should be used. RuntimeDefault - the container runtime default profile should be used. Unconfined - no profile should be applied."
+"type indicates which kind of seccomp profile will be applied.\nValid options are:\n\n\nLocalhost - a profile defined in a file on the node should be used.\nRuntimeDefault - the container runtime default profile should be used.\nUnconfined - no profile should be applied."
 
 ## obj spec.template.spec.ephemeralContainers.securityContext.windowsOptions
 
-"The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux."
+"The Windows specific settings applied to all containers.\nIf unspecified, the options from the PodSecurityContext will be used.\nIf set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.\nNote that this field cannot be set when spec.os.name is linux."
 
 ### fn spec.template.spec.ephemeralContainers.securityContext.windowsOptions.withGmsaCredentialSpec
 
@@ -6409,7 +6641,7 @@ withType(type)
 withGmsaCredentialSpec(gmsaCredentialSpec)
 ```
 
-"GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field."
+"GMSACredentialSpec is where the GMSA admission webhook\n(https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the\nGMSA credential spec named by the GMSACredentialSpecName field."
 
 ### fn spec.template.spec.ephemeralContainers.securityContext.windowsOptions.withGmsaCredentialSpecName
 
@@ -6425,7 +6657,7 @@ withGmsaCredentialSpecName(gmsaCredentialSpecName)
 withHostProcess(hostProcess)
 ```
 
-"HostProcess determines if a container should be run as a 'Host Process' container. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers). In addition, if HostProcess is true then HostNetwork must also be set to true."
+"HostProcess determines if a container should be run as a 'Host Process' container.\nAll of a Pod's containers must have the same effective HostProcess value\n(it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).\nIn addition, if HostProcess is true then HostNetwork must also be set to true."
 
 ### fn spec.template.spec.ephemeralContainers.securityContext.windowsOptions.withRunAsUserName
 
@@ -6433,7 +6665,7 @@ withHostProcess(hostProcess)
 withRunAsUserName(runAsUserName)
 ```
 
-"The UserName in Windows to run the entrypoint of the container process. Defaults to the user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence."
+"The UserName in Windows to run the entrypoint of the container process.\nDefaults to the user specified in image metadata if unspecified.\nMay also be set in PodSecurityContext. If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence."
 
 ## obj spec.template.spec.ephemeralContainers.startupProbe
 
@@ -6445,7 +6677,7 @@ withRunAsUserName(runAsUserName)
 withFailureThreshold(failureThreshold)
 ```
 
-"Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1."
+"Minimum consecutive failures for the probe to be considered failed after having succeeded.\nDefaults to 3. Minimum value is 1."
 
 ### fn spec.template.spec.ephemeralContainers.startupProbe.withInitialDelaySeconds
 
@@ -6453,7 +6685,7 @@ withFailureThreshold(failureThreshold)
 withInitialDelaySeconds(initialDelaySeconds)
 ```
 
-"Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Number of seconds after the container has started before liveness probes are initiated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ### fn spec.template.spec.ephemeralContainers.startupProbe.withPeriodSeconds
 
@@ -6461,7 +6693,7 @@ withInitialDelaySeconds(initialDelaySeconds)
 withPeriodSeconds(periodSeconds)
 ```
 
-"How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1."
+"How often (in seconds) to perform the probe.\nDefault to 10 seconds. Minimum value is 1."
 
 ### fn spec.template.spec.ephemeralContainers.startupProbe.withSuccessThreshold
 
@@ -6469,7 +6701,7 @@ withPeriodSeconds(periodSeconds)
 withSuccessThreshold(successThreshold)
 ```
 
-"Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
+"Minimum consecutive successes for the probe to be considered successful after having failed.\nDefaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
 
 ### fn spec.template.spec.ephemeralContainers.startupProbe.withTerminationGracePeriodSeconds
 
@@ -6477,7 +6709,7 @@ withSuccessThreshold(successThreshold)
 withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
 ```
 
-"Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
+"Optional duration in seconds the pod needs to terminate gracefully upon probe failure.\nThe grace period is the duration in seconds after the processes running in the pod are sent\na termination signal and the time when the processes are forcibly halted with a kill signal.\nSet this value longer than the expected cleanup time for your process.\nIf this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this\nvalue overrides the value provided by the pod spec.\nValue must be non-negative integer. The value zero indicates stop immediately via\nthe kill signal (no opportunity to shut down).\nThis is a beta field and requires enabling ProbeTerminationGracePeriod feature gate.\nMinimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
 
 ### fn spec.template.spec.ephemeralContainers.startupProbe.withTimeoutSeconds
 
@@ -6485,7 +6717,7 @@ withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
 withTimeoutSeconds(timeoutSeconds)
 ```
 
-"Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Number of seconds after which the probe times out.\nDefaults to 1 second. Minimum value is 1.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ## obj spec.template.spec.ephemeralContainers.startupProbe.exec
 
@@ -6497,7 +6729,7 @@ withTimeoutSeconds(timeoutSeconds)
 withCommand(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 ### fn spec.template.spec.ephemeralContainers.startupProbe.exec.withCommandMixin
 
@@ -6505,7 +6737,7 @@ withCommand(command)
 withCommandMixin(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 **Note:** This function appends passed data to existing values
 
@@ -6527,7 +6759,7 @@ withPort(port)
 withService(service)
 ```
 
-"Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md). \n If this is not specified, the default behavior is defined by gRPC."
+"Service is the name of the service to place in the gRPC HealthCheckRequest\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\n\n\nIf this is not specified, the default behavior is defined by gRPC."
 
 ## obj spec.template.spec.ephemeralContainers.startupProbe.httpGet
 
@@ -6539,7 +6771,7 @@ withService(service)
 withHost(host)
 ```
 
-"Host name to connect to, defaults to the pod IP. You probably want to set \"Host\" in httpHeaders instead."
+"Host name to connect to, defaults to the pod IP. You probably want to set\n\"Host\" in httpHeaders instead."
 
 ### fn spec.template.spec.ephemeralContainers.startupProbe.httpGet.withHttpHeaders
 
@@ -6573,7 +6805,7 @@ withPath(path)
 withPort(port)
 ```
 
-"Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Name or number of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ### fn spec.template.spec.ephemeralContainers.startupProbe.httpGet.withScheme
 
@@ -6581,7 +6813,7 @@ withPort(port)
 withScheme(scheme)
 ```
 
-"Scheme to use for connecting to the host. Defaults to HTTP."
+"Scheme to use for connecting to the host.\nDefaults to HTTP."
 
 ## obj spec.template.spec.ephemeralContainers.startupProbe.httpGet.httpHeaders
 
@@ -6593,7 +6825,7 @@ withScheme(scheme)
 withName(name)
 ```
 
-"The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header."
+"The header field name.\nThis will be canonicalized upon output, so case-variant names will be understood as the same header."
 
 ### fn spec.template.spec.ephemeralContainers.startupProbe.httpGet.httpHeaders.withValue
 
@@ -6621,7 +6853,7 @@ withHost(host)
 withPort(port)
 ```
 
-"Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Number or name of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ## obj spec.template.spec.ephemeralContainers.volumeDevices
 
@@ -6645,7 +6877,7 @@ withName(name)
 
 ## obj spec.template.spec.ephemeralContainers.volumeMounts
 
-"Pod volumes to mount into the container's filesystem. Subpath mounts are not allowed for ephemeral containers. Cannot be updated."
+"Pod volumes to mount into the container's filesystem. Subpath mounts are not allowed for ephemeral containers.\nCannot be updated."
 
 ### fn spec.template.spec.ephemeralContainers.volumeMounts.withMountPath
 
@@ -6653,7 +6885,7 @@ withName(name)
 withMountPath(mountPath)
 ```
 
-"Path within the container at which the volume should be mounted.  Must not contain ':'."
+"Path within the container at which the volume should be mounted.  Must\nnot contain ':'."
 
 ### fn spec.template.spec.ephemeralContainers.volumeMounts.withMountPropagation
 
@@ -6661,7 +6893,7 @@ withMountPath(mountPath)
 withMountPropagation(mountPropagation)
 ```
 
-"mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationNone is used. This field is beta in 1.10."
+"mountPropagation determines how mounts are propagated from the host\nto container and the other way around.\nWhen not set, MountPropagationNone is used.\nThis field is beta in 1.10."
 
 ### fn spec.template.spec.ephemeralContainers.volumeMounts.withName
 
@@ -6677,7 +6909,7 @@ withName(name)
 withReadOnly(readOnly)
 ```
 
-"Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false."
+"Mounted read-only if true, read-write otherwise (false or unspecified).\nDefaults to false."
 
 ### fn spec.template.spec.ephemeralContainers.volumeMounts.withSubPath
 
@@ -6685,7 +6917,7 @@ withReadOnly(readOnly)
 withSubPath(subPath)
 ```
 
-"Path within the volume from which the container's volume should be mounted. Defaults to \"\" (volume's root)."
+"Path within the volume from which the container's volume should be mounted.\nDefaults to \"\" (volume's root)."
 
 ### fn spec.template.spec.ephemeralContainers.volumeMounts.withSubPathExpr
 
@@ -6693,11 +6925,11 @@ withSubPath(subPath)
 withSubPathExpr(subPathExpr)
 ```
 
-"Expanded path within the volume from which the container's volume should be mounted. Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container's environment. Defaults to \"\" (volume's root). SubPathExpr and SubPath are mutually exclusive."
+"Expanded path within the volume from which the container's volume should be mounted.\nBehaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container's environment.\nDefaults to \"\" (volume's root).\nSubPathExpr and SubPath are mutually exclusive."
 
 ## obj spec.template.spec.hostAliases
 
-"HostAliases is an optional list of hosts and IPs that will be injected into the pod's hosts file if specified. This is only valid for non-hostNetwork pods."
+"HostAliases is an optional list of hosts and IPs that will be injected into the pod's hosts\nfile if specified. This is only valid for non-hostNetwork pods."
 
 ### fn spec.template.spec.hostAliases.withHostnames
 
@@ -6727,7 +6959,7 @@ withIp(ip)
 
 ## obj spec.template.spec.imagePullSecrets
 
-"ImagePullSecrets is an optional list of references to secrets in the same namespace to use for pulling any of the images used by this PodSpec. If specified, these secrets will be passed to individual puller implementations for them to use. More info: https://kubernetes.io/docs/concepts/containers/images#specifying-imagepullsecrets-on-a-pod"
+"ImagePullSecrets is an optional list of references to secrets in the same namespace to use for pulling any of the images used by this PodSpec.\nIf specified, these secrets will be passed to individual puller implementations for them to use.\nMore info: https://kubernetes.io/docs/concepts/containers/images#specifying-imagepullsecrets-on-a-pod"
 
 ### fn spec.template.spec.imagePullSecrets.withName
 
@@ -6735,11 +6967,11 @@ withIp(ip)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ## obj spec.template.spec.initContainers
 
-"List of initialization containers belonging to the pod. Init containers are executed in order prior to containers being started. If any init container fails, the pod is considered to have failed and is handled according to its restartPolicy. The name for an init container or normal container must be unique among all containers. Init containers may not have Lifecycle actions, Readiness probes, Liveness probes, or Startup probes. The resourceRequirements of an init container are taken into account during scheduling by finding the highest request/limit for each resource type, and then using the max of of that value or the sum of the normal containers. Limits are applied to init containers in a similar fashion. Init containers cannot currently be added or removed. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/"
+"List of initialization containers belonging to the pod.\nInit containers are executed in order prior to containers being started. If any\ninit container fails, the pod is considered to have failed and is handled according\nto its restartPolicy. The name for an init container or normal container must be\nunique among all containers.\nInit containers may not have Lifecycle actions, Readiness probes, Liveness probes, or Startup probes.\nThe resourceRequirements of an init container are taken into account during scheduling\nby finding the highest request/limit for each resource type, and then using the max of\nof that value or the sum of the normal containers. Limits are applied to init containers\nin a similar fashion.\nInit containers cannot currently be added or removed.\nCannot be updated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/"
 
 ### fn spec.template.spec.initContainers.withArgs
 
@@ -6747,7 +6979,7 @@ withName(name)
 withArgs(args)
 ```
 
-"Arguments to the entrypoint. The container image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
+"Arguments to the entrypoint.\nThe container image's CMD is used if this is not provided.\nVariable references $(VAR_NAME) are expanded using the container's environment. If a variable\ncannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced\nto a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will\nproduce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless\nof whether the variable exists or not. Cannot be updated.\nMore info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
 
 ### fn spec.template.spec.initContainers.withArgsMixin
 
@@ -6755,7 +6987,7 @@ withArgs(args)
 withArgsMixin(args)
 ```
 
-"Arguments to the entrypoint. The container image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
+"Arguments to the entrypoint.\nThe container image's CMD is used if this is not provided.\nVariable references $(VAR_NAME) are expanded using the container's environment. If a variable\ncannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced\nto a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will\nproduce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless\nof whether the variable exists or not. Cannot be updated.\nMore info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
 
 **Note:** This function appends passed data to existing values
 
@@ -6765,7 +6997,7 @@ withArgsMixin(args)
 withCommand(command)
 ```
 
-"Entrypoint array. Not executed within a shell. The container image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
+"Entrypoint array. Not executed within a shell.\nThe container image's ENTRYPOINT is used if this is not provided.\nVariable references $(VAR_NAME) are expanded using the container's environment. If a variable\ncannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced\nto a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will\nproduce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless\nof whether the variable exists or not. Cannot be updated.\nMore info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
 
 ### fn spec.template.spec.initContainers.withCommandMixin
 
@@ -6773,7 +7005,7 @@ withCommand(command)
 withCommandMixin(command)
 ```
 
-"Entrypoint array. Not executed within a shell. The container image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
+"Entrypoint array. Not executed within a shell.\nThe container image's ENTRYPOINT is used if this is not provided.\nVariable references $(VAR_NAME) are expanded using the container's environment. If a variable\ncannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced\nto a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will\nproduce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless\nof whether the variable exists or not. Cannot be updated.\nMore info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
 
 **Note:** This function appends passed data to existing values
 
@@ -6783,7 +7015,7 @@ withCommandMixin(command)
 withEnv(env)
 ```
 
-"List of environment variables to set in the container. Cannot be updated."
+"List of environment variables to set in the container.\nCannot be updated."
 
 ### fn spec.template.spec.initContainers.withEnvFrom
 
@@ -6791,7 +7023,7 @@ withEnv(env)
 withEnvFrom(envFrom)
 ```
 
-"List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated."
+"List of sources to populate environment variables in the container.\nThe keys defined within a source must be a C_IDENTIFIER. All invalid keys\nwill be reported as an event when the container is starting. When a key exists in multiple\nsources, the value associated with the last source will take precedence.\nValues defined by an Env with a duplicate key will take precedence.\nCannot be updated."
 
 ### fn spec.template.spec.initContainers.withEnvFromMixin
 
@@ -6799,7 +7031,7 @@ withEnvFrom(envFrom)
 withEnvFromMixin(envFrom)
 ```
 
-"List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated."
+"List of sources to populate environment variables in the container.\nThe keys defined within a source must be a C_IDENTIFIER. All invalid keys\nwill be reported as an event when the container is starting. When a key exists in multiple\nsources, the value associated with the last source will take precedence.\nValues defined by an Env with a duplicate key will take precedence.\nCannot be updated."
 
 **Note:** This function appends passed data to existing values
 
@@ -6809,7 +7041,7 @@ withEnvFromMixin(envFrom)
 withEnvMixin(env)
 ```
 
-"List of environment variables to set in the container. Cannot be updated."
+"List of environment variables to set in the container.\nCannot be updated."
 
 **Note:** This function appends passed data to existing values
 
@@ -6819,7 +7051,7 @@ withEnvMixin(env)
 withImage(image)
 ```
 
-"Container image name. More info: https://kubernetes.io/docs/concepts/containers/images This field is optional to allow higher level config management to default or override container images in workload controllers like Deployments and StatefulSets."
+"Container image name.\nMore info: https://kubernetes.io/docs/concepts/containers/images\nThis field is optional to allow higher level config management to default or override\ncontainer images in workload controllers like Deployments and StatefulSets."
 
 ### fn spec.template.spec.initContainers.withImagePullPolicy
 
@@ -6827,7 +7059,7 @@ withImage(image)
 withImagePullPolicy(imagePullPolicy)
 ```
 
-"Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images"
+"Image pull policy.\nOne of Always, Never, IfNotPresent.\nDefaults to Always if :latest tag is specified, or IfNotPresent otherwise.\nCannot be updated.\nMore info: https://kubernetes.io/docs/concepts/containers/images#updating-images"
 
 ### fn spec.template.spec.initContainers.withName
 
@@ -6835,7 +7067,7 @@ withImagePullPolicy(imagePullPolicy)
 withName(name)
 ```
 
-"Name of the container specified as a DNS_LABEL. Each container in a pod must have a unique name (DNS_LABEL). Cannot be updated."
+"Name of the container specified as a DNS_LABEL.\nEach container in a pod must have a unique name (DNS_LABEL).\nCannot be updated."
 
 ### fn spec.template.spec.initContainers.withPorts
 
@@ -6843,7 +7075,7 @@ withName(name)
 withPorts(ports)
 ```
 
-"List of ports to expose from the container. Not specifying a port here DOES NOT prevent that port from being exposed. Any port which is listening on the default \"0.0.0.0\" address inside a container will be accessible from the network. Modifying this array with strategic merge patch may corrupt the data. For more information See https://github.com/kubernetes/kubernetes/issues/108255. Cannot be updated."
+"List of ports to expose from the container. Not specifying a port here\nDOES NOT prevent that port from being exposed. Any port which is\nlistening on the default \"0.0.0.0\" address inside a container will be\naccessible from the network.\nModifying this array with strategic merge patch may corrupt the data.\nFor more information See https://github.com/kubernetes/kubernetes/issues/108255.\nCannot be updated."
 
 ### fn spec.template.spec.initContainers.withPortsMixin
 
@@ -6851,7 +7083,7 @@ withPorts(ports)
 withPortsMixin(ports)
 ```
 
-"List of ports to expose from the container. Not specifying a port here DOES NOT prevent that port from being exposed. Any port which is listening on the default \"0.0.0.0\" address inside a container will be accessible from the network. Modifying this array with strategic merge patch may corrupt the data. For more information See https://github.com/kubernetes/kubernetes/issues/108255. Cannot be updated."
+"List of ports to expose from the container. Not specifying a port here\nDOES NOT prevent that port from being exposed. Any port which is\nlistening on the default \"0.0.0.0\" address inside a container will be\naccessible from the network.\nModifying this array with strategic merge patch may corrupt the data.\nFor more information See https://github.com/kubernetes/kubernetes/issues/108255.\nCannot be updated."
 
 **Note:** This function appends passed data to existing values
 
@@ -6879,7 +7111,7 @@ withResizePolicyMixin(resizePolicy)
 withRestartPolicy(restartPolicy)
 ```
 
-"RestartPolicy defines the restart behavior of individual containers in a pod. This field may only be set for init containers, and the only allowed value is \"Always\". For non-init containers or when this field is not specified, the restart behavior is defined by the Pod's restart policy and the container type. Setting the RestartPolicy as \"Always\" for the init container will have the following effect: this init container will be continually restarted on exit until all regular containers have terminated. Once all regular containers have completed, all init containers with restartPolicy \"Always\" will be shut down. This lifecycle differs from normal init containers and is often referred to as a \"sidecar\" container. Although this init container still starts in the init container sequence, it does not wait for the container to complete before proceeding to the next init container. Instead, the next init container starts immediately after this init container is started, or after any startupProbe has successfully completed."
+"RestartPolicy defines the restart behavior of individual containers in a pod.\nThis field may only be set for init containers, and the only allowed value is \"Always\".\nFor non-init containers or when this field is not specified,\nthe restart behavior is defined by the Pod's restart policy and the container type.\nSetting the RestartPolicy as \"Always\" for the init container will have the following effect:\nthis init container will be continually restarted on\nexit until all regular containers have terminated. Once all regular\ncontainers have completed, all init containers with restartPolicy \"Always\"\nwill be shut down. This lifecycle differs from normal init containers and\nis often referred to as a \"sidecar\" container. Although this init\ncontainer still starts in the init container sequence, it does not wait\nfor the container to complete before proceeding to the next init\ncontainer. Instead, the next init container starts immediately after this\ninit container is started, or after any startupProbe has successfully\ncompleted."
 
 ### fn spec.template.spec.initContainers.withStdin
 
@@ -6887,7 +7119,7 @@ withRestartPolicy(restartPolicy)
 withStdin(stdin)
 ```
 
-"Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false."
+"Whether this container should allocate a buffer for stdin in the container runtime. If this\nis not set, reads from stdin in the container will always result in EOF.\nDefault is false."
 
 ### fn spec.template.spec.initContainers.withStdinOnce
 
@@ -6895,7 +7127,7 @@ withStdin(stdin)
 withStdinOnce(stdinOnce)
 ```
 
-"Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false"
+"Whether the container runtime should close the stdin channel after it has been opened by\na single attach. When stdin is true the stdin stream will remain open across multiple attach\nsessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the\nfirst client attaches to stdin, and then remains open and accepts data until the client disconnects,\nat which time stdin is closed and remains closed until the container is restarted. If this\nflag is false, a container processes that reads from stdin will never receive an EOF.\nDefault is false"
 
 ### fn spec.template.spec.initContainers.withTerminationMessagePath
 
@@ -6903,7 +7135,7 @@ withStdinOnce(stdinOnce)
 withTerminationMessagePath(terminationMessagePath)
 ```
 
-"Optional: Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated."
+"Optional: Path at which the file to which the container's termination message\nwill be written is mounted into the container's filesystem.\nMessage written is intended to be brief final status, such as an assertion failure message.\nWill be truncated by the node if greater than 4096 bytes. The total message length across\nall containers will be limited to 12kb.\nDefaults to /dev/termination-log.\nCannot be updated."
 
 ### fn spec.template.spec.initContainers.withTerminationMessagePolicy
 
@@ -6911,7 +7143,7 @@ withTerminationMessagePath(terminationMessagePath)
 withTerminationMessagePolicy(terminationMessagePolicy)
 ```
 
-"Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated."
+"Indicate how the termination message should be populated. File will use the contents of\nterminationMessagePath to populate the container status message on both success and failure.\nFallbackToLogsOnError will use the last chunk of container log output if the termination\nmessage file is empty and the container exited with an error.\nThe log output is limited to 2048 bytes or 80 lines, whichever is smaller.\nDefaults to File.\nCannot be updated."
 
 ### fn spec.template.spec.initContainers.withTty
 
@@ -6919,7 +7151,7 @@ withTerminationMessagePolicy(terminationMessagePolicy)
 withTty(tty)
 ```
 
-"Whether this container should allocate a TTY for itself, also requires 'stdin' to be true. Default is false."
+"Whether this container should allocate a TTY for itself, also requires 'stdin' to be true.\nDefault is false."
 
 ### fn spec.template.spec.initContainers.withVolumeDevices
 
@@ -6945,7 +7177,7 @@ withVolumeDevicesMixin(volumeDevices)
 withVolumeMounts(volumeMounts)
 ```
 
-"Pod volumes to mount into the container's filesystem. Cannot be updated."
+"Pod volumes to mount into the container's filesystem.\nCannot be updated."
 
 ### fn spec.template.spec.initContainers.withVolumeMountsMixin
 
@@ -6953,7 +7185,7 @@ withVolumeMounts(volumeMounts)
 withVolumeMountsMixin(volumeMounts)
 ```
 
-"Pod volumes to mount into the container's filesystem. Cannot be updated."
+"Pod volumes to mount into the container's filesystem.\nCannot be updated."
 
 **Note:** This function appends passed data to existing values
 
@@ -6963,11 +7195,11 @@ withVolumeMountsMixin(volumeMounts)
 withWorkingDir(workingDir)
 ```
 
-"Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated."
+"Container's working directory.\nIf not specified, the container runtime's default will be used, which\nmight be configured in the container image.\nCannot be updated."
 
 ## obj spec.template.spec.initContainers.env
 
-"List of environment variables to set in the container. Cannot be updated."
+"List of environment variables to set in the container.\nCannot be updated."
 
 ### fn spec.template.spec.initContainers.env.withName
 
@@ -6983,7 +7215,7 @@ withName(name)
 withValue(value)
 ```
 
-"Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\". Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to \"\"."
+"Variable references $(VAR_NAME) are expanded\nusing the previously defined environment variables in the container and\nany service environment variables. If a variable cannot be resolved,\nthe reference in the input string will be unchanged. Double $$ are reduced\nto a single $, which allows for escaping the $(VAR_NAME) syntax: i.e.\n\"$$(VAR_NAME)\" will produce the string literal \"$(VAR_NAME)\".\nEscaped references will never be expanded, regardless of whether the variable\nexists or not.\nDefaults to \"\"."
 
 ## obj spec.template.spec.initContainers.env.valueFrom
 
@@ -7007,7 +7239,7 @@ withKey(key)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.template.spec.initContainers.env.valueFrom.configMapKeyRef.withOptional
 
@@ -7019,7 +7251,7 @@ withOptional(optional)
 
 ## obj spec.template.spec.initContainers.env.valueFrom.fieldRef
 
-"Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs."
+"Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`,\nspec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs."
 
 ### fn spec.template.spec.initContainers.env.valueFrom.fieldRef.withApiVersion
 
@@ -7039,7 +7271,7 @@ withFieldPath(fieldPath)
 
 ## obj spec.template.spec.initContainers.env.valueFrom.resourceFieldRef
 
-"Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported."
+"Selects a resource of the container: only resources limits and requests\n(limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported."
 
 ### fn spec.template.spec.initContainers.env.valueFrom.resourceFieldRef.withContainerName
 
@@ -7083,7 +7315,7 @@ withKey(key)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.template.spec.initContainers.env.valueFrom.secretKeyRef.withOptional
 
@@ -7095,7 +7327,7 @@ withOptional(optional)
 
 ## obj spec.template.spec.initContainers.envFrom
 
-"List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated."
+"List of sources to populate environment variables in the container.\nThe keys defined within a source must be a C_IDENTIFIER. All invalid keys\nwill be reported as an event when the container is starting. When a key exists in multiple\nsources, the value associated with the last source will take precedence.\nValues defined by an Env with a duplicate key will take precedence.\nCannot be updated."
 
 ### fn spec.template.spec.initContainers.envFrom.withPrefix
 
@@ -7115,7 +7347,7 @@ withPrefix(prefix)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.template.spec.initContainers.envFrom.configMapRef.withOptional
 
@@ -7135,7 +7367,7 @@ withOptional(optional)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.template.spec.initContainers.envFrom.secretRef.withOptional
 
@@ -7147,11 +7379,11 @@ withOptional(optional)
 
 ## obj spec.template.spec.initContainers.lifecycle
 
-"Actions that the management system should take in response to container lifecycle events. Cannot be updated."
+"Actions that the management system should take in response to container lifecycle events.\nCannot be updated."
 
 ## obj spec.template.spec.initContainers.lifecycle.postStart
 
-"PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks"
+"PostStart is called immediately after a container is created. If the handler fails,\nthe container is terminated and restarted according to its restart policy.\nOther management of the container blocks until the hook completes.\nMore info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks"
 
 ## obj spec.template.spec.initContainers.lifecycle.postStart.exec
 
@@ -7163,7 +7395,7 @@ withOptional(optional)
 withCommand(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 ### fn spec.template.spec.initContainers.lifecycle.postStart.exec.withCommandMixin
 
@@ -7171,7 +7403,7 @@ withCommand(command)
 withCommandMixin(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 **Note:** This function appends passed data to existing values
 
@@ -7185,7 +7417,7 @@ withCommandMixin(command)
 withHost(host)
 ```
 
-"Host name to connect to, defaults to the pod IP. You probably want to set \"Host\" in httpHeaders instead."
+"Host name to connect to, defaults to the pod IP. You probably want to set\n\"Host\" in httpHeaders instead."
 
 ### fn spec.template.spec.initContainers.lifecycle.postStart.httpGet.withHttpHeaders
 
@@ -7219,7 +7451,7 @@ withPath(path)
 withPort(port)
 ```
 
-"Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Name or number of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ### fn spec.template.spec.initContainers.lifecycle.postStart.httpGet.withScheme
 
@@ -7227,7 +7459,7 @@ withPort(port)
 withScheme(scheme)
 ```
 
-"Scheme to use for connecting to the host. Defaults to HTTP."
+"Scheme to use for connecting to the host.\nDefaults to HTTP."
 
 ## obj spec.template.spec.initContainers.lifecycle.postStart.httpGet.httpHeaders
 
@@ -7239,7 +7471,7 @@ withScheme(scheme)
 withName(name)
 ```
 
-"The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header."
+"The header field name.\nThis will be canonicalized upon output, so case-variant names will be understood as the same header."
 
 ### fn spec.template.spec.initContainers.lifecycle.postStart.httpGet.httpHeaders.withValue
 
@@ -7249,9 +7481,21 @@ withValue(value)
 
 "The header field value"
 
+## obj spec.template.spec.initContainers.lifecycle.postStart.sleep
+
+"Sleep represents the duration that the container should sleep before being terminated."
+
+### fn spec.template.spec.initContainers.lifecycle.postStart.sleep.withSeconds
+
+```ts
+withSeconds(seconds)
+```
+
+"Seconds is the number of seconds to sleep."
+
 ## obj spec.template.spec.initContainers.lifecycle.postStart.tcpSocket
 
-"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified."
+"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\nfor the backward compatibility. There are no validation of this field and\nlifecycle hooks will fail in runtime when tcp handler is specified."
 
 ### fn spec.template.spec.initContainers.lifecycle.postStart.tcpSocket.withHost
 
@@ -7267,11 +7511,11 @@ withHost(host)
 withPort(port)
 ```
 
-"Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Number or name of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ## obj spec.template.spec.initContainers.lifecycle.preStop
 
-"PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The Pod's termination grace period countdown begins before the PreStop hook is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period (unless delayed by finalizers). Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks"
+"PreStop is called immediately before a container is terminated due to an\nAPI request or management event such as liveness/startup probe failure,\npreemption, resource contention, etc. The handler is not called if the\ncontainer crashes or exits. The Pod's termination grace period countdown begins before the\nPreStop hook is executed. Regardless of the outcome of the handler, the\ncontainer will eventually terminate within the Pod's termination grace\nperiod (unless delayed by finalizers). Other management of the container blocks until the hook completes\nor until the termination grace period is reached.\nMore info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks"
 
 ## obj spec.template.spec.initContainers.lifecycle.preStop.exec
 
@@ -7283,7 +7527,7 @@ withPort(port)
 withCommand(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 ### fn spec.template.spec.initContainers.lifecycle.preStop.exec.withCommandMixin
 
@@ -7291,7 +7535,7 @@ withCommand(command)
 withCommandMixin(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 **Note:** This function appends passed data to existing values
 
@@ -7305,7 +7549,7 @@ withCommandMixin(command)
 withHost(host)
 ```
 
-"Host name to connect to, defaults to the pod IP. You probably want to set \"Host\" in httpHeaders instead."
+"Host name to connect to, defaults to the pod IP. You probably want to set\n\"Host\" in httpHeaders instead."
 
 ### fn spec.template.spec.initContainers.lifecycle.preStop.httpGet.withHttpHeaders
 
@@ -7339,7 +7583,7 @@ withPath(path)
 withPort(port)
 ```
 
-"Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Name or number of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ### fn spec.template.spec.initContainers.lifecycle.preStop.httpGet.withScheme
 
@@ -7347,7 +7591,7 @@ withPort(port)
 withScheme(scheme)
 ```
 
-"Scheme to use for connecting to the host. Defaults to HTTP."
+"Scheme to use for connecting to the host.\nDefaults to HTTP."
 
 ## obj spec.template.spec.initContainers.lifecycle.preStop.httpGet.httpHeaders
 
@@ -7359,7 +7603,7 @@ withScheme(scheme)
 withName(name)
 ```
 
-"The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header."
+"The header field name.\nThis will be canonicalized upon output, so case-variant names will be understood as the same header."
 
 ### fn spec.template.spec.initContainers.lifecycle.preStop.httpGet.httpHeaders.withValue
 
@@ -7369,9 +7613,21 @@ withValue(value)
 
 "The header field value"
 
+## obj spec.template.spec.initContainers.lifecycle.preStop.sleep
+
+"Sleep represents the duration that the container should sleep before being terminated."
+
+### fn spec.template.spec.initContainers.lifecycle.preStop.sleep.withSeconds
+
+```ts
+withSeconds(seconds)
+```
+
+"Seconds is the number of seconds to sleep."
+
 ## obj spec.template.spec.initContainers.lifecycle.preStop.tcpSocket
 
-"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified."
+"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\nfor the backward compatibility. There are no validation of this field and\nlifecycle hooks will fail in runtime when tcp handler is specified."
 
 ### fn spec.template.spec.initContainers.lifecycle.preStop.tcpSocket.withHost
 
@@ -7387,11 +7643,11 @@ withHost(host)
 withPort(port)
 ```
 
-"Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Number or name of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ## obj spec.template.spec.initContainers.livenessProbe
 
-"Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Periodic probe of container liveness.\nContainer will be restarted if the probe fails.\nCannot be updated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ### fn spec.template.spec.initContainers.livenessProbe.withFailureThreshold
 
@@ -7399,7 +7655,7 @@ withPort(port)
 withFailureThreshold(failureThreshold)
 ```
 
-"Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1."
+"Minimum consecutive failures for the probe to be considered failed after having succeeded.\nDefaults to 3. Minimum value is 1."
 
 ### fn spec.template.spec.initContainers.livenessProbe.withInitialDelaySeconds
 
@@ -7407,7 +7663,7 @@ withFailureThreshold(failureThreshold)
 withInitialDelaySeconds(initialDelaySeconds)
 ```
 
-"Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Number of seconds after the container has started before liveness probes are initiated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ### fn spec.template.spec.initContainers.livenessProbe.withPeriodSeconds
 
@@ -7415,7 +7671,7 @@ withInitialDelaySeconds(initialDelaySeconds)
 withPeriodSeconds(periodSeconds)
 ```
 
-"How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1."
+"How often (in seconds) to perform the probe.\nDefault to 10 seconds. Minimum value is 1."
 
 ### fn spec.template.spec.initContainers.livenessProbe.withSuccessThreshold
 
@@ -7423,7 +7679,7 @@ withPeriodSeconds(periodSeconds)
 withSuccessThreshold(successThreshold)
 ```
 
-"Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
+"Minimum consecutive successes for the probe to be considered successful after having failed.\nDefaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
 
 ### fn spec.template.spec.initContainers.livenessProbe.withTerminationGracePeriodSeconds
 
@@ -7431,7 +7687,7 @@ withSuccessThreshold(successThreshold)
 withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
 ```
 
-"Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
+"Optional duration in seconds the pod needs to terminate gracefully upon probe failure.\nThe grace period is the duration in seconds after the processes running in the pod are sent\na termination signal and the time when the processes are forcibly halted with a kill signal.\nSet this value longer than the expected cleanup time for your process.\nIf this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this\nvalue overrides the value provided by the pod spec.\nValue must be non-negative integer. The value zero indicates stop immediately via\nthe kill signal (no opportunity to shut down).\nThis is a beta field and requires enabling ProbeTerminationGracePeriod feature gate.\nMinimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
 
 ### fn spec.template.spec.initContainers.livenessProbe.withTimeoutSeconds
 
@@ -7439,7 +7695,7 @@ withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
 withTimeoutSeconds(timeoutSeconds)
 ```
 
-"Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Number of seconds after which the probe times out.\nDefaults to 1 second. Minimum value is 1.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ## obj spec.template.spec.initContainers.livenessProbe.exec
 
@@ -7451,7 +7707,7 @@ withTimeoutSeconds(timeoutSeconds)
 withCommand(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 ### fn spec.template.spec.initContainers.livenessProbe.exec.withCommandMixin
 
@@ -7459,7 +7715,7 @@ withCommand(command)
 withCommandMixin(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 **Note:** This function appends passed data to existing values
 
@@ -7481,7 +7737,7 @@ withPort(port)
 withService(service)
 ```
 
-"Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md). \n If this is not specified, the default behavior is defined by gRPC."
+"Service is the name of the service to place in the gRPC HealthCheckRequest\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\n\n\nIf this is not specified, the default behavior is defined by gRPC."
 
 ## obj spec.template.spec.initContainers.livenessProbe.httpGet
 
@@ -7493,7 +7749,7 @@ withService(service)
 withHost(host)
 ```
 
-"Host name to connect to, defaults to the pod IP. You probably want to set \"Host\" in httpHeaders instead."
+"Host name to connect to, defaults to the pod IP. You probably want to set\n\"Host\" in httpHeaders instead."
 
 ### fn spec.template.spec.initContainers.livenessProbe.httpGet.withHttpHeaders
 
@@ -7527,7 +7783,7 @@ withPath(path)
 withPort(port)
 ```
 
-"Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Name or number of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ### fn spec.template.spec.initContainers.livenessProbe.httpGet.withScheme
 
@@ -7535,7 +7791,7 @@ withPort(port)
 withScheme(scheme)
 ```
 
-"Scheme to use for connecting to the host. Defaults to HTTP."
+"Scheme to use for connecting to the host.\nDefaults to HTTP."
 
 ## obj spec.template.spec.initContainers.livenessProbe.httpGet.httpHeaders
 
@@ -7547,7 +7803,7 @@ withScheme(scheme)
 withName(name)
 ```
 
-"The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header."
+"The header field name.\nThis will be canonicalized upon output, so case-variant names will be understood as the same header."
 
 ### fn spec.template.spec.initContainers.livenessProbe.httpGet.httpHeaders.withValue
 
@@ -7575,11 +7831,11 @@ withHost(host)
 withPort(port)
 ```
 
-"Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Number or name of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ## obj spec.template.spec.initContainers.ports
 
-"List of ports to expose from the container. Not specifying a port here DOES NOT prevent that port from being exposed. Any port which is listening on the default \"0.0.0.0\" address inside a container will be accessible from the network. Modifying this array with strategic merge patch may corrupt the data. For more information See https://github.com/kubernetes/kubernetes/issues/108255. Cannot be updated."
+"List of ports to expose from the container. Not specifying a port here\nDOES NOT prevent that port from being exposed. Any port which is\nlistening on the default \"0.0.0.0\" address inside a container will be\naccessible from the network.\nModifying this array with strategic merge patch may corrupt the data.\nFor more information See https://github.com/kubernetes/kubernetes/issues/108255.\nCannot be updated."
 
 ### fn spec.template.spec.initContainers.ports.withContainerPort
 
@@ -7587,7 +7843,7 @@ withPort(port)
 withContainerPort(containerPort)
 ```
 
-"Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536."
+"Number of port to expose on the pod's IP address.\nThis must be a valid port number, 0 < x < 65536."
 
 ### fn spec.template.spec.initContainers.ports.withHostIP
 
@@ -7603,7 +7859,7 @@ withHostIP(hostIP)
 withHostPort(hostPort)
 ```
 
-"Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this."
+"Number of port to expose on the host.\nIf specified, this must be a valid port number, 0 < x < 65536.\nIf HostNetwork is specified, this must match ContainerPort.\nMost containers do not need this."
 
 ### fn spec.template.spec.initContainers.ports.withName
 
@@ -7611,7 +7867,7 @@ withHostPort(hostPort)
 withName(name)
 ```
 
-"If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services."
+"If specified, this must be an IANA_SVC_NAME and unique within the pod. Each\nnamed port in a pod must have a unique name. Name for the port that can be\nreferred to by services."
 
 ### fn spec.template.spec.initContainers.ports.withProtocol
 
@@ -7619,11 +7875,11 @@ withName(name)
 withProtocol(protocol)
 ```
 
-"Protocol for port. Must be UDP, TCP, or SCTP. Defaults to \"TCP\"."
+"Protocol for port. Must be UDP, TCP, or SCTP.\nDefaults to \"TCP\"."
 
 ## obj spec.template.spec.initContainers.readinessProbe
 
-"Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Periodic probe of container service readiness.\nContainer will be removed from service endpoints if the probe fails.\nCannot be updated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ### fn spec.template.spec.initContainers.readinessProbe.withFailureThreshold
 
@@ -7631,7 +7887,7 @@ withProtocol(protocol)
 withFailureThreshold(failureThreshold)
 ```
 
-"Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1."
+"Minimum consecutive failures for the probe to be considered failed after having succeeded.\nDefaults to 3. Minimum value is 1."
 
 ### fn spec.template.spec.initContainers.readinessProbe.withInitialDelaySeconds
 
@@ -7639,7 +7895,7 @@ withFailureThreshold(failureThreshold)
 withInitialDelaySeconds(initialDelaySeconds)
 ```
 
-"Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Number of seconds after the container has started before liveness probes are initiated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ### fn spec.template.spec.initContainers.readinessProbe.withPeriodSeconds
 
@@ -7647,7 +7903,7 @@ withInitialDelaySeconds(initialDelaySeconds)
 withPeriodSeconds(periodSeconds)
 ```
 
-"How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1."
+"How often (in seconds) to perform the probe.\nDefault to 10 seconds. Minimum value is 1."
 
 ### fn spec.template.spec.initContainers.readinessProbe.withSuccessThreshold
 
@@ -7655,7 +7911,7 @@ withPeriodSeconds(periodSeconds)
 withSuccessThreshold(successThreshold)
 ```
 
-"Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
+"Minimum consecutive successes for the probe to be considered successful after having failed.\nDefaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
 
 ### fn spec.template.spec.initContainers.readinessProbe.withTerminationGracePeriodSeconds
 
@@ -7663,7 +7919,7 @@ withSuccessThreshold(successThreshold)
 withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
 ```
 
-"Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
+"Optional duration in seconds the pod needs to terminate gracefully upon probe failure.\nThe grace period is the duration in seconds after the processes running in the pod are sent\na termination signal and the time when the processes are forcibly halted with a kill signal.\nSet this value longer than the expected cleanup time for your process.\nIf this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this\nvalue overrides the value provided by the pod spec.\nValue must be non-negative integer. The value zero indicates stop immediately via\nthe kill signal (no opportunity to shut down).\nThis is a beta field and requires enabling ProbeTerminationGracePeriod feature gate.\nMinimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
 
 ### fn spec.template.spec.initContainers.readinessProbe.withTimeoutSeconds
 
@@ -7671,7 +7927,7 @@ withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
 withTimeoutSeconds(timeoutSeconds)
 ```
 
-"Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Number of seconds after which the probe times out.\nDefaults to 1 second. Minimum value is 1.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ## obj spec.template.spec.initContainers.readinessProbe.exec
 
@@ -7683,7 +7939,7 @@ withTimeoutSeconds(timeoutSeconds)
 withCommand(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 ### fn spec.template.spec.initContainers.readinessProbe.exec.withCommandMixin
 
@@ -7691,7 +7947,7 @@ withCommand(command)
 withCommandMixin(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 **Note:** This function appends passed data to existing values
 
@@ -7713,7 +7969,7 @@ withPort(port)
 withService(service)
 ```
 
-"Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md). \n If this is not specified, the default behavior is defined by gRPC."
+"Service is the name of the service to place in the gRPC HealthCheckRequest\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\n\n\nIf this is not specified, the default behavior is defined by gRPC."
 
 ## obj spec.template.spec.initContainers.readinessProbe.httpGet
 
@@ -7725,7 +7981,7 @@ withService(service)
 withHost(host)
 ```
 
-"Host name to connect to, defaults to the pod IP. You probably want to set \"Host\" in httpHeaders instead."
+"Host name to connect to, defaults to the pod IP. You probably want to set\n\"Host\" in httpHeaders instead."
 
 ### fn spec.template.spec.initContainers.readinessProbe.httpGet.withHttpHeaders
 
@@ -7759,7 +8015,7 @@ withPath(path)
 withPort(port)
 ```
 
-"Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Name or number of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ### fn spec.template.spec.initContainers.readinessProbe.httpGet.withScheme
 
@@ -7767,7 +8023,7 @@ withPort(port)
 withScheme(scheme)
 ```
 
-"Scheme to use for connecting to the host. Defaults to HTTP."
+"Scheme to use for connecting to the host.\nDefaults to HTTP."
 
 ## obj spec.template.spec.initContainers.readinessProbe.httpGet.httpHeaders
 
@@ -7779,7 +8035,7 @@ withScheme(scheme)
 withName(name)
 ```
 
-"The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header."
+"The header field name.\nThis will be canonicalized upon output, so case-variant names will be understood as the same header."
 
 ### fn spec.template.spec.initContainers.readinessProbe.httpGet.httpHeaders.withValue
 
@@ -7807,7 +8063,7 @@ withHost(host)
 withPort(port)
 ```
 
-"Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Number or name of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ## obj spec.template.spec.initContainers.resizePolicy
 
@@ -7819,7 +8075,7 @@ withPort(port)
 withResourceName(resourceName)
 ```
 
-"Name of the resource to which this resource resize policy applies. Supported values: cpu, memory."
+"Name of the resource to which this resource resize policy applies.\nSupported values: cpu, memory."
 
 ### fn spec.template.spec.initContainers.resizePolicy.withRestartPolicy
 
@@ -7827,11 +8083,11 @@ withResourceName(resourceName)
 withRestartPolicy(restartPolicy)
 ```
 
-"Restart policy to apply when specified resource is resized. If not specified, it defaults to NotRequired."
+"Restart policy to apply when specified resource is resized.\nIf not specified, it defaults to NotRequired."
 
 ## obj spec.template.spec.initContainers.resources
 
-"Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Compute Resources required by this container.\nCannot be updated.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 ### fn spec.template.spec.initContainers.resources.withClaims
 
@@ -7839,7 +8095,7 @@ withRestartPolicy(restartPolicy)
 withClaims(claims)
 ```
 
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
+"Claims lists the names of resources, defined in spec.resourceClaims,\nthat are used by this container.\n\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\n\nThis field is immutable. It can only be set for containers."
 
 ### fn spec.template.spec.initContainers.resources.withClaimsMixin
 
@@ -7847,7 +8103,7 @@ withClaims(claims)
 withClaimsMixin(claims)
 ```
 
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
+"Claims lists the names of resources, defined in spec.resourceClaims,\nthat are used by this container.\n\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\n\nThis field is immutable. It can only be set for containers."
 
 **Note:** This function appends passed data to existing values
 
@@ -7857,7 +8113,7 @@ withClaimsMixin(claims)
 withLimits(limits)
 ```
 
-"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 ### fn spec.template.spec.initContainers.resources.withLimitsMixin
 
@@ -7865,7 +8121,7 @@ withLimits(limits)
 withLimitsMixin(limits)
 ```
 
-"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 **Note:** This function appends passed data to existing values
 
@@ -7875,7 +8131,7 @@ withLimitsMixin(limits)
 withRequests(requests)
 ```
 
-"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value. Requests cannot exceed Limits.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 ### fn spec.template.spec.initContainers.resources.withRequestsMixin
 
@@ -7883,13 +8139,13 @@ withRequests(requests)
 withRequestsMixin(requests)
 ```
 
-"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value. Requests cannot exceed Limits.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec.initContainers.resources.claims
 
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
+"Claims lists the names of resources, defined in spec.resourceClaims,\nthat are used by this container.\n\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\n\nThis field is immutable. It can only be set for containers."
 
 ### fn spec.template.spec.initContainers.resources.claims.withName
 
@@ -7897,11 +8153,11 @@ withRequestsMixin(requests)
 withName(name)
 ```
 
-"Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container."
+"Name must match the name of one entry in pod.spec.resourceClaims of\nthe Pod where this field is used. It makes that resource available\ninside a container."
 
 ## obj spec.template.spec.initContainers.securityContext
 
-"SecurityContext defines the security options the container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext. More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/"
+"SecurityContext defines the security options the container should be run with.\nIf set, the fields of SecurityContext override the equivalent fields of PodSecurityContext.\nMore info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/"
 
 ### fn spec.template.spec.initContainers.securityContext.withAllowPrivilegeEscalation
 
@@ -7909,7 +8165,7 @@ withName(name)
 withAllowPrivilegeEscalation(allowPrivilegeEscalation)
 ```
 
-"AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN Note that this field cannot be set when spec.os.name is windows."
+"AllowPrivilegeEscalation controls whether a process can gain more\nprivileges than its parent process. This bool directly controls if\nthe no_new_privs flag will be set on the container process.\nAllowPrivilegeEscalation is true always when the container is:\n1) run as Privileged\n2) has CAP_SYS_ADMIN\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.initContainers.securityContext.withPrivileged
 
@@ -7917,7 +8173,7 @@ withAllowPrivilegeEscalation(allowPrivilegeEscalation)
 withPrivileged(privileged)
 ```
 
-"Run container in privileged mode. Processes in privileged containers are essentially equivalent to root on the host. Defaults to false. Note that this field cannot be set when spec.os.name is windows."
+"Run container in privileged mode.\nProcesses in privileged containers are essentially equivalent to root on the host.\nDefaults to false.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.initContainers.securityContext.withProcMount
 
@@ -7925,7 +8181,7 @@ withPrivileged(privileged)
 withProcMount(procMount)
 ```
 
-"procMount denotes the type of proc mount to use for the containers. The default is DefaultProcMount which uses the container runtime defaults for readonly paths and masked paths. This requires the ProcMountType feature flag to be enabled. Note that this field cannot be set when spec.os.name is windows."
+"procMount denotes the type of proc mount to use for the containers.\nThe default is DefaultProcMount which uses the container runtime defaults for\nreadonly paths and masked paths.\nThis requires the ProcMountType feature flag to be enabled.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.initContainers.securityContext.withReadOnlyRootFilesystem
 
@@ -7933,7 +8189,7 @@ withProcMount(procMount)
 withReadOnlyRootFilesystem(readOnlyRootFilesystem)
 ```
 
-"Whether this container has a read-only root filesystem. Default is false. Note that this field cannot be set when spec.os.name is windows."
+"Whether this container has a read-only root filesystem.\nDefault is false.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.initContainers.securityContext.withRunAsGroup
 
@@ -7941,7 +8197,7 @@ withReadOnlyRootFilesystem(readOnlyRootFilesystem)
 withRunAsGroup(runAsGroup)
 ```
 
-"The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows."
+"The GID to run the entrypoint of the container process.\nUses runtime default if unset.\nMay also be set in PodSecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.initContainers.securityContext.withRunAsNonRoot
 
@@ -7949,7 +8205,7 @@ withRunAsGroup(runAsGroup)
 withRunAsNonRoot(runAsNonRoot)
 ```
 
-"Indicates that the container must run as a non-root user. If true, the Kubelet will validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the container if it does. If unset or false, no such validation will be performed. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence."
+"Indicates that the container must run as a non-root user.\nIf true, the Kubelet will validate the image at runtime to ensure that it\ndoes not run as UID 0 (root) and fail to start the container if it does.\nIf unset or false, no such validation will be performed.\nMay also be set in PodSecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence."
 
 ### fn spec.template.spec.initContainers.securityContext.withRunAsUser
 
@@ -7957,11 +8213,11 @@ withRunAsNonRoot(runAsNonRoot)
 withRunAsUser(runAsUser)
 ```
 
-"The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows."
+"The UID to run the entrypoint of the container process.\nDefaults to user specified in image metadata if unspecified.\nMay also be set in PodSecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence.\nNote that this field cannot be set when spec.os.name is windows."
 
 ## obj spec.template.spec.initContainers.securityContext.capabilities
 
-"The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. Note that this field cannot be set when spec.os.name is windows."
+"The capabilities to add/drop when running containers.\nDefaults to the default set of capabilities granted by the container runtime.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.initContainers.securityContext.capabilities.withAdd
 
@@ -8001,7 +8257,7 @@ withDropMixin(drop)
 
 ## obj spec.template.spec.initContainers.securityContext.seLinuxOptions
 
-"The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is windows."
+"The SELinux context to be applied to the container.\nIf unspecified, the container runtime will allocate a random SELinux context for each\ncontainer.  May also be set in PodSecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.initContainers.securityContext.seLinuxOptions.withLevel
 
@@ -8037,7 +8293,7 @@ withUser(user)
 
 ## obj spec.template.spec.initContainers.securityContext.seccompProfile
 
-"The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options. Note that this field cannot be set when spec.os.name is windows."
+"The seccomp options to use by this container. If seccomp options are\nprovided at both the pod & container level, the container options\noverride the pod options.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.initContainers.securityContext.seccompProfile.withLocalhostProfile
 
@@ -8045,7 +8301,7 @@ withUser(user)
 withLocalhostProfile(localhostProfile)
 ```
 
-"localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must be set if type is \"Localhost\". Must NOT be set for any other type."
+"localhostProfile indicates a profile defined in a file on the node should be used.\nThe profile must be preconfigured on the node to work.\nMust be a descending path, relative to the kubelet's configured seccomp profile location.\nMust be set if type is \"Localhost\". Must NOT be set for any other type."
 
 ### fn spec.template.spec.initContainers.securityContext.seccompProfile.withType
 
@@ -8053,11 +8309,11 @@ withLocalhostProfile(localhostProfile)
 withType(type)
 ```
 
-"type indicates which kind of seccomp profile will be applied. Valid options are: \n Localhost - a profile defined in a file on the node should be used. RuntimeDefault - the container runtime default profile should be used. Unconfined - no profile should be applied."
+"type indicates which kind of seccomp profile will be applied.\nValid options are:\n\n\nLocalhost - a profile defined in a file on the node should be used.\nRuntimeDefault - the container runtime default profile should be used.\nUnconfined - no profile should be applied."
 
 ## obj spec.template.spec.initContainers.securityContext.windowsOptions
 
-"The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux."
+"The Windows specific settings applied to all containers.\nIf unspecified, the options from the PodSecurityContext will be used.\nIf set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.\nNote that this field cannot be set when spec.os.name is linux."
 
 ### fn spec.template.spec.initContainers.securityContext.windowsOptions.withGmsaCredentialSpec
 
@@ -8065,7 +8321,7 @@ withType(type)
 withGmsaCredentialSpec(gmsaCredentialSpec)
 ```
 
-"GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field."
+"GMSACredentialSpec is where the GMSA admission webhook\n(https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the\nGMSA credential spec named by the GMSACredentialSpecName field."
 
 ### fn spec.template.spec.initContainers.securityContext.windowsOptions.withGmsaCredentialSpecName
 
@@ -8081,7 +8337,7 @@ withGmsaCredentialSpecName(gmsaCredentialSpecName)
 withHostProcess(hostProcess)
 ```
 
-"HostProcess determines if a container should be run as a 'Host Process' container. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers). In addition, if HostProcess is true then HostNetwork must also be set to true."
+"HostProcess determines if a container should be run as a 'Host Process' container.\nAll of a Pod's containers must have the same effective HostProcess value\n(it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).\nIn addition, if HostProcess is true then HostNetwork must also be set to true."
 
 ### fn spec.template.spec.initContainers.securityContext.windowsOptions.withRunAsUserName
 
@@ -8089,11 +8345,11 @@ withHostProcess(hostProcess)
 withRunAsUserName(runAsUserName)
 ```
 
-"The UserName in Windows to run the entrypoint of the container process. Defaults to the user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence."
+"The UserName in Windows to run the entrypoint of the container process.\nDefaults to the user specified in image metadata if unspecified.\nMay also be set in PodSecurityContext. If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence."
 
 ## obj spec.template.spec.initContainers.startupProbe
 
-"StartupProbe indicates that the Pod has successfully initialized. If specified, no other probes are executed until this completes successfully. If this probe fails, the Pod will be restarted, just as if the livenessProbe failed. This can be used to provide different probe parameters at the beginning of a Pod's lifecycle, when it might take a long time to load data or warm a cache, than during steady-state operation. This cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"StartupProbe indicates that the Pod has successfully initialized.\nIf specified, no other probes are executed until this completes successfully.\nIf this probe fails, the Pod will be restarted, just as if the livenessProbe failed.\nThis can be used to provide different probe parameters at the beginning of a Pod's lifecycle,\nwhen it might take a long time to load data or warm a cache, than during steady-state operation.\nThis cannot be updated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ### fn spec.template.spec.initContainers.startupProbe.withFailureThreshold
 
@@ -8101,7 +8357,7 @@ withRunAsUserName(runAsUserName)
 withFailureThreshold(failureThreshold)
 ```
 
-"Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1."
+"Minimum consecutive failures for the probe to be considered failed after having succeeded.\nDefaults to 3. Minimum value is 1."
 
 ### fn spec.template.spec.initContainers.startupProbe.withInitialDelaySeconds
 
@@ -8109,7 +8365,7 @@ withFailureThreshold(failureThreshold)
 withInitialDelaySeconds(initialDelaySeconds)
 ```
 
-"Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Number of seconds after the container has started before liveness probes are initiated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ### fn spec.template.spec.initContainers.startupProbe.withPeriodSeconds
 
@@ -8117,7 +8373,7 @@ withInitialDelaySeconds(initialDelaySeconds)
 withPeriodSeconds(periodSeconds)
 ```
 
-"How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1."
+"How often (in seconds) to perform the probe.\nDefault to 10 seconds. Minimum value is 1."
 
 ### fn spec.template.spec.initContainers.startupProbe.withSuccessThreshold
 
@@ -8125,7 +8381,7 @@ withPeriodSeconds(periodSeconds)
 withSuccessThreshold(successThreshold)
 ```
 
-"Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
+"Minimum consecutive successes for the probe to be considered successful after having failed.\nDefaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
 
 ### fn spec.template.spec.initContainers.startupProbe.withTerminationGracePeriodSeconds
 
@@ -8133,7 +8389,7 @@ withSuccessThreshold(successThreshold)
 withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
 ```
 
-"Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
+"Optional duration in seconds the pod needs to terminate gracefully upon probe failure.\nThe grace period is the duration in seconds after the processes running in the pod are sent\na termination signal and the time when the processes are forcibly halted with a kill signal.\nSet this value longer than the expected cleanup time for your process.\nIf this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this\nvalue overrides the value provided by the pod spec.\nValue must be non-negative integer. The value zero indicates stop immediately via\nthe kill signal (no opportunity to shut down).\nThis is a beta field and requires enabling ProbeTerminationGracePeriod feature gate.\nMinimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
 
 ### fn spec.template.spec.initContainers.startupProbe.withTimeoutSeconds
 
@@ -8141,7 +8397,7 @@ withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
 withTimeoutSeconds(timeoutSeconds)
 ```
 
-"Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+"Number of seconds after which the probe times out.\nDefaults to 1 second. Minimum value is 1.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ## obj spec.template.spec.initContainers.startupProbe.exec
 
@@ -8153,7 +8409,7 @@ withTimeoutSeconds(timeoutSeconds)
 withCommand(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 ### fn spec.template.spec.initContainers.startupProbe.exec.withCommandMixin
 
@@ -8161,7 +8417,7 @@ withCommand(command)
 withCommandMixin(command)
 ```
 
-"Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy."
+"Command is the command line to execute inside the container, the working directory for the\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\na shell, you need to explicitly call out to that shell.\nExit status of 0 is treated as live/healthy and non-zero is unhealthy."
 
 **Note:** This function appends passed data to existing values
 
@@ -8183,7 +8439,7 @@ withPort(port)
 withService(service)
 ```
 
-"Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md). \n If this is not specified, the default behavior is defined by gRPC."
+"Service is the name of the service to place in the gRPC HealthCheckRequest\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\n\n\nIf this is not specified, the default behavior is defined by gRPC."
 
 ## obj spec.template.spec.initContainers.startupProbe.httpGet
 
@@ -8195,7 +8451,7 @@ withService(service)
 withHost(host)
 ```
 
-"Host name to connect to, defaults to the pod IP. You probably want to set \"Host\" in httpHeaders instead."
+"Host name to connect to, defaults to the pod IP. You probably want to set\n\"Host\" in httpHeaders instead."
 
 ### fn spec.template.spec.initContainers.startupProbe.httpGet.withHttpHeaders
 
@@ -8229,7 +8485,7 @@ withPath(path)
 withPort(port)
 ```
 
-"Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Name or number of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ### fn spec.template.spec.initContainers.startupProbe.httpGet.withScheme
 
@@ -8237,7 +8493,7 @@ withPort(port)
 withScheme(scheme)
 ```
 
-"Scheme to use for connecting to the host. Defaults to HTTP."
+"Scheme to use for connecting to the host.\nDefaults to HTTP."
 
 ## obj spec.template.spec.initContainers.startupProbe.httpGet.httpHeaders
 
@@ -8249,7 +8505,7 @@ withScheme(scheme)
 withName(name)
 ```
 
-"The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header."
+"The header field name.\nThis will be canonicalized upon output, so case-variant names will be understood as the same header."
 
 ### fn spec.template.spec.initContainers.startupProbe.httpGet.httpHeaders.withValue
 
@@ -8277,7 +8533,7 @@ withHost(host)
 withPort(port)
 ```
 
-"Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME."
+"Number or name of the port to access on the container.\nNumber must be in the range 1 to 65535.\nName must be an IANA_SVC_NAME."
 
 ## obj spec.template.spec.initContainers.volumeDevices
 
@@ -8301,7 +8557,7 @@ withName(name)
 
 ## obj spec.template.spec.initContainers.volumeMounts
 
-"Pod volumes to mount into the container's filesystem. Cannot be updated."
+"Pod volumes to mount into the container's filesystem.\nCannot be updated."
 
 ### fn spec.template.spec.initContainers.volumeMounts.withMountPath
 
@@ -8309,7 +8565,7 @@ withName(name)
 withMountPath(mountPath)
 ```
 
-"Path within the container at which the volume should be mounted.  Must not contain ':'."
+"Path within the container at which the volume should be mounted.  Must\nnot contain ':'."
 
 ### fn spec.template.spec.initContainers.volumeMounts.withMountPropagation
 
@@ -8317,7 +8573,7 @@ withMountPath(mountPath)
 withMountPropagation(mountPropagation)
 ```
 
-"mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationNone is used. This field is beta in 1.10."
+"mountPropagation determines how mounts are propagated from the host\nto container and the other way around.\nWhen not set, MountPropagationNone is used.\nThis field is beta in 1.10."
 
 ### fn spec.template.spec.initContainers.volumeMounts.withName
 
@@ -8333,7 +8589,7 @@ withName(name)
 withReadOnly(readOnly)
 ```
 
-"Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false."
+"Mounted read-only if true, read-write otherwise (false or unspecified).\nDefaults to false."
 
 ### fn spec.template.spec.initContainers.volumeMounts.withSubPath
 
@@ -8341,7 +8597,7 @@ withReadOnly(readOnly)
 withSubPath(subPath)
 ```
 
-"Path within the volume from which the container's volume should be mounted. Defaults to \"\" (volume's root)."
+"Path within the volume from which the container's volume should be mounted.\nDefaults to \"\" (volume's root)."
 
 ### fn spec.template.spec.initContainers.volumeMounts.withSubPathExpr
 
@@ -8349,11 +8605,11 @@ withSubPath(subPath)
 withSubPathExpr(subPathExpr)
 ```
 
-"Expanded path within the volume from which the container's volume should be mounted. Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container's environment. Defaults to \"\" (volume's root). SubPathExpr and SubPath are mutually exclusive."
+"Expanded path within the volume from which the container's volume should be mounted.\nBehaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container's environment.\nDefaults to \"\" (volume's root).\nSubPathExpr and SubPath are mutually exclusive."
 
 ## obj spec.template.spec.os
 
-"Specifies the OS of the containers in the pod. Some pod and container fields are restricted if this is set. \n If the OS field is set to linux, the following fields must be unset: -securityContext.windowsOptions \n If the OS field is set to windows, following fields must be unset: - spec.hostPID - spec.hostIPC - spec.hostUsers - spec.securityContext.seLinuxOptions - spec.securityContext.seccompProfile - spec.securityContext.fsGroup - spec.securityContext.fsGroupChangePolicy - spec.securityContext.sysctls - spec.shareProcessNamespace - spec.securityContext.runAsUser - spec.securityContext.runAsGroup - spec.securityContext.supplementalGroups - spec.containers[*].securityContext.seLinuxOptions - spec.containers[*].securityContext.seccompProfile - spec.containers[*].securityContext.capabilities - spec.containers[*].securityContext.readOnlyRootFilesystem - spec.containers[*].securityContext.privileged - spec.containers[*].securityContext.allowPrivilegeEscalation - spec.containers[*].securityContext.procMount - spec.containers[*].securityContext.runAsUser - spec.containers[*].securityContext.runAsGroup"
+"Specifies the OS of the containers in the pod.\nSome pod and container fields are restricted if this is set.\n\n\nIf the OS field is set to linux, the following fields must be unset:\n-securityContext.windowsOptions\n\n\nIf the OS field is set to windows, following fields must be unset:\n- spec.hostPID\n- spec.hostIPC\n- spec.hostUsers\n- spec.securityContext.seLinuxOptions\n- spec.securityContext.seccompProfile\n- spec.securityContext.fsGroup\n- spec.securityContext.fsGroupChangePolicy\n- spec.securityContext.sysctls\n- spec.shareProcessNamespace\n- spec.securityContext.runAsUser\n- spec.securityContext.runAsGroup\n- spec.securityContext.supplementalGroups\n- spec.containers[*].securityContext.seLinuxOptions\n- spec.containers[*].securityContext.seccompProfile\n- spec.containers[*].securityContext.capabilities\n- spec.containers[*].securityContext.readOnlyRootFilesystem\n- spec.containers[*].securityContext.privileged\n- spec.containers[*].securityContext.allowPrivilegeEscalation\n- spec.containers[*].securityContext.procMount\n- spec.containers[*].securityContext.runAsUser\n- spec.containers[*].securityContext.runAsGroup"
 
 ### fn spec.template.spec.os.withName
 
@@ -8361,11 +8617,11 @@ withSubPathExpr(subPathExpr)
 withName(name)
 ```
 
-"Name is the name of the operating system. The currently supported values are linux and windows. Additional value may be defined in future and can be one of: https://github.com/opencontainers/runtime-spec/blob/master/config.md#platform-specific-configuration Clients should expect to handle additional values and treat unrecognized values in this field as os: null"
+"Name is the name of the operating system. The currently supported values are linux and windows.\nAdditional value may be defined in future and can be one of:\nhttps://github.com/opencontainers/runtime-spec/blob/master/config.md#platform-specific-configuration\nClients should expect to handle additional values and treat unrecognized values in this field as os: null"
 
 ## obj spec.template.spec.readinessGates
 
-"If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to \"True\" More info: https://git.k8s.io/enhancements/keps/sig-network/580-pod-readiness-gates"
+"If specified, all readiness gates will be evaluated for pod readiness.\nA pod is ready when all its containers are ready AND\nall conditions specified in the readiness gates have status equal to \"True\"\nMore info: https://git.k8s.io/enhancements/keps/sig-network/580-pod-readiness-gates"
 
 ### fn spec.template.spec.readinessGates.withConditionType
 
@@ -8377,7 +8633,7 @@ withConditionType(conditionType)
 
 ## obj spec.template.spec.resourceClaims
 
-"ResourceClaims defines which ResourceClaims must be allocated and reserved before the Pod is allowed to start. The resources will be made available to those containers which consume them by name. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable."
+"ResourceClaims defines which ResourceClaims must be allocated\nand reserved before the Pod is allowed to start. The resources\nwill be made available to those containers which consume them\nby name.\n\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\n\nThis field is immutable."
 
 ### fn spec.template.spec.resourceClaims.withName
 
@@ -8385,7 +8641,7 @@ withConditionType(conditionType)
 withName(name)
 ```
 
-"Name uniquely identifies this resource claim inside the pod. This must be a DNS_LABEL."
+"Name uniquely identifies this resource claim inside the pod.\nThis must be a DNS_LABEL."
 
 ## obj spec.template.spec.resourceClaims.source
 
@@ -8397,7 +8653,7 @@ withName(name)
 withResourceClaimName(resourceClaimName)
 ```
 
-"ResourceClaimName is the name of a ResourceClaim object in the same namespace as this pod."
+"ResourceClaimName is the name of a ResourceClaim object in the same\nnamespace as this pod."
 
 ### fn spec.template.spec.resourceClaims.source.withResourceClaimTemplateName
 
@@ -8405,11 +8661,11 @@ withResourceClaimName(resourceClaimName)
 withResourceClaimTemplateName(resourceClaimTemplateName)
 ```
 
-"ResourceClaimTemplateName is the name of a ResourceClaimTemplate object in the same namespace as this pod. \n The template will be used to create a new ResourceClaim, which will be bound to this pod. When this pod is deleted, the ResourceClaim will also be deleted. The pod name and resource name, along with a generated component, will be used to form a unique name for the ResourceClaim, which will be recorded in pod.status.resourceClaimStatuses. \n This field is immutable and no changes will be made to the corresponding ResourceClaim by the control plane after creating the ResourceClaim."
+"ResourceClaimTemplateName is the name of a ResourceClaimTemplate\nobject in the same namespace as this pod.\n\n\nThe template will be used to create a new ResourceClaim, which will\nbe bound to this pod. When this pod is deleted, the ResourceClaim\nwill also be deleted. The pod name and resource name, along with a\ngenerated component, will be used to form a unique name for the\nResourceClaim, which will be recorded in pod.status.resourceClaimStatuses.\n\n\nThis field is immutable and no changes will be made to the\ncorresponding ResourceClaim by the control plane after creating the\nResourceClaim."
 
 ## obj spec.template.spec.schedulingGates
 
-"SchedulingGates is an opaque list of values that if specified will block scheduling the pod. If schedulingGates is not empty, the pod will stay in the SchedulingGated state and the scheduler will not attempt to schedule the pod. \n SchedulingGates can only be set at pod creation time, and be removed only afterwards. \n This is a beta feature enabled by the PodSchedulingReadiness feature gate."
+"SchedulingGates is an opaque list of values that if specified will block scheduling the pod.\nIf schedulingGates is not empty, the pod will stay in the SchedulingGated state and the\nscheduler will not attempt to schedule the pod.\n\n\nSchedulingGates can only be set at pod creation time, and be removed only afterwards.\n\n\nThis is a beta feature enabled by the PodSchedulingReadiness feature gate."
 
 ### fn spec.template.spec.schedulingGates.withName
 
@@ -8417,11 +8673,11 @@ withResourceClaimTemplateName(resourceClaimTemplateName)
 withName(name)
 ```
 
-"Name of the scheduling gate. Each scheduling gate must have a unique name field."
+"Name of the scheduling gate.\nEach scheduling gate must have a unique name field."
 
 ## obj spec.template.spec.securityContext
 
-"SecurityContext holds pod-level security attributes and common container settings. Optional: Defaults to empty.  See type description for default values of each field."
+"SecurityContext holds pod-level security attributes and common container settings.\nOptional: Defaults to empty.  See type description for default values of each field."
 
 ### fn spec.template.spec.securityContext.withFsGroup
 
@@ -8429,7 +8685,7 @@ withName(name)
 withFsGroup(fsGroup)
 ```
 
-"A special supplemental group that applies to all containers in a pod. Some volume types allow the Kubelet to change the ownership of that volume to be owned by the pod: \n 1. The owning GID will be the FSGroup 2. The setgid bit is set (new files created in the volume will be owned by FSGroup) 3. The permission bits are OR'd with rw-rw---- \n If unset, the Kubelet will not modify the ownership and permissions of any volume. Note that this field cannot be set when spec.os.name is windows."
+"A special supplemental group that applies to all containers in a pod.\nSome volume types allow the Kubelet to change the ownership of that volume\nto be owned by the pod:\n\n\n1. The owning GID will be the FSGroup\n2. The setgid bit is set (new files created in the volume will be owned by FSGroup)\n3. The permission bits are OR'd with rw-rw----\n\n\nIf unset, the Kubelet will not modify the ownership and permissions of any volume.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.securityContext.withFsGroupChangePolicy
 
@@ -8437,7 +8693,7 @@ withFsGroup(fsGroup)
 withFsGroupChangePolicy(fsGroupChangePolicy)
 ```
 
-"fsGroupChangePolicy defines behavior of changing ownership and permission of the volume before being exposed inside Pod. This field will only apply to volume types which support fsGroup based ownership(and permissions). It will have no effect on ephemeral volume types such as: secret, configmaps and emptydir. Valid values are \"OnRootMismatch\" and \"Always\". If not specified, \"Always\" is used. Note that this field cannot be set when spec.os.name is windows."
+"fsGroupChangePolicy defines behavior of changing ownership and permission of the volume\nbefore being exposed inside Pod. This field will only apply to\nvolume types which support fsGroup based ownership(and permissions).\nIt will have no effect on ephemeral volume types such as: secret, configmaps\nand emptydir.\nValid values are \"OnRootMismatch\" and \"Always\". If not specified, \"Always\" is used.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.securityContext.withRunAsGroup
 
@@ -8445,7 +8701,7 @@ withFsGroupChangePolicy(fsGroupChangePolicy)
 withRunAsGroup(runAsGroup)
 ```
 
-"The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container. Note that this field cannot be set when spec.os.name is windows."
+"The GID to run the entrypoint of the container process.\nUses runtime default if unset.\nMay also be set in SecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence\nfor that container.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.securityContext.withRunAsNonRoot
 
@@ -8453,7 +8709,7 @@ withRunAsGroup(runAsGroup)
 withRunAsNonRoot(runAsNonRoot)
 ```
 
-"Indicates that the container must run as a non-root user. If true, the Kubelet will validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the container if it does. If unset or false, no such validation will be performed. May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence."
+"Indicates that the container must run as a non-root user.\nIf true, the Kubelet will validate the image at runtime to ensure that it\ndoes not run as UID 0 (root) and fail to start the container if it does.\nIf unset or false, no such validation will be performed.\nMay also be set in SecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence."
 
 ### fn spec.template.spec.securityContext.withRunAsUser
 
@@ -8461,7 +8717,7 @@ withRunAsNonRoot(runAsNonRoot)
 withRunAsUser(runAsUser)
 ```
 
-"The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container. Note that this field cannot be set when spec.os.name is windows."
+"The UID to run the entrypoint of the container process.\nDefaults to user specified in image metadata if unspecified.\nMay also be set in SecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence\nfor that container.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.securityContext.withSupplementalGroups
 
@@ -8469,7 +8725,7 @@ withRunAsUser(runAsUser)
 withSupplementalGroups(supplementalGroups)
 ```
 
-"A list of groups applied to the first process run in each container, in addition to the container's primary GID, the fsGroup (if specified), and group memberships defined in the container image for the uid of the container process. If unspecified, no additional groups are added to any container. Note that group memberships defined in the container image for the uid of the container process are still effective, even if they are not included in this list. Note that this field cannot be set when spec.os.name is windows."
+"A list of groups applied to the first process run in each container, in addition\nto the container's primary GID, the fsGroup (if specified), and group memberships\ndefined in the container image for the uid of the container process. If unspecified,\nno additional groups are added to any container. Note that group memberships\ndefined in the container image for the uid of the container process are still effective,\neven if they are not included in this list.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.securityContext.withSupplementalGroupsMixin
 
@@ -8477,7 +8733,7 @@ withSupplementalGroups(supplementalGroups)
 withSupplementalGroupsMixin(supplementalGroups)
 ```
 
-"A list of groups applied to the first process run in each container, in addition to the container's primary GID, the fsGroup (if specified), and group memberships defined in the container image for the uid of the container process. If unspecified, no additional groups are added to any container. Note that group memberships defined in the container image for the uid of the container process are still effective, even if they are not included in this list. Note that this field cannot be set when spec.os.name is windows."
+"A list of groups applied to the first process run in each container, in addition\nto the container's primary GID, the fsGroup (if specified), and group memberships\ndefined in the container image for the uid of the container process. If unspecified,\nno additional groups are added to any container. Note that group memberships\ndefined in the container image for the uid of the container process are still effective,\neven if they are not included in this list.\nNote that this field cannot be set when spec.os.name is windows."
 
 **Note:** This function appends passed data to existing values
 
@@ -8487,7 +8743,7 @@ withSupplementalGroupsMixin(supplementalGroups)
 withSysctls(sysctls)
 ```
 
-"Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported sysctls (by the container runtime) might fail to launch. Note that this field cannot be set when spec.os.name is windows."
+"Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported\nsysctls (by the container runtime) might fail to launch.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.securityContext.withSysctlsMixin
 
@@ -8495,13 +8751,13 @@ withSysctls(sysctls)
 withSysctlsMixin(sysctls)
 ```
 
-"Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported sysctls (by the container runtime) might fail to launch. Note that this field cannot be set when spec.os.name is windows."
+"Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported\nsysctls (by the container runtime) might fail to launch.\nNote that this field cannot be set when spec.os.name is windows."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec.securityContext.seLinuxOptions
 
-"The SELinux context to be applied to all containers. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container. Note that this field cannot be set when spec.os.name is windows."
+"The SELinux context to be applied to all containers.\nIf unspecified, the container runtime will allocate a random SELinux context for each\ncontainer.  May also be set in SecurityContext.  If set in\nboth SecurityContext and PodSecurityContext, the value specified in SecurityContext\ntakes precedence for that container.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.securityContext.seLinuxOptions.withLevel
 
@@ -8537,7 +8793,7 @@ withUser(user)
 
 ## obj spec.template.spec.securityContext.seccompProfile
 
-"The seccomp options to use by the containers in this pod. Note that this field cannot be set when spec.os.name is windows."
+"The seccomp options to use by the containers in this pod.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.securityContext.seccompProfile.withLocalhostProfile
 
@@ -8545,7 +8801,7 @@ withUser(user)
 withLocalhostProfile(localhostProfile)
 ```
 
-"localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must be set if type is \"Localhost\". Must NOT be set for any other type."
+"localhostProfile indicates a profile defined in a file on the node should be used.\nThe profile must be preconfigured on the node to work.\nMust be a descending path, relative to the kubelet's configured seccomp profile location.\nMust be set if type is \"Localhost\". Must NOT be set for any other type."
 
 ### fn spec.template.spec.securityContext.seccompProfile.withType
 
@@ -8553,11 +8809,11 @@ withLocalhostProfile(localhostProfile)
 withType(type)
 ```
 
-"type indicates which kind of seccomp profile will be applied. Valid options are: \n Localhost - a profile defined in a file on the node should be used. RuntimeDefault - the container runtime default profile should be used. Unconfined - no profile should be applied."
+"type indicates which kind of seccomp profile will be applied.\nValid options are:\n\n\nLocalhost - a profile defined in a file on the node should be used.\nRuntimeDefault - the container runtime default profile should be used.\nUnconfined - no profile should be applied."
 
 ## obj spec.template.spec.securityContext.sysctls
 
-"Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported sysctls (by the container runtime) might fail to launch. Note that this field cannot be set when spec.os.name is windows."
+"Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported\nsysctls (by the container runtime) might fail to launch.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.securityContext.sysctls.withName
 
@@ -8577,7 +8833,7 @@ withValue(value)
 
 ## obj spec.template.spec.securityContext.windowsOptions
 
-"The Windows specific settings applied to all containers. If unspecified, the options within a container's SecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. Note that this field cannot be set when spec.os.name is linux."
+"The Windows specific settings applied to all containers.\nIf unspecified, the options within a container's SecurityContext will be used.\nIf set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.\nNote that this field cannot be set when spec.os.name is linux."
 
 ### fn spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 
@@ -8585,7 +8841,7 @@ withValue(value)
 withGmsaCredentialSpec(gmsaCredentialSpec)
 ```
 
-"GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field."
+"GMSACredentialSpec is where the GMSA admission webhook\n(https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the\nGMSA credential spec named by the GMSACredentialSpecName field."
 
 ### fn spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpecName
 
@@ -8601,7 +8857,7 @@ withGmsaCredentialSpecName(gmsaCredentialSpecName)
 withHostProcess(hostProcess)
 ```
 
-"HostProcess determines if a container should be run as a 'Host Process' container. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers). In addition, if HostProcess is true then HostNetwork must also be set to true."
+"HostProcess determines if a container should be run as a 'Host Process' container.\nAll of a Pod's containers must have the same effective HostProcess value\n(it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).\nIn addition, if HostProcess is true then HostNetwork must also be set to true."
 
 ### fn spec.template.spec.securityContext.windowsOptions.withRunAsUserName
 
@@ -8609,7 +8865,7 @@ withHostProcess(hostProcess)
 withRunAsUserName(runAsUserName)
 ```
 
-"The UserName in Windows to run the entrypoint of the container process. Defaults to the user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence."
+"The UserName in Windows to run the entrypoint of the container process.\nDefaults to the user specified in image metadata if unspecified.\nMay also be set in PodSecurityContext. If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence."
 
 ## obj spec.template.spec.tolerations
 
@@ -8621,7 +8877,7 @@ withRunAsUserName(runAsUserName)
 withEffect(effect)
 ```
 
-"Effect indicates the taint effect to match. Empty means match all taint effects. When specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute."
+"Effect indicates the taint effect to match. Empty means match all taint effects.\nWhen specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute."
 
 ### fn spec.template.spec.tolerations.withKey
 
@@ -8629,7 +8885,7 @@ withEffect(effect)
 withKey(key)
 ```
 
-"Key is the taint key that the toleration applies to. Empty means match all taint keys. If the key is empty, operator must be Exists; this combination means to match all values and all keys."
+"Key is the taint key that the toleration applies to. Empty means match all taint keys.\nIf the key is empty, operator must be Exists; this combination means to match all values and all keys."
 
 ### fn spec.template.spec.tolerations.withOperator
 
@@ -8637,7 +8893,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"Operator represents a key's relationship to the value. Valid operators are Exists and Equal. Defaults to Equal. Exists is equivalent to wildcard for value, so that a pod can tolerate all taints of a particular category."
+"Operator represents a key's relationship to the value.\nValid operators are Exists and Equal. Defaults to Equal.\nExists is equivalent to wildcard for value, so that a pod can\ntolerate all taints of a particular category."
 
 ### fn spec.template.spec.tolerations.withTolerationSeconds
 
@@ -8645,7 +8901,7 @@ withOperator(operator)
 withTolerationSeconds(tolerationSeconds)
 ```
 
-"TolerationSeconds represents the period of time the toleration (which must be of effect NoExecute, otherwise this field is ignored) tolerates the taint. By default, it is not set, which means tolerate the taint forever (do not evict). Zero and negative values will be treated as 0 (evict immediately) by the system."
+"TolerationSeconds represents the period of time the toleration (which must be\nof effect NoExecute, otherwise this field is ignored) tolerates the taint. By default,\nit is not set, which means tolerate the taint forever (do not evict). Zero and\nnegative values will be treated as 0 (evict immediately) by the system."
 
 ### fn spec.template.spec.tolerations.withValue
 
@@ -8653,11 +8909,11 @@ withTolerationSeconds(tolerationSeconds)
 withValue(value)
 ```
 
-"Value is the taint value the toleration matches to. If the operator is Exists, the value should be empty, otherwise just a regular string."
+"Value is the taint value the toleration matches to.\nIf the operator is Exists, the value should be empty, otherwise just a regular string."
 
 ## obj spec.template.spec.topologySpreadConstraints
 
-"TopologySpreadConstraints describes how a group of pods ought to spread across topology domains. Scheduler will schedule pods in a way which abides by the constraints. All topologySpreadConstraints are ANDed."
+"TopologySpreadConstraints describes how a group of pods ought to spread across topology\ndomains. Scheduler will schedule pods in a way which abides by the constraints.\nAll topologySpreadConstraints are ANDed."
 
 ### fn spec.template.spec.topologySpreadConstraints.withMatchLabelKeys
 
@@ -8665,7 +8921,7 @@ withValue(value)
 withMatchLabelKeys(matchLabelKeys)
 ```
 
-"MatchLabelKeys is a set of pod label keys to select the pods over which spreading will be calculated. The keys are used to lookup values from the incoming pod labels, those key-value labels are ANDed with labelSelector to select the group of existing pods over which spreading will be calculated for the incoming pod. The same key is forbidden to exist in both MatchLabelKeys and LabelSelector. MatchLabelKeys cannot be set when LabelSelector isn't set. Keys that don't exist in the incoming pod labels will be ignored. A null or empty list means only match against labelSelector. \n This is a beta field and requires the MatchLabelKeysInPodTopologySpread feature gate to be enabled (enabled by default)."
+"MatchLabelKeys is a set of pod label keys to select the pods over which\nspreading will be calculated. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are ANDed with labelSelector\nto select the group of existing pods over which spreading will be calculated\nfor the incoming pod. The same key is forbidden to exist in both MatchLabelKeys and LabelSelector.\nMatchLabelKeys cannot be set when LabelSelector isn't set.\nKeys that don't exist in the incoming pod labels will\nbe ignored. A null or empty list means only match against labelSelector.\n\n\nThis is a beta field and requires the MatchLabelKeysInPodTopologySpread feature gate to be enabled (enabled by default)."
 
 ### fn spec.template.spec.topologySpreadConstraints.withMatchLabelKeysMixin
 
@@ -8673,7 +8929,7 @@ withMatchLabelKeys(matchLabelKeys)
 withMatchLabelKeysMixin(matchLabelKeys)
 ```
 
-"MatchLabelKeys is a set of pod label keys to select the pods over which spreading will be calculated. The keys are used to lookup values from the incoming pod labels, those key-value labels are ANDed with labelSelector to select the group of existing pods over which spreading will be calculated for the incoming pod. The same key is forbidden to exist in both MatchLabelKeys and LabelSelector. MatchLabelKeys cannot be set when LabelSelector isn't set. Keys that don't exist in the incoming pod labels will be ignored. A null or empty list means only match against labelSelector. \n This is a beta field and requires the MatchLabelKeysInPodTopologySpread feature gate to be enabled (enabled by default)."
+"MatchLabelKeys is a set of pod label keys to select the pods over which\nspreading will be calculated. The keys are used to lookup values from the\nincoming pod labels, those key-value labels are ANDed with labelSelector\nto select the group of existing pods over which spreading will be calculated\nfor the incoming pod. The same key is forbidden to exist in both MatchLabelKeys and LabelSelector.\nMatchLabelKeys cannot be set when LabelSelector isn't set.\nKeys that don't exist in the incoming pod labels will\nbe ignored. A null or empty list means only match against labelSelector.\n\n\nThis is a beta field and requires the MatchLabelKeysInPodTopologySpread feature gate to be enabled (enabled by default)."
 
 **Note:** This function appends passed data to existing values
 
@@ -8683,7 +8939,7 @@ withMatchLabelKeysMixin(matchLabelKeys)
 withMaxSkew(maxSkew)
 ```
 
-"MaxSkew describes the degree to which pods may be unevenly distributed. When `whenUnsatisfiable=DoNotSchedule`, it is the maximum permitted difference between the number of matching pods in the target topology and the global minimum. The global minimum is the minimum number of matching pods in an eligible domain or zero if the number of eligible domains is less than MinDomains. For example, in a 3-zone cluster, MaxSkew is set to 1, and pods with the same labelSelector spread as 2/2/1: In this case, the global minimum is 1. | zone1 | zone2 | zone3 | |  P P  |  P P  |   P   | - if MaxSkew is 1, incoming pod can only be scheduled to zone3 to become 2/2/2; scheduling it onto zone1(zone2) would make the ActualSkew(3-1) on zone1(zone2) violate MaxSkew(1). - if MaxSkew is 2, incoming pod can be scheduled onto any zone. When `whenUnsatisfiable=ScheduleAnyway`, it is used to give higher precedence to topologies that satisfy it. It's a required field. Default value is 1 and 0 is not allowed."
+"MaxSkew describes the degree to which pods may be unevenly distributed.\nWhen `whenUnsatisfiable=DoNotSchedule`, it is the maximum permitted difference\nbetween the number of matching pods in the target topology and the global minimum.\nThe global minimum is the minimum number of matching pods in an eligible domain\nor zero if the number of eligible domains is less than MinDomains.\nFor example, in a 3-zone cluster, MaxSkew is set to 1, and pods with the same\nlabelSelector spread as 2/2/1:\nIn this case, the global minimum is 1.\n| zone1 | zone2 | zone3 |\n|  P P  |  P P  |   P   |\n- if MaxSkew is 1, incoming pod can only be scheduled to zone3 to become 2/2/2;\nscheduling it onto zone1(zone2) would make the ActualSkew(3-1) on zone1(zone2)\nviolate MaxSkew(1).\n- if MaxSkew is 2, incoming pod can be scheduled onto any zone.\nWhen `whenUnsatisfiable=ScheduleAnyway`, it is used to give higher precedence\nto topologies that satisfy it.\nIt's a required field. Default value is 1 and 0 is not allowed."
 
 ### fn spec.template.spec.topologySpreadConstraints.withMinDomains
 
@@ -8691,7 +8947,7 @@ withMaxSkew(maxSkew)
 withMinDomains(minDomains)
 ```
 
-"MinDomains indicates a minimum number of eligible domains. When the number of eligible domains with matching topology keys is less than minDomains, Pod Topology Spread treats \"global minimum\" as 0, and then the calculation of Skew is performed. And when the number of eligible domains with matching topology keys equals or greater than minDomains, this value has no effect on scheduling. As a result, when the number of eligible domains is less than minDomains, scheduler won't schedule more than maxSkew Pods to those domains. If value is nil, the constraint behaves as if MinDomains is equal to 1. Valid values are integers greater than 0. When value is not nil, WhenUnsatisfiable must be DoNotSchedule. \n For example, in a 3-zone cluster, MaxSkew is set to 2, MinDomains is set to 5 and pods with the same labelSelector spread as 2/2/2: | zone1 | zone2 | zone3 | |  P P  |  P P  |  P P  | The number of domains is less than 5(MinDomains), so \"global minimum\" is treated as 0. In this situation, new pod with the same labelSelector cannot be scheduled, because computed skew will be 3(3 - 0) if new Pod is scheduled to any of the three zones, it will violate MaxSkew. \n This is a beta field and requires the MinDomainsInPodTopologySpread feature gate to be enabled (enabled by default)."
+"MinDomains indicates a minimum number of eligible domains.\nWhen the number of eligible domains with matching topology keys is less than minDomains,\nPod Topology Spread treats \"global minimum\" as 0, and then the calculation of Skew is performed.\nAnd when the number of eligible domains with matching topology keys equals or greater than minDomains,\nthis value has no effect on scheduling.\nAs a result, when the number of eligible domains is less than minDomains,\nscheduler won't schedule more than maxSkew Pods to those domains.\nIf value is nil, the constraint behaves as if MinDomains is equal to 1.\nValid values are integers greater than 0.\nWhen value is not nil, WhenUnsatisfiable must be DoNotSchedule.\n\n\nFor example, in a 3-zone cluster, MaxSkew is set to 2, MinDomains is set to 5 and pods with the same\nlabelSelector spread as 2/2/2:\n| zone1 | zone2 | zone3 |\n|  P P  |  P P  |  P P  |\nThe number of domains is less than 5(MinDomains), so \"global minimum\" is treated as 0.\nIn this situation, new pod with the same labelSelector cannot be scheduled,\nbecause computed skew will be 3(3 - 0) if new Pod is scheduled to any of the three zones,\nit will violate MaxSkew.\n\n\nThis is a beta field and requires the MinDomainsInPodTopologySpread feature gate to be enabled (enabled by default)."
 
 ### fn spec.template.spec.topologySpreadConstraints.withNodeAffinityPolicy
 
@@ -8699,7 +8955,7 @@ withMinDomains(minDomains)
 withNodeAffinityPolicy(nodeAffinityPolicy)
 ```
 
-"NodeAffinityPolicy indicates how we will treat Pod's nodeAffinity/nodeSelector when calculating pod topology spread skew. Options are: - Honor: only nodes matching nodeAffinity/nodeSelector are included in the calculations. - Ignore: nodeAffinity/nodeSelector are ignored. All nodes are included in the calculations. \n If this value is nil, the behavior is equivalent to the Honor policy. This is a beta-level feature default enabled by the NodeInclusionPolicyInPodTopologySpread feature flag."
+"NodeAffinityPolicy indicates how we will treat Pod's nodeAffinity/nodeSelector\nwhen calculating pod topology spread skew. Options are:\n- Honor: only nodes matching nodeAffinity/nodeSelector are included in the calculations.\n- Ignore: nodeAffinity/nodeSelector are ignored. All nodes are included in the calculations.\n\n\nIf this value is nil, the behavior is equivalent to the Honor policy.\nThis is a beta-level feature default enabled by the NodeInclusionPolicyInPodTopologySpread feature flag."
 
 ### fn spec.template.spec.topologySpreadConstraints.withNodeTaintsPolicy
 
@@ -8707,7 +8963,7 @@ withNodeAffinityPolicy(nodeAffinityPolicy)
 withNodeTaintsPolicy(nodeTaintsPolicy)
 ```
 
-"NodeTaintsPolicy indicates how we will treat node taints when calculating pod topology spread skew. Options are: - Honor: nodes without taints, along with tainted nodes for which the incoming pod has a toleration, are included. - Ignore: node taints are ignored. All nodes are included. \n If this value is nil, the behavior is equivalent to the Ignore policy. This is a beta-level feature default enabled by the NodeInclusionPolicyInPodTopologySpread feature flag."
+"NodeTaintsPolicy indicates how we will treat node taints when calculating\npod topology spread skew. Options are:\n- Honor: nodes without taints, along with tainted nodes for which the incoming pod\nhas a toleration, are included.\n- Ignore: node taints are ignored. All nodes are included.\n\n\nIf this value is nil, the behavior is equivalent to the Ignore policy.\nThis is a beta-level feature default enabled by the NodeInclusionPolicyInPodTopologySpread feature flag."
 
 ### fn spec.template.spec.topologySpreadConstraints.withTopologyKey
 
@@ -8715,7 +8971,7 @@ withNodeTaintsPolicy(nodeTaintsPolicy)
 withTopologyKey(topologyKey)
 ```
 
-"TopologyKey is the key of node labels. Nodes that have a label with this key and identical values are considered to be in the same topology. We consider each <key, value> as a \"bucket\", and try to put balanced number of pods into each bucket. We define a domain as a particular instance of a topology. Also, we define an eligible domain as a domain whose nodes meet the requirements of nodeAffinityPolicy and nodeTaintsPolicy. e.g. If TopologyKey is \"kubernetes.io/hostname\", each Node is a domain of that topology. And, if TopologyKey is \"topology.kubernetes.io/zone\", each zone is a domain of that topology. It's a required field."
+"TopologyKey is the key of node labels. Nodes that have a label with this key\nand identical values are considered to be in the same topology.\nWe consider each <key, value> as a \"bucket\", and try to put balanced number\nof pods into each bucket.\nWe define a domain as a particular instance of a topology.\nAlso, we define an eligible domain as a domain whose nodes meet the requirements of\nnodeAffinityPolicy and nodeTaintsPolicy.\ne.g. If TopologyKey is \"kubernetes.io/hostname\", each Node is a domain of that topology.\nAnd, if TopologyKey is \"topology.kubernetes.io/zone\", each zone is a domain of that topology.\nIt's a required field."
 
 ### fn spec.template.spec.topologySpreadConstraints.withWhenUnsatisfiable
 
@@ -8723,11 +8979,11 @@ withTopologyKey(topologyKey)
 withWhenUnsatisfiable(whenUnsatisfiable)
 ```
 
-"WhenUnsatisfiable indicates how to deal with a pod if it doesn't satisfy the spread constraint. - DoNotSchedule (default) tells the scheduler not to schedule it. - ScheduleAnyway tells the scheduler to schedule the pod in any location, but giving higher precedence to topologies that would help reduce the skew. A constraint is considered \"Unsatisfiable\" for an incoming pod if and only if every possible node assignment for that pod would violate \"MaxSkew\" on some topology. For example, in a 3-zone cluster, MaxSkew is set to 1, and pods with the same labelSelector spread as 3/1/1: | zone1 | zone2 | zone3 | | P P P |   P   |   P   | If WhenUnsatisfiable is set to DoNotSchedule, incoming pod can only be scheduled to zone2(zone3) to become 3/2/1(3/1/2) as ActualSkew(2-1) on zone2(zone3) satisfies MaxSkew(1). In other words, the cluster can still be imbalanced, but scheduler won't make it *more* imbalanced. It's a required field."
+"WhenUnsatisfiable indicates how to deal with a pod if it doesn't satisfy\nthe spread constraint.\n- DoNotSchedule (default) tells the scheduler not to schedule it.\n- ScheduleAnyway tells the scheduler to schedule the pod in any location,\n  but giving higher precedence to topologies that would help reduce the\n  skew.\nA constraint is considered \"Unsatisfiable\" for an incoming pod\nif and only if every possible node assignment for that pod would violate\n\"MaxSkew\" on some topology.\nFor example, in a 3-zone cluster, MaxSkew is set to 1, and pods with the same\nlabelSelector spread as 3/1/1:\n| zone1 | zone2 | zone3 |\n| P P P |   P   |   P   |\nIf WhenUnsatisfiable is set to DoNotSchedule, incoming pod can only be scheduled\nto zone2(zone3) to become 3/2/1(3/1/2) as ActualSkew(2-1) on zone2(zone3) satisfies\nMaxSkew(1). In other words, the cluster can still be imbalanced, but scheduler\nwon't make it *more* imbalanced.\nIt's a required field."
 
 ## obj spec.template.spec.topologySpreadConstraints.labelSelector
 
-"LabelSelector is used to find matching pods. Pods that match this label selector are counted to determine the number of pods in their corresponding topology domain."
+"LabelSelector is used to find matching pods.\nPods that match this label selector are counted to determine the number of pods\nin their corresponding topology domain."
 
 ### fn spec.template.spec.topologySpreadConstraints.labelSelector.withMatchExpressions
 
@@ -8753,7 +9009,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.template.spec.topologySpreadConstraints.labelSelector.withMatchLabelsMixin
 
@@ -8761,7 +9017,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -8783,7 +9039,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.template.spec.topologySpreadConstraints.labelSelector.matchExpressions.withValues
 
@@ -8791,7 +9047,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.template.spec.topologySpreadConstraints.labelSelector.matchExpressions.withValuesMixin
 
@@ -8799,13 +9055,13 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec.volumes
 
-"List of volumes that can be mounted by containers belonging to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes"
+"List of volumes that can be mounted by containers belonging to the pod.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes"
 
 ### fn spec.template.spec.volumes.withName
 
@@ -8813,11 +9069,11 @@ withValuesMixin(values)
 withName(name)
 ```
 
-"name of the volume. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names"
+"name of the volume.\nMust be a DNS_LABEL and unique within the pod.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names"
 
 ## obj spec.template.spec.volumes.awsElasticBlockStore
 
-"awsElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore"
+"awsElasticBlockStore represents an AWS Disk resource that is attached to a\nkubelet's host machine and then exposed to the pod.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore"
 
 ### fn spec.template.spec.volumes.awsElasticBlockStore.withFsType
 
@@ -8825,7 +9081,7 @@ withName(name)
 withFsType(fsType)
 ```
 
-"fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore TODO: how do we prevent errors in the filesystem from compromising the machine"
+"fsType is the filesystem type of the volume that you want to mount.\nTip: Ensure that the filesystem type is supported by the host operating system.\nExamples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore\nTODO: how do we prevent errors in the filesystem from compromising the machine"
 
 ### fn spec.template.spec.volumes.awsElasticBlockStore.withPartition
 
@@ -8833,7 +9089,7 @@ withFsType(fsType)
 withPartition(partition)
 ```
 
-"partition is the partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as \"1\". Similarly, the volume partition for /dev/sda is \"0\" (or you can leave the property empty)."
+"partition is the partition in the volume that you want to mount.\nIf omitted, the default is to mount by volume name.\nExamples: For volume /dev/sda1, you specify the partition as \"1\".\nSimilarly, the volume partition for /dev/sda is \"0\" (or you can leave the property empty)."
 
 ### fn spec.template.spec.volumes.awsElasticBlockStore.withReadOnly
 
@@ -8841,7 +9097,7 @@ withPartition(partition)
 withReadOnly(readOnly)
 ```
 
-"readOnly value true will force the readOnly setting in VolumeMounts. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore"
+"readOnly value true will force the readOnly setting in VolumeMounts.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore"
 
 ### fn spec.template.spec.volumes.awsElasticBlockStore.withVolumeID
 
@@ -8849,7 +9105,7 @@ withReadOnly(readOnly)
 withVolumeID(volumeID)
 ```
 
-"volumeID is unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore"
+"volumeID is unique ID of the persistent disk resource in AWS (Amazon EBS volume).\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore"
 
 ## obj spec.template.spec.volumes.azureDisk
 
@@ -8885,7 +9141,7 @@ withDiskURI(diskURI)
 withFsType(fsType)
 ```
 
-"fsType is Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified."
+"fsType is Filesystem type to mount.\nMust be a filesystem type supported by the host operating system.\nEx. \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified."
 
 ### fn spec.template.spec.volumes.azureDisk.withKind
 
@@ -8901,7 +9157,7 @@ withKind(kind)
 withReadOnly(readOnly)
 ```
 
-"readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts."
+"readOnly Defaults to false (read/write). ReadOnly here will force\nthe ReadOnly setting in VolumeMounts."
 
 ## obj spec.template.spec.volumes.azureFile
 
@@ -8913,7 +9169,7 @@ withReadOnly(readOnly)
 withReadOnly(readOnly)
 ```
 
-"readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts."
+"readOnly defaults to false (read/write). ReadOnly here will force\nthe ReadOnly setting in VolumeMounts."
 
 ### fn spec.template.spec.volumes.azureFile.withSecretName
 
@@ -8941,7 +9197,7 @@ withShareName(shareName)
 withMonitors(monitors)
 ```
 
-"monitors is Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it"
+"monitors is Required: Monitors is a collection of Ceph monitors\nMore info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it"
 
 ### fn spec.template.spec.volumes.cephfs.withMonitorsMixin
 
@@ -8949,7 +9205,7 @@ withMonitors(monitors)
 withMonitorsMixin(monitors)
 ```
 
-"monitors is Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it"
+"monitors is Required: Monitors is a collection of Ceph monitors\nMore info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it"
 
 **Note:** This function appends passed data to existing values
 
@@ -8967,7 +9223,7 @@ withPath(path)
 withReadOnly(readOnly)
 ```
 
-"readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it"
+"readOnly is Optional: Defaults to false (read/write). ReadOnly here will force\nthe ReadOnly setting in VolumeMounts.\nMore info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it"
 
 ### fn spec.template.spec.volumes.cephfs.withSecretFile
 
@@ -8975,7 +9231,7 @@ withReadOnly(readOnly)
 withSecretFile(secretFile)
 ```
 
-"secretFile is Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it"
+"secretFile is Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret\nMore info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it"
 
 ### fn spec.template.spec.volumes.cephfs.withUser
 
@@ -8983,11 +9239,11 @@ withSecretFile(secretFile)
 withUser(user)
 ```
 
-"user is optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it"
+"user is optional: User is the rados user name, default is admin\nMore info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it"
 
 ## obj spec.template.spec.volumes.cephfs.secretRef
 
-"secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it"
+"secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty.\nMore info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it"
 
 ### fn spec.template.spec.volumes.cephfs.secretRef.withName
 
@@ -8995,11 +9251,11 @@ withUser(user)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ## obj spec.template.spec.volumes.cinder
 
-"cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md"
+"cinder represents a cinder volume attached and mounted on kubelets host machine.\nMore info: https://examples.k8s.io/mysql-cinder-pd/README.md"
 
 ### fn spec.template.spec.volumes.cinder.withFsType
 
@@ -9007,7 +9263,7 @@ withName(name)
 withFsType(fsType)
 ```
 
-"fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md"
+"fsType is the filesystem type to mount.\nMust be a filesystem type supported by the host operating system.\nExamples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified.\nMore info: https://examples.k8s.io/mysql-cinder-pd/README.md"
 
 ### fn spec.template.spec.volumes.cinder.withReadOnly
 
@@ -9015,7 +9271,7 @@ withFsType(fsType)
 withReadOnly(readOnly)
 ```
 
-"readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md"
+"readOnly defaults to false (read/write). ReadOnly here will force\nthe ReadOnly setting in VolumeMounts.\nMore info: https://examples.k8s.io/mysql-cinder-pd/README.md"
 
 ### fn spec.template.spec.volumes.cinder.withVolumeID
 
@@ -9023,11 +9279,11 @@ withReadOnly(readOnly)
 withVolumeID(volumeID)
 ```
 
-"volumeID used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md"
+"volumeID used to identify the volume in cinder.\nMore info: https://examples.k8s.io/mysql-cinder-pd/README.md"
 
 ## obj spec.template.spec.volumes.cinder.secretRef
 
-"secretRef is optional: points to a secret object containing parameters used to connect to OpenStack."
+"secretRef is optional: points to a secret object containing parameters used to connect\nto OpenStack."
 
 ### fn spec.template.spec.volumes.cinder.secretRef.withName
 
@@ -9035,7 +9291,7 @@ withVolumeID(volumeID)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ## obj spec.template.spec.volumes.configMap
 
@@ -9047,7 +9303,7 @@ withName(name)
 withDefaultMode(defaultMode)
 ```
 
-"defaultMode is optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set."
+"defaultMode is optional: mode bits used to set permissions on created files by default.\nMust be an octal value between 0000 and 0777 or a decimal value between 0 and 511.\nYAML accepts both octal and decimal values, JSON requires decimal values for mode bits.\nDefaults to 0644.\nDirectories within the path are not affected by this setting.\nThis might be in conflict with other options that affect the file\nmode, like fsGroup, and the result can be other mode bits set."
 
 ### fn spec.template.spec.volumes.configMap.withItems
 
@@ -9055,7 +9311,7 @@ withDefaultMode(defaultMode)
 withItems(items)
 ```
 
-"items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'."
+"items if unspecified, each key-value pair in the Data field of the referenced\nConfigMap will be projected into the volume as a file whose name is the\nkey and content is the value. If specified, the listed keys will be\nprojected into the specified paths, and unlisted keys will not be\npresent. If a key is specified which is not present in the ConfigMap,\nthe volume setup will error unless it is marked optional. Paths must be\nrelative and may not contain the '..' path or start with '..'."
 
 ### fn spec.template.spec.volumes.configMap.withItemsMixin
 
@@ -9063,7 +9319,7 @@ withItems(items)
 withItemsMixin(items)
 ```
 
-"items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'."
+"items if unspecified, each key-value pair in the Data field of the referenced\nConfigMap will be projected into the volume as a file whose name is the\nkey and content is the value. If specified, the listed keys will be\nprojected into the specified paths, and unlisted keys will not be\npresent. If a key is specified which is not present in the ConfigMap,\nthe volume setup will error unless it is marked optional. Paths must be\nrelative and may not contain the '..' path or start with '..'."
 
 **Note:** This function appends passed data to existing values
 
@@ -9073,7 +9329,7 @@ withItemsMixin(items)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.template.spec.volumes.configMap.withOptional
 
@@ -9085,7 +9341,7 @@ withOptional(optional)
 
 ## obj spec.template.spec.volumes.configMap.items
 
-"items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'."
+"items if unspecified, each key-value pair in the Data field of the referenced\nConfigMap will be projected into the volume as a file whose name is the\nkey and content is the value. If specified, the listed keys will be\nprojected into the specified paths, and unlisted keys will not be\npresent. If a key is specified which is not present in the ConfigMap,\nthe volume setup will error unless it is marked optional. Paths must be\nrelative and may not contain the '..' path or start with '..'."
 
 ### fn spec.template.spec.volumes.configMap.items.withKey
 
@@ -9101,7 +9357,7 @@ withKey(key)
 withMode(mode)
 ```
 
-"mode is Optional: mode bits used to set permissions on this file. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set."
+"mode is Optional: mode bits used to set permissions on this file.\nMust be an octal value between 0000 and 0777 or a decimal value between 0 and 511.\nYAML accepts both octal and decimal values, JSON requires decimal values for mode bits.\nIf not specified, the volume defaultMode will be used.\nThis might be in conflict with other options that affect the file\nmode, like fsGroup, and the result can be other mode bits set."
 
 ### fn spec.template.spec.volumes.configMap.items.withPath
 
@@ -9109,7 +9365,7 @@ withMode(mode)
 withPath(path)
 ```
 
-"path is the relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'."
+"path is the relative path of the file to map the key to.\nMay not be an absolute path.\nMay not contain the path element '..'.\nMay not start with the string '..'."
 
 ## obj spec.template.spec.volumes.csi
 
@@ -9121,7 +9377,7 @@ withPath(path)
 withDriver(driver)
 ```
 
-"driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster."
+"driver is the name of the CSI driver that handles this volume.\nConsult with your admin for the correct name as registered in the cluster."
 
 ### fn spec.template.spec.volumes.csi.withFsType
 
@@ -9129,7 +9385,7 @@ withDriver(driver)
 withFsType(fsType)
 ```
 
-"fsType to mount. Ex. \"ext4\", \"xfs\", \"ntfs\". If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply."
+"fsType to mount. Ex. \"ext4\", \"xfs\", \"ntfs\".\nIf not provided, the empty value is passed to the associated CSI driver\nwhich will determine the default filesystem to apply."
 
 ### fn spec.template.spec.volumes.csi.withReadOnly
 
@@ -9137,7 +9393,7 @@ withFsType(fsType)
 withReadOnly(readOnly)
 ```
 
-"readOnly specifies a read-only configuration for the volume. Defaults to false (read/write)."
+"readOnly specifies a read-only configuration for the volume.\nDefaults to false (read/write)."
 
 ### fn spec.template.spec.volumes.csi.withVolumeAttributes
 
@@ -9145,7 +9401,7 @@ withReadOnly(readOnly)
 withVolumeAttributes(volumeAttributes)
 ```
 
-"volumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver's documentation for supported values."
+"volumeAttributes stores driver-specific properties that are passed to the CSI\ndriver. Consult your driver's documentation for supported values."
 
 ### fn spec.template.spec.volumes.csi.withVolumeAttributesMixin
 
@@ -9153,13 +9409,13 @@ withVolumeAttributes(volumeAttributes)
 withVolumeAttributesMixin(volumeAttributes)
 ```
 
-"volumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver's documentation for supported values."
+"volumeAttributes stores driver-specific properties that are passed to the CSI\ndriver. Consult your driver's documentation for supported values."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec.volumes.csi.nodePublishSecretRef
 
-"nodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed."
+"nodePublishSecretRef is a reference to the secret object containing\nsensitive information to pass to the CSI driver to complete the CSI\nNodePublishVolume and NodeUnpublishVolume calls.\nThis field is optional, and  may be empty if no secret is required. If the\nsecret object contains more than one secret, all secret references are passed."
 
 ### fn spec.template.spec.volumes.csi.nodePublishSecretRef.withName
 
@@ -9167,7 +9423,7 @@ withVolumeAttributesMixin(volumeAttributes)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ## obj spec.template.spec.volumes.downwardAPI
 
@@ -9179,7 +9435,7 @@ withName(name)
 withDefaultMode(defaultMode)
 ```
 
-"Optional: mode bits to use on created files by default. Must be a Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set."
+"Optional: mode bits to use on created files by default. Must be a\nOptional: mode bits used to set permissions on created files by default.\nMust be an octal value between 0000 and 0777 or a decimal value between 0 and 511.\nYAML accepts both octal and decimal values, JSON requires decimal values for mode bits.\nDefaults to 0644.\nDirectories within the path are not affected by this setting.\nThis might be in conflict with other options that affect the file\nmode, like fsGroup, and the result can be other mode bits set."
 
 ### fn spec.template.spec.volumes.downwardAPI.withItems
 
@@ -9209,7 +9465,7 @@ withItemsMixin(items)
 withMode(mode)
 ```
 
-"Optional: mode bits used to set permissions on this file, must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set."
+"Optional: mode bits used to set permissions on this file, must be an octal value\nbetween 0000 and 0777 or a decimal value between 0 and 511.\nYAML accepts both octal and decimal values, JSON requires decimal values for mode bits.\nIf not specified, the volume defaultMode will be used.\nThis might be in conflict with other options that affect the file\nmode, like fsGroup, and the result can be other mode bits set."
 
 ### fn spec.template.spec.volumes.downwardAPI.items.withPath
 
@@ -9241,7 +9497,7 @@ withFieldPath(fieldPath)
 
 ## obj spec.template.spec.volumes.downwardAPI.items.resourceFieldRef
 
-"Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported."
+"Selects a resource of the container: only resources limits and requests\n(limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported."
 
 ### fn spec.template.spec.volumes.downwardAPI.items.resourceFieldRef.withContainerName
 
@@ -9269,7 +9525,7 @@ withResource(resource)
 
 ## obj spec.template.spec.volumes.emptyDir
 
-"emptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir"
+"emptyDir represents a temporary directory that shares a pod's lifetime.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir"
 
 ### fn spec.template.spec.volumes.emptyDir.withMedium
 
@@ -9277,7 +9533,7 @@ withResource(resource)
 withMedium(medium)
 ```
 
-"medium represents what type of storage medium should back this directory. The default is \"\" which means to use the node's default medium. Must be an empty string (default) or Memory. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir"
+"medium represents what type of storage medium should back this directory.\nThe default is \"\" which means to use the node's default medium.\nMust be an empty string (default) or Memory.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir"
 
 ### fn spec.template.spec.volumes.emptyDir.withSizeLimit
 
@@ -9285,15 +9541,15 @@ withMedium(medium)
 withSizeLimit(sizeLimit)
 ```
 
-"sizeLimit is the total amount of local storage required for this EmptyDir volume. The size limit is also applicable for memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between the SizeLimit specified here and the sum of memory limits of all containers in a pod. The default is nil which means that the limit is undefined. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir"
+"sizeLimit is the total amount of local storage required for this EmptyDir volume.\nThe size limit is also applicable for memory medium.\nThe maximum usage on memory medium EmptyDir would be the minimum value between\nthe SizeLimit specified here and the sum of memory limits of all containers in a pod.\nThe default is nil which means that the limit is undefined.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir"
 
 ## obj spec.template.spec.volumes.ephemeral
 
-"ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed. \n Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity tracking are needed, c) the storage driver is specified through a storage class, and d) the storage driver supports dynamic volume provisioning through a PersistentVolumeClaim (see EphemeralVolumeSource for more information on the connection between this volume type and PersistentVolumeClaim). \n Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that persist for longer than the lifecycle of an individual pod. \n Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information. \n A pod can use both types of ephemeral volumes and persistent volumes at the same time."
+"ephemeral represents a volume that is handled by a cluster storage driver.\nThe volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts,\nand deleted when the pod is removed.\n\n\nUse this if:\na) the volume is only needed while the pod runs,\nb) features of normal volumes like restoring from snapshot or capacity\n   tracking are needed,\nc) the storage driver is specified through a storage class, and\nd) the storage driver supports dynamic volume provisioning through\n   a PersistentVolumeClaim (see EphemeralVolumeSource for more\n   information on the connection between this volume type\n   and PersistentVolumeClaim).\n\n\nUse PersistentVolumeClaim or one of the vendor-specific\nAPIs for volumes that persist for longer than the lifecycle\nof an individual pod.\n\n\nUse CSI for light-weight local ephemeral volumes if the CSI driver is meant to\nbe used that way - see the documentation of the driver for\nmore information.\n\n\nA pod can use both types of ephemeral volumes and\npersistent volumes at the same time."
 
 ## obj spec.template.spec.volumes.ephemeral.volumeClaimTemplate
 
-"Will be used to create a stand-alone PVC to provision the volume. The pod in which this EphemeralVolumeSource is embedded will be the owner of the PVC, i.e. the PVC will be deleted together with the pod.  The name of the PVC will be `<pod name>-<volume name>` where `<volume name>` is the name from the `PodSpec.Volumes` array entry. Pod validation will reject the pod if the concatenated name is not valid for a PVC (for example, too long). \n An existing PVC with that name that is not owned by the pod will *not* be used for the pod to avoid using an unrelated volume by mistake. Starting the pod is then blocked until the unrelated PVC is removed. If such a pre-created PVC is meant to be used by the pod, the PVC has to updated with an owner reference to the pod once the pod exists. Normally this should not be necessary, but it may be useful when manually reconstructing a broken cluster. \n This field is read-only and no changes will be made by Kubernetes to the PVC after it has been created. \n Required, must not be nil."
+"Will be used to create a stand-alone PVC to provision the volume.\nThe pod in which this EphemeralVolumeSource is embedded will be the\nowner of the PVC, i.e. the PVC will be deleted together with the\npod.  The name of the PVC will be `<pod name>-<volume name>` where\n`<volume name>` is the name from the `PodSpec.Volumes` array\nentry. Pod validation will reject the pod if the concatenated name\nis not valid for a PVC (for example, too long).\n\n\nAn existing PVC with that name that is not owned by the pod\nwill *not* be used for the pod to avoid using an unrelated\nvolume by mistake. Starting the pod is then blocked until\nthe unrelated PVC is removed. If such a pre-created PVC is\nmeant to be used by the pod, the PVC has to updated with an\nowner reference to the pod once the pod exists. Normally\nthis should not be necessary, but it may be useful when\nmanually reconstructing a broken cluster.\n\n\nThis field is read-only and no changes will be made by Kubernetes\nto the PVC after it has been created.\n\n\nRequired, must not be nil."
 
 ### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.withMetadata
 
@@ -9301,7 +9557,7 @@ withSizeLimit(sizeLimit)
 withMetadata(metadata)
 ```
 
-"May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation."
+"May contain labels and annotations that will be copied into the PVC\nwhen creating it. No other fields are allowed and will be rejected during\nvalidation."
 
 ### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.withMetadataMixin
 
@@ -9309,13 +9565,13 @@ withMetadata(metadata)
 withMetadataMixin(metadata)
 ```
 
-"May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation."
+"May contain labels and annotations that will be copied into the PVC\nwhen creating it. No other fields are allowed and will be rejected during\nvalidation."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec
 
-"The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here."
+"The specification for the PersistentVolumeClaim. The entire content is\ncopied unchanged into the PVC that gets created from this\ntemplate. The same fields as in a PersistentVolumeClaim\nare also valid here."
 
 ### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.withAccessModes
 
@@ -9323,7 +9579,7 @@ withMetadataMixin(metadata)
 withAccessModes(accessModes)
 ```
 
-"accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
+"accessModes contains the desired access modes the volume should have.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
 
 ### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.withAccessModesMixin
 
@@ -9331,7 +9587,7 @@ withAccessModes(accessModes)
 withAccessModesMixin(accessModes)
 ```
 
-"accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
+"accessModes contains the desired access modes the volume should have.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1"
 
 **Note:** This function appends passed data to existing values
 
@@ -9341,7 +9597,15 @@ withAccessModesMixin(accessModes)
 withStorageClassName(storageClassName)
 ```
 
-"storageClassName is the name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1"
+"storageClassName is the name of the StorageClass required by the claim.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1"
+
+### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.withVolumeAttributesClassName
+
+```ts
+withVolumeAttributesClassName(volumeAttributesClassName)
+```
+
+"volumeAttributesClassName may be used to set the VolumeAttributesClass used by this claim.\nIf specified, the CSI driver will create or update the volume with the attributes defined\nin the corresponding VolumeAttributesClass. This has a different purpose than storageClassName,\nit can be changed after the claim is created. An empty string value means that no VolumeAttributesClass\nwill be applied to the claim but it's not allowed to reset this field to empty string once it is set.\nIf unspecified and the PersistentVolumeClaim is unbound, the default VolumeAttributesClass\nwill be set by the persistentvolume controller if it exists.\nIf the resource referred to by volumeAttributesClass does not exist, this PersistentVolumeClaim will be\nset to a Pending state, as reflected by the modifyVolumeStatus field, until such as a resource\nexists.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#volumeattributesclass\n(Alpha) Using this field requires the VolumeAttributesClass feature gate to be enabled."
 
 ### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.withVolumeMode
 
@@ -9349,7 +9613,7 @@ withStorageClassName(storageClassName)
 withVolumeMode(volumeMode)
 ```
 
-"volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec."
+"volumeMode defines what type of volume is required by the claim.\nValue of Filesystem is implied when not included in claim spec."
 
 ### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.withVolumeName
 
@@ -9361,7 +9625,7 @@ withVolumeName(volumeName)
 
 ## obj spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.dataSource
 
-"dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. When the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef, and dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified. If the namespace is specified, then dataSourceRef will not be copied to dataSource."
+"dataSource field can be used to specify either:\n* An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot)\n* An existing PVC (PersistentVolumeClaim)\nIf the provisioner or an external controller can support the specified data source,\nit will create a new volume based on the contents of the specified data source.\nWhen the AnyVolumeDataSource feature gate is enabled, dataSource contents will be copied to dataSourceRef,\nand dataSourceRef contents will be copied to dataSource when dataSourceRef.namespace is not specified.\nIf the namespace is specified, then dataSourceRef will not be copied to dataSource."
 
 ### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.dataSource.withApiGroup
 
@@ -9369,7 +9633,7 @@ withVolumeName(volumeName)
 withApiGroup(apiGroup)
 ```
 
-"APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required."
+"APIGroup is the group for the resource being referenced.\nIf APIGroup is not specified, the specified Kind must be in the core API group.\nFor any other third-party types, APIGroup is required."
 
 ### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.dataSource.withKind
 
@@ -9389,7 +9653,7 @@ withName(name)
 
 ## obj spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.dataSourceRef
 
-"dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the dataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, when namespace isn't specified in dataSourceRef, both fields (dataSource and dataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. When namespace is specified in dataSourceRef, dataSource isn't set to the same value and must be empty. There are three important differences between dataSource and dataSourceRef: * While dataSource only allows two specific types of objects, dataSourceRef allows any non-core object, as well as PersistentVolumeClaim objects. * While dataSource ignores disallowed values (dropping them), dataSourceRef preserves all values, and generates an error if a disallowed value is specified. * While dataSource only allows local objects, dataSourceRef allows objects in any namespaces. (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled. (Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
+"dataSourceRef specifies the object from which to populate the volume with data, if a non-empty\nvolume is desired. This may be any object from a non-empty API group (non\ncore object) or a PersistentVolumeClaim object.\nWhen this field is specified, volume binding will only succeed if the type of\nthe specified object matches some installed volume populator or dynamic\nprovisioner.\nThis field will replace the functionality of the dataSource field and as such\nif both fields are non-empty, they must have the same value. For backwards\ncompatibility, when namespace isn't specified in dataSourceRef,\nboth fields (dataSource and dataSourceRef) will be set to the same\nvalue automatically if one of them is empty and the other is non-empty.\nWhen namespace is specified in dataSourceRef,\ndataSource isn't set to the same value and must be empty.\nThere are three important differences between dataSource and dataSourceRef:\n* While dataSource only allows two specific types of objects, dataSourceRef\n  allows any non-core object, as well as PersistentVolumeClaim objects.\n* While dataSource ignores disallowed values (dropping them), dataSourceRef\n  preserves all values, and generates an error if a disallowed value is\n  specified.\n* While dataSource only allows local objects, dataSourceRef allows objects\n  in any namespaces.\n(Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled.\n(Alpha) Using the namespace field of dataSourceRef requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
 
 ### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.dataSourceRef.withApiGroup
 
@@ -9397,7 +9661,7 @@ withName(name)
 withApiGroup(apiGroup)
 ```
 
-"APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required."
+"APIGroup is the group for the resource being referenced.\nIf APIGroup is not specified, the specified Kind must be in the core API group.\nFor any other third-party types, APIGroup is required."
 
 ### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.dataSourceRef.withKind
 
@@ -9421,29 +9685,11 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace is the namespace of resource being referenced Note that when a namespace is specified, a gateway.networking.k8s.io/ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details. (Alpha) This field requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
+"Namespace is the namespace of resource being referenced\nNote that when a namespace is specified, a gateway.networking.k8s.io/ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details.\n(Alpha) This field requires the CrossNamespaceVolumeDataSource feature gate to be enabled."
 
 ## obj spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.resources
 
-"resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
-
-### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.resources.withClaims
-
-```ts
-withClaims(claims)
-```
-
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
-
-### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.resources.withClaimsMixin
-
-```ts
-withClaimsMixin(claims)
-```
-
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
-
-**Note:** This function appends passed data to existing values
+"resources represents the minimum resources the volume should have.\nIf RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements\nthat are lower than previous value but must still be higher than capacity recorded in the\nstatus field of the claim.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
 
 ### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.resources.withLimits
 
@@ -9451,7 +9697,7 @@ withClaimsMixin(claims)
 withLimits(limits)
 ```
 
-"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 ### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.resources.withLimitsMixin
 
@@ -9459,7 +9705,7 @@ withLimits(limits)
 withLimitsMixin(limits)
 ```
 
-"Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 **Note:** This function appends passed data to existing values
 
@@ -9469,7 +9715,7 @@ withLimitsMixin(limits)
 withRequests(requests)
 ```
 
-"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value. Requests cannot exceed Limits.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 ### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.resources.withRequestsMixin
 
@@ -9477,21 +9723,9 @@ withRequests(requests)
 withRequestsMixin(requests)
 ```
 
-"Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+"Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value. Requests cannot exceed Limits.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
 
 **Note:** This function appends passed data to existing values
-
-## obj spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.resources.claims
-
-"Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container. \n This is an alpha field and requires enabling the DynamicResourceAllocation feature gate. \n This field is immutable. It can only be set for containers."
-
-### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.resources.claims.withName
-
-```ts
-withName(name)
-```
-
-"Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container."
 
 ## obj spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.selector
 
@@ -9521,7 +9755,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.selector.withMatchLabelsMixin
 
@@ -9529,7 +9763,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -9551,7 +9785,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.selector.matchExpressions.withValues
 
@@ -9559,7 +9793,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.selector.matchExpressions.withValuesMixin
 
@@ -9567,7 +9801,7 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
@@ -9581,7 +9815,7 @@ withValuesMixin(values)
 withFsType(fsType)
 ```
 
-"fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. TODO: how do we prevent errors in the filesystem from compromising the machine"
+"fsType is the filesystem type to mount.\nMust be a filesystem type supported by the host operating system.\nEx. \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified.\nTODO: how do we prevent errors in the filesystem from compromising the machine"
 
 ### fn spec.template.spec.volumes.fc.withLun
 
@@ -9597,7 +9831,7 @@ withLun(lun)
 withReadOnly(readOnly)
 ```
 
-"readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts."
+"readOnly is Optional: Defaults to false (read/write). ReadOnly here will force\nthe ReadOnly setting in VolumeMounts."
 
 ### fn spec.template.spec.volumes.fc.withTargetWWNs
 
@@ -9623,7 +9857,7 @@ withTargetWWNsMixin(targetWWNs)
 withWwids(wwids)
 ```
 
-"wwids Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously."
+"wwids Optional: FC volume world wide identifiers (wwids)\nEither wwids or combination of targetWWNs and lun must be set, but not both simultaneously."
 
 ### fn spec.template.spec.volumes.fc.withWwidsMixin
 
@@ -9631,13 +9865,13 @@ withWwids(wwids)
 withWwidsMixin(wwids)
 ```
 
-"wwids Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously."
+"wwids Optional: FC volume world wide identifiers (wwids)\nEither wwids or combination of targetWWNs and lun must be set, but not both simultaneously."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.template.spec.volumes.flexVolume
 
-"flexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin."
+"flexVolume represents a generic volume resource that is\nprovisioned/attached using an exec based plugin."
 
 ### fn spec.template.spec.volumes.flexVolume.withDriver
 
@@ -9653,7 +9887,7 @@ withDriver(driver)
 withFsType(fsType)
 ```
 
-"fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\", \"ntfs\". The default filesystem depends on FlexVolume script."
+"fsType is the filesystem type to mount.\nMust be a filesystem type supported by the host operating system.\nEx. \"ext4\", \"xfs\", \"ntfs\". The default filesystem depends on FlexVolume script."
 
 ### fn spec.template.spec.volumes.flexVolume.withOptions
 
@@ -9679,11 +9913,11 @@ withOptionsMixin(options)
 withReadOnly(readOnly)
 ```
 
-"readOnly is Optional: defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts."
+"readOnly is Optional: defaults to false (read/write). ReadOnly here will force\nthe ReadOnly setting in VolumeMounts."
 
 ## obj spec.template.spec.volumes.flexVolume.secretRef
 
-"secretRef is Optional: secretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts."
+"secretRef is Optional: secretRef is reference to the secret object containing\nsensitive information to pass to the plugin scripts. This may be\nempty if no secret object is specified. If the secret object\ncontains more than one secret, all secrets are passed to the plugin\nscripts."
 
 ### fn spec.template.spec.volumes.flexVolume.secretRef.withName
 
@@ -9691,7 +9925,7 @@ withReadOnly(readOnly)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ## obj spec.template.spec.volumes.flocker
 
@@ -9703,7 +9937,7 @@ withName(name)
 withDatasetName(datasetName)
 ```
 
-"datasetName is Name of the dataset stored as metadata -> name on the dataset for Flocker should be considered as deprecated"
+"datasetName is Name of the dataset stored as metadata -> name on the dataset for Flocker\nshould be considered as deprecated"
 
 ### fn spec.template.spec.volumes.flocker.withDatasetUUID
 
@@ -9715,7 +9949,7 @@ withDatasetUUID(datasetUUID)
 
 ## obj spec.template.spec.volumes.gcePersistentDisk
 
-"gcePersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk"
+"gcePersistentDisk represents a GCE Disk resource that is attached to a\nkubelet's host machine and then exposed to the pod.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk"
 
 ### fn spec.template.spec.volumes.gcePersistentDisk.withFsType
 
@@ -9723,7 +9957,7 @@ withDatasetUUID(datasetUUID)
 withFsType(fsType)
 ```
 
-"fsType is filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk TODO: how do we prevent errors in the filesystem from compromising the machine"
+"fsType is filesystem type of the volume that you want to mount.\nTip: Ensure that the filesystem type is supported by the host operating system.\nExamples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk\nTODO: how do we prevent errors in the filesystem from compromising the machine"
 
 ### fn spec.template.spec.volumes.gcePersistentDisk.withPartition
 
@@ -9731,7 +9965,7 @@ withFsType(fsType)
 withPartition(partition)
 ```
 
-"partition is the partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as \"1\". Similarly, the volume partition for /dev/sda is \"0\" (or you can leave the property empty). More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk"
+"partition is the partition in the volume that you want to mount.\nIf omitted, the default is to mount by volume name.\nExamples: For volume /dev/sda1, you specify the partition as \"1\".\nSimilarly, the volume partition for /dev/sda is \"0\" (or you can leave the property empty).\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk"
 
 ### fn spec.template.spec.volumes.gcePersistentDisk.withPdName
 
@@ -9739,7 +9973,7 @@ withPartition(partition)
 withPdName(pdName)
 ```
 
-"pdName is unique name of the PD resource in GCE. Used to identify the disk in GCE. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk"
+"pdName is unique name of the PD resource in GCE. Used to identify the disk in GCE.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk"
 
 ### fn spec.template.spec.volumes.gcePersistentDisk.withReadOnly
 
@@ -9747,11 +9981,11 @@ withPdName(pdName)
 withReadOnly(readOnly)
 ```
 
-"readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk"
+"readOnly here will force the ReadOnly setting in VolumeMounts.\nDefaults to false.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk"
 
 ## obj spec.template.spec.volumes.gitRepo
 
-"gitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container."
+"gitRepo represents a git repository at a particular revision.\nDEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an\nEmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir\ninto the Pod's container."
 
 ### fn spec.template.spec.volumes.gitRepo.withDirectory
 
@@ -9759,7 +9993,7 @@ withReadOnly(readOnly)
 withDirectory(directory)
 ```
 
-"directory is the target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name."
+"directory is the target directory name.\nMust not contain or start with '..'.  If '.' is supplied, the volume directory will be the\ngit repository.  Otherwise, if specified, the volume will contain the git repository in\nthe subdirectory with the given name."
 
 ### fn spec.template.spec.volumes.gitRepo.withRepository
 
@@ -9779,7 +10013,7 @@ withRevision(revision)
 
 ## obj spec.template.spec.volumes.glusterfs
 
-"glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md"
+"glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime.\nMore info: https://examples.k8s.io/volumes/glusterfs/README.md"
 
 ### fn spec.template.spec.volumes.glusterfs.withEndpoints
 
@@ -9787,7 +10021,7 @@ withRevision(revision)
 withEndpoints(endpoints)
 ```
 
-"endpoints is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod"
+"endpoints is the endpoint name that details Glusterfs topology.\nMore info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod"
 
 ### fn spec.template.spec.volumes.glusterfs.withPath
 
@@ -9795,7 +10029,7 @@ withEndpoints(endpoints)
 withPath(path)
 ```
 
-"path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod"
+"path is the Glusterfs volume path.\nMore info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod"
 
 ### fn spec.template.spec.volumes.glusterfs.withReadOnly
 
@@ -9803,11 +10037,11 @@ withPath(path)
 withReadOnly(readOnly)
 ```
 
-"readOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod"
+"readOnly here will force the Glusterfs volume to be mounted with read-only permissions.\nDefaults to false.\nMore info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod"
 
 ## obj spec.template.spec.volumes.hostPath
 
-"hostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath --- TODO(jonesdl) We need to restrict who can use host directory mounts and who can/can not mount host directories as read/write."
+"hostPath represents a pre-existing file or directory on the host\nmachine that is directly exposed to the container. This is generally\nused for system agents or other privileged things that are allowed\nto see the host machine. Most containers will NOT need this.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath\n---\nTODO(jonesdl) We need to restrict who can use host directory mounts and who can/can not\nmount host directories as read/write."
 
 ### fn spec.template.spec.volumes.hostPath.withPath
 
@@ -9815,7 +10049,7 @@ withReadOnly(readOnly)
 withPath(path)
 ```
 
-"path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath"
+"path of the directory on the host.\nIf the path is a symlink, it will follow the link to the real path.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath"
 
 ### fn spec.template.spec.volumes.hostPath.withType
 
@@ -9823,11 +10057,11 @@ withPath(path)
 withType(type)
 ```
 
-"type for HostPath Volume Defaults to \"\" More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath"
+"type for HostPath Volume\nDefaults to \"\"\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath"
 
 ## obj spec.template.spec.volumes.iscsi
 
-"iscsi represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md"
+"iscsi represents an ISCSI Disk resource that is attached to a\nkubelet's host machine and then exposed to the pod.\nMore info: https://examples.k8s.io/volumes/iscsi/README.md"
 
 ### fn spec.template.spec.volumes.iscsi.withChapAuthDiscovery
 
@@ -9851,7 +10085,7 @@ withChapAuthSession(chapAuthSession)
 withFsType(fsType)
 ```
 
-"fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi TODO: how do we prevent errors in the filesystem from compromising the machine"
+"fsType is the filesystem type of the volume that you want to mount.\nTip: Ensure that the filesystem type is supported by the host operating system.\nExamples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi\nTODO: how do we prevent errors in the filesystem from compromising the machine"
 
 ### fn spec.template.spec.volumes.iscsi.withInitiatorName
 
@@ -9859,7 +10093,7 @@ withFsType(fsType)
 withInitiatorName(initiatorName)
 ```
 
-"initiatorName is the custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface <target portal>:<volume name> will be created for the connection."
+"initiatorName is the custom iSCSI Initiator Name.\nIf initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface\n<target portal>:<volume name> will be created for the connection."
 
 ### fn spec.template.spec.volumes.iscsi.withIqn
 
@@ -9875,7 +10109,7 @@ withIqn(iqn)
 withIscsiInterface(iscsiInterface)
 ```
 
-"iscsiInterface is the interface Name that uses an iSCSI transport. Defaults to 'default' (tcp)."
+"iscsiInterface is the interface Name that uses an iSCSI transport.\nDefaults to 'default' (tcp)."
 
 ### fn spec.template.spec.volumes.iscsi.withLun
 
@@ -9891,7 +10125,7 @@ withLun(lun)
 withPortals(portals)
 ```
 
-"portals is the iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260)."
+"portals is the iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port\nis other than default (typically TCP ports 860 and 3260)."
 
 ### fn spec.template.spec.volumes.iscsi.withPortalsMixin
 
@@ -9899,7 +10133,7 @@ withPortals(portals)
 withPortalsMixin(portals)
 ```
 
-"portals is the iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260)."
+"portals is the iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port\nis other than default (typically TCP ports 860 and 3260)."
 
 **Note:** This function appends passed data to existing values
 
@@ -9909,7 +10143,7 @@ withPortalsMixin(portals)
 withReadOnly(readOnly)
 ```
 
-"readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false."
+"readOnly here will force the ReadOnly setting in VolumeMounts.\nDefaults to false."
 
 ### fn spec.template.spec.volumes.iscsi.withTargetPortal
 
@@ -9917,7 +10151,7 @@ withReadOnly(readOnly)
 withTargetPortal(targetPortal)
 ```
 
-"targetPortal is iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260)."
+"targetPortal is iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port\nis other than default (typically TCP ports 860 and 3260)."
 
 ## obj spec.template.spec.volumes.iscsi.secretRef
 
@@ -9929,11 +10163,11 @@ withTargetPortal(targetPortal)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ## obj spec.template.spec.volumes.nfs
 
-"nfs represents an NFS mount on the host that shares a pod's lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs"
+"nfs represents an NFS mount on the host that shares a pod's lifetime\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#nfs"
 
 ### fn spec.template.spec.volumes.nfs.withPath
 
@@ -9941,7 +10175,7 @@ withName(name)
 withPath(path)
 ```
 
-"path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs"
+"path that is exported by the NFS server.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#nfs"
 
 ### fn spec.template.spec.volumes.nfs.withReadOnly
 
@@ -9949,7 +10183,7 @@ withPath(path)
 withReadOnly(readOnly)
 ```
 
-"readOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs"
+"readOnly here will force the NFS export to be mounted with read-only permissions.\nDefaults to false.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#nfs"
 
 ### fn spec.template.spec.volumes.nfs.withServer
 
@@ -9957,11 +10191,11 @@ withReadOnly(readOnly)
 withServer(server)
 ```
 
-"server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs"
+"server is the hostname or IP address of the NFS server.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#nfs"
 
 ## obj spec.template.spec.volumes.persistentVolumeClaim
 
-"persistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims"
+"persistentVolumeClaimVolumeSource represents a reference to a\nPersistentVolumeClaim in the same namespace.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims"
 
 ### fn spec.template.spec.volumes.persistentVolumeClaim.withClaimName
 
@@ -9969,7 +10203,7 @@ withServer(server)
 withClaimName(claimName)
 ```
 
-"claimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims"
+"claimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims"
 
 ### fn spec.template.spec.volumes.persistentVolumeClaim.withReadOnly
 
@@ -9977,7 +10211,7 @@ withClaimName(claimName)
 withReadOnly(readOnly)
 ```
 
-"readOnly Will force the ReadOnly setting in VolumeMounts. Default false."
+"readOnly Will force the ReadOnly setting in VolumeMounts.\nDefault false."
 
 ## obj spec.template.spec.volumes.photonPersistentDisk
 
@@ -9989,7 +10223,7 @@ withReadOnly(readOnly)
 withFsType(fsType)
 ```
 
-"fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified."
+"fsType is the filesystem type to mount.\nMust be a filesystem type supported by the host operating system.\nEx. \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified."
 
 ### fn spec.template.spec.volumes.photonPersistentDisk.withPdID
 
@@ -10009,7 +10243,7 @@ withPdID(pdID)
 withFsType(fsType)
 ```
 
-"fSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\". Implicitly inferred to be \"ext4\" if unspecified."
+"fSType represents the filesystem type to mount\nMust be a filesystem type supported by the host operating system.\nEx. \"ext4\", \"xfs\". Implicitly inferred to be \"ext4\" if unspecified."
 
 ### fn spec.template.spec.volumes.portworxVolume.withReadOnly
 
@@ -10017,7 +10251,7 @@ withFsType(fsType)
 withReadOnly(readOnly)
 ```
 
-"readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts."
+"readOnly defaults to false (read/write). ReadOnly here will force\nthe ReadOnly setting in VolumeMounts."
 
 ### fn spec.template.spec.volumes.portworxVolume.withVolumeID
 
@@ -10037,7 +10271,7 @@ withVolumeID(volumeID)
 withDefaultMode(defaultMode)
 ```
 
-"defaultMode are the mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set."
+"defaultMode are the mode bits used to set permissions on created files by default.\nMust be an octal value between 0000 and 0777 or a decimal value between 0 and 511.\nYAML accepts both octal and decimal values, JSON requires decimal values for mode bits.\nDirectories within the path are not affected by this setting.\nThis might be in conflict with other options that affect the file\nmode, like fsGroup, and the result can be other mode bits set."
 
 ### fn spec.template.spec.volumes.projected.withSources
 
@@ -10061,6 +10295,120 @@ withSourcesMixin(sources)
 
 "sources is the list of volume projections"
 
+## obj spec.template.spec.volumes.projected.sources.clusterTrustBundle
+
+"ClusterTrustBundle allows a pod to access the `.spec.trustBundle` field\nof ClusterTrustBundle objects in an auto-updating file.\n\n\nAlpha, gated by the ClusterTrustBundleProjection feature gate.\n\n\nClusterTrustBundle objects can either be selected by name, or by the\ncombination of signer name and a label selector.\n\n\nKubelet performs aggressive normalization of the PEM contents written\ninto the pod filesystem.  Esoteric PEM features such as inter-block\ncomments and block headers are stripped.  Certificates are deduplicated.\nThe ordering of certificates within the file is arbitrary, and Kubelet\nmay change the order over time."
+
+### fn spec.template.spec.volumes.projected.sources.clusterTrustBundle.withName
+
+```ts
+withName(name)
+```
+
+"Select a single ClusterTrustBundle by object name.  Mutually-exclusive\nwith signerName and labelSelector."
+
+### fn spec.template.spec.volumes.projected.sources.clusterTrustBundle.withOptional
+
+```ts
+withOptional(optional)
+```
+
+"If true, don't block pod startup if the referenced ClusterTrustBundle(s)\naren't available.  If using name, then the named ClusterTrustBundle is\nallowed not to exist.  If using signerName, then the combination of\nsignerName and labelSelector is allowed to match zero\nClusterTrustBundles."
+
+### fn spec.template.spec.volumes.projected.sources.clusterTrustBundle.withPath
+
+```ts
+withPath(path)
+```
+
+"Relative path from the volume root to write the bundle."
+
+### fn spec.template.spec.volumes.projected.sources.clusterTrustBundle.withSignerName
+
+```ts
+withSignerName(signerName)
+```
+
+"Select all ClusterTrustBundles that match this signer name.\nMutually-exclusive with name.  The contents of all selected\nClusterTrustBundles will be unified and deduplicated."
+
+## obj spec.template.spec.volumes.projected.sources.clusterTrustBundle.labelSelector
+
+"Select all ClusterTrustBundles that match this label selector.  Only has\neffect if signerName is set.  Mutually-exclusive with name.  If unset,\ninterpreted as \"match nothing\".  If set but empty, interpreted as \"match\neverything\"."
+
+### fn spec.template.spec.volumes.projected.sources.clusterTrustBundle.labelSelector.withMatchExpressions
+
+```ts
+withMatchExpressions(matchExpressions)
+```
+
+"matchExpressions is a list of label selector requirements. The requirements are ANDed."
+
+### fn spec.template.spec.volumes.projected.sources.clusterTrustBundle.labelSelector.withMatchExpressionsMixin
+
+```ts
+withMatchExpressionsMixin(matchExpressions)
+```
+
+"matchExpressions is a list of label selector requirements. The requirements are ANDed."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.template.spec.volumes.projected.sources.clusterTrustBundle.labelSelector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+
+### fn spec.template.spec.volumes.projected.sources.clusterTrustBundle.labelSelector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.template.spec.volumes.projected.sources.clusterTrustBundle.labelSelector.matchExpressions
+
+"matchExpressions is a list of label selector requirements. The requirements are ANDed."
+
+### fn spec.template.spec.volumes.projected.sources.clusterTrustBundle.labelSelector.matchExpressions.withKey
+
+```ts
+withKey(key)
+```
+
+"key is the label key that the selector applies to."
+
+### fn spec.template.spec.volumes.projected.sources.clusterTrustBundle.labelSelector.matchExpressions.withOperator
+
+```ts
+withOperator(operator)
+```
+
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
+
+### fn spec.template.spec.volumes.projected.sources.clusterTrustBundle.labelSelector.matchExpressions.withValues
+
+```ts
+withValues(values)
+```
+
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
+
+### fn spec.template.spec.volumes.projected.sources.clusterTrustBundle.labelSelector.matchExpressions.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
+
+**Note:** This function appends passed data to existing values
+
 ## obj spec.template.spec.volumes.projected.sources.configMap
 
 "configMap information about the configMap data to project"
@@ -10071,7 +10419,7 @@ withSourcesMixin(sources)
 withItems(items)
 ```
 
-"items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'."
+"items if unspecified, each key-value pair in the Data field of the referenced\nConfigMap will be projected into the volume as a file whose name is the\nkey and content is the value. If specified, the listed keys will be\nprojected into the specified paths, and unlisted keys will not be\npresent. If a key is specified which is not present in the ConfigMap,\nthe volume setup will error unless it is marked optional. Paths must be\nrelative and may not contain the '..' path or start with '..'."
 
 ### fn spec.template.spec.volumes.projected.sources.configMap.withItemsMixin
 
@@ -10079,7 +10427,7 @@ withItems(items)
 withItemsMixin(items)
 ```
 
-"items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'."
+"items if unspecified, each key-value pair in the Data field of the referenced\nConfigMap will be projected into the volume as a file whose name is the\nkey and content is the value. If specified, the listed keys will be\nprojected into the specified paths, and unlisted keys will not be\npresent. If a key is specified which is not present in the ConfigMap,\nthe volume setup will error unless it is marked optional. Paths must be\nrelative and may not contain the '..' path or start with '..'."
 
 **Note:** This function appends passed data to existing values
 
@@ -10089,7 +10437,7 @@ withItemsMixin(items)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.template.spec.volumes.projected.sources.configMap.withOptional
 
@@ -10101,7 +10449,7 @@ withOptional(optional)
 
 ## obj spec.template.spec.volumes.projected.sources.configMap.items
 
-"items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'."
+"items if unspecified, each key-value pair in the Data field of the referenced\nConfigMap will be projected into the volume as a file whose name is the\nkey and content is the value. If specified, the listed keys will be\nprojected into the specified paths, and unlisted keys will not be\npresent. If a key is specified which is not present in the ConfigMap,\nthe volume setup will error unless it is marked optional. Paths must be\nrelative and may not contain the '..' path or start with '..'."
 
 ### fn spec.template.spec.volumes.projected.sources.configMap.items.withKey
 
@@ -10117,7 +10465,7 @@ withKey(key)
 withMode(mode)
 ```
 
-"mode is Optional: mode bits used to set permissions on this file. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set."
+"mode is Optional: mode bits used to set permissions on this file.\nMust be an octal value between 0000 and 0777 or a decimal value between 0 and 511.\nYAML accepts both octal and decimal values, JSON requires decimal values for mode bits.\nIf not specified, the volume defaultMode will be used.\nThis might be in conflict with other options that affect the file\nmode, like fsGroup, and the result can be other mode bits set."
 
 ### fn spec.template.spec.volumes.projected.sources.configMap.items.withPath
 
@@ -10125,7 +10473,7 @@ withMode(mode)
 withPath(path)
 ```
 
-"path is the relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'."
+"path is the relative path of the file to map the key to.\nMay not be an absolute path.\nMay not contain the path element '..'.\nMay not start with the string '..'."
 
 ## obj spec.template.spec.volumes.projected.sources.downwardAPI
 
@@ -10159,7 +10507,7 @@ withItemsMixin(items)
 withMode(mode)
 ```
 
-"Optional: mode bits used to set permissions on this file, must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set."
+"Optional: mode bits used to set permissions on this file, must be an octal value\nbetween 0000 and 0777 or a decimal value between 0 and 511.\nYAML accepts both octal and decimal values, JSON requires decimal values for mode bits.\nIf not specified, the volume defaultMode will be used.\nThis might be in conflict with other options that affect the file\nmode, like fsGroup, and the result can be other mode bits set."
 
 ### fn spec.template.spec.volumes.projected.sources.downwardAPI.items.withPath
 
@@ -10191,7 +10539,7 @@ withFieldPath(fieldPath)
 
 ## obj spec.template.spec.volumes.projected.sources.downwardAPI.items.resourceFieldRef
 
-"Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported."
+"Selects a resource of the container: only resources limits and requests\n(limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported."
 
 ### fn spec.template.spec.volumes.projected.sources.downwardAPI.items.resourceFieldRef.withContainerName
 
@@ -10227,7 +10575,7 @@ withResource(resource)
 withItems(items)
 ```
 
-"items if unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'."
+"items if unspecified, each key-value pair in the Data field of the referenced\nSecret will be projected into the volume as a file whose name is the\nkey and content is the value. If specified, the listed keys will be\nprojected into the specified paths, and unlisted keys will not be\npresent. If a key is specified which is not present in the Secret,\nthe volume setup will error unless it is marked optional. Paths must be\nrelative and may not contain the '..' path or start with '..'."
 
 ### fn spec.template.spec.volumes.projected.sources.secret.withItemsMixin
 
@@ -10235,7 +10583,7 @@ withItems(items)
 withItemsMixin(items)
 ```
 
-"items if unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'."
+"items if unspecified, each key-value pair in the Data field of the referenced\nSecret will be projected into the volume as a file whose name is the\nkey and content is the value. If specified, the listed keys will be\nprojected into the specified paths, and unlisted keys will not be\npresent. If a key is specified which is not present in the Secret,\nthe volume setup will error unless it is marked optional. Paths must be\nrelative and may not contain the '..' path or start with '..'."
 
 **Note:** This function appends passed data to existing values
 
@@ -10245,7 +10593,7 @@ withItemsMixin(items)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ### fn spec.template.spec.volumes.projected.sources.secret.withOptional
 
@@ -10257,7 +10605,7 @@ withOptional(optional)
 
 ## obj spec.template.spec.volumes.projected.sources.secret.items
 
-"items if unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'."
+"items if unspecified, each key-value pair in the Data field of the referenced\nSecret will be projected into the volume as a file whose name is the\nkey and content is the value. If specified, the listed keys will be\nprojected into the specified paths, and unlisted keys will not be\npresent. If a key is specified which is not present in the Secret,\nthe volume setup will error unless it is marked optional. Paths must be\nrelative and may not contain the '..' path or start with '..'."
 
 ### fn spec.template.spec.volumes.projected.sources.secret.items.withKey
 
@@ -10273,7 +10621,7 @@ withKey(key)
 withMode(mode)
 ```
 
-"mode is Optional: mode bits used to set permissions on this file. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set."
+"mode is Optional: mode bits used to set permissions on this file.\nMust be an octal value between 0000 and 0777 or a decimal value between 0 and 511.\nYAML accepts both octal and decimal values, JSON requires decimal values for mode bits.\nIf not specified, the volume defaultMode will be used.\nThis might be in conflict with other options that affect the file\nmode, like fsGroup, and the result can be other mode bits set."
 
 ### fn spec.template.spec.volumes.projected.sources.secret.items.withPath
 
@@ -10281,7 +10629,7 @@ withMode(mode)
 withPath(path)
 ```
 
-"path is the relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'."
+"path is the relative path of the file to map the key to.\nMay not be an absolute path.\nMay not contain the path element '..'.\nMay not start with the string '..'."
 
 ## obj spec.template.spec.volumes.projected.sources.serviceAccountToken
 
@@ -10293,7 +10641,7 @@ withPath(path)
 withAudience(audience)
 ```
 
-"audience is the intended audience of the token. A recipient of a token must identify itself with an identifier specified in the audience of the token, and otherwise should reject the token. The audience defaults to the identifier of the apiserver."
+"audience is the intended audience of the token. A recipient of a token\nmust identify itself with an identifier specified in the audience of the\ntoken, and otherwise should reject the token. The audience defaults to the\nidentifier of the apiserver."
 
 ### fn spec.template.spec.volumes.projected.sources.serviceAccountToken.withExpirationSeconds
 
@@ -10301,7 +10649,7 @@ withAudience(audience)
 withExpirationSeconds(expirationSeconds)
 ```
 
-"expirationSeconds is the requested duration of validity of the service account token. As the token approaches expiration, the kubelet volume plugin will proactively rotate the service account token. The kubelet will start trying to rotate the token if the token is older than 80 percent of its time to live or if the token is older than 24 hours.Defaults to 1 hour and must be at least 10 minutes."
+"expirationSeconds is the requested duration of validity of the service\naccount token. As the token approaches expiration, the kubelet volume\nplugin will proactively rotate the service account token. The kubelet will\nstart trying to rotate the token if the token is older than 80 percent of\nits time to live or if the token is older than 24 hours.Defaults to 1 hour\nand must be at least 10 minutes."
 
 ### fn spec.template.spec.volumes.projected.sources.serviceAccountToken.withPath
 
@@ -10309,7 +10657,7 @@ withExpirationSeconds(expirationSeconds)
 withPath(path)
 ```
 
-"path is the path relative to the mount point of the file to project the token into."
+"path is the path relative to the mount point of the file to project the\ntoken into."
 
 ## obj spec.template.spec.volumes.quobyte
 
@@ -10321,7 +10669,7 @@ withPath(path)
 withGroup(group)
 ```
 
-"group to map volume access to Default is no group"
+"group to map volume access to\nDefault is no group"
 
 ### fn spec.template.spec.volumes.quobyte.withReadOnly
 
@@ -10329,7 +10677,7 @@ withGroup(group)
 withReadOnly(readOnly)
 ```
 
-"readOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false."
+"readOnly here will force the Quobyte volume to be mounted with read-only permissions.\nDefaults to false."
 
 ### fn spec.template.spec.volumes.quobyte.withRegistry
 
@@ -10337,7 +10685,7 @@ withReadOnly(readOnly)
 withRegistry(registry)
 ```
 
-"registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes"
+"registry represents a single or multiple Quobyte Registry services\nspecified as a string as host:port pair (multiple entries are separated with commas)\nwhich acts as the central registry for volumes"
 
 ### fn spec.template.spec.volumes.quobyte.withTenant
 
@@ -10345,7 +10693,7 @@ withRegistry(registry)
 withTenant(tenant)
 ```
 
-"tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin"
+"tenant owning the given Quobyte volume in the Backend\nUsed with dynamically provisioned Quobyte volumes, value is set by the plugin"
 
 ### fn spec.template.spec.volumes.quobyte.withUser
 
@@ -10353,7 +10701,7 @@ withTenant(tenant)
 withUser(user)
 ```
 
-"user to map volume access to Defaults to serivceaccount user"
+"user to map volume access to\nDefaults to serivceaccount user"
 
 ### fn spec.template.spec.volumes.quobyte.withVolume
 
@@ -10365,7 +10713,7 @@ withVolume(volume)
 
 ## obj spec.template.spec.volumes.rbd
 
-"rbd represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md"
+"rbd represents a Rados Block Device mount on the host that shares a pod's lifetime.\nMore info: https://examples.k8s.io/volumes/rbd/README.md"
 
 ### fn spec.template.spec.volumes.rbd.withFsType
 
@@ -10373,7 +10721,7 @@ withVolume(volume)
 withFsType(fsType)
 ```
 
-"fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd TODO: how do we prevent errors in the filesystem from compromising the machine"
+"fsType is the filesystem type of the volume that you want to mount.\nTip: Ensure that the filesystem type is supported by the host operating system.\nExamples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#rbd\nTODO: how do we prevent errors in the filesystem from compromising the machine"
 
 ### fn spec.template.spec.volumes.rbd.withImage
 
@@ -10381,7 +10729,7 @@ withFsType(fsType)
 withImage(image)
 ```
 
-"image is the rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it"
+"image is the rados image name.\nMore info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it"
 
 ### fn spec.template.spec.volumes.rbd.withKeyring
 
@@ -10389,7 +10737,7 @@ withImage(image)
 withKeyring(keyring)
 ```
 
-"keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it"
+"keyring is the path to key ring for RBDUser.\nDefault is /etc/ceph/keyring.\nMore info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it"
 
 ### fn spec.template.spec.volumes.rbd.withMonitors
 
@@ -10397,7 +10745,7 @@ withKeyring(keyring)
 withMonitors(monitors)
 ```
 
-"monitors is a collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it"
+"monitors is a collection of Ceph monitors.\nMore info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it"
 
 ### fn spec.template.spec.volumes.rbd.withMonitorsMixin
 
@@ -10405,7 +10753,7 @@ withMonitors(monitors)
 withMonitorsMixin(monitors)
 ```
 
-"monitors is a collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it"
+"monitors is a collection of Ceph monitors.\nMore info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it"
 
 **Note:** This function appends passed data to existing values
 
@@ -10415,7 +10763,7 @@ withMonitorsMixin(monitors)
 withPool(pool)
 ```
 
-"pool is the rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it"
+"pool is the rados pool name.\nDefault is rbd.\nMore info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it"
 
 ### fn spec.template.spec.volumes.rbd.withReadOnly
 
@@ -10423,7 +10771,7 @@ withPool(pool)
 withReadOnly(readOnly)
 ```
 
-"readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it"
+"readOnly here will force the ReadOnly setting in VolumeMounts.\nDefaults to false.\nMore info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it"
 
 ### fn spec.template.spec.volumes.rbd.withUser
 
@@ -10431,11 +10779,11 @@ withReadOnly(readOnly)
 withUser(user)
 ```
 
-"user is the rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it"
+"user is the rados user name.\nDefault is admin.\nMore info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it"
 
 ## obj spec.template.spec.volumes.rbd.secretRef
 
-"secretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it"
+"secretRef is name of the authentication secret for RBDUser. If provided\noverrides keyring.\nDefault is nil.\nMore info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it"
 
 ### fn spec.template.spec.volumes.rbd.secretRef.withName
 
@@ -10443,7 +10791,7 @@ withUser(user)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ## obj spec.template.spec.volumes.scaleIO
 
@@ -10455,7 +10803,7 @@ withName(name)
 withFsType(fsType)
 ```
 
-"fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\", \"ntfs\". Default is \"xfs\"."
+"fsType is the filesystem type to mount.\nMust be a filesystem type supported by the host operating system.\nEx. \"ext4\", \"xfs\", \"ntfs\".\nDefault is \"xfs\"."
 
 ### fn spec.template.spec.volumes.scaleIO.withGateway
 
@@ -10479,7 +10827,7 @@ withProtectionDomain(protectionDomain)
 withReadOnly(readOnly)
 ```
 
-"readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts."
+"readOnly Defaults to false (read/write). ReadOnly here will force\nthe ReadOnly setting in VolumeMounts."
 
 ### fn spec.template.spec.volumes.scaleIO.withSslEnabled
 
@@ -10495,7 +10843,7 @@ withSslEnabled(sslEnabled)
 withStorageMode(storageMode)
 ```
 
-"storageMode indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned."
+"storageMode indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned.\nDefault is ThinProvisioned."
 
 ### fn spec.template.spec.volumes.scaleIO.withStoragePool
 
@@ -10519,11 +10867,11 @@ withSystem(system)
 withVolumeName(volumeName)
 ```
 
-"volumeName is the name of a volume already created in the ScaleIO system that is associated with this volume source."
+"volumeName is the name of a volume already created in the ScaleIO system\nthat is associated with this volume source."
 
 ## obj spec.template.spec.volumes.scaleIO.secretRef
 
-"secretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail."
+"secretRef references to the secret for ScaleIO user and other\nsensitive information. If this is not provided, Login operation will fail."
 
 ### fn spec.template.spec.volumes.scaleIO.secretRef.withName
 
@@ -10531,11 +10879,11 @@ withVolumeName(volumeName)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ## obj spec.template.spec.volumes.secret
 
-"secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret"
+"secret represents a secret that should populate this volume.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#secret"
 
 ### fn spec.template.spec.volumes.secret.withDefaultMode
 
@@ -10543,7 +10891,7 @@ withName(name)
 withDefaultMode(defaultMode)
 ```
 
-"defaultMode is Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set."
+"defaultMode is Optional: mode bits used to set permissions on created files by default.\nMust be an octal value between 0000 and 0777 or a decimal value between 0 and 511.\nYAML accepts both octal and decimal values, JSON requires decimal values\nfor mode bits. Defaults to 0644.\nDirectories within the path are not affected by this setting.\nThis might be in conflict with other options that affect the file\nmode, like fsGroup, and the result can be other mode bits set."
 
 ### fn spec.template.spec.volumes.secret.withItems
 
@@ -10551,7 +10899,7 @@ withDefaultMode(defaultMode)
 withItems(items)
 ```
 
-"items If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'."
+"items If unspecified, each key-value pair in the Data field of the referenced\nSecret will be projected into the volume as a file whose name is the\nkey and content is the value. If specified, the listed keys will be\nprojected into the specified paths, and unlisted keys will not be\npresent. If a key is specified which is not present in the Secret,\nthe volume setup will error unless it is marked optional. Paths must be\nrelative and may not contain the '..' path or start with '..'."
 
 ### fn spec.template.spec.volumes.secret.withItemsMixin
 
@@ -10559,7 +10907,7 @@ withItems(items)
 withItemsMixin(items)
 ```
 
-"items If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'."
+"items If unspecified, each key-value pair in the Data field of the referenced\nSecret will be projected into the volume as a file whose name is the\nkey and content is the value. If specified, the listed keys will be\nprojected into the specified paths, and unlisted keys will not be\npresent. If a key is specified which is not present in the Secret,\nthe volume setup will error unless it is marked optional. Paths must be\nrelative and may not contain the '..' path or start with '..'."
 
 **Note:** This function appends passed data to existing values
 
@@ -10577,11 +10925,11 @@ withOptional(optional)
 withSecretName(secretName)
 ```
 
-"secretName is the name of the secret in the pod's namespace to use. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret"
+"secretName is the name of the secret in the pod's namespace to use.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#secret"
 
 ## obj spec.template.spec.volumes.secret.items
 
-"items If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'."
+"items If unspecified, each key-value pair in the Data field of the referenced\nSecret will be projected into the volume as a file whose name is the\nkey and content is the value. If specified, the listed keys will be\nprojected into the specified paths, and unlisted keys will not be\npresent. If a key is specified which is not present in the Secret,\nthe volume setup will error unless it is marked optional. Paths must be\nrelative and may not contain the '..' path or start with '..'."
 
 ### fn spec.template.spec.volumes.secret.items.withKey
 
@@ -10597,7 +10945,7 @@ withKey(key)
 withMode(mode)
 ```
 
-"mode is Optional: mode bits used to set permissions on this file. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set."
+"mode is Optional: mode bits used to set permissions on this file.\nMust be an octal value between 0000 and 0777 or a decimal value between 0 and 511.\nYAML accepts both octal and decimal values, JSON requires decimal values for mode bits.\nIf not specified, the volume defaultMode will be used.\nThis might be in conflict with other options that affect the file\nmode, like fsGroup, and the result can be other mode bits set."
 
 ### fn spec.template.spec.volumes.secret.items.withPath
 
@@ -10605,7 +10953,7 @@ withMode(mode)
 withPath(path)
 ```
 
-"path is the relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'."
+"path is the relative path of the file to map the key to.\nMay not be an absolute path.\nMay not contain the path element '..'.\nMay not start with the string '..'."
 
 ## obj spec.template.spec.volumes.storageos
 
@@ -10617,7 +10965,7 @@ withPath(path)
 withFsType(fsType)
 ```
 
-"fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified."
+"fsType is the filesystem type to mount.\nMust be a filesystem type supported by the host operating system.\nEx. \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified."
 
 ### fn spec.template.spec.volumes.storageos.withReadOnly
 
@@ -10625,7 +10973,7 @@ withFsType(fsType)
 withReadOnly(readOnly)
 ```
 
-"readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts."
+"readOnly defaults to false (read/write). ReadOnly here will force\nthe ReadOnly setting in VolumeMounts."
 
 ### fn spec.template.spec.volumes.storageos.withVolumeName
 
@@ -10633,7 +10981,7 @@ withReadOnly(readOnly)
 withVolumeName(volumeName)
 ```
 
-"volumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace."
+"volumeName is the human-readable name of the StorageOS volume.  Volume\nnames are only unique within a namespace."
 
 ### fn spec.template.spec.volumes.storageos.withVolumeNamespace
 
@@ -10641,11 +10989,11 @@ withVolumeName(volumeName)
 withVolumeNamespace(volumeNamespace)
 ```
 
-"volumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod's namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to \"default\" if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created."
+"volumeNamespace specifies the scope of the volume within StorageOS.  If no\nnamespace is specified then the Pod's namespace will be used.  This allows the\nKubernetes name scoping to be mirrored within StorageOS for tighter integration.\nSet VolumeName to any name to override the default behaviour.\nSet to \"default\" if you are not using namespaces within StorageOS.\nNamespaces that do not pre-exist within StorageOS will be created."
 
 ## obj spec.template.spec.volumes.storageos.secretRef
 
-"secretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted."
+"secretRef specifies the secret to use for obtaining the StorageOS API\ncredentials.  If not specified, default values will be attempted."
 
 ### fn spec.template.spec.volumes.storageos.secretRef.withName
 
@@ -10653,7 +11001,7 @@ withVolumeNamespace(volumeNamespace)
 withName(name)
 ```
 
-"Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names TODO: Add other useful fields. apiVersion, kind, uid?"
+"Name of the referent.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names\nTODO: Add other useful fields. apiVersion, kind, uid?"
 
 ## obj spec.template.spec.volumes.vsphereVolume
 
@@ -10665,7 +11013,7 @@ withName(name)
 withFsType(fsType)
 ```
 
-"fsType is filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified."
+"fsType is filesystem type to mount.\nMust be a filesystem type supported by the host operating system.\nEx. \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified."
 
 ### fn spec.template.spec.volumes.vsphereVolume.withStoragePolicyID
 
