@@ -95,4 +95,49 @@
          <lastmod>2024-06-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.1/</loc>
+         <lastmod>2024-06-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.1/postgresql/</loc>
+         <lastmod>2024-06-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.1/postgresql/v1/</loc>
+         <lastmod>2024-06-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.1/postgresql/v1/backup/</loc>
+         <lastmod>2024-06-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.1/postgresql/v1/cluster/</loc>
+         <lastmod>2024-06-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.1/postgresql/v1/clusterImageCatalog/</loc>
+         <lastmod>2024-06-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.1/postgresql/v1/imageCatalog/</loc>
+         <lastmod>2024-06-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.1/postgresql/v1/pooler/</loc>
+         <lastmod>2024-06-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.1/postgresql/v1/scheduledBackup/</loc>
+         <lastmod>2024-06-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
