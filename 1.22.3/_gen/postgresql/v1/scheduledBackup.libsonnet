@@ -74,7 +74,7 @@
     withBackupOwnerReference(backupOwnerReference): { spec+: { backupOwnerReference: backupOwnerReference } },
     '#withImmediate':: d.fn(help='"If the first backup has to be immediately start after creation or not"', args=[d.arg(name='immediate', type=d.T.boolean)]),
     withImmediate(immediate): { spec+: { immediate: immediate } },
-    '#withMethod':: d.fn(help='"The backup method to be used, possible options are `barmanObjectStore`\\nand `volumeSnapshot`. Defaults to: `barmanObjectStore`."', args=[d.arg(name='method', type=d.T.string)]),
+    '#withMethod':: d.fn(help='"The backup method to be used, possible options are `barmanObjectStore`,\\n`volumeSnapshot` or `plugin`. Defaults to: `barmanObjectStore`."', args=[d.arg(name='method', type=d.T.string)]),
     withMethod(method): { spec+: { method: method } },
     '#withOnline':: d.fn(help="\"Whether the default type of backup with volume snapshots is\\nonline/hot (`true`, default) or offline/cold (`false`)\\nOverrides the default setting specified in the cluster field '.spec.backup.volumeSnapshot.online'\"", args=[d.arg(name='online', type=d.T.boolean)]),
     withOnline(online): { spec+: { online: online } },

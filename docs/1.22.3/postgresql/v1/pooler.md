@@ -79,6 +79,7 @@ permalink: /1.22.3/postgresql/v1/pooler/
       * [`fn withAnnotationsMixin(annotations)`](#fn-specservicetemplatemetadatawithannotationsmixin)
       * [`fn withLabels(labels)`](#fn-specservicetemplatemetadatawithlabels)
       * [`fn withLabelsMixin(labels)`](#fn-specservicetemplatemetadatawithlabelsmixin)
+      * [`fn withName(name)`](#fn-specservicetemplatemetadatawithname)
     * [`obj spec.serviceTemplate.spec`](#obj-specservicetemplatespec)
       * [`fn withAllocateLoadBalancerNodePorts(allocateLoadBalancerNodePorts)`](#fn-specservicetemplatespecwithallocateloadbalancernodeports)
       * [`fn withClusterIP(clusterIP)`](#fn-specservicetemplatespecwithclusterip)
@@ -121,6 +122,7 @@ permalink: /1.22.3/postgresql/v1/pooler/
       * [`fn withAnnotationsMixin(annotations)`](#fn-spectemplatemetadatawithannotationsmixin)
       * [`fn withLabels(labels)`](#fn-spectemplatemetadatawithlabels)
       * [`fn withLabelsMixin(labels)`](#fn-spectemplatemetadatawithlabelsmixin)
+      * [`fn withName(name)`](#fn-spectemplatemetadatawithname)
     * [`obj spec.template.spec`](#obj-spectemplatespec)
       * [`fn withActiveDeadlineSeconds(activeDeadlineSeconds)`](#fn-spectemplatespecwithactivedeadlineseconds)
       * [`fn withAutomountServiceAccountToken(automountServiceAccountToken)`](#fn-spectemplatespecwithautomountserviceaccounttoken)
@@ -1924,6 +1926,14 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.serviceTemplate.metadata.withName
+
+```ts
+withName(name)
+```
+
+"The name of the resource. Only supported for certain types"
+
 ## obj spec.serviceTemplate.spec
 
 "Specification of the desired behavior of the service.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
@@ -2251,6 +2261,14 @@ withLabelsMixin(labels)
 "Map of string keys and values that can be used to organize and categorize\n(scope and select) objects. May match selectors of replication controllers\nand services.\nMore info: http://kubernetes.io/docs/user-guide/labels"
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.template.metadata.withName
+
+```ts
+withName(name)
+```
+
+"The name of the resource. Only supported for certain types"
 
 ## obj spec.template.spec
 

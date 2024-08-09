@@ -247,7 +247,7 @@ withImmediate(immediate)
 withMethod(method)
 ```
 
-"The backup method to be used, possible options are `barmanObjectStore`\nand `volumeSnapshot`. Defaults to: `barmanObjectStore`."
+"The backup method to be used, possible options are `barmanObjectStore`,\n`volumeSnapshot` or `plugin`. Defaults to: `barmanObjectStore`."
 
 ### fn spec.withOnline
 

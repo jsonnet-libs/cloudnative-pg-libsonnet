@@ -151,6 +151,8 @@
         withLabels(labels): { spec+: { serviceTemplate+: { metadata+: { labels: labels } } } },
         '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize\\n(scope and select) objects. May match selectors of replication controllers\\nand services.\\nMore info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
         withLabelsMixin(labels): { spec+: { serviceTemplate+: { metadata+: { labels+: labels } } } },
+        '#withName':: d.fn(help='"The name of the resource. Only supported for certain types"', args=[d.arg(name='name', type=d.T.string)]),
+        withName(name): { spec+: { serviceTemplate+: { metadata+: { name: name } } } },
       },
       '#spec':: d.obj(help='"Specification of the desired behavior of the service.\\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"'),
       spec: {
@@ -241,6 +243,8 @@
         withLabels(labels): { spec+: { template+: { metadata+: { labels: labels } } } },
         '#withLabelsMixin':: d.fn(help='"Map of string keys and values that can be used to organize and categorize\\n(scope and select) objects. May match selectors of replication controllers\\nand services.\\nMore info: http://kubernetes.io/docs/user-guide/labels"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='labels', type=d.T.object)]),
         withLabelsMixin(labels): { spec+: { template+: { metadata+: { labels+: labels } } } },
+        '#withName':: d.fn(help='"The name of the resource. Only supported for certain types"', args=[d.arg(name='name', type=d.T.string)]),
+        withName(name): { spec+: { template+: { metadata+: { name: name } } } },
       },
       '#spec':: d.obj(help='"Specification of the desired behavior of the pod.\\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"'),
       spec: {

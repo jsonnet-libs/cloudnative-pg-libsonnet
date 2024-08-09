@@ -298,9 +298,13 @@ permalink: /1.21.5/postgresql/v1/cluster/
           * [`fn withKey(key)`](#fn-specbackupbarmanobjectstores3credentialssessiontokenwithkey)
           * [`fn withName(name)`](#fn-specbackupbarmanobjectstores3credentialssessiontokenwithname)
       * [`obj spec.backup.barmanObjectStore.wal`](#obj-specbackupbarmanobjectstorewal)
+        * [`fn withArchiveAdditionalCommandArgs(archiveAdditionalCommandArgs)`](#fn-specbackupbarmanobjectstorewalwitharchiveadditionalcommandargs)
+        * [`fn withArchiveAdditionalCommandArgsMixin(archiveAdditionalCommandArgs)`](#fn-specbackupbarmanobjectstorewalwitharchiveadditionalcommandargsmixin)
         * [`fn withCompression(compression)`](#fn-specbackupbarmanobjectstorewalwithcompression)
         * [`fn withEncryption(encryption)`](#fn-specbackupbarmanobjectstorewalwithencryption)
         * [`fn withMaxParallel(maxParallel)`](#fn-specbackupbarmanobjectstorewalwithmaxparallel)
+        * [`fn withRestoreAdditionalCommandArgs(restoreAdditionalCommandArgs)`](#fn-specbackupbarmanobjectstorewalwithrestoreadditionalcommandargs)
+        * [`fn withRestoreAdditionalCommandArgsMixin(restoreAdditionalCommandArgs)`](#fn-specbackupbarmanobjectstorewalwithrestoreadditionalcommandargsmixin)
     * [`obj spec.backup.volumeSnapshot`](#obj-specbackupvolumesnapshot)
       * [`fn withAnnotations(annotations)`](#fn-specbackupvolumesnapshotwithannotations)
       * [`fn withAnnotationsMixin(annotations)`](#fn-specbackupvolumesnapshotwithannotationsmixin)
@@ -354,6 +358,28 @@ permalink: /1.21.5/postgresql/v1/cluster/
         * [`obj spec.bootstrap.initdb.postInitApplicationSQLRefs.secretRefs`](#obj-specbootstrapinitdbpostinitapplicationsqlrefssecretrefs)
           * [`fn withKey(key)`](#fn-specbootstrapinitdbpostinitapplicationsqlrefssecretrefswithkey)
           * [`fn withName(name)`](#fn-specbootstrapinitdbpostinitapplicationsqlrefssecretrefswithname)
+      * [`obj spec.bootstrap.initdb.postInitSQLRefs`](#obj-specbootstrapinitdbpostinitsqlrefs)
+        * [`fn withConfigMapRefs(configMapRefs)`](#fn-specbootstrapinitdbpostinitsqlrefswithconfigmaprefs)
+        * [`fn withConfigMapRefsMixin(configMapRefs)`](#fn-specbootstrapinitdbpostinitsqlrefswithconfigmaprefsmixin)
+        * [`fn withSecretRefs(secretRefs)`](#fn-specbootstrapinitdbpostinitsqlrefswithsecretrefs)
+        * [`fn withSecretRefsMixin(secretRefs)`](#fn-specbootstrapinitdbpostinitsqlrefswithsecretrefsmixin)
+        * [`obj spec.bootstrap.initdb.postInitSQLRefs.configMapRefs`](#obj-specbootstrapinitdbpostinitsqlrefsconfigmaprefs)
+          * [`fn withKey(key)`](#fn-specbootstrapinitdbpostinitsqlrefsconfigmaprefswithkey)
+          * [`fn withName(name)`](#fn-specbootstrapinitdbpostinitsqlrefsconfigmaprefswithname)
+        * [`obj spec.bootstrap.initdb.postInitSQLRefs.secretRefs`](#obj-specbootstrapinitdbpostinitsqlrefssecretrefs)
+          * [`fn withKey(key)`](#fn-specbootstrapinitdbpostinitsqlrefssecretrefswithkey)
+          * [`fn withName(name)`](#fn-specbootstrapinitdbpostinitsqlrefssecretrefswithname)
+      * [`obj spec.bootstrap.initdb.postInitTemplateSQLRefs`](#obj-specbootstrapinitdbpostinittemplatesqlrefs)
+        * [`fn withConfigMapRefs(configMapRefs)`](#fn-specbootstrapinitdbpostinittemplatesqlrefswithconfigmaprefs)
+        * [`fn withConfigMapRefsMixin(configMapRefs)`](#fn-specbootstrapinitdbpostinittemplatesqlrefswithconfigmaprefsmixin)
+        * [`fn withSecretRefs(secretRefs)`](#fn-specbootstrapinitdbpostinittemplatesqlrefswithsecretrefs)
+        * [`fn withSecretRefsMixin(secretRefs)`](#fn-specbootstrapinitdbpostinittemplatesqlrefswithsecretrefsmixin)
+        * [`obj spec.bootstrap.initdb.postInitTemplateSQLRefs.configMapRefs`](#obj-specbootstrapinitdbpostinittemplatesqlrefsconfigmaprefs)
+          * [`fn withKey(key)`](#fn-specbootstrapinitdbpostinittemplatesqlrefsconfigmaprefswithkey)
+          * [`fn withName(name)`](#fn-specbootstrapinitdbpostinittemplatesqlrefsconfigmaprefswithname)
+        * [`obj spec.bootstrap.initdb.postInitTemplateSQLRefs.secretRefs`](#obj-specbootstrapinitdbpostinittemplatesqlrefssecretrefs)
+          * [`fn withKey(key)`](#fn-specbootstrapinitdbpostinittemplatesqlrefssecretrefswithkey)
+          * [`fn withName(name)`](#fn-specbootstrapinitdbpostinittemplatesqlrefssecretrefswithname)
       * [`obj spec.bootstrap.initdb.secret`](#obj-specbootstrapinitdbsecret)
         * [`fn withName(name)`](#fn-specbootstrapinitdbsecretwithname)
     * [`obj spec.bootstrap.pg_basebackup`](#obj-specbootstrappg_basebackup)
@@ -521,9 +547,13 @@ permalink: /1.21.5/postgresql/v1/cluster/
           * [`fn withKey(key)`](#fn-specexternalclustersbarmanobjectstores3credentialssessiontokenwithkey)
           * [`fn withName(name)`](#fn-specexternalclustersbarmanobjectstores3credentialssessiontokenwithname)
       * [`obj spec.externalClusters.barmanObjectStore.wal`](#obj-specexternalclustersbarmanobjectstorewal)
+        * [`fn withArchiveAdditionalCommandArgs(archiveAdditionalCommandArgs)`](#fn-specexternalclustersbarmanobjectstorewalwitharchiveadditionalcommandargs)
+        * [`fn withArchiveAdditionalCommandArgsMixin(archiveAdditionalCommandArgs)`](#fn-specexternalclustersbarmanobjectstorewalwitharchiveadditionalcommandargsmixin)
         * [`fn withCompression(compression)`](#fn-specexternalclustersbarmanobjectstorewalwithcompression)
         * [`fn withEncryption(encryption)`](#fn-specexternalclustersbarmanobjectstorewalwithencryption)
         * [`fn withMaxParallel(maxParallel)`](#fn-specexternalclustersbarmanobjectstorewalwithmaxparallel)
+        * [`fn withRestoreAdditionalCommandArgs(restoreAdditionalCommandArgs)`](#fn-specexternalclustersbarmanobjectstorewalwithrestoreadditionalcommandargs)
+        * [`fn withRestoreAdditionalCommandArgsMixin(restoreAdditionalCommandArgs)`](#fn-specexternalclustersbarmanobjectstorewalwithrestoreadditionalcommandargsmixin)
     * [`obj spec.externalClusters.password`](#obj-specexternalclusterspassword)
       * [`fn withKey(key)`](#fn-specexternalclusterspasswordwithkey)
       * [`fn withName(name)`](#fn-specexternalclusterspasswordwithname)
@@ -573,6 +603,57 @@ permalink: /1.21.5/postgresql/v1/cluster/
       * [`fn withValidUntil(validUntil)`](#fn-specmanagedroleswithvaliduntil)
       * [`obj spec.managed.roles.passwordSecret`](#obj-specmanagedrolespasswordsecret)
         * [`fn withName(name)`](#fn-specmanagedrolespasswordsecretwithname)
+    * [`obj spec.managed.services`](#obj-specmanagedservices)
+      * [`fn withAdditional(additional)`](#fn-specmanagedserviceswithadditional)
+      * [`fn withAdditionalMixin(additional)`](#fn-specmanagedserviceswithadditionalmixin)
+      * [`fn withDisabledDefaultServices(disabledDefaultServices)`](#fn-specmanagedserviceswithdisableddefaultservices)
+      * [`fn withDisabledDefaultServicesMixin(disabledDefaultServices)`](#fn-specmanagedserviceswithdisableddefaultservicesmixin)
+      * [`obj spec.managed.services.additional`](#obj-specmanagedservicesadditional)
+        * [`fn withSelectorType(selectorType)`](#fn-specmanagedservicesadditionalwithselectortype)
+        * [`fn withUpdateStrategy(updateStrategy)`](#fn-specmanagedservicesadditionalwithupdatestrategy)
+        * [`obj spec.managed.services.additional.serviceTemplate`](#obj-specmanagedservicesadditionalservicetemplate)
+          * [`obj spec.managed.services.additional.serviceTemplate.metadata`](#obj-specmanagedservicesadditionalservicetemplatemetadata)
+            * [`fn withAnnotations(annotations)`](#fn-specmanagedservicesadditionalservicetemplatemetadatawithannotations)
+            * [`fn withAnnotationsMixin(annotations)`](#fn-specmanagedservicesadditionalservicetemplatemetadatawithannotationsmixin)
+            * [`fn withLabels(labels)`](#fn-specmanagedservicesadditionalservicetemplatemetadatawithlabels)
+            * [`fn withLabelsMixin(labels)`](#fn-specmanagedservicesadditionalservicetemplatemetadatawithlabelsmixin)
+            * [`fn withName(name)`](#fn-specmanagedservicesadditionalservicetemplatemetadatawithname)
+          * [`obj spec.managed.services.additional.serviceTemplate.spec`](#obj-specmanagedservicesadditionalservicetemplatespec)
+            * [`fn withAllocateLoadBalancerNodePorts(allocateLoadBalancerNodePorts)`](#fn-specmanagedservicesadditionalservicetemplatespecwithallocateloadbalancernodeports)
+            * [`fn withClusterIP(clusterIP)`](#fn-specmanagedservicesadditionalservicetemplatespecwithclusterip)
+            * [`fn withClusterIPs(clusterIPs)`](#fn-specmanagedservicesadditionalservicetemplatespecwithclusterips)
+            * [`fn withClusterIPsMixin(clusterIPs)`](#fn-specmanagedservicesadditionalservicetemplatespecwithclusteripsmixin)
+            * [`fn withExternalIPs(externalIPs)`](#fn-specmanagedservicesadditionalservicetemplatespecwithexternalips)
+            * [`fn withExternalIPsMixin(externalIPs)`](#fn-specmanagedservicesadditionalservicetemplatespecwithexternalipsmixin)
+            * [`fn withExternalName(externalName)`](#fn-specmanagedservicesadditionalservicetemplatespecwithexternalname)
+            * [`fn withExternalTrafficPolicy(externalTrafficPolicy)`](#fn-specmanagedservicesadditionalservicetemplatespecwithexternaltrafficpolicy)
+            * [`fn withHealthCheckNodePort(healthCheckNodePort)`](#fn-specmanagedservicesadditionalservicetemplatespecwithhealthchecknodeport)
+            * [`fn withInternalTrafficPolicy(internalTrafficPolicy)`](#fn-specmanagedservicesadditionalservicetemplatespecwithinternaltrafficpolicy)
+            * [`fn withIpFamilies(ipFamilies)`](#fn-specmanagedservicesadditionalservicetemplatespecwithipfamilies)
+            * [`fn withIpFamiliesMixin(ipFamilies)`](#fn-specmanagedservicesadditionalservicetemplatespecwithipfamiliesmixin)
+            * [`fn withIpFamilyPolicy(ipFamilyPolicy)`](#fn-specmanagedservicesadditionalservicetemplatespecwithipfamilypolicy)
+            * [`fn withLoadBalancerClass(loadBalancerClass)`](#fn-specmanagedservicesadditionalservicetemplatespecwithloadbalancerclass)
+            * [`fn withLoadBalancerIP(loadBalancerIP)`](#fn-specmanagedservicesadditionalservicetemplatespecwithloadbalancerip)
+            * [`fn withLoadBalancerSourceRanges(loadBalancerSourceRanges)`](#fn-specmanagedservicesadditionalservicetemplatespecwithloadbalancersourceranges)
+            * [`fn withLoadBalancerSourceRangesMixin(loadBalancerSourceRanges)`](#fn-specmanagedservicesadditionalservicetemplatespecwithloadbalancersourcerangesmixin)
+            * [`fn withPorts(ports)`](#fn-specmanagedservicesadditionalservicetemplatespecwithports)
+            * [`fn withPortsMixin(ports)`](#fn-specmanagedservicesadditionalservicetemplatespecwithportsmixin)
+            * [`fn withPublishNotReadyAddresses(publishNotReadyAddresses)`](#fn-specmanagedservicesadditionalservicetemplatespecwithpublishnotreadyaddresses)
+            * [`fn withSelector(selector)`](#fn-specmanagedservicesadditionalservicetemplatespecwithselector)
+            * [`fn withSelectorMixin(selector)`](#fn-specmanagedservicesadditionalservicetemplatespecwithselectormixin)
+            * [`fn withSessionAffinity(sessionAffinity)`](#fn-specmanagedservicesadditionalservicetemplatespecwithsessionaffinity)
+            * [`fn withTrafficDistribution(trafficDistribution)`](#fn-specmanagedservicesadditionalservicetemplatespecwithtrafficdistribution)
+            * [`fn withType(type)`](#fn-specmanagedservicesadditionalservicetemplatespecwithtype)
+            * [`obj spec.managed.services.additional.serviceTemplate.spec.ports`](#obj-specmanagedservicesadditionalservicetemplatespecports)
+              * [`fn withAppProtocol(appProtocol)`](#fn-specmanagedservicesadditionalservicetemplatespecportswithappprotocol)
+              * [`fn withName(name)`](#fn-specmanagedservicesadditionalservicetemplatespecportswithname)
+              * [`fn withNodePort(nodePort)`](#fn-specmanagedservicesadditionalservicetemplatespecportswithnodeport)
+              * [`fn withPort(port)`](#fn-specmanagedservicesadditionalservicetemplatespecportswithport)
+              * [`fn withProtocol(protocol)`](#fn-specmanagedservicesadditionalservicetemplatespecportswithprotocol)
+              * [`fn withTargetPort(targetPort)`](#fn-specmanagedservicesadditionalservicetemplatespecportswithtargetport)
+            * [`obj spec.managed.services.additional.serviceTemplate.spec.sessionAffinityConfig`](#obj-specmanagedservicesadditionalservicetemplatespecsessionaffinityconfig)
+              * [`obj spec.managed.services.additional.serviceTemplate.spec.sessionAffinityConfig.clientIP`](#obj-specmanagedservicesadditionalservicetemplatespecsessionaffinityconfigclientip)
+                * [`fn withTimeoutSeconds(timeoutSeconds)`](#fn-specmanagedservicesadditionalservicetemplatespecsessionaffinityconfigclientipwithtimeoutseconds)
   * [`obj spec.monitoring`](#obj-specmonitoring)
     * [`fn withCustomQueriesConfigMap(customQueriesConfigMap)`](#fn-specmonitoringwithcustomqueriesconfigmap)
     * [`fn withCustomQueriesConfigMapMixin(customQueriesConfigMap)`](#fn-specmonitoringwithcustomqueriesconfigmapmixin)
@@ -608,6 +689,8 @@ permalink: /1.21.5/postgresql/v1/cluster/
       * [`fn withSourceLabels(sourceLabels)`](#fn-specmonitoringpodmonitorrelabelingswithsourcelabels)
       * [`fn withSourceLabelsMixin(sourceLabels)`](#fn-specmonitoringpodmonitorrelabelingswithsourcelabelsmixin)
       * [`fn withTargetLabel(targetLabel)`](#fn-specmonitoringpodmonitorrelabelingswithtargetlabel)
+    * [`obj spec.monitoring.tls`](#obj-specmonitoringtls)
+      * [`fn withEnabled(enabled)`](#fn-specmonitoringtlswithenabled)
   * [`obj spec.nodeMaintenanceWindow`](#obj-specnodemaintenancewindow)
     * [`fn withInProgress(inProgress)`](#fn-specnodemaintenancewindowwithinprogress)
     * [`fn withReusePVC(reusePVC)`](#fn-specnodemaintenancewindowwithreusepvc)
@@ -647,6 +730,14 @@ permalink: /1.21.5/postgresql/v1/cluster/
       * [`fn withEnabled(enabled)`](#fn-specpostgresqlsyncreplicaelectionconstraintwithenabled)
       * [`fn withNodeLabelsAntiAffinity(nodeLabelsAntiAffinity)`](#fn-specpostgresqlsyncreplicaelectionconstraintwithnodelabelsantiaffinity)
       * [`fn withNodeLabelsAntiAffinityMixin(nodeLabelsAntiAffinity)`](#fn-specpostgresqlsyncreplicaelectionconstraintwithnodelabelsantiaffinitymixin)
+    * [`obj spec.postgresql.synchronous`](#obj-specpostgresqlsynchronous)
+      * [`fn withMaxStandbyNamesFromCluster(maxStandbyNamesFromCluster)`](#fn-specpostgresqlsynchronouswithmaxstandbynamesfromcluster)
+      * [`fn withMethod(method)`](#fn-specpostgresqlsynchronouswithmethod)
+      * [`fn withNumber(number)`](#fn-specpostgresqlsynchronouswithnumber)
+      * [`fn withStandbyNamesPost(standbyNamesPost)`](#fn-specpostgresqlsynchronouswithstandbynamespost)
+      * [`fn withStandbyNamesPostMixin(standbyNamesPost)`](#fn-specpostgresqlsynchronouswithstandbynamespostmixin)
+      * [`fn withStandbyNamesPre(standbyNamesPre)`](#fn-specpostgresqlsynchronouswithstandbynamespre)
+      * [`fn withStandbyNamesPreMixin(standbyNamesPre)`](#fn-specpostgresqlsynchronouswithstandbynamespremixin)
   * [`obj spec.projectedVolumeTemplate`](#obj-specprojectedvolumetemplate)
     * [`fn withDefaultMode(defaultMode)`](#fn-specprojectedvolumetemplatewithdefaultmode)
     * [`fn withSources(sources)`](#fn-specprojectedvolumetemplatewithsources)
@@ -704,6 +795,10 @@ permalink: /1.21.5/postgresql/v1/cluster/
         * [`fn withPath(path)`](#fn-specprojectedvolumetemplatesourcesserviceaccounttokenwithpath)
   * [`obj spec.replica`](#obj-specreplica)
     * [`fn withEnabled(enabled)`](#fn-specreplicawithenabled)
+    * [`fn withMinApplyDelay(minApplyDelay)`](#fn-specreplicawithminapplydelay)
+    * [`fn withPrimary(primary)`](#fn-specreplicawithprimary)
+    * [`fn withPromotionToken(promotionToken)`](#fn-specreplicawithpromotiontoken)
+    * [`fn withSelf(Self)`](#fn-specreplicawithself)
     * [`fn withSource(source)`](#fn-specreplicawithsource)
   * [`obj spec.replicationSlots`](#obj-specreplicationslots)
     * [`fn withUpdateInterval(updateInterval)`](#fn-specreplicationslotswithupdateinterval)
@@ -732,6 +827,7 @@ permalink: /1.21.5/postgresql/v1/cluster/
       * [`fn withAnnotationsMixin(annotations)`](#fn-specserviceaccounttemplatemetadatawithannotationsmixin)
       * [`fn withLabels(labels)`](#fn-specserviceaccounttemplatemetadatawithlabels)
       * [`fn withLabelsMixin(labels)`](#fn-specserviceaccounttemplatemetadatawithlabelsmixin)
+      * [`fn withName(name)`](#fn-specserviceaccounttemplatemetadatawithname)
   * [`obj spec.storage`](#obj-specstorage)
     * [`fn withResizeInUseVolumes(resizeInUseVolumes)`](#fn-specstoragewithresizeinusevolumes)
     * [`fn withSize(size)`](#fn-specstoragewithsize)
@@ -3102,6 +3198,24 @@ withName(name)
 
 "The configuration for the backup of the WAL stream.\nWhen not defined, WAL files will be stored uncompressed and may be\nunencrypted in the object store, according to the bucket default policy."
 
+### fn spec.backup.barmanObjectStore.wal.withArchiveAdditionalCommandArgs
+
+```ts
+withArchiveAdditionalCommandArgs(archiveAdditionalCommandArgs)
+```
+
+"Additional arguments that can be appended to the 'barman-cloud-wal-archive'\ncommand-line invocation. These arguments provide flexibility to customize\nthe WAL archive process further, according to specific requirements or configurations.\n\n\nExample:\nIn a scenario where specialized backup options are required, such as setting\na specific timeout or defining custom behavior, users can use this field\nto specify additional command arguments.\n\n\nNote:\nIt's essential to ensure that the provided arguments are valid and supported\nby the 'barman-cloud-wal-archive' command, to avoid potential errors or unintended\nbehavior during execution."
+
+### fn spec.backup.barmanObjectStore.wal.withArchiveAdditionalCommandArgsMixin
+
+```ts
+withArchiveAdditionalCommandArgsMixin(archiveAdditionalCommandArgs)
+```
+
+"Additional arguments that can be appended to the 'barman-cloud-wal-archive'\ncommand-line invocation. These arguments provide flexibility to customize\nthe WAL archive process further, according to specific requirements or configurations.\n\n\nExample:\nIn a scenario where specialized backup options are required, such as setting\na specific timeout or defining custom behavior, users can use this field\nto specify additional command arguments.\n\n\nNote:\nIt's essential to ensure that the provided arguments are valid and supported\nby the 'barman-cloud-wal-archive' command, to avoid potential errors or unintended\nbehavior during execution."
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.backup.barmanObjectStore.wal.withCompression
 
 ```ts
@@ -3125,6 +3239,24 @@ withMaxParallel(maxParallel)
 ```
 
 "Number of WAL files to be either archived in parallel (when the\nPostgreSQL instance is archiving to a backup object store) or\nrestored in parallel (when a PostgreSQL standby is fetching WAL\nfiles from a recovery object store). If not specified, WAL files\nwill be processed one at a time. It accepts a positive integer as a\nvalue - with 1 being the minimum accepted value."
+
+### fn spec.backup.barmanObjectStore.wal.withRestoreAdditionalCommandArgs
+
+```ts
+withRestoreAdditionalCommandArgs(restoreAdditionalCommandArgs)
+```
+
+"Additional arguments that can be appended to the 'barman-cloud-wal-restore'\ncommand-line invocation. These arguments provide flexibility to customize\nthe WAL restore process further, according to specific requirements or configurations.\n\n\nExample:\nIn a scenario where specialized backup options are required, such as setting\na specific timeout or defining custom behavior, users can use this field\nto specify additional command arguments.\n\n\nNote:\nIt's essential to ensure that the provided arguments are valid and supported\nby the 'barman-cloud-wal-restore' command, to avoid potential errors or unintended\nbehavior during execution."
+
+### fn spec.backup.barmanObjectStore.wal.withRestoreAdditionalCommandArgsMixin
+
+```ts
+withRestoreAdditionalCommandArgsMixin(restoreAdditionalCommandArgs)
+```
+
+"Additional arguments that can be appended to the 'barman-cloud-wal-restore'\ncommand-line invocation. These arguments provide flexibility to customize\nthe WAL restore process further, according to specific requirements or configurations.\n\n\nExample:\nIn a scenario where specialized backup options are required, such as setting\na specific timeout or defining custom behavior, users can use this field\nto specify additional command arguments.\n\n\nNote:\nIt's essential to ensure that the provided arguments are valid and supported\nby the 'barman-cloud-wal-restore' command, to avoid potential errors or unintended\nbehavior during execution."
+
+**Note:** This function appends passed data to existing values
 
 ## obj spec.backup.volumeSnapshot
 
@@ -3316,7 +3448,7 @@ withOwner(owner)
 withPostInitApplicationSQL(postInitApplicationSQL)
 ```
 
-"List of SQL queries to be executed as a superuser in the application\ndatabase right after is created - to be used with extreme care\n(by default empty)"
+"List of SQL queries to be executed as a superuser in the application\ndatabase right after the cluster has been created - to be used with extreme care\n(by default empty)"
 
 ### fn spec.bootstrap.initdb.withPostInitApplicationSQLMixin
 
@@ -3324,7 +3456,7 @@ withPostInitApplicationSQL(postInitApplicationSQL)
 withPostInitApplicationSQLMixin(postInitApplicationSQL)
 ```
 
-"List of SQL queries to be executed as a superuser in the application\ndatabase right after is created - to be used with extreme care\n(by default empty)"
+"List of SQL queries to be executed as a superuser in the application\ndatabase right after the cluster has been created - to be used with extreme care\n(by default empty)"
 
 **Note:** This function appends passed data to existing values
 
@@ -3334,7 +3466,7 @@ withPostInitApplicationSQLMixin(postInitApplicationSQL)
 withPostInitSQL(postInitSQL)
 ```
 
-"List of SQL queries to be executed as a superuser immediately\nafter the cluster has been created - to be used with extreme care\n(by default empty)"
+"List of SQL queries to be executed as a superuser in the `postgres`\ndatabase right after the cluster has been created - to be used with extreme care\n(by default empty)"
 
 ### fn spec.bootstrap.initdb.withPostInitSQLMixin
 
@@ -3342,7 +3474,7 @@ withPostInitSQL(postInitSQL)
 withPostInitSQLMixin(postInitSQL)
 ```
 
-"List of SQL queries to be executed as a superuser immediately\nafter the cluster has been created - to be used with extreme care\n(by default empty)"
+"List of SQL queries to be executed as a superuser in the `postgres`\ndatabase right after the cluster has been created - to be used with extreme care\n(by default empty)"
 
 **Note:** This function appends passed data to existing values
 
@@ -3352,7 +3484,7 @@ withPostInitSQLMixin(postInitSQL)
 withPostInitTemplateSQL(postInitTemplateSQL)
 ```
 
-"List of SQL queries to be executed as a superuser in the `template1`\nafter the cluster has been created - to be used with extreme care\n(by default empty)"
+"List of SQL queries to be executed as a superuser in the `template1`\ndatabase right after the cluster has been created - to be used with extreme care\n(by default empty)"
 
 ### fn spec.bootstrap.initdb.withPostInitTemplateSQLMixin
 
@@ -3360,7 +3492,7 @@ withPostInitTemplateSQL(postInitTemplateSQL)
 withPostInitTemplateSQLMixin(postInitTemplateSQL)
 ```
 
-"List of SQL queries to be executed as a superuser in the `template1`\nafter the cluster has been created - to be used with extreme care\n(by default empty)"
+"List of SQL queries to be executed as a superuser in the `template1`\ndatabase right after the cluster has been created - to be used with extreme care\n(by default empty)"
 
 **Note:** This function appends passed data to existing values
 
@@ -3460,7 +3592,7 @@ withExternalCluster(externalCluster)
 
 ## obj spec.bootstrap.initdb.postInitApplicationSQLRefs
 
-"PostInitApplicationSQLRefs points references to ConfigMaps or Secrets which\ncontain SQL files, the general implementation order to these references is\nfrom all Secrets to all ConfigMaps, and inside Secrets or ConfigMaps,\nthe implementation order is same as the order of each array\n(by default empty)"
+"List of references to ConfigMaps or Secrets containing SQL files\nto be executed as a superuser in the application database right after\nthe cluster has been created. The references are processed in a specific order:\nfirst, all Secrets are processed, followed by all ConfigMaps.\nWithin each group, the processing order follows the sequence specified\nin their respective arrays.\n(by default empty)"
 
 ### fn spec.bootstrap.initdb.postInitApplicationSQLRefs.withConfigMapRefs
 
@@ -3531,6 +3663,166 @@ withKey(key)
 "The key to select"
 
 ### fn spec.bootstrap.initdb.postInitApplicationSQLRefs.secretRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent."
+
+## obj spec.bootstrap.initdb.postInitSQLRefs
+
+"List of references to ConfigMaps or Secrets containing SQL files\nto be executed as a superuser in the `postgres` database right after\nthe cluster has been created. The references are processed in a specific order:\nfirst, all Secrets are processed, followed by all ConfigMaps.\nWithin each group, the processing order follows the sequence specified\nin their respective arrays.\n(by default empty)"
+
+### fn spec.bootstrap.initdb.postInitSQLRefs.withConfigMapRefs
+
+```ts
+withConfigMapRefs(configMapRefs)
+```
+
+"ConfigMapRefs holds a list of references to ConfigMaps"
+
+### fn spec.bootstrap.initdb.postInitSQLRefs.withConfigMapRefsMixin
+
+```ts
+withConfigMapRefsMixin(configMapRefs)
+```
+
+"ConfigMapRefs holds a list of references to ConfigMaps"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.bootstrap.initdb.postInitSQLRefs.withSecretRefs
+
+```ts
+withSecretRefs(secretRefs)
+```
+
+"SecretRefs holds a list of references to Secrets"
+
+### fn spec.bootstrap.initdb.postInitSQLRefs.withSecretRefsMixin
+
+```ts
+withSecretRefsMixin(secretRefs)
+```
+
+"SecretRefs holds a list of references to Secrets"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.bootstrap.initdb.postInitSQLRefs.configMapRefs
+
+"ConfigMapRefs holds a list of references to ConfigMaps"
+
+### fn spec.bootstrap.initdb.postInitSQLRefs.configMapRefs.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select"
+
+### fn spec.bootstrap.initdb.postInitSQLRefs.configMapRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent."
+
+## obj spec.bootstrap.initdb.postInitSQLRefs.secretRefs
+
+"SecretRefs holds a list of references to Secrets"
+
+### fn spec.bootstrap.initdb.postInitSQLRefs.secretRefs.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select"
+
+### fn spec.bootstrap.initdb.postInitSQLRefs.secretRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent."
+
+## obj spec.bootstrap.initdb.postInitTemplateSQLRefs
+
+"List of references to ConfigMaps or Secrets containing SQL files\nto be executed as a superuser in the `template1` database right after\nthe cluster has been created. The references are processed in a specific order:\nfirst, all Secrets are processed, followed by all ConfigMaps.\nWithin each group, the processing order follows the sequence specified\nin their respective arrays.\n(by default empty)"
+
+### fn spec.bootstrap.initdb.postInitTemplateSQLRefs.withConfigMapRefs
+
+```ts
+withConfigMapRefs(configMapRefs)
+```
+
+"ConfigMapRefs holds a list of references to ConfigMaps"
+
+### fn spec.bootstrap.initdb.postInitTemplateSQLRefs.withConfigMapRefsMixin
+
+```ts
+withConfigMapRefsMixin(configMapRefs)
+```
+
+"ConfigMapRefs holds a list of references to ConfigMaps"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.bootstrap.initdb.postInitTemplateSQLRefs.withSecretRefs
+
+```ts
+withSecretRefs(secretRefs)
+```
+
+"SecretRefs holds a list of references to Secrets"
+
+### fn spec.bootstrap.initdb.postInitTemplateSQLRefs.withSecretRefsMixin
+
+```ts
+withSecretRefsMixin(secretRefs)
+```
+
+"SecretRefs holds a list of references to Secrets"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.bootstrap.initdb.postInitTemplateSQLRefs.configMapRefs
+
+"ConfigMapRefs holds a list of references to ConfigMaps"
+
+### fn spec.bootstrap.initdb.postInitTemplateSQLRefs.configMapRefs.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select"
+
+### fn spec.bootstrap.initdb.postInitTemplateSQLRefs.configMapRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent."
+
+## obj spec.bootstrap.initdb.postInitTemplateSQLRefs.secretRefs
+
+"SecretRefs holds a list of references to Secrets"
+
+### fn spec.bootstrap.initdb.postInitTemplateSQLRefs.secretRefs.withKey
+
+```ts
+withKey(key)
+```
+
+"The key to select"
+
+### fn spec.bootstrap.initdb.postInitTemplateSQLRefs.secretRefs.withName
 
 ```ts
 withName(name)
@@ -4712,6 +5004,24 @@ withName(name)
 
 "The configuration for the backup of the WAL stream.\nWhen not defined, WAL files will be stored uncompressed and may be\nunencrypted in the object store, according to the bucket default policy."
 
+### fn spec.externalClusters.barmanObjectStore.wal.withArchiveAdditionalCommandArgs
+
+```ts
+withArchiveAdditionalCommandArgs(archiveAdditionalCommandArgs)
+```
+
+"Additional arguments that can be appended to the 'barman-cloud-wal-archive'\ncommand-line invocation. These arguments provide flexibility to customize\nthe WAL archive process further, according to specific requirements or configurations.\n\n\nExample:\nIn a scenario where specialized backup options are required, such as setting\na specific timeout or defining custom behavior, users can use this field\nto specify additional command arguments.\n\n\nNote:\nIt's essential to ensure that the provided arguments are valid and supported\nby the 'barman-cloud-wal-archive' command, to avoid potential errors or unintended\nbehavior during execution."
+
+### fn spec.externalClusters.barmanObjectStore.wal.withArchiveAdditionalCommandArgsMixin
+
+```ts
+withArchiveAdditionalCommandArgsMixin(archiveAdditionalCommandArgs)
+```
+
+"Additional arguments that can be appended to the 'barman-cloud-wal-archive'\ncommand-line invocation. These arguments provide flexibility to customize\nthe WAL archive process further, according to specific requirements or configurations.\n\n\nExample:\nIn a scenario where specialized backup options are required, such as setting\na specific timeout or defining custom behavior, users can use this field\nto specify additional command arguments.\n\n\nNote:\nIt's essential to ensure that the provided arguments are valid and supported\nby the 'barman-cloud-wal-archive' command, to avoid potential errors or unintended\nbehavior during execution."
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.externalClusters.barmanObjectStore.wal.withCompression
 
 ```ts
@@ -4735,6 +5045,24 @@ withMaxParallel(maxParallel)
 ```
 
 "Number of WAL files to be either archived in parallel (when the\nPostgreSQL instance is archiving to a backup object store) or\nrestored in parallel (when a PostgreSQL standby is fetching WAL\nfiles from a recovery object store). If not specified, WAL files\nwill be processed one at a time. It accepts a positive integer as a\nvalue - with 1 being the minimum accepted value."
+
+### fn spec.externalClusters.barmanObjectStore.wal.withRestoreAdditionalCommandArgs
+
+```ts
+withRestoreAdditionalCommandArgs(restoreAdditionalCommandArgs)
+```
+
+"Additional arguments that can be appended to the 'barman-cloud-wal-restore'\ncommand-line invocation. These arguments provide flexibility to customize\nthe WAL restore process further, according to specific requirements or configurations.\n\n\nExample:\nIn a scenario where specialized backup options are required, such as setting\na specific timeout or defining custom behavior, users can use this field\nto specify additional command arguments.\n\n\nNote:\nIt's essential to ensure that the provided arguments are valid and supported\nby the 'barman-cloud-wal-restore' command, to avoid potential errors or unintended\nbehavior during execution."
+
+### fn spec.externalClusters.barmanObjectStore.wal.withRestoreAdditionalCommandArgsMixin
+
+```ts
+withRestoreAdditionalCommandArgsMixin(restoreAdditionalCommandArgs)
+```
+
+"Additional arguments that can be appended to the 'barman-cloud-wal-restore'\ncommand-line invocation. These arguments provide flexibility to customize\nthe WAL restore process further, according to specific requirements or configurations.\n\n\nExample:\nIn a scenario where specialized backup options are required, such as setting\na specific timeout or defining custom behavior, users can use this field\nto specify additional command arguments.\n\n\nNote:\nIt's essential to ensure that the provided arguments are valid and supported\nby the 'barman-cloud-wal-restore' command, to avoid potential errors or unintended\nbehavior during execution."
+
+**Note:** This function appends passed data to existing values
 
 ## obj spec.externalClusters.password
 
@@ -5096,6 +5424,402 @@ withName(name)
 
 "Name of the referent."
 
+## obj spec.managed.services
+
+"Services roles managed by the `Cluster`"
+
+### fn spec.managed.services.withAdditional
+
+```ts
+withAdditional(additional)
+```
+
+"Additional is a list of additional managed services specified by the user."
+
+### fn spec.managed.services.withAdditionalMixin
+
+```ts
+withAdditionalMixin(additional)
+```
+
+"Additional is a list of additional managed services specified by the user."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.managed.services.withDisabledDefaultServices
+
+```ts
+withDisabledDefaultServices(disabledDefaultServices)
+```
+
+"DisabledDefaultServices is a list of service types that are disabled by default.\nValid values are \"r\", and \"ro\", representing read, and read-only services."
+
+### fn spec.managed.services.withDisabledDefaultServicesMixin
+
+```ts
+withDisabledDefaultServicesMixin(disabledDefaultServices)
+```
+
+"DisabledDefaultServices is a list of service types that are disabled by default.\nValid values are \"r\", and \"ro\", representing read, and read-only services."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.managed.services.additional
+
+"Additional is a list of additional managed services specified by the user."
+
+### fn spec.managed.services.additional.withSelectorType
+
+```ts
+withSelectorType(selectorType)
+```
+
+"SelectorType specifies the type of selectors that the service will have.\nValid values are \"rw\", \"r\", and \"ro\", representing read-write, read, and read-only services."
+
+### fn spec.managed.services.additional.withUpdateStrategy
+
+```ts
+withUpdateStrategy(updateStrategy)
+```
+
+"UpdateStrategy describes how the service differences should be reconciled"
+
+## obj spec.managed.services.additional.serviceTemplate
+
+"ServiceTemplate is the template specification for the service."
+
+## obj spec.managed.services.additional.serviceTemplate.metadata
+
+"Standard object's metadata.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata"
+
+### fn spec.managed.services.additional.serviceTemplate.metadata.withAnnotations
+
+```ts
+withAnnotations(annotations)
+```
+
+"Annotations is an unstructured key value map stored with a resource that may be\nset by external tools to store and retrieve arbitrary metadata. They are not\nqueryable and should be preserved when modifying objects.\nMore info: http://kubernetes.io/docs/user-guide/annotations"
+
+### fn spec.managed.services.additional.serviceTemplate.metadata.withAnnotationsMixin
+
+```ts
+withAnnotationsMixin(annotations)
+```
+
+"Annotations is an unstructured key value map stored with a resource that may be\nset by external tools to store and retrieve arbitrary metadata. They are not\nqueryable and should be preserved when modifying objects.\nMore info: http://kubernetes.io/docs/user-guide/annotations"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.managed.services.additional.serviceTemplate.metadata.withLabels
+
+```ts
+withLabels(labels)
+```
+
+"Map of string keys and values that can be used to organize and categorize\n(scope and select) objects. May match selectors of replication controllers\nand services.\nMore info: http://kubernetes.io/docs/user-guide/labels"
+
+### fn spec.managed.services.additional.serviceTemplate.metadata.withLabelsMixin
+
+```ts
+withLabelsMixin(labels)
+```
+
+"Map of string keys and values that can be used to organize and categorize\n(scope and select) objects. May match selectors of replication controllers\nand services.\nMore info: http://kubernetes.io/docs/user-guide/labels"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.managed.services.additional.serviceTemplate.metadata.withName
+
+```ts
+withName(name)
+```
+
+"The name of the resource. Only supported for certain types"
+
+## obj spec.managed.services.additional.serviceTemplate.spec
+
+"Specification of the desired behavior of the service.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withAllocateLoadBalancerNodePorts
+
+```ts
+withAllocateLoadBalancerNodePorts(allocateLoadBalancerNodePorts)
+```
+
+"allocateLoadBalancerNodePorts defines if NodePorts will be automatically\nallocated for services with type LoadBalancer.  Default is \"true\". It\nmay be set to \"false\" if the cluster load-balancer does not rely on\nNodePorts.  If the caller requests specific NodePorts (by specifying a\nvalue), those requests will be respected, regardless of this field.\nThis field may only be set for services with type LoadBalancer and will\nbe cleared if the type is changed to any other type."
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withClusterIP
+
+```ts
+withClusterIP(clusterIP)
+```
+
+"clusterIP is the IP address of the service and is usually assigned\nrandomly. If an address is specified manually, is in-range (as per\nsystem configuration), and is not in use, it will be allocated to the\nservice; otherwise creation of the service will fail. This field may not\nbe changed through updates unless the type field is also being changed\nto ExternalName (which requires this field to be blank) or the type\nfield is being changed from ExternalName (in which case this field may\noptionally be specified, as describe above).  Valid values are \"None\",\nempty string (\"\"), or a valid IP address. Setting this to \"None\" makes a\n\"headless service\" (no virtual IP), which is useful when direct endpoint\nconnections are preferred and proxying is not required.  Only applies to\ntypes ClusterIP, NodePort, and LoadBalancer. If this field is specified\nwhen creating a Service of type ExternalName, creation will fail. This\nfield will be wiped when updating a Service to type ExternalName.\nMore info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies"
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withClusterIPs
+
+```ts
+withClusterIPs(clusterIPs)
+```
+
+"ClusterIPs is a list of IP addresses assigned to this service, and are\nusually assigned randomly.  If an address is specified manually, is\nin-range (as per system configuration), and is not in use, it will be\nallocated to the service; otherwise creation of the service will fail.\nThis field may not be changed through updates unless the type field is\nalso being changed to ExternalName (which requires this field to be\nempty) or the type field is being changed from ExternalName (in which\ncase this field may optionally be specified, as describe above).  Valid\nvalues are \"None\", empty string (\"\"), or a valid IP address.  Setting\nthis to \"None\" makes a \"headless service\" (no virtual IP), which is\nuseful when direct endpoint connections are preferred and proxying is\nnot required.  Only applies to types ClusterIP, NodePort, and\nLoadBalancer. If this field is specified when creating a Service of type\nExternalName, creation will fail. This field will be wiped when updating\na Service to type ExternalName.  If this field is not specified, it will\nbe initialized from the clusterIP field.  If this field is specified,\nclients must ensure that clusterIPs[0] and clusterIP have the same\nvalue.\n\n\nThis field may hold a maximum of two entries (dual-stack IPs, in either order).\nThese IPs must correspond to the values of the ipFamilies field. Both\nclusterIPs and ipFamilies are governed by the ipFamilyPolicy field.\nMore info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies"
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withClusterIPsMixin
+
+```ts
+withClusterIPsMixin(clusterIPs)
+```
+
+"ClusterIPs is a list of IP addresses assigned to this service, and are\nusually assigned randomly.  If an address is specified manually, is\nin-range (as per system configuration), and is not in use, it will be\nallocated to the service; otherwise creation of the service will fail.\nThis field may not be changed through updates unless the type field is\nalso being changed to ExternalName (which requires this field to be\nempty) or the type field is being changed from ExternalName (in which\ncase this field may optionally be specified, as describe above).  Valid\nvalues are \"None\", empty string (\"\"), or a valid IP address.  Setting\nthis to \"None\" makes a \"headless service\" (no virtual IP), which is\nuseful when direct endpoint connections are preferred and proxying is\nnot required.  Only applies to types ClusterIP, NodePort, and\nLoadBalancer. If this field is specified when creating a Service of type\nExternalName, creation will fail. This field will be wiped when updating\na Service to type ExternalName.  If this field is not specified, it will\nbe initialized from the clusterIP field.  If this field is specified,\nclients must ensure that clusterIPs[0] and clusterIP have the same\nvalue.\n\n\nThis field may hold a maximum of two entries (dual-stack IPs, in either order).\nThese IPs must correspond to the values of the ipFamilies field. Both\nclusterIPs and ipFamilies are governed by the ipFamilyPolicy field.\nMore info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withExternalIPs
+
+```ts
+withExternalIPs(externalIPs)
+```
+
+"externalIPs is a list of IP addresses for which nodes in the cluster\nwill also accept traffic for this service.  These IPs are not managed by\nKubernetes.  The user is responsible for ensuring that traffic arrives\nat a node with this IP.  A common example is external load-balancers\nthat are not part of the Kubernetes system."
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withExternalIPsMixin
+
+```ts
+withExternalIPsMixin(externalIPs)
+```
+
+"externalIPs is a list of IP addresses for which nodes in the cluster\nwill also accept traffic for this service.  These IPs are not managed by\nKubernetes.  The user is responsible for ensuring that traffic arrives\nat a node with this IP.  A common example is external load-balancers\nthat are not part of the Kubernetes system."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withExternalName
+
+```ts
+withExternalName(externalName)
+```
+
+"externalName is the external reference that discovery mechanisms will\nreturn as an alias for this service (e.g. a DNS CNAME record). No\nproxying will be involved.  Must be a lowercase RFC-1123 hostname\n(https://tools.ietf.org/html/rfc1123) and requires `type` to be \"ExternalName\"."
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withExternalTrafficPolicy
+
+```ts
+withExternalTrafficPolicy(externalTrafficPolicy)
+```
+
+"externalTrafficPolicy describes how nodes distribute service traffic they\nreceive on one of the Service's \"externally-facing\" addresses (NodePorts,\nExternalIPs, and LoadBalancer IPs). If set to \"Local\", the proxy will configure\nthe service in a way that assumes that external load balancers will take care\nof balancing the service traffic between nodes, and so each node will deliver\ntraffic only to the node-local endpoints of the service, without masquerading\nthe client source IP. (Traffic mistakenly sent to a node with no endpoints will\nbe dropped.) The default value, \"Cluster\", uses the standard behavior of\nrouting to all endpoints evenly (possibly modified by topology and other\nfeatures). Note that traffic sent to an External IP or LoadBalancer IP from\nwithin the cluster will always get \"Cluster\" semantics, but clients sending to\na NodePort from within the cluster may need to take traffic policy into account\nwhen picking a node."
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withHealthCheckNodePort
+
+```ts
+withHealthCheckNodePort(healthCheckNodePort)
+```
+
+"healthCheckNodePort specifies the healthcheck nodePort for the service.\nThis only applies when type is set to LoadBalancer and\nexternalTrafficPolicy is set to Local. If a value is specified, is\nin-range, and is not in use, it will be used.  If not specified, a value\nwill be automatically allocated.  External systems (e.g. load-balancers)\ncan use this port to determine if a given node holds endpoints for this\nservice or not.  If this field is specified when creating a Service\nwhich does not need it, creation will fail. This field will be wiped\nwhen updating a Service to no longer need it (e.g. changing type).\nThis field cannot be updated once set."
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withInternalTrafficPolicy
+
+```ts
+withInternalTrafficPolicy(internalTrafficPolicy)
+```
+
+"InternalTrafficPolicy describes how nodes distribute service traffic they\nreceive on the ClusterIP. If set to \"Local\", the proxy will assume that pods\nonly want to talk to endpoints of the service on the same node as the pod,\ndropping the traffic if there are no local endpoints. The default value,\n\"Cluster\", uses the standard behavior of routing to all endpoints evenly\n(possibly modified by topology and other features)."
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withIpFamilies
+
+```ts
+withIpFamilies(ipFamilies)
+```
+
+"IPFamilies is a list of IP families (e.g. IPv4, IPv6) assigned to this\nservice. This field is usually assigned automatically based on cluster\nconfiguration and the ipFamilyPolicy field. If this field is specified\nmanually, the requested family is available in the cluster,\nand ipFamilyPolicy allows it, it will be used; otherwise creation of\nthe service will fail. This field is conditionally mutable: it allows\nfor adding or removing a secondary IP family, but it does not allow\nchanging the primary IP family of the Service. Valid values are \"IPv4\"\nand \"IPv6\".  This field only applies to Services of types ClusterIP,\nNodePort, and LoadBalancer, and does apply to \"headless\" services.\nThis field will be wiped when updating a Service to type ExternalName.\n\n\nThis field may hold a maximum of two entries (dual-stack families, in\neither order).  These families must correspond to the values of the\nclusterIPs field, if specified. Both clusterIPs and ipFamilies are\ngoverned by the ipFamilyPolicy field."
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withIpFamiliesMixin
+
+```ts
+withIpFamiliesMixin(ipFamilies)
+```
+
+"IPFamilies is a list of IP families (e.g. IPv4, IPv6) assigned to this\nservice. This field is usually assigned automatically based on cluster\nconfiguration and the ipFamilyPolicy field. If this field is specified\nmanually, the requested family is available in the cluster,\nand ipFamilyPolicy allows it, it will be used; otherwise creation of\nthe service will fail. This field is conditionally mutable: it allows\nfor adding or removing a secondary IP family, but it does not allow\nchanging the primary IP family of the Service. Valid values are \"IPv4\"\nand \"IPv6\".  This field only applies to Services of types ClusterIP,\nNodePort, and LoadBalancer, and does apply to \"headless\" services.\nThis field will be wiped when updating a Service to type ExternalName.\n\n\nThis field may hold a maximum of two entries (dual-stack families, in\neither order).  These families must correspond to the values of the\nclusterIPs field, if specified. Both clusterIPs and ipFamilies are\ngoverned by the ipFamilyPolicy field."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withIpFamilyPolicy
+
+```ts
+withIpFamilyPolicy(ipFamilyPolicy)
+```
+
+"IPFamilyPolicy represents the dual-stack-ness requested or required by\nthis Service. If there is no value provided, then this field will be set\nto SingleStack. Services can be \"SingleStack\" (a single IP family),\n\"PreferDualStack\" (two IP families on dual-stack configured clusters or\na single IP family on single-stack clusters), or \"RequireDualStack\"\n(two IP families on dual-stack configured clusters, otherwise fail). The\nipFamilies and clusterIPs fields depend on the value of this field. This\nfield will be wiped when updating a service to type ExternalName."
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withLoadBalancerClass
+
+```ts
+withLoadBalancerClass(loadBalancerClass)
+```
+
+"loadBalancerClass is the class of the load balancer implementation this Service belongs to.\nIf specified, the value of this field must be a label-style identifier, with an optional prefix,\ne.g. \"internal-vip\" or \"example.com/internal-vip\". Unprefixed names are reserved for end-users.\nThis field can only be set when the Service type is 'LoadBalancer'. If not set, the default load\nbalancer implementation is used, today this is typically done through the cloud provider integration,\nbut should apply for any default implementation. If set, it is assumed that a load balancer\nimplementation is watching for Services with a matching class. Any default load balancer\nimplementation (e.g. cloud providers) should ignore Services that set this field.\nThis field can only be set when creating or updating a Service to type 'LoadBalancer'.\nOnce set, it can not be changed. This field will be wiped when a service is updated to a non 'LoadBalancer' type."
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withLoadBalancerIP
+
+```ts
+withLoadBalancerIP(loadBalancerIP)
+```
+
+"Only applies to Service Type: LoadBalancer.\nThis feature depends on whether the underlying cloud-provider supports specifying\nthe loadBalancerIP when a load balancer is created.\nThis field will be ignored if the cloud-provider does not support the feature.\nDeprecated: This field was under-specified and its meaning varies across implementations.\nUsing it is non-portable and it may not support dual-stack.\nUsers are encouraged to use implementation-specific annotations when available."
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withLoadBalancerSourceRanges
+
+```ts
+withLoadBalancerSourceRanges(loadBalancerSourceRanges)
+```
+
+"If specified and supported by the platform, this will restrict traffic through the cloud-provider\nload-balancer will be restricted to the specified client IPs. This field will be ignored if the\ncloud-provider does not support the feature.\"\nMore info: https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/"
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withLoadBalancerSourceRangesMixin
+
+```ts
+withLoadBalancerSourceRangesMixin(loadBalancerSourceRanges)
+```
+
+"If specified and supported by the platform, this will restrict traffic through the cloud-provider\nload-balancer will be restricted to the specified client IPs. This field will be ignored if the\ncloud-provider does not support the feature.\"\nMore info: https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withPorts
+
+```ts
+withPorts(ports)
+```
+
+"The list of ports that are exposed by this service.\nMore info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies"
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withPortsMixin
+
+```ts
+withPortsMixin(ports)
+```
+
+"The list of ports that are exposed by this service.\nMore info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withPublishNotReadyAddresses
+
+```ts
+withPublishNotReadyAddresses(publishNotReadyAddresses)
+```
+
+"publishNotReadyAddresses indicates that any agent which deals with endpoints for this\nService should disregard any indications of ready/not-ready.\nThe primary use case for setting this field is for a StatefulSet's Headless Service to\npropagate SRV DNS records for its Pods for the purpose of peer discovery.\nThe Kubernetes controllers that generate Endpoints and EndpointSlice resources for\nServices interpret this to mean that all endpoints are considered \"ready\" even if the\nPods themselves are not. Agents which consume only Kubernetes generated endpoints\nthrough the Endpoints or EndpointSlice resources can safely assume this behavior."
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withSelector
+
+```ts
+withSelector(selector)
+```
+
+"Route service traffic to pods with label keys and values matching this\nselector. If empty or not present, the service is assumed to have an\nexternal process managing its endpoints, which Kubernetes will not\nmodify. Only applies to types ClusterIP, NodePort, and LoadBalancer.\nIgnored if type is ExternalName.\nMore info: https://kubernetes.io/docs/concepts/services-networking/service/"
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withSelectorMixin
+
+```ts
+withSelectorMixin(selector)
+```
+
+"Route service traffic to pods with label keys and values matching this\nselector. If empty or not present, the service is assumed to have an\nexternal process managing its endpoints, which Kubernetes will not\nmodify. Only applies to types ClusterIP, NodePort, and LoadBalancer.\nIgnored if type is ExternalName.\nMore info: https://kubernetes.io/docs/concepts/services-networking/service/"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withSessionAffinity
+
+```ts
+withSessionAffinity(sessionAffinity)
+```
+
+"Supports \"ClientIP\" and \"None\". Used to maintain session affinity.\nEnable client IP based session affinity.\nMust be ClientIP or None.\nDefaults to None.\nMore info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies"
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withTrafficDistribution
+
+```ts
+withTrafficDistribution(trafficDistribution)
+```
+
+"TrafficDistribution offers a way to express preferences for how traffic is\ndistributed to Service endpoints. Implementations can use this field as a\nhint, but are not required to guarantee strict adherence. If the field is\nnot set, the implementation will apply its default routing strategy. If set\nto \"PreferClose\", implementations should prioritize endpoints that are\ntopologically close (e.g., same zone).\nThis is an alpha field and requires enabling ServiceTrafficDistribution feature."
+
+### fn spec.managed.services.additional.serviceTemplate.spec.withType
+
+```ts
+withType(type)
+```
+
+"type determines how the Service is exposed. Defaults to ClusterIP. Valid\noptions are ExternalName, ClusterIP, NodePort, and LoadBalancer.\n\"ClusterIP\" allocates a cluster-internal IP address for load-balancing\nto endpoints. Endpoints are determined by the selector or if that is not\nspecified, by manual construction of an Endpoints object or\nEndpointSlice objects. If clusterIP is \"None\", no virtual IP is\nallocated and the endpoints are published as a set of endpoints rather\nthan a virtual IP.\n\"NodePort\" builds on ClusterIP and allocates a port on every node which\nroutes to the same endpoints as the clusterIP.\n\"LoadBalancer\" builds on NodePort and creates an external load-balancer\n(if supported in the current cloud) which routes to the same endpoints\nas the clusterIP.\n\"ExternalName\" aliases this service to the specified externalName.\nSeveral other fields do not apply to ExternalName services.\nMore info: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types"
+
+## obj spec.managed.services.additional.serviceTemplate.spec.ports
+
+"The list of ports that are exposed by this service.\nMore info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies"
+
+### fn spec.managed.services.additional.serviceTemplate.spec.ports.withAppProtocol
+
+```ts
+withAppProtocol(appProtocol)
+```
+
+"The application protocol for this port.\nThis is used as a hint for implementations to offer richer behavior for protocols that they understand.\nThis field follows standard Kubernetes label syntax.\nValid values are either:\n\n\n* Un-prefixed protocol names - reserved for IANA standard service names (as per\nRFC-6335 and https://www.iana.org/assignments/service-names).\n\n\n* Kubernetes-defined prefixed names:\n  * 'kubernetes.io/h2c' - HTTP/2 prior knowledge over cleartext as described in https://www.rfc-editor.org/rfc/rfc9113.html#name-starting-http-2-with-prior-\n  * 'kubernetes.io/ws'  - WebSocket over cleartext as described in https://www.rfc-editor.org/rfc/rfc6455\n  * 'kubernetes.io/wss' - WebSocket over TLS as described in https://www.rfc-editor.org/rfc/rfc6455\n\n\n* Other protocols should use implementation-defined prefixed names such as\nmycompany.com/my-custom-protocol."
+
+### fn spec.managed.services.additional.serviceTemplate.spec.ports.withName
+
+```ts
+withName(name)
+```
+
+"The name of this port within the service. This must be a DNS_LABEL.\nAll ports within a ServiceSpec must have unique names. When considering\nthe endpoints for a Service, this must match the 'name' field in the\nEndpointPort.\nOptional if only one ServicePort is defined on this service."
+
+### fn spec.managed.services.additional.serviceTemplate.spec.ports.withNodePort
+
+```ts
+withNodePort(nodePort)
+```
+
+"The port on each node on which this service is exposed when type is\nNodePort or LoadBalancer.  Usually assigned by the system. If a value is\nspecified, in-range, and not in use it will be used, otherwise the\noperation will fail.  If not specified, a port will be allocated if this\nService requires one.  If this field is specified when creating a\nService which does not need it, creation will fail. This field will be\nwiped when updating a Service to no longer need it (e.g. changing type\nfrom NodePort to ClusterIP).\nMore info: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport"
+
+### fn spec.managed.services.additional.serviceTemplate.spec.ports.withPort
+
+```ts
+withPort(port)
+```
+
+"The port that will be exposed by this service."
+
+### fn spec.managed.services.additional.serviceTemplate.spec.ports.withProtocol
+
+```ts
+withProtocol(protocol)
+```
+
+"The IP protocol for this port. Supports \"TCP\", \"UDP\", and \"SCTP\".\nDefault is TCP."
+
+### fn spec.managed.services.additional.serviceTemplate.spec.ports.withTargetPort
+
+```ts
+withTargetPort(targetPort)
+```
+
+"Number or name of the port to access on the pods targeted by the service.\nNumber must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.\nIf this is a string, it will be looked up as a named port in the\ntarget Pod's container ports. If this is not specified, the value\nof the 'port' field is used (an identity map).\nThis field is ignored for services with clusterIP=None, and should be\nomitted or set equal to the 'port' field.\nMore info: https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service"
+
+## obj spec.managed.services.additional.serviceTemplate.spec.sessionAffinityConfig
+
+"sessionAffinityConfig contains the configurations of session affinity."
+
+## obj spec.managed.services.additional.serviceTemplate.spec.sessionAffinityConfig.clientIP
+
+"clientIP contains the configurations of Client IP based session affinity."
+
+### fn spec.managed.services.additional.serviceTemplate.spec.sessionAffinityConfig.clientIP.withTimeoutSeconds
+
+```ts
+withTimeoutSeconds(timeoutSeconds)
+```
+
+"timeoutSeconds specifies the seconds of ClientIP type session sticky time.\nThe value must be >0 && <=86400(for 1 day) if ServiceAffinity == \"ClientIP\".\nDefault value is 10800(for 3 hours)."
+
 ## obj spec.monitoring
 
 "The configuration of the monitoring infrastructure of this cluster"
@@ -5367,6 +6091,18 @@ withTargetLabel(targetLabel)
 ```
 
 "Label to which the resulting string is written in a replacement.\n\n\nIt is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`,\n`KeepEqual` and `DropEqual` actions.\n\n\nRegex capture groups are available."
+
+## obj spec.monitoring.tls
+
+"Configure TLS communication for the metrics endpoint.\nChanging tls.enabled option will force a rollout of all instances."
+
+### fn spec.monitoring.tls.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+"Enable TLS for the monitoring endpoint.\nChanging this option will force a rollout of all instances."
 
 ## obj spec.nodeMaintenanceWindow
 
@@ -5657,6 +6393,70 @@ withNodeLabelsAntiAffinityMixin(nodeLabelsAntiAffinity)
 ```
 
 "A list of node labels values to extract and compare to evaluate if the pods reside in the same topology or not"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.postgresql.synchronous
+
+"Configuration of the PostgreSQL synchronous replication feature"
+
+### fn spec.postgresql.synchronous.withMaxStandbyNamesFromCluster
+
+```ts
+withMaxStandbyNamesFromCluster(maxStandbyNamesFromCluster)
+```
+
+"Specifies the maximum number of local cluster pods that can be\nautomatically included in the `synchronous_standby_names` option in\nPostgreSQL."
+
+### fn spec.postgresql.synchronous.withMethod
+
+```ts
+withMethod(method)
+```
+
+"Method to select synchronous replication standbys from the listed\nservers, accepting 'any' (quorum-based synchronous replication) or\n'first' (priority-based synchronous replication) as values."
+
+### fn spec.postgresql.synchronous.withNumber
+
+```ts
+withNumber(number)
+```
+
+"Specifies the number of synchronous standby servers that\ntransactions must wait for responses from."
+
+### fn spec.postgresql.synchronous.withStandbyNamesPost
+
+```ts
+withStandbyNamesPost(standbyNamesPost)
+```
+
+"A user-defined list of application names to be added to\n`synchronous_standby_names` after local cluster pods (the order is\nonly useful for priority-based synchronous replication)."
+
+### fn spec.postgresql.synchronous.withStandbyNamesPostMixin
+
+```ts
+withStandbyNamesPostMixin(standbyNamesPost)
+```
+
+"A user-defined list of application names to be added to\n`synchronous_standby_names` after local cluster pods (the order is\nonly useful for priority-based synchronous replication)."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.postgresql.synchronous.withStandbyNamesPre
+
+```ts
+withStandbyNamesPre(standbyNamesPre)
+```
+
+"A user-defined list of application names to be added to\n`synchronous_standby_names` before local cluster pods (the order is\nonly useful for priority-based synchronous replication)."
+
+### fn spec.postgresql.synchronous.withStandbyNamesPreMixin
+
+```ts
+withStandbyNamesPreMixin(standbyNamesPre)
+```
+
+"A user-defined list of application names to be added to\n`synchronous_standby_names` before local cluster pods (the order is\nonly useful for priority-based synchronous replication)."
 
 **Note:** This function appends passed data to existing values
 
@@ -6070,6 +6870,38 @@ withEnabled(enabled)
 
 "If replica mode is enabled, this cluster will be a replica of an\nexisting cluster. Replica cluster can be created from a recovery\nobject store or via streaming through pg_basebackup.\nRefer to the Replica clusters page of the documentation for more information."
 
+### fn spec.replica.withMinApplyDelay
+
+```ts
+withMinApplyDelay(minApplyDelay)
+```
+
+"When replica mode is enabled, this parameter allows you to replay\ntransactions only when the system time is at least the configured\ntime past the commit time. This provides an opportunity to correct\ndata loss errors. Note that when this parameter is set, a promotion\ntoken cannot be used."
+
+### fn spec.replica.withPrimary
+
+```ts
+withPrimary(primary)
+```
+
+"Primary defines which Cluster is defined to be the primary in the distributed PostgreSQL cluster, based on the\ntopology specified in externalClusters"
+
+### fn spec.replica.withPromotionToken
+
+```ts
+withPromotionToken(promotionToken)
+```
+
+"A demotion token generated by an external cluster used to\ncheck if the promotion requirements are met."
+
+### fn spec.replica.withSelf
+
+```ts
+withSelf(Self)
+```
+
+"Self defines the name of this cluster. It is used to determine if this is a primary\nor a replica cluster, comparing it with `primary`"
+
 ### fn spec.replica.withSource
 
 ```ts
@@ -6273,6 +7105,14 @@ withLabelsMixin(labels)
 "Map of string keys and values that can be used to organize and categorize\n(scope and select) objects. May match selectors of replication controllers\nand services.\nMore info: http://kubernetes.io/docs/user-guide/labels"
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.serviceAccountTemplate.metadata.withName
+
+```ts
+withName(name)
+```
+
+"The name of the resource. Only supported for certain types"
 
 ## obj spec.storage
 
