@@ -5,111 +5,75 @@
          <lastmod>2024-10-07</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.21.5/</loc>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.4/</loc>
          <lastmod>2024-10-07</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.21.5/postgresql/</loc>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.4/postgresql/</loc>
          <lastmod>2024-10-07</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.21.5/postgresql/v1/</loc>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.4/postgresql/v1/</loc>
          <lastmod>2024-10-07</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.21.5/postgresql/v1/backup/</loc>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.4/postgresql/v1/backup/</loc>
          <lastmod>2024-10-07</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.21.5/postgresql/v1/cluster/</loc>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.4/postgresql/v1/cluster/</loc>
          <lastmod>2024-10-07</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.21.5/postgresql/v1/clusterImageCatalog/</loc>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.4/postgresql/v1/clusterImageCatalog/</loc>
          <lastmod>2024-10-07</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.21.5/postgresql/v1/imageCatalog/</loc>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.4/postgresql/v1/imageCatalog/</loc>
          <lastmod>2024-10-07</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.21.5/postgresql/v1/pooler/</loc>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.4/postgresql/v1/pooler/</loc>
          <lastmod>2024-10-07</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.21.5/postgresql/v1/scheduledBackup/</loc>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.4/postgresql/v1/scheduledBackup/</loc>
          <lastmod>2024-10-07</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.22.3/</loc>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.24.0/</loc>
          <lastmod>2024-10-07</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.22.3/postgresql/</loc>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.24.0/postgresql/</loc>
          <lastmod>2024-10-07</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.22.3/postgresql/v1/</loc>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.24.0/postgresql/v1/</loc>
          <lastmod>2024-10-07</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.22.3/postgresql/v1/backup/</loc>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.24.0/postgresql/v1/backup/</loc>
          <lastmod>2024-10-07</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.22.3/postgresql/v1/cluster/</loc>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.24.0/postgresql/v1/cluster/</loc>
          <lastmod>2024-10-07</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.22.3/postgresql/v1/clusterImageCatalog/</loc>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.24.0/postgresql/v1/clusterImageCatalog/</loc>
          <lastmod>2024-10-07</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.22.3/postgresql/v1/imageCatalog/</loc>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.24.0/postgresql/v1/imageCatalog/</loc>
          <lastmod>2024-10-07</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.22.3/postgresql/v1/pooler/</loc>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.24.0/postgresql/v1/pooler/</loc>
          <lastmod>2024-10-07</lastmod>
     </url>
     <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.22.3/postgresql/v1/scheduledBackup/</loc>
-         <lastmod>2024-10-07</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.1/</loc>
-         <lastmod>2024-10-07</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.1/postgresql/</loc>
-         <lastmod>2024-10-07</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.1/postgresql/v1/</loc>
-         <lastmod>2024-10-07</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.1/postgresql/v1/backup/</loc>
-         <lastmod>2024-10-07</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.1/postgresql/v1/cluster/</loc>
-         <lastmod>2024-10-07</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.1/postgresql/v1/clusterImageCatalog/</loc>
-         <lastmod>2024-10-07</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.1/postgresql/v1/imageCatalog/</loc>
-         <lastmod>2024-10-07</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.1/postgresql/v1/pooler/</loc>
-         <lastmod>2024-10-07</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.23.1/postgresql/v1/scheduledBackup/</loc>
+         <loc>https://jsonnet-libs.github.io/cloudnative-pg-libsonnet/1.24.0/postgresql/v1/scheduledBackup/</loc>
          <lastmod>2024-10-07</lastmod>
     </url>
 </urlset>
