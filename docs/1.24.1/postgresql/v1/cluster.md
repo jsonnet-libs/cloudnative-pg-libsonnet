@@ -1,5 +1,5 @@
 ---
-permalink: /1.24.0/postgresql/v1/cluster/
+permalink: /1.24.1/postgresql/v1/cluster/
 ---
 
 # postgresql.v1.cluster

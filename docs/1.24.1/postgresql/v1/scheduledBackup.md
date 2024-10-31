@@ -1,10 +1,10 @@
 ---
-permalink: /1.24.0/postgresql/v1/imageCatalog/
+permalink: /1.24.1/postgresql/v1/scheduledBackup/
 ---
 
-# postgresql.v1.imageCatalog
+# postgresql.v1.scheduledBackup
 
-"ImageCatalog is the Schema for the imagecatalogs API"
+"ScheduledBackup is the Schema for the scheduledbackups API"
 
 ## Index
 
@@ -30,11 +30,22 @@ permalink: /1.24.0/postgresql/v1/imageCatalog/
   * [`fn withSelfLink(selfLink)`](#fn-metadatawithselflink)
   * [`fn withUid(uid)`](#fn-metadatawithuid)
 * [`obj spec`](#obj-spec)
-  * [`fn withImages(images)`](#fn-specwithimages)
-  * [`fn withImagesMixin(images)`](#fn-specwithimagesmixin)
-  * [`obj spec.images`](#obj-specimages)
-    * [`fn withImage(image)`](#fn-specimageswithimage)
-    * [`fn withMajor(major)`](#fn-specimageswithmajor)
+  * [`fn withBackupOwnerReference(backupOwnerReference)`](#fn-specwithbackupownerreference)
+  * [`fn withImmediate(immediate)`](#fn-specwithimmediate)
+  * [`fn withMethod(method)`](#fn-specwithmethod)
+  * [`fn withOnline(online)`](#fn-specwithonline)
+  * [`fn withSchedule(schedule)`](#fn-specwithschedule)
+  * [`fn withSuspend(suspend)`](#fn-specwithsuspend)
+  * [`fn withTarget(target)`](#fn-specwithtarget)
+  * [`obj spec.cluster`](#obj-speccluster)
+    * [`fn withName(name)`](#fn-specclusterwithname)
+  * [`obj spec.onlineConfiguration`](#obj-speconlineconfiguration)
+    * [`fn withImmediateCheckpoint(immediateCheckpoint)`](#fn-speconlineconfigurationwithimmediatecheckpoint)
+    * [`fn withWaitForArchive(waitForArchive)`](#fn-speconlineconfigurationwithwaitforarchive)
+  * [`obj spec.pluginConfiguration`](#obj-specpluginconfiguration)
+    * [`fn withName(name)`](#fn-specpluginconfigurationwithname)
+    * [`fn withParameters(parameters)`](#fn-specpluginconfigurationwithparameters)
+    * [`fn withParametersMixin(parameters)`](#fn-specpluginconfigurationwithparametersmixin)
 
 ## Fields
 
@@ -44,7 +55,7 @@ permalink: /1.24.0/postgresql/v1/imageCatalog/
 new(name)
 ```
 
-new returns an instance of ImageCatalog
+new returns an instance of ScheduledBackup
 
 ## obj metadata
 
@@ -212,42 +223,122 @@ withUid(uid)
 
 ## obj spec
 
-"Specification of the desired behavior of the ImageCatalog.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
+"Specification of the desired behavior of the ScheduledBackup.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
 
-### fn spec.withImages
-
-```ts
-withImages(images)
-```
-
-"List of CatalogImages available in the catalog"
-
-### fn spec.withImagesMixin
+### fn spec.withBackupOwnerReference
 
 ```ts
-withImagesMixin(images)
+withBackupOwnerReference(backupOwnerReference)
 ```
 
-"List of CatalogImages available in the catalog"
+"Indicates which ownerReference should be put inside the created backup resources.<br />\n- none: no owner reference for created backup objects (same behavior as before the field was introduced)<br />\n- self: sets the Scheduled backup object as owner of the backup<br />\n- cluster: set the cluster as owner of the backup<br />"
+
+### fn spec.withImmediate
+
+```ts
+withImmediate(immediate)
+```
+
+"If the first backup has to be immediately start after creation or not"
+
+### fn spec.withMethod
+
+```ts
+withMethod(method)
+```
+
+"The backup method to be used, possible options are `barmanObjectStore`,\n`volumeSnapshot` or `plugin`. Defaults to: `barmanObjectStore`."
+
+### fn spec.withOnline
+
+```ts
+withOnline(online)
+```
+
+"Whether the default type of backup with volume snapshots is\nonline/hot (`true`, default) or offline/cold (`false`)\nOverrides the default setting specified in the cluster field '.spec.backup.volumeSnapshot.online'"
+
+### fn spec.withSchedule
+
+```ts
+withSchedule(schedule)
+```
+
+"The schedule does not follow the same format used in Kubernetes CronJobs\nas it includes an additional seconds specifier,\nsee https://pkg.go.dev/github.com/robfig/cron#hdr-CRON_Expression_Format"
+
+### fn spec.withSuspend
+
+```ts
+withSuspend(suspend)
+```
+
+"If this backup is suspended or not"
+
+### fn spec.withTarget
+
+```ts
+withTarget(target)
+```
+
+"The policy to decide which instance should perform this backup. If empty,\nit defaults to `cluster.spec.backup.target`.\nAvailable options are empty string, `primary` and `prefer-standby`.\n`primary` to have backups run always on primary instances,\n`prefer-standby` to have backups run preferably on the most updated\nstandby, if available."
+
+## obj spec.cluster
+
+"The cluster to backup"
+
+### fn spec.cluster.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent."
+
+## obj spec.onlineConfiguration
+
+"Configuration parameters to control the online/hot backup with volume snapshots\nOverrides the default settings specified in the cluster '.backup.volumeSnapshot.onlineConfiguration' stanza"
+
+### fn spec.onlineConfiguration.withImmediateCheckpoint
+
+```ts
+withImmediateCheckpoint(immediateCheckpoint)
+```
+
+"Control whether the I/O workload for the backup initial checkpoint will\nbe limited, according to the `checkpoint_completion_target` setting on\nthe PostgreSQL server. If set to true, an immediate checkpoint will be\nused, meaning PostgreSQL will complete the checkpoint as soon as\npossible. `false` by default."
+
+### fn spec.onlineConfiguration.withWaitForArchive
+
+```ts
+withWaitForArchive(waitForArchive)
+```
+
+"If false, the function will return immediately after the backup is completed,\nwithout waiting for WAL to be archived.\nThis behavior is only useful with backup software that independently monitors WAL archiving.\nOtherwise, WAL required to make the backup consistent might be missing and make the backup useless.\nBy default, or when this parameter is true, pg_backup_stop will wait for WAL to be archived when archiving is\nenabled.\nOn a standby, this means that it will wait only when archive_mode = always.\nIf write activity on the primary is low, it may be useful to run pg_switch_wal on the primary in order to trigger\nan immediate segment switch."
+
+## obj spec.pluginConfiguration
+
+"Configuration parameters passed to the plugin managing this backup"
+
+### fn spec.pluginConfiguration.withName
+
+```ts
+withName(name)
+```
+
+"Name is the name of the plugin managing this backup"
+
+### fn spec.pluginConfiguration.withParameters
+
+```ts
+withParameters(parameters)
+```
+
+"Parameters are the configuration parameters passed to the backup\nplugin for this backup"
+
+### fn spec.pluginConfiguration.withParametersMixin
+
+```ts
+withParametersMixin(parameters)
+```
+
+"Parameters are the configuration parameters passed to the backup\nplugin for this backup"
 
 **Note:** This function appends passed data to existing values
-
-## obj spec.images
-
-"List of CatalogImages available in the catalog"
-
-### fn spec.images.withImage
-
-```ts
-withImage(image)
-```
-
-"The image reference"
-
-### fn spec.images.withMajor
-
-```ts
-withMajor(major)
-```
-
-"The PostgreSQL major version of the image. Must be unique within the catalog."

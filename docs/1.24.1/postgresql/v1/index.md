@@ -1,5 +1,5 @@
 ---
-permalink: /1.23.4/postgresql/v1/
+permalink: /1.24.1/postgresql/v1/
 ---
 
 # postgresql.v1

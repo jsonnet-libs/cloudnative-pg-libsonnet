@@ -1,10 +1,10 @@
 ---
-permalink: /1.23.4/postgresql/v1/imageCatalog/
+permalink: /1.23.5/postgresql/v1/clusterImageCatalog/
 ---
 
-# postgresql.v1.imageCatalog
+# postgresql.v1.clusterImageCatalog
 
-"ImageCatalog is the Schema for the imagecatalogs API"
+"ClusterImageCatalog is the Schema for the clusterimagecatalogs API"
 
 ## Index
 
@@ -44,7 +44,7 @@ permalink: /1.23.4/postgresql/v1/imageCatalog/
 new(name)
 ```
 
-new returns an instance of ImageCatalog
+new returns an instance of ClusterImageCatalog
 
 ## obj metadata
 
@@ -212,7 +212,7 @@ withUid(uid)
 
 ## obj spec
 
-"Specification of the desired behavior of the ImageCatalog.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
+"Specification of the desired behavior of the ClusterImageCatalog.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
 
 ### fn spec.withImages
 

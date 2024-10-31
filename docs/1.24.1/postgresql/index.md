@@ -1,5 +1,5 @@
 ---
-permalink: /1.24.0/postgresql/
+permalink: /1.24.1/postgresql/
 ---
 
 # postgresql
