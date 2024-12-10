@@ -321,11 +321,16 @@ permalink: /1.24.1/postgresql/v1/cluster/
         * [`fn withWaitForArchive(waitForArchive)`](#fn-specbackupvolumesnapshotonlineconfigurationwithwaitforarchive)
   * [`obj spec.bootstrap`](#obj-specbootstrap)
     * [`obj spec.bootstrap.initdb`](#obj-specbootstrapinitdb)
+      * [`fn withBuiltinLocale(builtinLocale)`](#fn-specbootstrapinitdbwithbuiltinlocale)
       * [`fn withDataChecksums(dataChecksums)`](#fn-specbootstrapinitdbwithdatachecksums)
       * [`fn withDatabase(database)`](#fn-specbootstrapinitdbwithdatabase)
       * [`fn withEncoding(encoding)`](#fn-specbootstrapinitdbwithencoding)
+      * [`fn withIcuLocale(icuLocale)`](#fn-specbootstrapinitdbwithiculocale)
+      * [`fn withIcuRules(icuRules)`](#fn-specbootstrapinitdbwithicurules)
+      * [`fn withLocale(locale)`](#fn-specbootstrapinitdbwithlocale)
       * [`fn withLocaleCType(localeCType)`](#fn-specbootstrapinitdbwithlocalectype)
       * [`fn withLocaleCollate(localeCollate)`](#fn-specbootstrapinitdbwithlocalecollate)
+      * [`fn withLocaleProvider(localeProvider)`](#fn-specbootstrapinitdbwithlocaleprovider)
       * [`fn withOptions(options)`](#fn-specbootstrapinitdbwithoptions)
       * [`fn withOptionsMixin(options)`](#fn-specbootstrapinitdbwithoptionsmixin)
       * [`fn withOwner(owner)`](#fn-specbootstrapinitdbwithowner)
@@ -339,6 +344,10 @@ permalink: /1.24.1/postgresql/v1/cluster/
       * [`obj spec.bootstrap.initdb.import`](#obj-specbootstrapinitdbimport)
         * [`fn withDatabases(databases)`](#fn-specbootstrapinitdbimportwithdatabases)
         * [`fn withDatabasesMixin(databases)`](#fn-specbootstrapinitdbimportwithdatabasesmixin)
+        * [`fn withPgDumpExtraOptions(pgDumpExtraOptions)`](#fn-specbootstrapinitdbimportwithpgdumpextraoptions)
+        * [`fn withPgDumpExtraOptionsMixin(pgDumpExtraOptions)`](#fn-specbootstrapinitdbimportwithpgdumpextraoptionsmixin)
+        * [`fn withPgRestoreExtraOptions(pgRestoreExtraOptions)`](#fn-specbootstrapinitdbimportwithpgrestoreextraoptions)
+        * [`fn withPgRestoreExtraOptionsMixin(pgRestoreExtraOptions)`](#fn-specbootstrapinitdbimportwithpgrestoreextraoptionsmixin)
         * [`fn withPostImportApplicationSQL(postImportApplicationSQL)`](#fn-specbootstrapinitdbimportwithpostimportapplicationsql)
         * [`fn withPostImportApplicationSQLMixin(postImportApplicationSQL)`](#fn-specbootstrapinitdbimportwithpostimportapplicationsqlmixin)
         * [`fn withRoles(roles)`](#fn-specbootstrapinitdbimportwithroles)
@@ -558,6 +567,11 @@ permalink: /1.24.1/postgresql/v1/cluster/
       * [`fn withKey(key)`](#fn-specexternalclusterspasswordwithkey)
       * [`fn withName(name)`](#fn-specexternalclusterspasswordwithname)
       * [`fn withOptional(optional)`](#fn-specexternalclusterspasswordwithoptional)
+    * [`obj spec.externalClusters.plugin`](#obj-specexternalclustersplugin)
+      * [`fn withEnabled(enabled)`](#fn-specexternalclusterspluginwithenabled)
+      * [`fn withName(name)`](#fn-specexternalclusterspluginwithname)
+      * [`fn withParameters(parameters)`](#fn-specexternalclusterspluginwithparameters)
+      * [`fn withParametersMixin(parameters)`](#fn-specexternalclusterspluginwithparametersmixin)
     * [`obj spec.externalClusters.sslCert`](#obj-specexternalclusterssslcert)
       * [`fn withKey(key)`](#fn-specexternalclusterssslcertwithkey)
       * [`fn withName(name)`](#fn-specexternalclusterssslcertwithname)
@@ -732,6 +746,7 @@ permalink: /1.24.1/postgresql/v1/cluster/
       * [`fn withNodeLabelsAntiAffinity(nodeLabelsAntiAffinity)`](#fn-specpostgresqlsyncreplicaelectionconstraintwithnodelabelsantiaffinity)
       * [`fn withNodeLabelsAntiAffinityMixin(nodeLabelsAntiAffinity)`](#fn-specpostgresqlsyncreplicaelectionconstraintwithnodelabelsantiaffinitymixin)
     * [`obj spec.postgresql.synchronous`](#obj-specpostgresqlsynchronous)
+      * [`fn withDataDurability(dataDurability)`](#fn-specpostgresqlsynchronouswithdatadurability)
       * [`fn withMaxStandbyNamesFromCluster(maxStandbyNamesFromCluster)`](#fn-specpostgresqlsynchronouswithmaxstandbynamesfromcluster)
       * [`fn withMethod(method)`](#fn-specpostgresqlsynchronouswithmethod)
       * [`fn withNumber(number)`](#fn-specpostgresqlsynchronouswithnumber)
@@ -739,6 +754,28 @@ permalink: /1.24.1/postgresql/v1/cluster/
       * [`fn withStandbyNamesPostMixin(standbyNamesPost)`](#fn-specpostgresqlsynchronouswithstandbynamespostmixin)
       * [`fn withStandbyNamesPre(standbyNamesPre)`](#fn-specpostgresqlsynchronouswithstandbynamespre)
       * [`fn withStandbyNamesPreMixin(standbyNamesPre)`](#fn-specpostgresqlsynchronouswithstandbynamespremixin)
+  * [`obj spec.probes`](#obj-specprobes)
+    * [`obj spec.probes.liveness`](#obj-specprobesliveness)
+      * [`fn withFailureThreshold(failureThreshold)`](#fn-specprobeslivenesswithfailurethreshold)
+      * [`fn withInitialDelaySeconds(initialDelaySeconds)`](#fn-specprobeslivenesswithinitialdelayseconds)
+      * [`fn withPeriodSeconds(periodSeconds)`](#fn-specprobeslivenesswithperiodseconds)
+      * [`fn withSuccessThreshold(successThreshold)`](#fn-specprobeslivenesswithsuccessthreshold)
+      * [`fn withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)`](#fn-specprobeslivenesswithterminationgraceperiodseconds)
+      * [`fn withTimeoutSeconds(timeoutSeconds)`](#fn-specprobeslivenesswithtimeoutseconds)
+    * [`obj spec.probes.readiness`](#obj-specprobesreadiness)
+      * [`fn withFailureThreshold(failureThreshold)`](#fn-specprobesreadinesswithfailurethreshold)
+      * [`fn withInitialDelaySeconds(initialDelaySeconds)`](#fn-specprobesreadinesswithinitialdelayseconds)
+      * [`fn withPeriodSeconds(periodSeconds)`](#fn-specprobesreadinesswithperiodseconds)
+      * [`fn withSuccessThreshold(successThreshold)`](#fn-specprobesreadinesswithsuccessthreshold)
+      * [`fn withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)`](#fn-specprobesreadinesswithterminationgraceperiodseconds)
+      * [`fn withTimeoutSeconds(timeoutSeconds)`](#fn-specprobesreadinesswithtimeoutseconds)
+    * [`obj spec.probes.startup`](#obj-specprobesstartup)
+      * [`fn withFailureThreshold(failureThreshold)`](#fn-specprobesstartupwithfailurethreshold)
+      * [`fn withInitialDelaySeconds(initialDelaySeconds)`](#fn-specprobesstartupwithinitialdelayseconds)
+      * [`fn withPeriodSeconds(periodSeconds)`](#fn-specprobesstartupwithperiodseconds)
+      * [`fn withSuccessThreshold(successThreshold)`](#fn-specprobesstartupwithsuccessthreshold)
+      * [`fn withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)`](#fn-specprobesstartupwithterminationgraceperiodseconds)
+      * [`fn withTimeoutSeconds(timeoutSeconds)`](#fn-specprobesstartupwithtimeoutseconds)
   * [`obj spec.projectedVolumeTemplate`](#obj-specprojectedvolumetemplate)
     * [`fn withDefaultMode(defaultMode)`](#fn-specprojectedvolumetemplatewithdefaultmode)
     * [`fn withSources(sources)`](#fn-specprojectedvolumetemplatewithsources)
@@ -3378,6 +3415,14 @@ withWaitForArchive(waitForArchive)
 
 "Bootstrap the cluster via initdb"
 
+### fn spec.bootstrap.initdb.withBuiltinLocale
+
+```ts
+withBuiltinLocale(builtinLocale)
+```
+
+"Specifies the locale name when the builtin provider is used.\nThis option requires `localeProvider` to be set to `builtin`.\nAvailable from PostgreSQL 17."
+
 ### fn spec.bootstrap.initdb.withDataChecksums
 
 ```ts
@@ -3402,6 +3447,30 @@ withEncoding(encoding)
 
 "The value to be passed as option `--encoding` for initdb (default:`UTF8`)"
 
+### fn spec.bootstrap.initdb.withIcuLocale
+
+```ts
+withIcuLocale(icuLocale)
+```
+
+"Specifies the ICU locale when the ICU provider is used.\nThis option requires `localeProvider` to be set to `icu`.\nAvailable from PostgreSQL 15."
+
+### fn spec.bootstrap.initdb.withIcuRules
+
+```ts
+withIcuRules(icuRules)
+```
+
+"Specifies additional collation rules to customize the behavior of the default collation.\nThis option requires `localeProvider` to be set to `icu`.\nAvailable from PostgreSQL 16."
+
+### fn spec.bootstrap.initdb.withLocale
+
+```ts
+withLocale(locale)
+```
+
+"Sets the default collation order and character classification in the new database."
+
 ### fn spec.bootstrap.initdb.withLocaleCType
 
 ```ts
@@ -3417,6 +3486,14 @@ withLocaleCollate(localeCollate)
 ```
 
 "The value to be passed as option `--lc-collate` for initdb (default:`C`)"
+
+### fn spec.bootstrap.initdb.withLocaleProvider
+
+```ts
+withLocaleProvider(localeProvider)
+```
+
+"This option sets the locale provider for databases created in the new cluster.\nAvailable from PostgreSQL 16."
 
 ### fn spec.bootstrap.initdb.withOptions
 
@@ -3525,6 +3602,42 @@ withDatabasesMixin(databases)
 ```
 
 "The databases to import"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.bootstrap.initdb.import.withPgDumpExtraOptions
+
+```ts
+withPgDumpExtraOptions(pgDumpExtraOptions)
+```
+
+"List of custom options to pass to the `pg_dump` command. IMPORTANT:\nUse these options with caution and at your own risk, as the operator\ndoes not validate their content. Be aware that certain options may\nconflict with the operator's intended functionality or design."
+
+### fn spec.bootstrap.initdb.import.withPgDumpExtraOptionsMixin
+
+```ts
+withPgDumpExtraOptionsMixin(pgDumpExtraOptions)
+```
+
+"List of custom options to pass to the `pg_dump` command. IMPORTANT:\nUse these options with caution and at your own risk, as the operator\ndoes not validate their content. Be aware that certain options may\nconflict with the operator's intended functionality or design."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.bootstrap.initdb.import.withPgRestoreExtraOptions
+
+```ts
+withPgRestoreExtraOptions(pgRestoreExtraOptions)
+```
+
+"List of custom options to pass to the `pg_restore` command. IMPORTANT:\nUse these options with caution and at your own risk, as the operator\ndoes not validate their content. Be aware that certain options may\nconflict with the operator's intended functionality or design."
+
+### fn spec.bootstrap.initdb.import.withPgRestoreExtraOptionsMixin
+
+```ts
+withPgRestoreExtraOptionsMixin(pgRestoreExtraOptions)
+```
+
+"List of custom options to pass to the `pg_restore` command. IMPORTANT:\nUse these options with caution and at your own risk, as the operator\ndoes not validate their content. Be aware that certain options may\nconflict with the operator's intended functionality or design."
 
 **Note:** This function appends passed data to existing values
 
@@ -5094,6 +5207,44 @@ withOptional(optional)
 
 "Specify whether the Secret or its key must be defined"
 
+## obj spec.externalClusters.plugin
+
+"The configuration of the plugin that is taking care\nof WAL archiving and backups for this external cluster"
+
+### fn spec.externalClusters.plugin.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+"Enabled is true if this plugin will be used"
+
+### fn spec.externalClusters.plugin.withName
+
+```ts
+withName(name)
+```
+
+"Name is the plugin name"
+
+### fn spec.externalClusters.plugin.withParameters
+
+```ts
+withParameters(parameters)
+```
+
+"Parameters is the configuration of the plugin"
+
+### fn spec.externalClusters.plugin.withParametersMixin
+
+```ts
+withParametersMixin(parameters)
+```
+
+"Parameters is the configuration of the plugin"
+
+**Note:** This function appends passed data to existing values
+
 ## obj spec.externalClusters.sslCert
 
 "The reference to an SSL certificate to be used to connect to this\ninstance"
@@ -6410,6 +6561,14 @@ withNodeLabelsAntiAffinityMixin(nodeLabelsAntiAffinity)
 
 "Configuration of the PostgreSQL synchronous replication feature"
 
+### fn spec.postgresql.synchronous.withDataDurability
+
+```ts
+withDataDurability(dataDurability)
+```
+
+"If set to \"required\", data durability is strictly enforced. Write operations\nwith synchronous commit settings (`on`, `remote_write`, or `remote_apply`) will\nblock if there are insufficient healthy replicas, ensuring data persistence.\nIf set to \"preferred\", data durability is maintained when healthy replicas\nare available, but the required number of instances will adjust dynamically\nif replicas become unavailable. This setting relaxes strict durability enforcement\nto allow for operational continuity. This setting is only applicable if both\n`standbyNamesPre` and `standbyNamesPost` are unset (empty)."
+
 ### fn spec.postgresql.synchronous.withMaxStandbyNamesFromCluster
 
 ```ts
@@ -6469,6 +6628,166 @@ withStandbyNamesPreMixin(standbyNamesPre)
 "A user-defined list of application names to be added to\n`synchronous_standby_names` before local cluster pods (the order is\nonly useful for priority-based synchronous replication)."
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.probes
+
+"The configuration of the probes to be injected\nin the PostgreSQL Pods."
+
+## obj spec.probes.liveness
+
+"The liveness probe configuration"
+
+### fn spec.probes.liveness.withFailureThreshold
+
+```ts
+withFailureThreshold(failureThreshold)
+```
+
+"Minimum consecutive failures for the probe to be considered failed after having succeeded.\nDefaults to 3. Minimum value is 1."
+
+### fn spec.probes.liveness.withInitialDelaySeconds
+
+```ts
+withInitialDelaySeconds(initialDelaySeconds)
+```
+
+"Number of seconds after the container has started before liveness probes are initiated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+
+### fn spec.probes.liveness.withPeriodSeconds
+
+```ts
+withPeriodSeconds(periodSeconds)
+```
+
+"How often (in seconds) to perform the probe.\nDefault to 10 seconds. Minimum value is 1."
+
+### fn spec.probes.liveness.withSuccessThreshold
+
+```ts
+withSuccessThreshold(successThreshold)
+```
+
+"Minimum consecutive successes for the probe to be considered successful after having failed.\nDefaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
+
+### fn spec.probes.liveness.withTerminationGracePeriodSeconds
+
+```ts
+withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
+```
+
+"Optional duration in seconds the pod needs to terminate gracefully upon probe failure.\nThe grace period is the duration in seconds after the processes running in the pod are sent\na termination signal and the time when the processes are forcibly halted with a kill signal.\nSet this value longer than the expected cleanup time for your process.\nIf this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this\nvalue overrides the value provided by the pod spec.\nValue must be non-negative integer. The value zero indicates stop immediately via\nthe kill signal (no opportunity to shut down).\nThis is a beta field and requires enabling ProbeTerminationGracePeriod feature gate.\nMinimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
+
+### fn spec.probes.liveness.withTimeoutSeconds
+
+```ts
+withTimeoutSeconds(timeoutSeconds)
+```
+
+"Number of seconds after which the probe times out.\nDefaults to 1 second. Minimum value is 1.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+
+## obj spec.probes.readiness
+
+"The readiness probe configuration"
+
+### fn spec.probes.readiness.withFailureThreshold
+
+```ts
+withFailureThreshold(failureThreshold)
+```
+
+"Minimum consecutive failures for the probe to be considered failed after having succeeded.\nDefaults to 3. Minimum value is 1."
+
+### fn spec.probes.readiness.withInitialDelaySeconds
+
+```ts
+withInitialDelaySeconds(initialDelaySeconds)
+```
+
+"Number of seconds after the container has started before liveness probes are initiated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+
+### fn spec.probes.readiness.withPeriodSeconds
+
+```ts
+withPeriodSeconds(periodSeconds)
+```
+
+"How often (in seconds) to perform the probe.\nDefault to 10 seconds. Minimum value is 1."
+
+### fn spec.probes.readiness.withSuccessThreshold
+
+```ts
+withSuccessThreshold(successThreshold)
+```
+
+"Minimum consecutive successes for the probe to be considered successful after having failed.\nDefaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
+
+### fn spec.probes.readiness.withTerminationGracePeriodSeconds
+
+```ts
+withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
+```
+
+"Optional duration in seconds the pod needs to terminate gracefully upon probe failure.\nThe grace period is the duration in seconds after the processes running in the pod are sent\na termination signal and the time when the processes are forcibly halted with a kill signal.\nSet this value longer than the expected cleanup time for your process.\nIf this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this\nvalue overrides the value provided by the pod spec.\nValue must be non-negative integer. The value zero indicates stop immediately via\nthe kill signal (no opportunity to shut down).\nThis is a beta field and requires enabling ProbeTerminationGracePeriod feature gate.\nMinimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
+
+### fn spec.probes.readiness.withTimeoutSeconds
+
+```ts
+withTimeoutSeconds(timeoutSeconds)
+```
+
+"Number of seconds after which the probe times out.\nDefaults to 1 second. Minimum value is 1.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+
+## obj spec.probes.startup
+
+"The startup probe configuration"
+
+### fn spec.probes.startup.withFailureThreshold
+
+```ts
+withFailureThreshold(failureThreshold)
+```
+
+"Minimum consecutive failures for the probe to be considered failed after having succeeded.\nDefaults to 3. Minimum value is 1."
+
+### fn spec.probes.startup.withInitialDelaySeconds
+
+```ts
+withInitialDelaySeconds(initialDelaySeconds)
+```
+
+"Number of seconds after the container has started before liveness probes are initiated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+
+### fn spec.probes.startup.withPeriodSeconds
+
+```ts
+withPeriodSeconds(periodSeconds)
+```
+
+"How often (in seconds) to perform the probe.\nDefault to 10 seconds. Minimum value is 1."
+
+### fn spec.probes.startup.withSuccessThreshold
+
+```ts
+withSuccessThreshold(successThreshold)
+```
+
+"Minimum consecutive successes for the probe to be considered successful after having failed.\nDefaults to 1. Must be 1 for liveness and startup. Minimum value is 1."
+
+### fn spec.probes.startup.withTerminationGracePeriodSeconds
+
+```ts
+withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)
+```
+
+"Optional duration in seconds the pod needs to terminate gracefully upon probe failure.\nThe grace period is the duration in seconds after the processes running in the pod are sent\na termination signal and the time when the processes are forcibly halted with a kill signal.\nSet this value longer than the expected cleanup time for your process.\nIf this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this\nvalue overrides the value provided by the pod spec.\nValue must be non-negative integer. The value zero indicates stop immediately via\nthe kill signal (no opportunity to shut down).\nThis is a beta field and requires enabling ProbeTerminationGracePeriod feature gate.\nMinimum value is 1. spec.terminationGracePeriodSeconds is used if unset."
+
+### fn spec.probes.startup.withTimeoutSeconds
+
+```ts
+withTimeoutSeconds(timeoutSeconds)
+```
+
+"Number of seconds after which the probe times out.\nDefaults to 1 second. Minimum value is 1.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
 ## obj spec.projectedVolumeTemplate
 
