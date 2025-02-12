@@ -1052,6 +1052,16 @@ permalink: /1.24.1/postgresql/v1/pooler/
         * [`fn withName(name)`](#fn-spectemplatespecresourceclaimswithname)
         * [`fn withResourceClaimName(resourceClaimName)`](#fn-spectemplatespecresourceclaimswithresourceclaimname)
         * [`fn withResourceClaimTemplateName(resourceClaimTemplateName)`](#fn-spectemplatespecresourceclaimswithresourceclaimtemplatename)
+      * [`obj spec.template.spec.resources`](#obj-spectemplatespecresources)
+        * [`fn withClaims(claims)`](#fn-spectemplatespecresourceswithclaims)
+        * [`fn withClaimsMixin(claims)`](#fn-spectemplatespecresourceswithclaimsmixin)
+        * [`fn withLimits(limits)`](#fn-spectemplatespecresourceswithlimits)
+        * [`fn withLimitsMixin(limits)`](#fn-spectemplatespecresourceswithlimitsmixin)
+        * [`fn withRequests(requests)`](#fn-spectemplatespecresourceswithrequests)
+        * [`fn withRequestsMixin(requests)`](#fn-spectemplatespecresourceswithrequestsmixin)
+        * [`obj spec.template.spec.resources.claims`](#obj-spectemplatespecresourcesclaims)
+          * [`fn withName(name)`](#fn-spectemplatespecresourcesclaimswithname)
+          * [`fn withRequest(request)`](#fn-spectemplatespecresourcesclaimswithrequest)
       * [`obj spec.template.spec.schedulingGates`](#obj-spectemplatespecschedulinggates)
         * [`fn withName(name)`](#fn-spectemplatespecschedulinggateswithname)
       * [`obj spec.template.spec.securityContext`](#obj-spectemplatespecsecuritycontext)
@@ -1060,6 +1070,7 @@ permalink: /1.24.1/postgresql/v1/pooler/
         * [`fn withRunAsGroup(runAsGroup)`](#fn-spectemplatespecsecuritycontextwithrunasgroup)
         * [`fn withRunAsNonRoot(runAsNonRoot)`](#fn-spectemplatespecsecuritycontextwithrunasnonroot)
         * [`fn withRunAsUser(runAsUser)`](#fn-spectemplatespecsecuritycontextwithrunasuser)
+        * [`fn withSeLinuxChangePolicy(seLinuxChangePolicy)`](#fn-spectemplatespecsecuritycontextwithselinuxchangepolicy)
         * [`fn withSupplementalGroups(supplementalGroups)`](#fn-spectemplatespecsecuritycontextwithsupplementalgroups)
         * [`fn withSupplementalGroupsMixin(supplementalGroups)`](#fn-spectemplatespecsecuritycontextwithsupplementalgroupsmixin)
         * [`fn withSupplementalGroupsPolicy(supplementalGroupsPolicy)`](#fn-spectemplatespecsecuritycontextwithsupplementalgroupspolicy)
@@ -2146,7 +2157,7 @@ withSessionAffinity(sessionAffinity)
 withTrafficDistribution(trafficDistribution)
 ```
 
-"TrafficDistribution offers a way to express preferences for how traffic is\ndistributed to Service endpoints. Implementations can use this field as a\nhint, but are not required to guarantee strict adherence. If the field is\nnot set, the implementation will apply its default routing strategy. If set\nto \"PreferClose\", implementations should prioritize endpoints that are\ntopologically close (e.g., same zone).\nThis is an alpha field and requires enabling ServiceTrafficDistribution feature."
+"TrafficDistribution offers a way to express preferences for how traffic is\ndistributed to Service endpoints. Implementations can use this field as a\nhint, but are not required to guarantee strict adherence. If the field is\nnot set, the implementation will apply its default routing strategy. If set\nto \"PreferClose\", implementations should prioritize endpoints that are\ntopologically close (e.g., same zone).\nThis is a beta field and requires enabling ServiceTrafficDistribution feature."
 
 ### fn spec.serviceTemplate.spec.withType
 
@@ -4392,7 +4403,7 @@ withOptional(optional)
 
 ## obj spec.template.spec.containers.lifecycle.postStart.exec
 
-"Exec specifies the action to take."
+"Exec specifies a command to execute in the container."
 
 ### fn spec.template.spec.containers.lifecycle.postStart.exec.withCommand
 
@@ -4414,7 +4425,7 @@ withCommandMixin(command)
 
 ## obj spec.template.spec.containers.lifecycle.postStart.httpGet
 
-"HTTPGet specifies the http request to perform."
+"HTTPGet specifies an HTTP GET request to perform."
 
 ### fn spec.template.spec.containers.lifecycle.postStart.httpGet.withHost
 
@@ -4488,7 +4499,7 @@ withValue(value)
 
 ## obj spec.template.spec.containers.lifecycle.postStart.sleep
 
-"Sleep represents the duration that the container should sleep before being terminated."
+"Sleep represents a duration that the container should sleep."
 
 ### fn spec.template.spec.containers.lifecycle.postStart.sleep.withSeconds
 
@@ -4500,7 +4511,7 @@ withSeconds(seconds)
 
 ## obj spec.template.spec.containers.lifecycle.postStart.tcpSocket
 
-"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\nfor the backward compatibility. There are no validation of this field and\nlifecycle hooks will fail in runtime when tcp handler is specified."
+"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\nfor backward compatibility. There is no validation of this field and\nlifecycle hooks will fail at runtime when it is specified."
 
 ### fn spec.template.spec.containers.lifecycle.postStart.tcpSocket.withHost
 
@@ -4524,7 +4535,7 @@ withPort(port)
 
 ## obj spec.template.spec.containers.lifecycle.preStop.exec
 
-"Exec specifies the action to take."
+"Exec specifies a command to execute in the container."
 
 ### fn spec.template.spec.containers.lifecycle.preStop.exec.withCommand
 
@@ -4546,7 +4557,7 @@ withCommandMixin(command)
 
 ## obj spec.template.spec.containers.lifecycle.preStop.httpGet
 
-"HTTPGet specifies the http request to perform."
+"HTTPGet specifies an HTTP GET request to perform."
 
 ### fn spec.template.spec.containers.lifecycle.preStop.httpGet.withHost
 
@@ -4620,7 +4631,7 @@ withValue(value)
 
 ## obj spec.template.spec.containers.lifecycle.preStop.sleep
 
-"Sleep represents the duration that the container should sleep before being terminated."
+"Sleep represents a duration that the container should sleep."
 
 ### fn spec.template.spec.containers.lifecycle.preStop.sleep.withSeconds
 
@@ -4632,7 +4643,7 @@ withSeconds(seconds)
 
 ## obj spec.template.spec.containers.lifecycle.preStop.tcpSocket
 
-"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\nfor the backward compatibility. There are no validation of this field and\nlifecycle hooks will fail in runtime when tcp handler is specified."
+"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\nfor backward compatibility. There is no validation of this field and\nlifecycle hooks will fail at runtime when it is specified."
 
 ### fn spec.template.spec.containers.lifecycle.preStop.tcpSocket.withHost
 
@@ -4704,7 +4715,7 @@ withTimeoutSeconds(timeoutSeconds)
 
 ## obj spec.template.spec.containers.livenessProbe.exec
 
-"Exec specifies the action to take."
+"Exec specifies a command to execute in the container."
 
 ### fn spec.template.spec.containers.livenessProbe.exec.withCommand
 
@@ -4726,7 +4737,7 @@ withCommandMixin(command)
 
 ## obj spec.template.spec.containers.livenessProbe.grpc
 
-"GRPC specifies an action involving a GRPC port."
+"GRPC specifies a GRPC HealthCheckRequest."
 
 ### fn spec.template.spec.containers.livenessProbe.grpc.withPort
 
@@ -4746,7 +4757,7 @@ withService(service)
 
 ## obj spec.template.spec.containers.livenessProbe.httpGet
 
-"HTTPGet specifies the http request to perform."
+"HTTPGet specifies an HTTP GET request to perform."
 
 ### fn spec.template.spec.containers.livenessProbe.httpGet.withHost
 
@@ -4820,7 +4831,7 @@ withValue(value)
 
 ## obj spec.template.spec.containers.livenessProbe.tcpSocket
 
-"TCPSocket specifies an action involving a TCP port."
+"TCPSocket specifies a connection to a TCP port."
 
 ### fn spec.template.spec.containers.livenessProbe.tcpSocket.withHost
 
@@ -4936,7 +4947,7 @@ withTimeoutSeconds(timeoutSeconds)
 
 ## obj spec.template.spec.containers.readinessProbe.exec
 
-"Exec specifies the action to take."
+"Exec specifies a command to execute in the container."
 
 ### fn spec.template.spec.containers.readinessProbe.exec.withCommand
 
@@ -4958,7 +4969,7 @@ withCommandMixin(command)
 
 ## obj spec.template.spec.containers.readinessProbe.grpc
 
-"GRPC specifies an action involving a GRPC port."
+"GRPC specifies a GRPC HealthCheckRequest."
 
 ### fn spec.template.spec.containers.readinessProbe.grpc.withPort
 
@@ -4978,7 +4989,7 @@ withService(service)
 
 ## obj spec.template.spec.containers.readinessProbe.httpGet
 
-"HTTPGet specifies the http request to perform."
+"HTTPGet specifies an HTTP GET request to perform."
 
 ### fn spec.template.spec.containers.readinessProbe.httpGet.withHost
 
@@ -5052,7 +5063,7 @@ withValue(value)
 
 ## obj spec.template.spec.containers.readinessProbe.tcpSocket
 
-"TCPSocket specifies an action involving a TCP port."
+"TCPSocket specifies a connection to a TCP port."
 
 ### fn spec.template.spec.containers.readinessProbe.tcpSocket.withHost
 
@@ -5434,7 +5445,7 @@ withTimeoutSeconds(timeoutSeconds)
 
 ## obj spec.template.spec.containers.startupProbe.exec
 
-"Exec specifies the action to take."
+"Exec specifies a command to execute in the container."
 
 ### fn spec.template.spec.containers.startupProbe.exec.withCommand
 
@@ -5456,7 +5467,7 @@ withCommandMixin(command)
 
 ## obj spec.template.spec.containers.startupProbe.grpc
 
-"GRPC specifies an action involving a GRPC port."
+"GRPC specifies a GRPC HealthCheckRequest."
 
 ### fn spec.template.spec.containers.startupProbe.grpc.withPort
 
@@ -5476,7 +5487,7 @@ withService(service)
 
 ## obj spec.template.spec.containers.startupProbe.httpGet
 
-"HTTPGet specifies the http request to perform."
+"HTTPGet specifies an HTTP GET request to perform."
 
 ### fn spec.template.spec.containers.startupProbe.httpGet.withHost
 
@@ -5550,7 +5561,7 @@ withValue(value)
 
 ## obj spec.template.spec.containers.startupProbe.tcpSocket
 
-"TCPSocket specifies an action involving a TCP port."
+"TCPSocket specifies a connection to a TCP port."
 
 ### fn spec.template.spec.containers.startupProbe.tcpSocket.withHost
 
@@ -5716,7 +5727,7 @@ withSearchesMixin(searches)
 withName(name)
 ```
 
-"Required."
+"Name is this DNS resolver option's name.\nRequired."
 
 ### fn spec.template.spec.dnsConfig.options.withValue
 
@@ -5724,7 +5735,7 @@ withName(name)
 withValue(value)
 ```
 
-
+"Value is this DNS resolver option's value."
 
 ## obj spec.template.spec.ephemeralContainers
 
@@ -6152,7 +6163,7 @@ withOptional(optional)
 
 ## obj spec.template.spec.ephemeralContainers.lifecycle.postStart.exec
 
-"Exec specifies the action to take."
+"Exec specifies a command to execute in the container."
 
 ### fn spec.template.spec.ephemeralContainers.lifecycle.postStart.exec.withCommand
 
@@ -6174,7 +6185,7 @@ withCommandMixin(command)
 
 ## obj spec.template.spec.ephemeralContainers.lifecycle.postStart.httpGet
 
-"HTTPGet specifies the http request to perform."
+"HTTPGet specifies an HTTP GET request to perform."
 
 ### fn spec.template.spec.ephemeralContainers.lifecycle.postStart.httpGet.withHost
 
@@ -6248,7 +6259,7 @@ withValue(value)
 
 ## obj spec.template.spec.ephemeralContainers.lifecycle.postStart.sleep
 
-"Sleep represents the duration that the container should sleep before being terminated."
+"Sleep represents a duration that the container should sleep."
 
 ### fn spec.template.spec.ephemeralContainers.lifecycle.postStart.sleep.withSeconds
 
@@ -6260,7 +6271,7 @@ withSeconds(seconds)
 
 ## obj spec.template.spec.ephemeralContainers.lifecycle.postStart.tcpSocket
 
-"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\nfor the backward compatibility. There are no validation of this field and\nlifecycle hooks will fail in runtime when tcp handler is specified."
+"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\nfor backward compatibility. There is no validation of this field and\nlifecycle hooks will fail at runtime when it is specified."
 
 ### fn spec.template.spec.ephemeralContainers.lifecycle.postStart.tcpSocket.withHost
 
@@ -6284,7 +6295,7 @@ withPort(port)
 
 ## obj spec.template.spec.ephemeralContainers.lifecycle.preStop.exec
 
-"Exec specifies the action to take."
+"Exec specifies a command to execute in the container."
 
 ### fn spec.template.spec.ephemeralContainers.lifecycle.preStop.exec.withCommand
 
@@ -6306,7 +6317,7 @@ withCommandMixin(command)
 
 ## obj spec.template.spec.ephemeralContainers.lifecycle.preStop.httpGet
 
-"HTTPGet specifies the http request to perform."
+"HTTPGet specifies an HTTP GET request to perform."
 
 ### fn spec.template.spec.ephemeralContainers.lifecycle.preStop.httpGet.withHost
 
@@ -6380,7 +6391,7 @@ withValue(value)
 
 ## obj spec.template.spec.ephemeralContainers.lifecycle.preStop.sleep
 
-"Sleep represents the duration that the container should sleep before being terminated."
+"Sleep represents a duration that the container should sleep."
 
 ### fn spec.template.spec.ephemeralContainers.lifecycle.preStop.sleep.withSeconds
 
@@ -6392,7 +6403,7 @@ withSeconds(seconds)
 
 ## obj spec.template.spec.ephemeralContainers.lifecycle.preStop.tcpSocket
 
-"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\nfor the backward compatibility. There are no validation of this field and\nlifecycle hooks will fail in runtime when tcp handler is specified."
+"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\nfor backward compatibility. There is no validation of this field and\nlifecycle hooks will fail at runtime when it is specified."
 
 ### fn spec.template.spec.ephemeralContainers.lifecycle.preStop.tcpSocket.withHost
 
@@ -6464,7 +6475,7 @@ withTimeoutSeconds(timeoutSeconds)
 
 ## obj spec.template.spec.ephemeralContainers.livenessProbe.exec
 
-"Exec specifies the action to take."
+"Exec specifies a command to execute in the container."
 
 ### fn spec.template.spec.ephemeralContainers.livenessProbe.exec.withCommand
 
@@ -6486,7 +6497,7 @@ withCommandMixin(command)
 
 ## obj spec.template.spec.ephemeralContainers.livenessProbe.grpc
 
-"GRPC specifies an action involving a GRPC port."
+"GRPC specifies a GRPC HealthCheckRequest."
 
 ### fn spec.template.spec.ephemeralContainers.livenessProbe.grpc.withPort
 
@@ -6506,7 +6517,7 @@ withService(service)
 
 ## obj spec.template.spec.ephemeralContainers.livenessProbe.httpGet
 
-"HTTPGet specifies the http request to perform."
+"HTTPGet specifies an HTTP GET request to perform."
 
 ### fn spec.template.spec.ephemeralContainers.livenessProbe.httpGet.withHost
 
@@ -6580,7 +6591,7 @@ withValue(value)
 
 ## obj spec.template.spec.ephemeralContainers.livenessProbe.tcpSocket
 
-"TCPSocket specifies an action involving a TCP port."
+"TCPSocket specifies a connection to a TCP port."
 
 ### fn spec.template.spec.ephemeralContainers.livenessProbe.tcpSocket.withHost
 
@@ -6696,7 +6707,7 @@ withTimeoutSeconds(timeoutSeconds)
 
 ## obj spec.template.spec.ephemeralContainers.readinessProbe.exec
 
-"Exec specifies the action to take."
+"Exec specifies a command to execute in the container."
 
 ### fn spec.template.spec.ephemeralContainers.readinessProbe.exec.withCommand
 
@@ -6718,7 +6729,7 @@ withCommandMixin(command)
 
 ## obj spec.template.spec.ephemeralContainers.readinessProbe.grpc
 
-"GRPC specifies an action involving a GRPC port."
+"GRPC specifies a GRPC HealthCheckRequest."
 
 ### fn spec.template.spec.ephemeralContainers.readinessProbe.grpc.withPort
 
@@ -6738,7 +6749,7 @@ withService(service)
 
 ## obj spec.template.spec.ephemeralContainers.readinessProbe.httpGet
 
-"HTTPGet specifies the http request to perform."
+"HTTPGet specifies an HTTP GET request to perform."
 
 ### fn spec.template.spec.ephemeralContainers.readinessProbe.httpGet.withHost
 
@@ -6812,7 +6823,7 @@ withValue(value)
 
 ## obj spec.template.spec.ephemeralContainers.readinessProbe.tcpSocket
 
-"TCPSocket specifies an action involving a TCP port."
+"TCPSocket specifies a connection to a TCP port."
 
 ### fn spec.template.spec.ephemeralContainers.readinessProbe.tcpSocket.withHost
 
@@ -7194,7 +7205,7 @@ withTimeoutSeconds(timeoutSeconds)
 
 ## obj spec.template.spec.ephemeralContainers.startupProbe.exec
 
-"Exec specifies the action to take."
+"Exec specifies a command to execute in the container."
 
 ### fn spec.template.spec.ephemeralContainers.startupProbe.exec.withCommand
 
@@ -7216,7 +7227,7 @@ withCommandMixin(command)
 
 ## obj spec.template.spec.ephemeralContainers.startupProbe.grpc
 
-"GRPC specifies an action involving a GRPC port."
+"GRPC specifies a GRPC HealthCheckRequest."
 
 ### fn spec.template.spec.ephemeralContainers.startupProbe.grpc.withPort
 
@@ -7236,7 +7247,7 @@ withService(service)
 
 ## obj spec.template.spec.ephemeralContainers.startupProbe.httpGet
 
-"HTTPGet specifies the http request to perform."
+"HTTPGet specifies an HTTP GET request to perform."
 
 ### fn spec.template.spec.ephemeralContainers.startupProbe.httpGet.withHost
 
@@ -7310,7 +7321,7 @@ withValue(value)
 
 ## obj spec.template.spec.ephemeralContainers.startupProbe.tcpSocket
 
-"TCPSocket specifies an action involving a TCP port."
+"TCPSocket specifies a connection to a TCP port."
 
 ### fn spec.template.spec.ephemeralContainers.startupProbe.tcpSocket.withHost
 
@@ -7868,7 +7879,7 @@ withOptional(optional)
 
 ## obj spec.template.spec.initContainers.lifecycle.postStart.exec
 
-"Exec specifies the action to take."
+"Exec specifies a command to execute in the container."
 
 ### fn spec.template.spec.initContainers.lifecycle.postStart.exec.withCommand
 
@@ -7890,7 +7901,7 @@ withCommandMixin(command)
 
 ## obj spec.template.spec.initContainers.lifecycle.postStart.httpGet
 
-"HTTPGet specifies the http request to perform."
+"HTTPGet specifies an HTTP GET request to perform."
 
 ### fn spec.template.spec.initContainers.lifecycle.postStart.httpGet.withHost
 
@@ -7964,7 +7975,7 @@ withValue(value)
 
 ## obj spec.template.spec.initContainers.lifecycle.postStart.sleep
 
-"Sleep represents the duration that the container should sleep before being terminated."
+"Sleep represents a duration that the container should sleep."
 
 ### fn spec.template.spec.initContainers.lifecycle.postStart.sleep.withSeconds
 
@@ -7976,7 +7987,7 @@ withSeconds(seconds)
 
 ## obj spec.template.spec.initContainers.lifecycle.postStart.tcpSocket
 
-"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\nfor the backward compatibility. There are no validation of this field and\nlifecycle hooks will fail in runtime when tcp handler is specified."
+"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\nfor backward compatibility. There is no validation of this field and\nlifecycle hooks will fail at runtime when it is specified."
 
 ### fn spec.template.spec.initContainers.lifecycle.postStart.tcpSocket.withHost
 
@@ -8000,7 +8011,7 @@ withPort(port)
 
 ## obj spec.template.spec.initContainers.lifecycle.preStop.exec
 
-"Exec specifies the action to take."
+"Exec specifies a command to execute in the container."
 
 ### fn spec.template.spec.initContainers.lifecycle.preStop.exec.withCommand
 
@@ -8022,7 +8033,7 @@ withCommandMixin(command)
 
 ## obj spec.template.spec.initContainers.lifecycle.preStop.httpGet
 
-"HTTPGet specifies the http request to perform."
+"HTTPGet specifies an HTTP GET request to perform."
 
 ### fn spec.template.spec.initContainers.lifecycle.preStop.httpGet.withHost
 
@@ -8096,7 +8107,7 @@ withValue(value)
 
 ## obj spec.template.spec.initContainers.lifecycle.preStop.sleep
 
-"Sleep represents the duration that the container should sleep before being terminated."
+"Sleep represents a duration that the container should sleep."
 
 ### fn spec.template.spec.initContainers.lifecycle.preStop.sleep.withSeconds
 
@@ -8108,7 +8119,7 @@ withSeconds(seconds)
 
 ## obj spec.template.spec.initContainers.lifecycle.preStop.tcpSocket
 
-"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\nfor the backward compatibility. There are no validation of this field and\nlifecycle hooks will fail in runtime when tcp handler is specified."
+"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\nfor backward compatibility. There is no validation of this field and\nlifecycle hooks will fail at runtime when it is specified."
 
 ### fn spec.template.spec.initContainers.lifecycle.preStop.tcpSocket.withHost
 
@@ -8180,7 +8191,7 @@ withTimeoutSeconds(timeoutSeconds)
 
 ## obj spec.template.spec.initContainers.livenessProbe.exec
 
-"Exec specifies the action to take."
+"Exec specifies a command to execute in the container."
 
 ### fn spec.template.spec.initContainers.livenessProbe.exec.withCommand
 
@@ -8202,7 +8213,7 @@ withCommandMixin(command)
 
 ## obj spec.template.spec.initContainers.livenessProbe.grpc
 
-"GRPC specifies an action involving a GRPC port."
+"GRPC specifies a GRPC HealthCheckRequest."
 
 ### fn spec.template.spec.initContainers.livenessProbe.grpc.withPort
 
@@ -8222,7 +8233,7 @@ withService(service)
 
 ## obj spec.template.spec.initContainers.livenessProbe.httpGet
 
-"HTTPGet specifies the http request to perform."
+"HTTPGet specifies an HTTP GET request to perform."
 
 ### fn spec.template.spec.initContainers.livenessProbe.httpGet.withHost
 
@@ -8296,7 +8307,7 @@ withValue(value)
 
 ## obj spec.template.spec.initContainers.livenessProbe.tcpSocket
 
-"TCPSocket specifies an action involving a TCP port."
+"TCPSocket specifies a connection to a TCP port."
 
 ### fn spec.template.spec.initContainers.livenessProbe.tcpSocket.withHost
 
@@ -8412,7 +8423,7 @@ withTimeoutSeconds(timeoutSeconds)
 
 ## obj spec.template.spec.initContainers.readinessProbe.exec
 
-"Exec specifies the action to take."
+"Exec specifies a command to execute in the container."
 
 ### fn spec.template.spec.initContainers.readinessProbe.exec.withCommand
 
@@ -8434,7 +8445,7 @@ withCommandMixin(command)
 
 ## obj spec.template.spec.initContainers.readinessProbe.grpc
 
-"GRPC specifies an action involving a GRPC port."
+"GRPC specifies a GRPC HealthCheckRequest."
 
 ### fn spec.template.spec.initContainers.readinessProbe.grpc.withPort
 
@@ -8454,7 +8465,7 @@ withService(service)
 
 ## obj spec.template.spec.initContainers.readinessProbe.httpGet
 
-"HTTPGet specifies the http request to perform."
+"HTTPGet specifies an HTTP GET request to perform."
 
 ### fn spec.template.spec.initContainers.readinessProbe.httpGet.withHost
 
@@ -8528,7 +8539,7 @@ withValue(value)
 
 ## obj spec.template.spec.initContainers.readinessProbe.tcpSocket
 
-"TCPSocket specifies an action involving a TCP port."
+"TCPSocket specifies a connection to a TCP port."
 
 ### fn spec.template.spec.initContainers.readinessProbe.tcpSocket.withHost
 
@@ -8910,7 +8921,7 @@ withTimeoutSeconds(timeoutSeconds)
 
 ## obj spec.template.spec.initContainers.startupProbe.exec
 
-"Exec specifies the action to take."
+"Exec specifies a command to execute in the container."
 
 ### fn spec.template.spec.initContainers.startupProbe.exec.withCommand
 
@@ -8932,7 +8943,7 @@ withCommandMixin(command)
 
 ## obj spec.template.spec.initContainers.startupProbe.grpc
 
-"GRPC specifies an action involving a GRPC port."
+"GRPC specifies a GRPC HealthCheckRequest."
 
 ### fn spec.template.spec.initContainers.startupProbe.grpc.withPort
 
@@ -8952,7 +8963,7 @@ withService(service)
 
 ## obj spec.template.spec.initContainers.startupProbe.httpGet
 
-"HTTPGet specifies the http request to perform."
+"HTTPGet specifies an HTTP GET request to perform."
 
 ### fn spec.template.spec.initContainers.startupProbe.httpGet.withHost
 
@@ -9026,7 +9037,7 @@ withValue(value)
 
 ## obj spec.template.spec.initContainers.startupProbe.tcpSocket
 
-"TCPSocket specifies an action involving a TCP port."
+"TCPSocket specifies a connection to a TCP port."
 
 ### fn spec.template.spec.initContainers.startupProbe.tcpSocket.withHost
 
@@ -9176,6 +9187,84 @@ withResourceClaimTemplateName(resourceClaimTemplateName)
 
 "ResourceClaimTemplateName is the name of a ResourceClaimTemplate\nobject in the same namespace as this pod.\n\nThe template will be used to create a new ResourceClaim, which will\nbe bound to this pod. When this pod is deleted, the ResourceClaim\nwill also be deleted. The pod name and resource name, along with a\ngenerated component, will be used to form a unique name for the\nResourceClaim, which will be recorded in pod.status.resourceClaimStatuses.\n\nThis field is immutable and no changes will be made to the\ncorresponding ResourceClaim by the control plane after creating the\nResourceClaim.\n\nExactly one of ResourceClaimName and ResourceClaimTemplateName must\nbe set."
 
+## obj spec.template.spec.resources
+
+"Resources is the total amount of CPU and Memory resources required by all\ncontainers in the pod. It supports specifying Requests and Limits for\n\"cpu\" and \"memory\" resource names only. ResourceClaims are not supported.\n\nThis field enables fine-grained control over resource allocation for the\nentire pod, allowing resource sharing among containers in a pod.\n\nThis is an alpha field and requires enabling the PodLevelResources feature\ngate."
+
+### fn spec.template.spec.resources.withClaims
+
+```ts
+withClaims(claims)
+```
+
+"Claims lists the names of resources, defined in spec.resourceClaims,\nthat are used by this container.\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\nThis field is immutable. It can only be set for containers."
+
+### fn spec.template.spec.resources.withClaimsMixin
+
+```ts
+withClaimsMixin(claims)
+```
+
+"Claims lists the names of resources, defined in spec.resourceClaims,\nthat are used by this container.\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\nThis field is immutable. It can only be set for containers."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.template.spec.resources.withLimits
+
+```ts
+withLimits(limits)
+```
+
+"Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+
+### fn spec.template.spec.resources.withLimitsMixin
+
+```ts
+withLimitsMixin(limits)
+```
+
+"Limits describes the maximum amount of compute resources allowed.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.template.spec.resources.withRequests
+
+```ts
+withRequests(requests)
+```
+
+"Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value. Requests cannot exceed Limits.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+
+### fn spec.template.spec.resources.withRequestsMixin
+
+```ts
+withRequestsMixin(requests)
+```
+
+"Requests describes the minimum amount of compute resources required.\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\notherwise to an implementation-defined value. Requests cannot exceed Limits.\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.template.spec.resources.claims
+
+"Claims lists the names of resources, defined in spec.resourceClaims,\nthat are used by this container.\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\nThis field is immutable. It can only be set for containers."
+
+### fn spec.template.spec.resources.claims.withName
+
+```ts
+withName(name)
+```
+
+"Name must match the name of one entry in pod.spec.resourceClaims of\nthe Pod where this field is used. It makes that resource available\ninside a container."
+
+### fn spec.template.spec.resources.claims.withRequest
+
+```ts
+withRequest(request)
+```
+
+"Request is the name chosen for a request in the referenced claim.\nIf empty, everything from the claim is made available, otherwise\nonly the result of this request."
+
 ## obj spec.template.spec.schedulingGates
 
 "SchedulingGates is an opaque list of values that if specified will block scheduling the pod.\nIf schedulingGates is not empty, the pod will stay in the SchedulingGated state and the\nscheduler will not attempt to schedule the pod.\n\nSchedulingGates can only be set at pod creation time, and be removed only afterwards."
@@ -9231,6 +9320,14 @@ withRunAsUser(runAsUser)
 ```
 
 "The UID to run the entrypoint of the container process.\nDefaults to user specified in image metadata if unspecified.\nMay also be set in SecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence\nfor that container.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.template.spec.securityContext.withSeLinuxChangePolicy
+
+```ts
+withSeLinuxChangePolicy(seLinuxChangePolicy)
+```
+
+"seLinuxChangePolicy defines how the container's SELinux label is applied to all volumes used by the Pod.\nIt has no effect on nodes that do not support SELinux or to volumes does not support SELinux.\nValid values are \"MountOption\" and \"Recursive\".\n\n\"Recursive\" means relabeling of all files on all Pod volumes by the container runtime.\nThis may be slow for large volumes, but allows mixing privileged and unprivileged Pods sharing the same volume on the same node.\n\n\"MountOption\" mounts all eligible Pod volumes with `-o context` mount option.\nThis requires all Pods that share the same volume to use the same SELinux label.\nIt is not possible to share the same volume among privileged and unprivileged Pods.\nEligible volumes are in-tree FibreChannel and iSCSI volumes, and all CSI volumes\nwhose CSI driver announces SELinux support by setting spec.seLinuxMount: true in their\nCSIDriver instance. Other volumes are always re-labelled recursively.\n\"MountOption\" value is allowed only when SELinuxMount feature gate is enabled.\n\nIf not specified and SELinuxMount feature gate is enabled, \"MountOption\" is used.\nIf not specified and SELinuxMount feature gate is disabled, \"MountOption\" is used for ReadWriteOncePod volumes\nand \"Recursive\" for all other volumes.\n\nThis field affects only Pods that have SELinux label set, either in PodSecurityContext or in SecurityContext of all containers.\n\nAll Pods that use the same volume should use the same seLinuxChangePolicy, otherwise some pods can get stuck in ContainerCreating state.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.template.spec.securityContext.withSupplementalGroups
 
@@ -9614,7 +9711,7 @@ withName(name)
 
 ## obj spec.template.spec.volumes.awsElasticBlockStore
 
-"awsElasticBlockStore represents an AWS Disk resource that is attached to a\nkubelet's host machine and then exposed to the pod.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore"
+"awsElasticBlockStore represents an AWS Disk resource that is attached to a\nkubelet's host machine and then exposed to the pod.\nDeprecated: AWSElasticBlockStore is deprecated. All operations for the in-tree\nawsElasticBlockStore type are redirected to the ebs.csi.aws.com CSI driver.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore"
 
 ### fn spec.template.spec.volumes.awsElasticBlockStore.withFsType
 
@@ -9650,7 +9747,7 @@ withVolumeID(volumeID)
 
 ## obj spec.template.spec.volumes.azureDisk
 
-"azureDisk represents an Azure Data Disk mount on the host and bind mount to the pod."
+"azureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.\nDeprecated: AzureDisk is deprecated. All operations for the in-tree azureDisk type\nare redirected to the disk.csi.azure.com CSI driver."
 
 ### fn spec.template.spec.volumes.azureDisk.withCachingMode
 
@@ -9702,7 +9799,7 @@ withReadOnly(readOnly)
 
 ## obj spec.template.spec.volumes.azureFile
 
-"azureFile represents an Azure File Service mount on the host and bind mount to the pod."
+"azureFile represents an Azure File Service mount on the host and bind mount to the pod.\nDeprecated: AzureFile is deprecated. All operations for the in-tree azureFile type\nare redirected to the file.csi.azure.com CSI driver."
 
 ### fn spec.template.spec.volumes.azureFile.withReadOnly
 
@@ -9730,7 +9827,7 @@ withShareName(shareName)
 
 ## obj spec.template.spec.volumes.cephfs
 
-"cephFS represents a Ceph FS mount on the host that shares a pod's lifetime"
+"cephFS represents a Ceph FS mount on the host that shares a pod's lifetime.\nDeprecated: CephFS is deprecated and the in-tree cephfs type is no longer supported."
 
 ### fn spec.template.spec.volumes.cephfs.withMonitors
 
@@ -9796,7 +9893,7 @@ withName(name)
 
 ## obj spec.template.spec.volumes.cinder
 
-"cinder represents a cinder volume attached and mounted on kubelets host machine.\nMore info: https://examples.k8s.io/mysql-cinder-pd/README.md"
+"cinder represents a cinder volume attached and mounted on kubelets host machine.\nDeprecated: Cinder is deprecated. All operations for the in-tree cinder type\nare redirected to the cinder.csi.openstack.org CSI driver.\nMore info: https://examples.k8s.io/mysql-cinder-pd/README.md"
 
 ### fn spec.template.spec.volumes.cinder.withFsType
 
@@ -9910,7 +10007,7 @@ withPath(path)
 
 ## obj spec.template.spec.volumes.csi
 
-"csi (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature)."
+"csi (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers."
 
 ### fn spec.template.spec.volumes.csi.withDriver
 
@@ -10412,7 +10509,7 @@ withWwidsMixin(wwids)
 
 ## obj spec.template.spec.volumes.flexVolume
 
-"flexVolume represents a generic volume resource that is\nprovisioned/attached using an exec based plugin."
+"flexVolume represents a generic volume resource that is\nprovisioned/attached using an exec based plugin.\nDeprecated: FlexVolume is deprecated. Consider using a CSIDriver instead."
 
 ### fn spec.template.spec.volumes.flexVolume.withDriver
 
@@ -10470,7 +10567,7 @@ withName(name)
 
 ## obj spec.template.spec.volumes.flocker
 
-"flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running"
+"flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running.\nDeprecated: Flocker is deprecated and the in-tree flocker type is no longer supported."
 
 ### fn spec.template.spec.volumes.flocker.withDatasetName
 
@@ -10490,7 +10587,7 @@ withDatasetUUID(datasetUUID)
 
 ## obj spec.template.spec.volumes.gcePersistentDisk
 
-"gcePersistentDisk represents a GCE Disk resource that is attached to a\nkubelet's host machine and then exposed to the pod.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk"
+"gcePersistentDisk represents a GCE Disk resource that is attached to a\nkubelet's host machine and then exposed to the pod.\nDeprecated: GCEPersistentDisk is deprecated. All operations for the in-tree\ngcePersistentDisk type are redirected to the pd.csi.storage.gke.io CSI driver.\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk"
 
 ### fn spec.template.spec.volumes.gcePersistentDisk.withFsType
 
@@ -10526,7 +10623,7 @@ withReadOnly(readOnly)
 
 ## obj spec.template.spec.volumes.gitRepo
 
-"gitRepo represents a git repository at a particular revision.\nDEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an\nEmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir\ninto the Pod's container."
+"gitRepo represents a git repository at a particular revision.\nDeprecated: GitRepo is deprecated. To provision a container with a git repo, mount an\nEmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir\ninto the Pod's container."
 
 ### fn spec.template.spec.volumes.gitRepo.withDirectory
 
@@ -10554,7 +10651,7 @@ withRevision(revision)
 
 ## obj spec.template.spec.volumes.glusterfs
 
-"glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime.\nMore info: https://examples.k8s.io/volumes/glusterfs/README.md"
+"glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime.\nDeprecated: Glusterfs is deprecated and the in-tree glusterfs type is no longer supported.\nMore info: https://examples.k8s.io/volumes/glusterfs/README.md"
 
 ### fn spec.template.spec.volumes.glusterfs.withEndpoints
 
@@ -10776,7 +10873,7 @@ withReadOnly(readOnly)
 
 ## obj spec.template.spec.volumes.photonPersistentDisk
 
-"photonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine"
+"photonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine.\nDeprecated: PhotonPersistentDisk is deprecated and the in-tree photonPersistentDisk type is no longer supported."
 
 ### fn spec.template.spec.volumes.photonPersistentDisk.withFsType
 
@@ -10796,7 +10893,7 @@ withPdID(pdID)
 
 ## obj spec.template.spec.volumes.portworxVolume
 
-"portworxVolume represents a portworx volume attached and mounted on kubelets host machine"
+"portworxVolume represents a portworx volume attached and mounted on kubelets host machine.\nDeprecated: PortworxVolume is deprecated. All operations for the in-tree portworxVolume type\nare redirected to the pxd.portworx.com CSI driver when the CSIMigrationPortworx feature-gate\nis on."
 
 ### fn spec.template.spec.volumes.portworxVolume.withFsType
 
@@ -11222,7 +11319,7 @@ withPath(path)
 
 ## obj spec.template.spec.volumes.quobyte
 
-"quobyte represents a Quobyte mount on the host that shares a pod's lifetime"
+"quobyte represents a Quobyte mount on the host that shares a pod's lifetime.\nDeprecated: Quobyte is deprecated and the in-tree quobyte type is no longer supported."
 
 ### fn spec.template.spec.volumes.quobyte.withGroup
 
@@ -11274,7 +11371,7 @@ withVolume(volume)
 
 ## obj spec.template.spec.volumes.rbd
 
-"rbd represents a Rados Block Device mount on the host that shares a pod's lifetime.\nMore info: https://examples.k8s.io/volumes/rbd/README.md"
+"rbd represents a Rados Block Device mount on the host that shares a pod's lifetime.\nDeprecated: RBD is deprecated and the in-tree rbd type is no longer supported.\nMore info: https://examples.k8s.io/volumes/rbd/README.md"
 
 ### fn spec.template.spec.volumes.rbd.withFsType
 
@@ -11356,7 +11453,7 @@ withName(name)
 
 ## obj spec.template.spec.volumes.scaleIO
 
-"scaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes."
+"scaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.\nDeprecated: ScaleIO is deprecated and the in-tree scaleIO type is no longer supported."
 
 ### fn spec.template.spec.volumes.scaleIO.withFsType
 
@@ -11518,7 +11615,7 @@ withPath(path)
 
 ## obj spec.template.spec.volumes.storageos
 
-"storageOS represents a StorageOS volume attached and mounted on Kubernetes nodes."
+"storageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.\nDeprecated: StorageOS is deprecated and the in-tree storageos type is no longer supported."
 
 ### fn spec.template.spec.volumes.storageos.withFsType
 
@@ -11566,7 +11663,7 @@ withName(name)
 
 ## obj spec.template.spec.volumes.vsphereVolume
 
-"vsphereVolume represents a vSphere volume attached and mounted on kubelets host machine"
+"vsphereVolume represents a vSphere volume attached and mounted on kubelets host machine.\nDeprecated: VsphereVolume is deprecated. All operations for the in-tree vsphereVolume type\nare redirected to the csi.vsphere.vmware.com CSI driver."
 
 ### fn spec.template.spec.volumes.vsphereVolume.withFsType
 

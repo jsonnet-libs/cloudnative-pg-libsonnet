@@ -225,7 +225,7 @@
         withSelectorMixin(selector): { spec+: { serviceTemplate+: { spec+: { selector+: selector } } } },
         '#withSessionAffinity':: d.fn(help='"Supports \\"ClientIP\\" and \\"None\\". Used to maintain session affinity.\\nEnable client IP based session affinity.\\nMust be ClientIP or None.\\nDefaults to None.\\nMore info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies"', args=[d.arg(name='sessionAffinity', type=d.T.string)]),
         withSessionAffinity(sessionAffinity): { spec+: { serviceTemplate+: { spec+: { sessionAffinity: sessionAffinity } } } },
-        '#withTrafficDistribution':: d.fn(help='"TrafficDistribution offers a way to express preferences for how traffic is\\ndistributed to Service endpoints. Implementations can use this field as a\\nhint, but are not required to guarantee strict adherence. If the field is\\nnot set, the implementation will apply its default routing strategy. If set\\nto \\"PreferClose\\", implementations should prioritize endpoints that are\\ntopologically close (e.g., same zone).\\nThis is an alpha field and requires enabling ServiceTrafficDistribution feature."', args=[d.arg(name='trafficDistribution', type=d.T.string)]),
+        '#withTrafficDistribution':: d.fn(help='"TrafficDistribution offers a way to express preferences for how traffic is\\ndistributed to Service endpoints. Implementations can use this field as a\\nhint, but are not required to guarantee strict adherence. If the field is\\nnot set, the implementation will apply its default routing strategy. If set\\nto \\"PreferClose\\", implementations should prioritize endpoints that are\\ntopologically close (e.g., same zone).\\nThis is a beta field and requires enabling ServiceTrafficDistribution feature."', args=[d.arg(name='trafficDistribution', type=d.T.string)]),
         withTrafficDistribution(trafficDistribution): { spec+: { serviceTemplate+: { spec+: { trafficDistribution: trafficDistribution } } } },
         '#withType':: d.fn(help='"type determines how the Service is exposed. Defaults to ClusterIP. Valid\\noptions are ExternalName, ClusterIP, NodePort, and LoadBalancer.\\n\\"ClusterIP\\" allocates a cluster-internal IP address for load-balancing\\nto endpoints. Endpoints are determined by the selector or if that is not\\nspecified, by manual construction of an Endpoints object or\\nEndpointSlice objects. If clusterIP is \\"None\\", no virtual IP is\\nallocated and the endpoints are published as a set of endpoints rather\\nthan a virtual IP.\\n\\"NodePort\\" builds on ClusterIP and allocates a port on every node which\\nroutes to the same endpoints as the clusterIP.\\n\\"LoadBalancer\\" builds on NodePort and creates an external load-balancer\\n(if supported in the current cloud) which routes to the same endpoints\\nas the clusterIP.\\n\\"ExternalName\\" aliases this service to the specified externalName.\\nSeveral other fields do not apply to ExternalName services.\\nMore info: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types"', args=[d.arg(name='type', type=d.T.string)]),
         withType(type): { spec+: { serviceTemplate+: { spec+: { type: type } } } },
@@ -681,14 +681,14 @@
           lifecycle: {
             '#postStart':: d.obj(help='"PostStart is called immediately after a container is created. If the handler fails,\\nthe container is terminated and restarted according to its restart policy.\\nOther management of the container blocks until the hook completes.\\nMore info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks"'),
             postStart: {
-              '#exec':: d.obj(help='"Exec specifies the action to take."'),
+              '#exec':: d.obj(help='"Exec specifies a command to execute in the container."'),
               exec: {
                 '#withCommand':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"", args=[d.arg(name='command', type=d.T.array)]),
                 withCommand(command): { lifecycle+: { postStart+: { exec+: { command: if std.isArray(v=command) then command else [command] } } } },
                 '#withCommandMixin':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='command', type=d.T.array)]),
                 withCommandMixin(command): { lifecycle+: { postStart+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } } },
               },
-              '#httpGet':: d.obj(help='"HTTPGet specifies the http request to perform."'),
+              '#httpGet':: d.obj(help='"HTTPGet specifies an HTTP GET request to perform."'),
               httpGet: {
                 '#httpHeaders':: d.obj(help='"Custom headers to set in the request. HTTP allows repeated headers."'),
                 httpHeaders: {
@@ -710,12 +710,12 @@
                 '#withScheme':: d.fn(help='"Scheme to use for connecting to the host.\\nDefaults to HTTP."', args=[d.arg(name='scheme', type=d.T.string)]),
                 withScheme(scheme): { lifecycle+: { postStart+: { httpGet+: { scheme: scheme } } } },
               },
-              '#sleep':: d.obj(help='"Sleep represents the duration that the container should sleep before being terminated."'),
+              '#sleep':: d.obj(help='"Sleep represents a duration that the container should sleep."'),
               sleep: {
                 '#withSeconds':: d.fn(help='"Seconds is the number of seconds to sleep."', args=[d.arg(name='seconds', type=d.T.integer)]),
                 withSeconds(seconds): { lifecycle+: { postStart+: { sleep+: { seconds: seconds } } } },
               },
-              '#tcpSocket':: d.obj(help='"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\\nfor the backward compatibility. There are no validation of this field and\\nlifecycle hooks will fail in runtime when tcp handler is specified."'),
+              '#tcpSocket':: d.obj(help='"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\\nfor backward compatibility. There is no validation of this field and\\nlifecycle hooks will fail at runtime when it is specified."'),
               tcpSocket: {
                 '#withHost':: d.fn(help='"Optional: Host name to connect to, defaults to the pod IP."', args=[d.arg(name='host', type=d.T.string)]),
                 withHost(host): { lifecycle+: { postStart+: { tcpSocket+: { host: host } } } },
@@ -725,14 +725,14 @@
             },
             '#preStop':: d.obj(help="\"PreStop is called immediately before a container is terminated due to an\\nAPI request or management event such as liveness/startup probe failure,\\npreemption, resource contention, etc. The handler is not called if the\\ncontainer crashes or exits. The Pod's termination grace period countdown begins before the\\nPreStop hook is executed. Regardless of the outcome of the handler, the\\ncontainer will eventually terminate within the Pod's termination grace\\nperiod (unless delayed by finalizers). Other management of the container blocks until the hook completes\\nor until the termination grace period is reached.\\nMore info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks\""),
             preStop: {
-              '#exec':: d.obj(help='"Exec specifies the action to take."'),
+              '#exec':: d.obj(help='"Exec specifies a command to execute in the container."'),
               exec: {
                 '#withCommand':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"", args=[d.arg(name='command', type=d.T.array)]),
                 withCommand(command): { lifecycle+: { preStop+: { exec+: { command: if std.isArray(v=command) then command else [command] } } } },
                 '#withCommandMixin':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='command', type=d.T.array)]),
                 withCommandMixin(command): { lifecycle+: { preStop+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } } },
               },
-              '#httpGet':: d.obj(help='"HTTPGet specifies the http request to perform."'),
+              '#httpGet':: d.obj(help='"HTTPGet specifies an HTTP GET request to perform."'),
               httpGet: {
                 '#httpHeaders':: d.obj(help='"Custom headers to set in the request. HTTP allows repeated headers."'),
                 httpHeaders: {
@@ -754,12 +754,12 @@
                 '#withScheme':: d.fn(help='"Scheme to use for connecting to the host.\\nDefaults to HTTP."', args=[d.arg(name='scheme', type=d.T.string)]),
                 withScheme(scheme): { lifecycle+: { preStop+: { httpGet+: { scheme: scheme } } } },
               },
-              '#sleep':: d.obj(help='"Sleep represents the duration that the container should sleep before being terminated."'),
+              '#sleep':: d.obj(help='"Sleep represents a duration that the container should sleep."'),
               sleep: {
                 '#withSeconds':: d.fn(help='"Seconds is the number of seconds to sleep."', args=[d.arg(name='seconds', type=d.T.integer)]),
                 withSeconds(seconds): { lifecycle+: { preStop+: { sleep+: { seconds: seconds } } } },
               },
-              '#tcpSocket':: d.obj(help='"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\\nfor the backward compatibility. There are no validation of this field and\\nlifecycle hooks will fail in runtime when tcp handler is specified."'),
+              '#tcpSocket':: d.obj(help='"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\\nfor backward compatibility. There is no validation of this field and\\nlifecycle hooks will fail at runtime when it is specified."'),
               tcpSocket: {
                 '#withHost':: d.fn(help='"Optional: Host name to connect to, defaults to the pod IP."', args=[d.arg(name='host', type=d.T.string)]),
                 withHost(host): { lifecycle+: { preStop+: { tcpSocket+: { host: host } } } },
@@ -770,21 +770,21 @@
           },
           '#livenessProbe':: d.obj(help='"Periodic probe of container liveness.\\nContainer will be restarted if the probe fails.\\nCannot be updated.\\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"'),
           livenessProbe: {
-            '#exec':: d.obj(help='"Exec specifies the action to take."'),
+            '#exec':: d.obj(help='"Exec specifies a command to execute in the container."'),
             exec: {
               '#withCommand':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"", args=[d.arg(name='command', type=d.T.array)]),
               withCommand(command): { livenessProbe+: { exec+: { command: if std.isArray(v=command) then command else [command] } } },
               '#withCommandMixin':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='command', type=d.T.array)]),
               withCommandMixin(command): { livenessProbe+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } },
             },
-            '#grpc':: d.obj(help='"GRPC specifies an action involving a GRPC port."'),
+            '#grpc':: d.obj(help='"GRPC specifies a GRPC HealthCheckRequest."'),
             grpc: {
               '#withPort':: d.fn(help='"Port number of the gRPC service. Number must be in the range 1 to 65535."', args=[d.arg(name='port', type=d.T.integer)]),
               withPort(port): { livenessProbe+: { grpc+: { port: port } } },
               '#withService':: d.fn(help='"Service is the name of the service to place in the gRPC HealthCheckRequest\\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\\n\\nIf this is not specified, the default behavior is defined by gRPC."', args=[d.arg(name='service', type=d.T.string)]),
               withService(service): { livenessProbe+: { grpc+: { service: service } } },
             },
-            '#httpGet':: d.obj(help='"HTTPGet specifies the http request to perform."'),
+            '#httpGet':: d.obj(help='"HTTPGet specifies an HTTP GET request to perform."'),
             httpGet: {
               '#httpHeaders':: d.obj(help='"Custom headers to set in the request. HTTP allows repeated headers."'),
               httpHeaders: {
@@ -806,7 +806,7 @@
               '#withScheme':: d.fn(help='"Scheme to use for connecting to the host.\\nDefaults to HTTP."', args=[d.arg(name='scheme', type=d.T.string)]),
               withScheme(scheme): { livenessProbe+: { httpGet+: { scheme: scheme } } },
             },
-            '#tcpSocket':: d.obj(help='"TCPSocket specifies an action involving a TCP port."'),
+            '#tcpSocket':: d.obj(help='"TCPSocket specifies a connection to a TCP port."'),
             tcpSocket: {
               '#withHost':: d.fn(help='"Optional: Host name to connect to, defaults to the pod IP."', args=[d.arg(name='host', type=d.T.string)]),
               withHost(host): { livenessProbe+: { tcpSocket+: { host: host } } },
@@ -841,21 +841,21 @@
           },
           '#readinessProbe':: d.obj(help='"Periodic probe of container service readiness.\\nContainer will be removed from service endpoints if the probe fails.\\nCannot be updated.\\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"'),
           readinessProbe: {
-            '#exec':: d.obj(help='"Exec specifies the action to take."'),
+            '#exec':: d.obj(help='"Exec specifies a command to execute in the container."'),
             exec: {
               '#withCommand':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"", args=[d.arg(name='command', type=d.T.array)]),
               withCommand(command): { readinessProbe+: { exec+: { command: if std.isArray(v=command) then command else [command] } } },
               '#withCommandMixin':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='command', type=d.T.array)]),
               withCommandMixin(command): { readinessProbe+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } },
             },
-            '#grpc':: d.obj(help='"GRPC specifies an action involving a GRPC port."'),
+            '#grpc':: d.obj(help='"GRPC specifies a GRPC HealthCheckRequest."'),
             grpc: {
               '#withPort':: d.fn(help='"Port number of the gRPC service. Number must be in the range 1 to 65535."', args=[d.arg(name='port', type=d.T.integer)]),
               withPort(port): { readinessProbe+: { grpc+: { port: port } } },
               '#withService':: d.fn(help='"Service is the name of the service to place in the gRPC HealthCheckRequest\\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\\n\\nIf this is not specified, the default behavior is defined by gRPC."', args=[d.arg(name='service', type=d.T.string)]),
               withService(service): { readinessProbe+: { grpc+: { service: service } } },
             },
-            '#httpGet':: d.obj(help='"HTTPGet specifies the http request to perform."'),
+            '#httpGet':: d.obj(help='"HTTPGet specifies an HTTP GET request to perform."'),
             httpGet: {
               '#httpHeaders':: d.obj(help='"Custom headers to set in the request. HTTP allows repeated headers."'),
               httpHeaders: {
@@ -877,7 +877,7 @@
               '#withScheme':: d.fn(help='"Scheme to use for connecting to the host.\\nDefaults to HTTP."', args=[d.arg(name='scheme', type=d.T.string)]),
               withScheme(scheme): { readinessProbe+: { httpGet+: { scheme: scheme } } },
             },
-            '#tcpSocket':: d.obj(help='"TCPSocket specifies an action involving a TCP port."'),
+            '#tcpSocket':: d.obj(help='"TCPSocket specifies a connection to a TCP port."'),
             tcpSocket: {
               '#withHost':: d.fn(help='"Optional: Host name to connect to, defaults to the pod IP."', args=[d.arg(name='host', type=d.T.string)]),
               withHost(host): { readinessProbe+: { tcpSocket+: { host: host } } },
@@ -992,21 +992,21 @@
           },
           '#startupProbe':: d.obj(help="\"StartupProbe indicates that the Pod has successfully initialized.\\nIf specified, no other probes are executed until this completes successfully.\\nIf this probe fails, the Pod will be restarted, just as if the livenessProbe failed.\\nThis can be used to provide different probe parameters at the beginning of a Pod's lifecycle,\\nwhen it might take a long time to load data or warm a cache, than during steady-state operation.\\nThis cannot be updated.\\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes\""),
           startupProbe: {
-            '#exec':: d.obj(help='"Exec specifies the action to take."'),
+            '#exec':: d.obj(help='"Exec specifies a command to execute in the container."'),
             exec: {
               '#withCommand':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"", args=[d.arg(name='command', type=d.T.array)]),
               withCommand(command): { startupProbe+: { exec+: { command: if std.isArray(v=command) then command else [command] } } },
               '#withCommandMixin':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='command', type=d.T.array)]),
               withCommandMixin(command): { startupProbe+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } },
             },
-            '#grpc':: d.obj(help='"GRPC specifies an action involving a GRPC port."'),
+            '#grpc':: d.obj(help='"GRPC specifies a GRPC HealthCheckRequest."'),
             grpc: {
               '#withPort':: d.fn(help='"Port number of the gRPC service. Number must be in the range 1 to 65535."', args=[d.arg(name='port', type=d.T.integer)]),
               withPort(port): { startupProbe+: { grpc+: { port: port } } },
               '#withService':: d.fn(help='"Service is the name of the service to place in the gRPC HealthCheckRequest\\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\\n\\nIf this is not specified, the default behavior is defined by gRPC."', args=[d.arg(name='service', type=d.T.string)]),
               withService(service): { startupProbe+: { grpc+: { service: service } } },
             },
-            '#httpGet':: d.obj(help='"HTTPGet specifies the http request to perform."'),
+            '#httpGet':: d.obj(help='"HTTPGet specifies an HTTP GET request to perform."'),
             httpGet: {
               '#httpHeaders':: d.obj(help='"Custom headers to set in the request. HTTP allows repeated headers."'),
               httpHeaders: {
@@ -1028,7 +1028,7 @@
               '#withScheme':: d.fn(help='"Scheme to use for connecting to the host.\\nDefaults to HTTP."', args=[d.arg(name='scheme', type=d.T.string)]),
               withScheme(scheme): { startupProbe+: { httpGet+: { scheme: scheme } } },
             },
-            '#tcpSocket':: d.obj(help='"TCPSocket specifies an action involving a TCP port."'),
+            '#tcpSocket':: d.obj(help='"TCPSocket specifies a connection to a TCP port."'),
             tcpSocket: {
               '#withHost':: d.fn(help='"Optional: Host name to connect to, defaults to the pod IP."', args=[d.arg(name='host', type=d.T.string)]),
               withHost(host): { startupProbe+: { tcpSocket+: { host: host } } },
@@ -1129,9 +1129,9 @@
         dnsConfig: {
           '#options':: d.obj(help='"A list of DNS resolver options.\\nThis will be merged with the base options generated from DNSPolicy.\\nDuplicated entries will be removed. Resolution options given in Options\\nwill override those that appear in the base DNSPolicy."'),
           options: {
-            '#withName':: d.fn(help='"Required."', args=[d.arg(name='name', type=d.T.string)]),
+            '#withName':: d.fn(help="\"Name is this DNS resolver option's name.\\nRequired.\"", args=[d.arg(name='name', type=d.T.string)]),
             withName(name): { name: name },
-            '#withValue':: d.fn(help='', args=[d.arg(name='value', type=d.T.string)]),
+            '#withValue':: d.fn(help="\"Value is this DNS resolver option's value.\"", args=[d.arg(name='value', type=d.T.string)]),
             withValue(value): { value: value },
           },
           '#withNameservers':: d.fn(help='"A list of DNS name server IP addresses.\\nThis will be appended to the base nameservers generated from DNSPolicy.\\nDuplicated nameservers will be removed."', args=[d.arg(name='nameservers', type=d.T.array)]),
@@ -1216,14 +1216,14 @@
           lifecycle: {
             '#postStart':: d.obj(help='"PostStart is called immediately after a container is created. If the handler fails,\\nthe container is terminated and restarted according to its restart policy.\\nOther management of the container blocks until the hook completes.\\nMore info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks"'),
             postStart: {
-              '#exec':: d.obj(help='"Exec specifies the action to take."'),
+              '#exec':: d.obj(help='"Exec specifies a command to execute in the container."'),
               exec: {
                 '#withCommand':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"", args=[d.arg(name='command', type=d.T.array)]),
                 withCommand(command): { lifecycle+: { postStart+: { exec+: { command: if std.isArray(v=command) then command else [command] } } } },
                 '#withCommandMixin':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='command', type=d.T.array)]),
                 withCommandMixin(command): { lifecycle+: { postStart+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } } },
               },
-              '#httpGet':: d.obj(help='"HTTPGet specifies the http request to perform."'),
+              '#httpGet':: d.obj(help='"HTTPGet specifies an HTTP GET request to perform."'),
               httpGet: {
                 '#httpHeaders':: d.obj(help='"Custom headers to set in the request. HTTP allows repeated headers."'),
                 httpHeaders: {
@@ -1245,12 +1245,12 @@
                 '#withScheme':: d.fn(help='"Scheme to use for connecting to the host.\\nDefaults to HTTP."', args=[d.arg(name='scheme', type=d.T.string)]),
                 withScheme(scheme): { lifecycle+: { postStart+: { httpGet+: { scheme: scheme } } } },
               },
-              '#sleep':: d.obj(help='"Sleep represents the duration that the container should sleep before being terminated."'),
+              '#sleep':: d.obj(help='"Sleep represents a duration that the container should sleep."'),
               sleep: {
                 '#withSeconds':: d.fn(help='"Seconds is the number of seconds to sleep."', args=[d.arg(name='seconds', type=d.T.integer)]),
                 withSeconds(seconds): { lifecycle+: { postStart+: { sleep+: { seconds: seconds } } } },
               },
-              '#tcpSocket':: d.obj(help='"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\\nfor the backward compatibility. There are no validation of this field and\\nlifecycle hooks will fail in runtime when tcp handler is specified."'),
+              '#tcpSocket':: d.obj(help='"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\\nfor backward compatibility. There is no validation of this field and\\nlifecycle hooks will fail at runtime when it is specified."'),
               tcpSocket: {
                 '#withHost':: d.fn(help='"Optional: Host name to connect to, defaults to the pod IP."', args=[d.arg(name='host', type=d.T.string)]),
                 withHost(host): { lifecycle+: { postStart+: { tcpSocket+: { host: host } } } },
@@ -1260,14 +1260,14 @@
             },
             '#preStop':: d.obj(help="\"PreStop is called immediately before a container is terminated due to an\\nAPI request or management event such as liveness/startup probe failure,\\npreemption, resource contention, etc. The handler is not called if the\\ncontainer crashes or exits. The Pod's termination grace period countdown begins before the\\nPreStop hook is executed. Regardless of the outcome of the handler, the\\ncontainer will eventually terminate within the Pod's termination grace\\nperiod (unless delayed by finalizers). Other management of the container blocks until the hook completes\\nor until the termination grace period is reached.\\nMore info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks\""),
             preStop: {
-              '#exec':: d.obj(help='"Exec specifies the action to take."'),
+              '#exec':: d.obj(help='"Exec specifies a command to execute in the container."'),
               exec: {
                 '#withCommand':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"", args=[d.arg(name='command', type=d.T.array)]),
                 withCommand(command): { lifecycle+: { preStop+: { exec+: { command: if std.isArray(v=command) then command else [command] } } } },
                 '#withCommandMixin':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='command', type=d.T.array)]),
                 withCommandMixin(command): { lifecycle+: { preStop+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } } },
               },
-              '#httpGet':: d.obj(help='"HTTPGet specifies the http request to perform."'),
+              '#httpGet':: d.obj(help='"HTTPGet specifies an HTTP GET request to perform."'),
               httpGet: {
                 '#httpHeaders':: d.obj(help='"Custom headers to set in the request. HTTP allows repeated headers."'),
                 httpHeaders: {
@@ -1289,12 +1289,12 @@
                 '#withScheme':: d.fn(help='"Scheme to use for connecting to the host.\\nDefaults to HTTP."', args=[d.arg(name='scheme', type=d.T.string)]),
                 withScheme(scheme): { lifecycle+: { preStop+: { httpGet+: { scheme: scheme } } } },
               },
-              '#sleep':: d.obj(help='"Sleep represents the duration that the container should sleep before being terminated."'),
+              '#sleep':: d.obj(help='"Sleep represents a duration that the container should sleep."'),
               sleep: {
                 '#withSeconds':: d.fn(help='"Seconds is the number of seconds to sleep."', args=[d.arg(name='seconds', type=d.T.integer)]),
                 withSeconds(seconds): { lifecycle+: { preStop+: { sleep+: { seconds: seconds } } } },
               },
-              '#tcpSocket':: d.obj(help='"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\\nfor the backward compatibility. There are no validation of this field and\\nlifecycle hooks will fail in runtime when tcp handler is specified."'),
+              '#tcpSocket':: d.obj(help='"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\\nfor backward compatibility. There is no validation of this field and\\nlifecycle hooks will fail at runtime when it is specified."'),
               tcpSocket: {
                 '#withHost':: d.fn(help='"Optional: Host name to connect to, defaults to the pod IP."', args=[d.arg(name='host', type=d.T.string)]),
                 withHost(host): { lifecycle+: { preStop+: { tcpSocket+: { host: host } } } },
@@ -1305,21 +1305,21 @@
           },
           '#livenessProbe':: d.obj(help='"Probes are not allowed for ephemeral containers."'),
           livenessProbe: {
-            '#exec':: d.obj(help='"Exec specifies the action to take."'),
+            '#exec':: d.obj(help='"Exec specifies a command to execute in the container."'),
             exec: {
               '#withCommand':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"", args=[d.arg(name='command', type=d.T.array)]),
               withCommand(command): { livenessProbe+: { exec+: { command: if std.isArray(v=command) then command else [command] } } },
               '#withCommandMixin':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='command', type=d.T.array)]),
               withCommandMixin(command): { livenessProbe+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } },
             },
-            '#grpc':: d.obj(help='"GRPC specifies an action involving a GRPC port."'),
+            '#grpc':: d.obj(help='"GRPC specifies a GRPC HealthCheckRequest."'),
             grpc: {
               '#withPort':: d.fn(help='"Port number of the gRPC service. Number must be in the range 1 to 65535."', args=[d.arg(name='port', type=d.T.integer)]),
               withPort(port): { livenessProbe+: { grpc+: { port: port } } },
               '#withService':: d.fn(help='"Service is the name of the service to place in the gRPC HealthCheckRequest\\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\\n\\nIf this is not specified, the default behavior is defined by gRPC."', args=[d.arg(name='service', type=d.T.string)]),
               withService(service): { livenessProbe+: { grpc+: { service: service } } },
             },
-            '#httpGet':: d.obj(help='"HTTPGet specifies the http request to perform."'),
+            '#httpGet':: d.obj(help='"HTTPGet specifies an HTTP GET request to perform."'),
             httpGet: {
               '#httpHeaders':: d.obj(help='"Custom headers to set in the request. HTTP allows repeated headers."'),
               httpHeaders: {
@@ -1341,7 +1341,7 @@
               '#withScheme':: d.fn(help='"Scheme to use for connecting to the host.\\nDefaults to HTTP."', args=[d.arg(name='scheme', type=d.T.string)]),
               withScheme(scheme): { livenessProbe+: { httpGet+: { scheme: scheme } } },
             },
-            '#tcpSocket':: d.obj(help='"TCPSocket specifies an action involving a TCP port."'),
+            '#tcpSocket':: d.obj(help='"TCPSocket specifies a connection to a TCP port."'),
             tcpSocket: {
               '#withHost':: d.fn(help='"Optional: Host name to connect to, defaults to the pod IP."', args=[d.arg(name='host', type=d.T.string)]),
               withHost(host): { livenessProbe+: { tcpSocket+: { host: host } } },
@@ -1376,21 +1376,21 @@
           },
           '#readinessProbe':: d.obj(help='"Probes are not allowed for ephemeral containers."'),
           readinessProbe: {
-            '#exec':: d.obj(help='"Exec specifies the action to take."'),
+            '#exec':: d.obj(help='"Exec specifies a command to execute in the container."'),
             exec: {
               '#withCommand':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"", args=[d.arg(name='command', type=d.T.array)]),
               withCommand(command): { readinessProbe+: { exec+: { command: if std.isArray(v=command) then command else [command] } } },
               '#withCommandMixin':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='command', type=d.T.array)]),
               withCommandMixin(command): { readinessProbe+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } },
             },
-            '#grpc':: d.obj(help='"GRPC specifies an action involving a GRPC port."'),
+            '#grpc':: d.obj(help='"GRPC specifies a GRPC HealthCheckRequest."'),
             grpc: {
               '#withPort':: d.fn(help='"Port number of the gRPC service. Number must be in the range 1 to 65535."', args=[d.arg(name='port', type=d.T.integer)]),
               withPort(port): { readinessProbe+: { grpc+: { port: port } } },
               '#withService':: d.fn(help='"Service is the name of the service to place in the gRPC HealthCheckRequest\\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\\n\\nIf this is not specified, the default behavior is defined by gRPC."', args=[d.arg(name='service', type=d.T.string)]),
               withService(service): { readinessProbe+: { grpc+: { service: service } } },
             },
-            '#httpGet':: d.obj(help='"HTTPGet specifies the http request to perform."'),
+            '#httpGet':: d.obj(help='"HTTPGet specifies an HTTP GET request to perform."'),
             httpGet: {
               '#httpHeaders':: d.obj(help='"Custom headers to set in the request. HTTP allows repeated headers."'),
               httpHeaders: {
@@ -1412,7 +1412,7 @@
               '#withScheme':: d.fn(help='"Scheme to use for connecting to the host.\\nDefaults to HTTP."', args=[d.arg(name='scheme', type=d.T.string)]),
               withScheme(scheme): { readinessProbe+: { httpGet+: { scheme: scheme } } },
             },
-            '#tcpSocket':: d.obj(help='"TCPSocket specifies an action involving a TCP port."'),
+            '#tcpSocket':: d.obj(help='"TCPSocket specifies a connection to a TCP port."'),
             tcpSocket: {
               '#withHost':: d.fn(help='"Optional: Host name to connect to, defaults to the pod IP."', args=[d.arg(name='host', type=d.T.string)]),
               withHost(host): { readinessProbe+: { tcpSocket+: { host: host } } },
@@ -1527,21 +1527,21 @@
           },
           '#startupProbe':: d.obj(help='"Probes are not allowed for ephemeral containers."'),
           startupProbe: {
-            '#exec':: d.obj(help='"Exec specifies the action to take."'),
+            '#exec':: d.obj(help='"Exec specifies a command to execute in the container."'),
             exec: {
               '#withCommand':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"", args=[d.arg(name='command', type=d.T.array)]),
               withCommand(command): { startupProbe+: { exec+: { command: if std.isArray(v=command) then command else [command] } } },
               '#withCommandMixin':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='command', type=d.T.array)]),
               withCommandMixin(command): { startupProbe+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } },
             },
-            '#grpc':: d.obj(help='"GRPC specifies an action involving a GRPC port."'),
+            '#grpc':: d.obj(help='"GRPC specifies a GRPC HealthCheckRequest."'),
             grpc: {
               '#withPort':: d.fn(help='"Port number of the gRPC service. Number must be in the range 1 to 65535."', args=[d.arg(name='port', type=d.T.integer)]),
               withPort(port): { startupProbe+: { grpc+: { port: port } } },
               '#withService':: d.fn(help='"Service is the name of the service to place in the gRPC HealthCheckRequest\\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\\n\\nIf this is not specified, the default behavior is defined by gRPC."', args=[d.arg(name='service', type=d.T.string)]),
               withService(service): { startupProbe+: { grpc+: { service: service } } },
             },
-            '#httpGet':: d.obj(help='"HTTPGet specifies the http request to perform."'),
+            '#httpGet':: d.obj(help='"HTTPGet specifies an HTTP GET request to perform."'),
             httpGet: {
               '#httpHeaders':: d.obj(help='"Custom headers to set in the request. HTTP allows repeated headers."'),
               httpHeaders: {
@@ -1563,7 +1563,7 @@
               '#withScheme':: d.fn(help='"Scheme to use for connecting to the host.\\nDefaults to HTTP."', args=[d.arg(name='scheme', type=d.T.string)]),
               withScheme(scheme): { startupProbe+: { httpGet+: { scheme: scheme } } },
             },
-            '#tcpSocket':: d.obj(help='"TCPSocket specifies an action involving a TCP port."'),
+            '#tcpSocket':: d.obj(help='"TCPSocket specifies a connection to a TCP port."'),
             tcpSocket: {
               '#withHost':: d.fn(help='"Optional: Host name to connect to, defaults to the pod IP."', args=[d.arg(name='host', type=d.T.string)]),
               withHost(host): { startupProbe+: { tcpSocket+: { host: host } } },
@@ -1745,14 +1745,14 @@
           lifecycle: {
             '#postStart':: d.obj(help='"PostStart is called immediately after a container is created. If the handler fails,\\nthe container is terminated and restarted according to its restart policy.\\nOther management of the container blocks until the hook completes.\\nMore info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks"'),
             postStart: {
-              '#exec':: d.obj(help='"Exec specifies the action to take."'),
+              '#exec':: d.obj(help='"Exec specifies a command to execute in the container."'),
               exec: {
                 '#withCommand':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"", args=[d.arg(name='command', type=d.T.array)]),
                 withCommand(command): { lifecycle+: { postStart+: { exec+: { command: if std.isArray(v=command) then command else [command] } } } },
                 '#withCommandMixin':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='command', type=d.T.array)]),
                 withCommandMixin(command): { lifecycle+: { postStart+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } } },
               },
-              '#httpGet':: d.obj(help='"HTTPGet specifies the http request to perform."'),
+              '#httpGet':: d.obj(help='"HTTPGet specifies an HTTP GET request to perform."'),
               httpGet: {
                 '#httpHeaders':: d.obj(help='"Custom headers to set in the request. HTTP allows repeated headers."'),
                 httpHeaders: {
@@ -1774,12 +1774,12 @@
                 '#withScheme':: d.fn(help='"Scheme to use for connecting to the host.\\nDefaults to HTTP."', args=[d.arg(name='scheme', type=d.T.string)]),
                 withScheme(scheme): { lifecycle+: { postStart+: { httpGet+: { scheme: scheme } } } },
               },
-              '#sleep':: d.obj(help='"Sleep represents the duration that the container should sleep before being terminated."'),
+              '#sleep':: d.obj(help='"Sleep represents a duration that the container should sleep."'),
               sleep: {
                 '#withSeconds':: d.fn(help='"Seconds is the number of seconds to sleep."', args=[d.arg(name='seconds', type=d.T.integer)]),
                 withSeconds(seconds): { lifecycle+: { postStart+: { sleep+: { seconds: seconds } } } },
               },
-              '#tcpSocket':: d.obj(help='"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\\nfor the backward compatibility. There are no validation of this field and\\nlifecycle hooks will fail in runtime when tcp handler is specified."'),
+              '#tcpSocket':: d.obj(help='"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\\nfor backward compatibility. There is no validation of this field and\\nlifecycle hooks will fail at runtime when it is specified."'),
               tcpSocket: {
                 '#withHost':: d.fn(help='"Optional: Host name to connect to, defaults to the pod IP."', args=[d.arg(name='host', type=d.T.string)]),
                 withHost(host): { lifecycle+: { postStart+: { tcpSocket+: { host: host } } } },
@@ -1789,14 +1789,14 @@
             },
             '#preStop':: d.obj(help="\"PreStop is called immediately before a container is terminated due to an\\nAPI request or management event such as liveness/startup probe failure,\\npreemption, resource contention, etc. The handler is not called if the\\ncontainer crashes or exits. The Pod's termination grace period countdown begins before the\\nPreStop hook is executed. Regardless of the outcome of the handler, the\\ncontainer will eventually terminate within the Pod's termination grace\\nperiod (unless delayed by finalizers). Other management of the container blocks until the hook completes\\nor until the termination grace period is reached.\\nMore info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks\""),
             preStop: {
-              '#exec':: d.obj(help='"Exec specifies the action to take."'),
+              '#exec':: d.obj(help='"Exec specifies a command to execute in the container."'),
               exec: {
                 '#withCommand':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"", args=[d.arg(name='command', type=d.T.array)]),
                 withCommand(command): { lifecycle+: { preStop+: { exec+: { command: if std.isArray(v=command) then command else [command] } } } },
                 '#withCommandMixin':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='command', type=d.T.array)]),
                 withCommandMixin(command): { lifecycle+: { preStop+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } } },
               },
-              '#httpGet':: d.obj(help='"HTTPGet specifies the http request to perform."'),
+              '#httpGet':: d.obj(help='"HTTPGet specifies an HTTP GET request to perform."'),
               httpGet: {
                 '#httpHeaders':: d.obj(help='"Custom headers to set in the request. HTTP allows repeated headers."'),
                 httpHeaders: {
@@ -1818,12 +1818,12 @@
                 '#withScheme':: d.fn(help='"Scheme to use for connecting to the host.\\nDefaults to HTTP."', args=[d.arg(name='scheme', type=d.T.string)]),
                 withScheme(scheme): { lifecycle+: { preStop+: { httpGet+: { scheme: scheme } } } },
               },
-              '#sleep':: d.obj(help='"Sleep represents the duration that the container should sleep before being terminated."'),
+              '#sleep':: d.obj(help='"Sleep represents a duration that the container should sleep."'),
               sleep: {
                 '#withSeconds':: d.fn(help='"Seconds is the number of seconds to sleep."', args=[d.arg(name='seconds', type=d.T.integer)]),
                 withSeconds(seconds): { lifecycle+: { preStop+: { sleep+: { seconds: seconds } } } },
               },
-              '#tcpSocket':: d.obj(help='"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\\nfor the backward compatibility. There are no validation of this field and\\nlifecycle hooks will fail in runtime when tcp handler is specified."'),
+              '#tcpSocket':: d.obj(help='"Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept\\nfor backward compatibility. There is no validation of this field and\\nlifecycle hooks will fail at runtime when it is specified."'),
               tcpSocket: {
                 '#withHost':: d.fn(help='"Optional: Host name to connect to, defaults to the pod IP."', args=[d.arg(name='host', type=d.T.string)]),
                 withHost(host): { lifecycle+: { preStop+: { tcpSocket+: { host: host } } } },
@@ -1834,21 +1834,21 @@
           },
           '#livenessProbe':: d.obj(help='"Periodic probe of container liveness.\\nContainer will be restarted if the probe fails.\\nCannot be updated.\\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"'),
           livenessProbe: {
-            '#exec':: d.obj(help='"Exec specifies the action to take."'),
+            '#exec':: d.obj(help='"Exec specifies a command to execute in the container."'),
             exec: {
               '#withCommand':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"", args=[d.arg(name='command', type=d.T.array)]),
               withCommand(command): { livenessProbe+: { exec+: { command: if std.isArray(v=command) then command else [command] } } },
               '#withCommandMixin':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='command', type=d.T.array)]),
               withCommandMixin(command): { livenessProbe+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } },
             },
-            '#grpc':: d.obj(help='"GRPC specifies an action involving a GRPC port."'),
+            '#grpc':: d.obj(help='"GRPC specifies a GRPC HealthCheckRequest."'),
             grpc: {
               '#withPort':: d.fn(help='"Port number of the gRPC service. Number must be in the range 1 to 65535."', args=[d.arg(name='port', type=d.T.integer)]),
               withPort(port): { livenessProbe+: { grpc+: { port: port } } },
               '#withService':: d.fn(help='"Service is the name of the service to place in the gRPC HealthCheckRequest\\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\\n\\nIf this is not specified, the default behavior is defined by gRPC."', args=[d.arg(name='service', type=d.T.string)]),
               withService(service): { livenessProbe+: { grpc+: { service: service } } },
             },
-            '#httpGet':: d.obj(help='"HTTPGet specifies the http request to perform."'),
+            '#httpGet':: d.obj(help='"HTTPGet specifies an HTTP GET request to perform."'),
             httpGet: {
               '#httpHeaders':: d.obj(help='"Custom headers to set in the request. HTTP allows repeated headers."'),
               httpHeaders: {
@@ -1870,7 +1870,7 @@
               '#withScheme':: d.fn(help='"Scheme to use for connecting to the host.\\nDefaults to HTTP."', args=[d.arg(name='scheme', type=d.T.string)]),
               withScheme(scheme): { livenessProbe+: { httpGet+: { scheme: scheme } } },
             },
-            '#tcpSocket':: d.obj(help='"TCPSocket specifies an action involving a TCP port."'),
+            '#tcpSocket':: d.obj(help='"TCPSocket specifies a connection to a TCP port."'),
             tcpSocket: {
               '#withHost':: d.fn(help='"Optional: Host name to connect to, defaults to the pod IP."', args=[d.arg(name='host', type=d.T.string)]),
               withHost(host): { livenessProbe+: { tcpSocket+: { host: host } } },
@@ -1905,21 +1905,21 @@
           },
           '#readinessProbe':: d.obj(help='"Periodic probe of container service readiness.\\nContainer will be removed from service endpoints if the probe fails.\\nCannot be updated.\\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"'),
           readinessProbe: {
-            '#exec':: d.obj(help='"Exec specifies the action to take."'),
+            '#exec':: d.obj(help='"Exec specifies a command to execute in the container."'),
             exec: {
               '#withCommand':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"", args=[d.arg(name='command', type=d.T.array)]),
               withCommand(command): { readinessProbe+: { exec+: { command: if std.isArray(v=command) then command else [command] } } },
               '#withCommandMixin':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='command', type=d.T.array)]),
               withCommandMixin(command): { readinessProbe+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } },
             },
-            '#grpc':: d.obj(help='"GRPC specifies an action involving a GRPC port."'),
+            '#grpc':: d.obj(help='"GRPC specifies a GRPC HealthCheckRequest."'),
             grpc: {
               '#withPort':: d.fn(help='"Port number of the gRPC service. Number must be in the range 1 to 65535."', args=[d.arg(name='port', type=d.T.integer)]),
               withPort(port): { readinessProbe+: { grpc+: { port: port } } },
               '#withService':: d.fn(help='"Service is the name of the service to place in the gRPC HealthCheckRequest\\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\\n\\nIf this is not specified, the default behavior is defined by gRPC."', args=[d.arg(name='service', type=d.T.string)]),
               withService(service): { readinessProbe+: { grpc+: { service: service } } },
             },
-            '#httpGet':: d.obj(help='"HTTPGet specifies the http request to perform."'),
+            '#httpGet':: d.obj(help='"HTTPGet specifies an HTTP GET request to perform."'),
             httpGet: {
               '#httpHeaders':: d.obj(help='"Custom headers to set in the request. HTTP allows repeated headers."'),
               httpHeaders: {
@@ -1941,7 +1941,7 @@
               '#withScheme':: d.fn(help='"Scheme to use for connecting to the host.\\nDefaults to HTTP."', args=[d.arg(name='scheme', type=d.T.string)]),
               withScheme(scheme): { readinessProbe+: { httpGet+: { scheme: scheme } } },
             },
-            '#tcpSocket':: d.obj(help='"TCPSocket specifies an action involving a TCP port."'),
+            '#tcpSocket':: d.obj(help='"TCPSocket specifies a connection to a TCP port."'),
             tcpSocket: {
               '#withHost':: d.fn(help='"Optional: Host name to connect to, defaults to the pod IP."', args=[d.arg(name='host', type=d.T.string)]),
               withHost(host): { readinessProbe+: { tcpSocket+: { host: host } } },
@@ -2056,21 +2056,21 @@
           },
           '#startupProbe':: d.obj(help="\"StartupProbe indicates that the Pod has successfully initialized.\\nIf specified, no other probes are executed until this completes successfully.\\nIf this probe fails, the Pod will be restarted, just as if the livenessProbe failed.\\nThis can be used to provide different probe parameters at the beginning of a Pod's lifecycle,\\nwhen it might take a long time to load data or warm a cache, than during steady-state operation.\\nThis cannot be updated.\\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes\""),
           startupProbe: {
-            '#exec':: d.obj(help='"Exec specifies the action to take."'),
+            '#exec':: d.obj(help='"Exec specifies a command to execute in the container."'),
             exec: {
               '#withCommand':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"", args=[d.arg(name='command', type=d.T.array)]),
               withCommand(command): { startupProbe+: { exec+: { command: if std.isArray(v=command) then command else [command] } } },
               '#withCommandMixin':: d.fn(help="\"Command is the command line to execute inside the container, the working directory for the\\ncommand  is root ('/') in the container's filesystem. The command is simply exec'd, it is\\nnot run inside a shell, so traditional shell instructions ('|', etc) won't work. To use\\na shell, you need to explicitly call out to that shell.\\nExit status of 0 is treated as live/healthy and non-zero is unhealthy.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='command', type=d.T.array)]),
               withCommandMixin(command): { startupProbe+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } },
             },
-            '#grpc':: d.obj(help='"GRPC specifies an action involving a GRPC port."'),
+            '#grpc':: d.obj(help='"GRPC specifies a GRPC HealthCheckRequest."'),
             grpc: {
               '#withPort':: d.fn(help='"Port number of the gRPC service. Number must be in the range 1 to 65535."', args=[d.arg(name='port', type=d.T.integer)]),
               withPort(port): { startupProbe+: { grpc+: { port: port } } },
               '#withService':: d.fn(help='"Service is the name of the service to place in the gRPC HealthCheckRequest\\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\\n\\nIf this is not specified, the default behavior is defined by gRPC."', args=[d.arg(name='service', type=d.T.string)]),
               withService(service): { startupProbe+: { grpc+: { service: service } } },
             },
-            '#httpGet':: d.obj(help='"HTTPGet specifies the http request to perform."'),
+            '#httpGet':: d.obj(help='"HTTPGet specifies an HTTP GET request to perform."'),
             httpGet: {
               '#httpHeaders':: d.obj(help='"Custom headers to set in the request. HTTP allows repeated headers."'),
               httpHeaders: {
@@ -2092,7 +2092,7 @@
               '#withScheme':: d.fn(help='"Scheme to use for connecting to the host.\\nDefaults to HTTP."', args=[d.arg(name='scheme', type=d.T.string)]),
               withScheme(scheme): { startupProbe+: { httpGet+: { scheme: scheme } } },
             },
-            '#tcpSocket':: d.obj(help='"TCPSocket specifies an action involving a TCP port."'),
+            '#tcpSocket':: d.obj(help='"TCPSocket specifies a connection to a TCP port."'),
             tcpSocket: {
               '#withHost':: d.fn(help='"Optional: Host name to connect to, defaults to the pod IP."', args=[d.arg(name='host', type=d.T.string)]),
               withHost(host): { startupProbe+: { tcpSocket+: { host: host } } },
@@ -2208,6 +2208,28 @@
           '#withResourceClaimTemplateName':: d.fn(help='"ResourceClaimTemplateName is the name of a ResourceClaimTemplate\\nobject in the same namespace as this pod.\\n\\nThe template will be used to create a new ResourceClaim, which will\\nbe bound to this pod. When this pod is deleted, the ResourceClaim\\nwill also be deleted. The pod name and resource name, along with a\\ngenerated component, will be used to form a unique name for the\\nResourceClaim, which will be recorded in pod.status.resourceClaimStatuses.\\n\\nThis field is immutable and no changes will be made to the\\ncorresponding ResourceClaim by the control plane after creating the\\nResourceClaim.\\n\\nExactly one of ResourceClaimName and ResourceClaimTemplateName must\\nbe set."', args=[d.arg(name='resourceClaimTemplateName', type=d.T.string)]),
           withResourceClaimTemplateName(resourceClaimTemplateName): { resourceClaimTemplateName: resourceClaimTemplateName },
         },
+        '#resources':: d.obj(help='"Resources is the total amount of CPU and Memory resources required by all\\ncontainers in the pod. It supports specifying Requests and Limits for\\n\\"cpu\\" and \\"memory\\" resource names only. ResourceClaims are not supported.\\n\\nThis field enables fine-grained control over resource allocation for the\\nentire pod, allowing resource sharing among containers in a pod.\\n\\nThis is an alpha field and requires enabling the PodLevelResources feature\\ngate."'),
+        resources: {
+          '#claims':: d.obj(help='"Claims lists the names of resources, defined in spec.resourceClaims,\\nthat are used by this container.\\n\\nThis is an alpha field and requires enabling the\\nDynamicResourceAllocation feature gate.\\n\\nThis field is immutable. It can only be set for containers."'),
+          claims: {
+            '#withName':: d.fn(help='"Name must match the name of one entry in pod.spec.resourceClaims of\\nthe Pod where this field is used. It makes that resource available\\ninside a container."', args=[d.arg(name='name', type=d.T.string)]),
+            withName(name): { name: name },
+            '#withRequest':: d.fn(help='"Request is the name chosen for a request in the referenced claim.\\nIf empty, everything from the claim is made available, otherwise\\nonly the result of this request."', args=[d.arg(name='request', type=d.T.string)]),
+            withRequest(request): { request: request },
+          },
+          '#withClaims':: d.fn(help='"Claims lists the names of resources, defined in spec.resourceClaims,\\nthat are used by this container.\\n\\nThis is an alpha field and requires enabling the\\nDynamicResourceAllocation feature gate.\\n\\nThis field is immutable. It can only be set for containers."', args=[d.arg(name='claims', type=d.T.array)]),
+          withClaims(claims): { spec+: { template+: { spec+: { resources+: { claims: if std.isArray(v=claims) then claims else [claims] } } } } },
+          '#withClaimsMixin':: d.fn(help='"Claims lists the names of resources, defined in spec.resourceClaims,\\nthat are used by this container.\\n\\nThis is an alpha field and requires enabling the\\nDynamicResourceAllocation feature gate.\\n\\nThis field is immutable. It can only be set for containers."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='claims', type=d.T.array)]),
+          withClaimsMixin(claims): { spec+: { template+: { spec+: { resources+: { claims+: if std.isArray(v=claims) then claims else [claims] } } } } },
+          '#withLimits':: d.fn(help='"Limits describes the maximum amount of compute resources allowed.\\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"', args=[d.arg(name='limits', type=d.T.object)]),
+          withLimits(limits): { spec+: { template+: { spec+: { resources+: { limits: limits } } } } },
+          '#withLimitsMixin':: d.fn(help='"Limits describes the maximum amount of compute resources allowed.\\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='limits', type=d.T.object)]),
+          withLimitsMixin(limits): { spec+: { template+: { spec+: { resources+: { limits+: limits } } } } },
+          '#withRequests':: d.fn(help='"Requests describes the minimum amount of compute resources required.\\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\\notherwise to an implementation-defined value. Requests cannot exceed Limits.\\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"', args=[d.arg(name='requests', type=d.T.object)]),
+          withRequests(requests): { spec+: { template+: { spec+: { resources+: { requests: requests } } } } },
+          '#withRequestsMixin':: d.fn(help='"Requests describes the minimum amount of compute resources required.\\nIf Requests is omitted for a container, it defaults to Limits if that is explicitly specified,\\notherwise to an implementation-defined value. Requests cannot exceed Limits.\\nMore info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='requests', type=d.T.object)]),
+          withRequestsMixin(requests): { spec+: { template+: { spec+: { resources+: { requests+: requests } } } } },
+        },
         '#schedulingGates':: d.obj(help='"SchedulingGates is an opaque list of values that if specified will block scheduling the pod.\\nIf schedulingGates is not empty, the pod will stay in the SchedulingGated state and the\\nscheduler will not attempt to schedule the pod.\\n\\nSchedulingGates can only be set at pod creation time, and be removed only afterwards."'),
         schedulingGates: {
           '#withName':: d.fn(help='"Name of the scheduling gate.\\nEach scheduling gate must have a unique name field."', args=[d.arg(name='name', type=d.T.string)]),
@@ -2268,6 +2290,8 @@
           withRunAsNonRoot(runAsNonRoot): { spec+: { template+: { spec+: { securityContext+: { runAsNonRoot: runAsNonRoot } } } } },
           '#withRunAsUser':: d.fn(help='"The UID to run the entrypoint of the container process.\\nDefaults to user specified in image metadata if unspecified.\\nMay also be set in SecurityContext.  If set in both SecurityContext and\\nPodSecurityContext, the value specified in SecurityContext takes precedence\\nfor that container.\\nNote that this field cannot be set when spec.os.name is windows."', args=[d.arg(name='runAsUser', type=d.T.integer)]),
           withRunAsUser(runAsUser): { spec+: { template+: { spec+: { securityContext+: { runAsUser: runAsUser } } } } },
+          '#withSeLinuxChangePolicy':: d.fn(help="\"seLinuxChangePolicy defines how the container's SELinux label is applied to all volumes used by the Pod.\\nIt has no effect on nodes that do not support SELinux or to volumes does not support SELinux.\\nValid values are \\\"MountOption\\\" and \\\"Recursive\\\".\\n\\n\\\"Recursive\\\" means relabeling of all files on all Pod volumes by the container runtime.\\nThis may be slow for large volumes, but allows mixing privileged and unprivileged Pods sharing the same volume on the same node.\\n\\n\\\"MountOption\\\" mounts all eligible Pod volumes with `-o context` mount option.\\nThis requires all Pods that share the same volume to use the same SELinux label.\\nIt is not possible to share the same volume among privileged and unprivileged Pods.\\nEligible volumes are in-tree FibreChannel and iSCSI volumes, and all CSI volumes\\nwhose CSI driver announces SELinux support by setting spec.seLinuxMount: true in their\\nCSIDriver instance. Other volumes are always re-labelled recursively.\\n\\\"MountOption\\\" value is allowed only when SELinuxMount feature gate is enabled.\\n\\nIf not specified and SELinuxMount feature gate is enabled, \\\"MountOption\\\" is used.\\nIf not specified and SELinuxMount feature gate is disabled, \\\"MountOption\\\" is used for ReadWriteOncePod volumes\\nand \\\"Recursive\\\" for all other volumes.\\n\\nThis field affects only Pods that have SELinux label set, either in PodSecurityContext or in SecurityContext of all containers.\\n\\nAll Pods that use the same volume should use the same seLinuxChangePolicy, otherwise some pods can get stuck in ContainerCreating state.\\nNote that this field cannot be set when spec.os.name is windows.\"", args=[d.arg(name='seLinuxChangePolicy', type=d.T.string)]),
+          withSeLinuxChangePolicy(seLinuxChangePolicy): { spec+: { template+: { spec+: { securityContext+: { seLinuxChangePolicy: seLinuxChangePolicy } } } } },
           '#withSupplementalGroups':: d.fn(help="\"A list of groups applied to the first process run in each container, in\\naddition to the container's primary GID and fsGroup (if specified).  If\\nthe SupplementalGroupsPolicy feature is enabled, the\\nsupplementalGroupsPolicy field determines whether these are in addition\\nto or instead of any group memberships defined in the container image.\\nIf unspecified, no additional groups are added, though group memberships\\ndefined in the container image may still be used, depending on the\\nsupplementalGroupsPolicy field.\\nNote that this field cannot be set when spec.os.name is windows.\"", args=[d.arg(name='supplementalGroups', type=d.T.array)]),
           withSupplementalGroups(supplementalGroups): { spec+: { template+: { spec+: { securityContext+: { supplementalGroups: if std.isArray(v=supplementalGroups) then supplementalGroups else [supplementalGroups] } } } } },
           '#withSupplementalGroupsMixin':: d.fn(help="\"A list of groups applied to the first process run in each container, in\\naddition to the container's primary GID and fsGroup (if specified).  If\\nthe SupplementalGroupsPolicy feature is enabled, the\\nsupplementalGroupsPolicy field determines whether these are in addition\\nto or instead of any group memberships defined in the container image.\\nIf unspecified, no additional groups are added, though group memberships\\ndefined in the container image may still be used, depending on the\\nsupplementalGroupsPolicy field.\\nNote that this field cannot be set when spec.os.name is windows.\"\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='supplementalGroups', type=d.T.array)]),
@@ -2335,7 +2359,7 @@
         },
         '#volumes':: d.obj(help='"List of volumes that can be mounted by containers belonging to the pod.\\nMore info: https://kubernetes.io/docs/concepts/storage/volumes"'),
         volumes: {
-          '#awsElasticBlockStore':: d.obj(help="\"awsElasticBlockStore represents an AWS Disk resource that is attached to a\\nkubelet's host machine and then exposed to the pod.\\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore\""),
+          '#awsElasticBlockStore':: d.obj(help="\"awsElasticBlockStore represents an AWS Disk resource that is attached to a\\nkubelet's host machine and then exposed to the pod.\\nDeprecated: AWSElasticBlockStore is deprecated. All operations for the in-tree\\nawsElasticBlockStore type are redirected to the ebs.csi.aws.com CSI driver.\\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore\""),
           awsElasticBlockStore: {
             '#withFsType':: d.fn(help='"fsType is the filesystem type of the volume that you want to mount.\\nTip: Ensure that the filesystem type is supported by the host operating system.\\nExamples: \\"ext4\\", \\"xfs\\", \\"ntfs\\". Implicitly inferred to be \\"ext4\\" if unspecified.\\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore"', args=[d.arg(name='fsType', type=d.T.string)]),
             withFsType(fsType): { awsElasticBlockStore+: { fsType: fsType } },
@@ -2346,7 +2370,7 @@
             '#withVolumeID':: d.fn(help='"volumeID is unique ID of the persistent disk resource in AWS (Amazon EBS volume).\\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore"', args=[d.arg(name='volumeID', type=d.T.string)]),
             withVolumeID(volumeID): { awsElasticBlockStore+: { volumeID: volumeID } },
           },
-          '#azureDisk':: d.obj(help='"azureDisk represents an Azure Data Disk mount on the host and bind mount to the pod."'),
+          '#azureDisk':: d.obj(help='"azureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.\\nDeprecated: AzureDisk is deprecated. All operations for the in-tree azureDisk type\\nare redirected to the disk.csi.azure.com CSI driver."'),
           azureDisk: {
             '#withCachingMode':: d.fn(help='"cachingMode is the Host Caching mode: None, Read Only, Read Write."', args=[d.arg(name='cachingMode', type=d.T.string)]),
             withCachingMode(cachingMode): { azureDisk+: { cachingMode: cachingMode } },
@@ -2361,7 +2385,7 @@
             '#withReadOnly':: d.fn(help='"readOnly Defaults to false (read/write). ReadOnly here will force\\nthe ReadOnly setting in VolumeMounts."', args=[d.arg(name='readOnly', type=d.T.boolean)]),
             withReadOnly(readOnly): { azureDisk+: { readOnly: readOnly } },
           },
-          '#azureFile':: d.obj(help='"azureFile represents an Azure File Service mount on the host and bind mount to the pod."'),
+          '#azureFile':: d.obj(help='"azureFile represents an Azure File Service mount on the host and bind mount to the pod.\\nDeprecated: AzureFile is deprecated. All operations for the in-tree azureFile type\\nare redirected to the file.csi.azure.com CSI driver."'),
           azureFile: {
             '#withReadOnly':: d.fn(help='"readOnly defaults to false (read/write). ReadOnly here will force\\nthe ReadOnly setting in VolumeMounts."', args=[d.arg(name='readOnly', type=d.T.boolean)]),
             withReadOnly(readOnly): { azureFile+: { readOnly: readOnly } },
@@ -2370,7 +2394,7 @@
             '#withShareName':: d.fn(help='"shareName is the azure share Name"', args=[d.arg(name='shareName', type=d.T.string)]),
             withShareName(shareName): { azureFile+: { shareName: shareName } },
           },
-          '#cephfs':: d.obj(help="\"cephFS represents a Ceph FS mount on the host that shares a pod's lifetime\""),
+          '#cephfs':: d.obj(help="\"cephFS represents a Ceph FS mount on the host that shares a pod's lifetime.\\nDeprecated: CephFS is deprecated and the in-tree cephfs type is no longer supported.\""),
           cephfs: {
             '#secretRef':: d.obj(help='"secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty.\\nMore info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it"'),
             secretRef: {
@@ -2390,7 +2414,7 @@
             '#withUser':: d.fn(help='"user is optional: User is the rados user name, default is admin\\nMore info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it"', args=[d.arg(name='user', type=d.T.string)]),
             withUser(user): { cephfs+: { user: user } },
           },
-          '#cinder':: d.obj(help='"cinder represents a cinder volume attached and mounted on kubelets host machine.\\nMore info: https://examples.k8s.io/mysql-cinder-pd/README.md"'),
+          '#cinder':: d.obj(help='"cinder represents a cinder volume attached and mounted on kubelets host machine.\\nDeprecated: Cinder is deprecated. All operations for the in-tree cinder type\\nare redirected to the cinder.csi.openstack.org CSI driver.\\nMore info: https://examples.k8s.io/mysql-cinder-pd/README.md"'),
           cinder: {
             '#secretRef':: d.obj(help='"secretRef is optional: points to a secret object containing parameters used to connect\\nto OpenStack."'),
             secretRef: {
@@ -2426,7 +2450,7 @@
             '#withOptional':: d.fn(help='"optional specify whether the ConfigMap or its keys must be defined"', args=[d.arg(name='optional', type=d.T.boolean)]),
             withOptional(optional): { configMap+: { optional: optional } },
           },
-          '#csi':: d.obj(help='"csi (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature)."'),
+          '#csi':: d.obj(help='"csi (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers."'),
           csi: {
             '#nodePublishSecretRef':: d.obj(help='"nodePublishSecretRef is a reference to the secret object containing\\nsensitive information to pass to the CSI driver to complete the CSI\\nNodePublishVolume and NodeUnpublishVolume calls.\\nThis field is optional, and  may be empty if no secret is required. If the\\nsecret object contains more than one secret, all secret references are passed."'),
             nodePublishSecretRef: {
@@ -2578,7 +2602,7 @@
             '#withWwidsMixin':: d.fn(help='"wwids Optional: FC volume world wide identifiers (wwids)\\nEither wwids or combination of targetWWNs and lun must be set, but not both simultaneously."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='wwids', type=d.T.array)]),
             withWwidsMixin(wwids): { fc+: { wwids+: if std.isArray(v=wwids) then wwids else [wwids] } },
           },
-          '#flexVolume':: d.obj(help='"flexVolume represents a generic volume resource that is\\nprovisioned/attached using an exec based plugin."'),
+          '#flexVolume':: d.obj(help='"flexVolume represents a generic volume resource that is\\nprovisioned/attached using an exec based plugin.\\nDeprecated: FlexVolume is deprecated. Consider using a CSIDriver instead."'),
           flexVolume: {
             '#secretRef':: d.obj(help='"secretRef is Optional: secretRef is reference to the secret object containing\\nsensitive information to pass to the plugin scripts. This may be\\nempty if no secret object is specified. If the secret object\\ncontains more than one secret, all secrets are passed to the plugin\\nscripts."'),
             secretRef: {
@@ -2596,14 +2620,14 @@
             '#withReadOnly':: d.fn(help='"readOnly is Optional: defaults to false (read/write). ReadOnly here will force\\nthe ReadOnly setting in VolumeMounts."', args=[d.arg(name='readOnly', type=d.T.boolean)]),
             withReadOnly(readOnly): { flexVolume+: { readOnly: readOnly } },
           },
-          '#flocker':: d.obj(help="\"flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running\""),
+          '#flocker':: d.obj(help="\"flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running.\\nDeprecated: Flocker is deprecated and the in-tree flocker type is no longer supported.\""),
           flocker: {
             '#withDatasetName':: d.fn(help='"datasetName is Name of the dataset stored as metadata -> name on the dataset for Flocker\\nshould be considered as deprecated"', args=[d.arg(name='datasetName', type=d.T.string)]),
             withDatasetName(datasetName): { flocker+: { datasetName: datasetName } },
             '#withDatasetUUID':: d.fn(help='"datasetUUID is the UUID of the dataset. This is unique identifier of a Flocker dataset"', args=[d.arg(name='datasetUUID', type=d.T.string)]),
             withDatasetUUID(datasetUUID): { flocker+: { datasetUUID: datasetUUID } },
           },
-          '#gcePersistentDisk':: d.obj(help="\"gcePersistentDisk represents a GCE Disk resource that is attached to a\\nkubelet's host machine and then exposed to the pod.\\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk\""),
+          '#gcePersistentDisk':: d.obj(help="\"gcePersistentDisk represents a GCE Disk resource that is attached to a\\nkubelet's host machine and then exposed to the pod.\\nDeprecated: GCEPersistentDisk is deprecated. All operations for the in-tree\\ngcePersistentDisk type are redirected to the pd.csi.storage.gke.io CSI driver.\\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk\""),
           gcePersistentDisk: {
             '#withFsType':: d.fn(help='"fsType is filesystem type of the volume that you want to mount.\\nTip: Ensure that the filesystem type is supported by the host operating system.\\nExamples: \\"ext4\\", \\"xfs\\", \\"ntfs\\". Implicitly inferred to be \\"ext4\\" if unspecified.\\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk"', args=[d.arg(name='fsType', type=d.T.string)]),
             withFsType(fsType): { gcePersistentDisk+: { fsType: fsType } },
@@ -2614,7 +2638,7 @@
             '#withReadOnly':: d.fn(help='"readOnly here will force the ReadOnly setting in VolumeMounts.\\nDefaults to false.\\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk"', args=[d.arg(name='readOnly', type=d.T.boolean)]),
             withReadOnly(readOnly): { gcePersistentDisk+: { readOnly: readOnly } },
           },
-          '#gitRepo':: d.obj(help="\"gitRepo represents a git repository at a particular revision.\\nDEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an\\nEmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir\\ninto the Pod's container.\""),
+          '#gitRepo':: d.obj(help="\"gitRepo represents a git repository at a particular revision.\\nDeprecated: GitRepo is deprecated. To provision a container with a git repo, mount an\\nEmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir\\ninto the Pod's container.\""),
           gitRepo: {
             '#withDirectory':: d.fn(help="\"directory is the target directory name.\\nMust not contain or start with '..'.  If '.' is supplied, the volume directory will be the\\ngit repository.  Otherwise, if specified, the volume will contain the git repository in\\nthe subdirectory with the given name.\"", args=[d.arg(name='directory', type=d.T.string)]),
             withDirectory(directory): { gitRepo+: { directory: directory } },
@@ -2623,7 +2647,7 @@
             '#withRevision':: d.fn(help='"revision is the commit hash for the specified revision."', args=[d.arg(name='revision', type=d.T.string)]),
             withRevision(revision): { gitRepo+: { revision: revision } },
           },
-          '#glusterfs':: d.obj(help="\"glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime.\\nMore info: https://examples.k8s.io/volumes/glusterfs/README.md\""),
+          '#glusterfs':: d.obj(help="\"glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime.\\nDeprecated: Glusterfs is deprecated and the in-tree glusterfs type is no longer supported.\\nMore info: https://examples.k8s.io/volumes/glusterfs/README.md\""),
           glusterfs: {
             '#withEndpoints':: d.fn(help='"endpoints is the endpoint name that details Glusterfs topology.\\nMore info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod"', args=[d.arg(name='endpoints', type=d.T.string)]),
             withEndpoints(endpoints): { glusterfs+: { endpoints: endpoints } },
@@ -2692,14 +2716,14 @@
             '#withReadOnly':: d.fn(help='"readOnly Will force the ReadOnly setting in VolumeMounts.\\nDefault false."', args=[d.arg(name='readOnly', type=d.T.boolean)]),
             withReadOnly(readOnly): { persistentVolumeClaim+: { readOnly: readOnly } },
           },
-          '#photonPersistentDisk':: d.obj(help='"photonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine"'),
+          '#photonPersistentDisk':: d.obj(help='"photonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine.\\nDeprecated: PhotonPersistentDisk is deprecated and the in-tree photonPersistentDisk type is no longer supported."'),
           photonPersistentDisk: {
             '#withFsType':: d.fn(help='"fsType is the filesystem type to mount.\\nMust be a filesystem type supported by the host operating system.\\nEx. \\"ext4\\", \\"xfs\\", \\"ntfs\\". Implicitly inferred to be \\"ext4\\" if unspecified."', args=[d.arg(name='fsType', type=d.T.string)]),
             withFsType(fsType): { photonPersistentDisk+: { fsType: fsType } },
             '#withPdID':: d.fn(help='"pdID is the ID that identifies Photon Controller persistent disk"', args=[d.arg(name='pdID', type=d.T.string)]),
             withPdID(pdID): { photonPersistentDisk+: { pdID: pdID } },
           },
-          '#portworxVolume':: d.obj(help='"portworxVolume represents a portworx volume attached and mounted on kubelets host machine"'),
+          '#portworxVolume':: d.obj(help='"portworxVolume represents a portworx volume attached and mounted on kubelets host machine.\\nDeprecated: PortworxVolume is deprecated. All operations for the in-tree portworxVolume type\\nare redirected to the pxd.portworx.com CSI driver when the CSIMigrationPortworx feature-gate\\nis on."'),
           portworxVolume: {
             '#withFsType':: d.fn(help='"fSType represents the filesystem type to mount\\nMust be a filesystem type supported by the host operating system.\\nEx. \\"ext4\\", \\"xfs\\". Implicitly inferred to be \\"ext4\\" if unspecified."', args=[d.arg(name='fsType', type=d.T.string)]),
             withFsType(fsType): { portworxVolume+: { fsType: fsType } },
@@ -2832,7 +2856,7 @@
             '#withSourcesMixin':: d.fn(help='"sources is the list of volume projections. Each entry in this list\\nhandles one source."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='sources', type=d.T.array)]),
             withSourcesMixin(sources): { projected+: { sources+: if std.isArray(v=sources) then sources else [sources] } },
           },
-          '#quobyte':: d.obj(help="\"quobyte represents a Quobyte mount on the host that shares a pod's lifetime\""),
+          '#quobyte':: d.obj(help="\"quobyte represents a Quobyte mount on the host that shares a pod's lifetime.\\nDeprecated: Quobyte is deprecated and the in-tree quobyte type is no longer supported.\""),
           quobyte: {
             '#withGroup':: d.fn(help='"group to map volume access to\\nDefault is no group"', args=[d.arg(name='group', type=d.T.string)]),
             withGroup(group): { quobyte+: { group: group } },
@@ -2847,7 +2871,7 @@
             '#withVolume':: d.fn(help='"volume is a string that references an already created Quobyte volume by name."', args=[d.arg(name='volume', type=d.T.string)]),
             withVolume(volume): { quobyte+: { volume: volume } },
           },
-          '#rbd':: d.obj(help="\"rbd represents a Rados Block Device mount on the host that shares a pod's lifetime.\\nMore info: https://examples.k8s.io/volumes/rbd/README.md\""),
+          '#rbd':: d.obj(help="\"rbd represents a Rados Block Device mount on the host that shares a pod's lifetime.\\nDeprecated: RBD is deprecated and the in-tree rbd type is no longer supported.\\nMore info: https://examples.k8s.io/volumes/rbd/README.md\""),
           rbd: {
             '#secretRef':: d.obj(help='"secretRef is name of the authentication secret for RBDUser. If provided\\noverrides keyring.\\nDefault is nil.\\nMore info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it"'),
             secretRef: {
@@ -2871,7 +2895,7 @@
             '#withUser':: d.fn(help='"user is the rados user name.\\nDefault is admin.\\nMore info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it"', args=[d.arg(name='user', type=d.T.string)]),
             withUser(user): { rbd+: { user: user } },
           },
-          '#scaleIO':: d.obj(help='"scaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes."'),
+          '#scaleIO':: d.obj(help='"scaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.\\nDeprecated: ScaleIO is deprecated and the in-tree scaleIO type is no longer supported."'),
           scaleIO: {
             '#secretRef':: d.obj(help='"secretRef references to the secret for ScaleIO user and other\\nsensitive information. If this is not provided, Login operation will fail."'),
             secretRef: {
@@ -2919,7 +2943,7 @@
             '#withSecretName':: d.fn(help="\"secretName is the name of the secret in the pod's namespace to use.\\nMore info: https://kubernetes.io/docs/concepts/storage/volumes#secret\"", args=[d.arg(name='secretName', type=d.T.string)]),
             withSecretName(secretName): { secret+: { secretName: secretName } },
           },
-          '#storageos':: d.obj(help='"storageOS represents a StorageOS volume attached and mounted on Kubernetes nodes."'),
+          '#storageos':: d.obj(help='"storageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.\\nDeprecated: StorageOS is deprecated and the in-tree storageos type is no longer supported."'),
           storageos: {
             '#secretRef':: d.obj(help='"secretRef specifies the secret to use for obtaining the StorageOS API\\ncredentials.  If not specified, default values will be attempted."'),
             secretRef: {
@@ -2935,7 +2959,7 @@
             '#withVolumeNamespace':: d.fn(help="\"volumeNamespace specifies the scope of the volume within StorageOS.  If no\\nnamespace is specified then the Pod's namespace will be used.  This allows the\\nKubernetes name scoping to be mirrored within StorageOS for tighter integration.\\nSet VolumeName to any name to override the default behaviour.\\nSet to \\\"default\\\" if you are not using namespaces within StorageOS.\\nNamespaces that do not pre-exist within StorageOS will be created.\"", args=[d.arg(name='volumeNamespace', type=d.T.string)]),
             withVolumeNamespace(volumeNamespace): { storageos+: { volumeNamespace: volumeNamespace } },
           },
-          '#vsphereVolume':: d.obj(help='"vsphereVolume represents a vSphere volume attached and mounted on kubelets host machine"'),
+          '#vsphereVolume':: d.obj(help='"vsphereVolume represents a vSphere volume attached and mounted on kubelets host machine.\\nDeprecated: VsphereVolume is deprecated. All operations for the in-tree vsphereVolume type\\nare redirected to the csi.vsphere.vmware.com CSI driver."'),
           vsphereVolume: {
             '#withFsType':: d.fn(help='"fsType is filesystem type to mount.\\nMust be a filesystem type supported by the host operating system.\\nEx. \\"ext4\\", \\"xfs\\", \\"ntfs\\". Implicitly inferred to be \\"ext4\\" if unspecified."', args=[d.arg(name='fsType', type=d.T.string)]),
             withFsType(fsType): { vsphereVolume+: { fsType: fsType } },
