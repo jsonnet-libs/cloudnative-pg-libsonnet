@@ -569,6 +569,7 @@ permalink: /1.25.0/postgresql/v1/cluster/
       * [`fn withOptional(optional)`](#fn-specexternalclusterspasswordwithoptional)
     * [`obj spec.externalClusters.plugin`](#obj-specexternalclustersplugin)
       * [`fn withEnabled(enabled)`](#fn-specexternalclusterspluginwithenabled)
+      * [`fn withIsWALArchiver(isWALArchiver)`](#fn-specexternalclusterspluginwithiswalarchiver)
       * [`fn withName(name)`](#fn-specexternalclusterspluginwithname)
       * [`fn withParameters(parameters)`](#fn-specexternalclusterspluginwithparameters)
       * [`fn withParametersMixin(parameters)`](#fn-specexternalclusterspluginwithparametersmixin)
@@ -710,6 +711,7 @@ permalink: /1.25.0/postgresql/v1/cluster/
     * [`fn withReusePVC(reusePVC)`](#fn-specnodemaintenancewindowwithreusepvc)
   * [`obj spec.plugins`](#obj-specplugins)
     * [`fn withEnabled(enabled)`](#fn-specpluginswithenabled)
+    * [`fn withIsWALArchiver(isWALArchiver)`](#fn-specpluginswithiswalarchiver)
     * [`fn withName(name)`](#fn-specpluginswithname)
     * [`fn withParameters(parameters)`](#fn-specpluginswithparameters)
     * [`fn withParametersMixin(parameters)`](#fn-specpluginswithparametersmixin)
@@ -765,17 +767,21 @@ permalink: /1.25.0/postgresql/v1/cluster/
     * [`obj spec.probes.readiness`](#obj-specprobesreadiness)
       * [`fn withFailureThreshold(failureThreshold)`](#fn-specprobesreadinesswithfailurethreshold)
       * [`fn withInitialDelaySeconds(initialDelaySeconds)`](#fn-specprobesreadinesswithinitialdelayseconds)
+      * [`fn withMaximumLag(maximumLag)`](#fn-specprobesreadinesswithmaximumlag)
       * [`fn withPeriodSeconds(periodSeconds)`](#fn-specprobesreadinesswithperiodseconds)
       * [`fn withSuccessThreshold(successThreshold)`](#fn-specprobesreadinesswithsuccessthreshold)
       * [`fn withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)`](#fn-specprobesreadinesswithterminationgraceperiodseconds)
       * [`fn withTimeoutSeconds(timeoutSeconds)`](#fn-specprobesreadinesswithtimeoutseconds)
+      * [`fn withType(type)`](#fn-specprobesreadinesswithtype)
     * [`obj spec.probes.startup`](#obj-specprobesstartup)
       * [`fn withFailureThreshold(failureThreshold)`](#fn-specprobesstartupwithfailurethreshold)
       * [`fn withInitialDelaySeconds(initialDelaySeconds)`](#fn-specprobesstartupwithinitialdelayseconds)
+      * [`fn withMaximumLag(maximumLag)`](#fn-specprobesstartupwithmaximumlag)
       * [`fn withPeriodSeconds(periodSeconds)`](#fn-specprobesstartupwithperiodseconds)
       * [`fn withSuccessThreshold(successThreshold)`](#fn-specprobesstartupwithsuccessthreshold)
       * [`fn withTerminationGracePeriodSeconds(terminationGracePeriodSeconds)`](#fn-specprobesstartupwithterminationgraceperiodseconds)
       * [`fn withTimeoutSeconds(timeoutSeconds)`](#fn-specprobesstartupwithtimeoutseconds)
+      * [`fn withType(type)`](#fn-specprobesstartupwithtype)
   * [`obj spec.projectedVolumeTemplate`](#obj-specprojectedvolumetemplate)
     * [`fn withDefaultMode(defaultMode)`](#fn-specprojectedvolumetemplatewithdefaultmode)
     * [`fn withSources(sources)`](#fn-specprojectedvolumetemplatewithsources)
@@ -5219,6 +5225,14 @@ withEnabled(enabled)
 
 "Enabled is true if this plugin will be used"
 
+### fn spec.externalClusters.plugin.withIsWALArchiver
+
+```ts
+withIsWALArchiver(isWALArchiver)
+```
+
+"Only one plugin can be declared as WALArchiver.\nCannot be active if \".spec.backup.barmanObjectStore\" configuration is present."
+
 ### fn spec.externalClusters.plugin.withName
 
 ```ts
@@ -6289,6 +6303,14 @@ withEnabled(enabled)
 
 "Enabled is true if this plugin will be used"
 
+### fn spec.plugins.withIsWALArchiver
+
+```ts
+withIsWALArchiver(isWALArchiver)
+```
+
+"Only one plugin can be declared as WALArchiver.\nCannot be active if \".spec.backup.barmanObjectStore\" configuration is present."
+
 ### fn spec.plugins.withName
 
 ```ts
@@ -6705,6 +6727,14 @@ withInitialDelaySeconds(initialDelaySeconds)
 
 "Number of seconds after the container has started before liveness probes are initiated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
+### fn spec.probes.readiness.withMaximumLag
+
+```ts
+withMaximumLag(maximumLag)
+```
+
+"Lag limit. Used only for `streaming` strategy"
+
 ### fn spec.probes.readiness.withPeriodSeconds
 
 ```ts
@@ -6737,6 +6767,14 @@ withTimeoutSeconds(timeoutSeconds)
 
 "Number of seconds after which the probe times out.\nDefaults to 1 second. Minimum value is 1.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
 
+### fn spec.probes.readiness.withType
+
+```ts
+withType(type)
+```
+
+"The probe strategy"
+
 ## obj spec.probes.startup
 
 "The startup probe configuration"
@@ -6756,6 +6794,14 @@ withInitialDelaySeconds(initialDelaySeconds)
 ```
 
 "Number of seconds after the container has started before liveness probes are initiated.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+
+### fn spec.probes.startup.withMaximumLag
+
+```ts
+withMaximumLag(maximumLag)
+```
+
+"Lag limit. Used only for `streaming` strategy"
 
 ### fn spec.probes.startup.withPeriodSeconds
 
@@ -6788,6 +6834,14 @@ withTimeoutSeconds(timeoutSeconds)
 ```
 
 "Number of seconds after which the probe times out.\nDefaults to 1 second. Minimum value is 1.\nMore info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes"
+
+### fn spec.probes.startup.withType
+
+```ts
+withType(type)
+```
+
+"The probe strategy"
 
 ## obj spec.projectedVolumeTemplate
 

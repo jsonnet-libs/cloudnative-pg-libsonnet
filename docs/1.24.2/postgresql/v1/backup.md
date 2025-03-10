@@ -4,7 +4,7 @@ permalink: /1.24.2/postgresql/v1/backup/
 
 # postgresql.v1.backup
 
-"Backup is the Schema for the backups API"
+"A Backup resource is a request for a PostgreSQL backup by the user."
 
 ## Index
 
