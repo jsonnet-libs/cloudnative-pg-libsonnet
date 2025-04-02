@@ -37,6 +37,8 @@ permalink: /1.25.0/postgresql/v1/database/
   * [`fn withDatabaseReclaimPolicy(databaseReclaimPolicy)`](#fn-specwithdatabasereclaimpolicy)
   * [`fn withEncoding(encoding)`](#fn-specwithencoding)
   * [`fn withEnsure(ensure)`](#fn-specwithensure)
+  * [`fn withExtensions(extensions)`](#fn-specwithextensions)
+  * [`fn withExtensionsMixin(extensions)`](#fn-specwithextensionsmixin)
   * [`fn withIcuLocale(icuLocale)`](#fn-specwithiculocale)
   * [`fn withIcuRules(icuRules)`](#fn-specwithicurules)
   * [`fn withIsTemplate(isTemplate)`](#fn-specwithistemplate)
@@ -46,10 +48,21 @@ permalink: /1.25.0/postgresql/v1/database/
   * [`fn withLocaleProvider(localeProvider)`](#fn-specwithlocaleprovider)
   * [`fn withName(name)`](#fn-specwithname)
   * [`fn withOwner(owner)`](#fn-specwithowner)
+  * [`fn withSchemas(schemas)`](#fn-specwithschemas)
+  * [`fn withSchemasMixin(schemas)`](#fn-specwithschemasmixin)
   * [`fn withTablespace(tablespace)`](#fn-specwithtablespace)
   * [`fn withTemplate(template)`](#fn-specwithtemplate)
   * [`obj spec.cluster`](#obj-speccluster)
     * [`fn withName(name)`](#fn-specclusterwithname)
+  * [`obj spec.extensions`](#obj-specextensions)
+    * [`fn withEnsure(ensure)`](#fn-specextensionswithensure)
+    * [`fn withName(name)`](#fn-specextensionswithname)
+    * [`fn withSchema(schema)`](#fn-specextensionswithschema)
+    * [`fn withVersion(version)`](#fn-specextensionswithversion)
+  * [`obj spec.schemas`](#obj-specschemas)
+    * [`fn withEnsure(ensure)`](#fn-specschemaswithensure)
+    * [`fn withName(name)`](#fn-specschemaswithname)
+    * [`fn withOwner(owner)`](#fn-specschemaswithowner)
 
 ## Fields
 
@@ -285,6 +298,24 @@ withEnsure(ensure)
 
 "Ensure the PostgreSQL database is `present` or `absent` - defaults to \"present\"."
 
+### fn spec.withExtensions
+
+```ts
+withExtensions(extensions)
+```
+
+"The list of extensions to be managed in the database"
+
+### fn spec.withExtensionsMixin
+
+```ts
+withExtensionsMixin(extensions)
+```
+
+"The list of extensions to be managed in the database"
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.withIcuLocale
 
 ```ts
@@ -357,6 +388,24 @@ withOwner(owner)
 
 "Maps to the `OWNER` parameter of `CREATE DATABASE`.\nMaps to the `OWNER TO` command of `ALTER DATABASE`.\nThe role name of the user who owns the database inside PostgreSQL."
 
+### fn spec.withSchemas
+
+```ts
+withSchemas(schemas)
+```
+
+"The list of schemas to be managed in the database"
+
+### fn spec.withSchemasMixin
+
+```ts
+withSchemasMixin(schemas)
+```
+
+"The list of schemas to be managed in the database"
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.withTablespace
 
 ```ts
@@ -384,3 +433,67 @@ withName(name)
 ```
 
 "Name of the referent.\nThis field is effectively required, but due to backwards compatibility is\nallowed to be empty. Instances of this type with an empty value here are\nalmost certainly wrong.\nMore info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names"
+
+## obj spec.extensions
+
+"The list of extensions to be managed in the database"
+
+### fn spec.extensions.withEnsure
+
+```ts
+withEnsure(ensure)
+```
+
+"Specifies whether an extension/schema should be present or absent in\nthe database. If set to `present`, the extension/schema will be\ncreated if it does not exist. If set to `absent`, the\nextension/schema will be removed if it exists."
+
+### fn spec.extensions.withName
+
+```ts
+withName(name)
+```
+
+"Name of the extension/schema"
+
+### fn spec.extensions.withSchema
+
+```ts
+withSchema(schema)
+```
+
+"The name of the schema in which to install the extension's objects,\nin case the extension allows its contents to be relocated. If not\nspecified (default), and the extension's control file does not\nspecify a schema either, the current default object creation schema\nis used."
+
+### fn spec.extensions.withVersion
+
+```ts
+withVersion(version)
+```
+
+"The version of the extension to install. If empty, the operator will\ninstall the default version (whatever is specified in the\nextension's control file)"
+
+## obj spec.schemas
+
+"The list of schemas to be managed in the database"
+
+### fn spec.schemas.withEnsure
+
+```ts
+withEnsure(ensure)
+```
+
+"Specifies whether an extension/schema should be present or absent in\nthe database. If set to `present`, the extension/schema will be\ncreated if it does not exist. If set to `absent`, the\nextension/schema will be removed if it exists."
+
+### fn spec.schemas.withName
+
+```ts
+withName(name)
+```
+
+"Name of the extension/schema"
+
+### fn spec.schemas.withOwner
+
+```ts
+withOwner(owner)
+```
+
+"The role name of the user who owns the schema inside PostgreSQL.\nIt maps to the `AUTHORIZATION` parameter of `CREATE SCHEMA` and the\n`OWNER TO` command of `ALTER SCHEMA`."

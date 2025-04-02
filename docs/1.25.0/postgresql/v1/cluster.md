@@ -3069,7 +3069,7 @@ withAdditionalCommandArgsMixin(additionalCommandArgs)
 withCompression(compression)
 ```
 
-"Compress a backup file (a tar file per tablespace) while streaming it\nto the object store. Available options are empty string (no\ncompression, default), `gzip`, `bzip2` or `snappy`."
+"Compress a backup file (a tar file per tablespace) while streaming it\nto the object store. Available options are empty string (no\ncompression, default), `gzip`, `bzip2`, and `snappy`."
 
 ### fn spec.backup.barmanObjectStore.data.withEncryption
 
@@ -3267,7 +3267,7 @@ withArchiveAdditionalCommandArgsMixin(archiveAdditionalCommandArgs)
 withCompression(compression)
 ```
 
-"Compress a WAL file before sending it to the object store. Available\noptions are empty string (no compression, default), `gzip`, `bzip2` or `snappy`."
+"Compress a WAL file before sending it to the object store. Available\noptions are empty string (no compression, default), `gzip`, `bzip2`,\n`lz4`, `snappy`, `xz`, and `zstd`."
 
 ### fn spec.backup.barmanObjectStore.wal.withEncryption
 
@@ -4951,7 +4951,7 @@ withAdditionalCommandArgsMixin(additionalCommandArgs)
 withCompression(compression)
 ```
 
-"Compress a backup file (a tar file per tablespace) while streaming it\nto the object store. Available options are empty string (no\ncompression, default), `gzip`, `bzip2` or `snappy`."
+"Compress a backup file (a tar file per tablespace) while streaming it\nto the object store. Available options are empty string (no\ncompression, default), `gzip`, `bzip2`, and `snappy`."
 
 ### fn spec.externalClusters.barmanObjectStore.data.withEncryption
 
@@ -5149,7 +5149,7 @@ withArchiveAdditionalCommandArgsMixin(archiveAdditionalCommandArgs)
 withCompression(compression)
 ```
 
-"Compress a WAL file before sending it to the object store. Available\noptions are empty string (no compression, default), `gzip`, `bzip2` or `snappy`."
+"Compress a WAL file before sending it to the object store. Available\noptions are empty string (no compression, default), `gzip`, `bzip2`,\n`lz4`, `snappy`, `xz`, and `zstd`."
 
 ### fn spec.externalClusters.barmanObjectStore.wal.withEncryption
 
