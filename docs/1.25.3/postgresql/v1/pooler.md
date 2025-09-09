@@ -1,5 +1,5 @@
 ---
-permalink: /1.26.0/postgresql/v1/pooler/
+permalink: /1.25.3/postgresql/v1/pooler/
 ---
 
 # postgresql.v1.pooler

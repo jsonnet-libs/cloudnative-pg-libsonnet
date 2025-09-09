@@ -5,6 +5,7 @@
   cluster: (import 'cluster.libsonnet'),
   clusterImageCatalog: (import 'clusterImageCatalog.libsonnet'),
   database: (import 'database.libsonnet'),
+  failoverQuorum: (import 'failoverQuorum.libsonnet'),
   imageCatalog: (import 'imageCatalog.libsonnet'),
   pooler: (import 'pooler.libsonnet'),
   publication: (import 'publication.libsonnet'),
