@@ -52,6 +52,8 @@ permalink: /1.25.3/postgresql/v1/database/
   * [`fn withOwner(owner)`](#fn-specwithowner)
   * [`fn withSchemas(schemas)`](#fn-specwithschemas)
   * [`fn withSchemasMixin(schemas)`](#fn-specwithschemasmixin)
+  * [`fn withServers(servers)`](#fn-specwithservers)
+  * [`fn withServersMixin(servers)`](#fn-specwithserversmixin)
   * [`fn withTablespace(tablespace)`](#fn-specwithtablespace)
   * [`fn withTemplate(template)`](#fn-specwithtemplate)
   * [`obj spec.cluster`](#obj-speccluster)
@@ -82,6 +84,21 @@ permalink: /1.25.3/postgresql/v1/database/
     * [`fn withEnsure(ensure)`](#fn-specschemaswithensure)
     * [`fn withName(name)`](#fn-specschemaswithname)
     * [`fn withOwner(owner)`](#fn-specschemaswithowner)
+  * [`obj spec.servers`](#obj-specservers)
+    * [`fn withEnsure(ensure)`](#fn-specserverswithensure)
+    * [`fn withFdw(fdw)`](#fn-specserverswithfdw)
+    * [`fn withName(name)`](#fn-specserverswithname)
+    * [`fn withOptions(options)`](#fn-specserverswithoptions)
+    * [`fn withOptionsMixin(options)`](#fn-specserverswithoptionsmixin)
+    * [`fn withUsage(usage)`](#fn-specserverswithusage)
+    * [`fn withUsageMixin(usage)`](#fn-specserverswithusagemixin)
+    * [`obj spec.servers.options`](#obj-specserversoptions)
+      * [`fn withEnsure(ensure)`](#fn-specserversoptionswithensure)
+      * [`fn withName(name)`](#fn-specserversoptionswithname)
+      * [`fn withValue(value)`](#fn-specserversoptionswithvalue)
+    * [`obj spec.servers.usage`](#obj-specserversusage)
+      * [`fn withName(name)`](#fn-specserversusagewithname)
+      * [`fn withType(type)`](#fn-specserversusagewithtype)
 
 ## Fields
 
@@ -443,6 +460,24 @@ withSchemasMixin(schemas)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.withServers
+
+```ts
+withServers(servers)
+```
+
+"The list of foreign servers to be managed in the database"
+
+### fn spec.withServersMixin
+
+```ts
+withServersMixin(servers)
+```
+
+"The list of foreign servers to be managed in the database"
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.withTablespace
 
 ```ts
@@ -481,7 +516,7 @@ withName(name)
 withEnsure(ensure)
 ```
 
-"Specifies whether an extension/schema should be present or absent in\nthe database. If set to `present`, the extension/schema will be\ncreated if it does not exist. If set to `absent`, the\nextension/schema will be removed if it exists."
+"Specifies whether an object (e.g schema) should be present or absent\nin the database. If set to `present`, the object will be created if\nit does not exist. If set to `absent`, the extension/schema will be\nremoved if it exists."
 
 ### fn spec.extensions.withName
 
@@ -489,7 +524,7 @@ withEnsure(ensure)
 withName(name)
 ```
 
-"Name of the extension/schema"
+"Name of the object (extension, schema, FDW, server)"
 
 ### fn spec.extensions.withSchema
 
@@ -517,7 +552,7 @@ withVersion(version)
 withEnsure(ensure)
 ```
 
-"Specifies whether an extension/schema should be present or absent in\nthe database. If set to `present`, the extension/schema will be\ncreated if it does not exist. If set to `absent`, the\nextension/schema will be removed if it exists."
+"Specifies whether an object (e.g schema) should be present or absent\nin the database. If set to `present`, the object will be created if\nit does not exist. If set to `absent`, the extension/schema will be\nremoved if it exists."
 
 ### fn spec.fdws.withHandler
 
@@ -533,7 +568,7 @@ withHandler(handler)
 withName(name)
 ```
 
-"Name of the extension/schema"
+"Name of the object (extension, schema, FDW, server)"
 
 ### fn spec.fdws.withOptions
 
@@ -541,7 +576,7 @@ withName(name)
 withOptions(options)
 ```
 
-"Options specifies the configuration options for the FDW\n(key is the option name, value is the option value)."
+"Options specifies the configuration options for the FDW."
 
 ### fn spec.fdws.withOptionsMixin
 
@@ -549,7 +584,7 @@ withOptions(options)
 withOptionsMixin(options)
 ```
 
-"Options specifies the configuration options for the FDW\n(key is the option name, value is the option value)."
+"Options specifies the configuration options for the FDW."
 
 **Note:** This function appends passed data to existing values
 
@@ -589,7 +624,7 @@ withValidator(validator)
 
 ## obj spec.fdws.options
 
-"Options specifies the configuration options for the FDW\n(key is the option name, value is the option value)."
+"Options specifies the configuration options for the FDW."
 
 ### fn spec.fdws.options.withEnsure
 
@@ -645,7 +680,7 @@ withType(type)
 withEnsure(ensure)
 ```
 
-"Specifies whether an extension/schema should be present or absent in\nthe database. If set to `present`, the extension/schema will be\ncreated if it does not exist. If set to `absent`, the\nextension/schema will be removed if it exists."
+"Specifies whether an object (e.g schema) should be present or absent\nin the database. If set to `present`, the object will be created if\nit does not exist. If set to `absent`, the extension/schema will be\nremoved if it exists."
 
 ### fn spec.schemas.withName
 
@@ -653,7 +688,7 @@ withEnsure(ensure)
 withName(name)
 ```
 
-"Name of the extension/schema"
+"Name of the object (extension, schema, FDW, server)"
 
 ### fn spec.schemas.withOwner
 
@@ -662,3 +697,115 @@ withOwner(owner)
 ```
 
 "The role name of the user who owns the schema inside PostgreSQL.\nIt maps to the `AUTHORIZATION` parameter of `CREATE SCHEMA` and the\n`OWNER TO` command of `ALTER SCHEMA`."
+
+## obj spec.servers
+
+"The list of foreign servers to be managed in the database"
+
+### fn spec.servers.withEnsure
+
+```ts
+withEnsure(ensure)
+```
+
+"Specifies whether an object (e.g schema) should be present or absent\nin the database. If set to `present`, the object will be created if\nit does not exist. If set to `absent`, the extension/schema will be\nremoved if it exists."
+
+### fn spec.servers.withFdw
+
+```ts
+withFdw(fdw)
+```
+
+"The name of the Foreign Data Wrapper (FDW)"
+
+### fn spec.servers.withName
+
+```ts
+withName(name)
+```
+
+"Name of the object (extension, schema, FDW, server)"
+
+### fn spec.servers.withOptions
+
+```ts
+withOptions(options)
+```
+
+"Options specifies the configuration options for the server\n(key is the option name, value is the option value)."
+
+### fn spec.servers.withOptionsMixin
+
+```ts
+withOptionsMixin(options)
+```
+
+"Options specifies the configuration options for the server\n(key is the option name, value is the option value)."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.servers.withUsage
+
+```ts
+withUsage(usage)
+```
+
+"List of roles for which `USAGE` privileges on the server are granted or revoked."
+
+### fn spec.servers.withUsageMixin
+
+```ts
+withUsageMixin(usage)
+```
+
+"List of roles for which `USAGE` privileges on the server are granted or revoked."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.servers.options
+
+"Options specifies the configuration options for the server\n(key is the option name, value is the option value)."
+
+### fn spec.servers.options.withEnsure
+
+```ts
+withEnsure(ensure)
+```
+
+"Specifies whether an option should be present or absent in\nthe database. If set to `present`, the option will be\ncreated if it does not exist. If set to `absent`, the\noption will be removed if it exists."
+
+### fn spec.servers.options.withName
+
+```ts
+withName(name)
+```
+
+"Name of the option"
+
+### fn spec.servers.options.withValue
+
+```ts
+withValue(value)
+```
+
+"Value of the option"
+
+## obj spec.servers.usage
+
+"List of roles for which `USAGE` privileges on the server are granted or revoked."
+
+### fn spec.servers.usage.withName
+
+```ts
+withName(name)
+```
+
+"Name of the usage"
+
+### fn spec.servers.usage.withType
+
+```ts
+withType(type)
+```
+
+"The type of usage"

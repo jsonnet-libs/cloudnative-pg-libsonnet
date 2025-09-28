@@ -346,8 +346,14 @@ permalink: /1.26.0/postgresql/v1/cluster/
         * [`fn withDatabasesMixin(databases)`](#fn-specbootstrapinitdbimportwithdatabasesmixin)
         * [`fn withPgDumpExtraOptions(pgDumpExtraOptions)`](#fn-specbootstrapinitdbimportwithpgdumpextraoptions)
         * [`fn withPgDumpExtraOptionsMixin(pgDumpExtraOptions)`](#fn-specbootstrapinitdbimportwithpgdumpextraoptionsmixin)
+        * [`fn withPgRestoreDataOptions(pgRestoreDataOptions)`](#fn-specbootstrapinitdbimportwithpgrestoredataoptions)
+        * [`fn withPgRestoreDataOptionsMixin(pgRestoreDataOptions)`](#fn-specbootstrapinitdbimportwithpgrestoredataoptionsmixin)
         * [`fn withPgRestoreExtraOptions(pgRestoreExtraOptions)`](#fn-specbootstrapinitdbimportwithpgrestoreextraoptions)
         * [`fn withPgRestoreExtraOptionsMixin(pgRestoreExtraOptions)`](#fn-specbootstrapinitdbimportwithpgrestoreextraoptionsmixin)
+        * [`fn withPgRestorePostdataOptions(pgRestorePostdataOptions)`](#fn-specbootstrapinitdbimportwithpgrestorepostdataoptions)
+        * [`fn withPgRestorePostdataOptionsMixin(pgRestorePostdataOptions)`](#fn-specbootstrapinitdbimportwithpgrestorepostdataoptionsmixin)
+        * [`fn withPgRestorePredataOptions(pgRestorePredataOptions)`](#fn-specbootstrapinitdbimportwithpgrestorepredataoptions)
+        * [`fn withPgRestorePredataOptionsMixin(pgRestorePredataOptions)`](#fn-specbootstrapinitdbimportwithpgrestorepredataoptionsmixin)
         * [`fn withPostImportApplicationSQL(postImportApplicationSQL)`](#fn-specbootstrapinitdbimportwithpostimportapplicationsql)
         * [`fn withPostImportApplicationSQLMixin(postImportApplicationSQL)`](#fn-specbootstrapinitdbimportwithpostimportapplicationsqlmixin)
         * [`fn withRoles(roles)`](#fn-specbootstrapinitdbimportwithroles)
@@ -767,6 +773,7 @@ permalink: /1.26.0/postgresql/v1/cluster/
       * [`fn withNodeLabelsAntiAffinityMixin(nodeLabelsAntiAffinity)`](#fn-specpostgresqlsyncreplicaelectionconstraintwithnodelabelsantiaffinitymixin)
     * [`obj spec.postgresql.synchronous`](#obj-specpostgresqlsynchronous)
       * [`fn withDataDurability(dataDurability)`](#fn-specpostgresqlsynchronouswithdatadurability)
+      * [`fn withFailoverQuorum(failoverQuorum)`](#fn-specpostgresqlsynchronouswithfailoverquorum)
       * [`fn withMaxStandbyNamesFromCluster(maxStandbyNamesFromCluster)`](#fn-specpostgresqlsynchronouswithmaxstandbynamesfromcluster)
       * [`fn withMethod(method)`](#fn-specpostgresqlsynchronouswithmethod)
       * [`fn withNumber(number)`](#fn-specpostgresqlsynchronouswithnumber)
@@ -3647,7 +3654,7 @@ withDatabasesMixin(databases)
 withPgDumpExtraOptions(pgDumpExtraOptions)
 ```
 
-"List of custom options to pass to the `pg_dump` command. IMPORTANT:\nUse these options with caution and at your own risk, as the operator\ndoes not validate their content. Be aware that certain options may\nconflict with the operator's intended functionality or design."
+"List of custom options to pass to the `pg_dump` command.\n\nIMPORTANT: Use with caution. The operator does not validate these options,\nand certain flags may interfere with its intended functionality or design.\nYou are responsible for ensuring that the provided options are compatible\nwith your environment and desired behavior."
 
 ### fn spec.bootstrap.initdb.import.withPgDumpExtraOptionsMixin
 
@@ -3655,7 +3662,25 @@ withPgDumpExtraOptions(pgDumpExtraOptions)
 withPgDumpExtraOptionsMixin(pgDumpExtraOptions)
 ```
 
-"List of custom options to pass to the `pg_dump` command. IMPORTANT:\nUse these options with caution and at your own risk, as the operator\ndoes not validate their content. Be aware that certain options may\nconflict with the operator's intended functionality or design."
+"List of custom options to pass to the `pg_dump` command.\n\nIMPORTANT: Use with caution. The operator does not validate these options,\nand certain flags may interfere with its intended functionality or design.\nYou are responsible for ensuring that the provided options are compatible\nwith your environment and desired behavior."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.bootstrap.initdb.import.withPgRestoreDataOptions
+
+```ts
+withPgRestoreDataOptions(pgRestoreDataOptions)
+```
+
+"Custom options to pass to the `pg_restore` command during the `data`\nsection. This setting overrides the generic `pgRestoreExtraOptions` value.\n\nIMPORTANT: Use with caution. The operator does not validate these options,\nand certain flags may interfere with its intended functionality or design.\nYou are responsible for ensuring that the provided options are compatible\nwith your environment and desired behavior."
+
+### fn spec.bootstrap.initdb.import.withPgRestoreDataOptionsMixin
+
+```ts
+withPgRestoreDataOptionsMixin(pgRestoreDataOptions)
+```
+
+"Custom options to pass to the `pg_restore` command during the `data`\nsection. This setting overrides the generic `pgRestoreExtraOptions` value.\n\nIMPORTANT: Use with caution. The operator does not validate these options,\nand certain flags may interfere with its intended functionality or design.\nYou are responsible for ensuring that the provided options are compatible\nwith your environment and desired behavior."
 
 **Note:** This function appends passed data to existing values
 
@@ -3665,7 +3690,7 @@ withPgDumpExtraOptionsMixin(pgDumpExtraOptions)
 withPgRestoreExtraOptions(pgRestoreExtraOptions)
 ```
 
-"List of custom options to pass to the `pg_restore` command. IMPORTANT:\nUse these options with caution and at your own risk, as the operator\ndoes not validate their content. Be aware that certain options may\nconflict with the operator's intended functionality or design."
+"List of custom options to pass to the `pg_restore` command.\n\nIMPORTANT: Use with caution. The operator does not validate these options,\nand certain flags may interfere with its intended functionality or design.\nYou are responsible for ensuring that the provided options are compatible\nwith your environment and desired behavior."
 
 ### fn spec.bootstrap.initdb.import.withPgRestoreExtraOptionsMixin
 
@@ -3673,7 +3698,43 @@ withPgRestoreExtraOptions(pgRestoreExtraOptions)
 withPgRestoreExtraOptionsMixin(pgRestoreExtraOptions)
 ```
 
-"List of custom options to pass to the `pg_restore` command. IMPORTANT:\nUse these options with caution and at your own risk, as the operator\ndoes not validate their content. Be aware that certain options may\nconflict with the operator's intended functionality or design."
+"List of custom options to pass to the `pg_restore` command.\n\nIMPORTANT: Use with caution. The operator does not validate these options,\nand certain flags may interfere with its intended functionality or design.\nYou are responsible for ensuring that the provided options are compatible\nwith your environment and desired behavior."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.bootstrap.initdb.import.withPgRestorePostdataOptions
+
+```ts
+withPgRestorePostdataOptions(pgRestorePostdataOptions)
+```
+
+"Custom options to pass to the `pg_restore` command during the `post-data`\nsection. This setting overrides the generic `pgRestoreExtraOptions` value.\n\nIMPORTANT: Use with caution. The operator does not validate these options,\nand certain flags may interfere with its intended functionality or design.\nYou are responsible for ensuring that the provided options are compatible\nwith your environment and desired behavior."
+
+### fn spec.bootstrap.initdb.import.withPgRestorePostdataOptionsMixin
+
+```ts
+withPgRestorePostdataOptionsMixin(pgRestorePostdataOptions)
+```
+
+"Custom options to pass to the `pg_restore` command during the `post-data`\nsection. This setting overrides the generic `pgRestoreExtraOptions` value.\n\nIMPORTANT: Use with caution. The operator does not validate these options,\nand certain flags may interfere with its intended functionality or design.\nYou are responsible for ensuring that the provided options are compatible\nwith your environment and desired behavior."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.bootstrap.initdb.import.withPgRestorePredataOptions
+
+```ts
+withPgRestorePredataOptions(pgRestorePredataOptions)
+```
+
+"Custom options to pass to the `pg_restore` command during the `pre-data`\nsection. This setting overrides the generic `pgRestoreExtraOptions` value.\n\nIMPORTANT: Use with caution. The operator does not validate these options,\nand certain flags may interfere with its intended functionality or design.\nYou are responsible for ensuring that the provided options are compatible\nwith your environment and desired behavior."
+
+### fn spec.bootstrap.initdb.import.withPgRestorePredataOptionsMixin
+
+```ts
+withPgRestorePredataOptionsMixin(pgRestorePredataOptions)
+```
+
+"Custom options to pass to the `pg_restore` command during the `pre-data`\nsection. This setting overrides the generic `pgRestoreExtraOptions` value.\n\nIMPORTANT: Use with caution. The operator does not validate these options,\nand certain flags may interfere with its intended functionality or design.\nYou are responsible for ensuring that the provided options are compatible\nwith your environment and desired behavior."
 
 **Note:** This function appends passed data to existing values
 
@@ -6760,6 +6821,14 @@ withDataDurability(dataDurability)
 ```
 
 "If set to \"required\", data durability is strictly enforced. Write operations\nwith synchronous commit settings (`on`, `remote_write`, or `remote_apply`) will\nblock if there are insufficient healthy replicas, ensuring data persistence.\nIf set to \"preferred\", data durability is maintained when healthy replicas\nare available, but the required number of instances will adjust dynamically\nif replicas become unavailable. This setting relaxes strict durability enforcement\nto allow for operational continuity. This setting is only applicable if both\n`standbyNamesPre` and `standbyNamesPost` are unset (empty)."
+
+### fn spec.postgresql.synchronous.withFailoverQuorum
+
+```ts
+withFailoverQuorum(failoverQuorum)
+```
+
+"FailoverQuorum enables a quorum-based check before failover, improving\ndata durability and safety during failover events in CloudNativePG-managed\nPostgreSQL clusters."
 
 ### fn spec.postgresql.synchronous.withMaxStandbyNamesFromCluster
 
