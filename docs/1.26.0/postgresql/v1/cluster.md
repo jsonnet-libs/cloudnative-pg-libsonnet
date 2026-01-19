@@ -4,7 +4,7 @@ permalink: /1.26.0/postgresql/v1/cluster/
 
 # postgresql.v1.cluster
 
-"Cluster is the Schema for the PostgreSQL API"
+"Cluster defines the API schema for a highly available PostgreSQL database cluster\nmanaged by CloudNativePG."
 
 ## Index
 
@@ -256,6 +256,7 @@ permalink: /1.26.0/postgresql/v1/cluster/
       * [`fn withTagsMixin(tags)`](#fn-specbackupbarmanobjectstorewithtagsmixin)
       * [`obj spec.backup.barmanObjectStore.azureCredentials`](#obj-specbackupbarmanobjectstoreazurecredentials)
         * [`fn withInheritFromAzureAD(inheritFromAzureAD)`](#fn-specbackupbarmanobjectstoreazurecredentialswithinheritfromazuread)
+        * [`fn withUseDefaultAzureCredentials(useDefaultAzureCredentials)`](#fn-specbackupbarmanobjectstoreazurecredentialswithusedefaultazurecredentials)
         * [`obj spec.backup.barmanObjectStore.azureCredentials.connectionString`](#obj-specbackupbarmanobjectstoreazurecredentialsconnectionstring)
           * [`fn withKey(key)`](#fn-specbackupbarmanobjectstoreazurecredentialsconnectionstringwithkey)
           * [`fn withName(name)`](#fn-specbackupbarmanobjectstoreazurecredentialsconnectionstringwithname)
@@ -525,6 +526,7 @@ permalink: /1.26.0/postgresql/v1/cluster/
       * [`fn withTagsMixin(tags)`](#fn-specexternalclustersbarmanobjectstorewithtagsmixin)
       * [`obj spec.externalClusters.barmanObjectStore.azureCredentials`](#obj-specexternalclustersbarmanobjectstoreazurecredentials)
         * [`fn withInheritFromAzureAD(inheritFromAzureAD)`](#fn-specexternalclustersbarmanobjectstoreazurecredentialswithinheritfromazuread)
+        * [`fn withUseDefaultAzureCredentials(useDefaultAzureCredentials)`](#fn-specexternalclustersbarmanobjectstoreazurecredentialswithusedefaultazurecredentials)
         * [`obj spec.externalClusters.barmanObjectStore.azureCredentials.connectionString`](#obj-specexternalclustersbarmanobjectstoreazurecredentialsconnectionstring)
           * [`fn withKey(key)`](#fn-specexternalclustersbarmanobjectstoreazurecredentialsconnectionstringwithkey)
           * [`fn withName(name)`](#fn-specexternalclustersbarmanobjectstoreazurecredentialsconnectionstringwithname)
@@ -687,6 +689,7 @@ permalink: /1.26.0/postgresql/v1/cluster/
     * [`fn withCustomQueriesSecretMixin(customQueriesSecret)`](#fn-specmonitoringwithcustomqueriessecretmixin)
     * [`fn withDisableDefaultQueries(disableDefaultQueries)`](#fn-specmonitoringwithdisabledefaultqueries)
     * [`fn withEnablePodMonitor(enablePodMonitor)`](#fn-specmonitoringwithenablepodmonitor)
+    * [`fn withMetricsQueriesTTL(metricsQueriesTTL)`](#fn-specmonitoringwithmetricsqueriesttl)
     * [`fn withPodMonitorMetricRelabelings(podMonitorMetricRelabelings)`](#fn-specmonitoringwithpodmonitormetricrelabelings)
     * [`fn withPodMonitorMetricRelabelingsMixin(podMonitorMetricRelabelings)`](#fn-specmonitoringwithpodmonitormetricrelabelingsmixin)
     * [`fn withPodMonitorRelabelings(podMonitorRelabelings)`](#fn-specmonitoringwithpodmonitorrelabelings)
@@ -726,6 +729,37 @@ permalink: /1.26.0/postgresql/v1/cluster/
     * [`fn withName(name)`](#fn-specpluginswithname)
     * [`fn withParameters(parameters)`](#fn-specpluginswithparameters)
     * [`fn withParametersMixin(parameters)`](#fn-specpluginswithparametersmixin)
+  * [`obj spec.podSecurityContext`](#obj-specpodsecuritycontext)
+    * [`fn withFsGroup(fsGroup)`](#fn-specpodsecuritycontextwithfsgroup)
+    * [`fn withFsGroupChangePolicy(fsGroupChangePolicy)`](#fn-specpodsecuritycontextwithfsgroupchangepolicy)
+    * [`fn withRunAsGroup(runAsGroup)`](#fn-specpodsecuritycontextwithrunasgroup)
+    * [`fn withRunAsNonRoot(runAsNonRoot)`](#fn-specpodsecuritycontextwithrunasnonroot)
+    * [`fn withRunAsUser(runAsUser)`](#fn-specpodsecuritycontextwithrunasuser)
+    * [`fn withSeLinuxChangePolicy(seLinuxChangePolicy)`](#fn-specpodsecuritycontextwithselinuxchangepolicy)
+    * [`fn withSupplementalGroups(supplementalGroups)`](#fn-specpodsecuritycontextwithsupplementalgroups)
+    * [`fn withSupplementalGroupsMixin(supplementalGroups)`](#fn-specpodsecuritycontextwithsupplementalgroupsmixin)
+    * [`fn withSupplementalGroupsPolicy(supplementalGroupsPolicy)`](#fn-specpodsecuritycontextwithsupplementalgroupspolicy)
+    * [`fn withSysctls(sysctls)`](#fn-specpodsecuritycontextwithsysctls)
+    * [`fn withSysctlsMixin(sysctls)`](#fn-specpodsecuritycontextwithsysctlsmixin)
+    * [`obj spec.podSecurityContext.appArmorProfile`](#obj-specpodsecuritycontextapparmorprofile)
+      * [`fn withLocalhostProfile(localhostProfile)`](#fn-specpodsecuritycontextapparmorprofilewithlocalhostprofile)
+      * [`fn withType(type)`](#fn-specpodsecuritycontextapparmorprofilewithtype)
+    * [`obj spec.podSecurityContext.seLinuxOptions`](#obj-specpodsecuritycontextselinuxoptions)
+      * [`fn withLevel(level)`](#fn-specpodsecuritycontextselinuxoptionswithlevel)
+      * [`fn withRole(role)`](#fn-specpodsecuritycontextselinuxoptionswithrole)
+      * [`fn withType(type)`](#fn-specpodsecuritycontextselinuxoptionswithtype)
+      * [`fn withUser(user)`](#fn-specpodsecuritycontextselinuxoptionswithuser)
+    * [`obj spec.podSecurityContext.seccompProfile`](#obj-specpodsecuritycontextseccompprofile)
+      * [`fn withLocalhostProfile(localhostProfile)`](#fn-specpodsecuritycontextseccompprofilewithlocalhostprofile)
+      * [`fn withType(type)`](#fn-specpodsecuritycontextseccompprofilewithtype)
+    * [`obj spec.podSecurityContext.sysctls`](#obj-specpodsecuritycontextsysctls)
+      * [`fn withName(name)`](#fn-specpodsecuritycontextsysctlswithname)
+      * [`fn withValue(value)`](#fn-specpodsecuritycontextsysctlswithvalue)
+    * [`obj spec.podSecurityContext.windowsOptions`](#obj-specpodsecuritycontextwindowsoptions)
+      * [`fn withGmsaCredentialSpec(gmsaCredentialSpec)`](#fn-specpodsecuritycontextwindowsoptionswithgmsacredentialspec)
+      * [`fn withGmsaCredentialSpecName(gmsaCredentialSpecName)`](#fn-specpodsecuritycontextwindowsoptionswithgmsacredentialspecname)
+      * [`fn withHostProcess(hostProcess)`](#fn-specpodsecuritycontextwindowsoptionswithhostprocess)
+      * [`fn withRunAsUserName(runAsUserName)`](#fn-specpodsecuritycontextwindowsoptionswithrunasusername)
   * [`obj spec.postgresql`](#obj-specpostgresql)
     * [`fn withEnableAlterSystem(enableAlterSystem)`](#fn-specpostgresqlwithenablealtersystem)
     * [`fn withExtensions(extensions)`](#fn-specpostgresqlwithextensions)
@@ -860,6 +894,8 @@ permalink: /1.26.0/postgresql/v1/cluster/
         * [`fn withKeyType(keyType)`](#fn-specprojectedvolumetemplatesourcespodcertificatewithkeytype)
         * [`fn withMaxExpirationSeconds(maxExpirationSeconds)`](#fn-specprojectedvolumetemplatesourcespodcertificatewithmaxexpirationseconds)
         * [`fn withSignerName(signerName)`](#fn-specprojectedvolumetemplatesourcespodcertificatewithsignername)
+        * [`fn withUserAnnotations(userAnnotations)`](#fn-specprojectedvolumetemplatesourcespodcertificatewithuserannotations)
+        * [`fn withUserAnnotationsMixin(userAnnotations)`](#fn-specprojectedvolumetemplatesourcespodcertificatewithuserannotationsmixin)
       * [`obj spec.projectedVolumeTemplate.sources.secret`](#obj-specprojectedvolumetemplatesourcessecret)
         * [`fn withItems(items)`](#fn-specprojectedvolumetemplatesourcessecretwithitems)
         * [`fn withItemsMixin(items)`](#fn-specprojectedvolumetemplatesourcessecretwithitemsmixin)
@@ -903,6 +939,35 @@ permalink: /1.26.0/postgresql/v1/cluster/
   * [`obj spec.seccompProfile`](#obj-specseccompprofile)
     * [`fn withLocalhostProfile(localhostProfile)`](#fn-specseccompprofilewithlocalhostprofile)
     * [`fn withType(type)`](#fn-specseccompprofilewithtype)
+  * [`obj spec.securityContext`](#obj-specsecuritycontext)
+    * [`fn withAllowPrivilegeEscalation(allowPrivilegeEscalation)`](#fn-specsecuritycontextwithallowprivilegeescalation)
+    * [`fn withPrivileged(privileged)`](#fn-specsecuritycontextwithprivileged)
+    * [`fn withProcMount(procMount)`](#fn-specsecuritycontextwithprocmount)
+    * [`fn withReadOnlyRootFilesystem(readOnlyRootFilesystem)`](#fn-specsecuritycontextwithreadonlyrootfilesystem)
+    * [`fn withRunAsGroup(runAsGroup)`](#fn-specsecuritycontextwithrunasgroup)
+    * [`fn withRunAsNonRoot(runAsNonRoot)`](#fn-specsecuritycontextwithrunasnonroot)
+    * [`fn withRunAsUser(runAsUser)`](#fn-specsecuritycontextwithrunasuser)
+    * [`obj spec.securityContext.appArmorProfile`](#obj-specsecuritycontextapparmorprofile)
+      * [`fn withLocalhostProfile(localhostProfile)`](#fn-specsecuritycontextapparmorprofilewithlocalhostprofile)
+      * [`fn withType(type)`](#fn-specsecuritycontextapparmorprofilewithtype)
+    * [`obj spec.securityContext.capabilities`](#obj-specsecuritycontextcapabilities)
+      * [`fn withAdd(add)`](#fn-specsecuritycontextcapabilitieswithadd)
+      * [`fn withAddMixin(add)`](#fn-specsecuritycontextcapabilitieswithaddmixin)
+      * [`fn withDrop(drop)`](#fn-specsecuritycontextcapabilitieswithdrop)
+      * [`fn withDropMixin(drop)`](#fn-specsecuritycontextcapabilitieswithdropmixin)
+    * [`obj spec.securityContext.seLinuxOptions`](#obj-specsecuritycontextselinuxoptions)
+      * [`fn withLevel(level)`](#fn-specsecuritycontextselinuxoptionswithlevel)
+      * [`fn withRole(role)`](#fn-specsecuritycontextselinuxoptionswithrole)
+      * [`fn withType(type)`](#fn-specsecuritycontextselinuxoptionswithtype)
+      * [`fn withUser(user)`](#fn-specsecuritycontextselinuxoptionswithuser)
+    * [`obj spec.securityContext.seccompProfile`](#obj-specsecuritycontextseccompprofile)
+      * [`fn withLocalhostProfile(localhostProfile)`](#fn-specsecuritycontextseccompprofilewithlocalhostprofile)
+      * [`fn withType(type)`](#fn-specsecuritycontextseccompprofilewithtype)
+    * [`obj spec.securityContext.windowsOptions`](#obj-specsecuritycontextwindowsoptions)
+      * [`fn withGmsaCredentialSpec(gmsaCredentialSpec)`](#fn-specsecuritycontextwindowsoptionswithgmsacredentialspec)
+      * [`fn withGmsaCredentialSpecName(gmsaCredentialSpecName)`](#fn-specsecuritycontextwindowsoptionswithgmsacredentialspecname)
+      * [`fn withHostProcess(hostProcess)`](#fn-specsecuritycontextwindowsoptionswithhostprocess)
+      * [`fn withRunAsUserName(runAsUserName)`](#fn-specsecuritycontextwindowsoptionswithrunasusername)
   * [`obj spec.serviceAccountTemplate`](#obj-specserviceaccounttemplate)
     * [`obj spec.serviceAccountTemplate.metadata`](#obj-specserviceaccounttemplatemetadata)
       * [`fn withAnnotations(annotations)`](#fn-specserviceaccounttemplatemetadatawithannotations)
@@ -1420,7 +1485,7 @@ withPostgresUID(postgresUID)
 withPrimaryUpdateMethod(primaryUpdateMethod)
 ```
 
-"Method to follow to upgrade the primary server during a rolling\nupdate procedure, after all replicas have been successfully updated:\nit can be with a switchover (`switchover`) or in-place (`restart` - default)"
+"Method to follow to upgrade the primary server during a rolling\nupdate procedure, after all replicas have been successfully updated:\nit can be with a switchover (`switchover`) or in-place (`restart` - default).\nNote: when using `switchover`, the operator will reject updates that change both\nthe image name and PostgreSQL configuration parameters simultaneously to avoid\nconfiguration mismatches during the switchover process."
 
 ### fn spec.withPrimaryUpdateStrategy
 
@@ -1452,7 +1517,7 @@ withSchedulerName(schedulerName)
 withSmartShutdownTimeout(smartShutdownTimeout)
 ```
 
-"The time in seconds that controls the window of time reserved for the smart shutdown of Postgres to complete.\nMake sure you reserve enough time for the operator to request a fast shutdown of Postgres\n(that is: `stopDelay` - `smartShutdownTimeout`)."
+"The time in seconds that controls the window of time reserved for the smart shutdown of Postgres to complete.\nMake sure you reserve enough time for the operator to request a fast shutdown of Postgres\n(that is: `stopDelay` - `smartShutdownTimeout`). Default is 180 seconds."
 
 ### fn spec.withStartDelay
 
@@ -2884,7 +2949,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"Operator represents a key's relationship to the value.\nValid operators are Exists and Equal. Defaults to Equal.\nExists is equivalent to wildcard for value, so that a pod can\ntolerate all taints of a particular category."
+"Operator represents a key's relationship to the value.\nValid operators are Exists, Equal, Lt, and Gt. Defaults to Equal.\nExists is equivalent to wildcard for value, so that a pod can\ntolerate all taints of a particular category.\nLt and Gt perform numeric comparisons (requires feature gate TaintTolerationComparisonOperators)."
 
 ### fn spec.affinity.tolerations.withTolerationSeconds
 
@@ -2997,6 +3062,14 @@ withInheritFromAzureAD(inheritFromAzureAD)
 ```
 
 "Use the Azure AD based authentication without providing explicitly the keys."
+
+### fn spec.backup.barmanObjectStore.azureCredentials.withUseDefaultAzureCredentials
+
+```ts
+withUseDefaultAzureCredentials(useDefaultAzureCredentials)
+```
+
+"Use the default Azure authentication flow, which includes DefaultAzureCredential.\nThis allows authentication using environment variables and managed identities."
 
 ## obj spec.backup.barmanObjectStore.azureCredentials.connectionString
 
@@ -3544,7 +3617,7 @@ withLocaleProvider(localeProvider)
 withOptions(options)
 ```
 
-"The list of options that must be passed to initdb when creating the cluster.\nDeprecated: This could lead to inconsistent configurations,\nplease use the explicit provided parameters instead.\nIf defined, explicit values will be ignored."
+"The list of options that must be passed to initdb when creating the cluster.\n\nDeprecated: This could lead to inconsistent configurations,\nplease use the explicit provided parameters instead.\nIf defined, explicit values will be ignored."
 
 ### fn spec.bootstrap.initdb.withOptionsMixin
 
@@ -3552,7 +3625,7 @@ withOptions(options)
 withOptionsMixin(options)
 ```
 
-"The list of options that must be passed to initdb when creating the cluster.\nDeprecated: This could lead to inconsistent configurations,\nplease use the explicit provided parameters instead.\nIf defined, explicit values will be ignored."
+"The list of options that must be passed to initdb when creating the cluster.\n\nDeprecated: This could lead to inconsistent configurations,\nplease use the explicit provided parameters instead.\nIf defined, explicit values will be ignored."
 
 **Note:** This function appends passed data to existing values
 
@@ -4212,7 +4285,7 @@ withTargetTLI(targetTLI)
 withTargetTime(targetTime)
 ```
 
-"The target time as a timestamp in the RFC3339 standard"
+"The target time as a timestamp in RFC3339 format or PostgreSQL timestamp format.\nTimestamps without an explicit timezone are interpreted as UTC."
 
 ### fn spec.bootstrap.recovery.recoveryTarget.withTargetXID
 
@@ -4728,7 +4801,7 @@ withNamespace(namespace)
 
 ## obj spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources
 
-"resources represents the minimum resources the volume should have.\nIf RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements\nthat are lower than previous value but must still be higher than capacity recorded in the\nstatus field of the claim.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
+"resources represents the minimum resources the volume should have.\nUsers are allowed to specify resource requirements\nthat are lower than previous value but must still be higher than capacity recorded in the\nstatus field of the claim.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
 
 ### fn spec.ephemeralVolumeSource.volumeClaimTemplate.spec.resources.withLimits
 
@@ -4969,6 +5042,14 @@ withInheritFromAzureAD(inheritFromAzureAD)
 ```
 
 "Use the Azure AD based authentication without providing explicitly the keys."
+
+### fn spec.externalClusters.barmanObjectStore.azureCredentials.withUseDefaultAzureCredentials
+
+```ts
+withUseDefaultAzureCredentials(useDefaultAzureCredentials)
+```
+
+"Use the default Azure authentication flow, which includes DefaultAzureCredential.\nThis allows authentication using environment variables and managed identities."
 
 ## obj spec.externalClusters.barmanObjectStore.azureCredentials.connectionString
 
@@ -5358,7 +5439,7 @@ withEnabled(enabled)
 withIsWALArchiver(isWALArchiver)
 ```
 
-"Only one plugin can be declared as WALArchiver.\nCannot be active if \".spec.backup.barmanObjectStore\" configuration is present."
+"Marks the plugin as the WAL archiver. At most one plugin can be\ndesignated as a WAL archiver. This cannot be enabled if the\n`.spec.backup.barmanObjectStore` configuration is present."
 
 ### fn spec.externalClusters.plugin.withName
 
@@ -6168,7 +6249,15 @@ withDisableDefaultQueries(disableDefaultQueries)
 withEnablePodMonitor(enablePodMonitor)
 ```
 
-"Enable or disable the `PodMonitor`"
+"Enable or disable the `PodMonitor`\n\nDeprecated: This feature will be removed in an upcoming release. If\nyou need this functionality, you can create a PodMonitor manually."
+
+### fn spec.monitoring.withMetricsQueriesTTL
+
+```ts
+withMetricsQueriesTTL(metricsQueriesTTL)
+```
+
+"The interval during which metrics computed from queries are considered current.\nOnce it is exceeded, a new scrape will trigger a rerun\nof the queries.\nIf not set, defaults to 30 seconds, in line with Prometheus scraping defaults.\nSetting this to zero disables the caching mechanism and can cause heavy load on the PostgreSQL server."
 
 ### fn spec.monitoring.withPodMonitorMetricRelabelings
 
@@ -6176,7 +6265,7 @@ withEnablePodMonitor(enablePodMonitor)
 withPodMonitorMetricRelabelings(podMonitorMetricRelabelings)
 ```
 
-"The list of metric relabelings for the `PodMonitor`. Applied to samples before ingestion."
+"The list of metric relabelings for the `PodMonitor`. Applied to samples before ingestion.\n\nDeprecated: This feature will be removed in an upcoming release. If\nyou need this functionality, you can create a PodMonitor manually."
 
 ### fn spec.monitoring.withPodMonitorMetricRelabelingsMixin
 
@@ -6184,7 +6273,7 @@ withPodMonitorMetricRelabelings(podMonitorMetricRelabelings)
 withPodMonitorMetricRelabelingsMixin(podMonitorMetricRelabelings)
 ```
 
-"The list of metric relabelings for the `PodMonitor`. Applied to samples before ingestion."
+"The list of metric relabelings for the `PodMonitor`. Applied to samples before ingestion.\n\nDeprecated: This feature will be removed in an upcoming release. If\nyou need this functionality, you can create a PodMonitor manually."
 
 **Note:** This function appends passed data to existing values
 
@@ -6194,7 +6283,7 @@ withPodMonitorMetricRelabelingsMixin(podMonitorMetricRelabelings)
 withPodMonitorRelabelings(podMonitorRelabelings)
 ```
 
-"The list of relabelings for the `PodMonitor`. Applied to samples before scraping."
+"The list of relabelings for the `PodMonitor`. Applied to samples before scraping.\n\nDeprecated: This feature will be removed in an upcoming release. If\nyou need this functionality, you can create a PodMonitor manually."
 
 ### fn spec.monitoring.withPodMonitorRelabelingsMixin
 
@@ -6202,7 +6291,7 @@ withPodMonitorRelabelings(podMonitorRelabelings)
 withPodMonitorRelabelingsMixin(podMonitorRelabelings)
 ```
 
-"The list of relabelings for the `PodMonitor`. Applied to samples before scraping."
+"The list of relabelings for the `PodMonitor`. Applied to samples before scraping.\n\nDeprecated: This feature will be removed in an upcoming release. If\nyou need this functionality, you can create a PodMonitor manually."
 
 **Note:** This function appends passed data to existing values
 
@@ -6248,7 +6337,7 @@ withName(name)
 
 ## obj spec.monitoring.podMonitorMetricRelabelings
 
-"The list of metric relabelings for the `PodMonitor`. Applied to samples before ingestion."
+"The list of metric relabelings for the `PodMonitor`. Applied to samples before ingestion.\n\nDeprecated: This feature will be removed in an upcoming release. If\nyou need this functionality, you can create a PodMonitor manually."
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withAction
 
@@ -6256,7 +6345,7 @@ withName(name)
 withAction(action)
 ```
 
-"Action to perform based on the regex matching.\n\n`Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0.\n`DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0.\n\nDefault: \"Replace\
+"action to perform based on the regex matching.\n\n`Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0.\n`DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0.\n\nDefault: \"Replace\
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withModulus
 
@@ -6264,7 +6353,7 @@ withAction(action)
 withModulus(modulus)
 ```
 
-"Modulus to take of the hash of the source label values.\n\nOnly applicable when the action is `HashMod`."
+"modulus to take of the hash of the source label values.\n\nOnly applicable when the action is `HashMod`."
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withRegex
 
@@ -6272,7 +6361,7 @@ withModulus(modulus)
 withRegex(regex)
 ```
 
-"Regular expression against which the extracted value is matched."
+"regex defines the regular expression against which the extracted value is matched."
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withReplacement
 
@@ -6280,7 +6369,7 @@ withRegex(regex)
 withReplacement(replacement)
 ```
 
-"Replacement value against which a Replace action is performed if the\nregular expression matches.\n\nRegex capture groups are available."
+"replacement value against which a Replace action is performed if the\nregular expression matches.\n\nRegex capture groups are available."
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withSeparator
 
@@ -6288,7 +6377,7 @@ withReplacement(replacement)
 withSeparator(separator)
 ```
 
-"Separator is the string between concatenated SourceLabels."
+"separator defines the string between concatenated SourceLabels."
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withSourceLabels
 
@@ -6296,7 +6385,7 @@ withSeparator(separator)
 withSourceLabels(sourceLabels)
 ```
 
-"The source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
+"sourceLabels defines the source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withSourceLabelsMixin
 
@@ -6304,7 +6393,7 @@ withSourceLabels(sourceLabels)
 withSourceLabelsMixin(sourceLabels)
 ```
 
-"The source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
+"sourceLabels defines the source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
 
 **Note:** This function appends passed data to existing values
 
@@ -6314,11 +6403,11 @@ withSourceLabelsMixin(sourceLabels)
 withTargetLabel(targetLabel)
 ```
 
-"Label to which the resulting string is written in a replacement.\n\nIt is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`,\n`KeepEqual` and `DropEqual` actions.\n\nRegex capture groups are available."
+"targetLabel defines the label to which the resulting string is written in a replacement.\n\nIt is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`,\n`KeepEqual` and `DropEqual` actions.\n\nRegex capture groups are available."
 
 ## obj spec.monitoring.podMonitorRelabelings
 
-"The list of relabelings for the `PodMonitor`. Applied to samples before scraping."
+"The list of relabelings for the `PodMonitor`. Applied to samples before scraping.\n\nDeprecated: This feature will be removed in an upcoming release. If\nyou need this functionality, you can create a PodMonitor manually."
 
 ### fn spec.monitoring.podMonitorRelabelings.withAction
 
@@ -6326,7 +6415,7 @@ withTargetLabel(targetLabel)
 withAction(action)
 ```
 
-"Action to perform based on the regex matching.\n\n`Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0.\n`DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0.\n\nDefault: \"Replace\
+"action to perform based on the regex matching.\n\n`Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0.\n`DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0.\n\nDefault: \"Replace\
 
 ### fn spec.monitoring.podMonitorRelabelings.withModulus
 
@@ -6334,7 +6423,7 @@ withAction(action)
 withModulus(modulus)
 ```
 
-"Modulus to take of the hash of the source label values.\n\nOnly applicable when the action is `HashMod`."
+"modulus to take of the hash of the source label values.\n\nOnly applicable when the action is `HashMod`."
 
 ### fn spec.monitoring.podMonitorRelabelings.withRegex
 
@@ -6342,7 +6431,7 @@ withModulus(modulus)
 withRegex(regex)
 ```
 
-"Regular expression against which the extracted value is matched."
+"regex defines the regular expression against which the extracted value is matched."
 
 ### fn spec.monitoring.podMonitorRelabelings.withReplacement
 
@@ -6350,7 +6439,7 @@ withRegex(regex)
 withReplacement(replacement)
 ```
 
-"Replacement value against which a Replace action is performed if the\nregular expression matches.\n\nRegex capture groups are available."
+"replacement value against which a Replace action is performed if the\nregular expression matches.\n\nRegex capture groups are available."
 
 ### fn spec.monitoring.podMonitorRelabelings.withSeparator
 
@@ -6358,7 +6447,7 @@ withReplacement(replacement)
 withSeparator(separator)
 ```
 
-"Separator is the string between concatenated SourceLabels."
+"separator defines the string between concatenated SourceLabels."
 
 ### fn spec.monitoring.podMonitorRelabelings.withSourceLabels
 
@@ -6366,7 +6455,7 @@ withSeparator(separator)
 withSourceLabels(sourceLabels)
 ```
 
-"The source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
+"sourceLabels defines the source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
 
 ### fn spec.monitoring.podMonitorRelabelings.withSourceLabelsMixin
 
@@ -6374,7 +6463,7 @@ withSourceLabels(sourceLabels)
 withSourceLabelsMixin(sourceLabels)
 ```
 
-"The source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
+"sourceLabels defines the source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
 
 **Note:** This function appends passed data to existing values
 
@@ -6384,7 +6473,7 @@ withSourceLabelsMixin(sourceLabels)
 withTargetLabel(targetLabel)
 ```
 
-"Label to which the resulting string is written in a replacement.\n\nIt is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`,\n`KeepEqual` and `DropEqual` actions.\n\nRegex capture groups are available."
+"targetLabel defines the label to which the resulting string is written in a replacement.\n\nIt is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`,\n`KeepEqual` and `DropEqual` actions.\n\nRegex capture groups are available."
 
 ## obj spec.monitoring.tls
 
@@ -6436,7 +6525,7 @@ withEnabled(enabled)
 withIsWALArchiver(isWALArchiver)
 ```
 
-"Only one plugin can be declared as WALArchiver.\nCannot be active if \".spec.backup.barmanObjectStore\" configuration is present."
+"Marks the plugin as the WAL archiver. At most one plugin can be\ndesignated as a WAL archiver. This cannot be enabled if the\n`.spec.backup.barmanObjectStore` configuration is present."
 
 ### fn spec.plugins.withName
 
@@ -6463,6 +6552,234 @@ withParametersMixin(parameters)
 "Parameters is the configuration of the plugin"
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.podSecurityContext
+
+"Override the PodSecurityContext applied to every Pod of the cluster.\nWhen set, this overrides the operator's default PodSecurityContext for the cluster.\nIf omitted, the operator defaults are used.\nThis field doesn't have any effect if SecurityContextConstraints are present."
+
+### fn spec.podSecurityContext.withFsGroup
+
+```ts
+withFsGroup(fsGroup)
+```
+
+"A special supplemental group that applies to all containers in a pod.\nSome volume types allow the Kubelet to change the ownership of that volume\nto be owned by the pod:\n\n1. The owning GID will be the FSGroup\n2. The setgid bit is set (new files created in the volume will be owned by FSGroup)\n3. The permission bits are OR'd with rw-rw----\n\nIf unset, the Kubelet will not modify the ownership and permissions of any volume.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.podSecurityContext.withFsGroupChangePolicy
+
+```ts
+withFsGroupChangePolicy(fsGroupChangePolicy)
+```
+
+"fsGroupChangePolicy defines behavior of changing ownership and permission of the volume\nbefore being exposed inside Pod. This field will only apply to\nvolume types which support fsGroup based ownership(and permissions).\nIt will have no effect on ephemeral volume types such as: secret, configmaps\nand emptydir.\nValid values are \"OnRootMismatch\" and \"Always\". If not specified, \"Always\" is used.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.podSecurityContext.withRunAsGroup
+
+```ts
+withRunAsGroup(runAsGroup)
+```
+
+"The GID to run the entrypoint of the container process.\nUses runtime default if unset.\nMay also be set in SecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence\nfor that container.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.podSecurityContext.withRunAsNonRoot
+
+```ts
+withRunAsNonRoot(runAsNonRoot)
+```
+
+"Indicates that the container must run as a non-root user.\nIf true, the Kubelet will validate the image at runtime to ensure that it\ndoes not run as UID 0 (root) and fail to start the container if it does.\nIf unset or false, no such validation will be performed.\nMay also be set in SecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence."
+
+### fn spec.podSecurityContext.withRunAsUser
+
+```ts
+withRunAsUser(runAsUser)
+```
+
+"The UID to run the entrypoint of the container process.\nDefaults to user specified in image metadata if unspecified.\nMay also be set in SecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence\nfor that container.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.podSecurityContext.withSeLinuxChangePolicy
+
+```ts
+withSeLinuxChangePolicy(seLinuxChangePolicy)
+```
+
+"seLinuxChangePolicy defines how the container's SELinux label is applied to all volumes used by the Pod.\nIt has no effect on nodes that do not support SELinux or to volumes does not support SELinux.\nValid values are \"MountOption\" and \"Recursive\".\n\n\"Recursive\" means relabeling of all files on all Pod volumes by the container runtime.\nThis may be slow for large volumes, but allows mixing privileged and unprivileged Pods sharing the same volume on the same node.\n\n\"MountOption\" mounts all eligible Pod volumes with `-o context` mount option.\nThis requires all Pods that share the same volume to use the same SELinux label.\nIt is not possible to share the same volume among privileged and unprivileged Pods.\nEligible volumes are in-tree FibreChannel and iSCSI volumes, and all CSI volumes\nwhose CSI driver announces SELinux support by setting spec.seLinuxMount: true in their\nCSIDriver instance. Other volumes are always re-labelled recursively.\n\"MountOption\" value is allowed only when SELinuxMount feature gate is enabled.\n\nIf not specified and SELinuxMount feature gate is enabled, \"MountOption\" is used.\nIf not specified and SELinuxMount feature gate is disabled, \"MountOption\" is used for ReadWriteOncePod volumes\nand \"Recursive\" for all other volumes.\n\nThis field affects only Pods that have SELinux label set, either in PodSecurityContext or in SecurityContext of all containers.\n\nAll Pods that use the same volume should use the same seLinuxChangePolicy, otherwise some pods can get stuck in ContainerCreating state.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.podSecurityContext.withSupplementalGroups
+
+```ts
+withSupplementalGroups(supplementalGroups)
+```
+
+"A list of groups applied to the first process run in each container, in\naddition to the container's primary GID and fsGroup (if specified).  If\nthe SupplementalGroupsPolicy feature is enabled, the\nsupplementalGroupsPolicy field determines whether these are in addition\nto or instead of any group memberships defined in the container image.\nIf unspecified, no additional groups are added, though group memberships\ndefined in the container image may still be used, depending on the\nsupplementalGroupsPolicy field.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.podSecurityContext.withSupplementalGroupsMixin
+
+```ts
+withSupplementalGroupsMixin(supplementalGroups)
+```
+
+"A list of groups applied to the first process run in each container, in\naddition to the container's primary GID and fsGroup (if specified).  If\nthe SupplementalGroupsPolicy feature is enabled, the\nsupplementalGroupsPolicy field determines whether these are in addition\nto or instead of any group memberships defined in the container image.\nIf unspecified, no additional groups are added, though group memberships\ndefined in the container image may still be used, depending on the\nsupplementalGroupsPolicy field.\nNote that this field cannot be set when spec.os.name is windows."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.podSecurityContext.withSupplementalGroupsPolicy
+
+```ts
+withSupplementalGroupsPolicy(supplementalGroupsPolicy)
+```
+
+"Defines how supplemental groups of the first container processes are calculated.\nValid values are \"Merge\" and \"Strict\". If not specified, \"Merge\" is used.\n(Alpha) Using the field requires the SupplementalGroupsPolicy feature gate to be enabled\nand the container runtime must implement support for this feature.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.podSecurityContext.withSysctls
+
+```ts
+withSysctls(sysctls)
+```
+
+"Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported\nsysctls (by the container runtime) might fail to launch.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.podSecurityContext.withSysctlsMixin
+
+```ts
+withSysctlsMixin(sysctls)
+```
+
+"Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported\nsysctls (by the container runtime) might fail to launch.\nNote that this field cannot be set when spec.os.name is windows."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.podSecurityContext.appArmorProfile
+
+"appArmorProfile is the AppArmor options to use by the containers in this pod.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.podSecurityContext.appArmorProfile.withLocalhostProfile
+
+```ts
+withLocalhostProfile(localhostProfile)
+```
+
+"localhostProfile indicates a profile loaded on the node that should be used.\nThe profile must be preconfigured on the node to work.\nMust match the loaded name of the profile.\nMust be set if and only if type is \"Localhost\"."
+
+### fn spec.podSecurityContext.appArmorProfile.withType
+
+```ts
+withType(type)
+```
+
+"type indicates which kind of AppArmor profile will be applied.\nValid options are:\n  Localhost - a profile pre-loaded on the node.\n  RuntimeDefault - the container runtime's default profile.\n  Unconfined - no AppArmor enforcement."
+
+## obj spec.podSecurityContext.seLinuxOptions
+
+"The SELinux context to be applied to all containers.\nIf unspecified, the container runtime will allocate a random SELinux context for each\ncontainer.  May also be set in SecurityContext.  If set in\nboth SecurityContext and PodSecurityContext, the value specified in SecurityContext\ntakes precedence for that container.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.podSecurityContext.seLinuxOptions.withLevel
+
+```ts
+withLevel(level)
+```
+
+"Level is SELinux level label that applies to the container."
+
+### fn spec.podSecurityContext.seLinuxOptions.withRole
+
+```ts
+withRole(role)
+```
+
+"Role is a SELinux role label that applies to the container."
+
+### fn spec.podSecurityContext.seLinuxOptions.withType
+
+```ts
+withType(type)
+```
+
+"Type is a SELinux type label that applies to the container."
+
+### fn spec.podSecurityContext.seLinuxOptions.withUser
+
+```ts
+withUser(user)
+```
+
+"User is a SELinux user label that applies to the container."
+
+## obj spec.podSecurityContext.seccompProfile
+
+"The seccomp options to use by the containers in this pod.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.podSecurityContext.seccompProfile.withLocalhostProfile
+
+```ts
+withLocalhostProfile(localhostProfile)
+```
+
+"localhostProfile indicates a profile defined in a file on the node should be used.\nThe profile must be preconfigured on the node to work.\nMust be a descending path, relative to the kubelet's configured seccomp profile location.\nMust be set if type is \"Localhost\". Must NOT be set for any other type."
+
+### fn spec.podSecurityContext.seccompProfile.withType
+
+```ts
+withType(type)
+```
+
+"type indicates which kind of seccomp profile will be applied.\nValid options are:\n\nLocalhost - a profile defined in a file on the node should be used.\nRuntimeDefault - the container runtime default profile should be used.\nUnconfined - no profile should be applied."
+
+## obj spec.podSecurityContext.sysctls
+
+"Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported\nsysctls (by the container runtime) might fail to launch.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.podSecurityContext.sysctls.withName
+
+```ts
+withName(name)
+```
+
+"Name of a property to set"
+
+### fn spec.podSecurityContext.sysctls.withValue
+
+```ts
+withValue(value)
+```
+
+"Value of a property to set"
+
+## obj spec.podSecurityContext.windowsOptions
+
+"The Windows specific settings applied to all containers.\nIf unspecified, the options within a container's SecurityContext will be used.\nIf set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.\nNote that this field cannot be set when spec.os.name is linux."
+
+### fn spec.podSecurityContext.windowsOptions.withGmsaCredentialSpec
+
+```ts
+withGmsaCredentialSpec(gmsaCredentialSpec)
+```
+
+"GMSACredentialSpec is where the GMSA admission webhook\n(https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the\nGMSA credential spec named by the GMSACredentialSpecName field."
+
+### fn spec.podSecurityContext.windowsOptions.withGmsaCredentialSpecName
+
+```ts
+withGmsaCredentialSpecName(gmsaCredentialSpecName)
+```
+
+"GMSACredentialSpecName is the name of the GMSA credential spec to use."
+
+### fn spec.podSecurityContext.windowsOptions.withHostProcess
+
+```ts
+withHostProcess(hostProcess)
+```
+
+"HostProcess determines if a container should be run as a 'Host Process' container.\nAll of a Pod's containers must have the same effective HostProcess value\n(it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).\nIn addition, if HostProcess is true then HostNetwork must also be set to true."
+
+### fn spec.podSecurityContext.windowsOptions.withRunAsUserName
+
+```ts
+withRunAsUserName(runAsUserName)
+```
+
+"The UserName in Windows to run the entrypoint of the container process.\nDefaults to the user specified in image metadata if unspecified.\nMay also be set in PodSecurityContext. If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence."
 
 ## obj spec.postgresql
 
@@ -7466,6 +7783,24 @@ withSignerName(signerName)
 
 "Kubelet's generated CSRs will be addressed to this signer."
 
+### fn spec.projectedVolumeTemplate.sources.podCertificate.withUserAnnotations
+
+```ts
+withUserAnnotations(userAnnotations)
+```
+
+"userAnnotations allow pod authors to pass additional information to\nthe signer implementation.  Kubernetes does not restrict or validate this\nmetadata in any way.\n\nThese values are copied verbatim into the `spec.unverifiedUserAnnotations` field of\nthe PodCertificateRequest objects that Kubelet creates.\n\nEntries are subject to the same validation as object metadata annotations,\nwith the addition that all keys must be domain-prefixed. No restrictions\nare placed on values, except an overall size limitation on the entire field.\n\nSigners should document the keys and values they support. Signers should\ndeny requests that contain keys they do not recognize."
+
+### fn spec.projectedVolumeTemplate.sources.podCertificate.withUserAnnotationsMixin
+
+```ts
+withUserAnnotationsMixin(userAnnotations)
+```
+
+"userAnnotations allow pod authors to pass additional information to\nthe signer implementation.  Kubernetes does not restrict or validate this\nmetadata in any way.\n\nThese values are copied verbatim into the `spec.unverifiedUserAnnotations` field of\nthe PodCertificateRequest objects that Kubelet creates.\n\nEntries are subject to the same validation as object metadata annotations,\nwith the addition that all keys must be domain-prefixed. No restrictions\nare placed on values, except an overall size limitation on the entire field.\n\nSigners should document the keys and values they support. Signers should\ndeny requests that contain keys they do not recognize."
+
+**Note:** This function appends passed data to existing values
+
 ## obj spec.projectedVolumeTemplate.sources.secret
 
 "secret information about the secret data to project"
@@ -7780,6 +8115,218 @@ withType(type)
 
 "type indicates which kind of seccomp profile will be applied.\nValid options are:\n\nLocalhost - a profile defined in a file on the node should be used.\nRuntimeDefault - the container runtime default profile should be used.\nUnconfined - no profile should be applied."
 
+## obj spec.securityContext
+
+"Override the SecurityContext applied to every Container in the Pod of the cluster.\nWhen set, this overrides the operator's default Container SecurityContext.\nIf omitted, the operator defaults are used."
+
+### fn spec.securityContext.withAllowPrivilegeEscalation
+
+```ts
+withAllowPrivilegeEscalation(allowPrivilegeEscalation)
+```
+
+"AllowPrivilegeEscalation controls whether a process can gain more\nprivileges than its parent process. This bool directly controls if\nthe no_new_privs flag will be set on the container process.\nAllowPrivilegeEscalation is true always when the container is:\n1) run as Privileged\n2) has CAP_SYS_ADMIN\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.securityContext.withPrivileged
+
+```ts
+withPrivileged(privileged)
+```
+
+"Run container in privileged mode.\nProcesses in privileged containers are essentially equivalent to root on the host.\nDefaults to false.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.securityContext.withProcMount
+
+```ts
+withProcMount(procMount)
+```
+
+"procMount denotes the type of proc mount to use for the containers.\nThe default value is Default which uses the container runtime defaults for\nreadonly paths and masked paths.\nThis requires the ProcMountType feature flag to be enabled.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.securityContext.withReadOnlyRootFilesystem
+
+```ts
+withReadOnlyRootFilesystem(readOnlyRootFilesystem)
+```
+
+"Whether this container has a read-only root filesystem.\nDefault is false.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.securityContext.withRunAsGroup
+
+```ts
+withRunAsGroup(runAsGroup)
+```
+
+"The GID to run the entrypoint of the container process.\nUses runtime default if unset.\nMay also be set in PodSecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.securityContext.withRunAsNonRoot
+
+```ts
+withRunAsNonRoot(runAsNonRoot)
+```
+
+"Indicates that the container must run as a non-root user.\nIf true, the Kubelet will validate the image at runtime to ensure that it\ndoes not run as UID 0 (root) and fail to start the container if it does.\nIf unset or false, no such validation will be performed.\nMay also be set in PodSecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence."
+
+### fn spec.securityContext.withRunAsUser
+
+```ts
+withRunAsUser(runAsUser)
+```
+
+"The UID to run the entrypoint of the container process.\nDefaults to user specified in image metadata if unspecified.\nMay also be set in PodSecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence.\nNote that this field cannot be set when spec.os.name is windows."
+
+## obj spec.securityContext.appArmorProfile
+
+"appArmorProfile is the AppArmor options to use by this container. If set, this profile\noverrides the pod's appArmorProfile.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.securityContext.appArmorProfile.withLocalhostProfile
+
+```ts
+withLocalhostProfile(localhostProfile)
+```
+
+"localhostProfile indicates a profile loaded on the node that should be used.\nThe profile must be preconfigured on the node to work.\nMust match the loaded name of the profile.\nMust be set if and only if type is \"Localhost\"."
+
+### fn spec.securityContext.appArmorProfile.withType
+
+```ts
+withType(type)
+```
+
+"type indicates which kind of AppArmor profile will be applied.\nValid options are:\n  Localhost - a profile pre-loaded on the node.\n  RuntimeDefault - the container runtime's default profile.\n  Unconfined - no AppArmor enforcement."
+
+## obj spec.securityContext.capabilities
+
+"The capabilities to add/drop when running containers.\nDefaults to the default set of capabilities granted by the container runtime.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.securityContext.capabilities.withAdd
+
+```ts
+withAdd(add)
+```
+
+"Added capabilities"
+
+### fn spec.securityContext.capabilities.withAddMixin
+
+```ts
+withAddMixin(add)
+```
+
+"Added capabilities"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.securityContext.capabilities.withDrop
+
+```ts
+withDrop(drop)
+```
+
+"Removed capabilities"
+
+### fn spec.securityContext.capabilities.withDropMixin
+
+```ts
+withDropMixin(drop)
+```
+
+"Removed capabilities"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.securityContext.seLinuxOptions
+
+"The SELinux context to be applied to the container.\nIf unspecified, the container runtime will allocate a random SELinux context for each\ncontainer.  May also be set in PodSecurityContext.  If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.securityContext.seLinuxOptions.withLevel
+
+```ts
+withLevel(level)
+```
+
+"Level is SELinux level label that applies to the container."
+
+### fn spec.securityContext.seLinuxOptions.withRole
+
+```ts
+withRole(role)
+```
+
+"Role is a SELinux role label that applies to the container."
+
+### fn spec.securityContext.seLinuxOptions.withType
+
+```ts
+withType(type)
+```
+
+"Type is a SELinux type label that applies to the container."
+
+### fn spec.securityContext.seLinuxOptions.withUser
+
+```ts
+withUser(user)
+```
+
+"User is a SELinux user label that applies to the container."
+
+## obj spec.securityContext.seccompProfile
+
+"The seccomp options to use by this container. If seccomp options are\nprovided at both the pod & container level, the container options\noverride the pod options.\nNote that this field cannot be set when spec.os.name is windows."
+
+### fn spec.securityContext.seccompProfile.withLocalhostProfile
+
+```ts
+withLocalhostProfile(localhostProfile)
+```
+
+"localhostProfile indicates a profile defined in a file on the node should be used.\nThe profile must be preconfigured on the node to work.\nMust be a descending path, relative to the kubelet's configured seccomp profile location.\nMust be set if type is \"Localhost\". Must NOT be set for any other type."
+
+### fn spec.securityContext.seccompProfile.withType
+
+```ts
+withType(type)
+```
+
+"type indicates which kind of seccomp profile will be applied.\nValid options are:\n\nLocalhost - a profile defined in a file on the node should be used.\nRuntimeDefault - the container runtime default profile should be used.\nUnconfined - no profile should be applied."
+
+## obj spec.securityContext.windowsOptions
+
+"The Windows specific settings applied to all containers.\nIf unspecified, the options from the PodSecurityContext will be used.\nIf set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.\nNote that this field cannot be set when spec.os.name is linux."
+
+### fn spec.securityContext.windowsOptions.withGmsaCredentialSpec
+
+```ts
+withGmsaCredentialSpec(gmsaCredentialSpec)
+```
+
+"GMSACredentialSpec is where the GMSA admission webhook\n(https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the\nGMSA credential spec named by the GMSACredentialSpecName field."
+
+### fn spec.securityContext.windowsOptions.withGmsaCredentialSpecName
+
+```ts
+withGmsaCredentialSpecName(gmsaCredentialSpecName)
+```
+
+"GMSACredentialSpecName is the name of the GMSA credential spec to use."
+
+### fn spec.securityContext.windowsOptions.withHostProcess
+
+```ts
+withHostProcess(hostProcess)
+```
+
+"HostProcess determines if a container should be run as a 'Host Process' container.\nAll of a Pod's containers must have the same effective HostProcess value\n(it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).\nIn addition, if HostProcess is true then HostNetwork must also be set to true."
+
+### fn spec.securityContext.windowsOptions.withRunAsUserName
+
+```ts
+withRunAsUserName(runAsUserName)
+```
+
+"The UserName in Windows to run the entrypoint of the container process.\nDefaults to the user specified in image metadata if unspecified.\nMay also be set in PodSecurityContext. If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence."
+
 ## obj spec.serviceAccountTemplate
 
 "Configure the generation of the service account"
@@ -7980,7 +8527,7 @@ withNamespace(namespace)
 
 ## obj spec.storage.pvcTemplate.resources
 
-"resources represents the minimum resources the volume should have.\nIf RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements\nthat are lower than previous value but must still be higher than capacity recorded in the\nstatus field of the claim.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
+"resources represents the minimum resources the volume should have.\nUsers are allowed to specify resource requirements\nthat are lower than previous value but must still be higher than capacity recorded in the\nstatus field of the claim.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
 
 ### fn spec.storage.pvcTemplate.resources.withLimits
 
@@ -8288,7 +8835,7 @@ withNamespace(namespace)
 
 ## obj spec.tablespaces.storage.pvcTemplate.resources
 
-"resources represents the minimum resources the volume should have.\nIf RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements\nthat are lower than previous value but must still be higher than capacity recorded in the\nstatus field of the claim.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
+"resources represents the minimum resources the volume should have.\nUsers are allowed to specify resource requirements\nthat are lower than previous value but must still be higher than capacity recorded in the\nstatus field of the claim.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
 
 ### fn spec.tablespaces.storage.pvcTemplate.resources.withLimits
 
@@ -8700,7 +9247,7 @@ withNamespace(namespace)
 
 ## obj spec.walStorage.pvcTemplate.resources
 
-"resources represents the minimum resources the volume should have.\nIf RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements\nthat are lower than previous value but must still be higher than capacity recorded in the\nstatus field of the claim.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
+"resources represents the minimum resources the volume should have.\nUsers are allowed to specify resource requirements\nthat are lower than previous value but must still be higher than capacity recorded in the\nstatus field of the claim.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
 
 ### fn spec.walStorage.pvcTemplate.resources.withLimits
 

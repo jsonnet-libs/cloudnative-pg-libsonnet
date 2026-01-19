@@ -73,6 +73,14 @@ permalink: /1.26.1/postgresql/v1/pooler/
     * [`fn withPoolMode(poolMode)`](#fn-specpgbouncerwithpoolmode)
     * [`obj spec.pgbouncer.authQuerySecret`](#obj-specpgbouncerauthquerysecret)
       * [`fn withName(name)`](#fn-specpgbouncerauthquerysecretwithname)
+    * [`obj spec.pgbouncer.clientCASecret`](#obj-specpgbouncerclientcasecret)
+      * [`fn withName(name)`](#fn-specpgbouncerclientcasecretwithname)
+    * [`obj spec.pgbouncer.clientTLSSecret`](#obj-specpgbouncerclienttlssecret)
+      * [`fn withName(name)`](#fn-specpgbouncerclienttlssecretwithname)
+    * [`obj spec.pgbouncer.serverCASecret`](#obj-specpgbouncerservercasecret)
+      * [`fn withName(name)`](#fn-specpgbouncerservercasecretwithname)
+    * [`obj spec.pgbouncer.serverTLSSecret`](#obj-specpgbouncerservertlssecret)
+      * [`fn withName(name)`](#fn-specpgbouncerservertlssecretwithname)
   * [`obj spec.serviceTemplate`](#obj-specservicetemplate)
     * [`obj spec.serviceTemplate.metadata`](#obj-specservicetemplatemetadata)
       * [`fn withAnnotations(annotations)`](#fn-specservicetemplatemetadatawithannotations)
@@ -1381,6 +1389,8 @@ permalink: /1.26.1/postgresql/v1/pooler/
               * [`fn withKeyType(keyType)`](#fn-spectemplatespecvolumesprojectedsourcespodcertificatewithkeytype)
               * [`fn withMaxExpirationSeconds(maxExpirationSeconds)`](#fn-spectemplatespecvolumesprojectedsourcespodcertificatewithmaxexpirationseconds)
               * [`fn withSignerName(signerName)`](#fn-spectemplatespecvolumesprojectedsourcespodcertificatewithsignername)
+              * [`fn withUserAnnotations(userAnnotations)`](#fn-spectemplatespecvolumesprojectedsourcespodcertificatewithuserannotations)
+              * [`fn withUserAnnotationsMixin(userAnnotations)`](#fn-spectemplatespecvolumesprojectedsourcespodcertificatewithuserannotationsmixin)
             * [`obj spec.template.spec.volumes.projected.sources.secret`](#obj-spectemplatespecvolumesprojectedsourcessecret)
               * [`fn withItems(items)`](#fn-spectemplatespecvolumesprojectedsourcessecretwithitems)
               * [`fn withItemsMixin(items)`](#fn-spectemplatespecvolumesprojectedsourcessecretwithitemsmixin)
@@ -1446,6 +1456,10 @@ permalink: /1.26.1/postgresql/v1/pooler/
           * [`fn withStoragePolicyID(storagePolicyID)`](#fn-spectemplatespecvolumesvspherevolumewithstoragepolicyid)
           * [`fn withStoragePolicyName(storagePolicyName)`](#fn-spectemplatespecvolumesvspherevolumewithstoragepolicyname)
           * [`fn withVolumePath(volumePath)`](#fn-spectemplatespecvolumesvspherevolumewithvolumepath)
+      * [`obj spec.template.spec.workloadRef`](#obj-spectemplatespecworkloadref)
+        * [`fn withName(name)`](#fn-spectemplatespecworkloadrefwithname)
+        * [`fn withPodGroup(podGroup)`](#fn-spectemplatespecworkloadrefwithpodgroup)
+        * [`fn withPodGroupReplicaKey(podGroupReplicaKey)`](#fn-spectemplatespecworkloadrefwithpodgroupreplicakey)
 
 ## Fields
 
@@ -1687,7 +1701,7 @@ withMaxUnavailable(maxUnavailable)
 
 ## obj spec.monitoring
 
-"The configuration of the monitoring infrastructure of this pooler."
+"The configuration of the monitoring infrastructure of this pooler.\n\nDeprecated: This feature will be removed in an upcoming release. If\nyou need this functionality, you can create a PodMonitor manually."
 
 ### fn spec.monitoring.withEnablePodMonitor
 
@@ -1743,7 +1757,7 @@ withPodMonitorRelabelingsMixin(podMonitorRelabelings)
 withAction(action)
 ```
 
-"Action to perform based on the regex matching.\n\n`Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0.\n`DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0.\n\nDefault: \"Replace\
+"action to perform based on the regex matching.\n\n`Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0.\n`DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0.\n\nDefault: \"Replace\
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withModulus
 
@@ -1751,7 +1765,7 @@ withAction(action)
 withModulus(modulus)
 ```
 
-"Modulus to take of the hash of the source label values.\n\nOnly applicable when the action is `HashMod`."
+"modulus to take of the hash of the source label values.\n\nOnly applicable when the action is `HashMod`."
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withRegex
 
@@ -1759,7 +1773,7 @@ withModulus(modulus)
 withRegex(regex)
 ```
 
-"Regular expression against which the extracted value is matched."
+"regex defines the regular expression against which the extracted value is matched."
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withReplacement
 
@@ -1767,7 +1781,7 @@ withRegex(regex)
 withReplacement(replacement)
 ```
 
-"Replacement value against which a Replace action is performed if the\nregular expression matches.\n\nRegex capture groups are available."
+"replacement value against which a Replace action is performed if the\nregular expression matches.\n\nRegex capture groups are available."
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withSeparator
 
@@ -1775,7 +1789,7 @@ withReplacement(replacement)
 withSeparator(separator)
 ```
 
-"Separator is the string between concatenated SourceLabels."
+"separator defines the string between concatenated SourceLabels."
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withSourceLabels
 
@@ -1783,7 +1797,7 @@ withSeparator(separator)
 withSourceLabels(sourceLabels)
 ```
 
-"The source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
+"sourceLabels defines the source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withSourceLabelsMixin
 
@@ -1791,7 +1805,7 @@ withSourceLabels(sourceLabels)
 withSourceLabelsMixin(sourceLabels)
 ```
 
-"The source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
+"sourceLabels defines the source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
 
 **Note:** This function appends passed data to existing values
 
@@ -1801,7 +1815,7 @@ withSourceLabelsMixin(sourceLabels)
 withTargetLabel(targetLabel)
 ```
 
-"Label to which the resulting string is written in a replacement.\n\nIt is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`,\n`KeepEqual` and `DropEqual` actions.\n\nRegex capture groups are available."
+"targetLabel defines the label to which the resulting string is written in a replacement.\n\nIt is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`,\n`KeepEqual` and `DropEqual` actions.\n\nRegex capture groups are available."
 
 ## obj spec.monitoring.podMonitorRelabelings
 
@@ -1813,7 +1827,7 @@ withTargetLabel(targetLabel)
 withAction(action)
 ```
 
-"Action to perform based on the regex matching.\n\n`Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0.\n`DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0.\n\nDefault: \"Replace\
+"action to perform based on the regex matching.\n\n`Uppercase` and `Lowercase` actions require Prometheus >= v2.36.0.\n`DropEqual` and `KeepEqual` actions require Prometheus >= v2.41.0.\n\nDefault: \"Replace\
 
 ### fn spec.monitoring.podMonitorRelabelings.withModulus
 
@@ -1821,7 +1835,7 @@ withAction(action)
 withModulus(modulus)
 ```
 
-"Modulus to take of the hash of the source label values.\n\nOnly applicable when the action is `HashMod`."
+"modulus to take of the hash of the source label values.\n\nOnly applicable when the action is `HashMod`."
 
 ### fn spec.monitoring.podMonitorRelabelings.withRegex
 
@@ -1829,7 +1843,7 @@ withModulus(modulus)
 withRegex(regex)
 ```
 
-"Regular expression against which the extracted value is matched."
+"regex defines the regular expression against which the extracted value is matched."
 
 ### fn spec.monitoring.podMonitorRelabelings.withReplacement
 
@@ -1837,7 +1851,7 @@ withRegex(regex)
 withReplacement(replacement)
 ```
 
-"Replacement value against which a Replace action is performed if the\nregular expression matches.\n\nRegex capture groups are available."
+"replacement value against which a Replace action is performed if the\nregular expression matches.\n\nRegex capture groups are available."
 
 ### fn spec.monitoring.podMonitorRelabelings.withSeparator
 
@@ -1845,7 +1859,7 @@ withReplacement(replacement)
 withSeparator(separator)
 ```
 
-"Separator is the string between concatenated SourceLabels."
+"separator defines the string between concatenated SourceLabels."
 
 ### fn spec.monitoring.podMonitorRelabelings.withSourceLabels
 
@@ -1853,7 +1867,7 @@ withSeparator(separator)
 withSourceLabels(sourceLabels)
 ```
 
-"The source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
+"sourceLabels defines the source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
 
 ### fn spec.monitoring.podMonitorRelabelings.withSourceLabelsMixin
 
@@ -1861,7 +1875,7 @@ withSourceLabels(sourceLabels)
 withSourceLabelsMixin(sourceLabels)
 ```
 
-"The source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
+"sourceLabels defines the source labels select values from existing labels. Their content is\nconcatenated using the configured Separator and matched against the\nconfigured regular expression."
 
 **Note:** This function appends passed data to existing values
 
@@ -1871,7 +1885,7 @@ withSourceLabelsMixin(sourceLabels)
 withTargetLabel(targetLabel)
 ```
 
-"Label to which the resulting string is written in a replacement.\n\nIt is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`,\n`KeepEqual` and `DropEqual` actions.\n\nRegex capture groups are available."
+"targetLabel defines the label to which the resulting string is written in a replacement.\n\nIt is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`,\n`KeepEqual` and `DropEqual` actions.\n\nRegex capture groups are available."
 
 ## obj spec.pgbouncer
 
@@ -1939,9 +1953,57 @@ withPoolMode(poolMode)
 
 ## obj spec.pgbouncer.authQuerySecret
 
-"The credentials of the user that need to be used for the authentication\nquery. In case it is specified, also an AuthQuery\n(e.g. \"SELECT usename, passwd FROM pg_catalog.pg_shadow WHERE usename=$1\")\nhas to be specified and no automatic CNPG Cluster integration will be triggered."
+"The credentials of the user that need to be used for the authentication\nquery. In case it is specified, also an AuthQuery\n(e.g. \"SELECT usename, passwd FROM pg_catalog.pg_shadow WHERE usename=$1\")\nhas to be specified and no automatic CNPG Cluster integration will be triggered.\n\nDeprecated."
 
 ### fn spec.pgbouncer.authQuerySecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent."
+
+## obj spec.pgbouncer.clientCASecret
+
+"ClientCASecret provides PgBouncer’s client_tls_ca_file, the root\nCA for validating client certificates"
+
+### fn spec.pgbouncer.clientCASecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent."
+
+## obj spec.pgbouncer.clientTLSSecret
+
+"ClientTLSSecret provides PgBouncer’s client_tls_key_file (private key)\nand client_tls_cert_file (certificate) used to accept client connections"
+
+### fn spec.pgbouncer.clientTLSSecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent."
+
+## obj spec.pgbouncer.serverCASecret
+
+"ServerCASecret provides PgBouncer’s server_tls_ca_file, the root\nCA for validating PostgreSQL certificates"
+
+### fn spec.pgbouncer.serverCASecret.withName
+
+```ts
+withName(name)
+```
+
+"Name of the referent."
+
+## obj spec.pgbouncer.serverTLSSecret
+
+"ServerTLSSecret, when pointing to a TLS secret, provides pgbouncer's\n`server_tls_key_file` and `server_tls_cert_file`, used when\nauthenticating against PostgreSQL."
+
+### fn spec.pgbouncer.serverTLSSecret.withName
 
 ```ts
 withName(name)
@@ -2603,7 +2665,7 @@ withReadinessGatesMixin(readinessGates)
 withResourceClaims(resourceClaims)
 ```
 
-"ResourceClaims defines which ResourceClaims must be allocated\nand reserved before the Pod is allowed to start. The resources\nwill be made available to those containers which consume them\nby name.\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\nThis field is immutable."
+"ResourceClaims defines which ResourceClaims must be allocated\nand reserved before the Pod is allowed to start. The resources\nwill be made available to those containers which consume them\nby name.\n\nThis is a stable field but requires that the\nDynamicResourceAllocation feature gate is enabled.\n\nThis field is immutable."
 
 ### fn spec.template.spec.withResourceClaimsMixin
 
@@ -2611,7 +2673,7 @@ withResourceClaims(resourceClaims)
 withResourceClaimsMixin(resourceClaims)
 ```
 
-"ResourceClaims defines which ResourceClaims must be allocated\nand reserved before the Pod is allowed to start. The resources\nwill be made available to those containers which consume them\nby name.\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\nThis field is immutable."
+"ResourceClaims defines which ResourceClaims must be allocated\nand reserved before the Pod is allowed to start. The resources\nwill be made available to those containers which consume them\nby name.\n\nThis is a stable field but requires that the\nDynamicResourceAllocation feature gate is enabled.\n\nThis field is immutable."
 
 **Note:** This function appends passed data to existing values
 
@@ -4167,7 +4229,7 @@ withPortsMixin(ports)
 withResizePolicy(resizePolicy)
 ```
 
-"Resources resize policy for the container."
+"Resources resize policy for the container.\nThis field cannot be set on ephemeral containers."
 
 ### fn spec.template.spec.containers.withResizePolicyMixin
 
@@ -4175,7 +4237,7 @@ withResizePolicy(resizePolicy)
 withResizePolicyMixin(resizePolicy)
 ```
 
-"Resources resize policy for the container."
+"Resources resize policy for the container.\nThis field cannot be set on ephemeral containers."
 
 **Note:** This function appends passed data to existing values
 
@@ -5203,7 +5265,7 @@ withPort(port)
 
 ## obj spec.template.spec.containers.resizePolicy
 
-"Resources resize policy for the container."
+"Resources resize policy for the container.\nThis field cannot be set on ephemeral containers."
 
 ### fn spec.template.spec.containers.resizePolicy.withResourceName
 
@@ -7851,7 +7913,7 @@ withPortsMixin(ports)
 withResizePolicy(resizePolicy)
 ```
 
-"Resources resize policy for the container."
+"Resources resize policy for the container.\nThis field cannot be set on ephemeral containers."
 
 ### fn spec.template.spec.initContainers.withResizePolicyMixin
 
@@ -7859,7 +7921,7 @@ withResizePolicy(resizePolicy)
 withResizePolicyMixin(resizePolicy)
 ```
 
-"Resources resize policy for the container."
+"Resources resize policy for the container.\nThis field cannot be set on ephemeral containers."
 
 **Note:** This function appends passed data to existing values
 
@@ -8887,7 +8949,7 @@ withPort(port)
 
 ## obj spec.template.spec.initContainers.resizePolicy
 
-"Resources resize policy for the container."
+"Resources resize policy for the container.\nThis field cannot be set on ephemeral containers."
 
 ### fn spec.template.spec.initContainers.resizePolicy.withResourceName
 
@@ -9531,7 +9593,7 @@ withConditionType(conditionType)
 
 ## obj spec.template.spec.resourceClaims
 
-"ResourceClaims defines which ResourceClaims must be allocated\nand reserved before the Pod is allowed to start. The resources\nwill be made available to those containers which consume them\nby name.\n\nThis is an alpha field and requires enabling the\nDynamicResourceAllocation feature gate.\n\nThis field is immutable."
+"ResourceClaims defines which ResourceClaims must be allocated\nand reserved before the Pod is allowed to start. The resources\nwill be made available to those containers which consume them\nby name.\n\nThis is a stable field but requires that the\nDynamicResourceAllocation feature gate is enabled.\n\nThis field is immutable."
 
 ### fn spec.template.spec.resourceClaims.withName
 
@@ -9901,7 +9963,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"Operator represents a key's relationship to the value.\nValid operators are Exists and Equal. Defaults to Equal.\nExists is equivalent to wildcard for value, so that a pod can\ntolerate all taints of a particular category."
+"Operator represents a key's relationship to the value.\nValid operators are Exists, Equal, Lt, and Gt. Defaults to Equal.\nExists is equivalent to wildcard for value, so that a pod can\ntolerate all taints of a particular category.\nLt and Gt perform numeric comparisons (requires feature gate TaintTolerationComparisonOperators)."
 
 ### fn spec.template.spec.tolerations.withTolerationSeconds
 
@@ -10697,7 +10759,7 @@ withNamespace(namespace)
 
 ## obj spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.resources
 
-"resources represents the minimum resources the volume should have.\nIf RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements\nthat are lower than previous value but must still be higher than capacity recorded in the\nstatus field of the claim.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
+"resources represents the minimum resources the volume should have.\nUsers are allowed to specify resource requirements\nthat are lower than previous value but must still be higher than capacity recorded in the\nstatus field of the claim.\nMore info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources"
 
 ### fn spec.template.spec.volumes.ephemeral.volumeClaimTemplate.spec.resources.withLimits
 
@@ -11645,6 +11707,24 @@ withSignerName(signerName)
 
 "Kubelet's generated CSRs will be addressed to this signer."
 
+### fn spec.template.spec.volumes.projected.sources.podCertificate.withUserAnnotations
+
+```ts
+withUserAnnotations(userAnnotations)
+```
+
+"userAnnotations allow pod authors to pass additional information to\nthe signer implementation.  Kubernetes does not restrict or validate this\nmetadata in any way.\n\nThese values are copied verbatim into the `spec.unverifiedUserAnnotations` field of\nthe PodCertificateRequest objects that Kubelet creates.\n\nEntries are subject to the same validation as object metadata annotations,\nwith the addition that all keys must be domain-prefixed. No restrictions\nare placed on values, except an overall size limitation on the entire field.\n\nSigners should document the keys and values they support. Signers should\ndeny requests that contain keys they do not recognize."
+
+### fn spec.template.spec.volumes.projected.sources.podCertificate.withUserAnnotationsMixin
+
+```ts
+withUserAnnotationsMixin(userAnnotations)
+```
+
+"userAnnotations allow pod authors to pass additional information to\nthe signer implementation.  Kubernetes does not restrict or validate this\nmetadata in any way.\n\nThese values are copied verbatim into the `spec.unverifiedUserAnnotations` field of\nthe PodCertificateRequest objects that Kubelet creates.\n\nEntries are subject to the same validation as object metadata annotations,\nwith the addition that all keys must be domain-prefixed. No restrictions\nare placed on values, except an overall size limitation on the entire field.\n\nSigners should document the keys and values they support. Signers should\ndeny requests that contain keys they do not recognize."
+
+**Note:** This function appends passed data to existing values
+
 ## obj spec.template.spec.volumes.projected.sources.secret
 
 "secret information about the secret data to project"
@@ -12118,3 +12198,31 @@ withVolumePath(volumePath)
 ```
 
 "volumePath is the path that identifies vSphere volume vmdk"
+
+## obj spec.template.spec.workloadRef
+
+"WorkloadRef provides a reference to the Workload object that this Pod belongs to.\nThis field is used by the scheduler to identify the PodGroup and apply the\ncorrect group scheduling policies. The Workload object referenced\nby this field may not exist at the time the Pod is created.\nThis field is immutable, but a Workload object with the same name\nmay be recreated with different policies. Doing this during pod scheduling\nmay result in the placement not conforming to the expected policies."
+
+### fn spec.template.spec.workloadRef.withName
+
+```ts
+withName(name)
+```
+
+"Name defines the name of the Workload object this Pod belongs to.\nWorkload must be in the same namespace as the Pod.\nIf it doesn't match any existing Workload, the Pod will remain unschedulable\nuntil a Workload object is created and observed by the kube-scheduler.\nIt must be a DNS subdomain."
+
+### fn spec.template.spec.workloadRef.withPodGroup
+
+```ts
+withPodGroup(podGroup)
+```
+
+"PodGroup is the name of the PodGroup within the Workload that this Pod\nbelongs to. If it doesn't match any existing PodGroup within the Workload,\nthe Pod will remain unschedulable until the Workload object is recreated\nand observed by the kube-scheduler. It must be a DNS label."
+
+### fn spec.template.spec.workloadRef.withPodGroupReplicaKey
+
+```ts
+withPodGroupReplicaKey(podGroupReplicaKey)
+```
+
+"PodGroupReplicaKey specifies the replica key of the PodGroup to which this\nPod belongs. It is used to distinguish pods belonging to different replicas\nof the same pod group. The pod group policy is applied separately to each replica.\nWhen set, it must be a DNS label."
