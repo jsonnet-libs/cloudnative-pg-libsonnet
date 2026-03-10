@@ -51,6 +51,8 @@ permalink: /1.25.3/postgresql/v1/cluster/
   * [`fn withMinSyncReplicas(minSyncReplicas)`](#fn-specwithminsyncreplicas)
   * [`fn withPlugins(plugins)`](#fn-specwithplugins)
   * [`fn withPluginsMixin(plugins)`](#fn-specwithpluginsmixin)
+  * [`fn withPodSelectorRefs(podSelectorRefs)`](#fn-specwithpodselectorrefs)
+  * [`fn withPodSelectorRefsMixin(podSelectorRefs)`](#fn-specwithpodselectorrefsmixin)
   * [`fn withPostgresGID(postgresGID)`](#fn-specwithpostgresgid)
   * [`fn withPostgresUID(postgresUID)`](#fn-specwithpostgresuid)
   * [`fn withPrimaryUpdateMethod(primaryUpdateMethod)`](#fn-specwithprimaryupdatemethod)
@@ -760,6 +762,18 @@ permalink: /1.25.3/postgresql/v1/cluster/
       * [`fn withGmsaCredentialSpecName(gmsaCredentialSpecName)`](#fn-specpodsecuritycontextwindowsoptionswithgmsacredentialspecname)
       * [`fn withHostProcess(hostProcess)`](#fn-specpodsecuritycontextwindowsoptionswithhostprocess)
       * [`fn withRunAsUserName(runAsUserName)`](#fn-specpodsecuritycontextwindowsoptionswithrunasusername)
+  * [`obj spec.podSelectorRefs`](#obj-specpodselectorrefs)
+    * [`fn withName(name)`](#fn-specpodselectorrefswithname)
+    * [`obj spec.podSelectorRefs.selector`](#obj-specpodselectorrefsselector)
+      * [`fn withMatchExpressions(matchExpressions)`](#fn-specpodselectorrefsselectorwithmatchexpressions)
+      * [`fn withMatchExpressionsMixin(matchExpressions)`](#fn-specpodselectorrefsselectorwithmatchexpressionsmixin)
+      * [`fn withMatchLabels(matchLabels)`](#fn-specpodselectorrefsselectorwithmatchlabels)
+      * [`fn withMatchLabelsMixin(matchLabels)`](#fn-specpodselectorrefsselectorwithmatchlabelsmixin)
+      * [`obj spec.podSelectorRefs.selector.matchExpressions`](#obj-specpodselectorrefsselectormatchexpressions)
+        * [`fn withKey(key)`](#fn-specpodselectorrefsselectormatchexpressionswithkey)
+        * [`fn withOperator(operator)`](#fn-specpodselectorrefsselectormatchexpressionswithoperator)
+        * [`fn withValues(values)`](#fn-specpodselectorrefsselectormatchexpressionswithvalues)
+        * [`fn withValuesMixin(values)`](#fn-specpodselectorrefsselectormatchexpressionswithvaluesmixin)
   * [`obj spec.postgresql`](#obj-specpostgresql)
     * [`fn withEnableAlterSystem(enableAlterSystem)`](#fn-specpostgresqlwithenablealtersystem)
     * [`fn withExtensions(extensions)`](#fn-specpostgresqlwithextensions)
@@ -1460,6 +1474,24 @@ withPluginsMixin(plugins)
 ```
 
 "The plugins configuration, containing\nany plugin to be loaded with the corresponding configuration"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.withPodSelectorRefs
+
+```ts
+withPodSelectorRefs(podSelectorRefs)
+```
+
+"PodSelectorRefs defines named pod label selectors that can be referenced\nin pg_hba rules using the ${podselector:NAME} syntax in the address field.\nThe operator resolves matching pod IPs and the instance manager expands\npg_hba lines accordingly. Only pods in the Cluster's own namespace are considered."
+
+### fn spec.withPodSelectorRefsMixin
+
+```ts
+withPodSelectorRefsMixin(podSelectorRefs)
+```
+
+"PodSelectorRefs defines named pod label selectors that can be referenced\nin pg_hba rules using the ${podselector:NAME} syntax in the address field.\nThe operator resolves matching pod IPs and the instance manager expands\npg_hba lines accordingly. Only pods in the Cluster's own namespace are considered."
 
 **Note:** This function appends passed data to existing values
 
@@ -6781,6 +6813,96 @@ withRunAsUserName(runAsUserName)
 
 "The UserName in Windows to run the entrypoint of the container process.\nDefaults to the user specified in image metadata if unspecified.\nMay also be set in PodSecurityContext. If set in both SecurityContext and\nPodSecurityContext, the value specified in SecurityContext takes precedence."
 
+## obj spec.podSelectorRefs
+
+"PodSelectorRefs defines named pod label selectors that can be referenced\nin pg_hba rules using the ${podselector:NAME} syntax in the address field.\nThe operator resolves matching pod IPs and the instance manager expands\npg_hba lines accordingly. Only pods in the Cluster's own namespace are considered."
+
+### fn spec.podSelectorRefs.withName
+
+```ts
+withName(name)
+```
+
+"Name is the identifier used to reference this selector in pg_hba rules\nvia the ${podselector:NAME} syntax in the address field."
+
+## obj spec.podSelectorRefs.selector
+
+"Selector is a label selector that identifies the pods whose IPs\nshould be resolved. Only pods in the Cluster's namespace are considered."
+
+### fn spec.podSelectorRefs.selector.withMatchExpressions
+
+```ts
+withMatchExpressions(matchExpressions)
+```
+
+"matchExpressions is a list of label selector requirements. The requirements are ANDed."
+
+### fn spec.podSelectorRefs.selector.withMatchExpressionsMixin
+
+```ts
+withMatchExpressionsMixin(matchExpressions)
+```
+
+"matchExpressions is a list of label selector requirements. The requirements are ANDed."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.podSelectorRefs.selector.withMatchLabels
+
+```ts
+withMatchLabels(matchLabels)
+```
+
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+
+### fn spec.podSelectorRefs.selector.withMatchLabelsMixin
+
+```ts
+withMatchLabelsMixin(matchLabels)
+```
+
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.podSelectorRefs.selector.matchExpressions
+
+"matchExpressions is a list of label selector requirements. The requirements are ANDed."
+
+### fn spec.podSelectorRefs.selector.matchExpressions.withKey
+
+```ts
+withKey(key)
+```
+
+"key is the label key that the selector applies to."
+
+### fn spec.podSelectorRefs.selector.matchExpressions.withOperator
+
+```ts
+withOperator(operator)
+```
+
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
+
+### fn spec.podSelectorRefs.selector.matchExpressions.withValues
+
+```ts
+withValues(values)
+```
+
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
+
+### fn spec.podSelectorRefs.selector.matchExpressions.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
+
+**Note:** This function appends passed data to existing values
+
 ## obj spec.postgresql
 
 "Configuration of the PostgreSQL server"
@@ -6835,7 +6957,7 @@ withParametersMixin(parameters)
 withPg_hba(pg_hba)
 ```
 
-"PostgreSQL Host Based Authentication rules (lines to be appended\nto the pg_hba.conf file)"
+"PostgreSQL Host Based Authentication rules (lines to be appended\nto the pg_hba.conf file).\nUse the ${podselector:NAME} syntax to reference a pod selector;\nthe rule will be expanded for each Pod IP matching that selector."
 
 ### fn spec.postgresql.withPg_hbaMixin
 
@@ -6843,7 +6965,7 @@ withPg_hba(pg_hba)
 withPg_hbaMixin(pg_hba)
 ```
 
-"PostgreSQL Host Based Authentication rules (lines to be appended\nto the pg_hba.conf file)"
+"PostgreSQL Host Based Authentication rules (lines to be appended\nto the pg_hba.conf file).\nUse the ${podselector:NAME} syntax to reference a pod selector;\nthe rule will be expanded for each Pod IP matching that selector."
 
 **Note:** This function appends passed data to existing values
 
@@ -6959,7 +7081,7 @@ withName(name)
 
 ## obj spec.postgresql.extensions.image
 
-"The image containing the extension, required"
+"The image containing the extension."
 
 ### fn spec.postgresql.extensions.image.withPullPolicy
 

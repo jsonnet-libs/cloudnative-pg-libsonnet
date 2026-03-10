@@ -33,8 +33,21 @@ permalink: /1.27.0/postgresql/v1/clusterImageCatalog/
   * [`fn withImages(images)`](#fn-specwithimages)
   * [`fn withImagesMixin(images)`](#fn-specwithimagesmixin)
   * [`obj spec.images`](#obj-specimages)
+    * [`fn withExtensions(extensions)`](#fn-specimageswithextensions)
+    * [`fn withExtensionsMixin(extensions)`](#fn-specimageswithextensionsmixin)
     * [`fn withImage(image)`](#fn-specimageswithimage)
     * [`fn withMajor(major)`](#fn-specimageswithmajor)
+    * [`obj spec.images.extensions`](#obj-specimagesextensions)
+      * [`fn withDynamic_library_path(dynamic_library_path)`](#fn-specimagesextensionswithdynamic_library_path)
+      * [`fn withDynamic_library_pathMixin(dynamic_library_path)`](#fn-specimagesextensionswithdynamic_library_pathmixin)
+      * [`fn withExtension_control_path(extension_control_path)`](#fn-specimagesextensionswithextension_control_path)
+      * [`fn withExtension_control_pathMixin(extension_control_path)`](#fn-specimagesextensionswithextension_control_pathmixin)
+      * [`fn withLd_library_path(ld_library_path)`](#fn-specimagesextensionswithld_library_path)
+      * [`fn withLd_library_pathMixin(ld_library_path)`](#fn-specimagesextensionswithld_library_pathmixin)
+      * [`fn withName(name)`](#fn-specimagesextensionswithname)
+      * [`obj spec.images.extensions.image`](#obj-specimagesextensionsimage)
+        * [`fn withPullPolicy(pullPolicy)`](#fn-specimagesextensionsimagewithpullpolicy)
+        * [`fn withReference(reference)`](#fn-specimagesextensionsimagewithreference)
 
 ## Fields
 
@@ -236,6 +249,24 @@ withImagesMixin(images)
 
 "List of CatalogImages available in the catalog"
 
+### fn spec.images.withExtensions
+
+```ts
+withExtensions(extensions)
+```
+
+"The configuration of the extensions to be added"
+
+### fn spec.images.withExtensionsMixin
+
+```ts
+withExtensionsMixin(extensions)
+```
+
+"The configuration of the extensions to be added"
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.images.withImage
 
 ```ts
@@ -251,3 +282,89 @@ withMajor(major)
 ```
 
 "The PostgreSQL major version of the image. Must be unique within the catalog."
+
+## obj spec.images.extensions
+
+"The configuration of the extensions to be added"
+
+### fn spec.images.extensions.withDynamic_library_path
+
+```ts
+withDynamic_library_path(dynamic_library_path)
+```
+
+"The list of directories inside the image which should be added to dynamic_library_path.\nIf not defined, defaults to \"/lib\"."
+
+### fn spec.images.extensions.withDynamic_library_pathMixin
+
+```ts
+withDynamic_library_pathMixin(dynamic_library_path)
+```
+
+"The list of directories inside the image which should be added to dynamic_library_path.\nIf not defined, defaults to \"/lib\"."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.images.extensions.withExtension_control_path
+
+```ts
+withExtension_control_path(extension_control_path)
+```
+
+"The list of directories inside the image which should be added to extension_control_path.\nIf not defined, defaults to \"/share\"."
+
+### fn spec.images.extensions.withExtension_control_pathMixin
+
+```ts
+withExtension_control_pathMixin(extension_control_path)
+```
+
+"The list of directories inside the image which should be added to extension_control_path.\nIf not defined, defaults to \"/share\"."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.images.extensions.withLd_library_path
+
+```ts
+withLd_library_path(ld_library_path)
+```
+
+"The list of directories inside the image which should be added to ld_library_path."
+
+### fn spec.images.extensions.withLd_library_pathMixin
+
+```ts
+withLd_library_pathMixin(ld_library_path)
+```
+
+"The list of directories inside the image which should be added to ld_library_path."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.images.extensions.withName
+
+```ts
+withName(name)
+```
+
+"The name of the extension, required"
+
+## obj spec.images.extensions.image
+
+"The image containing the extension."
+
+### fn spec.images.extensions.image.withPullPolicy
+
+```ts
+withPullPolicy(pullPolicy)
+```
+
+"Policy for pulling OCI objects. Possible values are:\nAlways: the kubelet always attempts to pull the reference. Container creation will fail If the pull fails.\nNever: the kubelet never pulls the reference and only uses a local image or artifact. Container creation will fail if the reference isn't present.\nIfNotPresent: the kubelet pulls if the reference isn't already present on disk. Container creation will fail if the reference isn't present and the pull fails.\nDefaults to Always if :latest tag is specified, or IfNotPresent otherwise."
+
+### fn spec.images.extensions.image.withReference
+
+```ts
+withReference(reference)
+```
+
+"Required: Image or artifact reference to be used.\nBehaves in the same way as pod.spec.containers[*].image.\nPull secrets will be assembled in the same way as for the container image by looking up node credentials, SA image pull secrets, and pod spec image pull secrets.\nMore info: https://kubernetes.io/docs/concepts/containers/images\nThis field is optional to allow higher level config management to default or override\ncontainer images in workload controllers like Deployments and StatefulSets."
