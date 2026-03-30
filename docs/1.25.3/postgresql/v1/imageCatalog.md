@@ -38,13 +38,20 @@ permalink: /1.25.3/postgresql/v1/imageCatalog/
     * [`fn withImage(image)`](#fn-specimageswithimage)
     * [`fn withMajor(major)`](#fn-specimageswithmajor)
     * [`obj spec.images.extensions`](#obj-specimagesextensions)
+      * [`fn withBin_path(bin_path)`](#fn-specimagesextensionswithbin_path)
+      * [`fn withBin_pathMixin(bin_path)`](#fn-specimagesextensionswithbin_pathmixin)
       * [`fn withDynamic_library_path(dynamic_library_path)`](#fn-specimagesextensionswithdynamic_library_path)
       * [`fn withDynamic_library_pathMixin(dynamic_library_path)`](#fn-specimagesextensionswithdynamic_library_pathmixin)
+      * [`fn withEnv(env)`](#fn-specimagesextensionswithenv)
+      * [`fn withEnvMixin(env)`](#fn-specimagesextensionswithenvmixin)
       * [`fn withExtension_control_path(extension_control_path)`](#fn-specimagesextensionswithextension_control_path)
       * [`fn withExtension_control_pathMixin(extension_control_path)`](#fn-specimagesextensionswithextension_control_pathmixin)
       * [`fn withLd_library_path(ld_library_path)`](#fn-specimagesextensionswithld_library_path)
       * [`fn withLd_library_pathMixin(ld_library_path)`](#fn-specimagesextensionswithld_library_pathmixin)
       * [`fn withName(name)`](#fn-specimagesextensionswithname)
+      * [`obj spec.images.extensions.env`](#obj-specimagesextensionsenv)
+        * [`fn withName(name)`](#fn-specimagesextensionsenvwithname)
+        * [`fn withValue(value)`](#fn-specimagesextensionsenvwithvalue)
       * [`obj spec.images.extensions.image`](#obj-specimagesextensionsimage)
         * [`fn withPullPolicy(pullPolicy)`](#fn-specimagesextensionsimagewithpullpolicy)
         * [`fn withReference(reference)`](#fn-specimagesextensionsimagewithreference)
@@ -287,6 +294,24 @@ withMajor(major)
 
 "The configuration of the extensions to be added"
 
+### fn spec.images.extensions.withBin_path
+
+```ts
+withBin_path(bin_path)
+```
+
+"A list of directories within the image to be appended to the\nPostgreSQL process's `PATH` environment variable."
+
+### fn spec.images.extensions.withBin_pathMixin
+
+```ts
+withBin_pathMixin(bin_path)
+```
+
+"A list of directories within the image to be appended to the\nPostgreSQL process's `PATH` environment variable."
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.images.extensions.withDynamic_library_path
 
 ```ts
@@ -302,6 +327,24 @@ withDynamic_library_pathMixin(dynamic_library_path)
 ```
 
 "The list of directories inside the image which should be added to dynamic_library_path.\nIf not defined, defaults to \"/lib\"."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.images.extensions.withEnv
+
+```ts
+withEnv(env)
+```
+
+"Env is a list of custom environment variables to be set in the\nPostgreSQL process for this extension. It is the responsibility of the\ncluster administrator to ensure the variables are correct for the\nspecific extension. Note that changes to these variables require\na manual cluster restart to take effect."
+
+### fn spec.images.extensions.withEnvMixin
+
+```ts
+withEnvMixin(env)
+```
+
+"Env is a list of custom environment variables to be set in the\nPostgreSQL process for this extension. It is the responsibility of the\ncluster administrator to ensure the variables are correct for the\nspecific extension. Note that changes to these variables require\na manual cluster restart to take effect."
 
 **Note:** This function appends passed data to existing values
 
@@ -348,6 +391,26 @@ withName(name)
 ```
 
 "The name of the extension, required"
+
+## obj spec.images.extensions.env
+
+"Env is a list of custom environment variables to be set in the\nPostgreSQL process for this extension. It is the responsibility of the\ncluster administrator to ensure the variables are correct for the\nspecific extension. Note that changes to these variables require\na manual cluster restart to take effect."
+
+### fn spec.images.extensions.env.withName
+
+```ts
+withName(name)
+```
+
+"Name of the environment variable to be injected into the\nPostgreSQL process."
+
+### fn spec.images.extensions.env.withValue
+
+```ts
+withValue(value)
+```
+
+"Value of the environment variable. CloudNativePG performs a direct\nreplacement of this value, with support for placeholder expansion.\nThe ${`image_root`} placeholder resolves to the absolute mount path\nof the extension's volume (e.g., `/extensions/my-extension`). This\nis particularly useful for allowing applications or libraries to\nlocate specific directories within the mounted image.\nUnrecognized placeholders are rejected. To include a literal ${...}\nin the value, escape it as $${...}."
 
 ## obj spec.images.extensions.image
 

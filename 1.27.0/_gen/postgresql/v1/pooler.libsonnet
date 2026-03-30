@@ -3216,6 +3216,8 @@
     },
     '#withInstances':: d.fn(help='"The number of replicas we want. Default: 1."', args=[d.arg(name='instances', type=d.T.integer)]),
     withInstances(instances): { spec+: { instances: instances } },
+    '#withServiceAccountName':: d.fn(help='"Name of an existing ServiceAccount in the same namespace to use for the pooler.\\nWhen specified, the operator will not create a new ServiceAccount\\nbut will use the provided one. This is useful for sharing a single\\nServiceAccount across multiple poolers (e.g., for cloud IAM configurations).\\nIf not specified, a ServiceAccount will be created with the pooler name."', args=[d.arg(name='serviceAccountName', type=d.T.string)]),
+    withServiceAccountName(serviceAccountName): { spec+: { serviceAccountName: serviceAccountName } },
     '#withType':: d.fn(help='"Type of service to forward traffic to. Default: `rw`."', args=[d.arg(name='type', type=d.T.string)]),
     withType(type): { spec+: { type: type } },
   },

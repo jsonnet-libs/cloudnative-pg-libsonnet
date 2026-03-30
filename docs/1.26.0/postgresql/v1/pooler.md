@@ -31,6 +31,7 @@ permalink: /1.26.0/postgresql/v1/pooler/
   * [`fn withUid(uid)`](#fn-metadatawithuid)
 * [`obj spec`](#obj-spec)
   * [`fn withInstances(instances)`](#fn-specwithinstances)
+  * [`fn withServiceAccountName(serviceAccountName)`](#fn-specwithserviceaccountname)
   * [`fn withType(type)`](#fn-specwithtype)
   * [`obj spec.cluster`](#obj-speccluster)
     * [`fn withName(name)`](#fn-specclusterwithname)
@@ -1646,6 +1647,14 @@ withInstances(instances)
 ```
 
 "The number of replicas we want. Default: 1."
+
+### fn spec.withServiceAccountName
+
+```ts
+withServiceAccountName(serviceAccountName)
+```
+
+"Name of an existing ServiceAccount in the same namespace to use for the pooler.\nWhen specified, the operator will not create a new ServiceAccount\nbut will use the provided one. This is useful for sharing a single\nServiceAccount across multiple poolers (e.g., for cloud IAM configurations).\nIf not specified, a ServiceAccount will be created with the pooler name."
 
 ### fn spec.withType
 

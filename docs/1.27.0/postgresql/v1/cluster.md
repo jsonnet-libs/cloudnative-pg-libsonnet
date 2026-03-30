@@ -59,6 +59,7 @@ permalink: /1.27.0/postgresql/v1/cluster/
   * [`fn withPrimaryUpdateStrategy(primaryUpdateStrategy)`](#fn-specwithprimaryupdatestrategy)
   * [`fn withPriorityClassName(priorityClassName)`](#fn-specwithpriorityclassname)
   * [`fn withSchedulerName(schedulerName)`](#fn-specwithschedulername)
+  * [`fn withServiceAccountName(serviceAccountName)`](#fn-specwithserviceaccountname)
   * [`fn withSmartShutdownTimeout(smartShutdownTimeout)`](#fn-specwithsmartshutdowntimeout)
   * [`fn withStartDelay(startDelay)`](#fn-specwithstartdelay)
   * [`fn withStopDelay(stopDelay)`](#fn-specwithstopdelay)
@@ -788,13 +789,20 @@ permalink: /1.27.0/postgresql/v1/cluster/
     * [`fn withShared_preload_libraries(shared_preload_libraries)`](#fn-specpostgresqlwithshared_preload_libraries)
     * [`fn withShared_preload_librariesMixin(shared_preload_libraries)`](#fn-specpostgresqlwithshared_preload_librariesmixin)
     * [`obj spec.postgresql.extensions`](#obj-specpostgresqlextensions)
+      * [`fn withBin_path(bin_path)`](#fn-specpostgresqlextensionswithbin_path)
+      * [`fn withBin_pathMixin(bin_path)`](#fn-specpostgresqlextensionswithbin_pathmixin)
       * [`fn withDynamic_library_path(dynamic_library_path)`](#fn-specpostgresqlextensionswithdynamic_library_path)
       * [`fn withDynamic_library_pathMixin(dynamic_library_path)`](#fn-specpostgresqlextensionswithdynamic_library_pathmixin)
+      * [`fn withEnv(env)`](#fn-specpostgresqlextensionswithenv)
+      * [`fn withEnvMixin(env)`](#fn-specpostgresqlextensionswithenvmixin)
       * [`fn withExtension_control_path(extension_control_path)`](#fn-specpostgresqlextensionswithextension_control_path)
       * [`fn withExtension_control_pathMixin(extension_control_path)`](#fn-specpostgresqlextensionswithextension_control_pathmixin)
       * [`fn withLd_library_path(ld_library_path)`](#fn-specpostgresqlextensionswithld_library_path)
       * [`fn withLd_library_pathMixin(ld_library_path)`](#fn-specpostgresqlextensionswithld_library_pathmixin)
       * [`fn withName(name)`](#fn-specpostgresqlextensionswithname)
+      * [`obj spec.postgresql.extensions.env`](#obj-specpostgresqlextensionsenv)
+        * [`fn withName(name)`](#fn-specpostgresqlextensionsenvwithname)
+        * [`fn withValue(value)`](#fn-specpostgresqlextensionsenvwithvalue)
       * [`obj spec.postgresql.extensions.image`](#obj-specpostgresqlextensionsimage)
         * [`fn withPullPolicy(pullPolicy)`](#fn-specpostgresqlextensionsimagewithpullpolicy)
         * [`fn withReference(reference)`](#fn-specpostgresqlextensionsimagewithreference)
@@ -1542,6 +1550,14 @@ withSchedulerName(schedulerName)
 ```
 
 "If specified, the pod will be dispatched by specified Kubernetes\nscheduler. If not specified, the pod will be dispatched by the default\nscheduler. More info:\nhttps://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/"
+
+### fn spec.withServiceAccountName
+
+```ts
+withServiceAccountName(serviceAccountName)
+```
+
+"Name of an existing ServiceAccount in the same namespace to use for the cluster.\nWhen specified, the operator will not create a new ServiceAccount\nbut will use the provided one. This is useful for sharing a single\nServiceAccount across multiple clusters (e.g., for cloud IAM configurations).\nIf not specified, a ServiceAccount will be created with the cluster name.\nMutually exclusive with ServiceAccountTemplate."
 
 ### fn spec.withSmartShutdownTimeout
 
@@ -7017,6 +7033,24 @@ withShared_preload_librariesMixin(shared_preload_libraries)
 
 "The configuration of the extensions to be added"
 
+### fn spec.postgresql.extensions.withBin_path
+
+```ts
+withBin_path(bin_path)
+```
+
+"A list of directories within the image to be appended to the\nPostgreSQL process's `PATH` environment variable."
+
+### fn spec.postgresql.extensions.withBin_pathMixin
+
+```ts
+withBin_pathMixin(bin_path)
+```
+
+"A list of directories within the image to be appended to the\nPostgreSQL process's `PATH` environment variable."
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.postgresql.extensions.withDynamic_library_path
 
 ```ts
@@ -7032,6 +7066,24 @@ withDynamic_library_pathMixin(dynamic_library_path)
 ```
 
 "The list of directories inside the image which should be added to dynamic_library_path.\nIf not defined, defaults to \"/lib\"."
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.postgresql.extensions.withEnv
+
+```ts
+withEnv(env)
+```
+
+"Env is a list of custom environment variables to be set in the\nPostgreSQL process for this extension. It is the responsibility of the\ncluster administrator to ensure the variables are correct for the\nspecific extension. Note that changes to these variables require\na manual cluster restart to take effect."
+
+### fn spec.postgresql.extensions.withEnvMixin
+
+```ts
+withEnvMixin(env)
+```
+
+"Env is a list of custom environment variables to be set in the\nPostgreSQL process for this extension. It is the responsibility of the\ncluster administrator to ensure the variables are correct for the\nspecific extension. Note that changes to these variables require\na manual cluster restart to take effect."
 
 **Note:** This function appends passed data to existing values
 
@@ -7078,6 +7130,26 @@ withName(name)
 ```
 
 "The name of the extension, required"
+
+## obj spec.postgresql.extensions.env
+
+"Env is a list of custom environment variables to be set in the\nPostgreSQL process for this extension. It is the responsibility of the\ncluster administrator to ensure the variables are correct for the\nspecific extension. Note that changes to these variables require\na manual cluster restart to take effect."
+
+### fn spec.postgresql.extensions.env.withName
+
+```ts
+withName(name)
+```
+
+"Name of the environment variable to be injected into the\nPostgreSQL process."
+
+### fn spec.postgresql.extensions.env.withValue
+
+```ts
+withValue(value)
+```
+
+"Value of the environment variable. CloudNativePG performs a direct\nreplacement of this value, with support for placeholder expansion.\nThe ${`image_root`} placeholder resolves to the absolute mount path\nof the extension's volume (e.g., `/extensions/my-extension`). This\nis particularly useful for allowing applications or libraries to\nlocate specific directories within the mounted image.\nUnrecognized placeholders are rejected. To include a literal ${...}\nin the value, escape it as $${...}."
 
 ## obj spec.postgresql.extensions.image
 
