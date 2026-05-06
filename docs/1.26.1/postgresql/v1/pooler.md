@@ -64,6 +64,8 @@ permalink: /1.26.1/postgresql/v1/pooler/
       * [`fn withSourceLabels(sourceLabels)`](#fn-specmonitoringpodmonitorrelabelingswithsourcelabels)
       * [`fn withSourceLabelsMixin(sourceLabels)`](#fn-specmonitoringpodmonitorrelabelingswithsourcelabelsmixin)
       * [`fn withTargetLabel(targetLabel)`](#fn-specmonitoringpodmonitorrelabelingswithtargetlabel)
+    * [`obj spec.monitoring.tls`](#obj-specmonitoringtls)
+      * [`fn withEnabled(enabled)`](#fn-specmonitoringtlswithenabled)
   * [`obj spec.pgbouncer`](#obj-specpgbouncer)
     * [`fn withAuthQuery(authQuery)`](#fn-specpgbouncerwithauthquery)
     * [`fn withParameters(parameters)`](#fn-specpgbouncerwithparameters)
@@ -1710,7 +1712,7 @@ withMaxUnavailable(maxUnavailable)
 
 ## obj spec.monitoring
 
-"The configuration of the monitoring infrastructure of this pooler.\n\nDeprecated: This feature will be removed in an upcoming release. If\nyou need this functionality, you can create a PodMonitor manually."
+"The configuration of the monitoring infrastructure of this pooler."
 
 ### fn spec.monitoring.withEnablePodMonitor
 
@@ -1718,7 +1720,7 @@ withMaxUnavailable(maxUnavailable)
 withEnablePodMonitor(enablePodMonitor)
 ```
 
-"Enable or disable the `PodMonitor`"
+"Enable or disable the `PodMonitor`\n\nDeprecated: This feature will be removed in an upcoming release. If\nyou need this functionality, you can create a PodMonitor manually."
 
 ### fn spec.monitoring.withPodMonitorMetricRelabelings
 
@@ -1726,7 +1728,7 @@ withEnablePodMonitor(enablePodMonitor)
 withPodMonitorMetricRelabelings(podMonitorMetricRelabelings)
 ```
 
-"The list of metric relabelings for the `PodMonitor`. Applied to samples before ingestion."
+"The list of metric relabelings for the `PodMonitor`. Applied to samples before ingestion.\n\nDeprecated: This feature will be removed in an upcoming release. If\nyou need this functionality, you can create a PodMonitor manually."
 
 ### fn spec.monitoring.withPodMonitorMetricRelabelingsMixin
 
@@ -1734,7 +1736,7 @@ withPodMonitorMetricRelabelings(podMonitorMetricRelabelings)
 withPodMonitorMetricRelabelingsMixin(podMonitorMetricRelabelings)
 ```
 
-"The list of metric relabelings for the `PodMonitor`. Applied to samples before ingestion."
+"The list of metric relabelings for the `PodMonitor`. Applied to samples before ingestion.\n\nDeprecated: This feature will be removed in an upcoming release. If\nyou need this functionality, you can create a PodMonitor manually."
 
 **Note:** This function appends passed data to existing values
 
@@ -1744,7 +1746,7 @@ withPodMonitorMetricRelabelingsMixin(podMonitorMetricRelabelings)
 withPodMonitorRelabelings(podMonitorRelabelings)
 ```
 
-"The list of relabelings for the `PodMonitor`. Applied to samples before scraping."
+"The list of relabelings for the `PodMonitor`. Applied to samples before scraping.\n\nDeprecated: This feature will be removed in an upcoming release. If\nyou need this functionality, you can create a PodMonitor manually."
 
 ### fn spec.monitoring.withPodMonitorRelabelingsMixin
 
@@ -1752,13 +1754,13 @@ withPodMonitorRelabelings(podMonitorRelabelings)
 withPodMonitorRelabelingsMixin(podMonitorRelabelings)
 ```
 
-"The list of relabelings for the `PodMonitor`. Applied to samples before scraping."
+"The list of relabelings for the `PodMonitor`. Applied to samples before scraping.\n\nDeprecated: This feature will be removed in an upcoming release. If\nyou need this functionality, you can create a PodMonitor manually."
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.monitoring.podMonitorMetricRelabelings
 
-"The list of metric relabelings for the `PodMonitor`. Applied to samples before ingestion."
+"The list of metric relabelings for the `PodMonitor`. Applied to samples before ingestion.\n\nDeprecated: This feature will be removed in an upcoming release. If\nyou need this functionality, you can create a PodMonitor manually."
 
 ### fn spec.monitoring.podMonitorMetricRelabelings.withAction
 
@@ -1828,7 +1830,7 @@ withTargetLabel(targetLabel)
 
 ## obj spec.monitoring.podMonitorRelabelings
 
-"The list of relabelings for the `PodMonitor`. Applied to samples before scraping."
+"The list of relabelings for the `PodMonitor`. Applied to samples before scraping.\n\nDeprecated: This feature will be removed in an upcoming release. If\nyou need this functionality, you can create a PodMonitor manually."
 
 ### fn spec.monitoring.podMonitorRelabelings.withAction
 
@@ -1895,6 +1897,18 @@ withTargetLabel(targetLabel)
 ```
 
 "targetLabel defines the label to which the resulting string is written in a replacement.\n\nIt is mandatory for `Replace`, `HashMod`, `Lowercase`, `Uppercase`,\n`KeepEqual` and `DropEqual` actions.\n\nRegex capture groups are available."
+
+## obj spec.monitoring.tls
+
+"Configure TLS communication for the metrics endpoint.\nChanging tls.enabled option will force a rollout of all instances."
+
+### fn spec.monitoring.tls.withEnabled
+
+```ts
+withEnabled(enabled)
+```
+
+"Enable TLS for the monitoring endpoint.\nChanging this option will force a rollout of all instances."
 
 ## obj spec.pgbouncer
 
