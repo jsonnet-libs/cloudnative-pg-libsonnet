@@ -8335,7 +8335,7 @@ withPrivileged(privileged)
 withProcMount(procMount)
 ```
 
-"procMount denotes the type of proc mount to use for the containers.\nThe default value is Default which uses the container runtime defaults for\nreadonly paths and masked paths.\nThis requires the ProcMountType feature flag to be enabled.\nNote that this field cannot be set when spec.os.name is windows."
+"procMount denotes the type of proc mount to use for the containers.\nThe default value is Default which uses the container runtime defaults for\nreadonly paths and masked paths.\nNote that this field cannot be set when spec.os.name is windows."
 
 ### fn spec.securityContext.withReadOnlyRootFilesystem
 
