@@ -30,8 +30,13 @@ permalink: /1.25.3/postgresql/v1/clusterImageCatalog/
   * [`fn withSelfLink(selfLink)`](#fn-metadatawithselflink)
   * [`fn withUid(uid)`](#fn-metadatawithuid)
 * [`obj spec`](#obj-spec)
+  * [`fn withComponentImages(componentImages)`](#fn-specwithcomponentimages)
+  * [`fn withComponentImagesMixin(componentImages)`](#fn-specwithcomponentimagesmixin)
   * [`fn withImages(images)`](#fn-specwithimages)
   * [`fn withImagesMixin(images)`](#fn-specwithimagesmixin)
+  * [`obj spec.componentImages`](#obj-speccomponentimages)
+    * [`fn withImage(image)`](#fn-speccomponentimageswithimage)
+    * [`fn withKey(key)`](#fn-speccomponentimageswithkey)
   * [`obj spec.images`](#obj-specimages)
     * [`fn withExtensions(extensions)`](#fn-specimageswithextensions)
     * [`fn withExtensionsMixin(extensions)`](#fn-specimageswithextensionsmixin)
@@ -234,6 +239,24 @@ withUid(uid)
 
 "Specification of the desired behavior of the ClusterImageCatalog.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"
 
+### fn spec.withComponentImages
+
+```ts
+withComponentImages(componentImages)
+```
+
+"ComponentImages is a list of named images for components other than PostgreSQL\n(e.g. pgbouncer). Keys must be unique within a catalog."
+
+### fn spec.withComponentImagesMixin
+
+```ts
+withComponentImagesMixin(componentImages)
+```
+
+"ComponentImages is a list of named images for components other than PostgreSQL\n(e.g. pgbouncer). Keys must be unique within a catalog."
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.withImages
 
 ```ts
@@ -251,6 +274,26 @@ withImagesMixin(images)
 "List of CatalogImages available in the catalog"
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.componentImages
+
+"ComponentImages is a list of named images for components other than PostgreSQL\n(e.g. pgbouncer). Keys must be unique within a catalog."
+
+### fn spec.componentImages.withImage
+
+```ts
+withImage(image)
+```
+
+"Image is the container image reference."
+
+### fn spec.componentImages.withKey
+
+```ts
+withKey(key)
+```
+
+"Key is the unique identifier for this image within the catalog."
 
 ## obj spec.images
 

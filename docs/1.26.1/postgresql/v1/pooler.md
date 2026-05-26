@@ -68,6 +68,7 @@ permalink: /1.26.1/postgresql/v1/pooler/
       * [`fn withEnabled(enabled)`](#fn-specmonitoringtlswithenabled)
   * [`obj spec.pgbouncer`](#obj-specpgbouncer)
     * [`fn withAuthQuery(authQuery)`](#fn-specpgbouncerwithauthquery)
+    * [`fn withImage(image)`](#fn-specpgbouncerwithimage)
     * [`fn withParameters(parameters)`](#fn-specpgbouncerwithparameters)
     * [`fn withParametersMixin(parameters)`](#fn-specpgbouncerwithparametersmixin)
     * [`fn withPaused(paused)`](#fn-specpgbouncerwithpaused)
@@ -80,6 +81,11 @@ permalink: /1.26.1/postgresql/v1/pooler/
       * [`fn withName(name)`](#fn-specpgbouncerclientcasecretwithname)
     * [`obj spec.pgbouncer.clientTLSSecret`](#obj-specpgbouncerclienttlssecret)
       * [`fn withName(name)`](#fn-specpgbouncerclienttlssecretwithname)
+    * [`obj spec.pgbouncer.imageCatalogRef`](#obj-specpgbouncerimagecatalogref)
+      * [`fn withApiGroup(apiGroup)`](#fn-specpgbouncerimagecatalogrefwithapigroup)
+      * [`fn withKey(key)`](#fn-specpgbouncerimagecatalogrefwithkey)
+      * [`fn withKind(kind)`](#fn-specpgbouncerimagecatalogrefwithkind)
+      * [`fn withName(name)`](#fn-specpgbouncerimagecatalogrefwithname)
     * [`obj spec.pgbouncer.serverCASecret`](#obj-specpgbouncerservercasecret)
       * [`fn withName(name)`](#fn-specpgbouncerservercasecretwithname)
     * [`obj spec.pgbouncer.serverTLSSecret`](#obj-specpgbouncerservertlssecret)
@@ -1920,6 +1926,14 @@ withAuthQuery(authQuery)
 
 "The query that will be used to download the hash of the password\nof a certain user. Default: \"SELECT usename, passwd FROM public.user_search($1)\".\nIn case it is specified, also an AuthQuerySecret has to be specified and\nno automatic CNPG Cluster integration will be triggered."
 
+### fn spec.pgbouncer.withImage
+
+```ts
+withImage(image)
+```
+
+"Image is the pgbouncer container image to use. When set, it takes\nprecedence over ImageCatalogRef and the operator default, but is\noverridden by an explicit image set in the pod template."
+
 ### fn spec.pgbouncer.withParameters
 
 ```ts
@@ -2007,6 +2021,42 @@ withName(name)
 ```
 
 "Name of the referent."
+
+## obj spec.pgbouncer.imageCatalogRef
+
+"ImageCatalogRef points to an entry in an ImageCatalog or ClusterImageCatalog.\nMutually exclusive with Image."
+
+### fn spec.pgbouncer.imageCatalogRef.withApiGroup
+
+```ts
+withApiGroup(apiGroup)
+```
+
+"APIGroup is the group for the resource being referenced.\nIf APIGroup is not specified, the specified Kind must be in the core API group.\nFor any other third-party types, APIGroup is required."
+
+### fn spec.pgbouncer.imageCatalogRef.withKey
+
+```ts
+withKey(key)
+```
+
+"Key identifies the entry within the catalog's componentImages list."
+
+### fn spec.pgbouncer.imageCatalogRef.withKind
+
+```ts
+withKind(kind)
+```
+
+"Kind is the type of resource being referenced"
+
+### fn spec.pgbouncer.imageCatalogRef.withName
+
+```ts
+withName(name)
+```
+
+"Name is the name of resource being referenced"
 
 ## obj spec.pgbouncer.serverCASecret
 

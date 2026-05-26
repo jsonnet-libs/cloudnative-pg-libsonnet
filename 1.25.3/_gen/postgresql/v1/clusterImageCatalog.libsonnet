@@ -51,6 +51,13 @@
   }),
   '#spec':: d.obj(help='"Specification of the desired behavior of the ClusterImageCatalog.\\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status"'),
   spec: {
+    '#componentImages':: d.obj(help='"ComponentImages is a list of named images for components other than PostgreSQL\\n(e.g. pgbouncer). Keys must be unique within a catalog."'),
+    componentImages: {
+      '#withImage':: d.fn(help='"Image is the container image reference."', args=[d.arg(name='image', type=d.T.string)]),
+      withImage(image): { image: image },
+      '#withKey':: d.fn(help='"Key is the unique identifier for this image within the catalog."', args=[d.arg(name='key', type=d.T.string)]),
+      withKey(key): { key: key },
+    },
     '#images':: d.obj(help='"List of CatalogImages available in the catalog"'),
     images: {
       '#extensions':: d.obj(help='"The configuration of the extensions to be added"'),
@@ -101,6 +108,10 @@
       '#withMajor':: d.fn(help='"The PostgreSQL major version of the image. Must be unique within the catalog."', args=[d.arg(name='major', type=d.T.integer)]),
       withMajor(major): { major: major },
     },
+    '#withComponentImages':: d.fn(help='"ComponentImages is a list of named images for components other than PostgreSQL\\n(e.g. pgbouncer). Keys must be unique within a catalog."', args=[d.arg(name='componentImages', type=d.T.array)]),
+    withComponentImages(componentImages): { spec+: { componentImages: if std.isArray(v=componentImages) then componentImages else [componentImages] } },
+    '#withComponentImagesMixin':: d.fn(help='"ComponentImages is a list of named images for components other than PostgreSQL\\n(e.g. pgbouncer). Keys must be unique within a catalog."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='componentImages', type=d.T.array)]),
+    withComponentImagesMixin(componentImages): { spec+: { componentImages+: if std.isArray(v=componentImages) then componentImages else [componentImages] } },
     '#withImages':: d.fn(help='"List of CatalogImages available in the catalog"', args=[d.arg(name='images', type=d.T.array)]),
     withImages(images): { spec+: { images: if std.isArray(v=images) then images else [images] } },
     '#withImagesMixin':: d.fn(help='"List of CatalogImages available in the catalog"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='images', type=d.T.array)]),

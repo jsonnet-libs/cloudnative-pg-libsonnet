@@ -3227,7 +3227,7 @@ withAdditionalCommandArgsMixin(additionalCommandArgs)
 withCompression(compression)
 ```
 
-"Compress a backup file (a tar file per tablespace) while streaming it\nto the object store. Available options are empty string (no\ncompression, default), `gzip`, `bzip2`, and `snappy`."
+"Compress a backup file (a tar file per tablespace) while streaming it\nto the object store. Available options are empty string (no\ncompression, default), `gzip`, `bzip2`, `lz4`, and `snappy`."
 
 ### fn spec.backup.barmanObjectStore.data.withEncryption
 
@@ -5207,7 +5207,7 @@ withAdditionalCommandArgsMixin(additionalCommandArgs)
 withCompression(compression)
 ```
 
-"Compress a backup file (a tar file per tablespace) while streaming it\nto the object store. Available options are empty string (no\ncompression, default), `gzip`, `bzip2`, and `snappy`."
+"Compress a backup file (a tar file per tablespace) while streaming it\nto the object store. Available options are empty string (no\ncompression, default), `gzip`, `bzip2`, `lz4`, and `snappy`."
 
 ### fn spec.externalClusters.barmanObjectStore.data.withEncryption
 
