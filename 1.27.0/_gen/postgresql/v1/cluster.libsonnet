@@ -1266,7 +1266,7 @@
     managed: {
       '#roles':: d.obj(help='"Database roles managed by the `Cluster`"'),
       roles: {
-        '#passwordSecret':: d.obj(help='"Secret containing the password of the role (if present)\\nIf null, the password will be ignored unless DisablePassword is set"'),
+        '#passwordSecret':: d.obj(help='"Secret containing the password of the role (if present).\\nIf null, the password will be ignored unless DisablePassword is set.\\nWhen set, the secret must follow the `kubernetes.io/basic-auth` format\\nand contain both a `username` and a `password` field."'),
         passwordSecret: {
           '#withName':: d.fn(help='"Name of the referent."', args=[d.arg(name='name', type=d.T.string)]),
           withName(name): { passwordSecret+: { name: name } },

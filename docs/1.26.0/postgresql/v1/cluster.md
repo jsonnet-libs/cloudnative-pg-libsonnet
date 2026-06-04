@@ -5837,7 +5837,7 @@ withValidUntil(validUntil)
 
 ## obj spec.managed.roles.passwordSecret
 
-"Secret containing the password of the role (if present)\nIf null, the password will be ignored unless DisablePassword is set"
+"Secret containing the password of the role (if present).\nIf null, the password will be ignored unless DisablePassword is set.\nWhen set, the secret must follow the `kubernetes.io/basic-auth` format\nand contain both a `username` and a `password` field."
 
 ### fn spec.managed.roles.passwordSecret.withName
 
